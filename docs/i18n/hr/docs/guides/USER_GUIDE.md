@@ -24,7 +24,6 @@ Potpuni vodič za konfiguriranje pružatelja usluga, izradu kombinacija, integra
 - [Sustav vještina](#-skills-system)
 - [Sustav memorije](#-memory-system)
 - [Webhookovi](#-webhooks)
-- [Cloud agenti](#-cloud-agents)
 - [Programsko upravljanje](#-programmatic-management)
 - [Interni CLI](#-internal-cli)
 - [Desktop aplikacija (Electron)](#-desktop-application-electron)
@@ -1239,8 +1238,6 @@ Koristite SSE URL `http://localhost:20128/api/mcp/sse` i Bearer API ključ gener
 
 ### Opsezi (Scopes)
 
-MCP trenutno definira 32 imenovana opsega. Svaki Bearer ključ može se ograničiti na određene opsege — pogledajte [MCP-SERVER.md](../frameworks/MCP-SERVER.md) za autoritativni popis opsega i alata, te [A2A-SERVER.md](../frameworks/A2A-SERVER.md) za JSON-RPC shemu.
-
 ---
 
 ## 🧠 Sustav vještina
@@ -1249,7 +1246,6 @@ MCP trenutno definira 32 imenovana opsega. Svaki Bearer ključ može se ogranič
 
 - **Marketplace sučelje** — Pregledajte i instalirajte vještine putem **Dashboard → Skills**
 - **Opsezi po ključu** — Ograničite koji API ključevi mogu pozivati koje vještine
-- **Prilagođene vještine** — Dodajte TypeScript datoteku u `src/lib/a2a/skills/`, registrirajte je, i odmah postaje pozivljiva putem A2A
 
 Potpuna referenca: [SKILLS.md](../frameworks/SKILLS.md).
 
@@ -1278,18 +1274,6 @@ Pretplatite se na 67router događaje za praćenje i automatizaciju u stvarnom vr
 - Ponovni pokušaji: 3 pokušaja s eksponencijalnim odgađanjem, zatim red za neisporučene poruke (dead-letter queue)
 
 Potpuna shema u [WEBHOOKS.md](../frameworks/WEBHOOKS.md).
-
----
-
-## ☁️ Cloud Agenti
-
-67router se integrira s cloud agentima za programiranje (**OpenAI Codex Cloud**, **Devin**, **Jules**, **Antigravity**) tako da možete pokretati dugotrajne zadatke iz istog nadzorne ploče koja upravlja vašim lokalnim usmjeravanjem.
-
-- Kreirajte zadatke u **Dashboard → Cloud Agents** ili putem `POST /api/v1/agents/tasks`
-- Praćenje statusa, zapisa i artefakata po zadatku
-- Vlastiti API ključ za svakog davatelja usluga — vjerodajnice nikada ne izlaze iz 67router instance
-
-Potpuna referenca: [CLOUD_AGENT.md](../frameworks/CLOUD_AGENT.md).
 
 ---
 
@@ -1346,7 +1330,6 @@ omniroute restore [<timestamp>]    # Vraćanje iz snimke
 omniroute health                   # Detaljno stanje (breakeri, predmemorija, memorija)
 omniroute quota                    # Iskorištenost kvote dobavljača
 omniroute mcp status                # Status MCP servera
-omniroute a2a status                # Status A2A servera
 omniroute tunnel list|create|stop  # Cloudflare/Tailscale/ngrok tuneli
 omniroute reset-password           # Resetiranje administratorske lozinke
 omniroute --mcp                    # Pokretanje MCP servera preko stdio

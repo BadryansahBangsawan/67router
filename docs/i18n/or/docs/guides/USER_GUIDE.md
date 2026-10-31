@@ -24,7 +24,6 @@
 - [ଦକ୍ଷତା ସିଷ୍ଟମ୍](#-skills-system)
 - [ମେମୋରି ସିଷ୍ଟମ୍](#-memory-system)
 - [ୱେବହୁକ୍](#-webhooks)
-- [କ୍ଲାଉଡ୍ ଏଜେଣ୍ଟ](#-cloud-agents)
 - [ପ୍ରୋଗ୍ରାମାଟିକ୍ ପରିଚାଳନା](#-programmatic-management)
 - [ଆଭ୍ୟନ୍ତରୀଣ CLI](#-internal-cli)
 - [ଡେସ୍କଟପ୍ ଆପ୍ଲିକେସନ୍ (Electron)](#-desktop-application-electron)
@@ -1237,8 +1236,6 @@ SSE URL `http://localhost:20128/api/mcp/sse` ଏବଂ **Dashboard → API Keys*
 
 ### ସ୍କୋପ୍‌ଗୁଡ଼ିକ
 
-MCP ବର୍ତ୍ତମାନ 32ଟି ନାମିତ ସ୍କୋପ୍ ନିର୍ଦ୍ଧାରଣ କରେ। ପ୍ରତ୍ୟେକ Bearer କୀକୁ ନିର୍ଦ୍ଦିଷ୍ଟ ସ୍କୋପ୍‌ଗୁଡ଼ିକ ମଧ୍ୟରେ ସୀମିତ କରାଯାଇପାରିବ — ପ୍ରାମାଣିକ ସ୍କୋପ୍ ଏବଂ ଟୁଲ୍ ତାଲିକା ପାଇଁ [MCP-SERVER.md](../frameworks/MCP-SERVER.md) ଏବଂ JSON-RPC ସ୍କିମା ପାଇଁ [A2A-SERVER.md](../frameworks/A2A-SERVER.md) ଦେଖନ୍ତୁ।
-
 ---
 
 ## 🧠 ସ୍କିଲ୍‌ସ ସିଷ୍ଟମ୍
@@ -1247,7 +1244,6 @@ MCP ବର୍ତ୍ତମାନ 32ଟି ନାମିତ ସ୍କୋପ୍ ନ�
 
 - **ମାର୍କେଟପ୍ଲେସ୍ UI** — **Dashboard → Skills**ରୁ ସ୍କିଲ୍‌ଗୁଡ଼ିକ ବ୍ରାଉଜ୍ ଏବଂ ଇନ୍‌ଷ୍ଟଲ୍ କରନ୍ତୁ
 - **ପ୍ରତି-କୀ ସ୍କୋପ୍** — କେଉଁ API କୀ କେଉଁ ସ୍କିଲ୍‌କୁ ଆହ୍ୱାନ କରିପାରିବ, ତାହା ସୀମିତ କରନ୍ତୁ
-- **କଷ୍ଟମ୍ ସ୍କିଲ୍‌ଗୁଡ଼ିକ** — `src/lib/a2a/skills/`ରେ ଏକ TypeScript ଫାଇଲ୍ ରଖି ତାହାକୁ ପଞ୍ଜୀକୃତ କରନ୍ତୁ, ଏବଂ ଏହା ତୁରନ୍ତ A2A ମାଧ୍ୟମରେ ଆହ୍ୱାନଯୋଗ୍ୟ ହୋଇଯିବ
 
 ସମ୍ପୂର୍ଣ୍ଣ ସନ୍ଦର୍ଭ: [SKILLS.md](../frameworks/SKILLS.md)।
 
@@ -1276,18 +1272,6 @@ MCP ବର୍ତ୍ତମାନ 32ଟି ନାମିତ ସ୍କୋପ୍ ନ�
 - ପୁନଃପ୍ରୟାସ: ଏକ୍ସପୋନେନ୍ସିଆଲ୍ ବ୍ୟାକଅଫ୍ ସହିତ 3ଟି ପ୍ରୟାସ, ତା’ପରେ ଡେଡ୍-ଲେଟର୍ କ୍ୟୁ
 
 ସମ୍ପୂର୍ଣ୍ଣ ସ୍କିମା [WEBHOOKS.md](../frameworks/WEBHOOKS.md)ରେ ଉପଲବ୍ଧ।
-
----
-
-## ☁️ କ୍ଲାଉଡ୍ ଏଜେଣ୍ଟଗୁଡ଼ିକ
-
-67router କ୍ଲାଉଡ୍ କୋଡିଂ ଏଜେଣ୍ଟଗୁଡ଼ିକ (**OpenAI Codex Cloud**, **Devin**, **Jules**, **Antigravity**) ସହିତ ଏକୀକୃତ ହୁଏ, ଯାହାଫଳରେ ଆପଣ ସ୍ଥାନୀୟ ରାଉଟିଂ ପରିଚାଳନା କରୁଥିବା ସେହି ଡ୍ୟାସ୍‌ବୋର୍ଡରୁ ଦୀର୍ଘକାଳ ଧରି ଚାଲୁଥିବା ଟାସ୍କଗୁଡ଼ିକ ପଠାଇପାରିବେ।
-
-- **Dashboard → Cloud Agents**ରେ କିମ୍ବା `POST /api/v1/agents/tasks` ମାଧ୍ୟମରେ ଟାସ୍କ ସୃଷ୍ଟି କରନ୍ତୁ
-- ପ୍ରତ୍ୟେକ ଟାସ୍କର ସ୍ଥିତି, ଲଗ୍ ଏବଂ ଆର୍ଟିଫ୍ୟାକ୍ଟଗୁଡ଼ିକୁ ଟ୍ରାକ୍ କରନ୍ତୁ
-- ପ୍ରତ୍ୟେକ ପ୍ରଦାତା ପାଇଁ ନିଜ API କୀ ବ୍ୟବହାର କରନ୍ତୁ — କ୍ରେଡେନ୍ସିଆଲ୍‌ଗୁଡ଼ିକ କେବେବି 67router ଇନ୍‌ଷ୍ଟାନ୍ସରୁ ବାହାରକୁ ଯାଏ ନାହିଁ
-
-ସମ୍ପୂର୍ଣ୍ଣ ସନ୍ଦର୍ଭ: [CLOUD_AGENT.md](../frameworks/CLOUD_AGENT.md)।
 
 ---
 
@@ -1344,7 +1328,6 @@ omniroute restore [<timestamp>]    # ଏକ ସ୍ନାପ୍‌ଶଟ୍‌ର
 omniroute health                   # ବିସ୍ତୃତ ସ୍ୱାସ୍ଥ୍ୟ ସୂଚନା (ବ୍ରେକର୍, କ୍ୟାଶ୍, ମେମୋରୀ)
 omniroute quota                    # ପ୍ରଦାନକାରୀ କୋଟା ବ୍ୟବହାର
 omniroute mcp status               # MCP ସର୍ଭର ସ୍ଥିତି
-omniroute a2a status               # A2A ସର୍ଭର ସ୍ଥିତି
 omniroute tunnel list|create|stop  # Cloudflare/Tailscale/ngrok ଟନେଲ୍‌ଗୁଡ଼ିକ
 omniroute reset-password           # ଆଡ୍‌ମିନ୍ ପାସ୍‌ୱାର୍ଡ ରିସେଟ୍ କରନ୍ତୁ
 omniroute --mcp                    # stdio ମାଧ୍ୟମରେ MCP ସର୍ଭର ଆରମ୍ଭ କରନ୍ତୁ

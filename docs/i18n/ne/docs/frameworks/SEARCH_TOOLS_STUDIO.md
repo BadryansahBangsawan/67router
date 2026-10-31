@@ -167,5 +167,4 @@ API कुञ्जीको प्लेसहोल्डर सधैं `$OM
 - मुख्य योजना: `_tasks/features-v3.8.6/refactorpages/_orchestration/master-plan-group-C.md`
 - सुविधा योजना: `_tasks/features-v3.8.6/refactorpages/18-search-tools-studio-redesign.plan.md`
 - खोज प्रदायक रजिस्ट्री: `open-sse/config/searchRegistry.ts`
-- Playground Studio (साझा `ExportCodeModal` + `codeExport.ts`): `docs/frameworks/PLAYGROUND_STUDIO.md`
 - वेब fetch ब्याकएन्ड: `src/app/api/v1/web/fetch/route.ts`

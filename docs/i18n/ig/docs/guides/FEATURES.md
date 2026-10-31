@@ -43,8 +43,6 @@ Usoro v3.7.x → v3.8.0 tinyere ntụgharị akpaaka na-enweghị nhazi, ndị n
 - 🤝 **Onye na-eweta GitLab Duo OAuth** — jiri nzere GitLab banye
 - 🧠 **Reasoning Replay Cache** — nchekwa ngwakọ dị na ebe nchekwa kọmputa + nchekwa SQLite maka akara usoro echiche
 
-📚 **Akwụkwọ ndị metụtara ya:** [Usoro Skills](../frameworks/SKILLS.md) · [Sistemụ Ebe Nchekwa](../frameworks/MEMORY.md) · [Ndị Ọrụ Cloud](../frameworks/CLOUD_AGENT.md) · [Webhooks](../frameworks/WEBHOOKS.md) · [Reasoning Replay Cache](../routing/REASONING_REPLAY.md)
-
 ---
 
 ## 🔌 Ndị Na-eweta Ọrụ
@@ -104,12 +102,6 @@ Nlekota ozugbo: uptime, memory, version, percentile latency (p50/p95/p99), ọn�
 Ụdị ọrụ anọ maka ịchọpụta ma dozie nsogbu na ntụgharị API: **Ebe Nnwale** (ihe ntụgharị usoro), **Nnwale Mkparịtaụka** (arịrịọ ozugbo), **Oche Nnwale** (nnwale n'ìgwè), na **Nlele Ozugbo** (iyi data ozugbo).
 
 ![Ebe Nnwale Ntụgharị](../screenshots/05-translator.png)
-
----
-
-## 🎮 Ebe Nnwale Model _(v2.0.9+)_
-
-Nwalee model ọ bụla ozugbo site na dashboard. Họrọ provider, model, na endpoint, jiri Monaco Editor dee prompts, nata nzaghachi n'iyi ozugbo, kwụsị ya mgbe ọ ka na-aga, ma lelee metrik oge.
 
 ---
 

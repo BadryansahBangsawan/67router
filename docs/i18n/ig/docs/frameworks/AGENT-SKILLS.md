@@ -44,7 +44,6 @@ src/app/api/agent-skills/
   generate/route.ts                    — POST /api/agent-skills/generate (achọrọ nkwenye njirimara)
 
 open-sse/mcp-server/tools/agentSkillTools.ts  — Ngwá ọrụ MCP 3 (ndepụta, nweta, mkpuchi)
-src/lib/a2a/skills/listCapabilities.ts        — Nkà A2A: list-capabilities
 ```
 
 ---
@@ -140,8 +139,6 @@ Nka A2A `list-capabilities` na-eweghachi katalọgụ nka 45 zuru ezu dịka ar�
 }
 ```
 
-Lee [A2A-SERVER.md](./A2A-SERVER.md) maka nkọwa protocol.
-
 ---
 
 ## Katalọgụ — ID Nka 45
@@ -189,12 +186,11 @@ Lee [A2A-SERVER.md](./A2A-SERVER.md) maka nkọwa protocol.
 | `cli-contexts`        | cli-contexts       | `omniroute contexts`    |
 | `cli-cost-usage`      | cli-cost-usage     | `omniroute cost`        |
 | `cli-mcp`             | cli-mcp            | `omniroute mcp`         |
-| `cli-a2a`             | cli-a2a            | `omniroute a2a`         |
 | `cli-tunnel`          | cli-tunnel         | `omniroute tunnel`      |
 | `cli-backup-sync`     | cli-backup-sync    | `omniroute backup`      |
 | `cli-policy-audit`    | cli-policy-audit   | `omniroute policy`      |
 | `cli-batches`         | cli-batches        | `omniroute batch`       |
-| `cli-eval`            | cli-eval           | `omniroute eval`        |
+| `cli-eval`            | cli-eval           | `omniroute simulate`    |
 | `cli-plugins-skills`  | cli-plugins-skills | `omniroute plugins`     |
 | `cli-setup`           | cli-setup          | `omniroute setup`       |
 | `cli-skill-collector` | cli-setup          | `omniroute skills`      |
@@ -312,6 +308,5 @@ curl "http://localhost:20128/api/agent-skills/coverage"
 
 - [SKILLS.md](./SKILLS.md) — usoro Omni Skills (itinye ngwaọrụ LLM + ebe ahịa)
 - [MCP-SERVER.md](./MCP-SERVER.md) — katalọgụ ngwaọrụ MCP (ngwaọrụ `omniroute_agent_skills_*`)
-- [A2A-SERVER.md](./A2A-SERVER.md) — protokol A2A (nkà `list-capabilities`)
 - `src/lib/agentSkills/` — katalọgụ, ihe nrụpụta, ndị ntụgharị
 - `skills/` — faịlụ SKILL.md emepụtara (ndenye 45)

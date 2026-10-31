@@ -248,26 +248,6 @@ Lisage oma MCP-sätetesse:
 
 **Täielik MCP-dokumentatsioon:** [MCP-serveri README](../../open-sse/mcp-server/README.md) — 110 tööriista, IDE konfiguratsioonid, Pythoni/TS-i/Go kliendid.
 
-### A2A seadistamine (agentidevaheline protokoll)
-
-Kontrollige agendikaarti:
-
-```bash
-curl http://localhost:20128/.well-known/agent.json
-```
-
-Saatke ülesanne:
-
-```bash
-curl -X POST http://localhost:20128/a2a \
-  -H 'content-type: application/json' \
-  -d '{"jsonrpc":"2.0","id":"quickstart","method":"message/send","params":{"skill":"quota-management","messages":[{"role":"user","content":"Give me a short quota summary."}]}}'
-```
-
-**Täielik A2A-dokumentatsioon:** [A2A-serveri README](../../src/lib/a2a/README.md) — JSON-RPC 2.0, oskused, voogedastus, ülesande elutsükkel.
-
----
-
 ## Ajalõpu seadistus
 
 ### Põhilised ajalõpud

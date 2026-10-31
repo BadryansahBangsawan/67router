@@ -590,7 +590,7 @@ Radar သည် opt-in ဖြစ်ပြီး GET-only ဖြစ်ပါသ�
 - **🔑 Per-key routing ထိန်းချုပ်မှု** — `forcedModel` ဖြင့် API key တစ်ခုကို မော်ဒယ် သို့မဟုတ် combo တစ်ခုသို့ pin လုပ်နိုင်ပြီး၊ key ရဲ့ မော်ဒယ်တွေနဲ့ combo တွေကို atomically ထည့်/ဖြုတ်နိုင်သည် (`/api/keys/{id}/access`)။ → [API Reference](docs/reference/API_REFERENCE.md) · [OpenAPI](docs/openapi.yaml)
 - **🛡️ ပိုသေးစိတ်တဲ့ PII ထိန်းချုပ်မှုများ** — type အလိုက် ရွေးချယ်နိုင်မှု၊ အတည်ပြုပြီးသော စိတ်ကြိုက် masking pattern ၂၀ ခုအထိနဲ့ type အလိုက် detection counter များ; masking ကိုယ်တိုင်ကတော့ opt-in အဖြစ်သာ ဆက်ရှိနေသည်။ → [Guardrails](docs/security/GUARDRAILS.md)
 - **🌍 ဘာသာစကား ၆၇ ခု** — dashboard, docs mirror များနဲ့ CLI အတွက်၊ `npm run i18n:add-locale` က ဘာသာစကားတစ်ခုကို command တစ်ခုတည်းနဲ့ နေရာတိုင်းသို့ ထည့်ပေးသည်။ → [i18n Guide](docs/guides/I18N.md)
-- **🎛️ OmniConductor** — သင့် agent fleet သို့ inbound A2A delegation၊ Agent Card ပေါ်က Conductor skill များ၊ Faro push-to-talk voice chat ပါဝင်တဲ့ dashboard panel တစ်ခု။ → [A2A Server](docs/frameworks/A2A-SERVER.md)
+- **🎛️ OmniConductor** — သင့် agent fleet သို့ inbound A2A delegation၊ Agent Card ပေါ်က Conductor skill များ၊ Faro push-to-talk voice chat ပါဝင်တဲ့ dashboard panel တစ်ခု။
 - **🛂 Adaptive admission & overload ကာကွယ်မှု** — heavyweight chat request တွေကို 503 မဖြစ်စေဘဲ queue ထဲတင်ပေးပြီး၊ connection တစ်ခုချင်းစီအတွက် atomic RPM rolling lease များ အသုံးပြုသည်။ → [Resilience Guide](docs/architecture/RESILIENCE_GUIDE.md)
 - **🗂️ Canonical `/v1/models` စီစဉ်မှု** — provider တစ်ခုချင်းစီအတွက် provider-အုပ်စုလိုက် ဆက်စပ် block တစ်ခုချင်း (combo တွေကို အရင် pin ထား)၊ catalog source အားလုံးမှာ တည်ငြိမ်နေသည်။ → [API Reference](docs/reference/API_REFERENCE.md)
 - **🗜️ Compression ခိုင်မာစေခြင်း** — default-on inflation guard၊ DE / FR / JA + တရုတ် (wényán) အတွက် Caveman pack များ၊ Gradle & .NET အတွက် RTK filter များ။ → [Compression](docs/compression/COMPRESSION_ENGINES.md)
@@ -607,7 +607,7 @@ Radar သည် opt-in ဖြစ်ပြီး GET-only ဖြစ်ပါသ�
 - **🖼️ Endpoint အသစ်များ** — `/v1/ocr` (Mistral OCR) နဲ့ `/v1/audio/translations` (Whisper-style) တို့က media surface ကို ပြည့်စုံစေသည်။ → [API Reference](docs/reference/API_REFERENCE.md)
 - **🎨 ပုံရိပ် / ဗီဒီယို / အသံ ထုတ်လုပ်မှု** — media အတွက် API တစ်ခုတည်း: xAI Grok Imagine & Novita AI video, ComfyUI, Magnific, Adobe Firefly, Segmind, ElevenLabs ကဲ့သို့ speech provider များ။ → [API Reference](docs/reference/API_REFERENCE.md)
 - **🌍 Deployment & ops** — reverse-proxy `basePath`, browser-language auto-detect, per-key device tracking, root-less MITM trust, zh-TW localization။ → [Environment](docs/reference/ENVIRONMENT.md)
-- **🤝 Provider နဲ့ agent ပိုများလာသည်** — cloud agent များ (Codex Cloud, Cursor, Devin, Jules), browser + OAuth login ပါတဲ့ Grok Build (xAI), Ollama first-class card, Claude Opus 5 & Sonnet 5, Kimi တရားဝင် မိတ်ဆွေဖက် (Code/Web/Moonshot), Zed, Requesty, SenseNova, Yuanbao, Agnes AI… နဲ့ ပြန်လည်ဆန်းသစ်ထားတဲ့ **375-provider catalog**။ → [Providers](docs/reference/PROVIDER_REFERENCE.md)
+- **🤝 Provider နဲ့ agent ပိုများလာသည်** — cloud agent များ (Codex Cloud, Cursor, Devin, Jules), browser + OAuth login ပါတဲ့ Grok Build (xAI), Ollama first-class card, Claude Opus 5 & Sonnet 5, Kimi တရားဝင် မိတ်ဆွေဖက် (Code/Web/Moonshot), Zed, Requesty, SenseNova, Yuanbao, Agnes AI… နဲ့ ပြန်လည်ဆန်းသစ်ထားတဲ့ **372-provider catalog**။ → [Providers](docs/reference/PROVIDER_REFERENCE.md)
 - **📡 Routing ပွင့်လင်းမြင်သာမှု** — response တိုင်းမှာ ၎င်းကို ဝန်ဆောင်မှုပေးတဲ့ strategy/provider/latency ကို ဖော်ပြတဲ့ `X-OmniRoute-Decision` header ပါဝင်ပြီး၊ `cache-optimized` combo strategy အသစ် + Auto-Combo `cacheAffinity` factor က ထပ်လာတဲ့ request တွေကို cached prefix ကိုင်ဆောင်ထားတဲ့ connection ဆီ ပြန်ပို့ပေးသည်၊ read-only `/v1/auto-combo/{channel}/candidates` endpoint ကလည်း `auto/*` channel တစ်ခုရဲ့ live candidate pool ကို ဖော်ပြပေးသည်။ → [Auto-Combo](docs/routing/AUTO-COMBO.md)
 - **⚡ ဒေသတွင်း စွမ်းဆောင်ရည်နှင့် အခြေခံအဆောက်အအုံ** — တစ်ချက်နှိပ်ရုံဖြင့် အသုံးပြုနိုင်သော local Redis၊ Cloudflare Workers / Deno Deploy relay deployer များ၊ ကြီးကြပ်ခံ embedded service များအဖြစ် ပါဝင်သော Bifrost နှင့် Mux။ → [Embedded ဝန်ဆောင်မှုများ](docs/frameworks/EMBEDDED-SERVICES.md)
 - **🧩 ထပ်ပါဝင်သောအရာများ** — plugin framework + marketplace၊ Omni/Agent/GitHub skills framework များ၊ Obsidian vault ပေါင်းစည်းမှု (MCP tool 22 ခု)၊ OpenAI-compatible Batch & Files API များ၊ semantic response cache၊ leaderboard များပါ gamification၊ ACP agent ရှာဖွေတွေ့ရှိမှု (built-in agent 15 ခု)၊ BigQuery သို့ စီစဉ်ထားသော log တင်ပို့မှု၊ `auto/chaos` parallel multi-model fan-out၊ Telegram bot တံတား၊ app အတွင်းရှိ version manager နှင့် LMArena-ELO free-provider အဆင့်သတ်မှတ်ချက်များ။ → [စာရွက်စာတမ်းများ](docs/README.md)
@@ -909,7 +909,6 @@ Token များတွင် `read` / `write` / `admin` scope များ သ
   <tr><td align="left" nowrap>🧰 <b>MCP (stdio)</b></td><td align="left" nowrap><code>omniroute --mcp</code></td><td align="left">Claude Desktop၊ Cursor သို့မဟုတ် မည်သည့် MCP client နှင့်မဆို ချိတ်ဆက်ရန်</td></tr>
   <tr><td align="left" nowrap>🌊 <b>MCP (HTTP)</b></td><td align="left" nowrap><code>/api/mcp/stream</code></td><td align="left">Remote MCP — <b>tool 110 ခု</b>၊ scope 33 ခု (အကောင်အထည်ဖော်ကန့်သတ်မှုကို ရွေးချယ်ဖွင့်နိုင်သည်)၊ audit trail အပြည့်အစုံ</td></tr>
   <tr><td align="left" nowrap>📡 <b>MCP (SSE)</b></td><td align="left" nowrap><code>/api/mcp/sse</code></td><td align="left">Streaming MCP transport</td></tr>
-  <tr><td align="left" nowrap>🤝 <b>A2A</b></td><td align="left" nowrap><code>/.well-known/agent.json</code></td><td align="left">Agent အချင်းချင်း ဆက်သွယ်မှု၊ <b>JSON-RPC 2.0</b> + SSE၊ skill 6 ခု</td></tr>
   <tr><td align="left" nowrap>🌐 <b>REST API</b></td><td align="left" nowrap><code>/v1/*</code></td><td align="left">OpenAI နှင့် တွဲဖက်အသုံးပြုနိုင်သည် — chat၊ embedding များ၊ image များ၊ audio နှင့် OCR</td></tr>
   <tr><td align="left" nowrap>🔔 <b>Webhooks</b></td><td align="left" nowrap><code>/api/webhooks</code></td><td align="left">Request / quota event များကို Slack၊ Discord၊ Telegram သို့မဟုတ် မည်သည့် URL သို့မဆို ပို့ရန်</td></tr>
   <tr><td align="left" nowrap>🛰️ <b>Remote CLI</b></td><td align="left" nowrap><code>omniroute connect <host></code></td><td align="left">Scope သတ်မှတ်ထားသော access token များဖြင့် remote instance တစ်ခုကို ထိန်းချုပ်ရန်</td></tr>
@@ -920,7 +919,7 @@ Token များတွင် `read` / `write` / `admin` scope များ သ
 claude mcp add-server omniroute --type http --url http://localhost:20128/api/mcp/stream
 ```
 
-<sub>📖 [MCP Server](docs/frameworks/MCP-SERVER.md) · [A2A Server](docs/frameworks/A2A-SERVER.md) · [Agent Protocols](docs/frameworks/AGENT_PROTOCOLS_GUIDE.md)</sub>
+<sub>📖 [MCP Server](docs/frameworks/MCP-SERVER.md) · [Agent Protocols](docs/frameworks/AGENT_PROTOCOLS_GUIDE.md)</sub>
 
 <br/>
 
@@ -1386,7 +1385,6 @@ port တစ်ခုတည်းရှိ process တစ်ခုတည်းက
   <tr><td nowrap><b><a href="open-sse/mcp-server/README.md">MCP Server</a></b></td><td>MCP tool ၁၁၀ ခု၊ IDE configuration များနှင့် Python/TS/Go client များ</td></tr>
   <tr><td nowrap><b><a href="docs/frameworks/MCP-SERVER.md">MCP Server လမ်းညွှန်</a></b></td><td>MCP တပ်ဆင်မှု၊ transport များနှင့် tool ရည်ညွှန်းချက်</td></tr>
   <tr><td nowrap><b><a href="src/lib/a2a/README.md">A2A Server</a></b></td><td>JSON-RPC 2.0 protocol၊ skill များ၊ streaming နှင့် task စီမံခန့်ခွဲမှု</td></tr>
-  <tr><td nowrap><b><a href="docs/frameworks/A2A-SERVER.md">A2A Server လမ်းညွှန်</a></b></td><td>A2A agent card၊ task များ၊ skill များနှင့် streaming</td></tr>
 </table>
 
 ### 📋 ပရောဂျက်နှင့် အရည်အသွေး

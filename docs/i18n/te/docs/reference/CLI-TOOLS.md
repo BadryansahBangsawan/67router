@@ -752,7 +752,6 @@ omniroute cache                        # క్యాష్ స్థితి
 omniroute cache clear                  # సెమాంటిక్ + సిగ్నేచర్ క్యాష్లను క్లియర్ చేయండి
 
 omniroute mcp status | restart         # MCP సర్వర్ స్థితి / రీస్టార్ట్
-omniroute a2a status | card            # A2A సర్వర్ స్థితి / ఏజెంట్ కార్డ్
 
 omniroute tunnel list | create | stop  # టన్నెల్లను నిర్వహించండి (cloudflare/tailscale/ngrok)
 omniroute env show | get <k> | set <k> <v>  # env వేరియబుల్లను పరిశీలించండి / సెట్ చేయండి (తాత్కాలికం)

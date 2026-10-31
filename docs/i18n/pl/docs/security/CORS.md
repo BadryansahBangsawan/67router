@@ -73,20 +73,6 @@ przepuszczania CORS **preflight** na management routes — które i tak wymagaj�
 którego strona cross-origin nie może dostarczyć. To **nie** jest wektor session-hijack ani
 kradzieży credentiali na wspólnej ścieżce CORS.
 
-### Jeden rzeczywisty wyjątek — `/api/v1/agents/`
-
-Route'y Cloud-Agent (`/api/v1/agents/{health,credentials,tasks,tasks/[id]}`) ustawiają
-**własne** nagłówki CORS
-(`src/lib/cloudAgent/api.ts`, `getCloudAgentCorsHeaders`) i **emitują**
-`Access-Control-Allow-Origin: <origin>|*` razem z
-`Access-Control-Allow-Credentials: true`. To jedyna powierzchnia, na której
-origin-echo i credentials współistnieją, i jest **niezależna od
-`CORS_ALLOW_ALL`**. Te route'y są management-authenticated
-(`requireManagementAuth`); operatorzy wystawiający dashboard poza hostem powinni
-mieć świadomość, że to jedyne miejsce, w którym credentialed read cross-origin jest
-dozwolony przez nagłówki odpowiedzi. Zacieśnienie do jawnej allowlist jest śledzone
-osobno względem tego przewodnika CORS.
-
 ## Checklist produkcyjny
 
 - **Nigdy nie ustawiaj `CORS_ALLOW_ALL=true` w production.** Zostaw nieustawione.
@@ -165,7 +151,6 @@ Security), a nie w proxy.
 | Stan środowiska uruchomieniowego dla panelu                | `src/app/api/settings/authz-inventory/route.ts`                      |
 | Baner ostrzegawczy w panelu                                | `src/app/(dashboard)/dashboard/settings/components/AuthzSection.tsx` |
 | Pole dozwolonych źródeł CORS                               | `src/app/(dashboard)/dashboard/settings/components/SecurityTab.tsx`  |
-| CORS dla poszczególnych tras Cloud-Agent (wyjątek)         | `src/lib/cloudAgent/api.ts`                                          |
 
 ## Zobacz też
 

@@ -121,5 +121,3 @@ autorizada por separado en el entorno de destino.
 - [Protocolos de agentes](./AGENT_PROTOCOLS_GUIDE.md)
 - [Contratos de inicio de CLI](../guides/CLI-LAUNCH-CONTRACTS.md)
 - [Herramientas de CLI](../reference/CLI-TOOLS.md)
-- [Servidor A2A](./A2A-SERVER.md)
-- [Agentes en la nube](./CLOUD_AGENT.md)

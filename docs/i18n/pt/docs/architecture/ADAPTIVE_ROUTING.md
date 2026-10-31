@@ -43,16 +43,15 @@ Agente de IA / IDE
 
 ### O que já existia (auditado, não duplicado)
 
-| Conceito                                              | Implementação existente                                                                                               |
-| ----------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------- |
-| Disponibilidade (podemos enviar tráfego?)             | Circuit breaker (CLOSED/DEGRADED/OPEN/HALF_OPEN, persistido na BD), período de espera da ligação, bloqueio de modelos |
-| Relatórios de estado                                  | `providerHealthMatrix.ts`, `providerHealthAutopilot.ts`                                                               |
-| Tráfego sombra                                        | `open-sse/services/combo/shadowRouting.ts`                                                                            |
-| Barreiras de proteção                                 | `src/lib/guardrails/` (hooks pré/pós)                                                                                 |
-| Cache exata                                           | `src/lib/semanticCache.ts` (baseada em assinatura)                                                                    |
-| Avaliadores / encaminhamento orientado por avaliações | `src/lib/evals/`, `open-sse/services/evalRouting.ts`                                                                  |
-| Explicabilidade das decisões de combo                 | `open-sse/services/combo/decisionTrace.ts`                                                                            |
-| Eventos em tempo real do dashboard                    | `src/lib/events/eventBus.ts` (canal de notificações da IU, payloads `unknown`, histórico de 100 entradas)             |
+| Conceito                                  | Implementação existente                                                                                               |
+| ----------------------------------------- | --------------------------------------------------------------------------------------------------------------------- |
+| Disponibilidade (podemos enviar tráfego?) | Circuit breaker (CLOSED/DEGRADED/OPEN/HALF_OPEN, persistido na BD), período de espera da ligação, bloqueio de modelos |
+| Relatórios de estado                      | `providerHealthMatrix.ts`, `providerHealthAutopilot.ts`                                                               |
+| Tráfego sombra                            | `open-sse/services/combo/shadowRouting.ts`                                                                            |
+| Barreiras de proteção                     | `src/lib/guardrails/` (hooks pré/pós)                                                                                 |
+| Cache exata                               | `src/lib/semanticCache.ts` (baseada em assinatura)                                                                    |
+| Explicabilidade das decisões de combo     | `open-sse/services/combo/decisionTrace.ts`                                                                            |
+| Eventos em tempo real do dashboard        | `src/lib/events/eventBus.ts` (canal de notificações da IU, payloads `unknown`, histórico de 100 entradas)             |
 
 A camada de eventos de encaminhamento **não** é uma reimplementação de `eventBus`: esse bus é
 o canal de notificações em tempo real do dashboard (nomes de _eventos_ tipados, payloads
@@ -271,8 +270,6 @@ backend de inteligência/avaliação, não como uma dependência**. Os pontos de
 - Um futuro `Evaluator` (determinístico, avaliador local, HTTP, WASM) consumiria
   eventos/rastos e devolveria um `QualityScore` que alimentaria o mesmo percurso
   `getQualityScore`/fator de qualidade.
-- O encaminhamento existente orientado por avaliações (`open-sse/services/evalRouting.ts`) já
-  reordena os destinos de combos pelas taxas de aprovação de `eval_runs`, quando ativado.
 
 Nenhuma avaliação é executada de forma síncrona no percurso dos pedidos, e o gateway funciona
 plenamente sem a presença do avaliador.

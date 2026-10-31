@@ -71,11 +71,9 @@ Estes arquivos têm atualmente a menor cobertura de linhas (< 60%) e oferecem o 
 | 11  | `open-sse/services/compression/progressiveAging.ts`          |   13.26% |
 | 12  | `open-sse/services/compression/engines/rtk/smartTruncate.ts` |   13.43% |
 | 13  | `open-sse/services/compression/engines/rtk/deduplicator.ts`  |   13.51% |
-| 14  | `src/lib/cloudAgent/agents/jules.ts`                         |   13.52% |
 | 15  | `open-sse/services/compression/lite.ts`                      |   14.46% |
 | 16  | `src/app/api/v1/rerank/route.ts`                             |   14.94% |
 | 17  | `open-sse/services/compression/preservation.ts`              |   15.07% |
-| 18  | `src/lib/cloudAgent/agents/codex.ts`                         |   15.54% |
 | 19  | `open-sse/services/tierResolver.ts`                          |   16.66% |
 | 20  | `src/app/docs/components/DocsLazyWrapper.tsx`                |   16.66% |
 
@@ -83,7 +81,6 @@ Temas para as Fases 6-7:
 
 - `open-sse/services/compression/**` é o grupo mais denso de baixa cobertura e representa a maior parte da lacuna restante.
 - As rotas de API de lotes e reranqueamento (`src/app/api/v1/batches/**`, `src/app/api/v1/rerank/route.ts`) precisam de testes no nível dos manipuladores.
-- Os adaptadores de agentes de nuvem (`src/lib/cloudAgent/agents/jules.ts`, `codex.ts`) e `tierResolver.ts` precisam de testes de cenário.
 - Os componentes da interface da documentação e `src/mitm/systemCommands.ts` têm prioridade menor, mas permitem ganhos fáceis de cobertura de ramificações.
 
 ## Lista de verificação da execução

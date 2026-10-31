@@ -49,7 +49,6 @@ AI 에이전트 / IDE
 | 섀도 트래픽                        | `open-sse/services/combo/shadowRouting.ts`                                         |
 | 가드레일                           | `src/lib/guardrails/` (사전/사후 훅)                                               |
 | 정확 일치 캐시                     | `src/lib/semanticCache.ts` (시그니처 기반)                                         |
-| 평가기 / 평가 기반 라우팅          | `src/lib/evals/`, `open-sse/services/evalRouting.ts`                               |
 | Combo 결정 설명 가능성             | `open-sse/services/combo/decisionTrace.ts`                                         |
 | 대시보드 실시간 이벤트             | `src/lib/events/eventBus.ts` (UI 알림 채널, `unknown` 페이로드, 100개 항목 기록)   |
 
@@ -267,8 +266,6 @@ OTel 싱크에서 GenAI/OmniRoute 스팬 속성으로 내보냅니다.
 - 향후 `Evaluator`(결정론적 평가기, 로컬 판정기, HTTP, WASM)는 이벤트/추적을
   소비하고 동일한 `getQualityScore`/품질 계수 경로에 반영되는
   `QualityScore`를 반환합니다.
-- 기존 평가 기반 라우팅(`open-sse/services/evalRouting.ts`)은 활성화된 경우
-  이미 `eval_runs` 통과율에 따라 조합 대상을 재정렬합니다.
 
 요청 경로에서는 어떠한 평가도 동기적으로 실행되지 않으며, 평가기가 없어도
 게이트웨이는 완전히 작동합니다.

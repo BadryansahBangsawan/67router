@@ -246,17 +246,6 @@ curl -X DELETE http://localhost:20128/api/settings/notion
 ограничен операциями маршрутизации, кэширования, сжатия, памяти, навыков, прокси и источников контекста во время выполнения. В v3.8.0
 вместе с сервером MCP поставляются два смежных фреймворка, которые документированы отдельно:
 
-### Облачные агенты
-
-Облачные агенты — это выполняемые вне процесса ИИ-агенты для разработки (codex-cloud, cursor-cloud, devin, jules), подключённые к
-67router через ту же модель соединения, которая используется для поставщиков LLM. Они доступны через
-собственный REST-интерфейс (`/api/v1/agents/*`) и **не** являются частью каталога инструментов MCP
-— вызов облачного агента не использует область доступа MCP.
-
-- Реализация: `src/lib/cloudAgent/` (`registry.ts`, `agents/codex.ts`, `agents/cursor.ts`, `agents/devin.ts`, `agents/jules.ts`).
-- Жизненный цикл: `createTask`, `getStatus`, `approvePlan`, `sendMessage`, `listSources`.
-- Документация: [docs/frameworks/CLOUD_AGENT.md](./CLOUD_AGENT.md).
-
 ### Защитные механизмы
 
 Защитные механизмы — это фильтры, применяемые до и после выполнения (vision-bridge, pii-masker, prompt-injection)

@@ -258,12 +258,6 @@ Az átviteli beállításokat és a hatókör-hozzárendeléseket lásd az [MCP-
 
 ---
 
-## A2A-integráció
-
-A `src/lib/skills/a2a.ts` exportálja a `memory_aware_routing` A2A-képességleírót és egy `registerA2ASkill(registry)` segédfüggvényt. Az egyéni A2A-képességek a `src/lib/a2a/skills/` könyvtárban találhatók, és az `A2A_SKILL_HANDLERS` (`src/lib/a2a/taskExecution.ts`) továbbítja őket. A feladat teljes életciklusát lásd az [A2A-SERVER.md](./A2A-SERVER.md) fájlban.
-
----
-
 ## Új beépített képesség hozzáadása
 
 1. **Definiálja a kezelőt** a `src/lib/skills/builtins.ts` fájlban (vagy a `src/lib/skills/builtin/` alatti egyik kapcsolódó fájlban). Szignatúra: `(input, { apiKeyId, sessionId }) => Promise<output>`.
@@ -480,7 +474,6 @@ Az egyéni készségek beépülőmodul-rendszeren keresztüli hozzáadásáról 
 ## Lásd még
 
 - [MCP-SERVER.md](./MCP-SERVER.md) — MCP-eszközök regisztrációja és átviteli módjai
-- [A2A-SERVER.md](./A2A-SERVER.md) — az A2A-feladatok életciklusa és a készségek továbbítása
 - [USER_GUIDE.md](../guides/USER_GUIDE.md#-skills-system) — felhasználóknak szóló bevezetés
 - [ARCHITECTURE.md](../architecture/ARCHITECTURE.md) — kérésfeldolgozási folyamat és komponens­térkép
 - Forrás: `src/lib/skills/`, `src/app/api/skills/`, `open-sse/mcp-server/tools/skillTools.ts`

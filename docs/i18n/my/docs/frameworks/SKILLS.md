@@ -258,12 +258,6 @@ Transport setup နှင့် scope assignments များအတွက် [M
 
 ---
 
-## A2A ပေါင်းစပ်မှု
-
-`src/lib/skills/a2a.ts` သည် `memory_aware_routing` A2A skill descriptor နှင့် `registerA2ASkill(registry)` helper ကို export လုပ်သည်။ Custom A2A skills များကို `src/lib/a2a/skills/` တွင် ထားရှိပြီး `A2A_SKILL_HANDLERS` (`src/lib/a2a/taskExecution.ts`) မှတစ်ဆင့် dispatch လုပ်သည်။ Task lifecycle အပြည့်အစုံအတွက် [A2A-SERVER.md](./A2A-SERVER.md) ကို ကြည့်ပါ။
-
----
-
 ## Built-in Skill အသစ်တစ်ခု ထည့်သွင်းခြင်း
 
 1. **Handler ကို သတ်မှတ်ပါ** — `src/lib/skills/builtins.ts` (သို့မဟုတ် `src/lib/skills/builtin/` အောက်ရှိ sibling file တစ်ခု) တွင် သတ်မှတ်ပါ။ Signature: `(input, { apiKeyId, sessionId }) => Promise<output>`။
@@ -479,7 +473,6 @@ plugin စနစ်မှတစ်ဆင့် စိတ်ကြိုက် sk
 ## ထပ်မံကြည့်ရှုရန်
 
 - [MCP-SERVER.md](./MCP-SERVER.md) — MCP tool မှတ်ပုံတင်ခြင်းနှင့် transports များ
-- [A2A-SERVER.md](./A2A-SERVER.md) — A2A task lifecycle နှင့် skill dispatch
 - [USER_GUIDE.md](../guides/USER_GUIDE.md#-skills-system) — အသုံးပြုသူများအတွက် မိတ်ဆက်
 - [ARCHITECTURE.md](../architecture/ARCHITECTURE.md) — request pipeline နှင့် component map
 - ရင်းမြစ်- `src/lib/skills/`, `src/app/api/skills/`, `open-sse/mcp-server/tools/skillTools.ts`

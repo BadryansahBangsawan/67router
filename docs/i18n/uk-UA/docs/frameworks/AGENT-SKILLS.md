@@ -44,7 +44,6 @@ src/app/api/agent-skills/
   generate/route.ts                    — POST /api/agent-skills/generate (потрібна автентифікація)
 
 open-sse/mcp-server/tools/agentSkillTools.ts  — 3 інструменти MCP (список, отримання, покриття)
-src/lib/a2a/skills/listCapabilities.ts        — навичка A2A: list-capabilities
 ```
 
 ---
@@ -140,8 +139,6 @@ curl -H "Accept: text/markdown" "http://localhost:20128/api/agent-skills/omni-pr
 }
 ```
 
-Докладні відомості про протокол див. у [A2A-SERVER.md](./A2A-SERVER.md).
-
 ---
 
 ## Каталог — 45 ідентифікаторів навичок
@@ -189,12 +186,11 @@ curl -H "Accept: text/markdown" "http://localhost:20128/api/agent-skills/omni-pr
 | `cli-contexts`        | cli-contexts       | `omniroute contexts`    |
 | `cli-cost-usage`      | cli-cost-usage     | `omniroute cost`        |
 | `cli-mcp`             | cli-mcp            | `omniroute mcp`         |
-| `cli-a2a`             | cli-a2a            | `omniroute a2a`         |
 | `cli-tunnel`          | cli-tunnel         | `omniroute tunnel`      |
 | `cli-backup-sync`     | cli-backup-sync    | `omniroute backup`      |
 | `cli-policy-audit`    | cli-policy-audit   | `omniroute policy`      |
 | `cli-batches`         | cli-batches        | `omniroute batch`       |
-| `cli-eval`            | cli-eval           | `omniroute eval`        |
+| `cli-eval`            | cli-eval           | `omniroute simulate`    |
 | `cli-plugins-skills`  | cli-plugins-skills | `omniroute plugins`     |
 | `cli-setup`           | cli-setup          | `omniroute setup`       |
 | `cli-skill-collector` | cli-setup          | `omniroute skills`      |
@@ -312,6 +308,5 @@ curl "http://localhost:20128/api/agent-skills/coverage"
 
 - [SKILLS.md](./SKILLS.md) — фреймворк Omni Skills (впровадження інструментів LLM + маркетплейс)
 - [MCP-SERVER.md](./MCP-SERVER.md) — каталог інструментів MCP (інструменти `omniroute_agent_skills_*`)
-- [A2A-SERVER.md](./A2A-SERVER.md) — протокол A2A (навичка `list-capabilities`)
 - `src/lib/agentSkills/` — каталог, генератор, парсери
 - `skills/` — згенеровані файли SKILL.md (45 записів)

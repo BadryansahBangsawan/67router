@@ -256,12 +256,6 @@ curl -X POST http://localhost:20128/api/skills/install \
 
 ---
 
-## การผสานรวม A2A
-
-`src/lib/skills/a2a.ts` ส่งออกตัวอธิบายทักษะ A2A `memory_aware_routing` และตัวช่วย `registerA2ASkill(registry)` ทักษะ A2A แบบกำหนดเองจะอยู่ใน `src/lib/a2a/skills/` และถูกส่งต่อผ่าน `A2A_SKILL_HANDLERS` (`src/lib/a2a/taskExecution.ts`) ดูวงจรชีวิตงานฉบับสมบูรณ์ได้ที่ [A2A-SERVER.md](./A2A-SERVER.md)
-
----
-
 ## การเพิ่มทักษะในตัวใหม่
 
 1. **กำหนดตัวจัดการ** ใน `src/lib/skills/builtins.ts` (หรือไฟล์ที่อยู่ในระดับเดียวกันภายใต้ `src/lib/skills/builtin/`) รูปแบบฟังก์ชัน: `(input, { apiKeyId, sessionId }) => Promise<output>`
@@ -476,7 +470,6 @@ const config: SkillConfig = {
 ## ดูเพิ่มเติม
 
 - [MCP-SERVER.md](./MCP-SERVER.md) — การลงทะเบียนเครื่องมือ MCP และรูปแบบการรับส่งข้อมูล
-- [A2A-SERVER.md](./A2A-SERVER.md) — วงจรชีวิตของงาน A2A และการส่งต่อไปยังสกิล
 - [USER_GUIDE.md](../guides/USER_GUIDE.md#-skills-system) — บทนำสำหรับผู้ใช้
 - [ARCHITECTURE.md](../architecture/ARCHITECTURE.md) — ไปป์ไลน์คำขอและแผนผังคอมโพเนนต์
 - ซอร์ส: `src/lib/skills/`, `src/app/api/skills/`, `open-sse/mcp-server/tools/skillTools.ts`

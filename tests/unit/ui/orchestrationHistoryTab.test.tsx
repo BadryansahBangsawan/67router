@@ -74,13 +74,8 @@ const hoursAgo = (h: number) => new Date(NOW - h * 60 * 60 * 1000).toISOString()
 /** Relative to the controlled current clock, including explicit time advances. */
 const realHoursAgo = (h: number) => new Date(Date.now() - h * 60 * 60 * 1000).toISOString();
 
-function mockFetch(opts: {
-  a2aTasks?: unknown[];
-  cloudAgentTasks?: unknown[];
-  a2aFail?: boolean;
-  cloudAgentFail?: boolean;
-}) {
-  const { a2aTasks = [], cloudAgentTasks = [], a2aFail = false, cloudAgentFail = false } = opts;
+function mockFetch(opts: { a2aTasks?: unknown[]; a2aFail?: boolean }) {
+  const { a2aTasks = [], a2aFail = false } = opts;
   const fn = vi.fn((url: string) => {
     const u = String(url);
     if (u.startsWith("/api/a2a/tasks/history")) {
@@ -91,29 +86,9 @@ function mockFetch(opts: {
           Promise.resolve({ tasks: a2aTasks, total: a2aTasks.length, limit: 500, offset: 0 }),
       });
     }
-    if (u.startsWith("/api/v1/agents/tasks")) {
-      if (cloudAgentFail) return Promise.resolve({ ok: false, status: 500 });
-      return Promise.resolve({ ok: true, json: () => Promise.resolve({ data: cloudAgentTasks }) });
-    }
     return Promise.reject(new Error(`unexpected url ${u}`));
   });
   return fn;
-}
-
-function cloudAgentTask(overrides: Record<string, unknown> = {}) {
-  return {
-    id: "ca1",
-    providerId: "devin",
-    status: "completed",
-    prompt: "do the thing",
-    source: { repoName: "r", repoUrl: "https://x" },
-    options: {},
-    activities: [],
-    createdAt: hoursAgo(45 / 60),
-    updatedAt: hoursAgo(20 / 60),
-    completedAt: hoursAgo(20 / 60),
-    ...overrides,
-  };
 }
 
 function a2aTask(overrides: Record<string, unknown> = {}) {
@@ -128,15 +103,20 @@ function a2aTask(overrides: Record<string, unknown> = {}) {
 }
 
 describe("HistoryTab", () => {
-  it("fetches both sources on mount and renders one row per (source, identity)", async () => {
+  it("fetches A2A history on mount and renders one row per (source, identity)", async () => {
     vi.stubGlobal(
       "fetch",
-      mockFetch({ a2aTasks: [a2aTask()], cloudAgentTasks: [cloudAgentTask()] })
+      mockFetch({
+        a2aTasks: [
+          a2aTask(),
+          a2aTask({ id: "t2", skill: "do the thing", createdAt: hoursAgo(45 / 60) }),
+        ],
+      })
     );
     const { c, cleanup } = render(<HistoryTab />);
     await flush();
     expect(c.textContent).toContain("smart-routing");
-    expect(c.textContent).toContain("devin");
+    expect(c.textContent).toContain("do the thing");
     expect(c.querySelectorAll("tbody tr").length).toBe(2);
     cleanup();
   });
@@ -298,20 +278,18 @@ describe("HistoryTab", () => {
     cleanup();
   });
 
-  it("shows a source-failed warning for A2A while Cloud Agent rows still render", async () => {
-    vi.stubGlobal("fetch", mockFetch({ a2aFail: true, cloudAgentTasks: [cloudAgentTask()] }));
+  it("shows a source-failed warning when A2A history fails to load", async () => {
+    vi.stubGlobal("fetch", mockFetch({ a2aFail: true }));
     const { c, cleanup } = render(<HistoryTab />);
     await flush();
     // The failed source is named through the shared `sourceA2A` key (mock returns the raw
     // key), never a hardcoded "A2A" literal.
     expect(c.textContent).toContain('historySourceFailed:{"source":"sourceA2A"}');
-    expect(c.textContent).toContain("devin");
-    // The Cloud Agent row label is translated too (`sourceCloudAgent`, not "Cloud Agent").
-    expect(c.querySelector("tbody th")?.textContent).toContain("sourceCloudAgent");
+    expect(c.querySelectorAll("tbody tr").length).toBe(0);
     cleanup();
   });
 
-  it("shows the empty state when both sources return no items in range", async () => {
+  it("shows the empty state when A2A returns no items in range", async () => {
     vi.stubGlobal("fetch", mockFetch({}));
     const { c, cleanup } = render(<HistoryTab />);
     await flush();
@@ -321,11 +299,12 @@ describe("HistoryTab", () => {
 
   describe("compare mode", () => {
     // Three distinct cells (distinct aria-label substrings) so tests can select each
-    // individually: two a2a runs plus one Cloud Agent run.
+    // individually: three a2a runs.
     function threeItems() {
       return {
         a2aTasks: [
           a2aTask({ id: "t1", skill: "smart-routing" }),
+          a2aTask({ id: "ca1", skill: "do the thing", createdAt: hoursAgo(45 / 60) }),
           a2aTask({
             id: "t3",
             skill: "eval-suite",
@@ -333,7 +312,6 @@ describe("HistoryTab", () => {
             completedAt: hoursAgo(1.5),
           }),
         ],
-        cloudAgentTasks: [cloudAgentTask()],
       };
     }
 

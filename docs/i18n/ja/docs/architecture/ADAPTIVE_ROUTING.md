@@ -34,16 +34,15 @@ AI エージェント / IDE
 
 ### 既存の機能（監査済み、重複実装なし）
 
-| 概念                                     | 既存の実装                                                                                                |
-| ---------------------------------------- | --------------------------------------------------------------------------------------------------------- |
-| 可用性（トラフィックを送信できるか？）   | サーキットブレーカー（CLOSED/DEGRADED/OPEN/HALF_OPEN、DB に永続化）、接続クールダウン、モデルロックアウト |
-| ヘルスレポート                           | `providerHealthMatrix.ts`、`providerHealthAutopilot.ts`                                                   |
-| シャドウトラフィック                     | `open-sse/services/combo/shadowRouting.ts`                                                                |
-| ガードレール                             | `src/lib/guardrails/`（前処理／後処理フック）                                                             |
-| 完全一致キャッシュ                       | `src/lib/semanticCache.ts`（シグネチャベース）                                                            |
-| エバリュエーター／評価駆動型ルーティング | `src/lib/evals/`、`open-sse/services/evalRouting.ts`                                                      |
-| Combo の意思決定に関する説明可能性       | `open-sse/services/combo/decisionTrace.ts`                                                                |
-| ダッシュボードのリアルタイムイベント     | `src/lib/events/eventBus.ts`（UI 通知チャネル、`unknown` ペイロード、100 件の履歴）                       |
+| 概念                                   | 既存の実装                                                                                                |
+| -------------------------------------- | --------------------------------------------------------------------------------------------------------- |
+| 可用性（トラフィックを送信できるか？） | サーキットブレーカー（CLOSED/DEGRADED/OPEN/HALF_OPEN、DB に永続化）、接続クールダウン、モデルロックアウト |
+| ヘルスレポート                         | `providerHealthMatrix.ts`、`providerHealthAutopilot.ts`                                                   |
+| シャドウトラフィック                   | `open-sse/services/combo/shadowRouting.ts`                                                                |
+| ガードレール                           | `src/lib/guardrails/`（前処理／後処理フック）                                                             |
+| 完全一致キャッシュ                     | `src/lib/semanticCache.ts`（シグネチャベース）                                                            |
+| Combo の意思決定に関する説明可能性     | `open-sse/services/combo/decisionTrace.ts`                                                                |
+| ダッシュボードのリアルタイムイベント   | `src/lib/events/eventBus.ts`（UI 通知チャネル、`unknown` ペイロード、100 件の履歴）                       |
 
 ルーティングイベントレイヤーは `eventBus` の再実装では**ありません**。このバスは、ダッシュボードのリアルタイム通知チャネル（型付きの_イベント名_、不透明なペイロード、UI コンシューマー）です。`RoutingEvent` は、制御プレーンのフィードバックシンク（品質トラッカー、OTel エクスポーター、説明ストア）によって利用される、型付きの_結果_構造体（レイテンシ／トークン／コスト／結果／終了理由）です。
 
@@ -257,8 +256,6 @@ OTel シンクによって GenAI/OmniRoute スパン属性としてエクスポ�
 - 将来の `Evaluator`（決定論的評価器、ローカルジャッジ、HTTP、WASM）は、
   イベント／トレースを受け取り、同じ `getQualityScore`／品質係数の経路に反映される
   `QualityScore` を返します。
-- 既存の評価駆動ルーティング（`open-sse/services/evalRouting.ts`）は、有効化されている場合、
-  `eval_runs` の合格率に基づいてコンボターゲットをすでに並べ替えています。
 
 リクエスト経路上で評価が同期実行されることはなく、評価器が存在しなくても
 ゲートウェイは完全に動作します。

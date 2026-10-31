@@ -1437,9 +1437,8 @@ curl -X PATCH "$OMNIROUTE_URL/api/keys/$KEY_ID" \
 
 ### הערכות
 
-| נקודת קצה    | שיטה     | תיאור                          |
-| ------------ | -------- | ------------------------------ |
-| `/api/evals` | GET/POST | הצגת חבילות הערכה / הרצת הערכה |
+| נקודת קצה | שיטה | תיאור |
+| --------- | ---- | ----- |
 
 ### מדיניות
 
@@ -1762,31 +1761,6 @@ DELETE /api/usage/token-limits?id=tl-abc
 
 ---
 
-## פרוטוקול סוכנים
-
-משימות סוכן בענן (Claude Code, Codex Cloud, OpenHands וכו׳) המבוצעות מרחוק עבור משתמשי 67router.
-
-| שיטה   | נתיב                          | תיאור                                                                                                                                          |
-| ------ | ----------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------- |
-| GET    | `/api/v1/agents/tasks`        | הצגת רשימת משימות — הפרמטרים `?provider=`, `?status=`, `?limit=` הם אופציונליים (1–500, ברירת מחדל 50)                                         |
-| POST   | `/api/v1/agents/tasks`        | יצירת משימה — גוף הבקשה מאומת באמצעות `CreateCloudAgentTaskSchema` (`providerId`, `prompt`, `source`, `options?`). מחזיר `201` עם מעטפת המשימה |
-| DELETE | `/api/v1/agents/tasks?id=...` | מחיקת משימה                                                                                                                                    |
-| GET    | `/api/v1/agents/tasks/[id]`   | קריאת משימה — מרענן באופן סינכרוני את הסטטוס מסוכן הענן במעלה הזרם כאשר מוגדר `external_id`                                                    |
-| POST   | `/api/v1/agents/tasks/[id]`   | פעולה מובחנת: `{action: "approve"}`, `{action: "message", message}`, או `{action: "cancel"}`                                                   |
-| DELETE | `/api/v1/agents/tasks/[id]`   | מחיקת משימה מסוימת לפי מזהה                                                                                                                    |
-
-> **אימות:** נדרש אימות ניהולי בכל שיטה (`requireCloudAgentManagementAuth`). לפני v3.8.0 נקודות קצה אלה לא דרשו אימות — ראו commit `588a0333` לפרטים על השינוי השובר.
-
-```bash
-# יצירת משימת ענן של Claude Code
-curl -X POST http://localhost:20128/api/v1/agents/tasks \
-  -H "Authorization: Bearer your-management-key" \
-  -H "Content-Type: application/json" \
-  -d '{"providerId":"claude-code-cloud","prompt":"Fix the failing test","source":{"repo":"...","branch":"..."}}'
-```
-
----
-
 ## שרתי Proxy ניהוליים
 
 שרתי Proxy יוצאים מסוג HTTP(S)/SOCKS שניתן להקצות לספקים, לחשבונות או באופן גלובלי.
@@ -1906,48 +1880,10 @@ curl -X DELETE http://localhost:20128/api/resilience/model-cooldowns \
 
 67router חושף נקודת קצה מסוג A2A (סוכן-לסוכן) בתקן JSON-RPC 2.0, וכן מעטפת REST לצורכי בדיקה ולוח בקרה.
 
-### JSON-RPC
-
-```bash
-POST /a2a
-Authorization: Bearer your-api-key   # אופציונלי, אלא אם OMNIROUTE_API_KEY מוגדר
-Content-Type: application/json
-
-{
-  "jsonrpc": "2.0",
-  "id": 1,
-  "method": "message/send",
-  "params": {
-    "skill": "smart-routing",
-    "messages": [{"role": "user", "content": "Route this coding task"}]
-  }
-}
-```
-
-שיטות נתמכות (כולן תלויות בהפעלת `settings.a2aEnabled`):
-
-| שיטה             | תיאור                                                            |
-| ---------------- | ---------------------------------------------------------------- |
-| `message/send`   | הפעלה סינכרונית של מיומנות; מחזירה `{task, artifacts, metadata}` |
-| `message/stream` | הפעלת SSE בזרימה של אותה קבוצת מיומנויות                         |
-| `tasks/get`      | אחזור משימה לפי `taskId`                                         |
-| `tasks/cancel`   | ביטול משימה לפי `taskId`                                         |
-
-מיומנויות מובנות: `smart-routing`, `quota-management`, `provider-discovery`, `cost-analysis`, `health-report`.
-
-### כרטיס סוכן
-
-```bash
-GET /.well-known/agent.json
-```
-
-מחזיר את כרטיס סוכן ה-A2A הציבורי (שם, תיאור, יכולות, קטלוג מיומנויות, סכמת אימות) — נשמר במטמון ציבורי למשך שעה. לא נדרש אימות.
-
 ### מסייעי REST
 
 | שיטה | נתיב                         | תיאור                                                                                                                  |
 | ---- | ---------------------------- | ---------------------------------------------------------------------------------------------------------------------- |
-| GET  | `/api/a2a/status`            | מצב הפעלת A2A + נתוני משימות + תקציר כרטיס הסוכן השמור במטמון                                                          |
 | GET  | `/api/a2a/tasks`             | הצגת רשימת משימות — `?state=submitted\|working\|completed\|failed\|cancelled`, `?skill=`, `?limit=` (≤200), `?offset=` |
 | POST | `/api/a2a/tasks`             | (לא ממומש כמסייע REST — יש ליצור באמצעות JSON-RPC‏ `message/send`)                                                     |
 | GET  | `/api/a2a/tasks/[id]`        | אחזור משימה אחת                                                                                                        |
@@ -1967,12 +1903,8 @@ GET /.well-known/agent.json
 | GET | `/api/cloud/models/alias` | הצגת כינויי מודלים כפי שהם נחשפים לסנכרון ענן |
 | GET | `/api/assess` | קריאת סיווגי ההערכה האחרונים (לפי ספק/מודל) |
 | POST | `/api/assess` | הרצת הערכה — גוף: `{scope: {type:"all"}                                                   | {type:"provider", providerId} | {type:"model", modelId}, trigger?}` |
-| GET | `/api/evals` | הצגת חבילות ההערכה המובנות + ההרצות האחרונות |
-| POST | `/api/evals` | הפעלת הרצת הערכה |
-| POST | `/api/evals/suites` | יצירת חבילת הערכה מותאמת אישית — הגוף מאומת באמצעות `evalSuiteSaveSchema` |
-| GET | `/api/evals/suites/[id]` | אחזור חבילת הערכה מותאמת אישית |
 
-**אימות:** `/api/cloud/auth` מאמת מפתח Bearer ישירות ומחזיר את המפתח המוסווה ואת `projectId` של כל חיבור רק עבור מפתח בעל ההרשאה `manage` / `admin`; יתר הנתיבים `/api/cloud/*`,‏ `/api/evals/*` ו-`/api/assess` דורשים הפעלת ניהול או מפתח API ניהולי. בקשת POST אל `/api/assess` משתמשת ב-`validateBody` עם סכמת תחום מסוג איחוד מובחן.
+**אימות:** `/api/cloud/auth` מאמת מפתח Bearer ישירות ומחזיר את המפתח המוסווה ואת `projectId` של כל חיבור רק עבור מפתח בעל ההרשאה `manage` / `admin`; יתר הנתיבים `/api/cloud/*`,‏ ו-`/api/assess` דורשים הפעלת ניהול או מפתח API ניהולי. בקשת POST אל `/api/assess` משתמשת ב-`validateBody` עם סכמת תחום מסוג איחוד מובחן.
 
 ---
 
@@ -2296,5 +2228,3 @@ devin-cli וכדומה). לרשימה המלאה, ראו [חומר עזר בנו
 - ניתן להפעיל או להשבית את `requireLogin` דרך `/api/settings/require-login`
 - נתיבי `/v1/*` דורשים באופן אופציונלי מפתח API מסוג Bearer כאשר `REQUIRE_API_KEY=true`
 - „אסימון ניהול” / „מפתח API בהיקף ניהול” במסמך עזר זה פירושם אחת מהמשפחות שבמדריך זה — ולא סוג נוסף ובלתי מוגדר של סוד
-
-> **שינוי שובר תאימות (v3.8.0)** — הנתיבים `/api/v1/agents/tasks/*` ונקודות הקצה לניהול תקופת הצינון דורשים כעת **אימות לניהול** (קובץ Cookie מסוג `auth_token` של לוח המחוונים או מפתח API בהיקף ניהול). לקוחות שקראו בעבר לנתיבים אלה ללא אימות יקבלו `401 Unauthorized`. ראו את ה-commit ‏`588a0333` (`fix(auth): require management auth for agent and cooldown APIs`).

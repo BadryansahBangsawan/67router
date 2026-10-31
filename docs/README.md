@@ -95,15 +95,12 @@ Lookup material — API surface, environment variables, CLI flags, provider cata
 Pluggable subsystems exposed to clients, agents, and operators.
 
 - [MCP-SERVER.md](frameworks/MCP-SERVER.md) — Model Context Protocol server.
-- [A2A-SERVER.md](frameworks/A2A-SERVER.md) — Agent-to-Agent (A2A) JSON-RPC server.
 - [ACP.md](frameworks/ACP.md) — Agent Client Protocol.
-- [AGENT_PROTOCOLS_GUIDE.md](frameworks/AGENT_PROTOCOLS_GUIDE.md) — A2A / ACP / Cloud agent overview.
+- [AGENT_PROTOCOLS_GUIDE.md](frameworks/AGENT_PROTOCOLS_GUIDE.md) — ACP (CLI agent registry) overview.
 - [AGENTBRIDGE.md](frameworks/AGENTBRIDGE.md) — IDE agent bridge.
 - [AGENT-SKILLS.md](frameworks/AGENT-SKILLS.md) — agent skills catalog.
-- [CLOUD_AGENT.md](frameworks/CLOUD_AGENT.md) — cloud agent runtime and providers.
 - [SKILLS.md](frameworks/SKILLS.md) — Skills framework (sandboxed extension).
 - [MEMORY.md](frameworks/MEMORY.md) — persistent memory (FTS5 + Qdrant).
-- [EVALS.md](frameworks/EVALS.md) — eval suites.
 - [GAMIFICATION.md](frameworks/GAMIFICATION.md) — gamification & leaderboard system.
 - [EMBEDDED-SERVICES.md](frameworks/EMBEDDED-SERVICES.md) — embedded sidecar services (9Router, CLIProxyAPI).
 - [NOTION_CONTEXT.md](frameworks/NOTION_CONTEXT.md) — Notion context source.
@@ -111,7 +108,6 @@ Pluggable subsystems exposed to clients, agents, and operators.
 - [LOCAL_CORPUS_CONTEXT.md](frameworks/LOCAL_CORPUS_CONTEXT.md) — local corpus context source (approved directory exposed to MCP).
 - [OPENCODE.md](frameworks/OPENCODE.md) — OpenCode integration.
 - [OPEN_SSE_ARCHITECTURE.md](frameworks/OPEN_SSE_ARCHITECTURE.md) — open-sse streaming engine internals.
-- [PLAYGROUND_STUDIO.md](frameworks/PLAYGROUND_STUDIO.md) — Playground Studio UI.
 - [SEARCH_TOOLS_STUDIO.md](frameworks/SEARCH_TOOLS_STUDIO.md) — Search Tools Studio UI.
 - [TRAFFIC_INSPECTOR.md](frameworks/TRAFFIC_INSPECTOR.md) — traffic inspector (MITM).
 - [PLUGINS.md](frameworks/PLUGINS.md) — CLI plugin system overview.

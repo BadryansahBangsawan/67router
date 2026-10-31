@@ -1440,9 +1440,8 @@ GET одговор садржи `agents[]` (id, name, binary, version, installed
 
 ### Евалуације
 
-| Крајња тачка | Метод    | Опис                                  |
-| ------------ | -------- | ------------------------------------- |
-| `/api/evals` | GET/POST | Приказ пакета евалуација / евалуација |
+| Крајња тачка | Метод | Опис |
+| ------------ | ----- | ---- |
 
 ### Политике
 
@@ -1765,31 +1764,6 @@ DELETE /api/usage/token-limits?id=tl-abc
 
 ---
 
-## Протокол агената
-
-Задаци агената у облаку (Claude Code, Codex Cloud, OpenHands итд.) који се извршавају удаљено у име 67router корисника.
-
-| Метод  | Путања                        | Опис                                                                                                                                                   |
-| ------ | ----------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------ |
-| GET    | `/api/v1/agents/tasks`        | Наводи задатке — опционо `?provider=`, `?status=`, `?limit=` (1–500, подразумевано 50)                                                                 |
-| POST   | `/api/v1/agents/tasks`        | Креира задатак — тело се проверава помоћу `CreateCloudAgentTaskSchema` (`providerId`, `prompt`, `source`, `options?`). Враћа `201` са омотачем задатка |
-| DELETE | `/api/v1/agents/tasks?id=...` | Брише задатак                                                                                                                                          |
-| GET    | `/api/v1/agents/tasks/[id]`   | Чита задатак — синхроно освежава статус од узводног агента у облаку када је постављен `external_id`                                                    |
-| POST   | `/api/v1/agents/tasks/[id]`   | Дискриминисана радња: `{action: "approve"}`, `{action: "message", message}` или `{action: "cancel"}`                                                   |
-| DELETE | `/api/v1/agents/tasks/[id]`   | Брише одређени задатак према ID-у                                                                                                                      |
-
-> **Аутентификација:** аутентификација за управљање је обавезна за сваки метод (`requireCloudAgentManagementAuth`). Пре верзије v3.8.0 ови методи нису захтевали аутентификацију — погледајте комит `588a0333` за некомпатибилну измену.
-
-```bash
-# Креирање Claude Code задатка у облаку
-curl -X POST http://localhost:20128/api/v1/agents/tasks \
-  -H "Authorization: Bearer your-management-key" \
-  -H "Content-Type: application/json" \
-  -d '{"providerId":"claude-code-cloud","prompt":"Fix the failing test","source":{"repo":"...","branch":"..."}}'
-```
-
----
-
 ## Проксији за управљање
 
 Излазни HTTP(S)/SOCKS проксији који се могу доделити добављачима, налозима или глобално.
@@ -1909,48 +1883,10 @@ curl -X DELETE http://localhost:20128/api/resilience/model-cooldowns \
 
 67router пружа A2A (Agent-to-Agent) JSON-RPC 2.0 крајњу тачку, као и REST омотач за потребе прегледа и контролне табле.
 
-### JSON-RPC
-
-```bash
-POST /a2a
-Authorization: Bearer your-api-key   # опционо, осим ако је OMNIROUTE_API_KEY подешен
-Content-Type: application/json
-
-{
-  "jsonrpc": "2.0",
-  "id": 1,
-  "method": "message/send",
-  "params": {
-    "skill": "smart-routing",
-    "messages": [{"role": "user", "content": "Route this coding task"}]
-  }
-}
-```
-
-Подржани методи (сви зависе од `settings.a2aEnabled`):
-
-| Метод            | Опис                                                             |
-| ---------------- | ---------------------------------------------------------------- |
-| `message/send`   | Синхроно извршавање вештине; враћа `{task, artifacts, metadata}` |
-| `message/stream` | SSE стримовање извршавања истог скупа вештина                    |
-| `tasks/get`      | Добавља задатак према `taskId`                                   |
-| `tasks/cancel`   | Отказује задатак према `taskId`                                  |
-
-Уграђене вештине: `smart-routing`, `quota-management`, `provider-discovery`, `cost-analysis`, `health-report`.
-
-### Картица агента
-
-```bash
-GET /.well-known/agent.json
-```
-
-Враћа јавну A2A картицу агента (назив, опис, могућности, каталог вештина, шему аутентификације) — јавно се кешира 1 сат. Аутентификација није потребна.
-
 ### REST помоћне крајње тачке
 
 | Метод | Путања                       | Опис                                                                                                                |
 | ----- | ---------------------------- | ------------------------------------------------------------------------------------------------------------------- |
-| GET   | `/api/a2a/status`            | Статус омогућености A2A-а + статистика задатака + сажетак кеширане картице агента                                   |
 | GET   | `/api/a2a/tasks`             | Листа задатака — `?state=submitted\|working\|completed\|failed\|cancelled`, `?skill=`, `?limit=` (≤200), `?offset=` |
 | POST  | `/api/a2a/tasks`             | (Није имплементирано као REST помоћна крајња тачка — креирајте преко JSON-RPC метода `message/send`)                |
 | GET   | `/api/a2a/tasks/[id]`        | Добавља један задатак                                                                                               |
@@ -1970,12 +1906,8 @@ GET /.well-known/agent.json
 | GET | `/api/cloud/models/alias` | Наводи алијасе модела који су изложени синхронизацији са облаком |
 | GET | `/api/assess` | Чита најновије категоризације процене (по добављачу/моделу) |
 | POST | `/api/assess` | Покреће процену — тело: `{scope: {type:"all"}                                                   | {type:"provider", providerId} | {type:"model", modelId}, trigger?}` |
-| GET | `/api/evals` | Наводи уграђене пакете евалуација + најновија извршавања |
-| POST | `/api/evals` | Покреће извршавање евалуације |
-| POST | `/api/evals/suites` | Креира прилагођени пакет евалуација — тело се валидира помоћу `evalSuiteSaveSchema` |
-| GET | `/api/evals/suites/[id]` | Добавља прилагођени пакет евалуација |
 
-**Аутентификација:** `/api/cloud/auth` директно проверава Bearer кључ и враћа маскирани кључ и `projectId` сваке везе само за кључ са опсегом `manage` / `admin`; остале руте `/api/cloud/*`, `/api/evals/*` и `/api/assess` захтевају управљачку сесију/API кључ. POST захтев за `/api/assess` користи `validateBody` са шемом опсега заснованом на дискриминисаној унији.
+**Аутентификација:** `/api/cloud/auth` директно проверава Bearer кључ и враћа маскирани кључ и `projectId` сваке везе само за кључ са опсегом `manage` / `admin`; остале руте `/api/cloud/*` и `/api/assess` захтевају управљачку сесију/API кључ. POST захтев за `/api/assess` користи `validateBody` са шемом опсега заснованом на дискриминисаној унији.
 
 ---
 
@@ -2296,5 +2228,3 @@ devin-cli итд.). Погледајте [Референцу добављача]
 - `requireLogin` се може укључити или искључити преко `/api/settings/require-login`
 - Руте `/v1/*` опционо захтевају Bearer API кључ када је `REQUIRE_API_KEY=true`
 - „токен за управљање“ / „API кључ са опсегом за управљање“ у овој референци означава једну од врста из тог водича — а не недефинисани додатни тип тајне
-
-> **Промена која нарушава компатибилност (v3.8.0)** — `/api/v1/agents/tasks/*` и крајње тачке за управљање периодом мировања сада захтевају **аутентификацију за управљање** (колачић `auth_token` контролне табле или API кључ са опсегом за управљање). Клијенти који су раније позивали ове руте без аутентификације добиће `401 Unauthorized`. Погледајте комит `588a0333` (`fix(auth): require management auth for agent and cooldown APIs`).

@@ -71,11 +71,9 @@ Dawn il-fajls għandhom l-inqas kopertura tal-linji llum (< 60%) u joffru l-aħj
 | 11  | `open-sse/services/compression/progressiveAging.ts`          |  13.26% |
 | 12  | `open-sse/services/compression/engines/rtk/smartTruncate.ts` |  13.43% |
 | 13  | `open-sse/services/compression/engines/rtk/deduplicator.ts`  |  13.51% |
-| 14  | `src/lib/cloudAgent/agents/jules.ts`                         |  13.52% |
 | 15  | `open-sse/services/compression/lite.ts`                      |  14.46% |
 | 16  | `src/app/api/v1/rerank/route.ts`                             |  14.94% |
 | 17  | `open-sse/services/compression/preservation.ts`              |  15.07% |
-| 18  | `src/lib/cloudAgent/agents/codex.ts`                         |  15.54% |
 | 19  | `open-sse/services/tierResolver.ts`                          |  16.66% |
 | 20  | `src/app/docs/components/DocsLazyWrapper.tsx`                |  16.66% |
 
@@ -83,7 +81,6 @@ Temi għall-Fażijiet 6-7:
 
 - `open-sse/services/compression/**` huwa l-aktar grupp dens ta' kopertura baxxa u jiddomina d-distakk li jibqa'.
 - Rotot API tal-batch u rerank (`src/app/api/v1/batches/**`, `src/app/api/v1/rerank/route.ts`) jeħtieġu testijiet fil-livell tal-handler.
-- Adapters tal-cloud agent (`src/lib/cloudAgent/agents/jules.ts`, `codex.ts`) u `tierResolver.ts` jeħtieġu testijiet ta' xenarji.
 - Komponenti UI tad-dokumentazzjoni u `src/mitm/systemCommands.ts` huma ta' prijorità aktar baxxa iżda rebħiet irħas fil-fergħat.
 
 ## Checklist tal-Eżekuzzjoni

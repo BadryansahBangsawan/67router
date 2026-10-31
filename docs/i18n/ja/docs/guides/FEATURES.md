@@ -43,8 +43,6 @@ v3.7.x → v3.8.0 のサイクルでは、設定不要の自動ルーティン�
 - 🤝 **GitLab Duo OAuth プロバイダー** — GitLab の認証情報を使用してログイン
 - 🧠 **Reasoning Replay Cache** — 推論トレースをインメモリと SQLite のハイブリッド方式で永続化
 
-📚 **関連ドキュメント：** [スキルフレームワーク](../frameworks/SKILLS.md) · [メモリシステム](../frameworks/MEMORY.md) · [クラウドエージェント](../frameworks/CLOUD_AGENT.md) · [Webhook](../frameworks/WEBHOOKS.md) · [Reasoning Replay Cache](../routing/REASONING_REPLAY.md)
-
 ---
 
 ## 🔌 プロバイダー
@@ -104,12 +102,6 @@ OpenRouter接続では、「Advanced Settings」で接続ごとの`preset`を保
 API 翻訳をデバッグするための 4 つのモード：**プレイグラウンド**（フォーマット変換）、**チャットテスター**（ライブリクエスト）、**テストベンチ**（バッチテスト）、**ライブモニター**（リアルタイムストリーム）。
 
 ![翻訳プレイグラウンド](../screenshots/05-translator.png)
-
----
-
-## 🎮 モデルプレイグラウンド _(v2.0.9+)_
-
-ダッシュボードから任意のモデルを直接テストできます。プロバイダー、モデル、エンドポイントを選択し、Monaco Editor でプロンプトを作成して、レスポンスをリアルタイムでストリーミングできます。ストリームの途中で中止したり、タイミング指標を確認したりすることもできます。
 
 ---
 

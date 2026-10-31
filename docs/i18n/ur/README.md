@@ -592,7 +592,6 @@ Radar اختیاری ہے اور صرف GET استعمال کرتا ہے۔ 67rou
 - **🔑 فی-کلید روٹنگ کنٹرول** — `forcedModel` کے ذریعے کسی API کلید کو ایک ماڈل یا کومبو سے پن کریں، اور کسی کلید کے ماڈلز اور کومبوز atomic طور پر شامل یا ہٹائیں (`/api/keys/{id}/access`)۔ → [API حوالہ](docs/reference/API_REFERENCE.md) · [OpenAPI](docs/openapi.yaml)
 - **🛡️ بہتر PII کنٹرولز** — فی-قسم انتخاب، 20 تک تصدیق شدہ حسبِ منشا ماسکنگ پیٹرنز، اور فی-قسم شناخت کاؤنٹرز؛ ماسکنگ بذاتِ خود اختیاری (opt-in) ہی رہتی ہے۔ → [گارڈریلز](docs/security/GUARDRAILS.md)
 - **🌍 67 زبانیں** — ڈیش بورڈ، دستاویزات کے میررز اور CLI، جبکہ `npm run i18n:add-locale` ایک ہی کمانڈ میں ہر جگہ زبان شامل کر دیتا ہے۔ → [i18n رہنما](docs/guides/I18N.md)
-- **🎛️ OmniConductor** — آپ کی ایجنٹ فلیٹ کو اندرونی A2A ڈیلیگیشن، ایجنٹ کارڈ پر Conductor مہارتیں، اور Faro پش-ٹو-ٹاک وائس چیٹ کے ساتھ ڈیش بورڈ پینل۔ → [A2A سرور](docs/frameworks/A2A-SERVER.md)
 - **🛂 ایڈاپٹو ایڈمیشن اور اوورلوڈ تحفظ** — بھاری چیٹ درخواستیں 503 دینے کے بجائے قطار میں لگتی ہیں، فی-کنکشن atomic RPM رولنگ لیزوں کے ساتھ۔ → [لچک رہنما](docs/architecture/RESILIENCE_GUIDE.md)
 - **🗂️ مستند `/v1/models` ترتیب** — ہر فراہم کنندہ کے لیے ایک مسلسل فراہم کنندہ-گروپ شدہ بلاک (کومبوز پہلے پن شدہ)، ہر کیٹلاگ ماخذ میں مستحکم۔ → [API حوالہ](docs/reference/API_REFERENCE.md)
 - **🗜️ کمپریشن مضبوطی** — پہلے سے فعال انفلیشن گارڈ، DE / FR / JA + چینی (wényán) کے لیے Caveman پیکس، Gradle اور .NET کے لیے RTK فلٹرز۔ → [کمپریشن](docs/compression/COMPRESSION_ENGINES.md)
@@ -910,7 +909,6 @@ omniroute contexts use default            # ← دوبارہ مقامی سرور
   <tr><td align="left" nowrap>🧰 <b>MCP (stdio)</b></td><td align="left" nowrap><code>omniroute --mcp</code></td><td align="left">Claude Desktop، Cursor یا کسی بھی MCP کلائنٹ سے منسلک کریں</td></tr>
   <tr><td align="left" nowrap>🌊 <b>MCP (HTTP)</b></td><td align="left" nowrap><code>/api/mcp/stream</code></td><td align="left">ریموٹ MCP — <b>110 ٹولز</b>، 33 دائرۂ اختیار (نفاذ اختیاری)، مکمل آڈٹ ٹریل</td></tr>
   <tr><td align="left" nowrap>📡 <b>MCP (SSE)</b></td><td align="left" nowrap><code>/api/mcp/sse</code></td><td align="left">اسٹریمنگ MCP ٹرانسپورٹ</td></tr>
-  <tr><td align="left" nowrap>🤝 <b>A2A</b></td><td align="left" nowrap><code>/.well-known/agent.json</code></td><td align="left">ایجنٹ سے ایجنٹ، <b>JSON-RPC 2.0</b> + SSE، 6 مہارتیں</td></tr>
   <tr><td align="left" nowrap>🌐 <b>REST API</b></td><td align="left" nowrap><code>/v1/*</code></td><td align="left">OpenAI سے ہم آہنگ — چیٹ، ایمبیڈنگز، تصاویر، آڈیو، OCR</td></tr>
   <tr><td align="left" nowrap>🔔 <b>Webhooks</b></td><td align="left" nowrap><code>/api/webhooks</code></td><td align="left">درخواست / کوٹا ایونٹس کو Slack، Discord، Telegram یا کسی بھی URL پر بھیجیں</td></tr>
   <tr><td align="left" nowrap>🛰️ <b>ریموٹ CLI</b></td><td align="left" nowrap><code>omniroute connect <host></code></td><td align="left">محدود دائرۂ اختیار والے رسائی ٹوکنز کے ذریعے ریموٹ انسٹینس چلائیں</td></tr>
@@ -920,8 +918,6 @@ omniroute contexts use default            # ← دوبارہ مقامی سرور
 # Claude Code کو MCP کے ذریعے 67router کا مکمل ٹول سیٹ دیں:
 claude mcp add-server omniroute --type http --url http://localhost:20128/api/mcp/stream
 ```
-
-<sub>📖 [MCP سرور](docs/frameworks/MCP-SERVER.md) · [A2A سرور](docs/frameworks/A2A-SERVER.md) · [ایجنٹ پروٹوکولز](docs/frameworks/AGENT_PROTOCOLS_GUIDE.md)</sub>
 
 <br/>
 
@@ -1386,7 +1382,6 @@ OMNIROUTE_SKIP_POSTINSTALL=1 npm install -g omniroute   # CI=1 بھی اسے چ�
   <tr><td nowrap><b><a href="open-sse/mcp-server/README.md">MCP سرور</a></b></td><td>110 MCP ٹولز، IDE کنفیگریشنز، Python/TS/Go کلائنٹس</td></tr>
   <tr><td nowrap><b><a href="docs/frameworks/MCP-SERVER.md">MCP سرور رہنما</a></b></td><td>MCP تنصیب، ٹرانسپورٹس، اور ٹول حوالہ</td></tr>
   <tr><td nowrap><b><a href="src/lib/a2a/README.md">A2A سرور</a></b></td><td>JSON-RPC 2.0 پروٹوکول، مہارتیں، اسٹریمنگ، ٹاسک مینجمنٹ</td></tr>
-  <tr><td nowrap><b><a href="docs/frameworks/A2A-SERVER.md">A2A سرور رہنما</a></b></td><td>A2A ایجنٹ کارڈ، ٹاسکس، مہارتیں، اور اسٹریمنگ</td></tr>
 </table>
 
 ### 📋 پروجیکٹ اور معیار

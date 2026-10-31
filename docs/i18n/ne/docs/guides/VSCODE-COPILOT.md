@@ -86,7 +86,7 @@ HTTP 400 — मोडेल '<id>' छवि-उत्पादन मोडे
 
 ## VS Code ट्याबभित्रको Dashboard
 
-`omnicopilot.dashboardOpen: "editor"` ले 67router dashboard लाई बाह्य ब्राउजरको सट्टा Simple Browser मार्फत editor ट्याबमा रेन्डर गर्छ। Embedding लाई सर्भरमा `DASHBOARD_ALLOW_EMBED=vscode` मार्फत **स्पष्ट रूपमा सक्षम गर्नुपर्छ**, जसले पूर्वनिर्धारित `frame-ancestors 'none'` + `X-Frame-Options: DENY` को सट्टा `frame-ancestors 'self' vscode-webview:` सहित HTML पृष्ठहरू उपलब्ध गराउँछ। API सतह (`/api`, `/v1`, `/v1beta`, `/a2a`, `/healthz`) ले दुवै अवस्थामा कडा headers कायम राख्छ।
+`omnicopilot.dashboardOpen: "editor"` ले 67router dashboard लाई बाह्य ब्राउजरको सट्टा Simple Browser मार्फत editor ट्याबमा रेन्डर गर्छ। Embedding लाई सर्भरमा `DASHBOARD_ALLOW_EMBED=vscode` मार्फत **स्पष्ट रूपमा सक्षम गर्नुपर्छ**, जसले पूर्वनिर्धारित `frame-ancestors 'none'` + `X-Frame-Options: DENY` को सट्टा `frame-ancestors 'self' vscode-webview:` सहित HTML पृष्ठहरू उपलब्ध गराउँछ। API सतह (`/api`, `/v1`, `/v1beta`, `/healthz`) ले दुवै अवस्थामा कडा headers कायम राख्छ।
 
 > ⚠️ **यो build-time flag हो, runtime flag होइन।** Next.js ले `headers()` लाई route manifest मा compile गर्छ, त्यसैले bundle build हुँदा `next.config.mjs` ले variable पढ्छ
 > (`next.config.mjs` → `resolveDashboardEmbedMode`, `scripts/build/dashboardEmbed.mjs`)।

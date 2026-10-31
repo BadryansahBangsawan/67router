@@ -51,13 +51,13 @@ Das Manifest ist mit `display: "fullscreen"` konfiguriert. Das bedeutet, dass di
 
 67router enthält einen Service Worker (`sw.js`), der intelligentes Caching bereitstellt:
 
-| Ressourcentyp                                             | Strategie                                  | Verhalten                                                                                                               |
-| --------------------------------------------------------- | ------------------------------------------ | ----------------------------------------------------------------------------------------------------------------------- |
-| **App-Shell**                                             | Cache-first                                | `/`, `/offline`, Manifest und Symbole werden bei der Installation vorab im Cache gespeichert                            |
-| **Statische Ressourcen** (CSS, JS, Bilder, Schriftarten)  | Network-first mit Cache-Fallback           | Ruft aktuelle Inhalte aus dem Netzwerk ab; greift im Offlinebetrieb auf den Cache zurück                                |
-| **Next.js-Bundles** (`/_next/`)                           | Network-first mit Cache-Aktualisierung     | Ruft Inhalte aus dem Netzwerk ab und aktualisiert den Cache; liefert offline die zwischengespeicherte Version aus       |
-| **Navigationsanfragen**                                   | Umgehung (werden nie abgefangen)           | Der Browser übernimmt den HTTP/3→HTTP/2-Fallback; ein ausgefallener QUIC-Socket darf nicht zu `Response.error()` führen |
-| **API-/Dashboard-Routen** (`/api/`, `/a2a`, `/dashboard`) | Umgehung (werden nie im Cache gespeichert) | Werden immer direkt an den Server gesendet — und niemals vom Service Worker abgefangen                                  |
+| Ressourcentyp                                            | Strategie                                  | Verhalten                                                                                                               |
+| -------------------------------------------------------- | ------------------------------------------ | ----------------------------------------------------------------------------------------------------------------------- |
+| **App-Shell**                                            | Cache-first                                | `/`, `/offline`, Manifest und Symbole werden bei der Installation vorab im Cache gespeichert                            |
+| **Statische Ressourcen** (CSS, JS, Bilder, Schriftarten) | Network-first mit Cache-Fallback           | Ruft aktuelle Inhalte aus dem Netzwerk ab; greift im Offlinebetrieb auf den Cache zurück                                |
+| **Next.js-Bundles** (`/_next/`)                          | Network-first mit Cache-Aktualisierung     | Ruft Inhalte aus dem Netzwerk ab und aktualisiert den Cache; liefert offline die zwischengespeicherte Version aus       |
+| **Navigationsanfragen**                                  | Umgehung (werden nie abgefangen)           | Der Browser übernimmt den HTTP/3→HTTP/2-Fallback; ein ausgefallener QUIC-Socket darf nicht zu `Response.error()` führen |
+| **API-/Dashboard-Routen** (`/api/`, `/dashboard`)        | Umgehung (werden nie im Cache gespeichert) | Werden immer direkt an den Server gesendet — und niemals vom Service Worker abgefangen                                  |
 
 ### Offline-Seite
 

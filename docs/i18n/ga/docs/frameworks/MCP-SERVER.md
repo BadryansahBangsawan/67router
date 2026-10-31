@@ -245,14 +245,6 @@ Féach [AGENT-SKILL.md](./AGENT-SKILLS.md) le haghaidh an chatalóg iomlán agus
 
 Tá rith an MPCI uirlisí thuas (110 uirlis uathúil, á ríomh ag `countUniqueMcpTools()`) scópaithe go sonrach d'oibríochtaí rithseanais/ag privathabháil/comhbhrú/wuí/skills/proxy/context-source. Tá dhá chreat in aice teachta le freastalaí MPCI i v3.8.0 agus tá siad docummentáithe ar leith:
 
-### Gníomhairí Scála
-
-Is iad Gníomhairí Scála ná gníomhairí códála AI i bpróiseas seachtrach (codex-cloud, cursor-cloud, devin, jules) a nascadh le 67router tríd an tsamhail nasc céanna a úsáidtear do sholáthraithe LLM. Nochtaítear iad trína dromchla REST féin (`/api/v1/agents/*`) agus **ní** bhaineann siad le catalóg uirlisí MPCI — ní íocann glao ar Ghníomhaire Scála le scóp MPCI.
-
-- Impleachtú: `src/lib/cloudAgent/` (`registry.ts`, `agents/codex.ts`, `agents/cursor.ts`, `agents/devin.ts`, `agents/jules.ts`).
-- Saolré: `createTask`, `getStatus`, `approvePlan`, `sendMessage`, `listSources`.
-- Doiciméadú: [docs/frameworks/CLOUD_AGENT.md](./CLOUD_AGENT.md).
-
 ### Treoracha Sábháilteachta
 
 Is iad Treoracha Sábháilteachta réamh/in-iardhírithe éisteachtaí (vision-bridge, pii-masker, prompt-injection) a chur i bhfeidhm taobh istigh de phiomsa comhrá. Rith siad sula bhfaighfidh siad an chiseal uirlisí/rithseanais MPCI agus seolann siad sáruithe struchtúrtha le pipelines iniúchta; ní ghlaoitear iad mar uirlisí MPCI.

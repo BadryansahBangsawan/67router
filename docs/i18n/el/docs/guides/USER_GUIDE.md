@@ -24,7 +24,6 @@
 - [Σύστημα Δεξιοτήτων](#-skills-system)
 - [Σύστημα Μνήμης](#-memory-system)
 - [Webhooks](#-webhooks)
-- [Πράκτορες Cloud](#-cloud-agents)
 - [Διαχείριση μέσω Κώδικα](#-programmatic-management)
 - [Εσωτερικό CLI](#-internal-cli)
 - [Εφαρμογή Επιφάνειας Εργασίας (Electron)](#-desktop-application-electron)
@@ -1239,8 +1238,6 @@ curl -X POST http://localhost:20128/v1/chat/completions \
 
 ### Εμβέλειες
 
-Το MCP ορίζει αυτήν τη στιγμή 32 ονομαστικές εμβέλειες. Κάθε κλειδί Bearer μπορεί να περιοριστεί σε συγκεκριμένες εμβέλειες — δείτε το [MCP-SERVER.md](../frameworks/MCP-SERVER.md) για το αυθεντικό ευρετήριο εμβελειών και εργαλείων, και το [A2A-SERVER.md](../frameworks/A2A-SERVER.md) για το σχήμα JSON-RPC.
-
 ---
 
 ## 🧠 Σύστημα Δεξιοτήτων
@@ -1249,7 +1246,6 @@ curl -X POST http://localhost:20128/v1/chat/completions \
 
 - **Marketplace UI** — Περιήγηση και εγκατάσταση δεξιοτήτων από **Dashboard → Skills**
 - **Εμβέλειες ανά κλειδί** — Περιορισμός των κλειδιών API που μπορούν να καλούν συγκεκριμένες δεξιότητες
-- **Προσαρμοσμένες δεξιότητες** — Τοποθετήστε ένα αρχείο TypeScript στον φάκελο `src/lib/a2a/skills/`, καταχωρίστε το, και γίνεται αμέσως κλητό μέσω A2A
 
 Πλήρης αναφορά: [SKILLS.md](../frameworks/SKILLS.md).
 
@@ -1278,18 +1274,6 @@ curl -X POST http://localhost:20128/v1/chat/completions \
 - Επαναλήψεις: 3 προσπάθειες με εκθετική καθυστέρηση, έπειτα ουρά νεκρών γραμμάτων
 
 Πλήρες σχήμα στο [WEBHOOKS.md](../frameworks/WEBHOOKS.md).
-
----
-
-## ☁️ Cloud Agents
-
-Το 67router ενσωματώνεται με cloud agents κωδικοποίησης (**OpenAI Codex Cloud**, **Devin**, **Jules**, **Antigravity**) ώστε να μπορείτε να αναθέτετε εργασίες μεγάλης διάρκειας από το ίδιο dashboard που διαχειρίζεται την τοπική σας δρομολόγηση.
-
-- Δημιουργήστε εργασίες στο **Dashboard → Cloud Agents** ή μέσω `POST /api/v1/agents/tasks`
-- Παρακολουθήστε κατάσταση, αρχεία καταγραφής και artifacts ανά εργασία
-- Χρησιμοποιήστε το δικό σας κλειδί API ανά πάροχο — τα διαπιστευτήρια δεν εγκαταλείπουν ποτέ την παρουσία του 67router
-
-Πλήρης αναφορά: [CLOUD_AGENT.md](../frameworks/CLOUD_AGENT.md).
 
 ---
 
@@ -1346,7 +1330,6 @@ omniroute restore [<timestamp>]    # Επαναφορά από στιγμιότ�
 omniroute health                   # Λεπτομερής υγεία (breakers, cache, μνήμη)
 omniroute quota                    # Χρήση ορίου παρόχου
 omniroute mcp status               # Κατάσταση διακομιστή MCP
-omniroute a2a status               # Κατάσταση διακομιστή A2A
 omniroute tunnel list|create|stop  # Tunnels Cloudflare/Tailscale/ngrok
 omniroute reset-password           # Επαναφορά κωδικού πρόσβασης διαχειριστή
 omniroute --mcp                    # Εκκίνηση διακομιστή MCP μέσω stdio

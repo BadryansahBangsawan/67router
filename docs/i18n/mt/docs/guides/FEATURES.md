@@ -43,8 +43,6 @@ Iċ-ċiklu v3.7.x → v3.8 żied routing awtomatiku mingħajr konfigurazzjoni, p
 - 🤝 **GitLab Duo OAuth provider** —登录 b’kredenzjali GitLab
 - 🧦 **Cache tar-rikonoxximent tar-Replay** — persistenza ħibrida f’memorja + SQLite ta’ traċċi tar-rikonoxximent
 
-📚 **Dokumenti relatati:** [Framework tal-Ħiliet](../frameworks/SKILLS.md) · [Sistema tal-Memorja](../frameworks/MEMORY.md) · [Aġenti tal-Cloud](../frameworks/CLOUD_AGENT.md) · [Webhooks](../frameworks/WEBHOOKS.md) · [Cache tar-rikonoxximent tar-Replay](../routing/REASONING_REPLAY.md)
-
 ## 🔌 Providers
 
 Immaniġġja l-konnessjonijiet tal-fornituri tal-AI: fornituri OAuth (Claude Code, Codex), fornituri ta' API keys (Groq, DeepSeek, OpenRouter), u fornituri b'xejn (Qoder, Kiro). L-kontijiet tal-Kiro jinkludu t-traċċar tal-bilanċ tal-kreditu — krediti ġejjin, allowances kollha, u data ta' rinnovazzjoni jidhru fil-Pjanċtal → Użu.
@@ -90,12 +88,6 @@ Monitoraġġ real-time: uptime, memorja, versioni, percentili tal-latency (p50/p
 Erbgħa ta' modi għad-dijanjostika tat-traduzzjonijiet tal-API: **Playground** (konvertitur tal-format), **Chat Tester** (talbiet ħajjin), **Test Bench** (testijiet baġitari), u **Live Monitor** (stream real-time).
 
 ![Terren tal-Playground tal-Traduttur](../screenshots/05-translator.png)
-
----
-
-## 🎮 Terren tal-Mudell _(v2.0.9+)_
-
-Ittestja kwalunkwe mudell direttament mill-dashboard. Agħżel il-fornitur, il-mudell, u t-tmiem, uħtu prompts bl-Editor Monaco,流 stream ir-risponsi f'ħin reali, irrevoka nofs is-stream, u ħares lejn il-miżuri tal-ħin.
 
 ---
 

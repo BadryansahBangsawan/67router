@@ -41,7 +41,6 @@ AI Agent / IDE
 | શેડો ટ્રાફિક                            | `open-sse/services/combo/shadowRouting.ts`                                                           |
 | ગાર્ડરેલ્સ                              | `src/lib/guardrails/` (પ્રી/પોસ્ટ હુક્સ)                                                             |
 | એક્ઝેક્ટ કૅશ                            | `src/lib/semanticCache.ts` (સિગ્નેચર-આધારિત)                                                         |
-| મૂલ્યાંકનકારો / eval-સંચાલિત રૂટિંગ     | `src/lib/evals/`, `open-sse/services/evalRouting.ts`                                                 |
 | Combo નિર્ણય સમજક્ષમતા                  | `open-sse/services/combo/decisionTrace.ts`                                                           |
 | ડૅશબોર્ડ રિયલ-ટાઇમ ઇવેન્ટ્સ             | `src/lib/events/eventBus.ts` (UI નોટિફિકેશન ચેનલ, `unknown` પેલોડ્સ, 100-એન્ટ્રી હિસ્ટ્રી)           |
 
@@ -255,8 +254,6 @@ OTel સિંક દ્વારા GenAI/OmniRoute સ્પાન ઍટ્�
 - ભાવિ `Evaluator` (ડિટર્મિનિસ્ટિક, લોકલ જજ, HTTP, WASM) ઇવેન્ટ્સ/ટ્રેસનો
   ઉપયોગ કરશે અને `QualityScore` પરત કરશે, જે એ જ
   `getQualityScore`/ગુણવત્તા-ફૅક્ટર પાથમાં ફીડ થાય છે.
-- હાલનું મૂલ્યાંકન-સંચાલિત રાઉટિંગ (`open-sse/services/evalRouting.ts`) સક્ષમ
-  હોય ત્યારે `eval_runs` પાસ-રેટ્સ મુજબ કોમ્બો ટાર્ગેટ્સને પહેલેથી જ ફરીથી
   ક્રમબદ્ધ કરે છે.
 
 કોઈપણ મૂલ્યાંકન રિક્વેસ્ટ પાથ પર સિંક્રોનસ રીતે ચાલતું નથી અને મૂલ્યાંકનકાર

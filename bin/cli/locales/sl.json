@@ -390,34 +390,6 @@
       "description": "Dnevnik revizij MCP (vzdevek za audit --source mcp)"
     }
   },
-  "a2a": {
-    "skills": {
-      "description": "Prikaži razpoložljive zmožnosti A2A s kartice agenta"
-    },
-    "invoke": {
-      "description": "Prikliči zmožnost A2A in vrni ID opravila",
-      "input": "Vhodni objekt JSON",
-      "input_file": "Pot do vhodne datoteke JSON",
-      "wait": "Pred vrnitvijo počakaj na dokončanje opravila",
-      "timeout": "Časovna omejitev čakanja na dokončanje v ms (privzeto: 60000)"
-    },
-    "tasks": {
-      "description": "Upravljaj opravila A2A",
-      "list": {
-        "status": "Filtriraj po stanju",
-        "skill": "Filtriraj po ID-ju zmožnosti"
-      },
-      "watch": {
-        "description": "Preverjaj stanje opravila do dokončanja"
-      },
-      "stream": {
-        "description": "Pretakaj dogodke izvajanja opravila prek SSE"
-      },
-      "logs": {
-        "description": "Prikaži sporočila in artefakte opravila"
-      }
-    }
-  },
   "policy": {
     "description": "Upravljaj pravilnike za avtorizacijo 67router",
     "list": {
@@ -696,99 +668,6 @@
       "provider": "ID ponudnika, za katerega želiš preklicati povezavo",
       "connection_id": "Prekliči določeno povezavo po ID-ju",
       "yes": "Preskoči poziv za potrditev"
-    }
-  },
-  "cloud": {
-    "description": "Upravljaj opravila agentov umetne inteligence v oblaku (codex, devin, jules)",
-    "agents": {
-      "description": "Prikaži razpoložljive agente v oblaku"
-    },
-    "agent": {
-      "description": "Upravljaj opravila agenta v oblaku {agent}",
-      "auth": {
-        "description": "Avtoriziraj agenta {agent} prek OAuth"
-      }
-    },
-    "task": {
-      "description": "Upravljaj opravila agentov v oblaku",
-      "create": {
-        "description": "Ustvari novo opravilo agenta",
-        "title": "Naslov opravila (privzeto prvih 80 znakov poziva)",
-        "prompt": "Besedilo poziva opravila",
-        "prompt_file": "Preberi poziv iz datoteke",
-        "repo": "URL repozitorija, ki ga je treba klonirati za opravilo",
-        "branch": "Ime veje, ki naj se uporabi",
-        "metadata": "Objekt metapodatkov JSON"
-      },
-      "list": {
-        "description": "Prikaži opravila agentov",
-        "status": "Filtriraj po stanju (running|completed|failed|cancelled)",
-        "limit": "Največje število rezultatov (privzeto: 50)"
-      },
-      "get": {
-        "description": "Pridobi podrobnosti opravila po ID-ju"
-      },
-      "status": {
-        "description": "Izpiši stanje opravila (running|completed|failed|cancelled)"
-      },
-      "cancel": {
-        "description": "Prekliči opravilo, ki se izvaja",
-        "yes": "Preskoči poziv za potrditev"
-      },
-      "approve": {
-        "description": "Odobri načrt agenta za začetek izvajanja"
-      },
-      "message": {
-        "description": "Pošlji sporočilo opravilu, ki se izvaja"
-      }
-    },
-    "sources": {
-      "description": "Prikaži seznam izvornih datotek, ki jih je ustvarilo opravilo"
-    }
-  },
-  "eval": {
-    "description": "Upravljaj zbirke in zagone vrednotenj",
-    "suites": {
-      "description": "Upravljaj zbirke vrednotenj",
-      "list": {
-        "description": "Prikaži seznam zbirk vrednotenj"
-      },
-      "get": {
-        "description": "Pridobi podrobnosti zbirke vrednotenj po ID-ju"
-      },
-      "create": {
-        "description": "Ustvari zbirko vrednotenj iz datoteke JSON",
-        "file": "Pot do datoteke JSON z definicijo zbirke"
-      }
-    },
-    "run": {
-      "description": "Začni izvajanje vrednotenja za zbirko",
-      "model": "ID modela za vrednotenje (privzeto: auto)",
-      "combo": "Vsili določeno kombinacijo po imenu",
-      "concurrency": "Število sočasnih vzorcev (privzeto: 4)",
-      "tag": "Označi ta zagon za poznejše filtriranje",
-      "watch": "Spremljaj napredek izvajanja do zaključka"
-    },
-    "list": {
-      "description": "Prikaži seznam zagonov vrednotenj",
-      "suite": "Filtriraj po ID-ju zbirke",
-      "status": "Filtriraj po stanju",
-      "since": "Vrni zagone od tega časovnega žiga naprej",
-      "limit": "Največje število rezultatov (privzeto: 50)"
-    },
-    "get": {
-      "description": "Pridobi podrobnosti zagona vrednotenja po ID-ju"
-    },
-    "results": {
-      "description": "Prikaži rezultate vzorcev za zagon vrednotenja",
-      "failed": "Prikaži samo neuspešne vzorce"
-    },
-    "cancel": {
-      "description": "Prekliči vrednotenje, ki se izvaja",
-      "yes": "Preskoči poziv za potrditev"
-    },
-    "scorecard": {
-      "description": "Prikaži preglednico rezultatov za dokončan zagon vrednotenja"
     }
   },
   "program": {

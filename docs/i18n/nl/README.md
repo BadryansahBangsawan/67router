@@ -15,7 +15,7 @@
 
 <sub>67router is a fork of [OmniRoute](https://github.com/diegosouzapw/OmniRoute) by diegosouzapw. The npm package, the `omniroute` CLI command, `OMNIROUTE_*` environment variables and the `~/.omniroute` data directory keep their upstream names.</sub>
 
-<img src="./docs/diagrams/readme-hero.svg" width="100%" alt="67router — Stop nooit met programmeren. Elke AI-tool → 375 providers — 150+ gratis — via één endpoint. Claude Code, Codex, Cursor, Cline, Copilot & Antigravity naar GRATIS Claude / GPT / Gemini met automatische fallback. Gecombineerde RTK- en Caveman-compressie bespaart 15–95% tokens (~89% gemiddeld) — bereik nooit meer limieten. 375 AI-providers · 150+ gratis niveaus · ~1,62 mld. gratis tokens/mnd. · 20 routeringsstrategieën · $0 om te beginnen."/>
+<img src="./docs/diagrams/readme-hero.svg" width="100%" alt="67router — Stop nooit met programmeren. Elke AI-tool → 372 providers — 150+ gratis — via één endpoint. Claude Code, Codex, Cursor, Cline, Copilot & Antigravity naar GRATIS Claude / GPT / Gemini met automatische fallback. Gecombineerde RTK- en Caveman-compressie bespaart 15–95% tokens (~89% gemiddeld) — bereik nooit meer limieten. 375 AI-providers · 150+ gratis niveaus · ~1,62 mld. gratis tokens/mnd. · 20 routeringsstrategieën · $0 om te beginnen."/>
 
 </div>
 
@@ -250,7 +250,7 @@ curl http://localhost:20128/v1/chat/completions \
 
 </div>
 
-<img src="./docs/diagrams/promise-pillars.svg" width="100%" alt="De Belofte — Eén endpoint en 375 providers. Automatische fallback houdt de routering in stand zolang er een ander gezond doel beschikbaar is. Zes pijlers: veerkrachtige fallback over 375 providers · tot 95% tokenbesparing op geschikte workloads · $0 om te starten met 150+ gratis tiers en 51 terugkerende/keyless gratis-voor-altijd-providers · 37 CLI/agent-integraties via één config · OpenAI-, Claude-, Gemini- en Responses API-compatibiliteit op /v1 · productiecontroles waaronder circuit breakers, TLS-stealth, MCP met 110 tools, A2A, geheugen, guardrails, evals en 56.000+ statische testdeclaraties verspreid over 7.800+ gevolgde testbestanden."/>
+<img src="./docs/diagrams/promise-pillars.svg" width="100%" alt="De Belofte — Eén endpoint en 372 providers. Automatische fallback houdt de routering in stand zolang er een ander gezond doel beschikbaar is. Zes pijlers: veerkrachtige fallback over 372 providers · tot 95% tokenbesparing op geschikte workloads · $0 om te starten met 150+ gratis tiers en 51 terugkerende/keyless gratis-voor-altijd-providers · 37 CLI/agent-integraties via één config · OpenAI-, Claude-, Gemini- en Responses API-compatibiliteit op /v1 · productiecontroles waaronder circuit breakers, TLS-stealth, MCP met 110 tools, A2A, geheugen, guardrails, evals en 56.000+ statische testdeclaraties verspreid over 7.800+ gevolgde testbestanden."/>
 
 <br/>
 <br/>
@@ -510,7 +510,7 @@ Alle **20** strategieën — naar wens te combineren per combostap:
 
 </div>
 
-<img src="./docs/diagrams/comparison-table.svg" width="100%" alt="Wat 67router onderscheidt — een momentopname van functies vergeleken met 9router, OpenRouter, CLIProxyAPI en LiteLLM op basis van 13 mogelijkheden. 67router: 375 providers, meer dan 150 ingebouwde gratis niveaus, 20 routeringsstrategieën, tokencompressie met 12 engines, ingebouwde MCP-server met 110 tools, A2A-agentprotocol, persistent geheugen, beveiligingsregels, cloudagents, onopvallende TLS-fingerprinting, Desktop/Termux/PWA en 67 UI-talen. 67router heeft een MIT-licentie en kan zelf worden gehost. De mogelijkheden en aantallen van concurrenten kunnen veranderen; raadpleeg de gekoppelde methodologie."/>
+<img src="./docs/diagrams/comparison-table.svg" width="100%" alt="Wat 67router onderscheidt — een momentopname van functies vergeleken met 9router, OpenRouter, CLIProxyAPI en LiteLLM op basis van 13 mogelijkheden. 67router: 372 providers, meer dan 150 ingebouwde gratis niveaus, 20 routeringsstrategieën, tokencompressie met 12 engines, ingebouwde MCP-server met 110 tools, A2A-agentprotocol, persistent geheugen, beveiligingsregels, cloudagents, onopvallende TLS-fingerprinting, Desktop/Termux/PWA en 67 UI-talen. 67router heeft een MIT-licentie en kan zelf worden gehost. De mogelijkheden en aantallen van concurrenten kunnen veranderen; raadpleeg de gekoppelde methodologie."/>
 
 <sub>📊 Volledige methodologie &amp; details per functie vergeleken met 9router, OpenRouter, CLIProxyAPI &amp; LiteLLM → [`docs/comparison/OMNIROUTE_VS_ALTERNATIVES.md`](docs/comparison/OMNIROUTE_VS_ALTERNATIVES.md)</sub>
 
@@ -588,7 +588,7 @@ Radar is opt-in en gebruikt alleen GET. De 67router-client uploadt geen prompts,
 - **🔑 Routingbesturing per sleutel** — pin een API-sleutel aan één model of combo met `forcedModel`, en voeg modellen en combo's van een sleutel atomair toe of verwijder ze (`/api/keys/{id}/access`). → [API Reference](docs/reference/API_REFERENCE.md) · [OpenAPI](docs/openapi.yaml)
 - **🛡️ Fijnmazigere PII-controles** — selectie per type, tot 20 gevalideerde aangepaste maskeerpatronen en detectietellers per type; maskeren zelf blijft optioneel. → [Guardrails](docs/security/GUARDRAILS.md)
 - **🌍 67 talen** — dashboard, documentatiespiegels en CLI, waarbij `npm run i18n:add-locale` met één opdracht een taal overal toevoegt. → [i18n Guide](docs/guides/I18N.md)
-- **🎛️ OmniConductor** — inkomende A2A-delegatie naar je agentvloot, Conductor-vaardigheden op de Agent Card, en een dashboardpaneel met Faro push-to-talk spraakchat. → [A2A Server](docs/frameworks/A2A-SERVER.md)
+- **🎛️ OmniConductor** — inkomende A2A-delegatie naar je agentvloot, Conductor-vaardigheden op de Agent Card, en een dashboardpaneel met Faro push-to-talk spraakchat.
 - **🛂 Adaptieve toelating & overbelastingsbeveiliging** — zware chatverzoeken komen in de wachtrij in plaats van een 503 te krijgen, met atomaire RPM-rollende leases per verbinding. → [Resilience Guide](docs/architecture/RESILIENCE_GUIDE.md)
 - **🗂️ Canonieke `/v1/models`-ordening** — één aaneengesloten, per provider gegroepeerd blok per provider (combo's eerst vastgepind), stabiel over elke catalogusbron. → [API Reference](docs/reference/API_REFERENCE.md)
 - **🗜️ Compressie-hardening** — standaard ingeschakelde inflatieguard, Caveman-packs voor DE / FR / JA + Chinees (wényán), RTK-filters voor Gradle & .NET. → [Compression](docs/compression/COMPRESSION_ENGINES.md)
@@ -605,7 +605,7 @@ Radar is opt-in en gebruikt alleen GET. De 67router-client uploadt geen prompts,
 - **🖼️ Nieuwe endpoints** — `/v1/ocr` (Mistral OCR) en `/v1/audio/translations` (Whisper-stijl) maken het media-aanbod compleet. → [API Reference](docs/reference/API_REFERENCE.md)
 - **🎨 Afbeelding / video / audio genereren** — één API voor media: xAI Grok Imagine & Novita AI-video, ComfyUI, Magnific, Adobe Firefly, Segmind en spraakproviders zoals ElevenLabs. → [API Reference](docs/reference/API_REFERENCE.md)
 - **🌍 Implementatie & beheer** — reverse-proxy-`basePath`, automatische detectie van browsertaal, apparaattracking per sleutel, root-loos MITM-vertrouwen, zh-TW-localisatie. → [Environment](docs/reference/ENVIRONMENT.md)
-- **🤝 Meer providers & agents** — cloudagents (Codex Cloud, Cursor, Devin, Jules), Grok Build (xAI) met browser- + OAuth-login, Ollama als eersteklas kaart, Claude Opus 5 & Sonnet 5, officieel partnerschap met Kimi (Code/Web/Moonshot), Zed, Requesty, SenseNova, Yuanbao, Agnes AI… en een vernieuwde **375-provider-catalogus**. → [Providers](docs/reference/PROVIDER_REFERENCE.md)
+- **🤝 Meer providers & agents** — cloudagents (Codex Cloud, Cursor, Devin, Jules), Grok Build (xAI) met browser- + OAuth-login, Ollama als eersteklas kaart, Claude Opus 5 & Sonnet 5, officieel partnerschap met Kimi (Code/Web/Moonshot), Zed, Requesty, SenseNova, Yuanbao, Agnes AI… en een vernieuwde **372-provider-catalogus**. → [Providers](docs/reference/PROVIDER_REFERENCE.md)
 - **📡 Routingtransparantie** — elk antwoord draagt een `X-OmniRoute-Decision`-header die de strategie/provider/latentie noemt die het heeft bediend, een nieuwe `cache-optimized`-combo-strategie + Auto-Combo-`cacheAffinity`-factor die herhaalverzoeken terugstuurt naar de verbinding met het gecachte prefix, en een alleen-lezen `/v1/auto-combo/{channel}/candidates`-endpoint dat de live kandidatenpool van een `auto/*`-kanaal toont. → [Auto-Combo](docs/routing/AUTO-COMBO.md)
 - **⚡ Lokale prestaties & infrastructuur** — lokale Redis met één klik, Cloudflare Workers / Deno Deploy relay-deployers, Bifrost & Mux als gesuperviseerde ingebedde services. → [Embedded Services](docs/frameworks/EMBEDDED-SERVICES.md)
 - **🧩 Ook inbegrepen** — plugin-framework + marktplaats, Omni/Agent/GitHub skills-frameworks, Obsidian vault-integratie (22 MCP-tools), OpenAI-compatibele Batch- en Files-API's, semantische responscache, gamification met leaderboards, ACP-agentdetectie (15 ingebouwde agents), geplande log-export naar BigQuery, `auto/chaos` parallelle multi-model fan-out, een Telegram-botbrug, een in-app versiebeheerder en LMArena-ELO-ranglijsten voor gratis providers. → [Documentatie](docs/README.md)
@@ -907,7 +907,6 @@ Stel 67router beschikbaar via **MCP**, **A2A**, een **REST API**, **webhooks** o
   <tr><td align="left" nowrap>🧰 <b>MCP (stdio)</b></td><td align="left" nowrap><code>omniroute --mcp</code></td><td align="left">Integreer met Claude Desktop, Cursor of elke andere MCP-client</td></tr>
   <tr><td align="left" nowrap>🌊 <b>MCP (HTTP)</b></td><td align="left" nowrap><code>/api/mcp/stream</code></td><td align="left">Externe MCP — <b>110 tools</b>, 33 bereiken (handhaving is opt-in), volledig auditspoor</td></tr>
   <tr><td align="left" nowrap>📡 <b>MCP (SSE)</b></td><td align="left" nowrap><code>/api/mcp/sse</code></td><td align="left">Streamingtransport voor MCP</td></tr>
-  <tr><td align="left" nowrap>🤝 <b>A2A</b></td><td align="left" nowrap><code>/.well-known/agent.json</code></td><td align="left">Van agent naar agent, <b>JSON-RPC 2.0</b> + SSE, 6 vaardigheden</td></tr>
   <tr><td align="left" nowrap>🌐 <b>REST API</b></td><td align="left" nowrap><code>/v1/*</code></td><td align="left">OpenAI-compatibel — chat, embeddings, afbeeldingen, audio, OCR</td></tr>
   <tr><td align="left" nowrap>🔔 <b>Webhooks</b></td><td align="left" nowrap><code>/api/webhooks</code></td><td align="left">Stuur aanvraag- en quotagebeurtenissen naar Slack, Discord, Telegram of elke gewenste URL</td></tr>
   <tr><td align="left" nowrap>🛰️ <b>Externe CLI</b></td><td align="left" nowrap><code>omniroute connect <host></code></td><td align="left">Bedien een externe instantie met toegangstokens met een beperkt bereik</td></tr>
@@ -917,8 +916,6 @@ Stel 67router beschikbaar via **MCP**, **A2A**, een **REST API**, **webhooks** o
 # Geef Claude Code via MCP toegang tot de volledige 67router-toolset:
 claude mcp add-server omniroute --type http --url http://localhost:20128/api/mcp/stream
 ```
-
-<sub>📖 [MCP-server](docs/frameworks/MCP-SERVER.md) · [A2A-server](docs/frameworks/A2A-SERVER.md) · [Agentprotocollen](docs/frameworks/AGENT_PROTOCOLS_GUIDE.md)</sub>
 
 <br/>
 
@@ -1383,7 +1380,6 @@ Canonieke statistieken op 2026-10-18: **1.976 unieke video's** · **20.220.289 b
   <tr><td nowrap><b><a href="open-sse/mcp-server/README.md">MCP-server</a></b></td><td>110 MCP-tools, IDE-configuraties, Python/TS/Go-clients</td></tr>
   <tr><td nowrap><b><a href="docs/frameworks/MCP-SERVER.md">MCP-serverhandleiding</a></b></td><td>MCP-installatie, transporten en naslagwerk voor tools</td></tr>
   <tr><td nowrap><b><a href="src/lib/a2a/README.md">A2A-server</a></b></td><td>JSON-RPC 2.0-protocol, vaardigheden, streaming, taakbeheer</td></tr>
-  <tr><td nowrap><b><a href="docs/frameworks/A2A-SERVER.md">A2A-serverhandleiding</a></b></td><td>A2A-agentkaart, taken, vaardigheden en streaming</td></tr>
 </table>
 
 ### 📋 Project en kwaliteit

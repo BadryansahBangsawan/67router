@@ -128,13 +128,11 @@ qalanlarına müvafiq sahə üzrə təlimatlardan keçid verilir.
 - `/dashboard/limits` — kvota/tezlik nəzarətləri
 - `/dashboard/cli-tools` — CLI ilkin quraşdırması, icra mühitinin aşkarlanması, konfiqurasiya yaradılması
 - `/dashboard/agents` — aşkarlanmış ACP agentləri + fərdi agentlərin qeydiyyatı
-- `/dashboard/cloud-agents` — buludda yerləşdirilən agent tapşırıqları (Codex Cloud, Devin, Jules) və tapşırıq həyat dövrü
 - `/dashboard/skills` — A2A bacarıq reyestri, sandbox icrası, daxili bacarıqlar kataloqu
 - `/dashboard/memory` — daimi söhbət yaddaşının yoxlanılması və məlumatların əldə edilməsi
 - `/dashboard/webhooks` — çıxış veb-huk abunəlikləri, məxfi açarın rotasiyası, təkrar cəhd statistikası
 - `/dashboard/batch` — toplu tapşırıqların göndərilməsi və gedişatı
 - `/dashboard/cache` — keçid zamanı oxunan keş və əsaslandırma keşinin statistikası, çıxarma nəzarətləri
-- `/dashboard/playground` — konfiqurasiya edilmiş istənilən kombinasiya/model ilə interaktiv söhbət sınaq mühiti
 - `/dashboard/changelog` — tətbiqdaxili dəyişiklik jurnalı görüntüləyicisi (`CHANGELOG.md` faylını render edir)
 - `/dashboard/system` — icra mühitinin diaqnostikası, versiya məlumatı, mühitin validasiyası interfeysi
 - `/dashboard/onboarding` — yeni quraşdırmalar üçün ilk işəsalma quraşdırma sehrbazı
@@ -252,7 +250,6 @@ Mühüm uyğunluq marşrutları:
 - Büdcə: `src/app/api/usage/budget` (GET/POST)
 - Ehtiyat keçid zəncirləri: `src/app/api/fallback/chains` (GET/POST/DELETE)
 - Uyğunluq auditi: `src/app/api/compliance/audit-log` (GET, səhifələmə + strukturlaşdırılmış metadata ilə)
-- Qiymətləndirmələr: `src/app/api/evals` (GET/POST), `src/app/api/evals/[suiteId]` (GET)
 - Siyasətlər: `src/app/api/policies` (GET/POST)
 - Sinxronizasiya tokenləri: `src/app/api/sync/tokens` (GET/POST), `src/app/api/sync/tokens/[id]` (GET/DELETE)
 - Konfiqurasiya paketi: `src/app/api/sync/bundle` (GET, parametrlərin/provayderlərin/kombinasiyaların/açarların ETag versiyalı anlıq görüntüsü)
@@ -316,7 +313,6 @@ Domen qatı modulları:
 - Sorğunun vaxt aşımı: `src/shared/utils/fetchTimeout.ts`
 - Sorğu telemetriyası: `src/shared/utils/requestTelemetry.ts`
 - Uyğunluq/audit: `src/lib/compliance/index.ts`
-- Qiymətləndirmə icraçısı: `src/lib/evals/evalRunner.ts`
 - Domen vəziyyətinin daimi saxlanması: `src/lib/db/domainState.ts` — ehtiyat keçid zəncirləri, büdcələr, xərc tarixçəsi, bloklama vəziyyəti və dövrə açarları üçün SQLite CRUD əməliyyatları
 
 OAuth provayder modulları (`src/lib/oauth/providers/` altında 27 ayrı fayl):
@@ -380,23 +376,6 @@ Auto Combo statik kombinasiya tərifinə əsaslanmaq əvəzinə, sorğu zamanı 
 
 Alqoritmlər haqqında tam təfərrüat (amil düsturları, çəki tənzimlənməsi) üçün
 [`docs/routing/AUTO-COMBO.md`](../routing/AUTO-COMBO.md) sənədinə baxın.
-
-### B. Bulud Agentləri
-
-Cloud Agents üçüncü tərəflərin hostinq etdiyi kod agenti platformalarını (Codex Cloud, Devin,
-Jules) DB tərəfindən dəstəklənən vahid tapşırıq həyat dövrü arxasında birləşdirir. Bütün tapşırıq yaratma/yoxlama
-son nöqtələri idarəetmə autentifikasiyası tələb edir.
-
-- Modulun kök qovluğu: `src/lib/cloudAgent/` (`baseAgent.ts`, `registry.ts`, `api.ts`,
-  `types.ts`, `db.ts`, həmçinin `agents/` daxilində hər agent üçün ayrıca alt qovluqlar)
-- Hər agent üçün reallaşdırmalar: `agents/codex/`, `agents/devin/`, `agents/jules/`
-- İctimai son nöqtələr: `/api/v1/agents/tasks/*` (siyahılama/yaratma/əldə etmə/ləğv etmə)
-- İdarəetmə son nöqtələri: `/api/cloud/*` (təminetmə, status, paket emalı)
-- İdarəetmə paneli: `/dashboard/cloud-agents`
-- Saxlama: `cloud_agent_tasks` cədvəli
-
-Hər agent üzrə təminetmə və OAuth təfərrüatları üçün
-[`docs/frameworks/CLOUD_AGENT.md`](../frameworks/CLOUD_AGENT.md) sənədinə baxın.
 
 ### C. Qoruyucu Mexanizmlər
 

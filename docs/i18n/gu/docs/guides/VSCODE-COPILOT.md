@@ -89,7 +89,7 @@ HTTP 400 — મોડેલ '<id>' એક ઇમેજ-જનરેશન મ�
 ## VS Code ટૅબની અંદર Dashboard
 
 `omnicopilot.dashboardOpen: "editor"` બાહ્ય બ્રાઉઝરને બદલે Simple Browser દ્વારા 67router dashboardને editor ટૅબમાં રેન્ડર કરે છે. એમ્બેડિંગ સર્વર પર `DASHBOARD_ALLOW_EMBED=vscode` દ્વારા **opt-in** છે, જે ડિફૉલ્ટ `frame-ancestors 'none'` +
-`X-Frame-Options: DENY`ને બદલે `frame-ancestors 'self' vscode-webview:` સાથે HTML પેજો સર્વ કરે છે. API સપાટી (`/api`, `/v1`, `/v1beta`, `/a2a`, `/healthz`) બંને સ્થિતિમાં કડક headers જાળવી રાખે છે.
+`X-Frame-Options: DENY`ને બદલે `frame-ancestors 'self' vscode-webview:` સાથે HTML પેજો સર્વ કરે છે. API સપાટી (`/api`, `/v1`, `/v1beta`, `/healthz`) બંને સ્થિતિમાં કડક headers જાળવી રાખે છે.
 
 > ⚠️ **આ build-time flag છે, runtime flag નહીં.** Next.js `headers()`ને route
 > manifestમાં compile કરે છે, તેથી bundle build થઈ રહ્યું હોય ત્યારે `next.config.mjs` variable વાંચે છે

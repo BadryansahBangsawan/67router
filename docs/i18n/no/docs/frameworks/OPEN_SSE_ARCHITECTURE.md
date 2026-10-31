@@ -573,5 +573,4 @@ Rutingmotoren har strenge ytelsesbudsjetter:
 - [REPOSITORY_MAP.md](../architecture/REPOSITORY_MAP.md) — katalog for katalog
 - [AUTO-COMBO.md](../routing/AUTO-COMBO.md) — poengberegning med 16 faktorer
 - [MCP-SERVER.md](./MCP-SERVER.md) — MCP-server
-- [A2A-SERVER.md](./A2A-SERVER.md) — A2A-server
 - Kilde: `open-sse/` (400+ filer, ~143K kodelinjer)

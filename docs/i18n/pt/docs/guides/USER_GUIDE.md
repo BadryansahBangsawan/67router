@@ -24,7 +24,6 @@ Guia completo para configurar fornecedores, criar combinações, integrar ferram
 - [Sistema de Competências](#-skills-system)
 - [Sistema de Memória](#-memory-system)
 - [Webhooks](#-webhooks)
-- [Agentes na Nuvem](#-cloud-agents)
 - [Gestão Programática](#-programmatic-management)
 - [CLI Interna](#-internal-cli)
 - [Aplicação de Ambiente de Trabalho (Electron)](#-desktop-application-electron)
@@ -1239,7 +1238,7 @@ Utilize o URL SSE `http://localhost:20128/api/mcp/sse` e uma chave de API Bearer
 
 ### Âmbitos
 
-Atualmente, o MCP define 32 âmbitos com nome. Cada chave Bearer pode ser limitada a âmbitos específicos — consulte [MCP-SERVER.md](../frameworks/MCP-SERVER.md) para obter o inventário oficial de âmbitos e ferramentas e [A2A-SERVER.md](../frameworks/A2A-SERVER.md) para obter o esquema JSON-RPC.
+Atualmente, o MCP define 32 âmbitos com nome. Cada chave Bearer pode ser limitada a âmbitos específicos — consulte [MCP-SERVER.md](../frameworks/MCP-SERVER.md) para obter o inventário oficial de âmbitos e ferramentas.
 
 ---
 
@@ -1249,7 +1248,6 @@ O 67router disponibiliza uma **framework de skills** extensível (`src/lib/skill
 
 - **Interface do Marketplace** — Explore e instale skills em **Painel → Skills**
 - **Âmbitos por chave** — Restrinja as skills que cada chave de API pode invocar
-- **Skills personalizadas** — Coloque um ficheiro TypeScript em `src/lib/a2a/skills/`, registe-o e este poderá ser imediatamente invocado através de A2A
 
 Referência completa: [SKILLS.md](../frameworks/SKILLS.md).
 
@@ -1278,18 +1276,6 @@ Subscreva eventos do 67router para monitorização e automatização em tempo re
 - Novas tentativas: 3 tentativas com espera exponencial, seguidas de envio para a fila de mensagens não processadas
 
 Esquema completo em [WEBHOOKS.md](../frameworks/WEBHOOKS.md).
-
----
-
-## ☁️ Agentes na Cloud
-
-O 67router integra-se com agentes de programação na cloud (**OpenAI Codex Cloud**, **Devin**, **Jules**, **Antigravity**), permitindo-lhe enviar tarefas de longa duração a partir do mesmo painel que gere o encaminhamento local.
-
-- Crie tarefas em **Painel → Agentes na Cloud** ou através de `POST /api/v1/agents/tasks`
-- Acompanhe o estado, os registos e os artefactos de cada tarefa
-- Utilize a sua própria chave de API para cada fornecedor — as credenciais nunca saem da instância do 67router
-
-Referência completa: [CLOUD_AGENT.md](../frameworks/CLOUD_AGENT.md).
 
 ---
 
@@ -1346,7 +1332,6 @@ omniroute restore [<timestamp>]    # Restaurar a partir de um instantâneo
 omniroute health                   # Estado de funcionamento detalhado (disjuntores, cache, memória)
 omniroute quota                    # Utilização da quota dos fornecedores
 omniroute mcp status               # Estado do servidor MCP
-omniroute a2a status               # Estado do servidor A2A
 omniroute tunnel list|create|stop  # Túneis Cloudflare/Tailscale/ngrok
 omniroute reset-password           # Repor a palavra-passe de administrador
 omniroute --mcp                    # Iniciar o servidor MCP através de stdio

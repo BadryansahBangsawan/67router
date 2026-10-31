@@ -44,7 +44,6 @@ src/app/api/agent-skills/
   generate/route.ts                    — POST /api/agent-skills/generate (pengesahan diperlukan)
 
 open-sse/mcp-server/tools/agentSkillTools.ts  — 3 alat MCP (senarai, dapatkan, liputan)
-src/lib/a2a/skills/listCapabilities.ts        — Kemahiran A2A: list-capabilities
 ```
 
 ---
@@ -140,8 +139,6 @@ Kemahiran A2A `list-capabilities` mengembalikan katalog penuh 45 kemahiran sebag
 }
 ```
 
-Lihat [A2A-SERVER.md](./A2A-SERVER.md) untuk butiran protokol.
-
 ---
 
 ## Katalog — 45 ID Kemahiran
@@ -189,12 +186,11 @@ Lihat [A2A-SERVER.md](./A2A-SERVER.md) untuk butiran protokol.
 | `cli-contexts`        | cli-contexts       | `omniroute contexts`    |
 | `cli-cost-usage`      | cli-cost-usage     | `omniroute cost`        |
 | `cli-mcp`             | cli-mcp            | `omniroute mcp`         |
-| `cli-a2a`             | cli-a2a            | `omniroute a2a`         |
 | `cli-tunnel`          | cli-tunnel         | `omniroute tunnel`      |
 | `cli-backup-sync`     | cli-backup-sync    | `omniroute backup`      |
 | `cli-policy-audit`    | cli-policy-audit   | `omniroute policy`      |
 | `cli-batches`         | cli-batches        | `omniroute batch`       |
-| `cli-eval`            | cli-eval           | `omniroute eval`        |
+| `cli-eval`            | cli-eval           | `omniroute simulate`    |
 | `cli-plugins-skills`  | cli-plugins-skills | `omniroute plugins`     |
 | `cli-setup`           | cli-setup          | `omniroute setup`       |
 | `cli-skill-collector` | cli-setup          | `omniroute skills`      |
@@ -312,6 +308,5 @@ curl "http://localhost:20128/api/agent-skills/coverage"
 
 - [SKILLS.md](./SKILLS.md) — Rangka kerja Omni Skills (suntikan alat LLM + pasaran)
 - [MCP-SERVER.md](./MCP-SERVER.md) — Katalog alat MCP (alat `omniroute_agent_skills_*`)
-- [A2A-SERVER.md](./A2A-SERVER.md) — Protokol A2A (kemahiran `list-capabilities`)
 - `src/lib/agentSkills/` — katalog, penjana, penghurai
 - `skills/` — fail SKILL.md yang dijana (45 entri)

@@ -41,7 +41,6 @@ AI-agentti / IDE
 | Varjoliikenne                              | `open-sse/services/combo/shadowRouting.ts`                                                                     |
 | Suojaukset                                 | `src/lib/guardrails/` (esi-/jälkikäsittelijät)                                                                 |
 | Tarkka välimuisti                          | `src/lib/semanticCache.ts` (allekirjoituspohjainen)                                                            |
-| Arvioijat / arviointipohjainen reititys    | `src/lib/evals/`, `open-sse/services/evalRouting.ts`                                                           |
 | Combo-päätösten selitettävyys              | `open-sse/services/combo/decisionTrace.ts`                                                                     |
 | Hallintapaneelin reaaliaikaiset tapahtumat | `src/lib/events/eventBus.ts` (käyttöliittymän ilmoituskanava, `unknown`-hyötykuormat, 100 merkinnän historia)  |
 
@@ -252,8 +251,6 @@ Tiedostot: `open-sse/services/routing/otel.ts`
 - Tuleva `Evaluator` (deterministinen, paikallinen arvioija, HTTP, WASM) käyttäisi
   tapahtumia/jäljityksiä ja palauttaisi `QualityScore`-arvon, joka syötetään samaan
   `getQualityScore`-/laatukerroinpolkuun.
-- Nykyinen arviointiohjattu reititys (`open-sse/services/evalRouting.ts`) järjestää jo
-  yhdistelmän kohteet uudelleen `eval_runs`-läpäisyasteiden perusteella, kun toiminto on käytössä.
 
 Mitään arviointia ei suoriteta synkronisesti pyyntöpolulla, ja yhdyskäytävä toimii
 täysin ilman arvioijaa.

@@ -51,7 +51,6 @@ AI Agent / IDE
 | Shadow traffic                      | `open-sse/services/combo/shadowRouting.ts`                                                         |
 | Guardrails                          | `src/lib/guardrails/` (pre/post hooks)                                                             |
 | Exact cache                         | `src/lib/semanticCache.ts` (signature-based)                                                       |
-| Evaluators / eval-driven routing    | `src/lib/evals/`, `open-sse/services/evalRouting.ts`                                               |
 | Combo decision explainability       | `open-sse/services/combo/decisionTrace.ts`                                                         |
 | Dashboard real-time events          | `src/lib/events/eventBus.ts` (UI notification channel, `unknown` payloads, 100-entry history)      |
 
@@ -266,8 +265,6 @@ intelligence/evaluation backend, not a dependency**. The seams:
 - A future `Evaluator` (deterministic, local judge, HTTP, WASM) would consume
   events/traces and return a `QualityScore` that feeds the same
   `getQualityScore`/quality-factor path.
-- Existing eval-driven routing (`open-sse/services/evalRouting.ts`) already
-  re-orders combo targets by `eval_runs` pass-rates when enabled.
 
 No evaluation runs synchronously on the request path, and the gateway operates
 fully with the evaluator absent.

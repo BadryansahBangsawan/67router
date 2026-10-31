@@ -43,8 +43,6 @@ Cyklussen v3.7.x → v3.8.0 tilføjede automatisk routing uden konfiguration, ny
 - 🤝 **GitLab Duo OAuth-udbyder** — log ind med GitLab-legitimationsoplysninger
 - 🧠 **Reasoning Replay Cache** — hybrid lagring af ræsonnementsspor i hukommelsen og SQLite
 
-📚 **Relateret dokumentation:** [Kompetencerammeværk](../frameworks/SKILLS.md) · [Hukommelsessystem](../frameworks/MEMORY.md) · [Cloud-agenter](../frameworks/CLOUD_AGENT.md) · [Webhooks](../frameworks/WEBHOOKS.md) · [Reasoning Replay Cache](../routing/REASONING_REPLAY.md)
-
 ---
 
 ## 🔌 Udbydere
@@ -104,12 +102,6 @@ Overvågning i realtid: oppetid, hukommelse, version, latenstidspercentiler (p50
 Fire tilstande til fejlfinding af API-oversættelser: **Playground** (formatkonvertering), **Chat Tester** (liveanmodninger), **Test Bench** (batchtests) og **Live Monitor** (realtidsstream).
 
 ![Oversætter-playground](../screenshots/05-translator.png)
-
----
-
-## 🎮 Model-playground _(v2.0.9+)_
-
-Test enhver model direkte fra dashboardet. Vælg udbyder, model og endpoint, skriv prompts med Monaco Editor, stream svar i realtid, afbryd midt i en stream, og se tidsmålinger.
 
 ---
 

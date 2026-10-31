@@ -43,8 +43,6 @@ Chu kỳ v3.7.x → v3.8.0 bổ sung tính năng tự động định tuyến kh
 - 🤝 **Nhà cung cấp GitLab Duo OAuth** — đăng nhập bằng thông tin xác thực GitLab
 - 🧠 **Bộ nhớ đệm phát lại suy luận** — lưu trữ bền vững kết hợp giữa bộ nhớ trong và SQLite cho các dấu vết suy luận
 
-📚 **Tài liệu liên quan:** [Khung kỹ năng](../frameworks/SKILLS.md) · [Hệ thống bộ nhớ](../frameworks/MEMORY.md) · [Tác nhân đám mây](../frameworks/CLOUD_AGENT.md) · [Webhook](../frameworks/WEBHOOKS.md) · [Bộ nhớ đệm phát lại suy luận](../routing/REASONING_REPLAY.md)
-
 ---
 
 ## 🔌 Nhà cung cấp
@@ -104,12 +102,6 @@ Giám sát theo thời gian thực: thời gian hoạt động, bộ nhớ, phi�
 Bốn chế độ để gỡ lỗi bản dịch API: **Sân Chơi** (trình chuyển đổi định dạng), **Trình Kiểm Tra Trò Chuyện** (yêu cầu trực tiếp), **Bàn Kiểm Thử** (kiểm thử hàng loạt) và **Trình Giám Sát Trực Tiếp** (luồng theo thời gian thực).
 
 ![Sân Chơi Dịch Thuật](../screenshots/05-translator.png)
-
----
-
-## 🎮 Sân Chơi Mô Hình _(v2.0.9+)_
-
-Kiểm thử bất kỳ mô hình nào trực tiếp từ bảng điều khiển. Chọn nhà cung cấp, mô hình và endpoint, viết prompt bằng Monaco Editor, truyền phát phản hồi theo thời gian thực, hủy giữa chừng và xem các chỉ số thời gian.
 
 ---
 

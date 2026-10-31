@@ -65,20 +65,6 @@ OWASP-ის ზოგადი გაფრთხილება („wildcard C
 სჭირდებათ ავტორიზაცია, რომლის მიწოდებაც სხვა წყაროს გვერდს არ შეუძლია. CORS-ის საერთო გზაზე
 ეს **არ არის** სესიის მიტაცების ან ავტორიზაციის მონაცემების მოპარვის ვექტორი.
 
-### ერთი რეალური გამონაკლისი — `/api/v1/agents/`
-
-Cloud-Agent-ის მარშრუტები (`/api/v1/agents/{health,credentials,tasks,tasks/[id]}`) საკუთარ
-CORS სათაურებს ადგენენ
-(`src/lib/cloudAgent/api.ts`, `getCloudAgentCorsHeaders`) და `Access-Control-Allow-Credentials: true`-თან
-ერთად **გასცემენ**
-`Access-Control-Allow-Origin: <origin>|*`-საც. ეს ერთადერთი ზედაპირია, სადაც
-წყაროს დაბრუნება და ავტორიზაციის მონაცემები თანაარსებობს, და ის
-`CORS_ALLOW_ALL`-ისგან **დამოუკიდებელია**. ეს მარშრუტები მართვის დონის ავთენტიფიკაციას იყენებენ
-(`requireManagementAuth`); ოპერატორებმა, რომლებიც დაფას ჰოსტის გარედან ხელმისაწვდომს ხდიან,
-უნდა გაითვალისწინონ, რომ ეს ერთადერთი ადგილია, სადაც პასუხის სათაურები სხვადასხვა წყაროდან
-ავტორიზებული პასუხის წაკითხვას უშვებს. მისი მკაფიო ნებადართული სიით შეზღუდვა
-CORS-ის ამ სახელმძღვანელოსგან დამოუკიდებლად აღირიცხება.
-
 ## Production-ის საკონტროლო სია
 
 - **Production-ში არასოდეს დააყენოთ `CORS_ALLOW_ALL=true`.** დატოვეთ დაუყენებელი.
@@ -159,7 +145,6 @@ location / {
 | გაშვების გარემოს სტატუსი dashboard-ისთვის            | `src/app/api/settings/authz-inventory/route.ts`                      |
 | Dashboard-ის გამაფრთხილებელი ბანერი                  | `src/app/(dashboard)/dashboard/settings/components/AuthzSection.tsx` |
 | CORS Allowed Origins ველი                            | `src/app/(dashboard)/dashboard/settings/components/SecurityTab.tsx`  |
-| Cloud-Agent-ის თითოეული მარშრუტის CORS (გამონაკლისი) | `src/lib/cloudAgent/api.ts`                                          |
 
 ## აგრეთვე იხილეთ
 

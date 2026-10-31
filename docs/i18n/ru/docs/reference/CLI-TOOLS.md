@@ -712,7 +712,6 @@ omniroute cache                        # Состояние кэша
 omniroute cache clear                  # Очистить семантический кэш и кэш сигнатур
 
 omniroute mcp status | restart         # Состояние / перезапуск сервера MCP
-omniroute a2a status | card            # Состояние сервера A2A / карточка агента
 
 omniroute tunnel list | create | stop  # Управление туннелями (cloudflare/tailscale/ngrok)
 omniroute env show | get <k> | set <k> <v>  # Просмотреть / задать переменные окружения (временно)

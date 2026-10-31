@@ -50,7 +50,6 @@ AI-agent / IDE
 | Schaduwverkeer                              | `open-sse/services/combo/shadowRouting.ts`                                                                           |
 | Vangrails                                   | `src/lib/guardrails/` (pre-/post-hooks)                                                                              |
 | Exacte cache                                | `src/lib/semanticCache.ts` (gebaseerd op handtekeningen)                                                             |
-| Evaluatoren / evaluatiegestuurde routering  | `src/lib/evals/`, `open-sse/services/evalRouting.ts`                                                                 |
 | Uitlegbaarheid van combo-beslissingen       | `open-sse/services/combo/decisionTrace.ts`                                                                           |
 | Realtime dashboardgebeurtenissen            | `src/lib/events/eventBus.ts` (UI-meldingskanaal, `unknown`-payloads, geschiedenis van 100 items)                     |
 
@@ -276,8 +275,6 @@ backend voor intelligentie/evaluatie, niet als een afhankelijkheid**. De integra
 - Een toekomstige `Evaluator` (deterministisch, lokale beoordelaar, HTTP, WASM) zou
   events/traces verwerken en een `QualityScore` retourneren die aan hetzelfde
   `getQualityScore`-/kwaliteitsfactorpad wordt doorgegeven.
-- Bestaande evaluatiegestuurde routering (`open-sse/services/evalRouting.ts`)
-  herschikt combinatiedoelen al op basis van slagingspercentages van `eval_runs` wanneer deze is ingeschakeld.
 
 Er worden geen evaluaties synchroon op het aanvraagpad uitgevoerd en de gateway
 functioneert volledig wanneer de evaluator afwezig is.

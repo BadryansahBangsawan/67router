@@ -29,7 +29,6 @@ export const HIDEABLE_SIDEBAR_ITEM_IDS = [
   "cli-code",
   "cli-agents",
   "acp-agents",
-  "cloud-agents",
   "conductor",
   "orchestration",
   "agent-bridge",
@@ -48,7 +47,6 @@ export const HIDEABLE_SIDEBAR_ITEM_IDS = [
   "cache",
   "analytics-compression",
   "analytics-search",
-  "analytics-evals",
   "provider-stats",
   // Monitoring — flat
   "activity",
@@ -73,10 +71,8 @@ export const HIDEABLE_SIDEBAR_ITEM_IDS = [
   // Monitoring > Audit
   "audit",
   "audit-mcp",
-  "audit-a2a",
   // Dev Tools
   "translator",
-  "playground",
   "search-tools",
   // Agentic Features
   "memory",
@@ -84,7 +80,6 @@ export const HIDEABLE_SIDEBAR_ITEM_IDS = [
   "agent-skills",
   "chaos-config",
   "mcp",
-  "a2a",
   "plugins",
   // Gamification
   "leaderboard",

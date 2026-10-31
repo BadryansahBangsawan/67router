@@ -44,7 +44,6 @@ src/app/api/agent-skills/
   generate/route.ts                    — POST /api/agent-skills/generate (nepieciešama autentifikācija)
 
 open-sse/mcp-server/tools/agentSkillTools.ts  — 3 MCP rīki (saraksts, iegūšana, pārklājums)
-src/lib/a2a/skills/listCapabilities.ts        — A2A prasme: list-capabilities
 ```
 
 ---
@@ -140,8 +139,6 @@ A2A prasme `list-capabilities` atgriež pilnu 45 prasmju katalogu kā Markdown t
 }
 ```
 
-Protokola informāciju skatiet [A2A-SERVER.md](./A2A-SERVER.md).
-
 ---
 
 ## Katalogs — 45 prasmju ID
@@ -189,12 +186,11 @@ Protokola informāciju skatiet [A2A-SERVER.md](./A2A-SERVER.md).
 | `cli-contexts`        | cli-contexts       | `omniroute contexts`    |
 | `cli-cost-usage`      | cli-cost-usage     | `omniroute cost`        |
 | `cli-mcp`             | cli-mcp            | `omniroute mcp`         |
-| `cli-a2a`             | cli-a2a            | `omniroute a2a`         |
 | `cli-tunnel`          | cli-tunnel         | `omniroute tunnel`      |
 | `cli-backup-sync`     | cli-backup-sync    | `omniroute backup`      |
 | `cli-policy-audit`    | cli-policy-audit   | `omniroute policy`      |
 | `cli-batches`         | cli-batches        | `omniroute batch`       |
-| `cli-eval`            | cli-eval           | `omniroute eval`        |
+| `cli-eval`            | cli-eval           | `omniroute simulate`    |
 | `cli-plugins-skills`  | cli-plugins-skills | `omniroute plugins`     |
 | `cli-setup`           | cli-setup          | `omniroute setup`       |
 | `cli-skill-collector` | cli-setup          | `omniroute skills`      |
@@ -312,6 +308,5 @@ curl "http://localhost:20128/api/agent-skills/coverage"
 
 - [SKILLS.md](./SKILLS.md) — Omni Skills ietvars (LLM rīku ievietošana + tirgus)
 - [MCP-SERVER.md](./MCP-SERVER.md) — MCP rīku katalogs (`omniroute_agent_skills_*` rīki)
-- [A2A-SERVER.md](./A2A-SERVER.md) — A2A protokols (`list-capabilities` prasme)
 - `src/lib/agentSkills/` — katalogs, ģenerators, parsētāji
 - `skills/` — ģenerētie SKILL.md faili (45 ieraksti)

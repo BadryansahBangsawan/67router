@@ -1417,9 +1417,8 @@ Ir-risposta GET tinkludi `agents[]` (id, name, binary, version, installed, proto
 
 ### Evalwazzjonijiet
 
-| Punt terminali | Metodu   | Deskrizzjoni                                              |
-| -------------- | -------- | --------------------------------------------------------- |
-| `/api/evals`   | GET/POST | Elenka s-settijiet ta’ evalwazzjoni / wettaq evalwazzjoni |
+| Punt terminali | Metodu | Deskrizzjoni |
+| -------------- | ------ | ------------ |
 
 ### Politiki
 
@@ -1742,31 +1741,6 @@ Użati mis-subsistema tal-ġestjoni awtomatika taċ-ċwievet biex toħroġ u dda
 
 ---
 
-## Protokoll tal-Aġenti
-
-Kompiti tal-aġenti fil-cloud (Claude Code, Codex Cloud, OpenHands, eċċ.) eżegwiti mill-bogħod f’isem l-utenti ta’ 67router.
-
-| Metodu | Mogħdija                      | Deskrizzjoni                                                                                                                                                    |
-| ------ | ----------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| GET    | `/api/v1/agents/tasks`        | Elenka l-kompiti — `?provider=`, `?status=`, `?limit=` fakultattivi (1–500, valur predefinit 50)                                                                |
-| POST   | `/api/v1/agents/tasks`        | Oħloq kompitu — il-body jiġi vvalidat minn `CreateCloudAgentTaskSchema` (`providerId`, `prompt`, `source`, `options?`). Jirritorna `201` bl-envelop tal-kompitu |
-| DELETE | `/api/v1/agents/tasks?id=...` | Ħassar kompitu                                                                                                                                                  |
-| GET    | `/api/v1/agents/tasks/[id]`   | Aqra kompitu — jaġġorna b’mod sinkroniku l-istatus mill-aġent cloud upstream meta jkun issettjat `external_id`                                                  |
-| POST   | `/api/v1/agents/tasks/[id]`   | Azzjoni diskriminata: `{action: "approve"}`, `{action: "message", message}`, jew `{action: "cancel"}`                                                           |
-| DELETE | `/api/v1/agents/tasks/[id]`   | Ħassar kompitu speċifiku skont l-id                                                                                                                             |
-
-> **Awtentikazzjoni:** awtentikazzjoni tal-ġestjoni meħtieġa għal kull metodu (`requireCloudAgentManagementAuth`). Qabel v3.8.0 dawn ma kinux awtentikati — ara l-commit `588a0333` għall-bidla li tikser il-kompatibbiltà.
-
-```bash
-# Oħloq kompitu cloud ta’ Claude Code
-curl -X POST http://localhost:20128/api/v1/agents/tasks \
-  -H "Authorization: Bearer your-management-key" \
-  -H "Content-Type: application/json" \
-  -d '{"providerId":"claude-code-cloud","prompt":"Fix the failing test","source":{"repo":"...","branch":"..."}}'
-```
-
----
-
 ## Proxies tal-Ġestjoni
 
 Proxies HTTP(S)/SOCKS ħerġin li jistgħu jiġu assenjati lil fornituri, kontijiet, jew globalment.
@@ -1886,48 +1860,10 @@ Qafas tal-ħiliet biex 67router jiġi estiż b’handlers eżekutibbli personali
 
 67router jesponi punt ta' tmiem A2A (Minn Aġent għal Aġent) JSON-RPC 2.0 flimkien ma' wrapper REST għall-ispezzjoni/użu fid-dashboard.
 
-### JSON-RPC
-
-```bash
-POST /a2a
-Authorization: Bearer your-api-key   # fakultattiv sakemm OMNIROUTE_API_KEY ma jkunx issettjat
-Content-Type: application/json
-
-{
-  "jsonrpc": "2.0",
-  "id": 1,
-  "method": "message/send",
-  "params": {
-    "skill": "smart-routing",
-    "messages": [{"role": "user", "content": "Route this coding task"}]
-  }
-}
-```
-
-Metodi appoġġjati (kollha jiddependu fuq `settings.a2aEnabled`):
-
-| Metodu           | Deskrizzjoni                                                              |
-| ---------------- | ------------------------------------------------------------------------- |
-| `message/send`   | Eżekuzzjoni sinkronika tal-ħila; tirritorna `{task, artifacts, metadata}` |
-| `message/stream` | Eżekuzzjoni SSE bi streaming tal-istess sett ta' ħiliet                   |
-| `tasks/get`      | Iġib kompitu permezz ta' `taskId`                                         |
-| `tasks/cancel`   | Jikkanċella kompitu permezz ta' `taskId`                                  |
-
-Ħiliet inkorporati: `smart-routing`, `quota-management`, `provider-discovery`, `cost-analysis`, `health-report`.
-
-### Kard tal-Aġent
-
-```bash
-GET /.well-known/agent.json
-```
-
-Jirritorna l-kard pubblika tal-aġent A2A (isem, deskrizzjoni, kapaċitajiet, katalogu tal-ħiliet, skema tal-awtentikazzjoni) — maħżuna fil-cache pubblikament għal siegħa. Ma hija meħtieġa ebda awtentikazzjoni.
-
 ### Għodod awżiljarji REST
 
 | Metodu | Mogħdija                     | Deskrizzjoni                                                                                                           |
 | ------ | ---------------------------- | ---------------------------------------------------------------------------------------------------------------------- |
-| GET    | `/api/a2a/status`            | A2A attivat + statistika tal-kompiti + sommarju tal-kard tal-aġent maħżuna fil-cache                                   |
 | GET    | `/api/a2a/tasks`             | Jelenka l-kompiti — `?state=submitted\|working\|completed\|failed\|cancelled`, `?skill=`, `?limit=` (≤200), `?offset=` |
 | POST   | `/api/a2a/tasks`             | (Mhux implimentat bħala għodda awżiljarja REST — oħloq permezz ta' JSON-RPC `message/send`)                            |
 | GET    | `/api/a2a/tasks/[id]`        | Jirkupra kompitu wieħed                                                                                                |
@@ -1947,12 +1883,8 @@ Jirritorna l-kard pubblika tal-aġent A2A (isem, deskrizzjoni, kapaċitajiet, ka
 | GET | `/api/cloud/models/alias` | Jelenka l-psewdonimi tal-mudelli kif esposti għas-sinkronizzazzjoni tal-cloud |
 | GET | `/api/assess` | Jaqra l-aktar kategorizzazzjonijiet reċenti tal-valutazzjoni (għal kull fornitur/mudell) |
 | POST | `/api/assess` | Iħaddem valutazzjoni — korp: `{scope: {type:"all"}                                                   | {type:"provider", providerId} | {type:"model", modelId}, trigger?}` |
-| GET | `/api/evals` | Jelenka s-suites ta' evalwazzjoni inkorporati + l-aktar eżekuzzjonijiet reċenti |
-| POST | `/api/evals` | Jiskatta eżekuzzjoni ta' evalwazzjoni |
-| POST | `/api/evals/suites` | Joħloq suite ta' evalwazzjoni personalizzata — il-korp jiġi vvalidat minn `evalSuiteSaveSchema` |
-| GET | `/api/evals/suites/[id]` | Jirkupra suite ta' evalwazzjoni personalizzata |
 
-**Awtentikazzjoni:** `/api/cloud/auth` jivvalida ċavetta Bearer direttament u jirritorna ċ-ċavetta moħbija u l-`projectId` ta' kull konnessjoni biss għal ċavetta bl-ambitu `manage` / `admin`; ir-rotot l-oħra `/api/cloud/*`, `/api/evals/*`, u `/api/assess` jeħtieġu sessjoni ta' ġestjoni/ċavetta API. Il-POST ta' `/api/assess` juża `validateBody` bi skema ta' ambitu ta' unjoni diskriminata.
+**Awtentikazzjoni:** `/api/cloud/auth` jivvalida ċavetta Bearer direttament u jirritorna ċ-ċavetta moħbija u l-`projectId` ta' kull konnessjoni biss għal ċavetta bl-ambitu `manage` / `admin`; ir-rotot l-oħra `/api/cloud/*`, u `/api/assess` jeħtieġu sessjoni ta' ġestjoni/ċavetta API. Il-POST ta' `/api/assess` juża `validateBody` bi skema ta' ambitu ta' unjoni diskriminata.
 
 ---
 
@@ -2276,5 +2208,3 @@ ta’ Aċċess `oma_live_…`, ċavetta API bl-ambitu tal-ġestjoni) u kif dawn 
 - `requireLogin` jista’ jiġi attivat jew diżattivat permezz ta’ `/api/settings/require-login`
 - Ir-rotot `/v1/*` jistgħu jeħtieġu b’mod fakultattiv ċavetta API Bearer meta `REQUIRE_API_KEY=true`
 - “token tal-ġestjoni” / “ċavetta API bl-ambitu tal-ġestjoni” f’din ir-referenza tfisser waħda mill-familji f’dik il-gwida — mhux tip addizzjonali ta’ sigriet mhux definit
-
-> **Bidla inkompatibbli (v3.8.0)** — `/api/v1/agents/tasks/*` u l-endpoints tal-ġestjoni tal-cooldown issa jeħtieġu **awtentikazzjoni tal-ġestjoni** (cookie `auth_token` tad-dashboard jew ċavetta API bl-ambitu tal-ġestjoni). Il-klijenti li qabel kienu jsejħu dawn ir-rotot mingħajr awtentikazzjoni se jirċievu `401 Unauthorized`. Ara l-commit `588a0333` (`fix(auth): require management auth for agent and cooldown APIs`).

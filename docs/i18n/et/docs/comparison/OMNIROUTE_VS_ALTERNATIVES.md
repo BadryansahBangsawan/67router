@@ -24,7 +24,6 @@ Objektiivne funktsioonide võrdlus populaarsete avatud lähtekoodiga AI-ruuterit
 | **A2A protokoll**                                          |                    ✅ 6 oskust                    |        ❌         |        ❌         |      ❌       |
 | **Mälu (FTS5 + vektor)**                                   |                        ✅                         |        ❌         |        ❌         |      ❌       |
 | **Kaitsepiirded (PII, injektsioon, arvutinägemine)**       |                        ✅                         |      osaline      |        ❌         |  ✅ tasuline  |
-| **Pilveagentide integratsioonid**                          |            Codex, Cursor, Devin, Jules            |        ❌         |        ❌         |      ❌       |
 | **Kaitselüliti pakkuja kohta**                             |           ✅ 3 olekut, laisk taastumine           |     põhiline      |        ❌         |      ✅       |
 | **TLS-i sõrmejälje peitmine (JA3/JA4)**                    |                    ✅ wreq-js                     |        ❌         |        ❌         |      ❌       |
 | **Hindamisraamistik**                                      |                 ✅ sisseehitatud                  |        ❌         |        ❌         |  ⚠ tasuline   |

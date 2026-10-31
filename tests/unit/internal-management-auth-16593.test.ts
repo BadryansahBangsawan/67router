@@ -18,7 +18,6 @@ delete process.env.ROUTER_API_KEY;
 
 const core = await import("../../src/lib/db/core.ts");
 const { enforceClientApiRouteAuth } = await import("../../src/shared/utils/clientApiRouteAuth.ts");
-const { buildEvalCaseRequest } = await import("../../src/lib/evals/runtime.ts");
 
 test.after(() => {
   mock.restoreAll();
@@ -40,24 +39,6 @@ test("public chat authentication rejects anonymous and forged internal callers",
     );
     assert.equal(response?.status, 401);
   }
-});
-
-test("eval without a selected key passes required authentication and opts out of memory", async () => {
-  const request = buildEvalCaseRequest({ input: {} }, { type: "suite-default" }, null);
-  const denial = await enforceClientApiRouteAuth(request);
-  assert.equal(denial?.status ?? 200, 200);
-  assert.equal(request.headers.get("x-omniroute-no-memory"), "true");
-  assert.equal(request.headers.get("x-omniroute-compression"), "off");
-});
-
-test("an explicit invalid eval key remains invalid instead of gaining internal identity", async () => {
-  const request = buildEvalCaseRequest(
-    { input: {} },
-    { type: "suite-default" },
-    "explicit-invalid-key"
-  );
-  assert.equal(request.headers.get("Authorization"), "Bearer explicit-invalid-key");
-  assert.equal((await enforceClientApiRouteAuth(request))?.status, 401);
 });
 
 test("recorded triage authenticates its internal chat call without importing memory", async () => {
@@ -111,8 +92,9 @@ test("dashboard chaos dispatch passes required authentication without a selected
 
 test("generated internal identity remains restricted to chat and audio", async () => {
   const { getApiKeyMetadata } = await import("../../src/lib/db/apiKeys.ts");
-  const request = buildEvalCaseRequest({ input: {} }, { type: "suite-default" }, null);
-  const bearer = request.headers.get("Authorization")?.replace(/^Bearer /, "");
+  const { resolveSelfLoopBearer } =
+    await import("../../src/shared/middleware/chatAdmissionIdentity.ts");
+  const bearer = resolveSelfLoopBearer();
   assert.ok(bearer);
   const metadata = await getApiKeyMetadata(bearer);
   assert.deepEqual(metadata?.allowedEndpoints, ["chat", "audio"]);

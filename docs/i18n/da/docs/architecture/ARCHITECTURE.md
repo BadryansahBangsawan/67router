@@ -128,13 +128,11 @@ Hovedsider under `src/app/(dashboard)/dashboard/`:
 - `/dashboard/limits` — kvote- og hastighedskontroller
 - `/dashboard/cli-tools` — CLI-introduktion, runtime-registrering og generering af konfiguration
 - `/dashboard/agents` — registrerede ACP-agenter og registrering af brugerdefinerede agenter
-- `/dashboard/cloud-agents` — cloudhostede agentopgaver (Codex Cloud, Devin, Jules) og opgavernes livscyklus
 - `/dashboard/skills` — A2A-kompetenceregister, sandbox-kørsel og indbygget kompetencekatalog
 - `/dashboard/memory` — inspektion og hentning af vedvarende samtalehukommelse
 - `/dashboard/webhooks` — udgående webhook-abonnementer, rotation af hemmeligheder og statistik over genforsøg
 - `/dashboard/batch` — indsendelse af batchjob og status
 - `/dashboard/cache` — statistik for read-through-cache og ræsonneringscache samt kontroller til rydning
-- `/dashboard/playground` — interaktiv chatlegeplads med enhver konfigureret kombination/model
 - `/dashboard/changelog` — changelog-visning i appen (renderer `CHANGELOG.md`)
 - `/dashboard/system` — runtime-diagnosticering, versionsoplysninger og grænseflade til validering af miljøet
 - `/dashboard/onboarding` — opsætningsguide til nye installationers første kørsel
@@ -252,7 +250,6 @@ Administrationsområder:
 - Budget: `src/app/api/usage/budget` (GET/POST)
 - Fallback-kæder: `src/app/api/fallback/chains` (GET/POST/DELETE)
 - Compliance-revision: `src/app/api/compliance/audit-log` (GET, med sideinddeling + strukturerede metadata)
-- Evalueringer: `src/app/api/evals` (GET/POST), `src/app/api/evals/[suiteId]` (GET)
 - Politikker: `src/app/api/policies` (GET/POST)
 - Synkroniseringstokens: `src/app/api/sync/tokens` (GET/POST), `src/app/api/sync/tokens/[id]` (GET/DELETE)
 - Konfigurationspakke: `src/app/api/sync/bundle` (GET, ETag-versioneret snapshot af indstillinger/udbydere/kombinationer/nøgler)
@@ -316,7 +313,6 @@ Domænelagsmoduler:
 - Timeout for hentning: `src/shared/utils/fetchTimeout.ts`
 - Telemetri for anmodninger: `src/shared/utils/requestTelemetry.ts`
 - Compliance/revision: `src/lib/compliance/index.ts`
-- Evalueringskørsel: `src/lib/evals/evalRunner.ts`
 - Lagring af domænetilstand: `src/lib/db/domainState.ts` — SQLite-CRUD til fallback-kæder, budgetter, omkostningshistorik, lockout-tilstand og kredsløbsafbrydere
 
 OAuth-udbydermoduler (27 individuelle filer under `src/lib/oauth/providers/`):
@@ -385,23 +381,6 @@ Vigtigste funktioner:
 
 Se alle algoritmiske detaljer (faktorformler, finjustering af vægte) i
 [`docs/routing/AUTO-COMBO.md`](../routing/AUTO-COMBO.md).
-
-### B. Cloud Agents
-
-Cloud Agents samler tredjeparts-hostede kodeagentplatforme (Codex Cloud, Devin,
-Jules) bag en ensartet, databaseunderstøttet opgavelivscyklus. Alle endpoints til oprettelse og inspektion
-af opgaver kræver management-godkendelse.
-
-- Modulets rod: `src/lib/cloudAgent/` (`baseAgent.ts`, `registry.ts`, `api.ts`,
-  `types.ts`, `db.ts` samt undermapper for hver agent under `agents/`)
-- Implementeringer for hver agent: `agents/codex/`, `agents/devin/`, `agents/jules/`
-- Offentlige endpoints: `/api/v1/agents/tasks/*` (vis/opret/hent/annuller)
-- Management-endpoints: `/api/cloud/*` (provisionering, status, batch)
-- Dashboard: `/dashboard/cloud-agents`
-- Lager: tabellen `cloud_agent_tasks`
-
-Se detaljer om provisionering og OAuth for hver agent i
-[`docs/frameworks/CLOUD_AGENT.md`](../frameworks/CLOUD_AGENT.md).
 
 ### C. Sikkerhedsrækværk
 

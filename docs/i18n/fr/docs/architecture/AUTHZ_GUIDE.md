@@ -267,8 +267,6 @@ L'application des clés d'API client utilise `isRequireApiKeyEnabled()` dans `sr
 
 ## Changement incompatible — v3.8.0
 
-Les points de terminaison `/api/v1/agents/tasks/*` et `/api/resilience/model-cooldowns` **nécessitent désormais une authentification de gestion** (commit `588a0333`). Les clients qui envoyaient auparavant une clé d’API normale sans la portée `manage` reçoivent une réponse `403`. Migration : attribuez la portée `manage` à la clé dans le tableau de bord API Keys, ou utilisez une session de tableau de bord authentifiée.
-
 ## Changement de comportement — v3.8.2
 
 `/api/mcp/*` (le serveur MCP distant) reste LOCAL_ONLY par défaut, mais accepte désormais les requêtes ne provenant pas de la boucle locale lorsque l’en-tête `Authorization: Bearer <api-key>` comporte la portée `manage`. Cette exception est explicitement contrôlée pour chaque chemin via `LOCAL_ONLY_MANAGE_SCOPE_BYPASS_PREFIXES` dans `src/server/authz/routeGuard.ts` ; le préfixe LOCAL_ONLY apparenté `/api/cli-tools/runtime/*` ne peut intentionnellement PAS être contourné, car il peut lancer des sous-processus arbitraires. Les requêtes anonymes vers `/api/mcp/*` ne provenant pas de la boucle locale continuent de renvoyer `403 LOCAL_ONLY` — le comportement par défaut de tout nouveau chemin LOCAL_ONLY reste limité strictement à la boucle locale. Voir [Niveaux de protection des routes](../security/ROUTE_GUARD_TIERS.md#manage-scope-carve-out).

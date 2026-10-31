@@ -128,13 +128,11 @@ _อัปเดตล่าสุด: 2026-06-28_
 - `/dashboard/limits` — การควบคุมโควตา/อัตรา
 - `/dashboard/cli-tools` — การเริ่มต้นใช้งาน CLI การตรวจหารันไทม์ และการสร้างการกำหนดค่า
 - `/dashboard/agents` — เอเจนต์ ACP ที่ตรวจพบ + การลงทะเบียนเอเจนต์แบบกำหนดเอง
-- `/dashboard/cloud-agents` — งานของเอเจนต์ที่โฮสต์บนคลาวด์ (Codex Cloud, Devin, Jules) และวงจรชีวิตของงาน
 - `/dashboard/skills` — รีจิสทรีทักษะ A2A การดำเนินการในแซนด์บ็อกซ์ และแค็ตตาล็อกทักษะในตัว
 - `/dashboard/memory` — การตรวจสอบและเรียกคืนหน่วยความจำการสนทนาแบบถาวร
 - `/dashboard/webhooks` — การสมัครรับเว็บฮุกขาออก การหมุนเวียนข้อมูลลับ และสถิติการลองใหม่
 - `/dashboard/batch` — การส่งงานแบบแบตช์และความคืบหน้า
 - `/dashboard/cache` — สถิติแคชแบบอ่านผ่านและแคชการให้เหตุผล รวมถึงการควบคุมการขับข้อมูลออก
-- `/dashboard/playground` — สนามทดลองแชตแบบโต้ตอบกับคอมโบ/โมเดลที่กำหนดค่าไว้
 - `/dashboard/changelog` — ตัวแสดงบันทึกการเปลี่ยนแปลงภายในแอป (เรนเดอร์ `CHANGELOG.md`)
 - `/dashboard/system` — การวินิจฉัยรันไทม์ ข้อมูลเวอร์ชัน และส่วนตรวจสอบความถูกต้องของสภาพแวดล้อม
 - `/dashboard/onboarding` — วิซาร์ดตั้งค่าครั้งแรกสำหรับการติดตั้งใหม่
@@ -252,7 +250,6 @@ flowchart LR
 - งบประมาณ: `src/app/api/usage/budget` (GET/POST)
 - เชนสำรอง: `src/app/api/fallback/chains` (GET/POST/DELETE)
 - การตรวจสอบการปฏิบัติตามข้อกำหนด: `src/app/api/compliance/audit-log` (GET พร้อมการแบ่งหน้า + เมทาดาทาที่มีโครงสร้าง)
-- การประเมินผล: `src/app/api/evals` (GET/POST), `src/app/api/evals/[suiteId]` (GET)
 - นโยบาย: `src/app/api/policies` (GET/POST)
 - โทเค็นการซิงค์: `src/app/api/sync/tokens` (GET/POST), `src/app/api/sync/tokens/[id]` (GET/DELETE)
 - บันเดิลการกำหนดค่า: `src/app/api/sync/bundle` (GET, สแนปช็อตของการตั้งค่า/ผู้ให้บริการ/คอมโบ/คีย์ที่กำหนดเวอร์ชันด้วย ETag)
@@ -316,7 +313,6 @@ flowchart LR
 - การหมดเวลาของการดึงข้อมูล: `src/shared/utils/fetchTimeout.ts`
 - เทเลเมทรีของคำขอ: `src/shared/utils/requestTelemetry.ts`
 - การปฏิบัติตามข้อกำหนด/การตรวจสอบ: `src/lib/compliance/index.ts`
-- ตัวรันการประเมิน: `src/lib/evals/evalRunner.ts`
 - การจัดเก็บสถานะโดเมนถาวร: `src/lib/db/domainState.ts` — SQLite CRUD สำหรับเชนตัวสำรอง, งบประมาณ, ประวัติต้นทุน, สถานะการล็อกไม่ให้ใช้งาน และเซอร์กิตเบรกเกอร์
 
 โมดูลผู้ให้บริการ OAuth (ไฟล์แยกกัน 27 ไฟล์ภายใต้ `src/lib/oauth/providers/`):
@@ -383,23 +379,6 @@ Auto Combo จะให้คะแนนและเลือกเป้าห
 
 สำหรับรายละเอียดทั้งหมดของอัลกอริทึม (สูตรปัจจัยและการปรับแต่งน้ำหนัก) โปรดดู
 [`docs/routing/AUTO-COMBO.md`](../routing/AUTO-COMBO.md)
-
-### B. Cloud Agents
-
-Cloud Agents ครอบแพลตฟอร์มเอเจนต์เขียนโค้ดแบบโฮสต์โดยบุคคลที่สาม (Codex Cloud, Devin,
-Jules) ไว้เบื้องหลังวงจรชีวิตงานที่มีรูปแบบเดียวกันและรองรับด้วยฐานข้อมูล ปลายทางทั้งหมดสำหรับการสร้าง/ตรวจสอบงาน
-ต้องใช้การยืนยันตัวตนระดับการจัดการ
-
-- รากของโมดูล: `src/lib/cloudAgent/` (`baseAgent.ts`, `registry.ts`, `api.ts`,
-  `types.ts`, `db.ts` รวมถึงไดเรกทอรีย่อยของแต่ละเอเจนต์ภายใต้ `agents/`)
-- การนำไปใช้สำหรับแต่ละเอเจนต์: `agents/codex/`, `agents/devin/`, `agents/jules/`
-- ปลายทางสาธารณะ: `/api/v1/agents/tasks/*` (แสดงรายการ/สร้าง/เรียกดู/ยกเลิก)
-- ปลายทางการจัดการ: `/api/cloud/*` (การจัดเตรียม, สถานะ, การประมวลผลแบบกลุ่ม)
-- แดชบอร์ด: `/dashboard/cloud-agents`
-- พื้นที่จัดเก็บ: ตาราง `cloud_agent_tasks`
-
-สำหรับรายละเอียดเฉพาะของการจัดเตรียมและ OAuth ของแต่ละเอเจนต์ โปรดดู
-[`docs/frameworks/CLOUD_AGENT.md`](../frameworks/CLOUD_AGENT.md)
 
 ### C. Guardrails
 

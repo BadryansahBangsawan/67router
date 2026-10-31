@@ -573,5 +573,4 @@ interface ProviderConfig {
 - [REPOSITORY_MAP.md](../architecture/REPOSITORY_MAP.md) — නාමාවලියෙන් නාමාවලියට
 - [AUTO-COMBO.md](../routing/AUTO-COMBO.md) — සාධක 16ක ලකුණුකරණය
 - [MCP-SERVER.md](./MCP-SERVER.md) — MCP සේවාදායකය
-- [A2A-SERVER.md](./A2A-SERVER.md) — A2A සේවාදායකය
 - මූලාශ්රය: `open-sse/` (ගොනු 400+, කේත පේළි ~143K)

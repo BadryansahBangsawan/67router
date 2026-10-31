@@ -1440,9 +1440,8 @@ GET-vastaus sisältää `agents[]`-taulukon (id, name, binary, version, installe
 
 ### Evaluoinnit
 
-| Päätepiste   | Menetelmä | Kuvaus                                            |
-| ------------ | --------- | ------------------------------------------------- |
-| `/api/evals` | GET/POST  | Luettele evaluointikokoelmat / suorita evaluointi |
+| Päätepiste | Menetelmä | Kuvaus |
+| ---------- | --------- | ------ |
 
 ### Käytännöt
 
@@ -1765,31 +1764,6 @@ Automaattinen avainten hallinnan alijärjestelmä käyttää näitä API-avainte
 
 ---
 
-## Agenttien protokolla
-
-67router-käyttäjien puolesta etänä suoritettavat pilviagenttitehtävät (Claude Code, Codex Cloud, OpenHands jne.).
-
-| Menetelmä | Polku                         | Kuvaus                                                                                                                                                   |
-| --------- | ----------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| GET       | `/api/v1/agents/tasks`        | Listaa tehtävät — valinnaiset `?provider=`, `?status=`, `?limit=` (1–500, oletus 50)                                                                     |
-| POST      | `/api/v1/agents/tasks`        | Luo tehtävän — runko validoidaan `CreateCloudAgentTaskSchema`-skeemalla (`providerId`, `prompt`, `source`, `options?`). Palauttaa `201` ja tehtäväkuoren |
-| DELETE    | `/api/v1/agents/tasks?id=...` | Poistaa tehtävän                                                                                                                                         |
-| GET       | `/api/v1/agents/tasks/[id]`   | Lukee tehtävän — päivittää tilan synkronisesti ulkoiselta pilviagentilta, kun `external_id` on asetettu                                                  |
-| POST      | `/api/v1/agents/tasks/[id]`   | Eroteltu toiminto: `{action: "approve"}`, `{action: "message", message}` tai `{action: "cancel"}`                                                        |
-| DELETE    | `/api/v1/agents/tasks/[id]`   | Poistaa tietyn tehtävän tunnuksen perusteella                                                                                                            |
-
-> **Todennus:** hallinnan todennus vaaditaan jokaiselle menetelmälle (`requireCloudAgentManagementAuth`). Ennen versiota v3.8.0 nämä eivät edellyttäneet todennusta — katso yhteensopivuuden rikkova muutos commitista `588a0333`.
-
-```bash
-# Luo Claude Code -pilvitehtävä
-curl -X POST http://localhost:20128/api/v1/agents/tasks \
-  -H "Authorization: Bearer your-management-key" \
-  -H "Content-Type: application/json" \
-  -d '{"providerId":"claude-code-cloud","prompt":"Fix the failing test","source":{"repo":"...","branch":"..."}}'
-```
-
----
-
 ## Hallinnan välityspalvelimet
 
 Lähtevän liikenteen HTTP(S)-/SOCKS-välityspalvelimet, jotka voidaan määrittää palveluntarjoajille, tileille tai maailmanlaajuisesti.
@@ -1909,48 +1883,10 @@ Pysyvä keskustelu- ja faktamuistivarasto, jonka näkyvyysalue määritetään A
 
 67router tarjoaa A2A (Agent-to-Agent) JSON-RPC 2.0 -päätepisteen sekä REST-kääreen tarkastelua ja hallintapaneelien käyttöä varten.
 
-### JSON-RPC
-
-```bash
-POST /a2a
-Authorization: Bearer your-api-key   # valinnainen, ellei OMNIROUTE_API_KEY ole asetettu
-Content-Type: application/json
-
-{
-  "jsonrpc": "2.0",
-  "id": 1,
-  "method": "message/send",
-  "params": {
-    "skill": "smart-routing",
-    "messages": [{"role": "user", "content": "Route this coding task"}]
-  }
-}
-```
-
-Tuetut metodit (kaikki edellyttävät, että `settings.a2aEnabled` on käytössä):
-
-| Metodi           | Kuvaus                                                             |
-| ---------------- | ------------------------------------------------------------------ |
-| `message/send`   | Synkroninen taitosuoritus; palauttaa `{task, artifacts, metadata}` |
-| `message/stream` | Saman taitojoukon suoritus SSE-suoratoistona                       |
-| `tasks/get`      | Hakee tehtävän tunnuksella `taskId`                                |
-| `tasks/cancel`   | Peruuttaa tehtävän tunnuksella `taskId`                            |
-
-Sisäänrakennetut taidot: `smart-routing`, `quota-management`, `provider-discovery`, `cost-analysis`, `health-report`.
-
-### Agenttikortti
-
-```bash
-GET /.well-known/agent.json
-```
-
-Palauttaa julkisen A2A-agenttikortin (nimi, kuvaus, ominaisuudet, taitoluettelo ja todennusmenetelmä) — välimuistissa julkisesti 1 tunnin ajan. Todennusta ei vaadita.
-
 ### REST-apurit
 
 | Metodi | Polku                        | Kuvaus                                                                                                               |
 | ------ | ---------------------------- | -------------------------------------------------------------------------------------------------------------------- |
-| GET    | `/api/a2a/status`            | A2A:n käyttötila + tehtävätilastot + välimuistissa olevan agenttikortin yhteenveto                                   |
 | GET    | `/api/a2a/tasks`             | Listaa tehtävät — `?state=submitted\|working\|completed\|failed\|cancelled`, `?skill=`, `?limit=` (≤200), `?offset=` |
 | POST   | `/api/a2a/tasks`             | (Ei toteutettu REST-apurina — luo JSON-RPC-metodilla `message/send`)                                                 |
 | GET    | `/api/a2a/tasks/[id]`        | Hakee yhden tehtävän                                                                                                 |
@@ -1970,12 +1906,8 @@ Palauttaa julkisen A2A-agenttikortin (nimi, kuvaus, ominaisuudet, taitoluettelo 
 | GET | `/api/cloud/models/alias` | Listaa pilvisynkronoinnille tarjotut mallialiakset |
 | GET | `/api/assess` | Lukee viimeisimmät arviointiluokitukset (palveluntarjoaja- ja mallikohtaisesti) |
 | POST | `/api/assess` | Suorittaa arvioinnin — runko: `{scope: {type:"all"}                                                   | {type:"provider", providerId} | {type:"model", modelId}, trigger?}` |
-| GET | `/api/evals` | Listaa sisäänrakennetut evaluaatiokokoelmat ja viimeisimmät suoritukset |
-| POST | `/api/evals` | Käynnistää evaluaatiosuorituksen |
-| POST | `/api/evals/suites` | Luo mukautetun evaluaatiokokoelman — runko validoidaan skeemalla `evalSuiteSaveSchema` |
-| GET | `/api/evals/suites/[id]` | Hakee mukautetun evaluaatiokokoelman |
 
-**Todennus:** `/api/cloud/auth` vahvistaa Bearer-avaimen suoraan ja palauttaa kunkin yhteyden peitetyn avaimen sekä `projectId`-arvon vain avaimelle, jolla on käyttöoikeusalue `manage` / `admin`; muut `/api/cloud/*`-, `/api/evals/*`- ja `/api/assess`-reitit edellyttävät hallintaistuntoa tai API-avainta. `/api/assess` POST käyttää `validateBody`-toimintoa erottelevan unionin käyttöalueen skeeman kanssa.
+**Todennus:** `/api/cloud/auth` vahvistaa Bearer-avaimen suoraan ja palauttaa kunkin yhteyden peitetyn avaimen sekä `projectId`-arvon vain avaimelle, jolla on käyttöoikeusalue `manage` / `admin`; muut `/api/cloud/*`-- ja `/api/assess`-reitit edellyttävät hallintaistuntoa tai API-avainta. `/api/assess` POST käyttää `validateBody`-toimintoa erottelevan unionin käyttöalueen skeeman kanssa.
 
 ---
 
@@ -2299,5 +2231,3 @@ ja hallintaoikeuksilla rajattu API-avain) sekä niiden erot päättelyavaimiin v
 - `requireLogin` voidaan ottaa käyttöön tai poistaa käytöstä reitin `/api/settings/require-login` kautta
 - `/v1/*`-reitit voivat edellyttää Bearer-API-avainta, kun `REQUIRE_API_KEY=true`
 - Tässä viitteessä ”hallintatunnus” / ”hallintaoikeuksilla rajattu API-avain” tarkoittaa jotakin kyseisessä oppaassa kuvatuista tunnistetietoperheistä — ei määrittelemätöntä ylimääräistä salaisuustyyppiä
-
-> **Yhteensopivuutta rikkova muutos (v3.8.0)** — `/api/v1/agents/tasks/*` ja jäähdytysajan hallinnan päätepisteet edellyttävät nyt **hallinnan todennusta** (hallintapaneelin `auth_token`-evästettä tai hallintaoikeuksilla rajattua API-avainta). Asiakkaat, jotka aiemmin kutsuivat näitä reittejä ilman todennusta, saavat vastauksen `401 Unauthorized`. Katso commit `588a0333` (`fix(auth): require management auth for agent and cooldown APIs`).

@@ -120,5 +120,3 @@ berasingan dalam persekitaran sasaran.
 - [Protokol ejen](./AGENT_PROTOCOLS_GUIDE.md)
 - [Kontrak pelancaran CLI](../guides/CLI-LAUNCH-CONTRACTS.md)
 - [Alat CLI](../reference/CLI-TOOLS.md)
-- [Pelayan A2A](./A2A-SERVER.md)
-- [Ejen awan](./CLOUD_AGENT.md)

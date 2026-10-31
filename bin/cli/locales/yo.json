@@ -390,34 +390,6 @@
       "description": "Àkọsílẹ̀ àyẹ̀wò MCP (orúkọ mìíràn fún audit --source mcp)"
     }
   },
-  "a2a": {
-    "skills": {
-      "description": "Ṣe àkójọ àwọn ọgbọ́n A2A tó wà láti inú káàdì aṣojú"
-    },
-    "invoke": {
-      "description": "Pe ọgbọ́n A2A kan kí o sì dá ID iṣẹ́ náà padà",
-      "input": "Ohun àbáwọlé JSON",
-      "input_file": "Ọ̀nà sí fáìlì àbáwọlé JSON",
-      "wait": "Dúró de ìparí iṣẹ́ kí o tó dá èsì padà",
-      "timeout": "Àkókò tó pọ̀jù fún dídúró de ìparí ní ms (àìpé: 60000)"
-    },
-    "tasks": {
-      "description": "Ṣàkóso àwọn iṣẹ́ A2A",
-      "list": {
-        "status": "Ṣe àsẹ̀ nípasẹ̀ ipò",
-        "skill": "Ṣe àsẹ̀ nípasẹ̀ ID ọgbọ́n"
-      },
-      "watch": {
-        "description": "Máa ṣàyẹ̀wò ipò iṣẹ́ títí yóò fi parí"
-      },
-      "stream": {
-        "description": "San àwọn ìṣẹ̀lẹ̀ ìmúṣẹ iṣẹ́ jáde nípasẹ̀ SSE"
-      },
-      "logs": {
-        "description": "Ṣàfihàn àwọn ìfiránṣẹ́ iṣẹ́ àti àwọn artifact"
-      }
-    }
-  },
   "policy": {
     "description": "Ṣàkóso àwọn ìlànà ìfúnni-láṣẹ 67router",
     "list": {
@@ -696,99 +668,6 @@
       "provider": "ID olùpèsè láti fagilé",
       "connection_id": "Fagilé àsopọ̀ pàtó kan nípasẹ̀ ID",
       "yes": "Fo ìbéèrè ìmúdájú kọjá"
-    }
-  },
-  "cloud": {
-    "description": "Ṣàkóso àwọn iṣẹ́ aṣojú AI awọsanma (codex, devin, jules)",
-    "agents": {
-      "description": "Ṣe àtòjọ àwọn aṣojú awọsanma tó wà"
-    },
-    "agent": {
-      "description": "Ṣàkóso àwọn iṣẹ́ aṣojú awọsanma {agent}",
-      "auth": {
-        "description": "Fún {agent} ní àṣẹ nípasẹ̀ OAuth"
-      }
-    },
-    "task": {
-      "description": "Ṣàkóso àwọn iṣẹ́ aṣojú awọsanma",
-      "create": {
-        "description": "Ṣẹ̀dá iṣẹ́ aṣojú tuntun kan",
-        "title": "Àkọlé iṣẹ́ (àìyẹsẹ̀ sí àwọn àmì kọ́ọ̀kan 80 àkọ́kọ́ ti prompt)",
-        "prompt": "Ọ̀rọ̀ prompt iṣẹ́",
-        "prompt_file": "Ka prompt láti inú fáìlì",
-        "repo": "URL ibi ìpamọ́ láti ṣe clone fún iṣẹ́ náà",
-        "branch": "Orúkọ branch láti lò",
-        "metadata": "Ohun metadata JSON"
-      },
-      "list": {
-        "description": "Ṣe àtòjọ àwọn iṣẹ́ aṣojú",
-        "status": "Ṣe àlẹ̀mọ́ nípa ipò (running|completed|failed|cancelled)",
-        "limit": "Iye èsì tó pọ̀ jù (àìyẹsẹ̀: 50)"
-      },
-      "get": {
-        "description": "Gba àwọn àlàyé iṣẹ́ nípasẹ̀ ID"
-      },
-      "status": {
-        "description": "Tẹ ipò iṣẹ́ jáde (running|completed|failed|cancelled)"
-      },
-      "cancel": {
-        "description": "Fagilé iṣẹ́ tí ń lọ lọ́wọ́",
-        "yes": "Fo ìbéèrè ìmúdájú kọjá"
-      },
-      "approve": {
-        "description": "Fọwọ́sí ètò aṣojú náà láti bẹ̀rẹ̀ ìmúṣẹ"
-      },
-      "message": {
-        "description": "Fi ìránṣẹ́ ránṣẹ́ sí iṣẹ́ tí ń lọ lọ́wọ́"
-      }
-    },
-    "sources": {
-      "description": "Ṣàtòjọ àwọn fáìlì orísun tí iṣẹ́ kan ṣẹ̀dá"
-    }
-  },
-  "eval": {
-    "description": "Ṣàkóso àwọn àkójọpọ̀ eval àti àwọn ìṣiṣẹ́ wọn",
-    "suites": {
-      "description": "Ṣàkóso àwọn àkójọpọ̀ eval",
-      "list": {
-        "description": "Ṣàtòjọ àwọn àkójọpọ̀ eval"
-      },
-      "get": {
-        "description": "Gba àwọn àlàyé àkójọpọ̀ eval nípasẹ̀ ID"
-      },
-      "create": {
-        "description": "Ṣẹ̀dá àkójọpọ̀ eval láti inú fáìlì JSON kan",
-        "file": "Ọ̀nà sí fáìlì JSON ìtumọ̀ àkójọpọ̀"
-      }
-    },
-    "run": {
-      "description": "Bẹ̀rẹ̀ ìṣiṣẹ́ eval fún àkójọpọ̀ kan",
-      "model": "ID àwòṣe láti ṣe àyẹ̀wò (àiyipada: auto)",
-      "combo": "Fi tipátipá lo àkópọ̀ pàtó kan nípasẹ̀ orúkọ",
-      "concurrency": "Iye àwọn àpẹẹrẹ tí yóò ṣiṣẹ́ lẹ́ẹ̀kan náà (àiyipada: 4)",
-      "tag": "Fi àmì sí ìṣiṣẹ́ yìí fún àsẹ̀jáde lẹ́yìn náà",
-      "watch": "Ṣàkíyèsí ìlọsíwájú ìṣiṣẹ́ títí yóò fi parí"
-    },
-    "list": {
-      "description": "Ṣàtòjọ àwọn ìṣiṣẹ́ eval",
-      "suite": "Ṣe àsẹ̀jáde nípasẹ̀ ID àkójọpọ̀",
-      "status": "Ṣe àsẹ̀jáde nípasẹ̀ ipò",
-      "since": "Dá àwọn ìṣiṣẹ́ padà láti ìgbà àmì-àkókò yìí",
-      "limit": "Iye àbájáde tó pọ̀ jù (àiyipada: 50)"
-    },
-    "get": {
-      "description": "Gba àwọn àlàyé ìṣiṣẹ́ eval nípasẹ̀ ID"
-    },
-    "results": {
-      "description": "Ṣàfihàn àwọn àbájáde àpẹẹrẹ fún ìṣiṣẹ́ eval kan",
-      "failed": "Ṣàfihàn àwọn àpẹẹrẹ tó kùnà nìkan"
-    },
-    "cancel": {
-      "description": "Fagilé eval tí ń lọ lọ́wọ́",
-      "yes": "Fo ìbéèrè ìmúdájú kọjá"
-    },
-    "scorecard": {
-      "description": "Ṣàfihàn káàdì ìṣírò fún ìṣiṣẹ́ eval tó ti parí"
     }
   },
   "program": {

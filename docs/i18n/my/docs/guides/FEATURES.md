@@ -43,8 +43,6 @@ v3.7.x → v3.8.0 အဆင့်မြှင့်တင်မှုစက်�
 - 🤝 **GitLab Duo OAuth provider** — GitLab အထောက်အထားများဖြင့် login ဝင်နိုင်သည်
 - 🧠 **Reasoning Replay Cache** — စဉ်းစားဆင်ခြင်မှု မှတ်တမ်းများကို memory အတွင်းနှင့် SQLite တွင် ပေါင်းစပ်သိမ်းဆည်း၍ ရေရှည်တည်တံ့စေသည်
 
-📚 **ဆက်စပ်စာတမ်းများ:** [ကျွမ်းကျင်မှု မူဘောင်](../frameworks/SKILLS.md) · [မှတ်ဉာဏ်စနစ်](../frameworks/MEMORY.md) · [Cloud Agent များ](../frameworks/CLOUD_AGENT.md) · [Webhook များ](../frameworks/WEBHOOKS.md) · [Reasoning Replay Cache](../routing/REASONING_REPLAY.md)
-
 ---
 
 ## 🔌 ပံ့ပိုးသူများ
@@ -104,12 +102,6 @@ Token သုံးစွဲမှု၊ ခန့်မှန်းကုန်�
 API ဘာသာပြန်ခြင်းများကို အမှားရှာဖွေရန် mode လေးမျိုး- **Playground** (format ပြောင်းလဲကိရိယာ), **Chat Tester** (တိုက်ရိုက် request များ), **Test Bench** (အစုလိုက် စမ်းသပ်မှုများ) နှင့် **Live Monitor** (အချိန်နှင့်တစ်ပြေးညီ stream)။
 
 ![ဘာသာပြန် Playground](../screenshots/05-translator.png)
-
----
-
-## 🎮 Model Playground _(v2.0.9+)_
-
-မည်သည့် model ကိုမဆို dashboard မှ တိုက်ရိုက်စမ်းသပ်နိုင်သည်။ provider၊ model နှင့် endpoint ကို ရွေးချယ်ပြီး Monaco Editor ဖြင့် prompt များရေးသားခြင်း၊ response များကို အချိန်နှင့်တစ်ပြေးညီ stream လုပ်ခြင်း၊ stream လုပ်နေစဉ် အလယ်တွင် ရပ်တန့်ခြင်းနှင့် အချိန်တိုင်းတာမှုများကို ကြည့်ရှုခြင်းတို့ ပြုလုပ်နိုင်သည်။
 
 ---
 

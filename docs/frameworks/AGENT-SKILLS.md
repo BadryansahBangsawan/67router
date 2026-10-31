@@ -46,7 +46,6 @@ src/app/api/agent-skills/
   generate/route.ts                    — POST /api/agent-skills/generate (auth required)
 
 open-sse/mcp-server/tools/agentSkillTools.ts  — 3 MCP tools (list, get, coverage)
-src/lib/a2a/skills/listCapabilities.ts        — A2A skill: list-capabilities
 ```
 
 ---
@@ -142,8 +141,6 @@ The A2A skill `list-capabilities` returns the full 45-skill catalog as a markdow
 }
 ```
 
-See [A2A-SERVER.md](./A2A-SERVER.md) for protocol details.
-
 ---
 
 ## Catalog — 45 Skill IDs
@@ -191,11 +188,10 @@ See [A2A-SERVER.md](./A2A-SERVER.md) for protocol details.
 | `cli-contexts`        | cli-contexts       | `omniroute contexts`    |
 | `cli-cost-usage`      | cli-cost-usage     | `omniroute cost`        |
 | `cli-mcp`             | cli-mcp            | `omniroute mcp`         |
-| `cli-a2a`             | cli-a2a            | `omniroute a2a`         |
 | `cli-tunnel`          | cli-tunnel         | `omniroute tunnel`      |
 | `cli-backup-sync`     | cli-backup-sync    | `omniroute backup`      |
 | `cli-policy-audit`    | cli-policy-audit   | `omniroute policy`      |
-| `cli-eval`            | cli-eval           | `omniroute eval`        |
+| `cli-eval`            | cli-eval           | `omniroute simulate`    |
 | `cli-plugins-skills`  | cli-plugins-skills | `omniroute plugins`     |
 | `cli-setup`           | cli-setup          | `omniroute setup`       |
 | `cli-skill-collector` | cli-setup          | `omniroute skills`      |
@@ -311,6 +307,5 @@ curl "http://localhost:20128/api/agent-skills/coverage"
 
 - [SKILLS.md](./SKILLS.md) — Omni Skills framework (LLM tool injection + marketplace)
 - [MCP-SERVER.md](./MCP-SERVER.md) — MCP tool catalog (`omniroute_agent_skills_*` tools)
-- [A2A-SERVER.md](./A2A-SERVER.md) — A2A protocol (`list-capabilities` skill)
 - `src/lib/agentSkills/` — catalog, generator, parsers
 - `skills/` — generated SKILL.md files (45 entries)

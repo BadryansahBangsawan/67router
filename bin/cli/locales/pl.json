@@ -390,34 +390,6 @@
       "description": "Dziennik audytu MCP (alias dla audit --source mcp)"
     }
   },
-  "a2a": {
-    "skills": {
-      "description": "Wyświetl dostępne umiejętności A2A z karty agenta"
-    },
-    "invoke": {
-      "description": "Wywołaj umiejętność A2A i zwróć identyfikator zadania",
-      "input": "Obiekt wejściowy JSON",
-      "input_file": "Ścieżka do wejściowego pliku JSON",
-      "wait": "Przed zwróceniem wyniku poczekaj na ukończenie zadania",
-      "timeout": "Limit czasu oczekiwania na ukończenie w ms (domyślnie: 60000)"
-    },
-    "tasks": {
-      "description": "Zarządzaj zadaniami A2A",
-      "list": {
-        "status": "Filtruj według statusu",
-        "skill": "Filtruj według identyfikatora umiejętności"
-      },
-      "watch": {
-        "description": "Sprawdzaj status zadania aż do ukończenia"
-      },
-      "stream": {
-        "description": "Przesyłaj strumieniowo zdarzenia wykonania zadania przez SSE"
-      },
-      "logs": {
-        "description": "Pokaż komunikaty i artefakty zadania"
-      }
-    }
-  },
   "policy": {
     "description": "Zarządzaj zasadami autoryzacji 67router",
     "list": {
@@ -696,99 +668,6 @@
       "provider": "Identyfikator dostawcy, którego połączenie ma zostać unieważnione",
       "connection_id": "Unieważnij określone połączenie według identyfikatora",
       "yes": "Pomiń monit o potwierdzenie"
-    }
-  },
-  "cloud": {
-    "description": "Zarządzaj zadaniami agentów AI w chmurze (codex, devin, jules)",
-    "agents": {
-      "description": "Wyświetl dostępnych agentów chmurowych"
-    },
-    "agent": {
-      "description": "Zarządzaj zadaniami agenta chmurowego {agent}",
-      "auth": {
-        "description": "Autoryzuj agenta {agent} przez OAuth"
-      }
-    },
-    "task": {
-      "description": "Zarządzaj zadaniami agentów chmurowych",
-      "create": {
-        "description": "Utwórz nowe zadanie agenta",
-        "title": "Tytuł zadania (domyślnie pierwsze 80 znaków monitu)",
-        "prompt": "Treść monitu zadania",
-        "prompt_file": "Wczytaj monit z pliku",
-        "repo": "URL repozytorium do sklonowania na potrzeby zadania",
-        "branch": "Nazwa gałęzi do użycia",
-        "metadata": "Obiekt metadanych JSON"
-      },
-      "list": {
-        "description": "Wyświetl zadania agentów",
-        "status": "Filtruj według stanu (running|completed|failed|cancelled)",
-        "limit": "Maksymalna liczba wyników (domyślnie: 50)"
-      },
-      "get": {
-        "description": "Pobierz szczegóły zadania według identyfikatora"
-      },
-      "status": {
-        "description": "Wyświetl stan zadania (running|completed|failed|cancelled)"
-      },
-      "cancel": {
-        "description": "Anuluj trwające zadanie",
-        "yes": "Pomiń monit o potwierdzenie"
-      },
-      "approve": {
-        "description": "Zatwierdź plan agenta, aby rozpocząć wykonywanie"
-      },
-      "message": {
-        "description": "Wyślij wiadomość do trwającego zadania"
-      }
-    },
-    "sources": {
-      "description": "Wyświetl pliki źródłowe utworzone przez zadanie"
-    }
-  },
-  "eval": {
-    "description": "Zarządzaj zestawami ewaluacyjnymi i ich uruchomieniami",
-    "suites": {
-      "description": "Zarządzaj zestawami ewaluacyjnymi",
-      "list": {
-        "description": "Wyświetl zestawy ewaluacyjne"
-      },
-      "get": {
-        "description": "Pobierz szczegóły zestawu ewaluacyjnego według ID"
-      },
-      "create": {
-        "description": "Utwórz zestaw ewaluacyjny z pliku JSON",
-        "file": "Ścieżka do pliku JSON z definicją zestawu"
-      }
-    },
-    "run": {
-      "description": "Rozpocznij ewaluację zestawu",
-      "model": "ID modelu do ewaluacji (domyślnie: auto)",
-      "combo": "Wymuś określoną kombinację według nazwy",
-      "concurrency": "Liczba próbek przetwarzanych równolegle (domyślnie: 4)",
-      "tag": "Oznacz ten przebieg tagiem, aby móc go później filtrować",
-      "watch": "Monitoruj postęp przebiegu aż do zakończenia"
-    },
-    "list": {
-      "description": "Wyświetl przebiegi ewaluacji",
-      "suite": "Filtruj według ID zestawu",
-      "status": "Filtruj według statusu",
-      "since": "Zwróć przebiegi od tego znacznika czasu",
-      "limit": "Maksymalna liczba wyników (domyślnie: 50)"
-    },
-    "get": {
-      "description": "Pobierz szczegóły przebiegu ewaluacji według ID"
-    },
-    "results": {
-      "description": "Pokaż wyniki próbek dla przebiegu ewaluacji",
-      "failed": "Pokaż tylko próbki zakończone niepowodzeniem"
-    },
-    "cancel": {
-      "description": "Anuluj trwającą ewaluację",
-      "yes": "Pomiń monit o potwierdzenie"
-    },
-    "scorecard": {
-      "description": "Pokaż kartę wyników zakończonego przebiegu ewaluacji"
     }
   },
   "program": {

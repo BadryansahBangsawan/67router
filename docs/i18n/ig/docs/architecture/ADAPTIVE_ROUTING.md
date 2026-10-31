@@ -49,7 +49,6 @@ AI Agent / IDE
 | Shadow traffic                          | `open-sse/services/combo/shadowRouting.ts`                                                            |
 | Guardrails                              | `src/lib/guardrails/` (hooks tupu/mgbe e mesịrị)                                                      |
 | Exact cache                             | `src/lib/semanticCache.ts` (dabere na signature)                                                      |
-| Ndị ntụle / nhazi ụzọ nke eval na-eduzi | `src/lib/evals/`, `open-sse/services/evalRouting.ts`                                                  |
 | Nkọwa mkpebi Combo                      | `open-sse/services/combo/decisionTrace.ts`                                                            |
 | Ihe omume dashboard ozugbo              | `src/lib/events/eventBus.ts` (ọwa ọkwa UI, payloads `unknown`, akụkọ ihe omume 100)                   |
 
@@ -265,8 +264,6 @@ ike ịnye ọgụgụ isi/evaluation, ọ bụghị dependency**. Ebe njikọ n
 - `Evaluator` n'ọdịnihu (deterministic, local judge, HTTP, WASM) ga-anata
   events/traces wee weghachi `QualityScore` nke na-abanye n'otu ụzọ
   `getQualityScore`/quality-factor ahụ.
-- Routing nke eval na-achị dị ugbu a (`open-sse/services/evalRouting.ts`) emeelarị
-  nhazi combo targets ọzọ dabere na pass-rates nke `eval_runs` mgbe agbanyere ya.
 
 Ọ dịghị evaluation na-agba ọsọ synchronously n'ụzọ request, gateway ahụ na-arụkwa
 ọrụ n'ụzọ zuru ezu mgbe evaluator adịghị.

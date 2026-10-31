@@ -4,7 +4,6 @@
 
 ---
 
-> **Allikas:** `src/lib/{a2a,acp,cloudAgent}/`, `src/app/api/{a2a,acp,cloud}/`, `src/app/api/v1/agents/`
 > **Viimati uuendatud:** 2026-06-28 — v3.8.40
 
 67router pakub kolme erinevat agentidega seotud liidest. Esmapilgul näivad need sarnased, kuid lahendavad erinevaid probleeme. Kasutage seda lehte sobiva liidese valimiseks.
@@ -20,52 +19,6 @@
 Need kolm on üksteisest sõltumatud — valige neist mistahes alamhulk.
 
 ## Otsustuspuu
-
-```
-Kas vajate pilveteenust, mis teeks tööd väljaspool seda masinat (Codex Cloud / Cursor Cloud / Devin / Jules)?
-├─ JAH → Pilveagendid (POST /api/v1/agents/tasks)
-└─ EI → Jätkake
-    │
-    Kas teil on A2A-d kasutav partneragent, mis soovib koostööd teha?
-    ├─ JAH → A2A (POST /a2a)
-    └─ EI → Jätkake
-        │
-        Kas peate loetlema või seadistama kohalikult installitud CLI-kodeerimisagente?
-        ├─ JAH → ACP (GET /api/acp/agents)
-        └─ EI → Kasutage tavalist /v1/chat/completions liidest
-```
-
-## 1. A2A — agentidevaheline
-
-**Spetsifikatsioon:** [A2A v0.3](https://a2a-protocol.org)
-**67router'i lõpp-punkt:** `POST /a2a` (JSON-RPC 2.0)
-**Agendikaart:** `GET /.well-known/agent.json`
-
-### Millal kasutada
-
-- Mitme agendiga süsteemi loomisel, kus 67router on üks osalistest
-- 67router'i marsruutimisvõimekuse (nutikas marsruutimine, kvoodihaldus jne) pakkumiseks selliste raamistike agentidele nagu Google ADK või üldistes agendivõrkudes
-- 67router'i mähkimiseks standardse tuvastus- ja käivitusliidese taha
-
-### Meetodid
-
-- `message/send` — sõnumi saatmine ja sünkroonse vastuse vastuvõtmine
-- `message/stream` — sõnumi saatmine ja edenemissündmuste vastuvõtmine SSE-voona
-- `tasks/get` — ülesande lugemine ID alusel
-- `tasks/cancel` — töötava ülesande tühistamine
-
-### Sisseehitatud oskused (6)
-
-- `smart-routing` — päringu marsruutimine optimaalse kombinatsiooni kaudu
-- `quota-management` — iga teenusepakkuja kvoodi oleku esitamine
-- `provider-discovery` — installitud teenusepakkujate ja nende võimaluste loetlemine
-- `cost-analysis` — päringu või vestluse maksumuse hindamine
-- `health-report` — iga teenusepakkuja kaitselüliti, jahtumisaja ja lukustuse oleku koondamine
-- `list-capabilities` — agendi saadaolevate oskuste ja metaandmete loetlemine
-
-### Põhjalikum ülevaade
-
-Transpordi üksikasjade, agendikaardi struktuuri, ülesannete TTL-i seadistuse ja uute oskuste lisamise malli kohta vaadake faili [A2A-SERVER.md](./A2A-SERVER.md).
 
 ## 2. ACP — CLI-agentide register
 
@@ -118,86 +71,7 @@ POST-päringu keha kuju (`customAgentBodySchema` failis `src/app/api/acp/agents/
 
 - HTTP-register ei võta vastu ülesandeid ega võimalda protsesse käivitada. Sisemine haldur saab registreeritud CLI käivitada, kuid seda ei ole ühendatud automaatse teenusepakkuja varuvariandina. Tavaliseks interaktiivseks kasutuseks käivitage seadistatud CLI ise või kasutage käsku `omniroute run`.
 
-## 3. Pilveagendid
-
-**67router'i lõpp-punktid:** `/api/v1/agents/tasks/*` (elutsükkel) + `/api/cloud/*` (tugitaristu)
-**Lähtekood:** `src/lib/cloudAgent/`
-
-### Mis see on
-
-Ühtne liides kolmandate osapoolte pilvepõhiste programmeerimisagentide kasutamiseks. Saadate viiba ja hoidla URL-i, 67router edastab need õigele pilveagendile, küsib perioodiliselt olekut ning tagastab tulemused.
-
-### Toetatud agendid (3, kõik kinnitatud kataloogis `src/lib/cloudAgent/agents/`)
-
-- `codex-cloud` — OpenAI Codex Cloud
-- `devin` — Cognition Devin
-- `jules` — Google Jules
-
-### Elutsükkel
-
-```
-POST /api/v1/agents/tasks
-  → BaseAgent.createTask() iga agendiklassi jaoks
-  → väline teenus alustab tööd
-  → andmebaasis luuakse ülesande rida (cloud_agent_tasks)
-  ↓
-GET /api/v1/agents/tasks/[id]
-  → oleku viitega sünkroonimine teenusepakkujalt
-  → tagastab praeguse oleku + plaani + tegevuslogi
-  ↓
-POST /api/v1/agents/tasks/[id]   (toiming: "approve" | "message" | "cancel")
-  → edastab teenusepakkujale (või märgib kohalikult tühistatuks)
-  ↓
-DELETE /api/v1/agents/tasks/[id]
-  → kohalik tühistamine
-```
-
-### Autentimine
-
-⚠️ **Kõik `/api/v1/agents/tasks/*` lõpp-punktid nõuavad haldusautentimist** (kommit `588a0333`). Ainult Bearer-autentimist kasutavad kliendid saavad alates versioonist v3.8.0 vastuseks 401.
-
-### Põhjalikum ülevaade
-
-`CloudAgentBase` lepingu, iga agendi eripärade, skeemi üksikasjade ja mandaadihalduse lõpp-punktide kohta vt [CLOUD_AGENT.md](./CLOUD_AGENT.md).
-
-## Võrdlus: A2A vs. pilveagendid
-
-Mõlemal on „pikaajalised ülesanded“, kuid eri kihtidel:
-
-| Aspekt             | A2A                                                                                | Pilveagendid                                 |
-| ------------------ | ---------------------------------------------------------------------------------- | -------------------------------------------- |
-| Standard           | Avatud A2A v0.3                                                                    | 67router’i-spetsiifiline                     |
-| Kus arvutus toimub | 67router’i sees (kasutab konfigureeritud kombinatsioone)                           | Väliselt (Codexi / Devini / Julesi serverid) |
-| Ülesande kestus    | Vaikimisi TTL 5 min (konfigureeritav komponendis `TaskManager`)                    | Minutitest tundideni                         |
-| Hoidlateadlik      | Ei (edastab ainult viibad)                                                         | Jah (hoidla URL + haru)                      |
-| Kasutusjuht        | Agentidevaheline koostöö, nutikas marsruutimine teenusena                          | Delegeeri „rakenda funktsioon X hoidlas Y“   |
-| Autentimine        | Valikuline `OMNIROUTE_API_KEY` `/a2a` jaoks; haldusõigus `/api/a2a/*` REST-abidele | Alati haldusõigus                            |
-
 ## Integratsiooninäited
-
-### 67router’i A2A-võimekuste tuvastamine
-
-```bash
-curl http://localhost:20128/.well-known/agent.json
-```
-
-Tagastab agendikaardi kõigi 6 oskuse, transpordimeetodi ja versiooniga.
-
-### 67router’i kutsumine A2A-agendina
-
-```bash
-curl -X POST http://localhost:20128/a2a \
-  -H "Content-Type: application/json" \
-  -d '{
-    "jsonrpc": "2.0",
-    "method": "message/send",
-    "params": {
-      "messages": [{"role": "user", "content": "Route this prompt"}],
-      "skill": "smart-routing"
-    },
-    "id": 1
-  }'
-```
 
 ### Installitud CLI-agentide loetlemine ACP kaudu
 
@@ -220,30 +94,6 @@ curl -X POST http://localhost:20128/api/acp/agents \
     "versionCommand": "--version",
     "providerAlias": "openai"
   }'
-```
-
-### Pilveagendi ülesande esitamine
-
-```bash
-curl -X POST http://localhost:20128/api/v1/agents/tasks \
-  -H "Cookie: auth_token=..." \
-  -H "Content-Type: application/json" \
-  -d '{
-    "providerId": "devin",
-    "prompt": "Implement feature X in repo Y",
-    "source": {
-      "repoName": "user/repo",
-      "repoUrl": "https://github.com/user/repo",
-      "branch": "main"
-    }
-  }'
-```
-
-### Pilveülesande oleku perioodiline kontrollimine
-
-```bash
-curl http://localhost:20128/api/v1/agents/tasks/<task-id> \
-  -H "Cookie: auth_token=..."
 ```
 
 ## Millal mida kasutada
@@ -276,8 +126,6 @@ curl http://localhost:20128/api/v1/agents/tasks/<task-id> \
 
 ## Vaata ka
 
-- [A2A-SERVER.md](./A2A-SERVER.md) — A2A põhjalik ülevaade
-- [CLOUD_AGENT.md](./CLOUD_AGENT.md) — pilveagentide põhjalik ülevaade
 - [CLI-TOOLS.md](../reference/CLI-TOOLS.md) — välised CLI-integratsioonid (kasutab ACP-d)
 - [SKILLS.md](./SKILLS.md) — oskuste raamistik (erineb A2A oskustest — kohalik käivituse liivakast)
 - [API_REFERENCE.md](../reference/API_REFERENCE.md#agents-protocol) — otspunktide teatmik

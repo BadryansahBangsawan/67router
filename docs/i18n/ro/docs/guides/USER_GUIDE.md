@@ -24,7 +24,6 @@ Ghid complet pentru configurarea furnizorilor, crearea combinațiilor, integrare
 - [Sistemul de abilități](#-skills-system)
 - [Sistemul de memorie](#-memory-system)
 - [Webhook-uri](#-webhooks)
-- [Agenți cloud](#-cloud-agents)
 - [Gestionare programatică](#-programmatic-management)
 - [CLI intern](#-internal-cli)
 - [Aplicație desktop (Electron)](#-desktop-application-electron)
@@ -1239,8 +1238,6 @@ Utilizați URL-ul SSE `http://localhost:20128/api/mcp/sse` și o cheie API Beare
 
 ### Domenii de acces
 
-MCP definește în prezent 32 de domenii de acces denumite. Fiecare cheie Bearer poate fi limitată la anumite domenii de acces — consultați [MCP-SERVER.md](../frameworks/MCP-SERVER.md) pentru lista oficială a domeniilor de acces și a instrumentelor și [A2A-SERVER.md](../frameworks/A2A-SERVER.md) pentru schema JSON-RPC.
-
 ---
 
 ## 🧠 Sistemul de abilități
@@ -1249,7 +1246,6 @@ MCP definește în prezent 32 de domenii de acces denumite. Fiecare cheie Bearer
 
 - **Interfață Marketplace** — Răsfoiți și instalați abilități din **Panou de control → Abilități**
 - **Domenii per cheie** — Restricționați abilitățile pe care le poate invoca fiecare cheie API
-- **Abilități personalizate** — Adăugați un fișier TypeScript în `src/lib/a2a/skills/`, înregistrați-l și acesta devine imediat invocabil prin A2A
 
 Referință completă: [SKILLS.md](../frameworks/SKILLS.md).
 
@@ -1278,18 +1274,6 @@ Abonați-vă la evenimentele 67router pentru monitorizare și automatizare în t
 - Reîncercări: 3 încercări cu întârziere exponențială, urmate de trimiterea în coada pentru mesaje nelivrate
 
 Schema completă este disponibilă în [WEBHOOKS.md](../frameworks/WEBHOOKS.md).
-
----
-
-## ☁️ Agenți în cloud
-
-67router se integrează cu agenți de programare în cloud (**OpenAI Codex Cloud**, **Devin**, **Jules**, **Antigravity**), astfel încât să puteți expedia sarcini de lungă durată din același panou de control care gestionează rutarea locală.
-
-- Creați sarcini în **Panou de control → Agenți în cloud** sau prin `POST /api/v1/agents/tasks`
-- Urmăriți starea, jurnalele și artefactele fiecărei sarcini
-- Folosiți propria cheie API pentru fiecare furnizor — datele de autentificare nu părăsesc niciodată instanța 67router
-
-Referință completă: [CLOUD_AGENT.md](../frameworks/CLOUD_AGENT.md).
 
 ---
 
@@ -1346,7 +1330,6 @@ omniroute restore [<timestamp>]    # Restaurează dintr-un instantaneu
 omniroute health                   # Stare detaliată (întrerupătoare, cache, memorie)
 omniroute quota                    # Utilizarea cotei furnizorului
 omniroute mcp status               # Starea serverului MCP
-omniroute a2a status               # Starea serverului A2A
 omniroute tunnel list|create|stop  # Tuneluri Cloudflare/Tailscale/ngrok
 omniroute reset-password           # Resetează parola de administrator
 omniroute --mcp                    # Pornește serverul MCP prin stdio

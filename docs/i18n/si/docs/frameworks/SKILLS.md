@@ -258,12 +258,6 @@ MCP මෙවලම් හතරක් කුසලතා අතුරුමු�
 
 ---
 
-## A2A ඒකාබද්ධ කිරීම
-
-`src/lib/skills/a2a.ts` මඟින් `memory_aware_routing` A2A කුසලතා විස්තරකය සහ `registerA2ASkill(registry)` සහායකය නිර්යාත කරයි. අභිරුචි A2A කුසලතා `src/lib/a2a/skills/` තුළ පවතින අතර `A2A_SKILL_HANDLERS` (`src/lib/a2a/taskExecution.ts`) හරහා යොමු කරනු ලැබේ. සම්පූර්ණ කාර්ය ජීවන චක්රය සඳහා [A2A-SERVER.md](./A2A-SERVER.md) බලන්න.
-
----
-
 ## නව අන්තර්ගත කුසලතාවක් එක් කිරීම
 
 1. **හසුරුවනය නිර්වචනය කරන්න** `src/lib/skills/builtins.ts` තුළ (හෝ `src/lib/skills/builtin/` යටතේ ඇති සහෝදර ගොනුවක). අත්සන: `(input, { apiKeyId, sessionId }) => Promise<output>`.
@@ -478,7 +472,6 @@ const config: SkillConfig = {
 ## මෙයද බලන්න
 
 - [MCP-SERVER.md](./MCP-SERVER.md) — MCP මෙවලම් ලියාපදිංචිය සහ ප්රවාහන ක්රම
-- [A2A-SERVER.md](./A2A-SERVER.md) — A2A කාර්ය ජීවන චක්රය සහ කුසලතා යොමු කිරීම
 - [USER_GUIDE.md](../guides/USER_GUIDE.md#-skills-system) — පරිශීලකයන් සඳහා හැඳින්වීම
 - [ARCHITECTURE.md](../architecture/ARCHITECTURE.md) — ඉල්ලීම් නල මාර්ගය සහ සංරචක සිතියම
 - මූලාශ්රය: `src/lib/skills/`, `src/app/api/skills/`, `open-sse/mcp-server/tools/skillTools.ts`

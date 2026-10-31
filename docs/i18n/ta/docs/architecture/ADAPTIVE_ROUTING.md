@@ -34,16 +34,15 @@ AI முகவர் / IDE
 
 ### ஏற்கனவே இருந்தவை (தணிக்கை செய்யப்பட்டவை, நகலெடுக்கப்படாதவை)
 
-| கருத்து                                                  | ஏற்கனவே உள்ள செயலாக்கம்                                                                                        |
-| -------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------- |
-| கிடைப்புத்தன்மை (போக்குவரத்தை அனுப்ப முடியுமா?)          | Circuit breaker (CLOSED/DEGRADED/OPEN/HALF_OPEN, DB-இல் நிலைநிறுத்தப்பட்டது), இணைப்பு cooldown, மாதிரி lockout |
-| ஆரோக்கிய அறிக்கையிடல்                                    | `providerHealthMatrix.ts`, `providerHealthAutopilot.ts`                                                        |
-| நிழல் போக்குவரத்து                                       | `open-sse/services/combo/shadowRouting.ts`                                                                     |
-| பாதுகாப்புக் கட்டுப்பாடுகள்                              | `src/lib/guardrails/` (முன்/பின் hooks)                                                                        |
-| துல்லியத் தேக்ககம்                                       | `src/lib/semanticCache.ts` (signature-அடிப்படையிலானது)                                                         |
-| மதிப்பீட்டாளர்கள் / மதிப்பீட்டால் இயக்கப்படும் வழித்தடம் | `src/lib/evals/`, `open-sse/services/evalRouting.ts`                                                           |
-| Combo முடிவின் விளக்கத்தன்மை                             | `open-sse/services/combo/decisionTrace.ts`                                                                     |
-| Dashboard நிகழ்நேர நிகழ்வுகள்                            | `src/lib/events/eventBus.ts` (UI அறிவிப்பு சேனல், `unknown` payloads, 100-பதிவு வரலாறு)                        |
+| கருத்து                                         | ஏற்கனவே உள்ள செயலாக்கம்                                                                                        |
+| ----------------------------------------------- | -------------------------------------------------------------------------------------------------------------- |
+| கிடைப்புத்தன்மை (போக்குவரத்தை அனுப்ப முடியுமா?) | Circuit breaker (CLOSED/DEGRADED/OPEN/HALF_OPEN, DB-இல் நிலைநிறுத்தப்பட்டது), இணைப்பு cooldown, மாதிரி lockout |
+| ஆரோக்கிய அறிக்கையிடல்                           | `providerHealthMatrix.ts`, `providerHealthAutopilot.ts`                                                        |
+| நிழல் போக்குவரத்து                              | `open-sse/services/combo/shadowRouting.ts`                                                                     |
+| பாதுகாப்புக் கட்டுப்பாடுகள்                     | `src/lib/guardrails/` (முன்/பின் hooks)                                                                        |
+| துல்லியத் தேக்ககம்                              | `src/lib/semanticCache.ts` (signature-அடிப்படையிலானது)                                                         |
+| Combo முடிவின் விளக்கத்தன்மை                    | `open-sse/services/combo/decisionTrace.ts`                                                                     |
+| Dashboard நிகழ்நேர நிகழ்வுகள்                   | `src/lib/events/eventBus.ts` (UI அறிவிப்பு சேனல், `unknown` payloads, 100-பதிவு வரலாறு)                        |
 
 வழித்தட-நிகழ்வு அடுக்கு `eventBus`-இன் மறுசெயலாக்கம் **அல்ல**: அந்த bus என்பது dashboard-இன் நிகழ்நேர அறிவிப்பு சேனல் (வகையிடப்பட்ட _நிகழ்வுப் பெயர்கள்_, ஒளிபுகா payloads, UI நுகர்வோர்). `RoutingEvent` என்பது கட்டுப்பாட்டுத் தளத்தின் பின்னூட்ட ஏற்பிகளால் (தரக் கண்காணிப்பான், OTel ஏற்றுமதியாளர், விளக்கச் சேமிப்பகம்) பயன்படுத்தப்படும், வகையிடப்பட்ட _விளைவு_ struct (தாமதம்/tokens/செலவு/விளைவு/நிறைவு-காரணம்) ஆகும்.
 
@@ -258,8 +257,6 @@ intelligence/evaluation backend-ஆகவே கருதுகிறது; dep
 - எதிர்கால `Evaluator` (deterministic, local judge, HTTP, WASM), events/traces-ஐப் பெற்று,
   அதே `getQualityScore`/quality-factor பாதைக்குள் செலுத்தப்படும் `QualityScore`-ஐத்
   திருப்பி வழங்கும்.
-- தற்போதுள்ள eval-driven routing (`open-sse/services/evalRouting.ts`), இயக்கப்பட்டிருக்கும்போது
-  `eval_runs` pass-rates அடிப்படையில் combo targets-ஐ ஏற்கனவே மறுவரிசைப்படுத்துகிறது.
 
 Request பாதையில் எந்த evaluation-உம் synchronous முறையில் இயங்காது; evaluator இல்லாவிட்டாலும்
 gateway முழுமையாகச் செயல்படும்.

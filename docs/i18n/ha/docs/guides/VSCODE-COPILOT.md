@@ -92,7 +92,7 @@ extension.
 Simple Browser maimakon burauzar waje. Saka shi a ciki **zaɓi ne da ake kunnawa a uwar garke** ta hanyar
 `DASHBOARD_ALLOW_EMBED=vscode`, wanda ke gabatar da shafukan HTML tare da
 `frame-ancestors 'self' vscode-webview:` maimakon tsohon `frame-ancestors 'none'` +
-`X-Frame-Options: DENY`. Fuskar API (`/api`, `/v1`, `/v1beta`, `/a2a`, `/healthz`) tana ci gaba da
+`X-Frame-Options: DENY`. Fuskar API (`/api`, `/v1`, `/v1beta`, `/healthz`) tana ci gaba da
 amfani da tsauraran headers a kowane hali.
 
 > ⚠️ **Wannan flag ne na lokacin build, ba na lokacin runtime ba.** Next.js yana tattara `headers()` cikin manifest na route,

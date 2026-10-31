@@ -270,8 +270,6 @@ Die Durchsetzung der Client-API-Schlüssel verwendet `isRequireApiKeyEnabled()` 
 
 ## Inkompatible Änderung — v3.8.0
 
-Die Endpunkte `/api/v1/agents/tasks/*` und `/api/resilience/model-cooldowns` **erfordern jetzt eine Management-Authentifizierung** (Commit `588a0333`). Clients, die bisher einen normalen API-Schlüssel ohne den Scope `manage` gesendet haben, erhalten `403`. Migration: Weisen Sie dem Schlüssel entweder im API Keys Dashboard den Scope `manage` zu oder verwenden Sie eine angemeldete Dashboard-Sitzung.
-
 ## Verhaltensänderung — v3.8.2
 
 `/api/mcp/*` (der Remote-MCP-Server) ist standardmäßig weiterhin LOCAL_ONLY, akzeptiert nun jedoch Nicht-Loopback-Anfragen, wenn der Header `Authorization: Bearer <api-key>` den Scope `manage` enthält. Die Ausnahme wird explizit pro Pfad über `LOCAL_ONLY_MANAGE_SCOPE_BYPASS_PREFIXES` in `src/server/authz/routeGuard.ts` gesteuert; das verwandte LOCAL_ONLY-Präfix `/api/cli-tools/runtime/*` kann absichtlich NICHT umgangen werden, da es beliebige Unterprozesse starten kann. Anonyme Anfragen aus Nicht-Loopback-Quellen an `/api/mcp/*` erhalten weiterhin `403 LOCAL_ONLY` — für jeden neuen LOCAL_ONLY-Pfad gilt standardmäßig weiterhin die strikte Beschränkung auf Loopback. Siehe [Route-Guard-Stufen](../security/ROUTE_GUARD_TIERS.md#manage-scope-carve-out).

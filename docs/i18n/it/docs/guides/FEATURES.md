@@ -43,8 +43,6 @@ Il ciclo v3.7.x → v3.8.0 ha introdotto l'instradamento automatico senza config
 - 🤝 **Provider OAuth GitLab Duo** — accesso con credenziali GitLab
 - 🧠 **Cache di riproduzione del ragionamento** — persistenza ibrida in memoria + SQLite delle tracce di ragionamento
 
-📚 **Documentazione correlata:** [Framework delle competenze](../frameworks/SKILLS.md) · [Sistema di memoria](../frameworks/MEMORY.md) · [Agenti cloud](../frameworks/CLOUD_AGENT.md) · [Webhook](../frameworks/WEBHOOKS.md) · [Cache di riproduzione del ragionamento](../routing/REASONING_REPLAY.md)
-
 ---
 
 ## 🔌 Provider
@@ -104,12 +102,6 @@ Monitoraggio in tempo reale: tempo di attività, memoria, versione, percentili d
 Quattro modalità per il debug delle traduzioni API: **Playground** (convertitore di formato), **Chat Tester** (richieste in tempo reale), **Test Bench** (test in batch) e **Live Monitor** (flusso in tempo reale).
 
 ![Translator Playground](../screenshots/05-translator.png)
-
----
-
-## 🎮 Model Playground _(v2.0.9+)_
-
-Testa qualsiasi modello direttamente dalla dashboard. Seleziona provider, modello ed endpoint, scrivi i prompt con Monaco Editor, visualizza le risposte in streaming in tempo reale, interrompi lo streaming in corso e consulta le metriche relative ai tempi.
 
 ---
 

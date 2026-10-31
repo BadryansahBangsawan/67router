@@ -751,7 +751,6 @@ omniroute cache                        # Ipò cache
 omniroute cache clear                  # Pa semantic + signature caches rẹ́
 
 omniroute mcp status | restart         # Ipò olupin MCP / tún un bẹ̀rẹ̀
-omniroute a2a status | card            # Ipò olupin A2A / káàdì aṣojú
 
 omniroute tunnel list | create | stop  # Ṣàkóso àwọn tunnel (cloudflare/tailscale/ngrok)
 omniroute env show | get <k> | set <k> <v>  # Ṣàyẹ̀wò / ṣètò àwọn onírúurú env (fún ìgbà díẹ̀)

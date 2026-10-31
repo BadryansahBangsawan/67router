@@ -128,13 +128,11 @@ _آخر تحديث: 2026-06-28_
 - `/dashboard/limits` — عناصر التحكم في الحصص/المعدلات
 - `/dashboard/cli-tools` — إعداد CLI الأولي واكتشاف وقت التشغيل وإنشاء الإعدادات
 - `/dashboard/agents` — وكلاء ACP المكتشفون + تسجيل الوكلاء المخصصين
-- `/dashboard/cloud-agents` — مهام الوكلاء المستضافين سحابيًا (Codex Cloud وDevin وJules) ودورة حياة المهام
 - `/dashboard/skills` — سجل مهارات A2A والتنفيذ ضمن بيئة معزولة وكتالوج المهارات المدمجة
 - `/dashboard/memory` — فحص الذاكرة الحوارية الدائمة واسترجاعها
 - `/dashboard/webhooks` — اشتراكات خطافات الويب الصادرة وتدوير الأسرار وإحصاءات إعادة المحاولة
 - `/dashboard/batch` — إرسال المهام الدفعية ومتابعة تقدمها
 - `/dashboard/cache` — إحصاءات ذاكرة التخزين المؤقت للقراءة المباشرة والاستدلال وعناصر التحكم في الإخلاء
-- `/dashboard/playground` — ساحة محادثة تفاعلية مع أي تجميع/نموذج مُعدّ
 - `/dashboard/changelog` — عارض سجل التغييرات داخل التطبيق (يعرض `CHANGELOG.md`)
 - `/dashboard/system` — تشخيصات وقت التشغيل ومعلومات الإصدار وواجهة التحقق من البيئة
 - `/dashboard/onboarding` — معالج الإعداد عند التشغيل الأول لعمليات التثبيت الجديدة
@@ -252,7 +250,6 @@ flowchart LR
 - الميزانية: `src/app/api/usage/budget` (GET/POST)
 - سلاسل التحويل الاحتياطي: `src/app/api/fallback/chains` (GET/POST/DELETE)
 - تدقيق الامتثال: `src/app/api/compliance/audit-log` (GET، مع ترقيم الصفحات + بيانات وصفية مهيكلة)
-- التقييمات: `src/app/api/evals` (GET/POST)، `src/app/api/evals/[suiteId]` (GET)
 - السياسات: `src/app/api/policies` (GET/POST)
 - رموز المزامنة: `src/app/api/sync/tokens` (GET/POST)، `src/app/api/sync/tokens/[id]` (GET/DELETE)
 - حزمة التهيئة: `src/app/api/sync/bundle` (GET، لقطة ذات إصدار ETag للإعدادات/المزودين/التركيبات/المفاتيح)
@@ -316,7 +313,6 @@ flowchart LR
 - مهلة الجلب: `src/shared/utils/fetchTimeout.ts`
 - قياس طلبات المعالجة عن بُعد: `src/shared/utils/requestTelemetry.ts`
 - الامتثال/التدقيق: `src/lib/compliance/index.ts`
-- مشغّل التقييمات: `src/lib/evals/evalRunner.ts`
 - استمرارية حالة النطاق: `src/lib/db/domainState.ts` — عمليات CRUD في SQLite لسلاسل الرجوع، والميزانيات، وسجلّ التكلفة، وحالة الحظر، وقواطع الدائرة
 
 وحدات مزوّدي OAuth ‏(27 ملفًا منفردًا ضمن `src/lib/oauth/providers/`):
@@ -385,23 +381,6 @@ flowchart LR
 
 للحصول على التفاصيل الخوارزمية الكاملة (صيغ العوامل وضبط الأوزان)، راجع
 [`docs/routing/AUTO-COMBO.md`](../routing/AUTO-COMBO.md).
-
-### B. الوكلاء السحابيون
-
-يوفّر Cloud Agents واجهة موحّدة لمنصات وكلاء البرمجة المستضافة التابعة لجهات خارجية (Codex Cloud وDevin
-وJules)، ويضعها خلف دورة حياة موحّدة للمهام مدعومة بقاعدة بيانات. تتطلب جميع نقاط نهاية إنشاء المهام وفحصها
-مصادقة إدارية.
-
-- جذر الوحدة: `src/lib/cloudAgent/` (`baseAgent.ts`، و`registry.ts`، و`api.ts`،
-  و`types.ts`، و`db.ts`، بالإضافة إلى الأدلة الفرعية الخاصة بكل وكيل ضمن `agents/`)
-- تطبيقات كل وكيل: `agents/codex/`، و`agents/devin/`، و`agents/jules/`
-- نقاط النهاية العامة: `/api/v1/agents/tasks/*` (عرض/إنشاء/جلب/إلغاء)
-- نقاط النهاية الإدارية: `/api/cloud/*` (التوفير، والحالة، والمعالجة الدفعية)
-- لوحة المعلومات: `/dashboard/cloud-agents`
-- التخزين: جدول `cloud_agent_tasks`
-
-للحصول على تفاصيل التوفير وOAuth الخاصة بكل وكيل، راجع
-[`docs/frameworks/CLOUD_AGENT.md`](../frameworks/CLOUD_AGENT.md).
 
 ### C. ضوابط الحماية
 

@@ -88,7 +88,7 @@ HTTP 400 — ମଡେଲ୍ '<id>' ଏକ ଇମେଜ୍-ଜେନେରେସ
 
 `omnicopilot.dashboardOpen: "editor"` ବାହ୍ୟ ବ୍ରାଉଜର୍ ପରିବର୍ତ୍ତେ Simple Browser ମାଧ୍ୟମରେ ଏକ editor ଟ୍ୟାବ୍ରେ 67router ଡ୍ୟାଶବୋର୍ଡକୁ ରେଣ୍ଡର୍ କରେ। ଏମ୍ବେଡିଂ ସର୍ଭର୍ରେ **ଅପ୍ଟ-ଇନ୍** ଅଟେ ଏବଂ ଏହା `DASHBOARD_ALLOW_EMBED=vscode` ମାଧ୍ୟମରେ ସକ୍ଷମ ହୁଏ, ଯାହା ଡିଫଲ୍ଟ `frame-ancestors 'none'` +
 `X-Frame-Options: DENY` ପରିବର୍ତ୍ତେ
-`frame-ancestors 'self' vscode-webview:` ସହିତ HTML ପୃଷ୍ଠାଗୁଡ଼ିକୁ ପରିବେଷଣ କରେ। API ପୃଷ୍ଠତଳ (`/api`, `/v1`, `/v1beta`, `/a2a`, `/healthz`) ଉଭୟ ପରିସ୍ଥିତିରେ କଠୋର ହେଡର୍ଗୁଡ଼ିକୁ ଅପରିବର୍ତ୍ତିତ ରଖେ।
+`frame-ancestors 'self' vscode-webview:` ସହିତ HTML ପୃଷ୍ଠାଗୁଡ଼ିକୁ ପରିବେଷଣ କରେ। API ପୃଷ୍ଠତଳ (`/api`, `/v1`, `/v1beta`, `/healthz`) ଉଭୟ ପରିସ୍ଥିତିରେ କଠୋର ହେଡର୍ଗୁଡ଼ିକୁ ଅପରିବର୍ତ୍ତିତ ରଖେ।
 
 > ⚠️ **ଏହା ଏକ ବିଲ୍ଡ-ଟାଇମ୍ ଫ୍ଲାଗ୍, ରନ୍ଟାଇମ୍ ଫ୍ଲାଗ୍ ନୁହେଁ।** Next.js `headers()`କୁ ରୁଟ୍
 > ମ୍ୟାନିଫେଷ୍ଟରେ କମ୍ପାଇଲ୍ କରେ, ତେଣୁ ବଣ୍ଡଲ୍ ବିଲ୍ଡ ହେଉଥିବା ସମୟରେ `next.config.mjs` ଭେରିଏବଲ୍ଟିକୁ ପଢ଼େ

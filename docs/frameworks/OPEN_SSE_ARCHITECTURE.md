@@ -490,7 +490,7 @@ This handles:
 
 | File                          | Purpose                                           |
 | ----------------------------- | ------------------------------------------------- |
-| `providerRegistry.ts`         | Chat-model registry over the 375-provider catalog |
+| `providerRegistry.ts`         | Chat-model registry over the 372-provider catalog |
 | `providerModels.ts`           | Model aliases, format mapping                     |
 | `constants.ts`                | Timeouts, limits, status codes                    |
 | `defaultThinkingSignature.ts` | Default Claude thinking signature                 |
@@ -575,5 +575,4 @@ The routing engine has strict performance budgets:
 - [REPOSITORY_MAP.md](../architecture/REPOSITORY_MAP.md) — directory-by-directory
 - [AUTO-COMBO.md](../routing/AUTO-COMBO.md) — 16-factor scoring
 - [MCP-SERVER.md](./MCP-SERVER.md) — MCP server
-- [A2A-SERVER.md](./A2A-SERVER.md) — A2A server
 - Source: `open-sse/` (400+ files, ~143K LOC)

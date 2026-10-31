@@ -390,34 +390,6 @@
       "description": "MCP監査ログ（audit --source mcpのエイリアス）"
     }
   },
-  "a2a": {
-    "skills": {
-      "description": "エージェントカードから利用可能なA2Aスキルを一覧表示"
-    },
-    "invoke": {
-      "description": "A2Aスキルを呼び出し、タスクIDを返す",
-      "input": "JSON入力オブジェクト",
-      "input_file": "JSON入力ファイルへのパス",
-      "wait": "タスクが完了するまで待機してから返す",
-      "timeout": "完了待機のタイムアウト（ミリ秒、デフォルト: 60000）"
-    },
-    "tasks": {
-      "description": "A2Aタスクを管理",
-      "list": {
-        "status": "ステータスでフィルタリング",
-        "skill": "スキルIDでフィルタリング"
-      },
-      "watch": {
-        "description": "完了するまでタスクのステータスをポーリング"
-      },
-      "stream": {
-        "description": "SSE経由でタスク実行イベントをストリーミング"
-      },
-      "logs": {
-        "description": "タスクのメッセージと成果物を表示"
-      }
-    }
-  },
   "policy": {
     "description": "67routerの認可ポリシーを管理",
     "list": {
@@ -696,99 +668,6 @@
       "provider": "取り消すプロバイダーID",
       "connection_id": "IDを指定して接続を取り消す",
       "yes": "確認プロンプトをスキップ"
-    }
-  },
-  "cloud": {
-    "description": "クラウドAIエージェントのタスクを管理（codex、devin、jules）",
-    "agents": {
-      "description": "利用可能なクラウドエージェントを一覧表示"
-    },
-    "agent": {
-      "description": "{agent}クラウドエージェントのタスクを管理",
-      "auth": {
-        "description": "OAuth経由で{agent}を認可"
-      }
-    },
-    "task": {
-      "description": "クラウドエージェントのタスクを管理",
-      "create": {
-        "description": "新しいエージェントタスクを作成",
-        "title": "タスクのタイトル（デフォルトはプロンプトの先頭80文字）",
-        "prompt": "タスクのプロンプトテキスト",
-        "prompt_file": "ファイルからプロンプトを読み込む",
-        "repo": "タスク用にクローンするリポジトリURL",
-        "branch": "使用するブランチ名",
-        "metadata": "JSONメタデータオブジェクト"
-      },
-      "list": {
-        "description": "エージェントタスクを一覧表示",
-        "status": "ステータスで絞り込み（running|completed|failed|cancelled）",
-        "limit": "最大結果数（デフォルト：50）"
-      },
-      "get": {
-        "description": "IDを指定してタスクの詳細を取得"
-      },
-      "status": {
-        "description": "タスクのステータスを出力（running|completed|failed|cancelled）"
-      },
-      "cancel": {
-        "description": "実行中のタスクをキャンセル",
-        "yes": "確認プロンプトをスキップ"
-      },
-      "approve": {
-        "description": "エージェントのプランを承認して実行を開始"
-      },
-      "message": {
-        "description": "実行中のタスクにメッセージを送信"
-      }
-    },
-    "sources": {
-      "description": "タスクによって生成されたソースファイルを一覧表示"
-    }
-  },
-  "eval": {
-    "description": "評価スイートと実行を管理",
-    "suites": {
-      "description": "評価スイートを管理",
-      "list": {
-        "description": "評価スイートを一覧表示"
-      },
-      "get": {
-        "description": "IDで評価スイートの詳細を取得"
-      },
-      "create": {
-        "description": "JSONファイルから評価スイートを作成",
-        "file": "スイート定義JSONファイルのパス"
-      }
-    },
-    "run": {
-      "description": "スイートの評価実行を開始",
-      "model": "評価するモデルID（デフォルト: auto）",
-      "combo": "名前で特定のコンボを強制指定",
-      "concurrency": "同時実行サンプル数（デフォルト: 4）",
-      "tag": "後でフィルタリングできるようにこの実行にタグを付ける",
-      "watch": "完了するまで実行の進捗を監視"
-    },
-    "list": {
-      "description": "評価実行を一覧表示",
-      "suite": "スイートIDでフィルタリング",
-      "status": "ステータスでフィルタリング",
-      "since": "このタイムスタンプ以降の実行を返す",
-      "limit": "最大結果数（デフォルト: 50）"
-    },
-    "get": {
-      "description": "IDで評価実行の詳細を取得"
-    },
-    "results": {
-      "description": "評価実行のサンプル結果を表示",
-      "failed": "失敗したサンプルのみ表示"
-    },
-    "cancel": {
-      "description": "実行中の評価をキャンセル",
-      "yes": "確認プロンプトをスキップ"
-    },
-    "scorecard": {
-      "description": "完了した評価実行のスコアカードを表示"
     }
   },
   "program": {

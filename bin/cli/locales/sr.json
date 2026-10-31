@@ -390,34 +390,6 @@
       "description": "Дневник ревизије MCP-а (алијас за audit --source mcp)"
     }
   },
-  "a2a": {
-    "skills": {
-      "description": "Прикажи доступне A2A вештине из картице агента"
-    },
-    "invoke": {
-      "description": "Позови A2A вештину и врати ID задатка",
-      "input": "JSON улазни објекат",
-      "input_file": "Путања до JSON улазне датотеке",
-      "wait": "Сачекај завршетак задатка пре враћања",
-      "timeout": "Временско ограничење чекања на завршетак у ms (подразумевано: 60000)"
-    },
-    "tasks": {
-      "description": "Управљање A2A задацима",
-      "list": {
-        "status": "Филтрирај по статусу",
-        "skill": "Филтрирај по ID вештине"
-      },
-      "watch": {
-        "description": "Провера статуса задатка до завршетка"
-      },
-      "stream": {
-        "description": "Стримовање догађаја извршавања задатка путем SSE"
-      },
-      "logs": {
-        "description": "Прикажи поруке и артефакте задатка"
-      }
-    }
-  },
   "policy": {
     "description": "Управљање 67router политикама ауторизације",
     "list": {
@@ -696,99 +668,6 @@
       "provider": "ID провајдера за опозивање",
       "connection_id": "Опозови конкретну везу по ID-у",
       "yes": "Прескочи потврду"
-    }
-  },
-  "cloud": {
-    "description": "Управљај задацима cloud AI агената (codex, devin, jules)",
-    "agents": {
-      "description": "Прикажи доступне cloud агенте"
-    },
-    "agent": {
-      "description": "Управљај задацима {agent} cloud агента",
-      "auth": {
-        "description": "Ауторизуј {agent} преко OAuth-а"
-      }
-    },
-    "task": {
-      "description": "Управљај задацима cloud агента",
-      "create": {
-        "description": "Направи нови задатак агента",
-        "title": "Наслов задатка (подразумевано прва 80 знака промпта)",
-        "prompt": "Текст промпта задатка",
-        "prompt_file": "Прочитај промпт из фајла",
-        "repo": "URL репозиторијума за клонирање за задатак",
-        "branch": "Назив гранe за коришћење",
-        "metadata": "JSON објекат метаподатака"
-      },
-      "list": {
-        "description": "Прикажи задатке агента",
-        "status": "Филтрирај по статусу (running|completed|failed|cancelled)",
-        "limit": "Максималан број резултата (подразумевано: 50)"
-      },
-      "get": {
-        "description": "Преузми детаље задатка по ID-у"
-      },
-      "status": {
-        "description": "Прикажи статус задатка (running|completed|failed|cancelled)"
-      },
-      "cancel": {
-        "description": "Otkaži pokrenuti zadatak",
-        "yes": "Preskoči potvrdni upit"
-      },
-      "approve": {
-        "description": "Odobri plan agenta za pokretanje izvršavanja"
-      },
-      "message": {
-        "description": "Pošalji poruku pokrenutom zadatku"
-      }
-    },
-    "sources": {
-      "description": "Prikaži izvorne fajlove koje je proizveo zadatak"
-    }
-  },
-  "eval": {
-    "description": "Upravljanje eval paketima i pokretanjima",
-    "suites": {
-      "description": "Upravljanje eval paketima",
-      "list": {
-        "description": "Prikaži listu eval paketa"
-      },
-      "get": {
-        "description": "Prikaži detalje eval paketa po ID-u"
-      },
-      "create": {
-        "description": "Kreiraj eval paket iz JSON fajla",
-        "file": "Putanja do JSON fajla sa definicijom paketa"
-      }
-    },
-    "run": {
-      "description": "Pokreni eval pokretanje za paket",
-      "model": "ID modela za evaluaciju (podrazumevano: auto)",
-      "combo": "Prisili određenu kombinaciju po nazivu",
-      "concurrency": "Broj istovremenih uzoraka (podrazumevano: 4)",
-      "tag": "Označi ovo pokretanje za kasnije filtriranje",
-      "watch": "Praćenje toka pokretanja do završetka"
-    },
-    "list": {
-      "description": "Prikaži listu eval pokretanja",
-      "suite": "Filtriraj po ID-u paketa",
-      "status": "Filtriraj po statusu",
-      "since": "Vrati pokretanja od navedenog vremenskog žiga",
-      "limit": "Maksimalan broj rezultata (podrazumevano: 50)"
-    },
-    "get": {
-      "description": "Prikaži detalje eval pokretanja po ID-u"
-    },
-    "results": {
-      "description": "Prikaži rezultate uzoraka za eval pokretanje",
-      "failed": "Prikaži samo neuspešne uzorke"
-    },
-    "cancel": {
-      "description": "Otkaži pokrenuti eval",
-      "yes": "Preskoči potvrdni upit"
-    },
-    "scorecard": {
-      "description": "Prikaži karticu rezultata za završeno eval pokretanje"
     }
   },
   "program": {

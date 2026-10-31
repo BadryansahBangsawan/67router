@@ -573,5 +573,4 @@ interface ProviderConfig {
 - [REPOSITORY_MAP.md](../architecture/REPOSITORY_MAP.md) — ανάλυση ανά κατάλογο
 - [AUTO-COMBO.md](../routing/AUTO-COMBO.md) — βαθμολόγηση 16 παραγόντων
 - [MCP-SERVER.md](./MCP-SERVER.md) — διακομιστής MCP
-- [A2A-SERVER.md](./A2A-SERVER.md) — διακομιστής A2A
 - Πηγαίος κώδικας: `open-sse/` (400+ αρχεία, ~143K γραμμές κώδικα)

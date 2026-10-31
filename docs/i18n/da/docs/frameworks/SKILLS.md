@@ -258,12 +258,6 @@ Se [MCP-SERVER.md](./MCP-SERVER.md) for opsætning af transport og tildeling af 
 
 ---
 
-## A2A-integration
-
-`src/lib/skills/a2a.ts` eksporterer A2A-skill-deskriptoren `memory_aware_routing` og en hjælpefunktion `registerA2ASkill(registry)`. Brugerdefinerede A2A-skills findes i `src/lib/a2a/skills/` og videresendes via `A2A_SKILL_HANDLERS` (`src/lib/a2a/taskExecution.ts`). Se [A2A-SERVER.md](./A2A-SERVER.md) for hele opgavens livscyklus.
-
----
-
 ## Tilføjelse af en ny indbygget skill
 
 1. **Definér handleren** i `src/lib/skills/builtins.ts` (eller en sideordnet fil under `src/lib/skills/builtin/`). Signatur: `(input, { apiKeyId, sessionId }) => Promise<output>`.
@@ -478,7 +472,6 @@ Se [Plugin-SDK og integration af skills](./PLUGIN_SDK.md) for at få oplysninger
 ## Se også
 
 - [MCP-SERVER.md](./MCP-SERVER.md) — registrering af MCP-værktøjer og transportmekanismer
-- [A2A-SERVER.md](./A2A-SERVER.md) — A2A-opgavers livscyklus og videresendelse til færdigheder
 - [USER_GUIDE.md](../guides/USER_GUIDE.md#-skills-system) — brugervendt introduktion
 - [ARCHITECTURE.md](../architecture/ARCHITECTURE.md) — anmodningspipeline og komponentoversigt
 - Kilde: `src/lib/skills/`, `src/app/api/skills/`, `open-sse/mcp-server/tools/skillTools.ts`

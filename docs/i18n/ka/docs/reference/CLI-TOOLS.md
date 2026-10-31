@@ -739,7 +739,6 @@ omniroute cache                        # კეშის სტატუსი
 omniroute cache clear                  # სემანტიკური და ხელმოწერის კეშების გასუფთავება
 
 omniroute mcp status | restart         # MCP სერვერის სტატუსი / ხელახლა გაშვება
-omniroute a2a status | card            # A2A სერვერის სტატუსი / აგენტის ბარათი
 
 omniroute tunnel list | create | stop  # გვირაბების მართვა (cloudflare/tailscale/ngrok)
 omniroute env show | get <k> | set <k> <v>  # გარემოს ცვლადების შემოწმება / დაყენება (დროებითი)

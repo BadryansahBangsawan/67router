@@ -24,7 +24,6 @@ Teljes körű útmutató a szolgáltatók konfigurálásához, a kombinációk l
 - [Készségrendszer](#-skills-system)
 - [Memóriarendszer](#-memory-system)
 - [Webhookok](#-webhooks)
-- [Felhőalapú ügynökök](#-cloud-agents)
 - [Programozott kezelés](#-programmatic-management)
 - [Belső CLI](#-internal-cli)
 - [Asztali alkalmazás (Electron)](#-desktop-application-electron)
@@ -1240,8 +1239,6 @@ Használja a `http://localhost:20128/api/mcp/sse` SSE URL-t és az **Irányító
 
 ### Hatókörök
 
-Az MCP jelenleg 32 elnevezett hatókört definiál. Minden Bearer-kulcs meghatározott hatókörökre korlátozható — a hiteles hatókör- és eszközleltárért tekintse meg az [MCP-SERVER.md](../frameworks/MCP-SERVER.md), a JSON-RPC-sémáért pedig az [A2A-SERVER.md](../frameworks/A2A-SERVER.md) dokumentumot.
-
 ---
 
 ## 🧠 Készségrendszer
@@ -1250,7 +1247,6 @@ A 67router egy bővíthető **készség-keretrendszert** (`src/lib/skills/`) biz
 
 - **Piactér felhasználói felület** — Készségek böngészése és telepítése a **Vezérlőpult → Készségek** menüpontban
 - **Kulcsonkénti hatókörök** — Korlátozhatja, hogy mely API-kulcsok mely készségeket hívhatják meg
-- **Egyéni készségek** — Helyezzen el egy TypeScript-fájlt a `src/lib/a2a/skills/` könyvtárban, regisztrálja, és azonnal meghívhatóvá válik A2A-n keresztül
 
 A teljes referencia: [SKILLS.md](../frameworks/SKILLS.md).
 
@@ -1279,18 +1275,6 @@ Iratkozzon fel a 67router eseményeire valós idejű monitorozáshoz és automat
 - Újrapróbálkozások: 3 kísérlet exponenciális várakozással, majd továbbítás a sikertelen üzenetek várólistájára
 
 A teljes séma itt található: [WEBHOOKS.md](../frameworks/WEBHOOKS.md).
-
----
-
-## ☁️ Felhőalapú ügynökök
-
-A 67router integrálható felhőalapú kódolóügynökökkel (**OpenAI Codex Cloud**, **Devin**, **Jules**, **Antigravity**), így hosszú ideig futó feladatokat indíthat ugyanarról a vezérlőpultról, amely a helyi útválasztást is kezeli.
-
-- Hozzon létre feladatokat a **Vezérlőpult → Felhőalapú ügynökök** menüpontban vagy a `POST /api/v1/agents/tasks` végponton keresztül
-- Kövesse nyomon az egyes feladatok állapotát, naplóit és műtermékeit
-- Minden szolgáltatóhoz saját API-kulcsot használhat — a hitelesítő adatok soha nem hagyják el a 67router-példányt
-
-A teljes referencia: [CLOUD_AGENT.md](../frameworks/CLOUD_AGENT.md).
 
 ---
 
@@ -1347,7 +1331,6 @@ omniroute restore [<timestamp>]    # Visszaállítás pillanatképből
 omniroute health                   # Részletes állapot (megszakítók, gyorsítótár, memória)
 omniroute quota                    # Szolgáltatói kvóták felhasználása
 omniroute mcp status               # MCP-kiszolgáló állapota
-omniroute a2a status               # A2A-kiszolgáló állapota
 omniroute tunnel list|create|stop  # Cloudflare-/Tailscale-/ngrok-alagutak
 omniroute reset-password           # Rendszergazdai jelszó visszaállítása
 omniroute --mcp                    # MCP-kiszolgáló indítása szabványos I/O-n keresztül

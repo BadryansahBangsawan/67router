@@ -24,7 +24,6 @@ Guide complet pour configurer les fournisseurs, créer des combinaisons, intégr
 - [Système de compétences](#-skills-system)
 - [Système de mémoire](#-memory-system)
 - [Webhooks](#-webhooks)
-- [Agents cloud](#-cloud-agents)
 - [Gestion programmatique](#-programmatic-management)
 - [CLI interne](#-internal-cli)
 - [Application de bureau (Electron)](#-desktop-application-electron)
@@ -1239,8 +1238,6 @@ Utilisez l’URL SSE `http://localhost:20128/api/mcp/sse` ainsi qu’une clé AP
 
 ### Portées
 
-MCP définit actuellement 32 portées nommées. Chaque clé Bearer peut être limitée à des portées spécifiques — consultez [MCP-SERVER.md](../frameworks/MCP-SERVER.md) pour la liste de référence des portées et des outils, ainsi que [A2A-SERVER.md](../frameworks/A2A-SERVER.md) pour le schéma JSON-RPC.
-
 ---
 
 ## 🧠 Système de compétences
@@ -1249,7 +1246,6 @@ MCP définit actuellement 32 portées nommées. Chaque clé Bearer peut être li
 
 - **Interface de la marketplace** — Parcourez et installez des compétences depuis **Tableau de bord → Compétences**
 - **Portées par clé** — Limitez les compétences que chaque clé API peut invoquer
-- **Compétences personnalisées** — Déposez un fichier TypeScript dans `src/lib/a2a/skills/`, enregistrez-le et il devient immédiatement invocable via A2A
 
 Référence complète : [SKILLS.md](../frameworks/SKILLS.md).
 
@@ -1278,18 +1274,6 @@ Abonnez-vous aux événements 67router pour bénéficier d’une surveillance et
 - Nouvelles tentatives : 3 tentatives avec temporisation exponentielle, puis placement dans une file d’attente des messages non distribuables
 
 Schéma complet dans [WEBHOOKS.md](../frameworks/WEBHOOKS.md).
-
----
-
-## ☁️ Agents cloud
-
-67router s’intègre aux agents de programmation cloud (**OpenAI Codex Cloud**, **Devin**, **Jules**, **Antigravity**) afin que vous puissiez distribuer des tâches de longue durée depuis le même tableau de bord que celui utilisé pour gérer votre routage local.
-
-- Créez des tâches dans **Tableau de bord → Agents cloud** ou via `POST /api/v1/agents/tasks`
-- Suivez le statut, les journaux et les artefacts de chaque tâche
-- Utilisez votre propre clé API pour chaque fournisseur — les identifiants ne quittent jamais l’instance 67router
-
-Référence complète : [CLOUD_AGENT.md](../frameworks/CLOUD_AGENT.md).
 
 ---
 
@@ -1346,7 +1330,6 @@ omniroute restore [<timestamp>]    # Restaure depuis un instantané
 omniroute health                   # État détaillé (disjoncteurs, cache, mémoire)
 omniroute quota                    # Utilisation des quotas des fournisseurs
 omniroute mcp status               # État du serveur MCP
-omniroute a2a status               # État du serveur A2A
 omniroute tunnel list|create|stop  # Tunnels Cloudflare/Tailscale/ngrok
 omniroute reset-password           # Réinitialise le mot de passe administrateur
 omniroute --mcp                    # Démarre le serveur MCP via stdio

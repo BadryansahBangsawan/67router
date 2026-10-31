@@ -719,7 +719,6 @@ omniroute cache                        # የcache ሁኔታ
 omniroute cache clear                  # semantic + signature cachesን ያጽዱ
 
 omniroute mcp status | restart         # የMCP አገልጋይ ሁኔታ / ዳግም ማስጀመር
-omniroute a2a status | card            # የA2A አገልጋይ ሁኔታ / የወኪል ካርድ
 
 omniroute tunnel list | create | stop  # tunnelsን ያስተዳድሩ (cloudflare/tailscale/ngrok)
 omniroute env show | get <k> | set <k> <v>  # የአካባቢ ተለዋዋጮችን ይመርምሩ / ያዋቅሩ (ጊዜያዊ)

@@ -33,103 +33,6 @@ afterEach(() => {
 });
 
 describe("OrchestrationDrawer", () => {
-  it("fetches cloud-agent detail on open and shows approve only when waiting_approval", async () => {
-    const detail = {
-      data: {
-        id: "t1",
-        providerId: "devin",
-        status: "awaiting_approval",
-        prompt: "big plan",
-        source: { repoName: "r", repoUrl: "https://x" },
-        options: {},
-        activities: [
-          { id: "a1", type: "plan", content: "the plan", timestamp: "2026-08-30T10:00:00Z" },
-        ],
-        createdAt: "x",
-        updatedAt: "y",
-      },
-    };
-    vi.stubGlobal(
-      "fetch",
-      vi.fn(() => Promise.resolve({ ok: true, json: () => Promise.resolve(detail) }))
-    );
-    const node = {
-      id: "cloud-agent:t1",
-      kind: "work",
-      source: "cloud-agent",
-      state: "waiting_approval",
-      label: "big plan",
-      raw: detail.data,
-    };
-    const { c, cleanup } = render(
-      <OrchestrationDrawer node={node as never} onClose={() => {}} onActionDone={() => {}} />
-    );
-    await act(async () => {
-      await Promise.resolve();
-    });
-    expect(c.textContent).toContain("drawerTimeline");
-    expect(c.textContent).toContain("actionApprove");
-    cleanup();
-  });
-
-  it("approve POSTs {action:'approve'} and fires onActionDone", async () => {
-    const fetchMock = vi.fn((_url: string, init?: RequestInit) =>
-      Promise.resolve({
-        ok: true,
-        json: () =>
-          Promise.resolve(
-            init?.method === "POST"
-              ? { data: {} }
-              : {
-                  data: {
-                    id: "t1",
-                    status: "awaiting_approval",
-                    activities: [],
-                    prompt: "",
-                    providerId: "devin",
-                    source: { repoName: "r", repoUrl: "https://x" },
-                    options: {},
-                    createdAt: "x",
-                    updatedAt: "y",
-                  },
-                }
-          ),
-      })
-    );
-    vi.stubGlobal("fetch", fetchMock);
-    let done = false;
-    const node = {
-      id: "cloud-agent:t1",
-      kind: "work",
-      source: "cloud-agent",
-      state: "waiting_approval",
-      label: "x",
-    };
-    const { c, cleanup } = render(
-      <OrchestrationDrawer
-        node={node as never}
-        onClose={() => {}}
-        onActionDone={() => {
-          done = true;
-        }}
-      />
-    );
-    await act(async () => {
-      await Promise.resolve();
-    });
-    const btn = Array.from(c.querySelectorAll("button")).find((b) =>
-      b.textContent?.includes("actionApprove")
-    );
-    await act(async () => {
-      btn!.click();
-      await Promise.resolve();
-    });
-    const post = fetchMock.mock.calls.find(([, init]) => (init as RequestInit)?.method === "POST");
-    expect(JSON.parse(String((post![1] as RequestInit).body))).toEqual({ action: "approve" });
-    expect(done).toBe(true);
-    cleanup();
-  });
-
   it("renders nothing for a null node", () => {
     const { c, cleanup } = render(
       <OrchestrationDrawer node={null} onClose={() => {}} onActionDone={() => {}} />
@@ -164,85 +67,6 @@ describe("OrchestrationDrawer", () => {
     });
     expect(c.textContent).toContain("route this please");
     expect(c.textContent).toContain("processing now");
-    cleanup();
-  });
-
-  it("only renders prUrl as a link when it is http(s); a javascript: URI renders as plain text", async () => {
-    const detail = {
-      data: {
-        id: "t1",
-        providerId: "devin",
-        status: "succeeded",
-        prompt: "x",
-        source: { repoName: "r", repoUrl: "https://x" },
-        options: {},
-        activities: [],
-        result: { prUrl: "javascript:alert(1)" },
-        createdAt: "x",
-        updatedAt: "y",
-      },
-    };
-    vi.stubGlobal(
-      "fetch",
-      vi.fn(() => Promise.resolve({ ok: true, json: () => Promise.resolve(detail) }))
-    );
-    const node = {
-      id: "cloud-agent:t1",
-      kind: "work",
-      source: "cloud-agent",
-      state: "succeeded",
-      label: "x",
-    };
-    const { c, cleanup } = render(
-      <OrchestrationDrawer node={node as never} onClose={() => {}} onActionDone={() => {}} />
-    );
-    await act(async () => {
-      await Promise.resolve();
-    });
-    const badLink = Array.from(c.querySelectorAll("a")).find(
-      (a) => a.getAttribute("href") === "javascript:alert(1)"
-    );
-    expect(badLink).toBeUndefined();
-    expect(c.textContent).toContain("javascript:alert(1)");
-    cleanup();
-  });
-
-  it("renders an https prUrl as a real link", async () => {
-    const detail = {
-      data: {
-        id: "t2",
-        providerId: "devin",
-        status: "succeeded",
-        prompt: "x",
-        source: { repoName: "r", repoUrl: "https://x" },
-        options: {},
-        activities: [],
-        result: { prUrl: "https://github.com/x/y/pull/1" },
-        createdAt: "x",
-        updatedAt: "y",
-      },
-    };
-    vi.stubGlobal(
-      "fetch",
-      vi.fn(() => Promise.resolve({ ok: true, json: () => Promise.resolve(detail) }))
-    );
-    const node = {
-      id: "cloud-agent:t2",
-      kind: "work",
-      source: "cloud-agent",
-      state: "succeeded",
-      label: "x",
-    };
-    const { c, cleanup } = render(
-      <OrchestrationDrawer node={node as never} onClose={() => {}} onActionDone={() => {}} />
-    );
-    await act(async () => {
-      await Promise.resolve();
-    });
-    const link = Array.from(c.querySelectorAll("a")).find(
-      (a) => a.getAttribute("href") === "https://github.com/x/y/pull/1"
-    );
-    expect(link).toBeTruthy();
     cleanup();
   });
 
@@ -315,10 +139,10 @@ describe("OrchestrationDrawer", () => {
     });
     vi.stubGlobal("fetch", fetchMock);
     const node = {
-      id: "cloud-agent:t1",
+      id: "a2a:t1",
       kind: "work",
-      source: "cloud-agent",
-      state: "waiting_approval",
+      source: "a2a",
+      state: "running",
       label: "x",
     };
     const { c, cleanup } = render(
@@ -331,7 +155,7 @@ describe("OrchestrationDrawer", () => {
     expect(c.textContent).not.toContain("actionFailed");
 
     const btn = Array.from(c.querySelectorAll("button")).find((b) =>
-      b.textContent?.includes("actionApprove")
+      b.textContent?.includes("actionCancel")
     ) as HTMLButtonElement;
     await act(async () => {
       btn.click();
@@ -358,10 +182,10 @@ describe("OrchestrationDrawer", () => {
     });
     vi.stubGlobal("fetch", fetchMock);
     const node = {
-      id: "cloud-agent:t1",
+      id: "a2a:t1",
       kind: "work",
-      source: "cloud-agent",
-      state: "waiting_approval",
+      source: "a2a",
+      state: "running",
       label: "x",
     };
     const { c, cleanup } = render(
@@ -370,19 +194,19 @@ describe("OrchestrationDrawer", () => {
     await act(async () => {
       await Promise.resolve();
     });
-    const approve = () =>
+    const cancel = () =>
       Array.from(c.querySelectorAll("button")).find((b) =>
-        b.textContent?.includes("actionApprove")
+        b.textContent?.includes("actionCancel")
       ) as HTMLButtonElement;
 
     await act(async () => {
-      approve().click();
+      cancel().click();
       await Promise.resolve();
     });
     expect(c.textContent).toContain("actionFailed");
 
     await act(async () => {
-      approve().click();
+      cancel().click();
       await Promise.resolve();
       await Promise.resolve();
     });
@@ -390,7 +214,7 @@ describe("OrchestrationDrawer", () => {
     cleanup();
   });
 
-  it("disables approve/cancel while an action promise is pending, and re-enables once it settles", async () => {
+  it("disables cancel while an action promise is pending, and re-enables once it settles", async () => {
     let resolvePost: ((v: unknown) => void) | undefined;
     const fetchMock = vi.fn((_url: string, init?: RequestInit) => {
       if (init?.method === "POST") {
@@ -402,14 +226,13 @@ describe("OrchestrationDrawer", () => {
         ok: true,
         json: () =>
           Promise.resolve({
-            data: {
+            task: {
               id: "t1",
-              status: "awaiting_approval",
-              activities: [],
-              prompt: "",
-              providerId: "devin",
-              source: { repoName: "r", repoUrl: "https://x" },
-              options: {},
+              skill: "smart-routing",
+              state: "working",
+              input: { skill: "smart-routing", messages: [] },
+              artifacts: [],
+              events: [],
               createdAt: "x",
               updatedAt: "y",
             },
@@ -418,10 +241,10 @@ describe("OrchestrationDrawer", () => {
     });
     vi.stubGlobal("fetch", fetchMock);
     const node = {
-      id: "cloud-agent:t1",
+      id: "a2a:t1",
       kind: "work",
-      source: "cloud-agent",
-      state: "waiting_approval",
+      source: "a2a",
+      state: "running",
       label: "x",
     };
     const { c, cleanup } = render(
@@ -430,20 +253,15 @@ describe("OrchestrationDrawer", () => {
     await act(async () => {
       await Promise.resolve();
     });
-    const approveBtn = Array.from(c.querySelectorAll("button")).find((b) =>
-      b.textContent?.includes("actionApprove")
-    ) as HTMLButtonElement;
     const cancelBtn = Array.from(c.querySelectorAll("button")).find((b) =>
       b.textContent?.includes("actionCancel")
     ) as HTMLButtonElement;
-    expect(approveBtn.disabled).toBe(false);
     expect(cancelBtn.disabled).toBe(false);
 
     await act(async () => {
-      approveBtn.click();
+      cancelBtn.click();
       await Promise.resolve();
     });
-    expect(approveBtn.disabled).toBe(true);
     expect(cancelBtn.disabled).toBe(true);
 
     await act(async () => {
@@ -451,30 +269,12 @@ describe("OrchestrationDrawer", () => {
       await Promise.resolve();
       await Promise.resolve();
     });
-    expect(approveBtn.disabled).toBe(false);
     expect(cancelBtn.disabled).toBe(false);
     cleanup();
   });
 });
 
 describe("buildTraceJson", () => {
-  it("normalizes cloud-agent timeline from detail.activities and includes node identity + raw", () => {
-    const node = {
-      id: "cloud-agent:t1",
-      kind: "work",
-      source: "cloud-agent",
-      state: "running",
-      label: "x",
-    };
-    const detail = { activities: [{ id: "a1", type: "plan", content: "c" }] };
-    const parsed = JSON.parse(buildTraceJson(node as never, detail));
-    expect(parsed).toEqual({
-      node: { id: "cloud-agent:t1", source: "cloud-agent", state: "running", label: "x" },
-      timeline: detail.activities,
-      raw: detail,
-    });
-  });
-
   it("normalizes a2a timeline from detail.events", () => {
     const node = { id: "a2a:1", kind: "work", source: "a2a", state: "running", label: "x" };
     const detail = { events: [{ state: "working", timestamp: "t" }] };

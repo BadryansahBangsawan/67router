@@ -258,12 +258,6 @@ Tazama [MCP-SERVER.md](./MCP-SERVER.md) kwa usanidi wa usafirishaji na ugawaji w
 
 ---
 
-## Ujumuishaji wa A2A
-
-`src/lib/skills/a2a.ts` husafirisha kifafanuzi cha ujuzi wa A2A cha `memory_aware_routing` na kisaidizi cha `registerA2ASkill(registry)`. Ujuzi maalum wa A2A huwekwa katika `src/lib/a2a/skills/` na huelekezwa kupitia `A2A_SKILL_HANDLERS` (`src/lib/a2a/taskExecution.ts`). Tazama [A2A-SERVER.md](./A2A-SERVER.md) kwa mzunguko kamili wa maisha ya kazi.
-
----
-
 ## Kuongeza Ujuzi Mpya Uliojengewa Ndani
 
 1. **Bainisha kishughulikiaji** katika `src/lib/skills/builtins.ts` (au faili sambamba chini ya `src/lib/skills/builtin/`). Sahihi: `(input, { apiKeyId, sessionId }) => Promise<output>`.
@@ -478,7 +472,6 @@ Tazama [SDK ya Programu-jalizi na Ujumuishaji wa Ujuzi](./PLUGIN_SDK.md) ili kuj
 ## Tazama Pia
 
 - [MCP-SERVER.md](./MCP-SERVER.md) — usajili wa zana za MCP na njia za usafirishaji
-- [A2A-SERVER.md](./A2A-SERVER.md) — mzunguko wa maisha wa kazi za A2A na uelekezaji wa ujuzi
 - [USER_GUIDE.md](../guides/USER_GUIDE.md#-skills-system) — utangulizi unaolenga mtumiaji
 - [ARCHITECTURE.md](../architecture/ARCHITECTURE.md) — mtiririko wa maombi na ramani ya vipengele
 - Chanzo: `src/lib/skills/`, `src/app/api/skills/`, `open-sse/mcp-server/tools/skillTools.ts`

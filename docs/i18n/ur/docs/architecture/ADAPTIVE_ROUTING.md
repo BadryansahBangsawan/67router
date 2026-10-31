@@ -49,7 +49,6 @@ AI ایجنٹ / IDE
 | شیڈو ٹریفک                            | `open-sse/services/combo/shadowRouting.ts`                                                         |
 | حفاظتی حدود                           | `src/lib/guardrails/` (پری/پوسٹ ہکس)                                                               |
 | عین کیش                               | `src/lib/semanticCache.ts` (دستخط پر مبنی)                                                         |
-| جائزہ کار / جائزہ سے چلنے والی روٹنگ  | `src/lib/evals/`، `open-sse/services/evalRouting.ts`                                               |
 | Combo فیصلے کی قابلِ توضیحیت          | `open-sse/services/combo/decisionTrace.ts`                                                         |
 | ڈیش بورڈ کے حقیقی وقت کے واقعات       | `src/lib/events/eventBus.ts` (UI اطلاعاتی چینل، `unknown` پے لوڈز، 100 اندراجات کی تاریخ)          |
 
@@ -266,8 +265,6 @@ intelligence/evaluation backend سمجھتا ہے، dependency نہیں**۔ دس
 - مستقبل کا ایک `Evaluator` (deterministic، local judge، HTTP، WASM)،
   events/traces استعمال کرے گا اور ایک `QualityScore` واپس کرے گا جو اسی
   `getQualityScore`/quality-factor پاتھ میں شامل ہوگا۔
-- موجودہ eval-driven routing (`open-sse/services/evalRouting.ts`) فعال ہونے پر
-  پہلے ہی `eval_runs` کی pass-rates کے مطابق combo targets کو دوبارہ ترتیب دیتی ہے۔
 
 کوئی evaluation درخواست کے پاتھ پر ہم وقت طور پر نہیں چلتی، اور evaluator کی
 عدم موجودگی میں بھی gateway مکمل طور پر کام کرتا ہے۔

@@ -24,7 +24,6 @@ Guida completa alla configurazione dei provider, alla creazione delle combinazio
 - [Sistema delle skill](#-skills-system)
 - [Sistema di memoria](#-memory-system)
 - [Webhook](#-webhooks)
-- [Agenti cloud](#-cloud-agents)
 - [Gestione programmatica](#-programmatic-management)
 - [CLI interna](#-internal-cli)
 - [Applicazione desktop (Electron)](#-desktop-application-electron)
@@ -1240,7 +1239,7 @@ Utilizzare l'URL SSE `http://localhost:20128/api/mcp/sse` e una chiave API Beare
 
 ### Ambiti
 
-MCP definisce attualmente 32 ambiti denominati. Ogni chiave Bearer può essere limitata ad ambiti specifici; consultare [MCP-SERVER.md](../frameworks/MCP-SERVER.md) per l'elenco ufficiale degli ambiti e degli strumenti e [A2A-SERVER.md](../frameworks/A2A-SERVER.md) per lo schema JSON-RPC.
+MCP definisce attualmente 32 ambiti denominati. Ogni chiave Bearer può essere limitata ad ambiti specifici; consultare [MCP-SERVER.md](../frameworks/MCP-SERVER.md) per l'elenco ufficiale degli ambiti e degli strumenti.
 
 ---
 
@@ -1250,7 +1249,6 @@ MCP definisce attualmente 32 ambiti denominati. Ogni chiave Bearer può essere l
 
 - **Interfaccia del marketplace** — Sfoglia e installa le skill da **Dashboard → Skills**
 - **Ambiti per chiave** — Limita le skill che ciascuna chiave API può richiamare
-- **Skill personalizzate** — Inserisci un file TypeScript in `src/lib/a2a/skills/`, registralo e diventerà immediatamente richiamabile tramite A2A
 
 Documentazione completa: [SKILLS.md](../frameworks/SKILLS.md).
 
@@ -1279,18 +1277,6 @@ Sottoscrivi gli eventi di 67router per il monitoraggio e l'automazione in tempo 
 - Tentativi: 3 tentativi con backoff esponenziale, quindi inserimento nella coda dei messaggi non recapitabili
 
 Schema completo in [WEBHOOKS.md](../frameworks/WEBHOOKS.md).
-
----
-
-## ☁️ Agenti cloud
-
-67router si integra con agenti di programmazione cloud (**OpenAI Codex Cloud**, **Devin**, **Jules**, **Antigravity**), consentendoti di assegnare attività di lunga durata dalla stessa dashboard utilizzata per gestire l'instradamento locale.
-
-- Crea attività in **Dashboard → Cloud Agents** o tramite `POST /api/v1/agents/tasks`
-- Monitora stato, log e artefatti per ciascuna attività
-- Usa la tua chiave API per ogni provider — le credenziali non lasciano mai l'istanza 67router
-
-Documentazione completa: [CLOUD_AGENT.md](../frameworks/CLOUD_AGENT.md).
 
 ---
 
@@ -1347,7 +1333,6 @@ omniroute restore [<timestamp>]    # Ripristina da uno snapshot
 omniroute health                   # Stato dettagliato (circuit breaker, cache, memoria)
 omniroute quota                    # Utilizzo delle quote dei provider
 omniroute mcp status               # Stato del server MCP
-omniroute a2a status               # Stato del server A2A
 omniroute tunnel list|create|stop  # Tunnel Cloudflare/Tailscale/ngrok
 omniroute reset-password           # Reimposta la password di amministrazione
 omniroute --mcp                    # Avvia il server MCP tramite stdio

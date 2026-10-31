@@ -53,14 +53,6 @@ OWASP ची सर्वसाधारण चेतावणी ("wildcard COR
 आधीपासून unauthenticated असलेल्या data चे non-credentialed cross-origin **reads**, आणि (b)
 management routes वर CORS **preflight यशस्वी होऊ देणे** — ज्यांना तरीही अशा authentication ची आवश्यकता असते जी cross-origin page पुरवू शकत नाही. shared CORS path वर हा session-hijack किंवा credential-theft vector **नाही**.
 
-### एक वास्तविक अपवाद — `/api/v1/agents/`
-
-Cloud-Agent routes (`/api/v1/agents/{health,credentials,tasks,tasks/[id]}`) त्यांचे **स्वतःचे** CORS headers सेट करतात
-(`src/lib/cloudAgent/api.ts`, `getCloudAgentCorsHeaders`) आणि
-`Access-Control-Allow-Origin: <origin>|*` सोबत
-`Access-Control-Allow-Credentials: true` **पाठवतात**. हे एकमेव surface आहे जिथे origin-echo आणि credentials एकत्र अस्तित्वात आहेत आणि ते **`CORS_ALLOW_ALL` पासून स्वतंत्र** आहे. हे routes management-authenticated आहेत
-(`requireManagementAuth`); dashboard off-host उपलब्ध करून देणाऱ्या operators नी हे लक्षात ठेवावे की response headers द्वारे cross-origin credentialed read ला अनुमती असलेले हे एकमेव ठिकाण आहे. हे explicit allowlist पर्यंत मर्यादित करणे या CORS मार्गदर्शनापासून स्वतंत्रपणे track केले जाते.
-
 ## प्रॉडक्शन तपासणीसूची
 
 - **प्रॉडक्शनमध्ये कधीही `CORS_ALLOW_ALL=true` सेट करू नका.** ते सेट न केलेलेच ठेवा.
@@ -140,7 +132,6 @@ location / {
 | डॅशबोर्डसाठी रनटाइम स्थिती                | `src/app/api/settings/authz-inventory/route.ts`                      |
 | डॅशबोर्ड चेतावणी बॅनर                     | `src/app/(dashboard)/dashboard/settings/components/AuthzSection.tsx` |
 | CORS Allowed Origins फील्ड                | `src/app/(dashboard)/dashboard/settings/components/SecurityTab.tsx`  |
-| Cloud-Agent चे प्रति-रूट CORS (अपवाद)     | `src/lib/cloudAgent/api.ts`                                          |
 
 ## हे देखील पहा
 

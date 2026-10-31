@@ -588,7 +588,6 @@ Radar adalah secara ikut serta dan GET sahaja. Klien 67router tidak memuat naik 
 - **🔑 Kawalan penghalaan per-kunci** — pin kunci API kepada satu model atau kombo dengan `forcedModel`, dan tambah atau buang model serta kombo sesuatu kunci secara atomik (`/api/keys/{id}/access`). → [Rujukan API](docs/reference/API_REFERENCE.md) · [OpenAPI](docs/openapi.yaml)
 - **🛡️ Kawalan PII yang lebih halus** — pemilihan mengikut jenis, sehingga 20 corak penyamaran tersuai yang disahkan dan pembilang pengesanan mengikut jenis; penyamaran itu sendiri kekal pilih masuk. → [Guardrails](docs/security/GUARDRAILS.md)
 - **🌍 67 bahasa** — papan pemuka, cermin dokumen dan CLI, dengan `npm run i18n:add-locale` menambah bahasa di semua tempat dalam satu arahan. → [Panduan i18n](docs/guides/I18N.md)
-- **🎛️ OmniConductor** — delegasi A2A masuk ke armada ejen anda, kemahiran Conductor pada Kad Ejen, dan panel papan pemuka dengan sembang suara tekan-untuk-cakap Faro. → [Pelayan A2A](docs/frameworks/A2A-SERVER.md)
 - **🛂 Kemasukan adaptif & perlindungan beban lampau** — permintaan sembang berat dimasukkan ke dalam baris gilir dan bukannya menerima 503, dengan pajakan bergulir RPM atomik bagi setiap sambungan. → [Panduan Ketahanan](docs/architecture/RESILIENCE_GUIDE.md)
 - **🗂️ Susunan `/v1/models` kanonik** — satu blok bersebelahan yang dikelompokkan mengikut penyedia bagi setiap penyedia (kombo dipin dahulu), stabil merentas setiap sumber katalog. → [Rujukan API](docs/reference/API_REFERENCE.md)
 - **🗜️ Pengukuhan pemampatan** — pengawal inflasi yang dihidupkan secara lalai, pek Caveman untuk DE / FR / JA + Cina (wényán), penapis RTK untuk Gradle & .NET. → [Pemampatan](docs/compression/COMPRESSION_ENGINES.md)
@@ -907,7 +906,6 @@ Dedahkan 67router melalui **MCP**, **A2A**, **REST API**, **webhooks** atau **CL
   <tr><td align="left" nowrap>🧰 <b>MCP (stdio)</b></td><td align="left" nowrap><code>omniroute --mcp</code></td><td align="left">Sambungkan kepada Claude Desktop, Cursor atau mana-mana klien MCP</td></tr>
   <tr><td align="left" nowrap>🌊 <b>MCP (HTTP)</b></td><td align="left" nowrap><code>/api/mcp/stream</code></td><td align="left">MCP jauh — <b>110 alat</b>, 33 skop (penguatkuasaan secara ikut serta), jejak audit penuh</td></tr>
   <tr><td align="left" nowrap>📡 <b>MCP (SSE)</b></td><td align="left" nowrap><code>/api/mcp/sse</code></td><td align="left">Pengangkutan MCP penstriman</td></tr>
-  <tr><td align="left" nowrap>🤝 <b>A2A</b></td><td align="left" nowrap><code>/.well-known/agent.json</code></td><td align="left">Ejen-ke-ejen, <b>JSON-RPC 2.0</b> + SSE, 6 kemahiran</td></tr>
   <tr><td align="left" nowrap>🌐 <b>REST API</b></td><td align="left" nowrap><code>/v1/*</code></td><td align="left">Serasi dengan OpenAI — sembang, pembenaman, imej, audio, OCR</td></tr>
   <tr><td align="left" nowrap>🔔 <b>Webhooks</b></td><td align="left" nowrap><code>/api/webhooks</code></td><td align="left">Tolak peristiwa permintaan / kuota ke Slack, Discord, Telegram atau mana-mana URL</td></tr>
   <tr><td align="left" nowrap>🛰️ <b>CLI Jauh</b></td><td align="left" nowrap><code>omniroute connect <host></code></td><td align="left">Kendalikan tika jauh menggunakan token akses berskop</td></tr>
@@ -917,8 +915,6 @@ Dedahkan 67router melalui **MCP**, **A2A**, **REST API**, **webhooks** atau **CL
 # Berikan Claude Code set alat 67router lengkap melalui MCP:
 claude mcp add-server omniroute --type http --url http://localhost:20128/api/mcp/stream
 ```
-
-<sub>📖 [Pelayan MCP](docs/frameworks/MCP-SERVER.md) · [Pelayan A2A](docs/frameworks/A2A-SERVER.md) · [Protokol Ejen](docs/frameworks/AGENT_PROTOCOLS_GUIDE.md)</sub>
 
 <br/>
 
@@ -1381,7 +1377,6 @@ Metrik kanonik pada 2026-10-18: **1.976 video unik** · **20.220.289 tontonan ya
   <tr><td nowrap><b><a href="open-sse/mcp-server/README.md">Pelayan MCP</a></b></td><td>110 alat MCP, konfigurasi IDE, klien Python/TS/Go</td></tr>
   <tr><td nowrap><b><a href="docs/frameworks/MCP-SERVER.md">Panduan Pelayan MCP</a></b></td><td>Pemasangan MCP, pengangkutan dan rujukan alat</td></tr>
   <tr><td nowrap><b><a href="src/lib/a2a/README.md">Pelayan A2A</a></b></td><td>Protokol JSON-RPC 2.0, kemahiran, penstriman, pengurusan tugas</td></tr>
-  <tr><td nowrap><b><a href="docs/frameworks/A2A-SERVER.md">Panduan Pelayan A2A</a></b></td><td>Kad ejen A2A, tugas, kemahiran dan penstriman</td></tr>
 </table>
 
 ### 📋 Projek & Kualiti

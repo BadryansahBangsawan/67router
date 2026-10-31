@@ -1,7 +1,7 @@
 {
   "cloudAgentGuard": {
     "jules": {
-      "message": "Provider \"jules\" is a cloud-agent provider and does not support direct chat completions; use the Cloud Agents task API instead.",
+      "message": "Provider \"jules\" is a cloud-agent provider and does not support direct chat completions.",
       "status": 400,
       "throws": true
     }

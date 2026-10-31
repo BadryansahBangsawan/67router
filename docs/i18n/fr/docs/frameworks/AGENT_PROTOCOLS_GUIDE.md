@@ -4,7 +4,6 @@
 
 ---
 
-> **Source :** `src/lib/{a2a,acp,cloudAgent}/`, `src/app/api/{a2a,acp,cloud}/`, `src/app/api/v1/agents/`
 > **Dernière mise à jour :** 2026-06-28 — v3.8.40
 
 67router expose trois interfaces différentes liées aux agents. Elles semblent similaires à première vue, mais répondent à des besoins différents. Utilisez cette page pour choisir celle qui convient.
@@ -20,52 +19,6 @@
 Les trois sont indépendantes — vous pouvez en choisir n’importe quelle combinaison.
 
 ## Arbre de décision
-
-```
-Avez-vous besoin qu’un service cloud effectue un travail en dehors de cette machine (Codex Cloud / Cursor Cloud / Devin / Jules) ?
-├─ OUI → Agents cloud (POST /api/v1/agents/tasks)
-└─ NON → Continuer
-    │
-    Avez-vous un agent pair qui prend en charge A2A et souhaite collaborer ?
-    ├─ OUI → A2A (POST /a2a)
-    └─ NON → Continuer
-        │
-        Avez-vous besoin de répertorier ou de configurer des agents de codage CLI installés localement ?
-        ├─ OUI → ACP (GET /api/acp/agents)
-        └─ NON → Utiliser simplement /v1/chat/completions
-```
-
-## 1. A2A — Agent à agent
-
-**Spécification :** [A2A v0.3](https://a2a-protocol.org)
-**Point de terminaison 67router :** `POST /a2a` (JSON-RPC 2.0)
-**Fiche de l’agent :** `GET /.well-known/agent.json`
-
-### Quand l’utiliser
-
-- Créer un système multi-agent dans lequel 67router est l’un des pairs
-- Exposer l’intelligence de routage de 67router (`smart-routing`, `quota-management`, etc.) aux agents de frameworks tels que Google ADK ou de réseaux d’agents génériques
-- Encapsuler 67router derrière une interface standard de découverte et d’invocation
-
-### Méthodes
-
-- `message/send` — soumettre un message et recevoir une réponse synchrone
-- `message/stream` — soumettre un message et recevoir des événements de progression diffusés via SSE
-- `tasks/get` — lire une tâche à partir de son ID
-- `tasks/cancel` — annuler une tâche en cours d’exécution
-
-### Compétences intégrées (6)
-
-- `smart-routing` — acheminer une requête via la combinaison optimale
-- `quota-management` — indiquer l’état des quotas pour chaque fournisseur
-- `provider-discovery` — répertorier les fournisseurs installés avec leurs capacités
-- `cost-analysis` — estimer le coût d’une requête ou d’une conversation
-- `health-report` — agréger l’état du disjoncteur, du délai de récupération et du verrouillage pour chaque fournisseur
-- `list-capabilities` — énumérer les compétences disponibles de l’agent et leurs métadonnées
-
-### Présentation détaillée
-
-Consultez [A2A-SERVER.md](./A2A-SERVER.md) pour obtenir des détails sur le transport, la structure de la fiche de l’agent, la configuration de la durée de vie des tâches et le modèle permettant d’ajouter de nouvelles compétences.
 
 ## 2. ACP — Registre des agents CLI
 
@@ -125,86 +78,7 @@ Structure du corps pour POST (`customAgentBodySchema` dans `src/app/api/acp/agen
   pour les fournisseurs. Pour une utilisation interactive ordinaire, lancez vous-même la CLI configurée ou
   utilisez `omniroute run`.
 
-## 3. Agents cloud
-
-**Endpoints 67router :** `/api/v1/agents/tasks/*` (cycle de vie) + `/api/cloud/*` (infrastructure)
-**Source :** `src/lib/cloudAgent/`
-
-### Présentation
-
-Une interface uniforme pour les agents de programmation cloud tiers. Vous soumettez une invite et l’URL d’un dépôt ; 67router transmet la requête à l’agent cloud approprié, interroge son état et renvoie les résultats.
-
-### Agents pris en charge (4, tous confirmés dans `src/lib/cloudAgent/agents/`)
-
-- `codex-cloud` — OpenAI Codex Cloud
-- `devin` — Cognition Devin
-- `jules` — Google Jules
-
-### Cycle de vie
-
-```
-POST /api/v1/agents/tasks
-  → BaseAgent.createTask() pour chaque classe d’agent
-  → le service externe commence le travail
-  → une ligne de tâche est créée dans la base de données (cloud_agent_tasks)
-  ↓
-GET /api/v1/agents/tasks/[id]
-  → synchronisation différée de l’état depuis le fournisseur
-  → renvoie l’état actuel + le plan + le journal d’activité
-  ↓
-POST /api/v1/agents/tasks/[id]   (action : "approve" | "message" | "cancel")
-  → transmet l’action au fournisseur (ou marque la tâche comme annulée localement)
-  ↓
-DELETE /api/v1/agents/tasks/[id]
-  → annulation locale
-```
-
-### Authentification
-
-⚠️ **Tous les endpoints `/api/v1/agents/tasks/*` nécessitent une authentification de gestion** (commit `588a0333`). Depuis la v3.8.0, les appelants utilisant uniquement un jeton Bearer reçoivent une erreur 401.
-
-### Approfondissement
-
-Consultez [CLOUD_AGENT.md](./CLOUD_AGENT.md) pour le contrat `CloudAgentBase`, les spécificités de chaque agent, les détails du schéma et les endpoints d’infrastructure des identifiants.
-
-## Comparaison : A2A et Cloud Agents
-
-Tous deux proposent des « tâches de longue durée », mais à des niveaux différents :
-
-| Aspect                     | A2A                                                                                         | Cloud Agents                                                 |
-| -------------------------- | ------------------------------------------------------------------------------------------- | ------------------------------------------------------------ |
-| Standard                   | Open A2A v0.3                                                                               | Propre à 67router                                            |
-| Lieu d’exécution du calcul | Dans 67router (utilise les combinaisons configurées)                                        | Externe (serveurs Codex / Devin / Jules)                     |
-| Durée des tâches           | TTL par défaut de 5 min (configurable dans `TaskManager`)                                   | De quelques minutes à plusieurs heures                       |
-| Prise en compte du dépôt   | Non (transmet uniquement les prompts)                                                       | Oui (URL du dépôt + branche)                                 |
-| Cas d’utilisation          | Collaboration entre agents, routage intelligent en tant que service                         | Déléguer « implémenter la fonctionnalité X dans le dépôt Y » |
-| Authentification           | `OMNIROUTE_API_KEY` facultative pour `/a2a` ; gestion pour les assistants REST `/api/a2a/*` | Toujours via la gestion                                      |
-
 ## Exemples d’intégration
-
-### Découvrir les fonctionnalités A2A de 67router
-
-```bash
-curl http://localhost:20128/.well-known/agent.json
-```
-
-Renvoie l’Agent Card avec les 6 compétences, les transports et la version.
-
-### Appeler 67router en tant qu’agent A2A
-
-```bash
-curl -X POST http://localhost:20128/a2a \
-  -H "Content-Type: application/json" \
-  -d '{
-    "jsonrpc": "2.0",
-    "method": "message/send",
-    "params": {
-      "messages": [{"role": "user", "content": "Route this prompt"}],
-      "skill": "smart-routing"
-    },
-    "id": 1
-  }'
-```
 
 ### Répertorier les agents CLI installés via ACP
 
@@ -227,30 +101,6 @@ curl -X POST http://localhost:20128/api/acp/agents \
     "versionCommand": "--version",
     "providerAlias": "openai"
   }'
-```
-
-### Soumettre une tâche Cloud Agent
-
-```bash
-curl -X POST http://localhost:20128/api/v1/agents/tasks \
-  -H "Cookie: auth_token=..." \
-  -H "Content-Type: application/json" \
-  -d '{
-    "providerId": "devin",
-    "prompt": "Implement feature X in repo Y",
-    "source": {
-      "repoName": "user/repo",
-      "repoUrl": "https://github.com/user/repo",
-      "branch": "main"
-    }
-  }'
-```
-
-### Interroger l’état d’une tâche cloud
-
-```bash
-curl http://localhost:20128/api/v1/agents/tasks/<task-id> \
-  -H "Cookie: auth_token=..."
 ```
 
 ## Quel outil utiliser et dans quel cas
@@ -283,8 +133,6 @@ curl http://localhost:20128/api/v1/agents/tasks/<task-id> \
 
 ## Voir aussi
 
-- [A2A-SERVER.md](./A2A-SERVER.md) — Analyse approfondie d’A2A
-- [CLOUD_AGENT.md](./CLOUD_AGENT.md) — Analyse approfondie des agents cloud
 - [CLI-TOOLS.md](../reference/CLI-TOOLS.md) — Intégrations CLI externes (utilise ACP)
 - [SKILLS.md](./SKILLS.md) — Framework de compétences (différent des compétences A2A — bac à sable d’exécution locale)
 - [API_REFERENCE.md](../reference/API_REFERENCE.md#agents-protocol) — Référence des points de terminaison

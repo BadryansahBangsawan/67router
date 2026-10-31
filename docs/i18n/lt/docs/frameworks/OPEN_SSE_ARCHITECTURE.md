@@ -573,5 +573,4 @@ Maršrutizavimo varikliui taikomi griežti našumo reikalavimai:
 - [REPOSITORY_MAP.md](../architecture/REPOSITORY_MAP.md) — kiekvieno katalogo aprašas
 - [AUTO-COMBO.md](../routing/AUTO-COMBO.md) — 16 veiksnių vertinimas
 - [MCP-SERVER.md](./MCP-SERVER.md) — MCP serveris
-- [A2A-SERVER.md](./A2A-SERVER.md) — A2A serveris
 - Šaltinis: `open-sse/` (daugiau nei 400 failų, ~143 tūkst. kodo eilučių)

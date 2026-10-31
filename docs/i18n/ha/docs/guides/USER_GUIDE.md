@@ -24,7 +24,6 @@ Cikakken jagora don saita masu samarwa, ƙirƙirar haɗe-haɗe, haɗa kayan aiki
 - [Tsarin Ƙwarewa](#-skills-system)
 - [Tsarin Ƙwaƙwalwa](#-memory-system)
 - [Webhooks](#-webhooks)
-- [Wakilan Cloud](#-cloud-agents)
 - [Gudanarwa ta Shirye-shirye](#-programmatic-management)
 - [CLI na Ciki](#-internal-cli)
 - [Manhajar Kwamfutar Tebur (Electron)](#-desktop-application-electron)
@@ -1238,8 +1237,6 @@ Yi amfani da SSE URL `http://localhost:20128/api/mcp/sse` da Bearer API key da a
 
 ### Scopes
 
-A halin yanzu MCP yana ayyana scopes 32 masu suna. Ana iya iyakance kowace Bearer key zuwa takamaiman scopes — duba [MCP-SERVER.md](../frameworks/MCP-SERVER.md) don tabbataccen jerin scope da tool, da kuma [A2A-SERVER.md](../frameworks/A2A-SERVER.md) don JSON-RPC schema.
-
 ---
 
 ## 🧠 Tsarin Ƙwarewa
@@ -1248,7 +1245,6 @@ A halin yanzu MCP yana ayyana scopes 32 masu suna. Ana iya iyakance kowace Beare
 
 - **UI na Marketplace** — Bincika kuma shigar da ƙwarewa daga **Dashboard → Skills**
 - **Scopes na kowane maɓalli** — Ƙayyade waɗanne maɓallan API ne za su iya kiran waɗanne ƙwarewa
-- **Ƙwarewa na musamman** — Saka fayil na TypeScript a `src/lib/a2a/skills/`, yi masa rajista, kuma nan take zai zama abin kira ta A2A
 
 Cikakken bayani: [SKILLS.md](../frameworks/SKILLS.md).
 
@@ -1277,18 +1273,6 @@ Yi rajista ga abubuwan da ke faruwa a 67router domin sa ido da sarrafa ayyuka ta
 - Sake gwadawa: yunƙuri 3 tare da ƙarin jinkiri a hankali, sannan a tura zuwa jerin saƙonnin da suka gaza
 
 Cikakken schema yana cikin [WEBHOOKS.md](../frameworks/WEBHOOKS.md).
-
----
-
-## ☁️ Wakilan Cloud
-
-67router yana haɗuwa da wakilan rubuta lamba na cloud (**OpenAI Codex Cloud**, **Devin**, **Jules**, **Antigravity**) domin ku iya aika ayyuka masu ɗaukar dogon lokaci daga dashboard ɗin da ke kula da routing na cikin gida.
-
-- Ƙirƙiri ayyuka a **Dashboard → Cloud Agents** ko ta `POST /api/v1/agents/tasks`
-- Bibiyi matsayi, logs, da artifacts na kowane aiki
-- Yi amfani da maɓallin API naka ga kowane provider — bayanan shiga ba sa taɓa barin instance na 67router
-
-Cikakken bayani: [CLOUD_AGENT.md](../frameworks/CLOUD_AGENT.md).
 
 ---
 
@@ -1345,7 +1329,6 @@ omniroute restore [<timestamp>]    # Mayar da bayanai daga hoton ajiya
 omniroute health                   # Cikakken bayani kan lafiya (breakers, cache, memory)
 omniroute quota                    # Amfani da ƙayyadadden kaso na mai samarwa
 omniroute mcp status               # Matsayin uwar garken MCP
-omniroute a2a status               # Matsayin uwar garken A2A
 omniroute tunnel list|create|stop  # Tunnels na Cloudflare/Tailscale/ngrok
 omniroute reset-password           # Sake saita kalmar sirrin mai gudanarwa
 omniroute --mcp                    # Fara uwar garken MCP ta stdio

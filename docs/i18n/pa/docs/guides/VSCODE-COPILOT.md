@@ -88,7 +88,7 @@ HTTP 400 — ਮਾਡਲ '<id>' ਇੱਕ ਚਿੱਤਰ-ਉਤਪਾਦਨ �
 ## VS Code ਟੈਬ ਦੇ ਅੰਦਰ ਡੈਸ਼ਬੋਰਡ
 
 `omnicopilot.dashboardOpen: "editor"` 67router ਡੈਸ਼ਬੋਰਡ ਨੂੰ ਕਿਸੇ ਬਾਹਰੀ ਬ੍ਰਾਊਜ਼ਰ ਦੀ ਬਜਾਏ Simple Browser ਰਾਹੀਂ ਇੱਕ ਐਡੀਟਰ ਟੈਬ ਵਿੱਚ ਰੈਂਡਰ ਕਰਦਾ ਹੈ। ਐਂਬੈਡਿੰਗ ਨੂੰ **ਸਰਵਰ ਉੱਤੇ ਚੋਣਵਾਂ ਤੌਰ 'ਤੇ ਸਮਰੱਥ ਕਰਨਾ ਪੈਂਦਾ ਹੈ**, ਜਿਸ ਲਈ `DASHBOARD_ALLOW_EMBED=vscode` ਵਰਤਿਆ ਜਾਂਦਾ ਹੈ। ਇਹ HTML ਪੰਨਿਆਂ ਨੂੰ ਡਿਫਾਲਟ `frame-ancestors 'none'` +
-`X-Frame-Options: DENY` ਦੀ ਬਜਾਏ `frame-ancestors 'self' vscode-webview:` ਨਾਲ ਸਰਵ ਕਰਦਾ ਹੈ। API ਸਤ੍ਹਾ (`/api`, `/v1`, `/v1beta`, `/a2a`, `/healthz`) ਦੋਵਾਂ ਹਾਲਤਾਂ ਵਿੱਚ ਸਖ਼ਤ ਹੈਡਰ ਬਰਕਰਾਰ ਰੱਖਦੀ ਹੈ।
+`X-Frame-Options: DENY` ਦੀ ਬਜਾਏ `frame-ancestors 'self' vscode-webview:` ਨਾਲ ਸਰਵ ਕਰਦਾ ਹੈ। API ਸਤ੍ਹਾ (`/api`, `/v1`, `/v1beta`, `/healthz`) ਦੋਵਾਂ ਹਾਲਤਾਂ ਵਿੱਚ ਸਖ਼ਤ ਹੈਡਰ ਬਰਕਰਾਰ ਰੱਖਦੀ ਹੈ।
 
 > ⚠️ **ਇਹ ਬਿਲਡ-ਟਾਈਮ ਫਲੈਗ ਹੈ, ਰਨਟਾਈਮ ਫਲੈਗ ਨਹੀਂ।** Next.js `headers()` ਨੂੰ ਰੂਟ
 > ਮੈਨੀਫੈਸਟ ਵਿੱਚ ਕੰਪਾਇਲ ਕਰਦਾ ਹੈ, ਇਸ ਲਈ `next.config.mjs` ਵੇਰੀਏਬਲ ਨੂੰ ਬੰਡਲ ਬਿਲਡ ਹੋਣ ਵੇਲੇ ਪੜ੍ਹਦਾ ਹੈ

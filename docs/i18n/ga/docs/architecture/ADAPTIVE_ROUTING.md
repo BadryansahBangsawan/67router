@@ -48,7 +48,6 @@ Gníomhaire AI / IDE
 | Scáth-thrácht                                      | `open-sse/services/combo/shadowRouting.ts`                                                                               |
 | Ráillí cosanta                                     | `src/lib/guardrails/` (crúcaí réamh-/iar-)                                                                               |
 | Taisce bheacht                                     | `src/lib/semanticCache.ts` (bunaithe ar shíniú)                                                                          |
-| Meastóirí / ródú faoi stiúir meastóireachtaí       | `src/lib/evals/`, `open-sse/services/evalRouting.ts`                                                                     |
 | Inmhínitheacht cinnidh combo                       | `open-sse/services/combo/decisionTrace.ts`                                                                               |
 | Teagmhais fíor-ama an deais                        | `src/lib/events/eventBus.ts` (cainéal fógraí UI, ualaí pála `unknown`, stair 100 iontráil)                               |
 
@@ -265,8 +264,6 @@ faisnéise/meastóireachta féideartha, ní mar spleáchas**. Seo iad na pointí
 - D’ídeodh `Evaluator` amach anseo (cinntitheach, moltóir áitiúil, HTTP, WASM)
   teagmhais/rianta agus thabharfadh sé `QualityScore` ar ais a chuirfí isteach sa chonair chéanna
   `getQualityScore`/fachtóir cáilíochta.
-- Déanann an ródú atá bunaithe ar mheastóireacht cheana (`open-sse/services/evalRouting.ts`)
-  spriocanna teaglama a athordú de réir rátaí pasála `eval_runs` nuair atá sé cumasaithe.
 
 Ní ritheann aon mheastóireacht go sioncrónach ar chonair na hiarrata, agus feidhmíonn an geata
 go hiomlán gan an meastóir a bheith ann.

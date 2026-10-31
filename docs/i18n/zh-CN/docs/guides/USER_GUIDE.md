@@ -24,7 +24,6 @@
 - [技能系统](#-skills-system)
 - [记忆系统](#-memory-system)
 - [Webhook](#-webhooks)
-- [云端智能体](#-cloud-agents)
 - [编程式管理](#-programmatic-management)
 - [内部 CLI](#-internal-cli)
 - [桌面应用程序（Electron）](#-desktop-application-electron)
@@ -1213,8 +1212,6 @@ curl -X POST http://localhost:20128/v1/chat/completions \
 
 ### 作用域
 
-MCP 目前定义了 32 个命名作用域。每个 Bearer 密钥都可以限制为仅允许特定作用域——有关权威的作用域和工具清单，请参阅 [MCP-SERVER.md](../frameworks/MCP-SERVER.md)；有关 JSON-RPC 模式，请参阅 [A2A-SERVER.md](../frameworks/A2A-SERVER.md)。
-
 ---
 
 ## 🧠 技能系统
@@ -1223,7 +1220,6 @@ MCP 目前定义了 32 个命名作用域。每个 Bearer 密钥都可以限制�
 
 - **技能市场 UI** — 在**控制面板 → 技能**中浏览和安装技能
 - **按密钥划分的作用域** — 限制各 API 密钥可以调用的技能
-- **自定义技能** — 将 TypeScript 文件放入 `src/lib/a2a/skills/` 并注册，即可立即通过 A2A 调用
 
 完整参考：[SKILLS.md](../frameworks/SKILLS.md)。
 
@@ -1252,18 +1248,6 @@ MCP 目前定义了 32 个命名作用域。每个 Bearer 密钥都可以限制�
 - 重试机制：采用指数退避策略重试 3 次，随后进入死信队列
 
 完整架构请参阅 [WEBHOOKS.md](../frameworks/WEBHOOKS.md)。
-
----
-
-## ☁️ 云端智能体
-
-67router 集成了云端编码智能体（**OpenAI Codex Cloud**、**Devin**、**Jules**、**Antigravity**），因此你可以通过处理本地路由的同一个控制面板分派长时间运行的任务。
-
-- 在**控制面板 → 云端智能体**中或通过 `POST /api/v1/agents/tasks` 创建任务
-- 跟踪每个任务的状态、日志和产物
-- 每个提供者均可使用自有 API 密钥 — 凭据绝不会离开 67router 实例
-
-完整参考：[CLOUD_AGENT.md](../frameworks/CLOUD_AGENT.md)。
 
 ---
 
@@ -1320,7 +1304,6 @@ omniroute restore [<timestamp>]    # 从快照恢复
 omniroute health                   # 详细健康状态（断路器、缓存、内存）
 omniroute quota                    # 提供者配额使用情况
 omniroute mcp status               # MCP 服务器状态
-omniroute a2a status               # A2A 服务器状态
 omniroute tunnel list|create|stop  # Cloudflare/Tailscale/ngrok 隧道
 omniroute reset-password           # 重置管理员密码
 omniroute --mcp                    # 通过 stdio 启动 MCP 服务器

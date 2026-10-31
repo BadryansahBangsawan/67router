@@ -24,7 +24,6 @@
 - [Система навичок](#-skills-system)
 - [Система пам’яті](#-memory-system)
 - [Вебхуки](#-webhooks)
-- [Хмарні агенти](#-cloud-agents)
 - [Програмне керування](#-programmatic-management)
 - [Внутрішній CLI](#-internal-cli)
 - [Настільний застосунок (Electron)](#-desktop-application-electron)
@@ -1235,8 +1234,6 @@ curl -X POST http://localhost:20128/v1/chat/completions \
 
 ### Області доступу
 
-Наразі MCP визначає 32 іменовані області доступу. Кожен Bearer-ключ можна обмежити певними областями доступу — актуальний перелік областей та інструментів наведено в [MCP-SERVER.md](../frameworks/MCP-SERVER.md), а схему JSON-RPC — у [A2A-SERVER.md](../frameworks/A2A-SERVER.md).
-
 ---
 
 ## 🧠 Система навичок
@@ -1245,7 +1242,6 @@ curl -X POST http://localhost:20128/v1/chat/completions \
 
 - **Інтерфейс маркетплейсу** — Переглядайте та встановлюйте навички через **Панель керування → Навички**
 - **Області доступу для окремих ключів** — Обмежуйте, які ключі API можуть викликати певні навички
-- **Власні навички** — Додайте файл TypeScript до `src/lib/a2a/skills/`, зареєструйте його, і він одразу стане доступним для виклику через A2A
 
 Повна довідка: [SKILLS.md](../frameworks/SKILLS.md).
 
@@ -1274,18 +1270,6 @@ curl -X POST http://localhost:20128/v1/chat/completions \
 - Повторні спроби: 3 спроби з експоненційною затримкою, після чого повідомлення надсилається до черги недоставлених повідомлень
 
 Повна схема наведена в [WEBHOOKS.md](../frameworks/WEBHOOKS.md).
-
----
-
-## ☁️ Хмарні агенти
-
-67router інтегрується з хмарними агентами для програмування (**OpenAI Codex Cloud**, **Devin**, **Jules**, **Antigravity**), щоб ви могли надсилати довготривалі завдання з тієї самої панелі керування, яка використовується для локальної маршрутизації.
-
-- Створюйте завдання в розділі **Панель керування → Хмарні агенти** або через `POST /api/v1/agents/tasks`
-- Відстежуйте статус, журнали та артефакти кожного завдання
-- Використовуйте власний ключ API для кожного постачальника — облікові дані ніколи не залишають екземпляр 67router
-
-Повна довідка: [CLOUD_AGENT.md](../frameworks/CLOUD_AGENT.md).
 
 ---
 
@@ -1342,7 +1326,6 @@ omniroute restore [<timestamp>]    # Відновити зі знімка
 omniroute health                   # Докладний стан (запобіжники, кеш, пам’ять)
 omniroute quota                    # Використання квоти провайдера
 omniroute mcp status               # Стан сервера MCP
-omniroute a2a status               # Стан сервера A2A
 omniroute tunnel list|create|stop  # Тунелі Cloudflare/Tailscale/ngrok
 omniroute reset-password           # Скинути пароль адміністратора
 omniroute --mcp                    # Запустити сервер MCP через stdio

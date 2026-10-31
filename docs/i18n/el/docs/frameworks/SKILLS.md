@@ -258,12 +258,6 @@ curl -X POST http://localhost:20128/api/skills/install \
 
 ---
 
-## Ενσωμάτωση A2A
-
-Το `src/lib/skills/a2a.ts` εξάγει τον περιγραφέα δεξιότητας A2A `memory_aware_routing` και μια βοηθητική συνάρτηση `registerA2ASkill(registry)`. Οι προσαρμοσμένες δεξιότητες A2A βρίσκονται στο `src/lib/a2a/skills/` και δρομολογούνται μέσω του `A2A_SKILL_HANDLERS` (`src/lib/a2a/taskExecution.ts`). Δείτε το [A2A-SERVER.md](./A2A-SERVER.md) για τον πλήρη κύκλο ζωής των εργασιών.
-
----
-
 ## Προσθήκη μιας νέας ενσωματωμένης δεξιότητας
 
 1. **Ορίστε τον χειριστή** στο `src/lib/skills/builtins.ts` (ή σε ένα ομοειδές αρχείο κάτω από το `src/lib/skills/builtin/`). Υπογραφή: `(input, { apiKeyId, sessionId }) => Promise<output>`.
@@ -478,7 +472,6 @@ const config: SkillConfig = {
 ## Δείτε επίσης
 
 - [MCP-SERVER.md](./MCP-SERVER.md) — καταχώριση εργαλείων MCP και τρόποι μεταφοράς
-- [A2A-SERVER.md](./A2A-SERVER.md) — κύκλος ζωής εργασιών A2A και δρομολόγηση δεξιοτήτων
 - [USER_GUIDE.md](../guides/USER_GUIDE.md#-skills-system) — εισαγωγή για τους χρήστες
 - [ARCHITECTURE.md](../architecture/ARCHITECTURE.md) — διοχέτευση αιτημάτων και χάρτης στοιχείων
 - Πηγαίος κώδικας: `src/lib/skills/`, `src/app/api/skills/`, `open-sse/mcp-server/tools/skillTools.ts`

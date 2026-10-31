@@ -128,13 +128,11 @@ Pääsivut hakemistossa `src/app/(dashboard)/dashboard/`:
 - `/dashboard/limits` — kiintiö- ja nopeusrajoitukset
 - `/dashboard/cli-tools` — CLI-käyttöönotto, suoritusympäristön tunnistus ja määritysten luonti
 - `/dashboard/agents` — tunnistetut ACP-agentit ja mukautettujen agenttien rekisteröinti
-- `/dashboard/cloud-agents` — pilvipalvelussa isännöidyt agenttitehtävät (Codex Cloud, Devin, Jules) ja tehtävien elinkaari
 - `/dashboard/skills` — A2A-taitorekisteri, hiekkalaatikkosuoritus ja sisäänrakennettujen taitojen luettelo
 - `/dashboard/memory` — pysyvän keskustelumuistin tarkastelu ja haku
 - `/dashboard/webhooks` — lähtevien webhook-kutsujen tilaukset, salaisuuksien kierrätys ja uudelleenyritystilastot
 - `/dashboard/batch` — eräajojen lähetys ja edistyminen
 - `/dashboard/cache` — läpilukevan välimuistin ja päättelyvälimuistin tilastot sekä poistamistoiminnot
-- `/dashboard/playground` — vuorovaikutteinen keskustelukokeiluympäristö mille tahansa määritetylle yhdistelmälle tai mallille
 - `/dashboard/changelog` — sovelluksen sisäinen muutoslokin katseluohjelma (hahmontaa tiedoston `CHANGELOG.md`)
 - `/dashboard/system` — suoritusympäristön diagnostiikka, versiotiedot ja ympäristön validointinäkymä
 - `/dashboard/onboarding` — ensimmäisen käyttökerran ohjattu määritys uusille asennuksille
@@ -252,7 +250,6 @@ Hallinta-alueet:
 - Budjetti: `src/app/api/usage/budget` (GET/POST)
 - Varaketjut: `src/app/api/fallback/chains` (GET/POST/DELETE)
 - Vaatimustenmukaisuuden tarkastus: `src/app/api/compliance/audit-log` (GET, sivutuksella + rakenteisilla metatiedoilla)
-- Arvioinnit: `src/app/api/evals` (GET/POST), `src/app/api/evals/[suiteId]` (GET)
 - Käytännöt: `src/app/api/policies` (GET/POST)
 - Synkronointitunnukset: `src/app/api/sync/tokens` (GET/POST), `src/app/api/sync/tokens/[id]` (GET/DELETE)
 - Määrityspaketti: `src/app/api/sync/bundle` (GET, ETag-versioitu tilannevedos asetuksista, palveluntarjoajista, yhdistelmistä ja avaimista)
@@ -316,7 +313,6 @@ Toimialokerroksen moduulit:
 - Noudon aikakatkaisu: `src/shared/utils/fetchTimeout.ts`
 - Pyyntötelemetria: `src/shared/utils/requestTelemetry.ts`
 - Vaatimustenmukaisuus / auditointi: `src/lib/compliance/index.ts`
-- Arviointien suorittaja: `src/lib/evals/evalRunner.ts`
 - Toimialan tilan pysyväistallennus: `src/lib/db/domainState.ts` — SQLite CRUD varajärjestelyketjuille, budjeteille, kustannushistorialle, lukitustilalle ja katkaisijoille
 
 OAuth-palveluntarjoajamoduulit (27 erillistä tiedostoa hakemistossa `src/lib/oauth/providers/`):
@@ -385,23 +381,6 @@ Keskeiset ominaisuudet:
 
 Täydelliset algoritmiset tiedot (tekijöiden kaavat, painojen hienosäätö) ovat tiedostossa
 [`docs/routing/AUTO-COMBO.md`](../routing/AUTO-COMBO.md).
-
-### B. Pilviagentit
-
-Pilviagentit käärivät kolmansien osapuolten isännöidyt koodiagenttialustat (Codex Cloud, Devin,
-Jules) yhtenäisen, tietokantapohjaisen tehtävän elinkaaren taakse. Kaikki tehtävien luonti- ja tarkastuspäätepisteet
-edellyttävät hallinnan todennusta.
-
-- Moduulin juurihakemisto: `src/lib/cloudAgent/` (`baseAgent.ts`, `registry.ts`, `api.ts`,
-  `types.ts`, `db.ts` sekä agenttikohtaiset alihakemistot hakemistossa `agents/`)
-- Agenttikohtaiset toteutukset: `agents/codex/`, `agents/devin/`, `agents/jules/`
-- Julkiset päätepisteet: `/api/v1/agents/tasks/*` (luettelointi/luonti/haku/peruutus)
-- Hallintapäätepisteet: `/api/cloud/*` (käyttöönotto, tila, eräkäsittely)
-- Hallintapaneeli: `/dashboard/cloud-agents`
-- Tallennus: taulu `cloud_agent_tasks`
-
-Agenttikohtaiset käyttöönotto- ja OAuth-tiedot ovat tiedostossa
-[`docs/frameworks/CLOUD_AGENT.md`](../frameworks/CLOUD_AGENT.md).
 
 ### C. Suojaukset
 

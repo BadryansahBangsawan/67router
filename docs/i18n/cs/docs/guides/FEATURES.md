@@ -43,8 +43,6 @@ Cyklus v3.7.x → v3.8.0 přinesl automatické směrování bez nutnosti konfigu
 - 🤝 **Poskytovatel GitLab Duo OAuth** — přihlášení pomocí přihlašovacích údajů GitLab
 - 🧠 **Mezipaměť Reasoning Replay Cache** — hybridní uchovávání stop uvažování v paměti a v SQLite
 
-📚 **Související dokumentace:** [Framework dovedností](../frameworks/SKILLS.md) · [Paměťový systém](../frameworks/MEMORY.md) · [Cloudoví agenti](../frameworks/CLOUD_AGENT.md) · [Webhooky](../frameworks/WEBHOOKS.md) · [Mezipaměť Reasoning Replay Cache](../routing/REASONING_REPLAY.md)
-
 ---
 
 ## 🔌 Poskytovatelé
@@ -104,12 +102,6 @@ Monitorování v reálném čase: doba provozu, paměť, verze, percentily laten
 Čtyři režimy pro ladění překladů API: **Hřiště** (převodník formátů), **Tester chatu** (živé požadavky), **Testovací prostředí** (dávkové testy) a **Živý monitoring** (datový proud v reálném čase).
 
 ![Hřiště překladače](../screenshots/05-translator.png)
-
----
-
-## 🎮 Hřiště modelů _(v2.0.9+)_
-
-Testujte libovolný model přímo z řídicího panelu. Vyberte poskytovatele, model a koncový bod, pište prompty v editoru Monaco, streamujte odpovědi v reálném čase, přerušujte je v průběhu streamování a zobrazujte metriky časování.
 
 ---
 

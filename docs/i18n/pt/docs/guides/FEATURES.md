@@ -43,8 +43,6 @@ O ciclo v3.7.x → v3.8.0 adicionou encaminhamento automático sem configuraçã
 - 🤝 **Fornecedor OAuth GitLab Duo** — inicie sessão com credenciais do GitLab
 - 🧠 **Cache de reprodução de raciocínio** — persistência híbrida, em memória + SQLite, dos rastos de raciocínio
 
-📚 **Documentação relacionada:** [Arquitetura de competências](../frameworks/SKILLS.md) · [Sistema de memória](../frameworks/MEMORY.md) · [Agentes na nuvem](../frameworks/CLOUD_AGENT.md) · [Webhooks](../frameworks/WEBHOOKS.md) · [Cache de reprodução de raciocínio](../routing/REASONING_REPLAY.md)
-
 ---
 
 ## 🔌 Fornecedores
@@ -104,12 +102,6 @@ Monitorização em tempo real: tempo de atividade, memória, versão, percentis 
 Quatro modos para depurar traduções da API: **Área de Testes** (conversor de formatos), **Testador de Conversação** (pedidos em direto), **Banco de Testes** (testes em lote) e **Monitor em Direto** (fluxo em tempo real).
 
 ![Área de Testes do Tradutor](../screenshots/05-translator.png)
-
----
-
-## 🎮 Área de Testes de Modelos _(v2.0.9+)_
-
-Teste qualquer modelo diretamente a partir do painel. Selecione o fornecedor, o modelo e o endpoint, escreva instruções com o Monaco Editor, receba respostas em fluxo contínuo em tempo real, interrompa-as a meio e consulte métricas de tempo.
 
 ---
 

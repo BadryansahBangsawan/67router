@@ -57,7 +57,7 @@ Het manifest is geconfigureerd met `display: "fullscreen"`. Dit betekent dat de 
 | **Statische assets** (CSS, JS, afbeeldingen, lettertypen) | Netwerk eerst met cache als fallback | Haalt een actuele versie op via het netwerk; gebruikt bij offlinegebruik de cache als fallback                    |
 | **Next.js-bundels** (`/_next/`)                           | Netwerk eerst met cache-update       | Haalt gegevens op via het netwerk en werkt de cache bij; gebruikt bij offlinegebruik de versie in de cache        |
 | **Navigatieverzoeken**                                    | Omzeilen (nooit onderschept)         | De browser beheert de HTTP/3→HTTP/2-fallback; een inactieve QUIC-socket mag niet resulteren in `Response.error()` |
-| **API-/dashboardroutes** (`/api/`, `/a2a`, `/dashboard`)  | Omzeilen (nooit in de cache)         | Gaat altijd rechtstreeks naar de server — wordt nooit door de serviceworker onderschept                           |
+| **API-/dashboardroutes** (`/api/`, `/dashboard`)          | Omzeilen (nooit in de cache)         | Gaat altijd rechtstreeks naar de server — wordt nooit door de serviceworker onderschept                           |
 
 ### Offlinepagina
 

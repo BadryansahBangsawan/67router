@@ -42,10 +42,6 @@ Generičko OWASP upozorenje ("wildcard CORS = bilo koja stranica može pozvati v
 
 Dakle, **rezidualna** izloženost `CORS_ALLOW_ALL=true` je ograničena na: (a) ne-credentialed cross-origin **čitanja** već neautentifikovanih podataka, i (b) omogućavanje prolaska CORS **preflight-a** na upravljačkim rutama — koje i dalje zahtijevaju autentifikaciju koju cross-origin stranica ne može pružiti. To **nije** vektor za otmicu sesije ili krađu vjerodajnica na dijeljenoj CORS putanji.
 
-### Jedan pravi izuzetak — `/api/v1/agents/`
-
-Cloud-Agent rute (`/api/v1/agents/{health,credentials,tasks,tasks/[id]}`) postavljaju svoja **vlastita** CORS zaglavlja (`src/lib/cloudAgent/api.ts`, `getCloudAgentCorsHeaders`) i **emituju** `Access-Control-Allow-Origin: <origin>|*` zajedno sa `Access-Control-Allow-Credentials: true`. Ovo je jedina površina gdje koegzistiraju vraćanje porijekla (origin-echo) i vjerodajnice, i to je **nezavisno od `CORS_ALLOW_ALL`**. Ove rute su autentifikovane upravljačkom autentifikacijom (`requireManagementAuth`); operateri koji izlažu kontrolnu tablu van hosta trebaju biti svjesni da je ovo jedino mjesto gdje je cross-origin credentialed čitanje dozvoljeno zaglavljima odgovora. Pooštravanje ovoga na eksplicitnu listu dozvoljenih prati se odvojeno od ovih CORS smjernica.
-
 ## Kontrolna lista za produkciju
 
 - **Nikada ne postavljajte `CORS_ALLOW_ALL=true` u produkciji.** Ostavite je nepostavljenom.
@@ -107,7 +103,6 @@ kartici Sigurnost), a ne u proxyju.
 | Status tokom izvršavanja za kontrolnu tablu       | `src/app/api/settings/authz-inventory/route.ts`                      |
 | Baner upozorenja na kontrolnoj tabli              | `src/app/(dashboard)/dashboard/settings/components/AuthzSection.tsx` |
 | Polje CORS Allowed Origins                        | `src/app/(dashboard)/dashboard/settings/components/SecurityTab.tsx`  |
-| Cloud-Agent CORS po ruti (izuzetak)               | `src/lib/cloudAgent/api.ts`                                          |
 
 ## Vidi također
 

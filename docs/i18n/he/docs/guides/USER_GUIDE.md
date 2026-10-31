@@ -24,7 +24,6 @@
 - [מערכת מיומנויות](#-skills-system)
 - [מערכת זיכרון](#-memory-system)
 - [Webhooks](#-webhooks)
-- [סוכני ענן](#-cloud-agents)
 - [ניהול תכנותי](#-programmatic-management)
 - [CLI פנימי](#-internal-cli)
 - [יישום שולחן עבודה (Electron)](#-desktop-application-electron)
@@ -1239,8 +1238,6 @@ curl -X POST http://localhost:20128/v1/chat/completions \
 
 ### תחומי הרשאה
 
-MCP מגדיר כעת 32 תחומי הרשאה בעלי שם. ניתן להגביל כל מפתח Bearer לתחומי הרשאה מסוימים — ראו [MCP-SERVER.md](../frameworks/MCP-SERVER.md) לקבלת הרשימה המוסמכת של תחומי ההרשאה והכלים, ואת [A2A-SERVER.md](../frameworks/A2A-SERVER.md) לקבלת סכמת JSON-RPC.
-
 ---
 
 ## 🧠 מערכת המיומנויות
@@ -1249,7 +1246,6 @@ MCP מגדיר כעת 32 תחומי הרשאה בעלי שם. ניתן להגב�
 
 - **ממשק משתמש של שוק המיומנויות** — עיינו במיומנויות והתקינו אותן דרך **לוח הבקרה → מיומנויות**
 - **תחומים לפי מפתח** — הגבילו אילו מפתחות API יכולים להפעיל אילו מיומנויות
-- **מיומנויות מותאמות אישית** — הוסיפו קובץ TypeScript אל `src/lib/a2a/skills/`, רשמו אותו, והוא יהיה זמין מיד להפעלה דרך A2A
 
 תיעוד מלא: [SKILLS.md](../frameworks/SKILLS.md).
 
@@ -1278,18 +1274,6 @@ MCP מגדיר כעת 32 תחומי הרשאה בעלי שם. ניתן להגב�
 - ניסיונות חוזרים: 3 ניסיונות עם השהיה מעריכית, ולאחר מכן העברה לתור הודעות כושלות
 
 הסכמה המלאה נמצאת ב-[WEBHOOKS.md](../frameworks/WEBHOOKS.md).
-
----
-
-## ☁️ סוכני ענן
-
-67router משתלבת עם סוכני תכנות בענן (**OpenAI Codex Cloud**, **Devin**, **Jules**, **Antigravity**), כך שתוכלו לשלוח משימות ממושכות מאותו לוח בקרה שמטפל בניתוב המקומי שלכם.
-
-- צרו משימות דרך **לוח הבקרה → סוכני ענן** או באמצעות `POST /api/v1/agents/tasks`
-- עקבו אחר הסטטוס, היומנים והתוצרים של כל משימה
-- השתמשו במפתח API משלכם עבור כל ספק — פרטי הגישה לעולם אינם יוצאים ממופע 67router
-
-תיעוד מלא: [CLOUD_AGENT.md](../frameworks/CLOUD_AGENT.md).
 
 ---
 
@@ -1346,7 +1330,6 @@ omniroute restore [<timestamp>]    # שחזור מתמונת מצב
 omniroute health                   # מצב תקינות מפורט (מנתקי מעגל, מטמון, זיכרון)
 omniroute quota                    # שימוש במכסת הספק
 omniroute mcp status               # מצב שרת MCP
-omniroute a2a status               # מצב שרת A2A
 omniroute tunnel list|create|stop  # מנהרות Cloudflare/Tailscale/ngrok
 omniroute reset-password           # איפוס סיסמת מנהל המערכת
 omniroute --mcp                    # הפעלת שרת MCP דרך stdio

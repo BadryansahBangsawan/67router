@@ -128,13 +128,11 @@ v3.8.0 වේදිකාව සඳහා සම්මත, අනුවාද �
 - `/dashboard/limits` — කෝටා/අනුපාත පාලන
 - `/dashboard/cli-tools` — CLI හඳුන්වාදීම, ධාවන පරිසර හඳුනාගැනීම, වින්යාස උත්පාදනය
 - `/dashboard/agents` — හඳුනාගත් ACP නියෝජිතයන් + අභිරුචි නියෝජිත ලියාපදිංචිය
-- `/dashboard/cloud-agents` — වලාකුළේ සත්කාරකත්වය ලබන නියෝජිත කාර්යයන් (Codex Cloud, Devin, Jules) සහ කාර්ය ජීවන චක්රය
 - `/dashboard/skills` — A2A කුසලතා ලේඛනය, සෑන්ඩ්බොක්ස් ක්රියාත්මක කිරීම, අන්තර්නිර්මිත කුසලතා නාමාවලිය
 - `/dashboard/memory` — ස්ථිර සංවාදාත්මක මතකය පරීක්ෂා කිරීම සහ ලබාගැනීම
 - `/dashboard/webhooks` — පිටතට යන webhook දායකත්ව, රහස් භ්රමණය, නැවත උත්සාහ කිරීමේ සංඛ්යාලේඛන
 - `/dashboard/batch` — කාණ්ඩ කාර්ය ඉදිරිපත් කිරීම සහ ප්රගතිය
 - `/dashboard/cache` — read-through සහ තර්කන හැඹිලි සංඛ්යාලේඛන, ඉවත් කිරීමේ පාලන
-- `/dashboard/playground` — වින්යාස කළ ඕනෑම සංයෝජනයක්/ආකෘතියක් සමඟ අන්තර්ක්රියාකාරී කතාබස් පරීක්ෂණ අවකාශය
 - `/dashboard/changelog` — යෙදුම-තුළ වෙනස්කම් ලේඛන දසුන (`CHANGELOG.md` විදැහුම් කරයි)
 - `/dashboard/system` — ධාවන පරිසර රෝග විනිශ්චය, අනුවාද තොරතුරු, පරිසර සත්යාපන අතුරුමුහුණත
 - `/dashboard/onboarding` — නව ස්ථාපනයන් සඳහා පළමු ධාවන සැකසුම් විශාරදය
@@ -252,7 +250,6 @@ flowchart LR
 - අයවැය: `src/app/api/usage/budget` (GET/POST)
 - Fallback දාම: `src/app/api/fallback/chains` (GET/POST/DELETE)
 - අනුකූලතා විගණනය: `src/app/api/compliance/audit-log` (GET, පිටුකරණය + ව්යුහගත metadata සමඟ)
-- ඇගයීම්: `src/app/api/evals` (GET/POST), `src/app/api/evals/[suiteId]` (GET)
 - ප්රතිපත්ති: `src/app/api/policies` (GET/POST)
 - සමමුහුර්තකරණ tokens: `src/app/api/sync/tokens` (GET/POST), `src/app/api/sync/tokens/[id]` (GET/DELETE)
 - වින්යාස bundle: `src/app/api/sync/bundle` (GET, සැකසුම්/සපයන්නන්/සංයෝජන/යතුරු පිළිබඳ ETag අනුවාදගත snapshot එකක්)
@@ -316,7 +313,6 @@ flowchart LR
 - Fetch කාල සීමාව: `src/shared/utils/fetchTimeout.ts`
 - ඉල්ලීම් දුරමිතිය: `src/shared/utils/requestTelemetry.ts`
 - අනුකූලතාව/විගණනය: `src/lib/compliance/index.ts`
-- ඇගයීම් ධාවකය: `src/lib/evals/evalRunner.ts`
 - වසම් තත්ත්ව ස්ථායීකරණය: `src/lib/db/domainState.ts` — පසුබැසීමේ දාම, අයවැය, පිරිවැය ඉතිහාසය, අගුලු දැමීමේ තත්ත්වය සහ පරිපථ බිඳින සඳහා SQLite CRUD
 
 OAuth සපයන්නාගේ මොඩියුල (`src/lib/oauth/providers/` යටතේ තනි ගොනු 27ක්):
@@ -384,23 +380,6 @@ OAuth සපයන්නාගේ මොඩියුල (`src/lib/oauth/provider
 
 සම්පූර්ණ ඇල්ගොරිතමමය විස්තර සඳහා (සාධක සූත්ර, බර සියුම්ව සකස් කිරීම),
 [`docs/routing/AUTO-COMBO.md`](../routing/AUTO-COMBO.md) බලන්න.
-
-### B. වලාකුළු නියෝජිතයන්
-
-Cloud Agents මඟින් තෙවන පාර්ශ්වීය සත්කාරක කේත-නියෝජිත වේදිකා (Codex Cloud, Devin,
-Jules), ඒකාකාර දත්ත සමුදා-පදනම් වූ කාර්ය ජීවන චක්රයක් පසුපස ආවරණය කරයි. සියලු කාර්ය නිර්මාණ/පරීක්ෂණ
-අන්ත ලක්ෂ්ය සඳහා කළමනාකරණ සත්යාපනය අවශ්ය වේ.
-
-- මොඩියුල මූලය: `src/lib/cloudAgent/` (`baseAgent.ts`, `registry.ts`, `api.ts`,
-  `types.ts`, `db.ts`, සහ `agents/` යටතේ ඇති එක් එක් නියෝජිතයා සඳහා වූ උපනාමාවලි)
-- එක් එක් නියෝජිතයා සඳහා වූ ක්රියාත්මක කිරීම්: `agents/codex/`, `agents/devin/`, `agents/jules/`
-- පොදු අන්ත ලක්ෂ්ය: `/api/v1/agents/tasks/*` (ලැයිස්තුගත කිරීම/නිර්මාණය/ලබාගැනීම/අවලංගු කිරීම)
-- කළමනාකරණ අන්ත ලක්ෂ්ය: `/api/cloud/*` (ප්රතිපාදනය, තත්ත්වය, කාණ්ඩය)
-- උපකරණ පුවරුව: `/dashboard/cloud-agents`
-- ගබඩාව: `cloud_agent_tasks` වගුව
-
-එක් එක් නියෝජිතයා සඳහා වූ ප්රතිපාදන සහ OAuth විශේෂතා සඳහා,
-[`docs/frameworks/CLOUD_AGENT.md`](../frameworks/CLOUD_AGENT.md) බලන්න.
 
 ### C. ආරක්ෂක සීමා
 

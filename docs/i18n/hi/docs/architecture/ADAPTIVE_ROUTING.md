@@ -41,7 +41,6 @@ AI एजेंट / IDE
 | शैडो ट्रैफ़िक                             | `open-sse/services/combo/shadowRouting.ts`                                                  |
 | गार्डरेल                                  | `src/lib/guardrails/` (प्री/पोस्ट हुक)                                                      |
 | एग्ज़ैक्ट कैश                             | `src/lib/semanticCache.ts` (सिग्नेचर-आधारित)                                                |
-| इवैल्यूएटर / इवैल्यू-संचालित रूटिंग       | `src/lib/evals/`, `open-sse/services/evalRouting.ts`                                        |
 | कॉम्बो निर्णय व्याख्यात्मकता              | `open-sse/services/combo/decisionTrace.ts`                                                  |
 | डैशबोर्ड रियल-टाइम इवेंट                  | `src/lib/events/eventBus.ts` (UI नोटिफ़िकेशन चैनल, `unknown` पेलोड, 100-एंट्री हिस्ट्री)    |
 
@@ -255,8 +254,6 @@ OTel सिंक द्वारा GenAI/OmniRoute स्पैन एट्�
 - भविष्य का एक `Evaluator` (डिटरमिनिस्टिक, लोकल जज, HTTP, WASM) इवेंट/ट्रेस का उपयोग
   करेगा और एक `QualityScore` लौटाएगा, जो उसी
   `getQualityScore`/क्वालिटी-फ़ैक्टर पथ में फ़ीड होगा।
-- मौजूदा इवैल-चालित रूटिंग (`open-sse/services/evalRouting.ts`) सक्षम होने पर
-  पहले से ही `eval_runs` पास-रेट के आधार पर कॉम्बो टारगेट को फिर से क्रमबद्ध करती है।
 
 रिक्वेस्ट पथ पर कोई इवैल्यूएशन सिंक्रोनस रूप से नहीं चलता, और इवैल्यूएटर की
 अनुपस्थिति में भी गेटवे पूरी तरह काम करता है।

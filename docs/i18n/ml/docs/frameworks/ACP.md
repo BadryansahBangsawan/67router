@@ -117,5 +117,3 @@ SIGKILL അയയ്ക്കുന്നു. ലെഗസി പ്രോംപ
 - [ഏജന്റ് പ്രോട്ടോക്കോളുകൾ](./AGENT_PROTOCOLS_GUIDE.md)
 - [CLI ലോഞ്ച് കോൺട്രാക്റ്റുകൾ](../guides/CLI-LAUNCH-CONTRACTS.md)
 - [CLI ടൂളുകൾ](../reference/CLI-TOOLS.md)
-- [A2A സെർവർ](./A2A-SERVER.md)
-- [ക്ലൗഡ് ഏജന്റുകൾ](./CLOUD_AGENT.md)

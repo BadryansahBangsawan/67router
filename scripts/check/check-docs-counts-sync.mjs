@@ -12,8 +12,6 @@
 //       - executors count in open-sse/executors/
 //       - routing strategies in src/shared/constants/routingStrategies.ts
 //       - OAuth providers in src/lib/oauth/providers/
-//       - A2A skills in src/lib/a2a/skills/
-//       - Cloud agents in src/lib/cloudAgent/agents/
 //
 // Exits 0 on success, 1 on STRICT drift (or any drift with --strict).
 // Run: node scripts/check/check-docs-counts-sync.mjs
@@ -253,7 +251,7 @@ function readCodeFacts() {
     'import * as PROV from "./src/shared/constants/providers.ts";',
     "const provCols=[PROV.FREE_PROVIDERS,PROV.NOAUTH_PROVIDERS,PROV.OAUTH_PROVIDERS,",
     "PROV.WEB_COOKIE_PROVIDERS,PROV.APIKEY_PROVIDERS,PROV.LOCAL_PROVIDERS,PROV.SEARCH_PROVIDERS,",
-    "PROV.AUDIO_ONLY_PROVIDERS,PROV.UPSTREAM_PROXY_PROVIDERS,PROV.CLOUD_AGENT_PROVIDERS,",
+    "PROV.AUDIO_ONLY_PROVIDERS,PROV.UPSTREAM_PROXY_PROVIDERS,",
     "PROV.SYSTEM_PROVIDERS];",
     "const pids=new Set();",
     "for(const c of provCols)for(const p of Object.values(c||{}))if(p&&p.id)pids.add(p.id);",
@@ -1169,20 +1167,6 @@ export function buildChecks() {
       docKey: "OAuth providers",
       strict: false,
       files: ["docs/architecture/ARCHITECTURE.md"],
-    },
-    {
-      label: "A2A skills count",
-      actual: countFiles("src/lib/a2a/skills"),
-      docKey: "A2A skills",
-      strict: false,
-      files: ["docs/frameworks/A2A-SERVER.md"],
-    },
-    {
-      label: "Cloud agents count",
-      actual: countFiles("src/lib/cloudAgent/agents"),
-      docKey: "cloud agents",
-      strict: false,
-      files: ["docs/frameworks/CLOUD_AGENT.md", "docs/frameworks/AGENT_PROTOCOLS_GUIDE.md"],
     },
   ];
 }

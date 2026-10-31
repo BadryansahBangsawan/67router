@@ -1432,9 +1432,8 @@ GET ප්රතිචාරයට `agents[]` (id, name, binary, version, instal
 
 ### ඇගයීම්
 
-| Endpoint     | Method   | Description                                            |
-| ------------ | -------- | ------------------------------------------------------ |
-| `/api/evals` | GET/POST | ඇගයීම් කට්ටල ලැයිස්තුගත කිරීම / ඇගයීම ක්රියාත්මක කිරීම |
+| Endpoint | Method | Description |
+| -------- | ------ | ----------- |
 
 ### ප්රතිපත්ති
 
@@ -1754,31 +1753,6 @@ DELETE /api/usage/token-limits?id=tl-abc
 
 ---
 
-## නියෝජිත ප්රොටෝකෝලය
-
-67router පරිශීලකයන් වෙනුවෙන් දුරස්ථව ක්රියාත්මක කරන cloud agent කාර්යයන් (Claude Code, Codex Cloud, OpenHands ආදිය).
-
-| ක්රමය  | මාර්ගය                        | විස්තරය                                                                                                                                                          |
-| ------ | ----------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| GET    | `/api/v1/agents/tasks`        | කාර්යයන් ලැයිස්තුගත කරයි — විකල්ප `?provider=`, `?status=`, `?limit=` (1–500, පෙරනිමිය 50)                                                                       |
-| POST   | `/api/v1/agents/tasks`        | කාර්යයක් සාදයි — body එක `CreateCloudAgentTaskSchema` මඟින් වලංගු කෙරේ (`providerId`, `prompt`, `source`, `options?`). කාර්ය envelope එක සමඟ `201` ආපසු ලබා දෙයි |
-| DELETE | `/api/v1/agents/tasks?id=...` | කාර්යයක් මකයි                                                                                                                                                    |
-| GET    | `/api/v1/agents/tasks/[id]`   | කාර්යය කියවයි — `external_id` සකසා ඇති විට upstream cloud agent වෙතින් තත්ත්වය සමමුහුර්තව නැවුම් කරයි                                                            |
-| POST   | `/api/v1/agents/tasks/[id]`   | වෙනස්කොට හඳුනාගත් ක්රියාව: `{action: "approve"}`, `{action: "message", message}`, හෝ `{action: "cancel"}`                                                        |
-| DELETE | `/api/v1/agents/tasks/[id]`   | id අනුව නිශ්චිත කාර්යයක් මකයි                                                                                                                                    |
-
-> **සත්යාපනය:** සෑම ක්රමයක් සඳහාම management සත්යාපනය අවශ්ය වේ (`requireCloudAgentManagementAuth`). v3.8.0 ට පෙර මේවා සත්යාපනය නොකළ ඒවා විය — අනුකූලතාව බිඳ දමන වෙනස සඳහා `588a0333` commit එක බලන්න.
-
-```bash
-# Claude Code cloud කාර්යයක් සාදන්න
-curl -X POST http://localhost:20128/api/v1/agents/tasks \
-  -H "Authorization: Bearer your-management-key" \
-  -H "Content-Type: application/json" \
-  -d '{"providerId":"claude-code-cloud","prompt":"Fix the failing test","source":{"repo":"...","branch":"..."}}'
-```
-
----
-
 ## කළමනාකරණ Proxy
 
 providers, accounts වෙත හෝ සමස්ත පද්ධතියට පැවරිය හැකි පිටතට යන HTTP(S)/SOCKS proxy.
@@ -1898,48 +1872,10 @@ API යතුර / සැසිය අනුව විෂය පථගත කළ
 
 67router විසින් A2A (Agent-to-Agent) JSON-RPC 2.0 අන්ත ලක්ෂ්යයක් සහ පරීක්ෂා කිරීම/උපකරණ පුවරු භාවිතය සඳහා REST ආවරණයක් සපයයි.
 
-### JSON-RPC
-
-```bash
-POST /a2a
-Authorization: Bearer your-api-key   # OMNIROUTE_API_KEY සකසා නොමැති නම් විකල්ප වේ
-Content-Type: application/json
-
-{
-  "jsonrpc": "2.0",
-  "id": 1,
-  "method": "message/send",
-  "params": {
-    "skill": "smart-routing",
-    "messages": [{"role": "user", "content": "Route this coding task"}]
-  }
-}
-```
-
-සහාය දක්වන ක්රම (සියල්ල `settings.a2aEnabled` මඟින් පාලනය වේ):
-
-| ක්රමය            | විස්තරය                                                                        |
-| ---------------- | ------------------------------------------------------------------------------ |
-| `message/send`   | සමමුහුර්ත කුසලතා ක්රියාත්මක කිරීම; `{task, artifacts, metadata}` ආපසු ලබා දෙයි |
-| `message/stream` | එම කුසලතා කට්ටලයේ ප්රවාහක SSE ක්රියාත්මක කිරීම                                 |
-| `tasks/get`      | `taskId` අනුව කාර්යයක් ලබා ගනී                                                 |
-| `tasks/cancel`   | `taskId` අනුව කාර්යයක් අවලංගු කරයි                                             |
-
-අන්තර්ගත කුසලතා: `smart-routing`, `quota-management`, `provider-discovery`, `cost-analysis`, `health-report`.
-
-### නියෝජිත කාඩ්පත
-
-```bash
-GET /.well-known/agent.json
-```
-
-පොදු A2A නියෝජිත කාඩ්පත (නම, විස්තරය, හැකියා, කුසලතා නාමාවලිය, සත්යාපන ක්රමය) ආපසු ලබා දෙයි — පැය 1ක් සඳහා පොදුවේ හැඹිලිගත කර ඇත. සත්යාපනය අවශ්ය නොවේ.
-
 ### REST උපකාරක
 
 | ක්රමය | මාර්ගය                       | විස්තරය                                                                                                                    |
 | ----- | ---------------------------- | -------------------------------------------------------------------------------------------------------------------------- |
-| GET   | `/api/a2a/status`            | A2A සක්රීය තත්ත්වය + කාර්ය සංඛ්යාලේඛන + හැඹිලිගත නියෝජිත කාඩ්පත් සාරාංශය                                                   |
 | GET   | `/api/a2a/tasks`             | කාර්ය ලැයිස්තුගත කරයි — `?state=submitted\|working\|completed\|failed\|cancelled`, `?skill=`, `?limit=` (≤200), `?offset=` |
 | POST  | `/api/a2a/tasks`             | (REST උපකාරකයක් ලෙස ක්රියාත්මක කර නැත — JSON-RPC `message/send` හරහා සාදන්න)                                               |
 | GET   | `/api/a2a/tasks/[id]`        | එක් කාර්යයක් ලබා ගනී                                                                                                       |
@@ -1959,12 +1895,8 @@ GET /.well-known/agent.json
 | GET | `/api/cloud/models/alias` | cloud sync වෙත නිරාවරණය කරන ආකෘති අන්වර්ථ නාම ලැයිස්තුගත කරයි |
 | GET | `/api/assess` | නවතම ඇගයීම් වර්ගීකරණ කියවයි (එක් එක් සපයන්නා/ආකෘතිය අනුව) |
 | POST | `/api/assess` | ඇගයීමක් ධාවනය කරයි — අන්තර්ගතය: `{scope: {type:"all"}                                                   | {type:"provider", providerId} | {type:"model", modelId}, trigger?}` |
-| GET | `/api/evals` | අන්තර්ගත eval කට්ටල + වඩාත්ම මෑත ධාවන ලැයිස්තුගත කරයි |
-| POST | `/api/evals` | eval ධාවනයක් ආරම්භ කරයි |
-| POST | `/api/evals/suites` | අභිරුචි eval කට්ටලයක් සාදයි — අන්තර්ගතය `evalSuiteSaveSchema` මඟින් වලංගු කෙරේ |
-| GET | `/api/evals/suites/[id]` | අභිරුචි eval කට්ටලයක් ලබා ගනී |
 
-**සත්යාපනය:** `/api/cloud/auth` විසින් Bearer යතුරක් සෘජුවම වලංගු කර, `manage` / `admin` විෂය පථය සහිත යතුරක් සඳහා පමණක් එක් එක් සම්බන්ධතාවේ ආවරණය කළ යතුර සහ `projectId` ආපසු ලබා දෙයි; අනෙකුත් `/api/cloud/*`, `/api/evals/*`, සහ `/api/assess` මාර්ග සඳහා කළමනාකරණ සැසියක්/API යතුරක් අවශ්ය වේ. `/api/assess` POST, වෙනස්කම් හඳුනාගන්නා union විෂය පථ යෝජනා ක්රමයක් සමඟ `validateBody` භාවිත කරයි.
+**සත්යාපනය:** `/api/cloud/auth` විසින් Bearer යතුරක් සෘජුවම වලංගු කර, `manage` / `admin` විෂය පථය සහිත යතුරක් සඳහා පමණක් එක් එක් සම්බන්ධතාවේ ආවරණය කළ යතුර සහ `projectId` ආපසු ලබා දෙයි; අනෙකුත් `/api/cloud/*`, සහ `/api/assess` මාර්ග සඳහා කළමනාකරණ සැසියක්/API යතුරක් අවශ්ය වේ. `/api/assess` POST, වෙනස්කම් හඳුනාගන්නා union විෂය පථ යෝජනා ක්රමයක් සමඟ `validateBody` භාවිත කරයි.
 
 ---
 
@@ -2286,5 +2218,3 @@ AI නියෝජිත කුසලතා කළමනාකරණය කර�
 - `requireLogin`, `/api/settings/require-login` හරහා සක්රිය හෝ අක්රිය කළ හැක
 - `REQUIRE_API_KEY=true` වන විට `/v1/*` මාර්ග සඳහා විකල්ප ලෙස Bearer API යතුරක් අවශ්ය වේ
 - මෙම යොමුවේ "කළමනාකරණ ටෝකනය" / "කළමනාකරණ විෂයපථයක් සහිත API යතුර" යන්නෙන් අදහස් වන්නේ එම මාර්ගෝපදේශයේ සඳහන් වර්ගවලින් එකකි — නිර්වචනය නොකළ අමතර රහස් වර්ගයක් නොවේ
-
-> **පසුගාමී අනුකූලතාව බිඳ දමන වෙනස (v3.8.0)** — `/api/v1/agents/tasks/*` සහ විරාම කාල කළමනාකරණ අන්ත ලක්ෂ්ය සඳහා දැන් **කළමනාකරණ සත්යාපනය** (උපකරණ පුවරුවේ `auth_token` කුකිය හෝ කළමනාකරණ විෂයපථයක් සහිත API යතුරක්) අවශ්ය වේ. මීට පෙර සත්යාපනයකින් තොරව මෙම මාර්ග ඇමතූ සේවාලාභීන්ට `401 Unauthorized` ලැබෙනු ඇත. `588a0333` කමිටුව බලන්න (`fix(auth): require management auth for agent and cooldown APIs`).

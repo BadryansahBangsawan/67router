@@ -1348,9 +1348,8 @@ GET 回應包含 `agents[]`（id、name、binary、version、installed、protoco
 
 ### 評估
 
-| 端點         | 方法     | 說明                   |
-| ------------ | -------- | ---------------------- |
-| `/api/evals` | GET/POST | 列出評估套件／執行評估 |
+| 端點 | 方法 | 說明 |
+| ---- | ---- | ---- |
 
 ### 政策
 
@@ -1668,31 +1667,6 @@ DELETE /api/usage/token-limits?id=tl-abc
 
 ---
 
-## 代理程式協定
-
-代表 67router 使用者遠端執行的雲端代理程式任務（Claude Code、Codex Cloud、OpenHands 等）。
-
-| 方法   | 路徑                          | 說明                                                                                                                           |
-| ------ | ----------------------------- | ------------------------------------------------------------------------------------------------------------------------------ |
-| GET    | `/api/v1/agents/tasks`        | 列出任務 — 可選用 `?provider=`、`?status=`、`?limit=`（1–500，預設為 50）                                                      |
-| POST   | `/api/v1/agents/tasks`        | 建立任務 — 請求主體由 `CreateCloudAgentTaskSchema` 驗證（`providerId`、`prompt`、`source`、`options?`）。傳回 `201` 及任務封套 |
-| DELETE | `/api/v1/agents/tasks?id=...` | 刪除任務                                                                                                                       |
-| GET    | `/api/v1/agents/tasks/[id]`   | 讀取任務 — 設定 `external_id` 時，會同步從上游雲端代理程式重新整理狀態                                                         |
-| POST   | `/api/v1/agents/tasks/[id]`   | 可辨識聯集動作：`{action: "approve"}`、`{action: "message", message}` 或 `{action: "cancel"}`                                  |
-| DELETE | `/api/v1/agents/tasks/[id]`   | 依 id 刪除特定任務                                                                                                             |
-
-> **驗證：**每個方法都需要管理驗證（`requireCloudAgentManagementAuth`）。在 v3.8.0 之前，這些方法不需要驗證 — 有關此破壞性變更，請參閱提交 `588a0333`。
-
-```bash
-# 建立 Claude Code 雲端任務
-curl -X POST http://localhost:20128/api/v1/agents/tasks \
-  -H "Authorization: Bearer your-management-key" \
-  -H "Content-Type: application/json" \
-  -d '{"providerId":"claude-code-cloud","prompt":"Fix the failing test","source":{"repo":"...","branch":"..."}}'
-```
-
----
-
 ## 管理代理伺服器
 
 可指派給提供者、帳戶或全域使用的外送 HTTP(S)/SOCKS 代理伺服器。
@@ -1812,48 +1786,10 @@ curl -X DELETE http://localhost:20128/api/resilience/model-cooldowns \
 
 67router 提供一個 A2A（代理對代理）JSON-RPC 2.0 端點，以及供檢查／儀表板使用的 REST 包裝介面。
 
-### JSON-RPC
-
-```bash
-POST /a2a
-Authorization: Bearer your-api-key   # 選用，除非已設定 OMNIROUTE_API_KEY
-Content-Type: application/json
-
-{
-  "jsonrpc": "2.0",
-  "id": 1,
-  "method": "message/send",
-  "params": {
-    "skill": "smart-routing",
-    "messages": [{"role": "user", "content": "Route this coding task"}]
-  }
-}
-```
-
-支援的方法（全部受 `settings.a2aEnabled` 控制）：
-
-| 方法             | 說明                                             |
-| ---------------- | ------------------------------------------------ |
-| `message/send`   | 同步執行技能；回傳 `{task, artifacts, metadata}` |
-| `message/stream` | 透過 SSE 串流執行相同的技能集                    |
-| `tasks/get`      | 依 `taskId` 擷取任務                             |
-| `tasks/cancel`   | 依 `taskId` 取消任務                             |
-
-內建技能：`smart-routing`、`quota-management`、`provider-discovery`、`cost-analysis`、`health-report`。
-
-### 代理卡片
-
-```bash
-GET /.well-known/agent.json
-```
-
-回傳公開的 A2A 代理卡片（名稱、說明、功能、技能目錄、驗證機制）— 公開快取 1 小時。不需要驗證。
-
 ### REST 輔助端點
 
 | 方法 | 路徑                         | 說明                                                                                                           |
 | ---- | ---------------------------- | -------------------------------------------------------------------------------------------------------------- |
-| GET  | `/api/a2a/status`            | A2A 啟用狀態 + 任務統計資料 + 已快取的代理卡片摘要                                                             |
 | GET  | `/api/a2a/tasks`             | 列出任務 — `?state=submitted\|working\|completed\|failed\|cancelled`、`?skill=`、`?limit=`（≤200）、`?offset=` |
 | POST | `/api/a2a/tasks`             | （未實作為 REST 輔助端點 — 請透過 JSON-RPC `message/send` 建立）                                               |
 | GET  | `/api/a2a/tasks/[id]`        | 擷取單一任務                                                                                                   |
@@ -1873,12 +1809,8 @@ GET /.well-known/agent.json
 | GET | `/api/cloud/models/alias` | 列出公開給雲端同步使用的模型別名 |
 | GET | `/api/assess` | 讀取最新的評估分類（依提供者／模型） |
 | POST | `/api/assess` | 執行評估 — 主體：`{scope: {type:"all"}                                                   | {type:"provider", providerId} | {type:"model", modelId}, trigger?}` |
-| GET | `/api/evals` | 列出內建評測套件與最近的執行紀錄 |
-| POST | `/api/evals` | 觸發評測執行 |
-| POST | `/api/evals/suites` | 建立自訂評測套件 — 主體由 `evalSuiteSaveSchema` 驗證 |
-| GET | `/api/evals/suites/[id]` | 擷取自訂評測套件 |
 
-**驗證：**`/api/cloud/auth` 會直接驗證 Bearer 金鑰，且僅針對具有 `manage` / `admin` 範圍的金鑰，回傳每個連線的已遮罩金鑰與 `projectId`；其他 `/api/cloud/*`、`/api/evals/*` 與 `/api/assess` 路由需要管理工作階段／API 金鑰。`/api/assess` POST 使用 `validateBody` 搭配可辨識聯集範圍結構描述。
+**驗證：**`/api/cloud/auth` 會直接驗證 Bearer 金鑰，且僅針對具有 `manage` / `admin` 範圍的金鑰，回傳每個連線的已遮罩金鑰與 `projectId`；其他 `/api/cloud/*` 與 `/api/assess` 路由需要管理工作階段／API 金鑰。`/api/assess` POST 使用 `validateBody` 搭配可辨識聯集範圍結構描述。
 
 ---
 
@@ -2200,5 +2132,3 @@ devin-cli 等）。完整清單請參閱[提供者參考](./PROVIDER_REFERENCE.m
 - `requireLogin` 可透過 `/api/settings/require-login` 切換
 - 當 `REQUIRE_API_KEY=true` 時，`/v1/*` 路由可選擇要求 Bearer API 金鑰
 - 本參考文件中的「管理權杖」／「具管理範圍的 API 金鑰」是指該指南中的其中一種憑證類別，而不是未定義的其他密鑰類型
-
-> **重大變更（v3.8.0）** — `/api/v1/agents/tasks/*` 與冷卻時間管理端點現在需要**管理驗證**（儀表板 `auth_token` Cookie 或具管理範圍的 API 金鑰）。先前未經驗證即呼叫這些路由的用戶端將收到 `401 Unauthorized`。請參閱提交 `588a0333`（`fix(auth): require management auth for agent and cooldown APIs`）。

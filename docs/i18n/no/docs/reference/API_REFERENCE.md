@@ -1437,9 +1437,8 @@ GET-svaret inkluderer `agents[]` (id, name, binary, version, installed, protocol
 
 ### Evalueringer
 
-| Endepunkt    | Metode   | Beskrivelse                             |
-| ------------ | -------- | --------------------------------------- |
-| `/api/evals` | GET/POST | Vis evalueringspakker / kjør evaluering |
+| Endepunkt | Metode | Beskrivelse |
+| --------- | ------ | ----------- |
 
 ### Retningslinjer
 
@@ -1762,31 +1761,6 @@ Brukes av delsystemet for automatisk nøkkeladministrasjon til å utstede og rot
 
 ---
 
-## Agentprotokoll
-
-Skyagentoppgaver (Claude Code, Codex Cloud, OpenHands osv.) som kjøres eksternt på vegne av 67router-brukere.
-
-| Metode | Bane                          | Beskrivelse                                                                                                                                                           |
-| ------ | ----------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| GET    | `/api/v1/agents/tasks`        | List oppgaver — valgfritt `?provider=`, `?status=`, `?limit=` (1–500, standardverdi 50)                                                                               |
-| POST   | `/api/v1/agents/tasks`        | Opprett oppgave — forespørselskroppen valideres av `CreateCloudAgentTaskSchema` (`providerId`, `prompt`, `source`, `options?`). Returnerer `201` med oppgavekonvolutt |
-| DELETE | `/api/v1/agents/tasks?id=...` | Slett en oppgave                                                                                                                                                      |
-| GET    | `/api/v1/agents/tasks/[id]`   | Les oppgave — oppdaterer status synkront fra den oppstrøms skyagenten når en `external_id` er angitt                                                                  |
-| POST   | `/api/v1/agents/tasks/[id]`   | Diskriminert handling: `{action: "approve"}`, `{action: "message", message}`, eller `{action: "cancel"}`                                                              |
-| DELETE | `/api/v1/agents/tasks/[id]`   | Slett en bestemt oppgave etter ID                                                                                                                                     |
-
-> **Autentisering:** administrasjonsautentisering kreves for alle metoder (`requireCloudAgentManagementAuth`). Før v3.8.0 var disse uautentiserte — se commit `588a0333` for den inkompatible endringen.
-
-```bash
-# Opprett en Claude Code-skyoppgave
-curl -X POST http://localhost:20128/api/v1/agents/tasks \
-  -H "Authorization: Bearer your-management-key" \
-  -H "Content-Type: application/json" \
-  -d '{"providerId":"claude-code-cloud","prompt":"Fix the failing test","source":{"repo":"...","branch":"..."}}'
-```
-
----
-
 ## Administrasjonsproxyer
 
 Utgående HTTP(S)-/SOCKS-proxyer som kan tilordnes leverandører, kontoer eller globalt.
@@ -1906,48 +1880,10 @@ Vedvarende lager for samtale-/faktaminner, avgrenset per API-nøkkel/økt.
 
 67router tilbyr et A2A-endepunkt (Agent-to-Agent) basert på JSON-RPC 2.0, i tillegg til et REST-grensesnitt for inspeksjon og bruk i kontrollpanelet.
 
-### JSON-RPC
-
-```bash
-POST /a2a
-Authorization: Bearer your-api-key   # valgfritt med mindre OMNIROUTE_API_KEY er angitt
-Content-Type: application/json
-
-{
-  "jsonrpc": "2.0",
-  "id": 1,
-  "method": "message/send",
-  "params": {
-    "skill": "smart-routing",
-    "messages": [{"role": "user", "content": "Route this coding task"}]
-  }
-}
-```
-
-Støttede metoder (alle styres av `settings.a2aEnabled`):
-
-| Metode           | Beskrivelse                                                               |
-| ---------------- | ------------------------------------------------------------------------- |
-| `message/send`   | Synkron kjøring av en ferdighet; returnerer `{task, artifacts, metadata}` |
-| `message/stream` | Strømming av SSE-kjøring for det samme ferdighetssettet                   |
-| `tasks/get`      | Hent en oppgave etter `taskId`                                            |
-| `tasks/cancel`   | Avbryt en oppgave etter `taskId`                                          |
-
-Innebygde ferdigheter: `smart-routing`, `quota-management`, `provider-discovery`, `cost-analysis`, `health-report`.
-
-### Agentkort
-
-```bash
-GET /.well-known/agent.json
-```
-
-Returnerer det offentlige A2A-agentkortet (navn, beskrivelse, funksjoner, ferdighetskatalog og autentiseringsmetode) — bufres offentlig i 1 time. Ingen autentisering kreves.
-
 ### REST-hjelpere
 
 | Metode | Bane                         | Beskrivelse                                                                                                       |
 | ------ | ---------------------------- | ----------------------------------------------------------------------------------------------------------------- |
-| GET    | `/api/a2a/status`            | A2A aktivert + oppgavestatistikk + bufret sammendrag av agentkortet                                               |
 | GET    | `/api/a2a/tasks`             | Vis oppgaver — `?state=submitted\|working\|completed\|failed\|cancelled`, `?skill=`, `?limit=` (≤200), `?offset=` |
 | POST   | `/api/a2a/tasks`             | (Ikke implementert som en REST-hjelper — opprett via JSON-RPC `message/send`)                                     |
 | GET    | `/api/a2a/tasks/[id]`        | Hent én oppgave                                                                                                   |
@@ -1967,12 +1903,8 @@ Returnerer det offentlige A2A-agentkortet (navn, beskrivelse, funksjoner, ferdig
 | GET | `/api/cloud/models/alias` | Vis modellaliaser slik de eksponeres for skysynkronisering |
 | GET | `/api/assess` | Les de nyeste vurderingskategoriseringene (per leverandør/modell) |
 | POST | `/api/assess` | Kjør en vurdering — innhold: `{scope: {type:"all"}                                                   | {type:"provider", providerId} | {type:"model", modelId}, trigger?}` |
-| GET | `/api/evals` | Vis innebygde evalueringspakker + de nyeste kjøringene |
-| POST | `/api/evals` | Start en evalueringskjøring |
-| POST | `/api/evals/suites` | Opprett en egendefinert evalueringspakke — innhold valideres av `evalSuiteSaveSchema` |
-| GET | `/api/evals/suites/[id]` | Hent en egendefinert evalueringspakke |
 
-**Autentisering:** `/api/cloud/auth` validerer en Bearer-nøkkel direkte og returnerer den maskerte nøkkelen og `projectId` for hver tilkobling kun for en nøkkel med omfanget `manage` / `admin`; de andre rutene under `/api/cloud/*`, `/api/evals/*` og `/api/assess` krever en administrasjonsøkt/API-nøkkel. POST mot `/api/assess` bruker `validateBody` med et omfangsskjema basert på en diskriminert union.
+**Autentisering:** `/api/cloud/auth` validerer en Bearer-nøkkel direkte og returnerer den maskerte nøkkelen og `projectId` for hver tilkobling kun for en nøkkel med omfanget `manage` / `admin`; de andre rutene under `/api/cloud/*` og `/api/assess` krever en administrasjonsøkt/API-nøkkel. POST mot `/api/assess` bruker `validateBody` med et omfangsskjema basert på en diskriminert union.
 
 ---
 
@@ -2296,5 +2228,3 @@ API-nøkkel med administrasjonsomfang) og hvordan de skiller seg fra inferensnø
 - `requireLogin` kan slås av og på via `/api/settings/require-login`
 - `/v1/*`-ruter kan kreve en Bearer API-nøkkel når `REQUIRE_API_KEY=true`
 - «administrasjonstoken» / «API-nøkkel med administrasjonsomfang» i denne referansen betyr én av familiene i denne veiledningen — ikke en udefinert ekstra type hemmelighet
-
-> **Inkompatibel endring (v3.8.0)** — `/api/v1/agents/tasks/*` og endepunktene for administrasjon av nedkjøling krever nå **administrasjonsautentisering** (`auth_token`-informasjonskapsel for instrumentbordet eller en API-nøkkel med administrasjonsomfang). Klienter som tidligere kalte disse rutene uten autentisering, vil motta `401 Unauthorized`. Se commit `588a0333` (`fix(auth): require management auth for agent and cooldown APIs`).

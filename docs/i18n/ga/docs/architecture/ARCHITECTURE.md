@@ -128,13 +128,11 @@ Na príomhleathanaigh faoi `src/app/(dashboard)/dashboard/`:
 - `/dashboard/limits` — rialuithe cuóta/ráta
 - `/dashboard/cli-tools` — ionduchtú CLI, brath ama rite, giniúint cumraíochta
 - `/dashboard/agents` — gníomhairí ACP braite + clárú gníomhairí saincheaptha
-- `/dashboard/cloud-agents` — tascanna gníomhairí néalóstáilte (Codex Cloud, Devin, Jules) agus saolré tascanna
 - `/dashboard/skills` — clárlann scileanna A2A, rith i mbosca gainimh, catalóg scileanna ionsuite
 - `/dashboard/memory` — iniúchadh agus aisghabháil cuimhne comhrá marthanaí
 - `/dashboard/webhooks` — síntiúis webhook amach, rothlú rún, staitisticí atrialacha
 - `/dashboard/batch` — cur isteach baiscphost agus dul chun cinn
 - `/dashboard/cache` — staitisticí taisce léite tríd agus taisce réasúnaíochta, rialuithe díshealbhaithe
-- `/dashboard/playground` — clós súgartha comhrá idirghníomhach in aghaidh aon teaglama/samhla cumraithe
 - `/dashboard/changelog` — amharcán loga athruithe laistigh den aip (rindreálann sé `CHANGELOG.md`)
 - `/dashboard/system` — diagnóisic ama rite, faisnéis leagain, dromchla bailíochtaithe timpeallachta
 - `/dashboard/onboarding` — treoraí socraithe céadrite le haghaidh suiteálacha nua
@@ -252,7 +250,6 @@ Fearainn bhainistíochta:
 - Buiséad: `src/app/api/usage/budget` (GET/POST)
 - Slabhraí cúltaca: `src/app/api/fallback/chains` (GET/POST/DELETE)
 - Iniúchadh comhlíontachta: `src/app/api/compliance/audit-log` (GET, le huimhriú leathanach + meiteashonraí struchtúrtha)
-- Meastóireachtaí: `src/app/api/evals` (GET/POST), `src/app/api/evals/[suiteId]` (GET)
 - Beartais: `src/app/api/policies` (GET/POST)
 - Comharthaí sioncronaithe: `src/app/api/sync/tokens` (GET/POST), `src/app/api/sync/tokens/[id]` (GET/DELETE)
 - Beart cumraíochta: `src/app/api/sync/bundle` (GET, seat den leagan arna shainaithint le ETag de shocruithe/soláthraithe/teaglamaí/eochracha)
@@ -316,7 +313,6 @@ Modúil na sraithe fearainn:
 - Teorainn ama aisghabhála: `src/shared/utils/fetchTimeout.ts`
 - Teiliméadracht iarratais: `src/shared/utils/requestTelemetry.ts`
 - Comhlíonadh/iniúchadh: `src/lib/compliance/index.ts`
-- Reathaí meastóireachta: `src/lib/evals/evalRunner.ts`
 - Marthanacht staid fearainn: `src/lib/db/domainState.ts` — CRUD SQLite le haghaidh slabhraí cúltaca, buiséad, stair chostais, staid frithdhúnadh agus scoradáin chiorcaid
 
 Modúil soláthraithe OAuth (27 comhad aonair faoi `src/lib/oauth/providers/`):
@@ -385,23 +381,6 @@ Príomhchumais:
 
 Le haghaidh sonraí iomlána algartamacha (foirmlí fachtóirí, mionchoigeartú ualuithe), féach
 [`docs/routing/AUTO-COMBO.md`](../routing/AUTO-COMBO.md).
-
-### B. Gníomhairí Néalríomhaireachta
-
-Cuireann Gníomhairí Néalríomhaireachta ardáin óstáilte tríú páirtí do ghníomhairí cód (Codex Cloud, Devin,
-Jules) taobh thiar de shaolré aonfhoirmeach tascanna le tacaíocht bunachair sonraí. Teastaíonn fíordheimhniú bainistíochta
-ó gach críochphointe um chruthú agus iniúchadh tascanna.
-
-- Fréamh an mhodúil: `src/lib/cloudAgent/` (`baseAgent.ts`, `registry.ts`, `api.ts`,
-  `types.ts`, `db.ts`, chomh maith le fochomhadlanna do gach gníomhaire faoi `agents/`)
-- Feidhmiúcháin do gach gníomhaire: `agents/codex/`, `agents/devin/`, `agents/jules/`
-- Críochphointí poiblí: `/api/v1/agents/tasks/*` (liostú/cruthú/fáil/cealú)
-- Críochphointí bainistíochta: `/api/cloud/*` (soláthar, stádas, baisc)
-- Deais: `/dashboard/cloud-agents`
-- Stóráil: tábla `cloud_agent_tasks`
-
-Le haghaidh sonraí faoi sholáthar gach gníomhaire agus faoi OAuth, féach
-[`docs/frameworks/CLOUD_AGENT.md`](../frameworks/CLOUD_AGENT.md).
 
 ### C. Ráillí Cosanta
 

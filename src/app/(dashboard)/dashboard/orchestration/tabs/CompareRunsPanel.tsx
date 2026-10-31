@@ -51,19 +51,15 @@ function toSafeErrorText(err: unknown): string {
   return "Request failed";
 }
 
-/** Mirrors `useDrawerDetail.ts`'s `routeFor` detail URLs for the two sources this panel ever
- * receives (`a2a` / `cloud-agent`) — HistoryItem never carries a `conductor` id (History has no
- * Conductor rows, see `HistoryTab.tsx`'s module doc). */
+/** Mirrors `useDrawerDetail.ts`'s `routeFor` detail URL for the only source this panel ever
+ * receives (`a2a`) — HistoryItem never carries a `conductor` id (History has no Conductor
+ * rows, see `HistoryTab.tsx`'s module doc). */
 function detailUrlFor(item: HistoryItem): string {
-  if (item.source === "cloud-agent") {
-    const id = item.id.slice("cloud-agent:".length);
-    return `/api/v1/agents/tasks/${encodeURIComponent(id)}`;
-  }
   const id = item.id.slice("a2a:".length);
   return `/api/a2a/tasks/${encodeURIComponent(id)}`;
 }
 
-/** Mirrors `useDrawerDetail.ts`'s `unwrapDetailBody`: cloud-agent responds `{ data }`, a2a
+/** Mirrors `useDrawerDetail.ts`'s `unwrapDetailBody`: a2a responds
  * `{ task }` — not `{ data }` (see that function's doc for why a generic `.data` fallback is
  * wrong for a2a). */
 function unwrapDetailBody(item: HistoryItem, body: unknown): unknown {
@@ -194,7 +190,7 @@ function formatEventDelta(count: number): string {
 
 /** One column's header: status dot (`orchStateColor`), identity/source, state, start time. */
 function RunHeader({ item, t, testId }: { item: HistoryItem; t: Translate; testId: string }) {
-  const sourceKey = item.source === "a2a" ? "sourceA2A" : "sourceCloudAgent";
+  const sourceKey = "sourceA2A";
   return (
     <div data-testid={testId} className="min-w-0">
       <div className="flex items-center gap-1.5">
@@ -301,8 +297,8 @@ function MemoryList({ hits }: { hits: RunMemoryHit[] }) {
   );
 }
 
-/** Memory-hits section, rendered only when at least one side has hits (a2a only — see
- * `compareRuns.ts`'s `memoryHitsFrom`, cloud-agent sides always come back empty). */
+/** Memory-hits section, rendered only when at least one side has hits (see
+ * `compareRuns.ts`'s `memoryHitsFrom`). */
 function MemorySection({ comparison, t }: { comparison: RunComparison; t: Translate }) {
   const { left, right } = comparison;
   if (left.memoryHits.length === 0 && right.memoryHits.length === 0) return null;

@@ -69,20 +69,6 @@ xác thực, và (b) cho phép **preflight CORS thành công** trên các route 
 vẫn yêu cầu xác thực mà một trang cross-origin không thể cung cấp. Đây **không phải** là
 vector chiếm đoạt phiên hoặc đánh cắp thông tin xác thực trên luồng CORS dùng chung.
 
-### Một ngoại lệ thực sự — `/api/v1/agents/`
-
-Các route Cloud-Agent (`/api/v1/agents/{health,credentials,tasks,tasks/[id]}`) đặt
-các header CORS **riêng**
-(`src/lib/cloudAgent/api.ts`, `getCloudAgentCorsHeaders`) và **có** phát ra
-`Access-Control-Allow-Origin: <origin>|*` cùng với
-`Access-Control-Allow-Credentials: true`. Đây là bề mặt duy nhất mà việc
-phản hồi lại origin và thông tin xác thực cùng tồn tại, đồng thời nó **độc lập với
-`CORS_ALLOW_ALL`**. Các route này được xác thực ở cấp quản trị
-(`requireManagementAuth`); những người vận hành công khai dashboard ra ngoài máy chủ cần
-biết rằng đây là nơi duy nhất các header phản hồi cho phép đọc cross-origin có thông tin xác thực.
-Việc thắt chặt nó thành một danh sách cho phép rõ ràng được theo dõi
-riêng biệt với hướng dẫn CORS này.
-
 ## Danh sách kiểm tra cho môi trường production
 
 - **Tuyệt đối không đặt `CORS_ALLOW_ALL=true` trong môi trường production.** Hãy để biến này không được thiết lập.
@@ -153,15 +139,14 @@ tab Security), không phải trong proxy.
 
 ## Các tệp nguồn
 
-| Hạng mục                                        | Tệp                                                                  |
-| ----------------------------------------------- | -------------------------------------------------------------------- |
-| Phân giải allowlist + `getCorsStatus()`         | `src/server/cors/origins.ts`                                         |
-| Áp dụng middleware (nguồn thông tin duy nhất)   | `src/server/authz/pipeline.ts`                                       |
-| Settings → đưa origin vào runtime               | `src/lib/config/runtimeSettings.ts`                                  |
-| Trạng thái runtime cho dashboard                | `src/app/api/settings/authz-inventory/route.ts`                      |
-| Biểu ngữ cảnh báo trên dashboard                | `src/app/(dashboard)/dashboard/settings/components/AuthzSection.tsx` |
-| Trường CORS Allowed Origins                     | `src/app/(dashboard)/dashboard/settings/components/SecurityTab.tsx`  |
-| CORS theo từng route của Cloud-Agent (ngoại lệ) | `src/lib/cloudAgent/api.ts`                                          |
+| Hạng mục                                      | Tệp                                                                  |
+| --------------------------------------------- | -------------------------------------------------------------------- |
+| Phân giải allowlist + `getCorsStatus()`       | `src/server/cors/origins.ts`                                         |
+| Áp dụng middleware (nguồn thông tin duy nhất) | `src/server/authz/pipeline.ts`                                       |
+| Settings → đưa origin vào runtime             | `src/lib/config/runtimeSettings.ts`                                  |
+| Trạng thái runtime cho dashboard              | `src/app/api/settings/authz-inventory/route.ts`                      |
+| Biểu ngữ cảnh báo trên dashboard              | `src/app/(dashboard)/dashboard/settings/components/AuthzSection.tsx` |
+| Trường CORS Allowed Origins                   | `src/app/(dashboard)/dashboard/settings/components/SecurityTab.tsx`  |
 
 ## Xem thêm
 

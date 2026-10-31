@@ -43,8 +43,6 @@ v3.7.x → v3.8.0 tsükkel tõi kaasa nullkonfiguratsiooniga automaatse ruutimis
 - 🤝 **GitLab Duo OAuth teenusepakkuja** — logi sisse GitLabi mandaatidega
 - 🧠 **Põhjenduskäigu taasesituse vahemälu (Reasoning Replay Cache)** — hübriidne mällu- ja SQLite-põhine põhjenduskäikude jälgede säilitamine
 
-📚 **Seotud dokumendid:** [Oskuste raamistik](../frameworks/SKILLS.md) · [Mälusüsteem](../frameworks/MEMORY.md) · [Pilveagendid](../frameworks/CLOUD_AGENT.md) · [Veebihaagid (Webhooks)](../frameworks/WEBHOOKS.md) · [Põhjenduskäigu taasesituse vahemälu](../routing/REASONING_REPLAY.md)
-
 ---
 
 ## 🔌 Teenusepakkujad
@@ -103,12 +101,6 @@ Reaalajas jälgimine: töövalmisolek, mälu, versioon, latentsuse protsentiilid
 Neli režiimi API tõlgete silumiseks: **Mängu ala** (vormingu teisendaja), **Vestluse testija** (reaalajas päringud), **Testimispink** (partii testid) ja **Reaalajajälgija** (reaalajas voog).
 
 ![Tõlkemängu ala](../screenshots/05-translator.png)
-
----
-
-## 🎮 Mudeli mängu ala _(v2.0.9+)_
-
-Testi otse töölaualt mis tahes mudelit. Vali pakkuja, mudel ja lõpp-punkt, kirjuta viibaid Monaco Editoriga, voogesita vastuseid reaalajas, katkesta voog keskel ning vaata ajastuse mõõdikuid.
 
 ---
 

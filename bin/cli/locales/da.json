@@ -390,34 +390,6 @@
       "description": "MCP-revisionslog (alias for audit --source mcp)"
     }
   },
-  "a2a": {
-    "skills": {
-      "description": "Vis tilgængelige A2A-færdigheder fra agentkortet"
-    },
-    "invoke": {
-      "description": "Kald en A2A-færdighed, og returner opgave-ID'et",
-      "input": "JSON-inputobjekt",
-      "input_file": "Sti til JSON-inputfil",
-      "wait": "Vent på, at opgaven fuldføres, før der returneres",
-      "timeout": "Timeout for ventetid på fuldførelse i ms (standard: 60000)"
-    },
-    "tasks": {
-      "description": "Administrer A2A-opgaver",
-      "list": {
-        "status": "Filtrer efter status",
-        "skill": "Filtrer efter færdigheds-ID"
-      },
-      "watch": {
-        "description": "Forespørg opgavestatus løbende, indtil opgaven er fuldført"
-      },
-      "stream": {
-        "description": "Stream hændelser fra opgaveudførelsen via SSE"
-      },
-      "logs": {
-        "description": "Vis opgavemeddelelser og artefakter"
-      }
-    }
-  },
   "policy": {
     "description": "Administrer 67router-godkendelsespolitikker",
     "list": {
@@ -696,99 +668,6 @@
       "provider": "Udbyder-id, der skal tilbagekaldes",
       "connection_id": "Tilbagekald en bestemt forbindelse efter id",
       "yes": "Spring bekræftelsesprompten over"
-    }
-  },
-  "cloud": {
-    "description": "Administrer opgaver for cloudbaserede AI-agenter (codex, devin, jules)",
-    "agents": {
-      "description": "Vis tilgængelige cloudagenter"
-    },
-    "agent": {
-      "description": "Administrer opgaver for cloudagenten {agent}",
-      "auth": {
-        "description": "Godkend {agent} via OAuth"
-      }
-    },
-    "task": {
-      "description": "Administrer cloudagentopgaver",
-      "create": {
-        "description": "Opret en ny agentopgave",
-        "title": "Opgavetitel (som standard de første 80 tegn i prompten)",
-        "prompt": "Prompttekst til opgaven",
-        "prompt_file": "Læs prompt fra fil",
-        "repo": "URL til repository, der skal klones til opgaven",
-        "branch": "Navn på branch, der skal bruges",
-        "metadata": "JSON-metadataobjekt"
-      },
-      "list": {
-        "description": "Vis agentopgaver",
-        "status": "Filtrer efter status (running|completed|failed|cancelled)",
-        "limit": "Maksimalt antal resultater (standard: 50)"
-      },
-      "get": {
-        "description": "Hent opgavedetaljer efter id"
-      },
-      "status": {
-        "description": "Udskriv opgavestatus (running|completed|failed|cancelled)"
-      },
-      "cancel": {
-        "description": "Annuller en kørende opgave",
-        "yes": "Spring bekræftelsesprompten over"
-      },
-      "approve": {
-        "description": "Godkend agentplanen for at starte udførelsen"
-      },
-      "message": {
-        "description": "Send en besked til en kørende opgave"
-      }
-    },
-    "sources": {
-      "description": "Vis kildefiler, der er oprettet af en opgave"
-    }
-  },
-  "eval": {
-    "description": "Administrer evalueringspakker og kørsler",
-    "suites": {
-      "description": "Administrer evalueringspakker",
-      "list": {
-        "description": "Vis evalueringssuiter"
-      },
-      "get": {
-        "description": "Hent oplysninger om evalueringssuite via ID"
-      },
-      "create": {
-        "description": "Opret en evalueringssuite fra en JSON-fil",
-        "file": "Sti til JSON-filen med suitedefinitionen"
-      }
-    },
-    "run": {
-      "description": "Start en evalueringskørsel for en suite",
-      "model": "Model-ID, der skal evalueres (standard: auto)",
-      "combo": "Gennemtving en bestemt kombination efter navn",
-      "concurrency": "Antal samtidige prøver (standard: 4)",
-      "tag": "Mærk denne kørsel til senere filtrering",
-      "watch": "Overvåg kørslens status, indtil den er fuldført"
-    },
-    "list": {
-      "description": "Vis evalueringskørsler",
-      "suite": "Filtrer efter suite-ID",
-      "status": "Filtrer efter status",
-      "since": "Returner kørsler siden dette tidsstempel",
-      "limit": "Maksimalt antal resultater (standard: 50)"
-    },
-    "get": {
-      "description": "Hent oplysninger om evalueringskørsel via ID"
-    },
-    "results": {
-      "description": "Vis prøveresultater for en evalueringskørsel",
-      "failed": "Vis kun mislykkede prøver"
-    },
-    "cancel": {
-      "description": "Annuller en igangværende evaluering",
-      "yes": "Spring bekræftelsesprompten over"
-    },
-    "scorecard": {
-      "description": "Vis scorekort for en fuldført evalueringskørsel"
     }
   },
   "program": {

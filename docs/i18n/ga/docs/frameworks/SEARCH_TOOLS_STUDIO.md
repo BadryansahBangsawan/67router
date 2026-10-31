@@ -170,5 +170,4 @@ Leathnaíodh `src/app/api/search/providers/route.ts` chun:
 - Máistirphlean: `_tasks/features-v3.8.6/refactorpages/_orchestration/master-plan-group-C.md`
 - Plean gné: `_tasks/features-v3.8.6/refactorpages/18-search-tools-studio-redesign.plan.md`
 - Clárlann soláthraithe cuardaigh: `open-sse/config/searchRegistry.ts`
-- Stiúideo Playground (`ExportCodeModal` + `codeExport.ts` comhroinnte): `docs/frameworks/PLAYGROUND_STUDIO.md`
 - Inneall cúil aisghabhála gréasáin: `src/app/api/v1/web/fetch/route.ts`

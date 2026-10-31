@@ -124,5 +124,3 @@ sihtkeskkonnas eraldi autoriseeritud suitsutesti.
 - [Agendiprotokollid](./AGENT_PROTOCOLS_GUIDE.md)
 - [CLI-käivituslepingud](../guides/CLI-LAUNCH-CONTRACTS.md)
 - [CLI-tööriistad](../reference/CLI-TOOLS.md)
-- [A2A-server](./A2A-SERVER.md)
-- [Pilveagendid](./CLOUD_AGENT.md)

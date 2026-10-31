@@ -390,34 +390,6 @@
       "description": "MCP-Auditprotokoll (Alias für audit --source mcp)"
     }
   },
-  "a2a": {
-    "skills": {
-      "description": "Verfügbare A2A-Skills aus der Agentenkarte auflisten"
-    },
-    "invoke": {
-      "description": "Einen A2A-Skill aufrufen und die Aufgaben-ID zurückgeben",
-      "input": "JSON-Eingabeobjekt",
-      "input_file": "Pfad zur JSON-Eingabedatei",
-      "wait": "Vor der Rückgabe auf den Abschluss der Aufgabe warten",
-      "timeout": "Zeitüberschreitung beim Warten auf den Abschluss in ms (Standard: 60000)"
-    },
-    "tasks": {
-      "description": "A2A-Aufgaben verwalten",
-      "list": {
-        "status": "Nach Status filtern",
-        "skill": "Nach Skill-ID filtern"
-      },
-      "watch": {
-        "description": "Aufgabenstatus bis zum Abschluss abfragen"
-      },
-      "stream": {
-        "description": "Ereignisse der Aufgabenausführung über SSE streamen"
-      },
-      "logs": {
-        "description": "Aufgabennachrichten und Artefakte anzeigen"
-      }
-    }
-  },
   "policy": {
     "description": "67router-Autorisierungsrichtlinien verwalten",
     "list": {
@@ -696,99 +668,6 @@
       "provider": "Zu widerrufende Anbieter-ID",
       "connection_id": "Eine bestimmte Verbindung anhand ihrer ID widerrufen",
       "yes": "Bestätigungsabfrage überspringen"
-    }
-  },
-  "cloud": {
-    "description": "Cloud-KI-Agentenaufgaben verwalten (codex, devin, jules)",
-    "agents": {
-      "description": "Verfügbare Cloud-Agenten auflisten"
-    },
-    "agent": {
-      "description": "Cloud-Agentenaufgaben für {agent} verwalten",
-      "auth": {
-        "description": "{agent} über OAuth autorisieren"
-      }
-    },
-    "task": {
-      "description": "Cloud-Agentenaufgaben verwalten",
-      "create": {
-        "description": "Neue Agentenaufgabe erstellen",
-        "title": "Aufgabentitel (standardmäßig die ersten 80 Zeichen des Prompts)",
-        "prompt": "Prompt-Text der Aufgabe",
-        "prompt_file": "Prompt aus Datei lesen",
-        "repo": "Repository-URL, die für die Aufgabe geklont werden soll",
-        "branch": "Zu verwendender Branch-Name",
-        "metadata": "JSON-Metadatenobjekt"
-      },
-      "list": {
-        "description": "Agentenaufgaben auflisten",
-        "status": "Nach Status filtern (running|completed|failed|cancelled)",
-        "limit": "Maximale Anzahl an Ergebnissen (Standard: 50)"
-      },
-      "get": {
-        "description": "Aufgabendetails anhand der ID abrufen"
-      },
-      "status": {
-        "description": "Aufgabenstatus ausgeben (running|completed|failed|cancelled)"
-      },
-      "cancel": {
-        "description": "Eine laufende Aufgabe abbrechen",
-        "yes": "Bestätigungsabfrage überspringen"
-      },
-      "approve": {
-        "description": "Agentenplan genehmigen, um die Ausführung zu starten"
-      },
-      "message": {
-        "description": "Nachricht an eine laufende Aufgabe senden"
-      }
-    },
-    "sources": {
-      "description": "Von einer Aufgabe erzeugte Quelldateien auflisten"
-    }
-  },
-  "eval": {
-    "description": "Evaluierungssammlungen und -läufe verwalten",
-    "suites": {
-      "description": "Evaluierungssammlungen verwalten",
-      "list": {
-        "description": "Evaluierungssuiten auflisten"
-      },
-      "get": {
-        "description": "Details einer Evaluierungssuite anhand der ID abrufen"
-      },
-      "create": {
-        "description": "Eine Evaluierungssuite aus einer JSON-Datei erstellen",
-        "file": "Pfad zur JSON-Datei mit der Suitendefinition"
-      }
-    },
-    "run": {
-      "description": "Einen Evaluierungslauf für eine Suite starten",
-      "model": "Zu evaluierende Modell-ID (Standard: auto)",
-      "combo": "Eine bestimmte Kombination anhand ihres Namens erzwingen",
-      "concurrency": "Anzahl gleichzeitiger Stichproben (Standard: 4)",
-      "tag": "Diesen Lauf zur späteren Filterung mit einem Tag versehen",
-      "watch": "Fortschritt des Laufs bis zum Abschluss verfolgen"
-    },
-    "list": {
-      "description": "Evaluierungsläufe auflisten",
-      "suite": "Nach Suiten-ID filtern",
-      "status": "Nach Status filtern",
-      "since": "Läufe seit diesem Zeitstempel zurückgeben",
-      "limit": "Maximale Anzahl an Ergebnissen (Standard: 50)"
-    },
-    "get": {
-      "description": "Details eines Evaluierungslaufs anhand der ID abrufen"
-    },
-    "results": {
-      "description": "Stichprobenergebnisse für einen Evaluierungslauf anzeigen",
-      "failed": "Nur fehlgeschlagene Stichproben anzeigen"
-    },
-    "cancel": {
-      "description": "Einen laufenden Evaluierungslauf abbrechen",
-      "yes": "Bestätigungsabfrage überspringen"
-    },
-    "scorecard": {
-      "description": "Scorecard für einen abgeschlossenen Evaluierungslauf anzeigen"
     }
   },
   "program": {

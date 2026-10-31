@@ -169,5 +169,4 @@ Pinalawak ang `src/app/api/search/providers/route.ts` upang:
 - Pangunahing plano: `_tasks/features-v3.8.6/refactorpages/_orchestration/master-plan-group-C.md`
 - Plano ng feature: `_tasks/features-v3.8.6/refactorpages/18-search-tools-studio-redesign.plan.md`
 - Registry ng search provider: `open-sse/config/searchRegistry.ts`
-- Playground Studio (nakabahaging `ExportCodeModal` + `codeExport.ts`): `docs/frameworks/PLAYGROUND_STUDIO.md`
 - Backend ng web fetch: `src/app/api/v1/web/fetch/route.ts`

@@ -390,34 +390,6 @@
       "description": "MCP-auditlogboek (alias voor audit --source mcp)"
     }
   },
-  "a2a": {
-    "skills": {
-      "description": "Beschikbare A2A-vaardigheden van de agentkaart weergeven"
-    },
-    "invoke": {
-      "description": "Een A2A-vaardigheid aanroepen en de taak-ID retourneren",
-      "input": "JSON-invoerobject",
-      "input_file": "Pad naar JSON-invoerbestand",
-      "wait": "Wachten tot de taak is voltooid alvorens terug te keren",
-      "timeout": "Time-out voor wachten op voltooiing in ms (standaard: 60000)"
-    },
-    "tasks": {
-      "description": "A2A-taken beheren",
-      "list": {
-        "status": "Filteren op status",
-        "skill": "Filteren op vaardigheids-ID"
-      },
-      "watch": {
-        "description": "Taakstatus opvragen tot voltooiing"
-      },
-      "stream": {
-        "description": "Taakuitvoeringsgebeurtenissen streamen via SSE"
-      },
-      "logs": {
-        "description": "Taakberichten en artefacten weergeven"
-      }
-    }
-  },
   "policy": {
     "description": "67router-autorisatiebeleid beheren",
     "list": {
@@ -696,99 +668,6 @@
       "provider": "Provider-ID om in te trekken",
       "connection_id": "Een specifieke verbinding op ID intrekken",
       "yes": "Bevestigingsprompt overslaan"
-    }
-  },
-  "cloud": {
-    "description": "Cloud-AI-agenttaken beheren (codex, devin, jules)",
-    "agents": {
-      "description": "Beschikbare cloudagents weergeven"
-    },
-    "agent": {
-      "description": "Cloudagenttaken voor {agent} beheren",
-      "auth": {
-        "description": "{agent} autoriseren via OAuth"
-      }
-    },
-    "task": {
-      "description": "Cloudagenttaken beheren",
-      "create": {
-        "description": "Een nieuwe agenttaak aanmaken",
-        "title": "Taaktitel (standaard de eerste 80 tekens van de prompt)",
-        "prompt": "Tekst van taakprompt",
-        "prompt_file": "Prompt uit bestand lezen",
-        "repo": "Repository-URL om voor de taak te klonen",
-        "branch": "Te gebruiken branchnaam",
-        "metadata": "JSON-metadataobject"
-      },
-      "list": {
-        "description": "Agenttaken weergeven",
-        "status": "Filteren op status (running|completed|failed|cancelled)",
-        "limit": "Maximumaantal resultaten (standaard: 50)"
-      },
-      "get": {
-        "description": "Taakdetails op ID ophalen"
-      },
-      "status": {
-        "description": "Taakstatus weergeven (running|completed|failed|cancelled)"
-      },
-      "cancel": {
-        "description": "Een actieve taak annuleren",
-        "yes": "Bevestigingsprompt overslaan"
-      },
-      "approve": {
-        "description": "Het agentplan goedkeuren om de uitvoering te starten"
-      },
-      "message": {
-        "description": "Een bericht naar een actieve taak sturen"
-      }
-    },
-    "sources": {
-      "description": "Door een taak geproduceerde bronbestanden weergeven"
-    }
-  },
-  "eval": {
-    "description": "Evaluatiesuites en uitvoeringen beheren",
-    "suites": {
-      "description": "Evaluatiesuites beheren",
-      "list": {
-        "description": "Evaluatiesuites weergeven"
-      },
-      "get": {
-        "description": "Details van evaluatiesuite ophalen op ID"
-      },
-      "create": {
-        "description": "Een evaluatiesuite maken vanuit een JSON-bestand",
-        "file": "Pad naar JSON-bestand met suitedefinitie"
-      }
-    },
-    "run": {
-      "description": "Een evaluatierun starten voor een suite",
-      "model": "Te evalueren model-ID (standaard: auto)",
-      "combo": "Een specifieke combinatie afdwingen op naam",
-      "concurrency": "Aantal gelijktijdige samples (standaard: 4)",
-      "tag": "Deze run taggen om later te filteren",
-      "watch": "Voortgang van run volgen tot voltooiing"
-    },
-    "list": {
-      "description": "Evaluatieruns weergeven",
-      "suite": "Filteren op suite-ID",
-      "status": "Filteren op status",
-      "since": "Runs vanaf dit tijdstip retourneren",
-      "limit": "Maximaal aantal resultaten (standaard: 50)"
-    },
-    "get": {
-      "description": "Details van evaluatierun ophalen op ID"
-    },
-    "results": {
-      "description": "Sampleresultaten voor een evaluatierun weergeven",
-      "failed": "Alleen mislukte samples weergeven"
-    },
-    "cancel": {
-      "description": "Een actieve evaluatie annuleren",
-      "yes": "Bevestigingsprompt overslaan"
-    },
-    "scorecard": {
-      "description": "Scorekaart voor een voltooide evaluatierun weergeven"
     }
   },
   "program": {

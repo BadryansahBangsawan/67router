@@ -24,7 +24,6 @@ Kompletny przewodnik dotyczący konfigurowania dostawców, tworzenia kombinacji,
 - [System umiejętności](#-skills-system)
 - [System pamięci](#-memory-system)
 - [Webhooki](#-webhooks)
-- [Agenci w chmurze](#-cloud-agents)
 - [Zarządzanie programistyczne](#-programmatic-management)
 - [Wewnętrzny interfejs CLI](#-internal-cli)
 - [Aplikacja desktopowa (Electron)](#-desktop-application-electron)
@@ -1239,8 +1238,6 @@ Użyj adresu URL SSE `http://localhost:20128/api/mcp/sse` oraz klucza API typu B
 
 ### Zakresy
 
-MCP definiuje obecnie 32 nazwane zakresy. Każdy klucz Bearer można ograniczyć do określonych zakresów — pełną listę zakresów i narzędzi zawiera plik [MCP-SERVER.md](../frameworks/MCP-SERVER.md), a schemat JSON-RPC znajduje się w pliku [A2A-SERVER.md](../frameworks/A2A-SERVER.md).
-
 ---
 
 ## 🧠 System umiejętności
@@ -1249,7 +1246,6 @@ MCP definiuje obecnie 32 nazwane zakresy. Każdy klucz Bearer można ograniczyć
 
 - **Interfejs marketplace’u** — przeglądaj i instaluj umiejętności w sekcji **Panel → Umiejętności**
 - **Zakresy dla poszczególnych kluczy** — ograniczaj, które klucze API mogą wywoływać określone umiejętności
-- **Niestandardowe umiejętności** — umieść plik TypeScript w `src/lib/a2a/skills/`, zarejestruj go, a natychmiast będzie można go wywoływać przez A2A
 
 Pełna dokumentacja: [SKILLS.md](../frameworks/SKILLS.md).
 
@@ -1278,18 +1274,6 @@ Subskrybuj zdarzenia 67router na potrzeby monitorowania i automatyzacji w czasie
 - Ponowienia: 3 próby z wykładniczym wydłużaniem opóźnienia, a następnie kolejka komunikatów niedostarczonych
 
 Pełny schemat znajduje się w [WEBHOOKS.md](../frameworks/WEBHOOKS.md).
-
----
-
-## ☁️ Agenci chmurowi
-
-67router integruje się z chmurowymi agentami programistycznymi (**OpenAI Codex Cloud**, **Devin**, **Jules**, **Antigravity**), dzięki czemu możesz zlecać długotrwałe zadania z tego samego panelu, który obsługuje lokalne trasowanie.
-
-- Twórz zadania w sekcji **Panel → Agenci chmurowi** lub za pomocą `POST /api/v1/agents/tasks`
-- Śledź stan, logi i artefakty poszczególnych zadań
-- Używaj własnego klucza API dla każdego dostawcy — dane uwierzytelniające nigdy nie opuszczają instancji 67router
-
-Pełna dokumentacja: [CLOUD_AGENT.md](../frameworks/CLOUD_AGENT.md).
 
 ---
 
@@ -1346,7 +1330,6 @@ omniroute restore [<timestamp>]    # Przywraca dane z migawki
 omniroute health                   # Szczegółowy stan (bezpieczniki, pamięć podręczna, pamięć)
 omniroute quota                    # Wykorzystanie limitów dostawców
 omniroute mcp status               # Stan serwera MCP
-omniroute a2a status               # Stan serwera A2A
 omniroute tunnel list|create|stop  # Tunele Cloudflare/Tailscale/ngrok
 omniroute reset-password           # Resetuje hasło administratora
 omniroute --mcp                    # Uruchamia serwer MCP przez stdio

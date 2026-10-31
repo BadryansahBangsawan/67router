@@ -390,34 +390,6 @@
       "description": "Protokol auditu MCP (alias pre audit --source mcp)"
     }
   },
-  "a2a": {
-    "skills": {
-      "description": "Zobraziť zoznam dostupných zručností A2A z karty agenta"
-    },
-    "invoke": {
-      "description": "Vyvolať zručnosť A2A a vrátiť ID úlohy",
-      "input": "Vstupný objekt JSON",
-      "input_file": "Cesta k vstupnému súboru JSON",
-      "wait": "Pred návratom počkať na dokončenie úlohy",
-      "timeout": "Časový limit čakania na dokončenie v ms (predvolené: 60000)"
-    },
-    "tasks": {
-      "description": "Spravovať úlohy A2A",
-      "list": {
-        "status": "Filtrovať podľa stavu",
-        "skill": "Filtrovať podľa ID zručnosti"
-      },
-      "watch": {
-        "description": "Opakovane kontrolovať stav úlohy až do dokončenia"
-      },
-      "stream": {
-        "description": "Streamovať udalosti vykonávania úlohy prostredníctvom SSE"
-      },
-      "logs": {
-        "description": "Zobraziť správy a artefakty úlohy"
-      }
-    }
-  },
   "policy": {
     "description": "Spravovať autorizačné politiky 67router",
     "list": {
@@ -696,99 +668,6 @@
       "provider": "ID poskytovateľa, ktorého pripojenie sa má zrušiť",
       "connection_id": "Zrušiť konkrétne pripojenie podľa ID",
       "yes": "Preskočiť výzvu na potvrdenie"
-    }
-  },
-  "cloud": {
-    "description": "Spravovať úlohy cloudových agentov AI (codex, devin, jules)",
-    "agents": {
-      "description": "Zobraziť zoznam dostupných cloudových agentov"
-    },
-    "agent": {
-      "description": "Spravovať úlohy cloudového agenta {agent}",
-      "auth": {
-        "description": "Autorizovať agenta {agent} prostredníctvom OAuth"
-      }
-    },
-    "task": {
-      "description": "Spravovať úlohy cloudových agentov",
-      "create": {
-        "description": "Vytvoriť novú úlohu agenta",
-        "title": "Názov úlohy (predvolene prvých 80 znakov zadania)",
-        "prompt": "Text zadania úlohy",
-        "prompt_file": "Načítať zadanie zo súboru",
-        "repo": "URL repozitára, ktorý sa má naklonovať pre úlohu",
-        "branch": "Názov vetvy, ktorá sa má použiť",
-        "metadata": "Objekt metadát JSON"
-      },
-      "list": {
-        "description": "Zobraziť zoznam úloh agenta",
-        "status": "Filtrovať podľa stavu (running|completed|failed|cancelled)",
-        "limit": "Maximálny počet výsledkov (predvolené: 50)"
-      },
-      "get": {
-        "description": "Získať podrobnosti úlohy podľa ID"
-      },
-      "status": {
-        "description": "Vypísať stav úlohy (running|completed|failed|cancelled)"
-      },
-      "cancel": {
-        "description": "Zrušiť spustenú úlohu",
-        "yes": "Preskočiť výzvu na potvrdenie"
-      },
-      "approve": {
-        "description": "Schváliť plán agenta a spustiť vykonávanie"
-      },
-      "message": {
-        "description": "Odoslať správu spustenej úlohe"
-      }
-    },
-    "sources": {
-      "description": "Zobraziť zoznam zdrojových súborov vytvorených úlohou"
-    }
-  },
-  "eval": {
-    "description": "Spravovať sady a spustenia vyhodnotení",
-    "suites": {
-      "description": "Spravovať sady vyhodnotení",
-      "list": {
-        "description": "Zobraziť zoznam evaluačných súprav"
-      },
-      "get": {
-        "description": "Získať podrobnosti evaluačnej súpravy podľa ID"
-      },
-      "create": {
-        "description": "Vytvoriť evaluačnú súpravu zo súboru JSON",
-        "file": "Cesta k súboru JSON s definíciou súpravy"
-      }
-    },
-    "run": {
-      "description": "Spustiť evaluačný beh pre súpravu",
-      "model": "ID modelu na vyhodnotenie (predvolené: auto)",
-      "combo": "Vynútiť konkrétnu kombináciu podľa názvu",
-      "concurrency": "Počet súbežných vzoriek (predvolené: 4)",
-      "tag": "Označiť tento beh značkou na neskoršie filtrovanie",
-      "watch": "Sledovať priebeh behu až do dokončenia"
-    },
-    "list": {
-      "description": "Zobraziť zoznam evaluačných behov",
-      "suite": "Filtrovať podľa ID súpravy",
-      "status": "Filtrovať podľa stavu",
-      "since": "Vrátiť behy od tejto časovej pečiatky",
-      "limit": "Maximálny počet výsledkov (predvolené: 50)"
-    },
-    "get": {
-      "description": "Získať podrobnosti evaluačného behu podľa ID"
-    },
-    "results": {
-      "description": "Zobraziť výsledky vzoriek evaluačného behu",
-      "failed": "Zobraziť iba neúspešné vzorky"
-    },
-    "cancel": {
-      "description": "Zrušiť prebiehajúci evaluačný beh",
-      "yes": "Preskočiť výzvu na potvrdenie"
-    },
-    "scorecard": {
-      "description": "Zobraziť kartu skóre dokončeného evaluačného behu"
     }
   },
   "program": {

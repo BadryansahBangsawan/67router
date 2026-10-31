@@ -91,7 +91,7 @@ HTTP 400 — Model '<id>' is an image-generation model and cannot be used on
 Simple Browser вместо във външен браузър. Вграждането се **активира изрично на сървъра** чрез
 `DASHBOARD_ALLOW_EMBED=vscode`, което предоставя HTML страниците с
 `frame-ancestors 'self' vscode-webview:` вместо стандартните `frame-ancestors 'none'` +
-`X-Frame-Options: DENY`. API интерфейсът (`/api`, `/v1`, `/v1beta`, `/a2a`, `/healthz`) запазва
+`X-Frame-Options: DENY`. API интерфейсът (`/api`, `/v1`, `/v1beta`, `/healthz`) запазва
 строгите заглавки и в двата случая.
 
 > ⚠️ **Това е флаг за времето на компилиране, а не за времето на изпълнение.** Next.js компилира `headers()` в манифеста

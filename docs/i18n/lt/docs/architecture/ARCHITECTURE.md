@@ -128,13 +128,11 @@ Pagrindiniai puslapiai, esantys `src/app/(dashboard)/dashboard/`:
 - `/dashboard/limits` — kvotų ir dažnio valdikliai
 - `/dashboard/cli-tools` — CLI parengimas naudoti, vykdymo aplinkos aptikimas ir konfigūracijos generavimas
 - `/dashboard/agents` — aptikti ACP agentai ir pasirinktinių agentų registravimas
-- `/dashboard/cloud-agents` — debesijoje talpinamų agentų užduotys (Codex Cloud, Devin, Jules) ir užduočių gyvavimo ciklas
 - `/dashboard/skills` — A2A gebėjimų registras, izoliuotosios aplinkos vykdymas ir integruotų gebėjimų katalogas
 - `/dashboard/memory` — išsaugomos pokalbių atminties peržiūra ir paieška
 - `/dashboard/webhooks` — siunčiamų webhook prenumeratos, paslapčių keitimas ir pakartotinių bandymų statistika
 - `/dashboard/batch` — paketinių užduočių pateikimas ir eiga
 - `/dashboard/cache` — skaitymo metu užpildomo ir samprotavimo podėlių statistika bei šalinimo valdikliai
-- `/dashboard/playground` — interaktyvi pokalbių bandymų aplinka, skirta bet kuriam sukonfigūruotam deriniui ar modeliui
 - `/dashboard/changelog` — programoje integruota pakeitimų žurnalo peržiūros priemonė (atvaizduoja `CHANGELOG.md`)
 - `/dashboard/system` — vykdymo aplinkos diagnostika, versijos informacija ir aplinkos tikrinimo sąsaja
 - `/dashboard/onboarding` — pirmojo paleidimo sąrankos vedlys naujoms įdiegtims
@@ -252,7 +250,6 @@ Administravimo sritys:
 - Biudžetas: `src/app/api/usage/budget` (GET/POST)
 - Atsarginių variantų grandinės: `src/app/api/fallback/chains` (GET/POST/DELETE)
 - Atitikties auditas: `src/app/api/compliance/audit-log` (GET, su puslapiavimu ir struktūrizuotais metaduomenimis)
-- Vertinimai: `src/app/api/evals` (GET/POST), `src/app/api/evals/[suiteId]` (GET)
 - Strategijos: `src/app/api/policies` (GET/POST)
 - Sinchronizavimo prieigos raktai: `src/app/api/sync/tokens` (GET/POST), `src/app/api/sync/tokens/[id]` (GET/DELETE)
 - Konfigūracijos paketas: `src/app/api/sync/bundle` (GET, pagal ETag versijuojama nustatymų, teikėjų, derinių ir raktų momentinė kopija)
@@ -316,7 +313,6 @@ Domeno sluoksnio moduliai:
 - Duomenų gavimo skirtasis laikas: `src/shared/utils/fetchTimeout.ts`
 - Užklausų telemetrija: `src/shared/utils/requestTelemetry.ts`
 - Atitiktis / auditas: `src/lib/compliance/index.ts`
-- Vertinimų vykdymo priemonė: `src/lib/evals/evalRunner.ts`
 - Domeno būsenos išlaikymas: `src/lib/db/domainState.ts` — SQLite CRUD operacijos, skirtos atsarginio parinkimo grandinėms, biudžetams, sąnaudų istorijai, blokavimo būsenai ir grandinės pertraukikliams
 
 OAuth teikėjų moduliai (27 atskiri failai kataloge `src/lib/oauth/providers/`):
@@ -385,23 +381,6 @@ Pagrindinės galimybės:
 
 Išsamią algoritmo informaciją (veiksnių formules, svorių derinimą) žr.
 [`docs/routing/AUTO-COMBO.md`](../routing/AUTO-COMBO.md).
-
-### B. Debesijos agentai
-
-Debesijos agentų modulis trečiųjų šalių debesijoje teikiamas programinio kodo agentų platformas („Codex Cloud“, „Devin“,
-„Jules“) apgaubia vienodu, duomenų baze pagrįstu užduočių gyvavimo ciklu. Visiems užduočių kūrimo ir tikrinimo
-galiniams taškams reikalingas valdymo autentifikavimas.
-
-- Modulio šaknis: `src/lib/cloudAgent/` (`baseAgent.ts`, `registry.ts`, `api.ts`,
-  `types.ts`, `db.ts` ir kiekvieno agento pakatalogiai kataloge `agents/`)
-- Kiekvieno agento realizacijos: `agents/codex/`, `agents/devin/`, `agents/jules/`
-- Viešieji galiniai taškai: `/api/v1/agents/tasks/*` (sąrašo gavimas, kūrimas, gavimas, atšaukimas)
-- Valdymo galiniai taškai: `/api/cloud/*` (parengimas, būsena, paketinis apdorojimas)
-- Valdymo skydelis: `/dashboard/cloud-agents`
-- Saugykla: lentelė `cloud_agent_tasks`
-
-Išsamią kiekvieno agento parengimo ir OAuth informaciją žr.
-[`docs/frameworks/CLOUD_AGENT.md`](../frameworks/CLOUD_AGENT.md).
 
 ### C. Apsaugos priemonės
 

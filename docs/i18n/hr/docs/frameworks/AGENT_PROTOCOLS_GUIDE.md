@@ -4,7 +4,6 @@
 
 ---
 
-> **Izvor:** `src/lib/{a2a,acp,cloudAgent}/`, `src/app/api/{a2a,acp,cloud}/`, `src/app/api/v1/agents/`
 > **Posljednje ažuriranje:** 2026-06-28 — v3.8.40
 
 67router nudi tri različita sučelja povezana s agentima. Na prvi pogled izgledaju slično, ali rješavaju različite probleme. Ova će vam stranica pomoći odabrati odgovarajuće sučelje.
@@ -20,52 +19,6 @@
 Sva su tri sučelja neovisna — odaberite bilo koju kombinaciju.
 
 ## Stablo odlučivanja
-
-```
-Treba li vam usluga u oblaku za obavljanje posla izvan ovog računala (Codex Cloud / Cursor Cloud / Devin / Jules)?
-├─ DA → Agenti u oblaku (POST /api/v1/agents/tasks)
-└─ NE → Nastavite
-    │
-    Imate li drugog agenta koji podržava A2A i želi surađivati?
-    ├─ DA → A2A (POST /a2a)
-    └─ NE → Nastavite
-        │
-        Trebate li prikazati / konfigurirati CLI agente za programiranje instalirane lokalno?
-        ├─ DA → ACP (GET /api/acp/agents)
-        └─ NE → Upotrijebite obični /v1/chat/completions
-```
-
-## 1. A2A — Agent-to-Agent
-
-**Specifikacija:** [A2A v0.3](https://a2a-protocol.org)
-**Krajnja točka 67routera:** `POST /a2a` (JSON-RPC 2.0)
-**Kartica agenta:** `GET /.well-known/agent.json`
-
-### Kada upotrebljavati
-
-- Pri izradi sustava s više agenata u kojem je 67router jedan od sudionika
-- Za izlaganje inteligentnog usmjeravanja 67routera (pametno usmjeravanje, upravljanje kvotama itd.) agentima u radnim okvirima kao što su Google ADK ili generičke mreže agenata
-- Za omatanje 67routera standardnim sučeljem za otkrivanje i pozivanje
-
-### Metode
-
-- `message/send` — pošaljite poruku i primite sinkroni odgovor
-- `message/stream` — pošaljite poruku i primajte događaje napretka putem SSE prijenosa
-- `tasks/get` — dohvatite zadatak prema ID-u
-- `tasks/cancel` — otkažite zadatak koji se izvršava
-
-### Ugrađene vještine (6)
-
-- `smart-routing` — usmjerava upit kroz optimalnu kombinaciju
-- `quota-management` — izvještava o stanju kvote za svakog pružatelja
-- `provider-discovery` — prikazuje instalirane pružatelje i njihove mogućnosti
-- `cost-analysis` — procjenjuje trošak zahtjeva/razgovora
-- `health-report` — objedinjuje stanje prekidača, razdoblja čekanja i blokade za svakog pružatelja
-- `list-capabilities` — navodi dostupne vještine i metapodatke agenta
-
-### Detaljnije
-
-Pojedinosti o prijenosu, strukturi kartice agenta, konfiguraciji TTL-a zadataka i predlošku za dodavanje novih vještina potražite u dokumentu [A2A-SERVER.md](./A2A-SERVER.md).
 
 ## 2. ACP — registar CLI agenata
 
@@ -125,86 +78,7 @@ Oblik tijela za POST (`customAgentBodySchema` u `src/app/api/acp/agents/route.ts
   opcija pružatelja. Za uobičajenu interaktivnu upotrebu sami pokrenite konfigurirani CLI ili
   upotrijebite `omniroute run`.
 
-## 3. Agenti u oblaku
-
-**67router krajnje točke:** `/api/v1/agents/tasks/*` (životni ciklus) + `/api/cloud/*` (infrastruktura)
-**Izvor:** `src/lib/cloudAgent/`
-
-### Što je to
-
-Jedinstveno sučelje za agente za programiranje u oblaku drugih pružatelja. Pošaljete upit i URL repozitorija, 67router ga prosljeđuje odgovarajućem agentu u oblaku, provjerava status i vraća rezultate.
-
-### Podržani agenti (4, svi potvrđeni u `src/lib/cloudAgent/agents/`)
-
-- `codex-cloud` — OpenAI Codex Cloud
-- `devin` — Cognition Devin
-- `jules` — Google Jules
-
-### Životni ciklus
-
-```
-POST /api/v1/agents/tasks
-  → BaseAgent.createTask() za svaku klasu agenta
-  → vanjska usluga započinje rad
-  → redak zadatka stvara se u bazi podataka (cloud_agent_tasks)
-  ↓
-GET /api/v1/agents/tasks/[id]
-  → odgođena sinkronizacija statusa s pružateljem
-  → vraća trenutačni status + plan + zapisnik aktivnosti
-  ↓
-POST /api/v1/agents/tasks/[id]   (radnja: "approve" | "message" | "cancel")
-  → prosljeđuje pružatelju (ili lokalno označava kao otkazano)
-  ↓
-DELETE /api/v1/agents/tasks/[id]
-  → lokalno otkazivanje
-```
-
-### Autentifikacija
-
-⚠️ **Sve krajnje točke `/api/v1/agents/tasks/*` zahtijevaju upravljačku autentifikaciju** (commit `588a0333`). Pozivatelji koji upotrebljavaju samo Bearer autentifikaciju od verzije v3.8.0 primaju 401.
-
-### Detaljan pregled
-
-Pogledajte [CLOUD_AGENT.md](./CLOUD_AGENT.md) za ugovor `CloudAgentBase`, pojedinosti o svakom agentu, detalje sheme i krajnje točke infrastrukture vjerodajnica.
-
-## Usporedba: A2A i agenti u oblaku
-
-Oba podržavaju „dugotrajne zadatke”, ali na različitim razinama:
-
-| Aspekt                  | A2A                                                                                                      | Agenti u oblaku                                                 |
-| ----------------------- | -------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------- |
-| Standard                | Otvoreni A2A v0.3                                                                                        | Specifično za 67router                                          |
-| Gdje se izvršava obrada | Unutar sustava 67router (upotrebljava konfigurirane kombinacije)                                         | Izvana (poslužitelji Codex / Devin / Jules)                     |
-| Trajanje zadatka        | Zadani TTL iznosi 5 min (može se konfigurirati u `TaskManager`)                                          | Od nekoliko minuta do nekoliko sati                             |
-| Poznavanje repozitorija | Ne (prosljeđuje samo upite)                                                                              | Da (URL repozitorija + grana)                                   |
-| Slučaj upotrebe         | Suradnja među agentima, pametno usmjeravanje kao usluga                                                  | Delegiranje zadatka „implementiraj značajku X u repozitoriju Y” |
-| Autentifikacija         | Neobavezni `OMNIROUTE_API_KEY` za `/a2a`; upravljački pristup za REST pomoćne krajnje točke `/api/a2a/*` | Uvijek upravljački pristup                                      |
-
 ## Primjeri integracije
-
-### Otkrijte A2A mogućnosti sustava 67router
-
-```bash
-curl http://localhost:20128/.well-known/agent.json
-```
-
-Vraća karticu agenta sa svih 6 vještina, prijenosima i verzijom.
-
-### Pozovite 67router kao A2A agenta
-
-```bash
-curl -X POST http://localhost:20128/a2a \
-  -H "Content-Type: application/json" \
-  -d '{
-    "jsonrpc": "2.0",
-    "method": "message/send",
-    "params": {
-      "messages": [{"role": "user", "content": "Route this prompt"}],
-      "skill": "smart-routing"
-    },
-    "id": 1
-  }'
-```
 
 ### Navedite instalirane CLI agente putem ACP-a
 
@@ -227,30 +101,6 @@ curl -X POST http://localhost:20128/api/acp/agents \
     "versionCommand": "--version",
     "providerAlias": "openai"
   }'
-```
-
-### Pošaljite zadatak agentu u oblaku
-
-```bash
-curl -X POST http://localhost:20128/api/v1/agents/tasks \
-  -H "Cookie: auth_token=..." \
-  -H "Content-Type: application/json" \
-  -d '{
-    "providerId": "devin",
-    "prompt": "Implement feature X in repo Y",
-    "source": {
-      "repoName": "user/repo",
-      "repoUrl": "https://github.com/user/repo",
-      "branch": "main"
-    }
-  }'
-```
-
-### Provjeravajte status zadatka u oblaku
-
-```bash
-curl http://localhost:20128/api/v1/agents/tasks/<task-id> \
-  -H "Cookie: auth_token=..."
 ```
 
 ## Kada što upotrebljavati
@@ -283,8 +133,6 @@ curl http://localhost:20128/api/v1/agents/tasks/<task-id> \
 
 ## Pogledajte i
 
-- [A2A-SERVER.md](./A2A-SERVER.md) — detaljan pregled A2A-a
-- [CLOUD_AGENT.md](./CLOUD_AGENT.md) — detaljan pregled agenata u oblaku
 - [CLI-TOOLS.md](../reference/CLI-TOOLS.md) — vanjske CLI integracije (upotrebljavaju ACP)
 - [SKILLS.md](./SKILLS.md) — okvir vještina (razlikuje se od A2A vještina — lokalno izolirano okruženje za izvršavanje)
 - [API_REFERENCE.md](../reference/API_REFERENCE.md#agents-protocol) — referenca krajnjih točaka

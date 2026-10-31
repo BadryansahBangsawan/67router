@@ -92,7 +92,7 @@ l’extension.
 Simple Browser plutôt que dans un navigateur externe. L’intégration est **activée explicitement côté serveur** via
 `DASHBOARD_ALLOW_EMBED=vscode`, ce qui sert les pages HTML avec
 `frame-ancestors 'self' vscode-webview:` au lieu de la valeur par défaut `frame-ancestors 'none'` +
-`X-Frame-Options: DENY`. La surface de l’API (`/api`, `/v1`, `/v1beta`, `/a2a`, `/healthz`) conserve les
+`X-Frame-Options: DENY`. La surface de l’API (`/api`, `/v1`, `/v1beta`, `/healthz`) conserve les
 en-têtes stricts dans tous les cas.
 
 > ⚠️ **Il s’agit d’un indicateur de compilation, et non d’exécution.** Next.js compile `headers()` dans le manifeste

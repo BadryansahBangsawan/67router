@@ -92,7 +92,7 @@ Nire-render ng `omnicopilot.dashboardOpen: "editor"` ang dashboard ng 67router s
 Simple Browser sa halip na sa isang external na browser. Ang pag-embed ay **kailangang tahasang i-enable sa server** sa pamamagitan ng
 `DASHBOARD_ALLOW_EMBED=vscode`, na naghahatid sa mga HTML page gamit ang
 `frame-ancestors 'self' vscode-webview:` sa halip na ang default na `frame-ancestors 'none'` +
-`X-Frame-Options: DENY`. Pinapanatili ng API surface (`/api`, `/v1`, `/v1beta`, `/a2a`, `/healthz`) ang
+`X-Frame-Options: DENY`. Pinapanatili ng API surface (`/api`, `/v1`, `/v1beta`, `/healthz`) ang
 mahihigpit na header sa alinmang paraan.
 
 > ⚠️ **Isa itong build-time flag, hindi runtime flag.** Kino-compile ng Next.js ang `headers()` sa route

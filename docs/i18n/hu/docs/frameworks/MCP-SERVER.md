@@ -235,17 +235,6 @@ a futásidejű útválasztási/gyorsítótárazási/tömörítési/memória/kép
 korlátozódik. Két szomszédos keretrendszer szállítódik az MCP szerverrel együtt a v3.8.0-ban, és külön
 vannak dokumentálva:
 
-### Felhőügynökök
-
-A felhőügynökök folyamaton kívüli AI kódoló ügynökök (codex-cloud, cursor-cloud, devin, jules),
-amelyek a 67router-ba ugyanazon a kapcsolati modellen keresztül vannak bekötve, mint az LLM szolgáltatók.
-Saját REST felületükön keresztül érhetők el (`/api/v1/agents/*`), és **nem** részei az MCP
-eszközkatalógusnak — egy felhőügynök hívása nem fogyaszt MCP hatókört.
-
-- Implementáció: `src/lib/cloudAgent/` (`registry.ts`, `agents/codex.ts`, `agents/cursor.ts`, `agents/devin.ts`, `agents/jules.ts`).
-- Életciklus: `createTask`, `getStatus`, `approvePlan`, `sendMessage`, `listSources`.
-- Dokumentáció: [docs/frameworks/CLOUD_AGENT.md](./CLOUD_AGENT.md).
-
 ### Korlátok (Guardrails)
 
 A korlátok (guardrails) végrehajtás előtti/utáni szűrők (vision-bridge, pii-masker, prompt-injection),

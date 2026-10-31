@@ -1415,9 +1415,8 @@ Phản hồi GET bao gồm `agents[]` (id, name, binary, version, installed, pro
 
 ### Đánh giá
 
-| Endpoint     | Phương thức | Mô tả                                   |
-| ------------ | ----------- | --------------------------------------- |
-| `/api/evals` | GET/POST    | Liệt kê các bộ đánh giá / chạy đánh giá |
+| Endpoint | Phương thức | Mô tả |
+| -------- | ----------- | ----- |
 
 ### Chính sách
 
@@ -1740,31 +1739,6 @@ Các đăng ký webhook gửi đi cho các sự kiện 67router (hoàn tất yê
 
 ---
 
-## Giao thức tác tử
-
-Các tác vụ tác tử đám mây (Claude Code, Codex Cloud, OpenHands, v.v.) được thực thi từ xa thay mặt cho người dùng 67router.
-
-| Phương thức | Đường dẫn                     | Mô tả                                                                                                                                                       |
-| ----------- | ----------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| GET         | `/api/v1/agents/tasks`        | Liệt kê tác vụ — tùy chọn `?provider=`, `?status=`, `?limit=` (1–500, mặc định 50)                                                                          |
-| POST        | `/api/v1/agents/tasks`        | Tạo tác vụ — phần thân được xác thực bởi `CreateCloudAgentTaskSchema` (`providerId`, `prompt`, `source`, `options?`). Trả về `201` cùng với phong bì tác vụ |
-| DELETE      | `/api/v1/agents/tasks?id=...` | Xóa một tác vụ                                                                                                                                              |
-| GET         | `/api/v1/agents/tasks/[id]`   | Đọc tác vụ — đồng bộ làm mới trạng thái từ tác tử đám mây nguồn khi `external_id` được thiết lập                                                            |
-| POST        | `/api/v1/agents/tasks/[id]`   | Hành động phân biệt: `{action: "approve"}`, `{action: "message", message}`, hoặc `{action: "cancel"}`                                                       |
-| DELETE      | `/api/v1/agents/tasks/[id]`   | Xóa một tác vụ cụ thể theo id                                                                                                                               |
-
-> **Xác thực:** mọi phương thức đều yêu cầu xác thực quản lý (`requireCloudAgentManagementAuth`). Trước v3.8.0, các phương thức này không yêu cầu xác thực — xem commit `588a0333` để biết thay đổi gây mất tương thích.
-
-```bash
-# Tạo một tác vụ đám mây Claude Code
-curl -X POST http://localhost:20128/api/v1/agents/tasks \
-  -H "Authorization: Bearer your-management-key" \
-  -H "Content-Type: application/json" \
-  -d '{"providerId":"claude-code-cloud","prompt":"Fix the failing test","source":{"repo":"...","branch":"..."}}'
-```
-
----
-
 ## Proxy quản lý
 
 Các proxy HTTP(S)/SOCKS đi ra có thể được gán cho nhà cung cấp, tài khoản hoặc áp dụng trên toàn hệ thống.
@@ -1884,48 +1858,10 @@ Kho lưu trữ bộ nhớ hội thoại/thông tin thực tế lâu dài, đư�
 
 67router cung cấp một điểm cuối A2A (Agent-to-Agent) JSON-RPC 2.0 cùng với một lớp bọc REST phục vụ việc kiểm tra/sử dụng bảng điều khiển.
 
-### JSON-RPC
-
-```bash
-POST /a2a
-Authorization: Bearer your-api-key   # tùy chọn trừ khi OMNIROUTE_API_KEY được thiết lập
-Content-Type: application/json
-
-{
-  "jsonrpc": "2.0",
-  "id": 1,
-  "method": "message/send",
-  "params": {
-    "skill": "smart-routing",
-    "messages": [{"role": "user", "content": "Route this coding task"}]
-  }
-}
-```
-
-Các phương thức được hỗ trợ (tất cả đều phụ thuộc vào `settings.a2aEnabled`):
-
-| Phương thức      | Mô tả                                                          |
-| ---------------- | -------------------------------------------------------------- |
-| `message/send`   | Thực thi kỹ năng đồng bộ; trả về `{task, artifacts, metadata}` |
-| `message/stream` | Thực thi SSE dạng luồng cho cùng một tập hợp kỹ năng           |
-| `tasks/get`      | Truy xuất một tác vụ theo `taskId`                             |
-| `tasks/cancel`   | Hủy một tác vụ theo `taskId`                                   |
-
-Các kỹ năng tích hợp sẵn: `smart-routing`, `quota-management`, `provider-discovery`, `cost-analysis`, `health-report`.
-
-### Thẻ tác nhân
-
-```bash
-GET /.well-known/agent.json
-```
-
-Trả về thẻ tác nhân A2A công khai (tên, mô tả, các khả năng, danh mục kỹ năng, cơ chế xác thực) — được lưu vào bộ nhớ đệm công khai trong 1 giờ. Không yêu cầu xác thực.
-
 ### Các trình trợ giúp REST
 
 | Phương thức | Đường dẫn                    | Mô tả                                                                                                               |
 | ----------- | ---------------------------- | ------------------------------------------------------------------------------------------------------------------- |
-| GET         | `/api/a2a/status`            | Trạng thái bật A2A + số liệu thống kê tác vụ + bản tóm tắt thẻ tác nhân đã lưu vào bộ nhớ đệm                       |
 | GET         | `/api/a2a/tasks`             | Liệt kê tác vụ — `?state=submitted\|working\|completed\|failed\|cancelled`, `?skill=`, `?limit=` (≤200), `?offset=` |
 | POST        | `/api/a2a/tasks`             | (Chưa được triển khai dưới dạng trình trợ giúp REST — tạo qua JSON-RPC `message/send`)                              |
 | GET         | `/api/a2a/tasks/[id]`        | Truy xuất một tác vụ                                                                                                |
@@ -1945,12 +1881,8 @@ Trả về thẻ tác nhân A2A công khai (tên, mô tả, các khả năng, da
 | GET | `/api/cloud/models/alias` | Liệt kê các bí danh mô hình được cung cấp cho tính năng đồng bộ hóa đám mây |
 | GET | `/api/assess` | Đọc các phân loại thẩm định mới nhất (theo từng nhà cung cấp/mô hình) |
 | POST | `/api/assess` | Chạy một lượt thẩm định — nội dung: `{scope: {type:"all"}                                                   | {type:"provider", providerId} | {type:"model", modelId}, trigger?}` |
-| GET | `/api/evals` | Liệt kê các bộ đánh giá tích hợp sẵn + những lượt chạy gần đây nhất |
-| POST | `/api/evals` | Kích hoạt một lượt chạy đánh giá |
-| POST | `/api/evals/suites` | Tạo một bộ đánh giá tùy chỉnh — nội dung được xác thực bởi `evalSuiteSaveSchema` |
-| GET | `/api/evals/suites/[id]` | Truy xuất một bộ đánh giá tùy chỉnh |
 
-**Xác thực:** `/api/cloud/auth` trực tiếp xác thực khóa Bearer và chỉ trả về khóa đã che cùng `projectId` của từng kết nối đối với khóa có phạm vi `manage` / `admin`; các tuyến `/api/cloud/*`, `/api/evals/*` và `/api/assess` khác yêu cầu phiên quản lý/khóa API. POST `/api/assess` sử dụng `validateBody` với lược đồ phạm vi hợp phân biệt.
+**Xác thực:** `/api/cloud/auth` trực tiếp xác thực khóa Bearer và chỉ trả về khóa đã che cùng `projectId` của từng kết nối đối với khóa có phạm vi `manage` / `admin`; các tuyến `/api/cloud/*` và `/api/assess` khác yêu cầu phiên quản lý/khóa API. POST `/api/assess` sử dụng `validateBody` với lược đồ phạm vi hợp phân biệt.
 
 ---
 
@@ -2271,5 +2203,3 @@ Token `oma_live_…`, khóa API có phạm vi quản lý) và điểm khác bi�
 - Có thể bật/tắt `requireLogin` qua `/api/settings/require-login`
 - Các tuyến `/v1/*` có thể yêu cầu khóa API Bearer khi `REQUIRE_API_KEY=true`
 - Trong tài liệu tham khảo này, "token quản lý" / "khóa API có phạm vi quản lý" có nghĩa là một trong các nhóm được nêu trong hướng dẫn đó — không phải một loại bí mật bổ sung chưa được định nghĩa
-
-> **Thay đổi không tương thích (v3.8.0)** — `/api/v1/agents/tasks/*` và các điểm cuối quản lý thời gian chờ hiện yêu cầu **xác thực quản lý** (cookie `auth_token` của bảng điều khiển hoặc khóa API có phạm vi quản lý). Các máy khách trước đây gọi những tuyến này mà không xác thực sẽ nhận được `401 Unauthorized`. Xem commit `588a0333` (`fix(auth): require management auth for agent and cooldown APIs`).

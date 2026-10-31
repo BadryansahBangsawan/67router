@@ -390,34 +390,6 @@
       "description": "MCP 審計日誌（audit --source mcp 的別名）"
     }
   },
-  "a2a": {
-    "skills": {
-      "description": "從代理卡片列出可用的 A2A 技能"
-    },
-    "invoke": {
-      "description": "呼叫 A2A 技能並返回任務 ID",
-      "input": "JSON 輸入物件",
-      "input_file": "JSON 輸入檔案路徑",
-      "wait": "等待任務完成後返回",
-      "timeout": "等待完成的超時時間（毫秒，預設：60000）"
-    },
-    "tasks": {
-      "description": "管理 A2A 任務",
-      "list": {
-        "status": "按狀態篩選",
-        "skill": "按技能 ID 篩選"
-      },
-      "watch": {
-        "description": "輪詢任務狀態直至完成"
-      },
-      "stream": {
-        "description": "通過 SSE 流式傳輸任務執行事件"
-      },
-      "logs": {
-        "description": "顯示任務訊息和產物"
-      }
-    }
-  },
   "policy": {
     "description": "管理 67router 授權策略",
     "list": {
@@ -696,99 +668,6 @@
       "provider": "要撤銷的提供者 ID",
       "connection_id": "按 ID 撤銷特定連線",
       "yes": "跳過確認提示"
-    }
-  },
-  "cloud": {
-    "description": "管理雲 AI 代理任務（codex, devin, jules）",
-    "agents": {
-      "description": "列出可用的雲代理"
-    },
-    "agent": {
-      "description": "管理 {agent} 雲代理任務",
-      "auth": {
-        "description": "通過 OAuth 授權 {agent}"
-      }
-    },
-    "task": {
-      "description": "管理雲代理任務",
-      "create": {
-        "description": "建立新的代理任務",
-        "title": "任務標題（預設為提示的前 80 個字元）",
-        "prompt": "任務提示文本",
-        "prompt_file": "從檔案讀取提示",
-        "repo": "要克隆的任務倉庫 URL",
-        "branch": "要使用的分支名稱",
-        "metadata": "JSON 後設資料物件"
-      },
-      "list": {
-        "description": "列出代理任務",
-        "status": "按狀態篩選（running|completed|failed|cancelled）",
-        "limit": "最大結果數（預設：50）"
-      },
-      "get": {
-        "description": "按 ID 獲取任務詳情"
-      },
-      "status": {
-        "description": "列印任務狀態（running|completed|failed|cancelled）"
-      },
-      "cancel": {
-        "description": "取消執行中的任務",
-        "yes": "跳過確認提示"
-      },
-      "approve": {
-        "description": "批准代理計劃開始執行"
-      },
-      "message": {
-        "description": "向執行中的任務傳送訊息"
-      }
-    },
-    "sources": {
-      "description": "列出任務產生的原始檔"
-    }
-  },
-  "eval": {
-    "description": "管理評估套件和執行",
-    "suites": {
-      "description": "管理評估套件",
-      "list": {
-        "description": "列出評估套件"
-      },
-      "get": {
-        "description": "按 ID 獲取評估套件詳情"
-      },
-      "create": {
-        "description": "從 JSON 檔案建立評估套件",
-        "file": "套件定義 JSON 檔案路徑"
-      }
-    },
-    "run": {
-      "description": "為套件啟動評估執行",
-      "model": "要評估的模型 ID（預設：auto）",
-      "combo": "強制指定組合名稱",
-      "concurrency": "併發樣本數（預設：4）",
-      "tag": "標記此次執行以便後續篩選",
-      "watch": "觀察執行進度直至完成"
-    },
-    "list": {
-      "description": "列出評估執行",
-      "suite": "按套件 ID 篩選",
-      "status": "按狀態篩選",
-      "since": "返回自此時間戳以來的執行",
-      "limit": "最大結果數（預設：50）"
-    },
-    "get": {
-      "description": "按 ID 獲取評估執行詳情"
-    },
-    "results": {
-      "description": "顯示評估執行的樣本結果",
-      "failed": "僅顯示失敗的樣本"
-    },
-    "cancel": {
-      "description": "取消正在執行的評估",
-      "yes": "跳過確認提示"
-    },
-    "scorecard": {
-      "description": "顯示已完成評估執行的記分卡"
     }
   },
   "program": {

@@ -128,13 +128,11 @@ v3.8.0 પ્લેટફોર્મ માટેના પ્રમાણભ�
 - `/dashboard/limits` — ક્વોટા/દર નિયંત્રણો
 - `/dashboard/cli-tools` — CLI ઑનબોર્ડિંગ, રનટાઇમ શોધ, કૉન્ફિગરેશન જનરેશન
 - `/dashboard/agents` — શોધાયેલા ACP એજન્ટ્સ + કસ્ટમ એજન્ટ નોંધણી
-- `/dashboard/cloud-agents` — ક્લાઉડ-હોસ્ટેડ એજન્ટ કાર્યો (Codex Cloud, Devin, Jules) અને કાર્ય જીવનચક્ર
 - `/dashboard/skills` — A2A કૌશલ્ય રજિસ્ટ્રી, સૅન્ડબૉક્સ એક્ઝિક્યુશન, બિલ્ટ-ઇન કૌશલ્ય કૅટલૉગ
 - `/dashboard/memory` — સ્થાયી સંવાદાત્મક મેમરીનું નિરીક્ષણ અને પુનઃપ્રાપ્તિ
 - `/dashboard/webhooks` — આઉટબાઉન્ડ વેબહૂક સબ્સ્ક્રિપ્શન્સ, સિક્રેટ રોટેશન, પુનઃપ્રયાસના આંકડા
 - `/dashboard/batch` — બૅચ જોબ સબમિશન અને પ્રગતિ
 - `/dashboard/cache` — રીડ-થ્રૂ અને રીઝનિંગ કૅશના આંકડા, ઇવિક્શન નિયંત્રણો
-- `/dashboard/playground` — કોઈપણ કૉન્ફિગર કરેલા કોમ્બો/મોડેલ સામે ઇન્ટરેક્ટિવ ચૅટ પ્લેગ્રાઉન્ડ
 - `/dashboard/changelog` — ઇન-ઍપ ચેન્જલૉગ વ્યૂઅર (`CHANGELOG.md` રેન્ડર કરે છે)
 - `/dashboard/system` — રનટાઇમ નિદાન, વર્ઝન માહિતી, પર્યાવરણ માન્યતા સપાટી
 - `/dashboard/onboarding` — નવા ઇન્સ્ટોલેશન્સ માટે પ્રથમ-રન સેટઅપ વિઝાર્ડ
@@ -252,7 +250,6 @@ flowchart LR
 - બજેટ: `src/app/api/usage/budget` (GET/POST)
 - ફૉલબૅક ચેઇન્સ: `src/app/api/fallback/chains` (GET/POST/DELETE)
 - કમ્પ્લાયન્સ ઑડિટ: `src/app/api/compliance/audit-log` (GET, પેજિનેશન + સંરચિત મેટાડેટા સાથે)
-- મૂલ્યાંકનો: `src/app/api/evals` (GET/POST), `src/app/api/evals/[suiteId]` (GET)
 - નીતિઓ: `src/app/api/policies` (GET/POST)
 - સિંક ટોકન્સ: `src/app/api/sync/tokens` (GET/POST), `src/app/api/sync/tokens/[id]` (GET/DELETE)
 - કન્ફિગ બંડલ: `src/app/api/sync/bundle` (GET, સેટિંગ્સ/પ્રદાતાઓ/કૉમ્બોઝ/કીઝનો ETag-વર્ઝનવાળો સ્નૅપશૉટ)
@@ -316,7 +313,6 @@ flowchart LR
 - ફેચ ટાઇમઆઉટ: `src/shared/utils/fetchTimeout.ts`
 - રિક્વેસ્ટ ટેલિમેટ્રી: `src/shared/utils/requestTelemetry.ts`
 - અનુપાલન/ઑડિટ: `src/lib/compliance/index.ts`
-- ઇવૅલ રનર: `src/lib/evals/evalRunner.ts`
 - ડોમેન સ્ટેટ પર્સિસ્ટન્સ: `src/lib/db/domainState.ts` — ફૉલબૅક ચેઇન્સ, બજેટ્સ, ખર્ચ ઇતિહાસ, લૉકઆઉટ સ્ટેટ અને સર્કિટ બ્રેકર્સ માટે SQLite CRUD
 
 OAuth પ્રોવાઇડર મોડ્યુલો (`src/lib/oauth/providers/` હેઠળ 27 અલગ ફાઇલો):
@@ -384,23 +380,6 @@ OAuth પ્રોવાઇડર મોડ્યુલો (`src/lib/oauth/provi
 
 સંપૂર્ણ અલ્ગોરિધમિક વિગતો (પરિબળ સૂત્રો, વેઇટ ટ્યુનિંગ) માટે,
 [`docs/routing/AUTO-COMBO.md`](../routing/AUTO-COMBO.md) જુઓ.
-
-### B. ક્લાઉડ એજન્ટ્સ
-
-ક્લાઉડ એજન્ટ્સ તૃતીય-પક્ષ હોસ્ટેડ કોડ-એજન્ટ પ્લેટફોર્મ્સ (Codex Cloud, Devin,
-Jules)ને એકસમાન DB-સમર્થિત કાર્ય જીવનચક્ર પાછળ આવરે છે. કાર્ય બનાવવાના/તપાસવાના
-બધા એન્ડપોઇન્ટ માટે મેનેજમેન્ટ ઑથેન્ટિકેશન જરૂરી છે.
-
-- મોડ્યુલ રૂટ: `src/lib/cloudAgent/` (`baseAgent.ts`, `registry.ts`, `api.ts`,
-  `types.ts`, `db.ts`, તેમજ `agents/` હેઠળની પ્રતિ-એજન્ટ સબડિરેક્ટરીઓ)
-- પ્રતિ-એજન્ટ અમલીકરણો: `agents/codex/`, `agents/devin/`, `agents/jules/`
-- જાહેર એન્ડપોઇન્ટ: `/api/v1/agents/tasks/*` (યાદી/બનાવો/મેળવો/રદ કરો)
-- મેનેજમેન્ટ એન્ડપોઇન્ટ: `/api/cloud/*` (પ્રોવિઝનિંગ, સ્થિતિ, બૅચ)
-- ડૅશબોર્ડ: `/dashboard/cloud-agents`
-- સ્ટોરેજ: `cloud_agent_tasks` ટેબલ
-
-પ્રતિ-એજન્ટ પ્રોવિઝનિંગ અને OAuthની વિશિષ્ટતાઓ માટે,
-[`docs/frameworks/CLOUD_AGENT.md`](../frameworks/CLOUD_AGENT.md) જુઓ.
 
 ### C. ગાર્ડરેલ્સ
 

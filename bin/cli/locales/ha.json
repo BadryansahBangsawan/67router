@@ -390,34 +390,6 @@
       "description": "Rajistan binciken MCP (wani suna na audit --source mcp)"
     }
   },
-  "a2a": {
-    "skills": {
-      "description": "Jera ƙwarewar A2A da ake da su daga katin wakili"
-    },
-    "invoke": {
-      "description": "Kira wata ƙwarewar A2A kuma dawo da ID na aikin",
-      "input": "Abun shigarwa na JSON",
-      "input_file": "Hanyar zuwa fayil ɗin shigarwa na JSON",
-      "wait": "Jira aikin ya kammala kafin a dawo",
-      "timeout": "Iyakar lokacin jiran kammalawa a ms (tsoho: 60000)"
-    },
-    "tasks": {
-      "description": "Sarrafa ayyukan A2A",
-      "list": {
-        "status": "Tace bisa matsayi",
-        "skill": "Tace bisa ID na ƙwarewa"
-      },
-      "watch": {
-        "description": "Duba matsayin aiki akai-akai har sai ya kammala"
-      },
-      "stream": {
-        "description": "Watsa abubuwan da ke faruwa yayin aiwatar da aiki ta SSE"
-      },
-      "logs": {
-        "description": "Nuna saƙonnin aiki da kayayyakin da aka samar"
-      }
-    }
-  },
   "policy": {
     "description": "Sarrafa manufofin ba da izini na 67router",
     "list": {
@@ -696,99 +668,6 @@
       "provider": "ID na mai samarwar da za a soke",
       "connection_id": "Soke takamaiman haɗi ta ID",
       "yes": "Tsallake saƙon neman tabbatarwa"
-    }
-  },
-  "cloud": {
-    "description": "Sarrafa ayyukan wakilan AI na gajimare (codex, devin, jules)",
-    "agents": {
-      "description": "Jera wakilan gajimare da ake da su"
-    },
-    "agent": {
-      "description": "Sarrafa ayyukan wakilin gajimare na {agent}",
-      "auth": {
-        "description": "Ba wa {agent} izini ta OAuth"
-      }
-    },
-    "task": {
-      "description": "Sarrafa ayyukan wakilan gajimare",
-      "create": {
-        "description": "Ƙirƙiri sabon aikin wakili",
-        "title": "Taken aiki (tsoho shi ne haruffa 80 na farko na umarni)",
-        "prompt": "Rubutun umarnin aiki",
-        "prompt_file": "Karanta umarni daga fayil",
-        "repo": "URL na ma'ajiyar da za a kwafa don aikin",
-        "branch": "Sunan reshen da za a yi amfani da shi",
-        "metadata": "Abun metadata na JSON"
-      },
-      "list": {
-        "description": "Jera ayyukan wakili",
-        "status": "Tace ta matsayi (running|completed|failed|cancelled)",
-        "limit": "Matsakaicin sakamako (tsoho: 50)"
-      },
-      "get": {
-        "description": "Samo cikakkun bayanan aiki ta ID"
-      },
-      "status": {
-        "description": "Buga matsayin aiki (running|completed|failed|cancelled)"
-      },
-      "cancel": {
-        "description": "Soke aiki da ke gudana",
-        "yes": "Tsallake tambayar tabbatarwa"
-      },
-      "approve": {
-        "description": "Amince da shirin wakilin don fara aiwatarwa"
-      },
-      "message": {
-        "description": "Aika saƙo zuwa aikin da ke gudana"
-      }
-    },
-    "sources": {
-      "description": "Jera fayilolin tushe da wani aiki ya samar"
-    }
-  },
-  "eval": {
-    "description": "Sarrafa rukunin gwaje-gwajen tantancewa da gudanarwarsu",
-    "suites": {
-      "description": "Sarrafa rukunin gwaje-gwajen tantancewa",
-      "list": {
-        "description": "Jera rukunin gwaje-gwajen tantancewa"
-      },
-      "get": {
-        "description": "Samo bayanan rukunin gwajin tantancewa ta ID"
-      },
-      "create": {
-        "description": "Ƙirƙiri rukunin gwajin tantancewa daga fayil ɗin JSON",
-        "file": "Hanyar zuwa fayil ɗin JSON mai bayyana rukunin gwajin"
-      }
-    },
-    "run": {
-      "description": "Fara gudanar da tantancewa ga wani rukuni",
-      "model": "ID na samfurin da za a tantance (tsoho: auto)",
-      "combo": "Tilasta amfani da takamaiman haɗi ta suna",
-      "concurrency": "Adadin samfurori da za a gudanar a lokaci guda (tsoho: 4)",
-      "tag": "Yi wa wannan gudanarwar alama don tacewa daga baya",
-      "watch": "Sa ido kan ci gaban gudanarwar har sai ta kammala"
-    },
-    "list": {
-      "description": "Jera gudanarwar tantancewa",
-      "suite": "Tace ta ID na rukuni",
-      "status": "Tace ta matsayi",
-      "since": "Dawo da gudanarwar tun daga wannan tambarin lokaci",
-      "limit": "Matsakaicin adadin sakamako (tsoho: 50)"
-    },
-    "get": {
-      "description": "Samo bayanan gudanarwar tantancewa ta ID"
-    },
-    "results": {
-      "description": "Nuna sakamakon samfurori na gudanarwar tantancewa",
-      "failed": "Nuna samfurorin da suka gaza kawai"
-    },
-    "cancel": {
-      "description": "Soke tantancewar da ke gudana",
-      "yes": "Tsallake tambayar tabbatarwa"
-    },
-    "scorecard": {
-      "description": "Nuna katin sakamako na gudanarwar tantancewa da aka kammala"
     }
   },
   "program": {

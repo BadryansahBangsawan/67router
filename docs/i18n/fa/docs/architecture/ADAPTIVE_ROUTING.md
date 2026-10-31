@@ -50,7 +50,6 @@
 | ترافیک سایهای                                | `open-sse/services/combo/shadowRouting.ts`                                                      |
 | حفاظهای کنترلی                               | `src/lib/guardrails/` (قلابهای پیش/پس)                                                          |
 | کش دقیق                                      | `src/lib/semanticCache.ts` (مبتنی بر امضا)                                                      |
-| ارزیابها / مسیریابی مبتنی بر ارزیابی         | `src/lib/evals/`، `open-sse/services/evalRouting.ts`                                            |
 | توضیحپذیری تصمیم Combo                       | `open-sse/services/combo/decisionTrace.ts`                                                      |
 | رویدادهای بیدرنگ داشبورد                     | `src/lib/events/eventBus.ts` (کانال اعلان رابط کاربری، محمولههای `unknown`، تاریخچهٔ 100 ورودی) |
 
@@ -270,8 +269,6 @@ providerای که امتیاز کیفیتش موقتاً افت میکند، ف�
 - یک `Evaluator` آتی (قطعی، داور محلی، HTTP، WASM) رویدادها/ردگیریها را مصرف
   میکند و یک `QualityScore` برمیگرداند که وارد همان مسیر
   `getQualityScore`/ضریب کیفیت میشود.
-- مسیریابی مبتنی بر ارزیابی موجود (`open-sse/services/evalRouting.ts`) از
-  هماکنون، در صورت فعال بودن، اهداف combo را بر اساس نرخ موفقیت `eval_runs`
   دوباره مرتب میکند.
 
 هیچ ارزیابیای بهصورت همگام در مسیر درخواست اجرا نمیشود و gateway در نبود

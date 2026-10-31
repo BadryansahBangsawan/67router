@@ -24,7 +24,6 @@ Pilnīgs ceļvedis pakalpojumu sniedzēju konfigurēšanai, kombināciju izveide
 - [Prasmju sistēma](#-skills-system)
 - [Atmiņas sistēma](#-memory-system)
 - [Webhooki](#-webhooks)
-- [Mākoņa agenti](#-cloud-agents)
 - [Programmatiskā pārvaldība](#-programmatic-management)
 - [Iekšējais CLI](#-internal-cli)
 - [Darbvirsmas lietotne (Electron)](#-desktop-application-electron)
@@ -1238,8 +1237,6 @@ Izmantojiet SSE URL `http://localhost:20128/api/mcp/sse` un Bearer API atslēgu,
 
 ### Pielāgošanas līmeņi
 
-MCP pašlaik definē 32 nosauktus pielāgošanas līmeņus. Katru Bearer atslēgu var ierobežot līdz konkrētiem līmeņiem — skatiet [MCP-SERVER.md](../frameworks/MCP-SERVER.md) par autoritatīvo pielāgošanas līmeņu un rīku inventāru un [A2A-SERVER.md](../frameworks/A2A-SERVER.md) par JSON-RPC shēmu.
-
 ---
 
 ## 🧠 Prasmju sistēma
@@ -1248,7 +1245,6 @@ MCP pašlaik definē 32 nosauktus pielāgošanas līmeņus. Katru Bearer atslēg
 
 - **Tirgus lietotāja saskarne** — Pārlūkojiet un instalējiet prasmes no **Vadības paneļa → Prasmes**
 - **Atslēgu mērogi** — Ierobežojiet, kuras API atslēgas var izsaukt kuras prasmes
-- **Pielāgotas prasmes** — Novietojiet TypeScript failu mapē `src/lib/a2a/skills/`, reģistrējiet to, un tas uzreiz kļūst pieejams izsaukšanai caur A2A
 
 Pilna atsauce: [SKILLS.md](../frameworks/SKILLS.md).
 
@@ -1277,18 +1273,6 @@ Abonējiet 67router notikumus reāllaika uzraudzībai un automatizācijai.
 - Atkārtojumi: 3 mēģinājumi ar eksponenciālu atkāpšanos, pēc tam mirušās vēstules rinda
 
 Pilna shēma atrodama [WEBHOOKS.md](../frameworks/WEBHOOKS.md).
-
----
-
-## ☁️ Mākoņa aģenti
-
-67router integrējas ar mākoņa kodēšanas aģentiem (**OpenAI Codex Cloud**, **Devin**, **Jules**, **Antigravity**), lai jūs varētu uzdot ilgstošus uzdevumus no tā paša vadības paneļa, kas apstrādā jūsu vietējo maršrutēšanu.
-
-- Izveidojiet uzdevumus **Vadības panelī → Mākoņa aģenti** vai caur `POST /api/v1/agents/tasks`
-- Izsekojiet statusu, žurnālus un izstrādājumus katram uzdevumam
-- Izmantojiet savu API atslēgu katram pakalpojuma sniedzējam — akreditācijas dati nekad neatstāj 67router instanci
-
-Pilna atsauce: [CLOUD_AGENT.md](../frameworks/CLOUD_AGENT.md).
 
 ---
 
@@ -1345,7 +1329,6 @@ omniroute restore [<timestamp>]    # Atjaunot no momentuzņēmuma
 omniroute health                   # Detalizēta veselības informācija (pārtraucēji, kešatmiņa, atmiņa)
 omniroute quota                    # Pakalpojumu sniedzēja kvotas lietojums
 omniroute mcp status               # MCP servera statuss
-omniroute a2a status               # A2A servera statuss
 omniroute tunnel list|create|stop  # Cloudflare/Tailscale/ngrok tuneļi
 omniroute reset-password           # Atiestatīt administratora paroli
 omniroute --mcp                    # Sākt MCP serveri pār stdio

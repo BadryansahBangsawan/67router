@@ -390,34 +390,6 @@
       "description": "MCP auditnapló (az audit --source mcp aliasa)"
     }
   },
-  "a2a": {
-    "skills": {
-      "description": "Az elérhető A2A-képességek listázása az ügynökkártyáról"
-    },
-    "invoke": {
-      "description": "Egy A2A-képesség meghívása és a feladatazonosító visszaadása",
-      "input": "JSON bemeneti objektum",
-      "input_file": "A JSON bemeneti fájl elérési útja",
-      "wait": "Várakozás a feladat befejezésére a visszatérés előtt",
-      "timeout": "A befejezésre való várakozás időkorlátja ms-ban (alapértelmezett: 60000)"
-    },
-    "tasks": {
-      "description": "A2A-feladatok kezelése",
-      "list": {
-        "status": "Szűrés állapot szerint",
-        "skill": "Szűrés képességazonosító szerint"
-      },
-      "watch": {
-        "description": "A feladat állapotának lekérdezése a befejezésig"
-      },
-      "stream": {
-        "description": "A feladat-végrehajtási események streamelése SSE-n keresztül"
-      },
-      "logs": {
-        "description": "Feladatüzenetek és műtermékek megjelenítése"
-      }
-    }
-  },
   "policy": {
     "description": "A 67router engedélyezési szabályzatainak kezelése",
     "list": {
@@ -696,99 +668,6 @@
       "provider": "A visszavonandó szolgáltató azonosítója",
       "connection_id": "Adott kapcsolat visszavonása azonosító alapján",
       "yes": "Megerősítési kérdés kihagyása"
-    }
-  },
-  "cloud": {
-    "description": "Felhőalapú AI-ügynökfeladatok kezelése (codex, devin, jules)",
-    "agents": {
-      "description": "Elérhető felhőalapú ügynökök listázása"
-    },
-    "agent": {
-      "description": "A(z) {agent} felhőalapú ügynök feladatainak kezelése",
-      "auth": {
-        "description": "A(z) {agent} engedélyezése OAuth használatával"
-      }
-    },
-    "task": {
-      "description": "Felhőalapú ügynökfeladatok kezelése",
-      "create": {
-        "description": "Új ügynökfeladat létrehozása",
-        "title": "Feladat címe (alapértelmezés szerint a prompt első 80 karaktere)",
-        "prompt": "A feladat promptjának szövege",
-        "prompt_file": "Prompt beolvasása fájlból",
-        "repo": "A feladathoz klónozandó adattár URL-je",
-        "branch": "Használandó ág neve",
-        "metadata": "JSON-metaadatobjektum"
-      },
-      "list": {
-        "description": "Ügynökfeladatok listázása",
-        "status": "Szűrés állapot szerint (running|completed|failed|cancelled)",
-        "limit": "Találatok maximális száma (alapértelmezett: 50)"
-      },
-      "get": {
-        "description": "Feladat részleteinek lekérése azonosító alapján"
-      },
-      "status": {
-        "description": "Feladat állapotának kiírása (running|completed|failed|cancelled)"
-      },
-      "cancel": {
-        "description": "Futó feladat megszakítása",
-        "yes": "Megerősítési kérdés kihagyása"
-      },
-      "approve": {
-        "description": "Az ügynök tervének jóváhagyása a végrehajtás elindításához"
-      },
-      "message": {
-        "description": "Üzenet küldése egy futó feladatnak"
-      }
-    },
-    "sources": {
-      "description": "Egy feladat által létrehozott forrásfájlok listázása"
-    }
-  },
-  "eval": {
-    "description": "Kiértékelési csomagok és futtatások kezelése",
-    "suites": {
-      "description": "Kiértékelési csomagok kezelése",
-      "list": {
-        "description": "Kiértékelési csomagok listázása"
-      },
-      "get": {
-        "description": "Kiértékelési csomag részleteinek lekérése azonosító alapján"
-      },
-      "create": {
-        "description": "Kiértékelési csomag létrehozása JSON-fájlból",
-        "file": "A csomag definícióját tartalmazó JSON-fájl elérési útja"
-      }
-    },
-    "run": {
-      "description": "Kiértékelési futtatás indítása egy csomaghoz",
-      "model": "A kiértékelendő modell azonosítója (alapértelmezett: auto)",
-      "combo": "Adott kombináció kényszerítése név alapján",
-      "concurrency": "Egyidejű minták száma (alapértelmezett: 4)",
-      "tag": "A futtatás megcímkézése későbbi szűréshez",
-      "watch": "A futtatás előrehaladásának követése a befejezésig"
-    },
-    "list": {
-      "description": "Kiértékelési futtatások listázása",
-      "suite": "Szűrés csomagazonosító alapján",
-      "status": "Szűrés állapot alapján",
-      "since": "Az ezen időbélyeg óta indított futtatások visszaadása",
-      "limit": "Találatok maximális száma (alapértelmezett: 50)"
-    },
-    "get": {
-      "description": "Kiértékelési futtatás részleteinek lekérése azonosító alapján"
-    },
-    "results": {
-      "description": "Kiértékelési futtatás mintaeredményeinek megjelenítése",
-      "failed": "Csak a sikertelen minták megjelenítése"
-    },
-    "cancel": {
-      "description": "Folyamatban lévő kiértékelés megszakítása",
-      "yes": "Megerősítési kérdés kihagyása"
-    },
-    "scorecard": {
-      "description": "Befejezett kiértékelési futtatás eredménykártyájának megjelenítése"
     }
   },
   "program": {

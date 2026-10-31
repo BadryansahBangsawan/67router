@@ -90,7 +90,7 @@ udvidelsen.
 Simple Browser i stedet for en ekstern browser. Indlejring er **frivillig på serveren** via
 `DASHBOARD_ALLOW_EMBED=vscode`, som leverer HTML-siderne med
 `frame-ancestors 'self' vscode-webview:` i stedet for standardindstillingen `frame-ancestors 'none'` +
-`X-Frame-Options: DENY`. API-overfladen (`/api`, `/v1`, `/v1beta`, `/a2a`, `/healthz`) beholder de
+`X-Frame-Options: DENY`. API-overfladen (`/api`, `/v1`, `/v1beta`, `/healthz`) beholder de
 strenge headere uanset hvad.
 
 > ⚠️ **Det er et flag ved byggetid, ikke ved kørselstid.** Next.js kompilerer `headers()` ind i route-

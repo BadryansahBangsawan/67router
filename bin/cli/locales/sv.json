@@ -390,34 +390,6 @@
       "description": "MCP-granskningslogg (alias för audit --source mcp)"
     }
   },
-  "a2a": {
-    "skills": {
-      "description": "Lista tillgängliga A2A-färdigheter från agentkortet"
-    },
-    "invoke": {
-      "description": "Anropa en A2A-färdighet och returnera uppgifts-ID:t",
-      "input": "JSON-indataobjekt",
-      "input_file": "Sökväg till JSON-indatafil",
-      "wait": "Vänta tills uppgiften har slutförts innan retur",
-      "timeout": "Tidsgräns för väntan på slutförande i ms (standard: 60000)"
-    },
-    "tasks": {
-      "description": "Hantera A2A-uppgifter",
-      "list": {
-        "status": "Filtrera efter status",
-        "skill": "Filtrera efter färdighets-ID"
-      },
-      "watch": {
-        "description": "Kontrollera uppgiftsstatusen regelbundet tills uppgiften har slutförts"
-      },
-      "stream": {
-        "description": "Strömma händelser från uppgiftskörningen via SSE"
-      },
-      "logs": {
-        "description": "Visa uppgiftsmeddelanden och artefakter"
-      }
-    }
-  },
   "policy": {
     "description": "Hantera 67router-auktoriseringspolicyer",
     "list": {
@@ -696,99 +668,6 @@
       "provider": "Leverantörs-ID att återkalla",
       "connection_id": "Återkalla en specifik anslutning efter ID",
       "yes": "Hoppa över bekräftelsefrågan"
-    }
-  },
-  "cloud": {
-    "description": "Hantera molnbaserade AI-agentuppgifter (codex, devin, jules)",
-    "agents": {
-      "description": "Lista tillgängliga molnagenter"
-    },
-    "agent": {
-      "description": "Hantera molnagentuppgifter för {agent}",
-      "auth": {
-        "description": "Auktorisera {agent} via OAuth"
-      }
-    },
-    "task": {
-      "description": "Hantera molnagentuppgifter",
-      "create": {
-        "description": "Skapa en ny agentuppgift",
-        "title": "Uppgiftens titel (som standard de första 80 tecknen i prompten)",
-        "prompt": "Text för uppgiftsprompt",
-        "prompt_file": "Läs prompt från fil",
-        "repo": "URL till kodarkiv att klona för uppgiften",
-        "branch": "Grennamn att använda",
-        "metadata": "JSON-metadataobjekt"
-      },
-      "list": {
-        "description": "Lista agentuppgifter",
-        "status": "Filtrera efter status (running|completed|failed|cancelled)",
-        "limit": "Maximalt antal resultat (standard: 50)"
-      },
-      "get": {
-        "description": "Hämta uppgiftsinformation efter ID"
-      },
-      "status": {
-        "description": "Skriv ut uppgiftsstatus (running|completed|failed|cancelled)"
-      },
-      "cancel": {
-        "description": "Avbryt en pågående uppgift",
-        "yes": "Hoppa över bekräftelsefrågan"
-      },
-      "approve": {
-        "description": "Godkänn agentplanen för att starta körningen"
-      },
-      "message": {
-        "description": "Skicka ett meddelande till en pågående uppgift"
-      }
-    },
-    "sources": {
-      "description": "Lista källfiler som skapats av en uppgift"
-    }
-  },
-  "eval": {
-    "description": "Hantera utvärderingssviter och körningar",
-    "suites": {
-      "description": "Hantera utvärderingssviter",
-      "list": {
-        "description": "Lista evalueringssviter"
-      },
-      "get": {
-        "description": "Hämta information om evalueringssvit via ID"
-      },
-      "create": {
-        "description": "Skapa en evalueringssvit från en JSON-fil",
-        "file": "Sökväg till JSON-filen med svitdefinitionen"
-      }
-    },
-    "run": {
-      "description": "Starta en evalueringskörning för en svit",
-      "model": "Modell-ID att utvärdera (standard: auto)",
-      "combo": "Framtvinga en specifik kombination via namn",
-      "concurrency": "Antal samtidiga testfall (standard: 4)",
-      "tag": "Tagga körningen för senare filtrering",
-      "watch": "Övervaka körningsförloppet tills det är slutfört"
-    },
-    "list": {
-      "description": "Lista evalueringskörningar",
-      "suite": "Filtrera efter svit-ID",
-      "status": "Filtrera efter status",
-      "since": "Returnera körningar sedan denna tidsstämpel",
-      "limit": "Maximalt antal resultat (standard: 50)"
-    },
-    "get": {
-      "description": "Hämta information om evalueringskörning via ID"
-    },
-    "results": {
-      "description": "Visa testfallsresultat för en evalueringskörning",
-      "failed": "Visa endast misslyckade testfall"
-    },
-    "cancel": {
-      "description": "Avbryt en pågående evaluering",
-      "yes": "Hoppa över bekräftelsefrågan"
-    },
-    "scorecard": {
-      "description": "Visa resultatkortet för en slutförd evalueringskörning"
     }
   },
   "program": {

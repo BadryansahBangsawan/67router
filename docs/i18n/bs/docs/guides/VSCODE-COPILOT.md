@@ -68,7 +68,7 @@ Katalog navodi modele od provajdera s **aktivnom vezom** _plus_ svakog **noAuth*
 
 ## Kontrolna tabla unutar VS Code kartice
 
-`omnicopilot.dashboardOpen: "editor"` prikazuje 67router kontrolnu tablu u kartici editora putem Simple Browser-a umjesto u eksternom pretraživaču. Ugrađivanje je **opciono na serveru** putem `DASHBOARD_ALLOW_EMBED=vscode`, što servira HTML stranice sa `frame-ancestors 'self' vscode-webview:` umjesto podrazumijevanog `frame-ancestors 'none'` + `X-Frame-Options: DENY`. API površina (`/api`, `/v1`, `/v1beta`, `/a2a`, `/healthz`) zadržava stroga zaglavlja u svakom slučaju.
+`omnicopilot.dashboardOpen: "editor"` prikazuje 67router kontrolnu tablu u kartici editora putem Simple Browser-a umjesto u eksternom pretraživaču. Ugrađivanje je **opciono na serveru** putem `DASHBOARD_ALLOW_EMBED=vscode`, što servira HTML stranice sa `frame-ancestors 'self' vscode-webview:` umjesto podrazumijevanog `frame-ancestors 'none'` + `X-Frame-Options: DENY`. API površina (`/api`, `/v1`, `/v1beta`, `/healthz`) zadržava stroga zaglavlja u svakom slučaju.
 
 > ⚠️ **Ovo je flag za vrijeme izgradnje (build-time), a ne za vrijeme izvršavanja (runtime).** Next.js kompajlira `headers()` u manifest rute, tako da `next.config.mjs` čita varijablu dok se bundle gradi (`next.config.mjs` → `resolveDashboardEmbedMode`, `scripts/build/dashboardEmbed.mjs`). Exportovanje iste ispred već izgrađenog servera ne mijenja ništa — zaglavlja su fiksirana.
 

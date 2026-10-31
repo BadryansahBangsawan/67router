@@ -15,7 +15,7 @@ Het biedt één OpenAI-compatibel endpoint (`/v1/*`) en routeert verkeer naar me
 
 Kernfunctionaliteiten:
 
-- OpenAI-compatibel API-oppervlak voor CLI/tools (375 providers, 156 uitvoeringsmodules)
+- OpenAI-compatibel API-oppervlak voor CLI/tools (372 providers, 156 uitvoeringsmodules)
 - Vertaling van requests/responses tussen providerindelingen
 - Fallback voor modelcombinaties (reeks van meerdere modellen)
 - Gestructureerde combinatiestappen (`provider + model + connection`) met runtimevolgorde op basis van `compositeTiers`
@@ -128,13 +128,11 @@ Hoofdpagina's onder `src/app/(dashboard)/dashboard/`:
 - `/dashboard/limits` — quota- en frequentiebeheer
 - `/dashboard/cli-tools` — CLI-onboarding, runtimedetectie, configuratiegeneratie
 - `/dashboard/agents` — gedetecteerde ACP-agents + registratie van aangepaste agents
-- `/dashboard/cloud-agents` — in de cloud gehoste agenttaken (Codex Cloud, Devin, Jules) en taaklevenscyclus
 - `/dashboard/skills` — A2A-vaardighedenregister, uitvoering in sandbox, ingebouwde vaardighedencatalogus
 - `/dashboard/memory` — inspectie en ophalen van persistent gespreksgeheugen
 - `/dashboard/webhooks` — uitgaande webhookabonnementen, rotatie van geheimen, statistieken voor nieuwe pogingen
 - `/dashboard/batch` — indienen van batchtaken en voortgang
 - `/dashboard/cache` — statistieken voor read-through- en redeneercache, beheer voor verwijdering
-- `/dashboard/playground` — interactieve chatomgeving voor elke geconfigureerde combo of elk geconfigureerd model
 - `/dashboard/changelog` — changelogviewer in de app (geeft `CHANGELOG.md` weer)
 - `/dashboard/system` — runtimediagnostiek, versie-informatie, interface voor omgevingsvalidatie
 - `/dashboard/onboarding` — wizard voor de eerste configuratie van nieuwe installaties
@@ -252,7 +250,6 @@ Beheerdomeinen:
 - Budget: `src/app/api/usage/budget` (GET/POST)
 - Terugvalketens: `src/app/api/fallback/chains` (GET/POST/DELETE)
 - Compliance-audit: `src/app/api/compliance/audit-log` (GET, met paginering + gestructureerde metadata)
-- Evaluaties: `src/app/api/evals` (GET/POST), `src/app/api/evals/[suiteId]` (GET)
 - Beleidsregels: `src/app/api/policies` (GET/POST)
 - Synchronisatietokens: `src/app/api/sync/tokens` (GET/POST), `src/app/api/sync/tokens/[id]` (GET/DELETE)
 - Configuratiebundel: `src/app/api/sync/bundle` (GET, met ETag geversioneerde momentopname van instellingen/providers/combinaties/sleutels)
@@ -316,7 +313,6 @@ Domeinlaagmodules:
 - Ophaaltime-out: `src/shared/utils/fetchTimeout.ts`
 - Requesttelemetrie: `src/shared/utils/requestTelemetry.ts`
 - Compliance/audit: `src/lib/compliance/index.ts`
-- Evaluatierunner: `src/lib/evals/evalRunner.ts`
 - Persistentie van domeinstatus: `src/lib/db/domainState.ts` — SQLite-CRUD voor terugvalketens, budgetten, kostengeschiedenis, uitsluitingsstatus en stroomonderbrekers
 
 OAuth-providermodules (27 afzonderlijke bestanden onder `src/lib/oauth/providers/`):
@@ -375,23 +371,6 @@ Belangrijkste mogelijkheden:
 
 Zie voor alle algoritmische details (factorformules, afstemming van gewichten)
 [`docs/routing/AUTO-COMBO.md`](../routing/AUTO-COMBO.md).
-
-### B. Cloud Agents
-
-Cloud Agents plaatst extern gehoste platforms voor code-agents (Codex Cloud, Devin,
-Jules) achter een uniforme, door een database ondersteunde taaklevenscyclus. Alle eindpunten voor het
-aanmaken en inspecteren van taken vereisen beheerautorisatie.
-
-- Hoofdmap van module: `src/lib/cloudAgent/` (`baseAgent.ts`, `registry.ts`, `api.ts`,
-  `types.ts`, `db.ts`, plus submappen per agent onder `agents/`)
-- Implementaties per agent: `agents/codex/`, `agents/devin/`, `agents/jules/`
-- Openbare eindpunten: `/api/v1/agents/tasks/*` (weergeven/aanmaken/ophalen/annuleren)
-- Beheereindpunten: `/api/cloud/*` (provisioning, status, batch)
-- Dashboard: `/dashboard/cloud-agents`
-- Opslag: tabel `cloud_agent_tasks`
-
-Zie voor details over provisioning en OAuth per agent
-[`docs/frameworks/CLOUD_AGENT.md`](../frameworks/CLOUD_AGENT.md).
 
 ### C. Guardrails
 

@@ -168,5 +168,4 @@ API కీ ప్లేస్హోల్డర్ ఎల్లప్పుడ�
 - ప్రధాన ప్లాన్: `_tasks/features-v3.8.6/refactorpages/_orchestration/master-plan-group-C.md`
 - ఫీచర్ ప్లాన్: `_tasks/features-v3.8.6/refactorpages/18-search-tools-studio-redesign.plan.md`
 - సెర్చ్ ప్రొవైడర్ రిజిస్ట్రీ: `open-sse/config/searchRegistry.ts`
-- ప్లేగ్రౌండ్ స్టూడియో (షేర్ చేసిన `ExportCodeModal` + `codeExport.ts`): `docs/frameworks/PLAYGROUND_STUDIO.md`
 - వెబ్ ఫెచ్ బ్యాకెండ్: `src/app/api/v1/web/fetch/route.ts`

@@ -245,17 +245,6 @@ The MCP tool inventory above (107 unique tools, computed by `countUniqueMcpTools
 scoped to runtime routing/cache/compression/memory/skills/proxy/context-source operations. Two adjacent
 frameworks ship alongside the MCP server in v3.8.0 and are documented separately:
 
-### Cloud Agents
-
-Cloud Agents are out-of-process AI coding agents (codex-cloud, cursor-cloud, devin, jules) wired into
-67router through the same connection model used for LLM providers. They are exposed via
-their own REST surface (`/api/v1/agents/*`) and are **not** part of the MCP tool catalog
-— calling a Cloud Agent does not consume an MCP scope.
-
-- Implementation: `src/lib/cloudAgent/` (`registry.ts`, `agents/codex.ts`, `agents/cursor.ts`, `agents/devin.ts`, `agents/jules.ts`).
-- Lifecycle: `createTask`, `getStatus`, `approvePlan`, `sendMessage`, `listSources`.
-- Documentation: [docs/frameworks/CLOUD_AGENT.md](./CLOUD_AGENT.md).
-
 ### Guardrails
 
 Guardrails are pre/post-execution filters (vision-bridge, pii-masker, prompt-injection)

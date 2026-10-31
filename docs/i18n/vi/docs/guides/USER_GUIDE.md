@@ -24,7 +24,6 @@ Hướng dẫn đầy đủ về cách cấu hình nhà cung cấp, tạo tổ h
 - [Hệ thống kỹ năng](#-skills-system)
 - [Hệ thống bộ nhớ](#-memory-system)
 - [Webhook](#-webhooks)
-- [Tác nhân đám mây](#-cloud-agents)
 - [Quản lý bằng lập trình](#-programmatic-management)
 - [CLI nội bộ](#-internal-cli)
 - [Ứng dụng máy tính để bàn (Electron)](#-desktop-application-electron)
@@ -1240,8 +1239,6 @@ Sử dụng URL SSE `http://localhost:20128/api/mcp/sse` và khóa API Bearer đ
 
 ### Phạm vi
 
-MCP hiện định nghĩa 32 phạm vi có tên. Mỗi khóa Bearer có thể được giới hạn ở các phạm vi cụ thể — xem [MCP-SERVER.md](../frameworks/MCP-SERVER.md) để biết danh sách phạm vi và công cụ chính thức, cũng như [A2A-SERVER.md](../frameworks/A2A-SERVER.md) để biết lược đồ JSON-RPC.
-
 ---
 
 ## 🧠 Hệ thống kỹ năng
@@ -1250,7 +1247,6 @@ MCP hiện định nghĩa 32 phạm vi có tên. Mỗi khóa Bearer có thể đ
 
 - **Giao diện Marketplace** — Duyệt và cài đặt kỹ năng từ **Dashboard → Skills**
 - **Phạm vi theo từng khóa** — Giới hạn những kỹ năng mà mỗi API key có thể gọi
-- **Kỹ năng tùy chỉnh** — Thêm một tệp TypeScript vào `src/lib/a2a/skills/`, đăng ký tệp đó và kỹ năng sẽ có thể được gọi ngay lập tức qua A2A
 
 Tài liệu tham khảo đầy đủ: [SKILLS.md](../frameworks/SKILLS.md).
 
@@ -1279,18 +1275,6 @@ Quản lý bộ nhớ trong **Dashboard → Memory** (tìm kiếm, chỉnh sửa
 - Thử lại: 3 lần với thời gian chờ tăng theo cấp số nhân, sau đó chuyển vào hàng đợi thư lỗi
 
 Schema đầy đủ có trong [WEBHOOKS.md](../frameworks/WEBHOOKS.md).
-
----
-
-## ☁️ Agent đám mây
-
-67router tích hợp với các agent lập trình trên đám mây (**OpenAI Codex Cloud**, **Devin**, **Jules**, **Antigravity**), cho phép bạn gửi các tác vụ chạy dài từ cùng một dashboard dùng để quản lý việc định tuyến cục bộ.
-
-- Tạo tác vụ trong **Dashboard → Cloud Agents** hoặc qua `POST /api/v1/agents/tasks`
-- Theo dõi trạng thái, nhật ký và các artifact của từng tác vụ
-- Sử dụng API key riêng của bạn cho từng nhà cung cấp — thông tin xác thực không bao giờ rời khỏi phiên bản 67router
-
-Tài liệu tham khảo đầy đủ: [CLOUD_AGENT.md](../frameworks/CLOUD_AGENT.md).
 
 ---
 
@@ -1347,7 +1331,6 @@ omniroute restore [<timestamp>]    # Khôi phục từ bản chụp nhanh
 omniroute health                   # Tình trạng chi tiết (bộ ngắt mạch, bộ nhớ đệm, bộ nhớ)
 omniroute quota                    # Mức sử dụng hạn ngạch của nhà cung cấp
 omniroute mcp status               # Trạng thái máy chủ MCP
-omniroute a2a status               # Trạng thái máy chủ A2A
 omniroute tunnel list|create|stop  # Đường hầm Cloudflare/Tailscale/ngrok
 omniroute reset-password           # Đặt lại mật khẩu quản trị viên
 omniroute --mcp                    # Khởi động máy chủ MCP qua stdio

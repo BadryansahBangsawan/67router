@@ -1438,9 +1438,8 @@ Nzaghachi GET gụnyere `agents[]` (id, name, binary, version, installed, protoc
 
 ### Ntụle
 
-| Ebe njedebe  | Usoro    | Nkọwa                            |
-| ------------ | -------- | -------------------------------- |
-| `/api/evals` | GET/POST | Depụta ngwugwu ntụle / mee ntụle |
+| Ebe njedebe | Usoro | Nkọwa |
+| ----------- | ----- | ----- |
 
 ### Atumatu
 
@@ -1761,31 +1760,6 @@ Usoro nta njikwa igodo akpaaka na-eji ya ewepụta ma tụgharịa igodo API sit
 
 ---
 
-## Usoro Ndị Agent
-
-Ọrụ cloud agent (Claude Code, Codex Cloud, OpenHands, wdg.) ndị a na-arụ n’ebe dị anya n’aha ndị ọrụ 67router.
-
-| Method | Path                          | Description                                                                                                                                       |
-| ------ | ----------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------- |
-| GET    | `/api/v1/agents/tasks`        | Depụta ọrụ — `?provider=`, `?status=`, `?limit=` bụ nhọrọ (1–500, ndabara bụ 50)                                                                  |
-| POST   | `/api/v1/agents/tasks`        | Mepụta ọrụ — `CreateCloudAgentTaskSchema` na-enyocha body (`providerId`, `prompt`, `source`, `options?`). Ọ na-eweghachi `201` yana task envelope |
-| DELETE | `/api/v1/agents/tasks?id=...` | Hichapụ otu ọrụ                                                                                                                                   |
-| GET    | `/api/v1/agents/tasks/[id]`   | Gụọ ọrụ — ọ na-emelite status ozugbo site na upstream cloud agent mgbe e debere `external_id`                                                     |
-| POST   | `/api/v1/agents/tasks/[id]`   | Omume a na-amata iche: `{action: "approve"}`, `{action: "message", message}`, ma ọ bụ `{action: "cancel"}`                                        |
-| DELETE | `/api/v1/agents/tasks/[id]`   | Jiri id hichapụ otu ọrụ kpọmkwem                                                                                                                  |
-
-> **Nnwale ikike:** a chọrọ ikike njikwa na method ọ bụla (`requireCloudAgentManagementAuth`). Tupu v3.8.0, ndị a achọghị ikike — lee commit `588a0333` maka mgbanwe na-emebi ndakọrịta.
-
-```bash
-# Mepụta ọrụ cloud Claude Code
-curl -X POST http://localhost:20128/api/v1/agents/tasks \
-  -H "Authorization: Bearer your-management-key" \
-  -H "Content-Type: application/json" \
-  -d '{"providerId":"claude-code-cloud","prompt":"Fix the failing test","source":{"repo":"...","branch":"..."}}'
-```
-
----
-
 ## Proxy Nchịkwa
 
 Proxy HTTP(S)/SOCKS na-apụ apụ, nke enwere ike ikenye ndị provider, account, ma ọ bụ n’ogo zuru ụwa ọnụ.
@@ -1905,48 +1879,10 @@ Ebe nchekwa mkparịta ụka/eziokwu na-adịgide adịgide, nke a na-ekewa dị
 
 67router na-enye endpoint A2A (Agent-to-Agent) JSON-RPC 2.0 yana ihe mkpuchi REST maka nyocha/ojiji dashboard.
 
-### JSON-RPC
-
-```bash
-POST /a2a
-Authorization: Bearer your-api-key   # ọ bụ nhọrọ ma e wezụga ma edobere OMNIROUTE_API_KEY
-Content-Type: application/json
-
-{
-  "jsonrpc": "2.0",
-  "id": 1,
-  "method": "message/send",
-  "params": {
-    "skill": "smart-routing",
-    "messages": [{"role": "user", "content": "Route this coding task"}]
-  }
-}
-```
-
-Method ndị akwadoro (ha niile dabere na `settings.a2aEnabled`):
-
-| Method           | Nkọwa                                                             |
-| ---------------- | ----------------------------------------------------------------- |
-| `message/send`   | Mmezu skill n'otu oge; na-eweghachi `{task, artifacts, metadata}` |
-| `message/stream` | Mmezu SSE na-asọgharị nke otu nchịkọta skill ahụ                  |
-| `tasks/get`      | Were task site na `taskId`                                        |
-| `tasks/cancel`   | Kagbuo task site na `taskId`                                      |
-
-Skill ndị arụnyere n'ime ya: `smart-routing`, `quota-management`, `provider-discovery`, `cost-analysis`, `health-report`.
-
-### Kaadị Agent
-
-```bash
-GET /.well-known/agent.json
-```
-
-Na-eweghachi kaadị agent A2A ọha (aha, nkọwa, ikike, katalọgụ skill, usoro auth) — a na-echekwa ya n'ihu ọha ruo 1h. Achọghị auth.
-
 ### Ihe enyemaka REST
 
 | Method | Path                         | Nkọwa                                                                                                            |
 | ------ | ---------------------------- | ---------------------------------------------------------------------------------------------------------------- |
-| GET    | `/api/a2a/status`            | A2A agbanyere + ọnụ ọgụgụ task + nchịkọta kaadị agent echekwara                                                  |
 | GET    | `/api/a2a/tasks`             | Depụta task — `?state=submitted\|working\|completed\|failed\|cancelled`, `?skill=`, `?limit=` (≤200), `?offset=` |
 | POST   | `/api/a2a/tasks`             | (Emebeghị ya dịka ihe enyemaka REST — mepụta site na JSON-RPC `message/send`)                                    |
 | GET    | `/api/a2a/tasks/[id]`        | Nweta otu task                                                                                                   |
@@ -1966,12 +1902,8 @@ Na-eweghachi kaadị agent A2A ọha (aha, nkọwa, ikike, katalọgụ skill, u
 | GET | `/api/cloud/models/alias` | Depụta aha ọzọ model dịka e si egosi ha na cloud sync |
 | GET | `/api/assess` | Gụọ nhazi ọkwa assessment kacha ọhụrụ (maka provider/model ọ bụla) |
 | POST | `/api/assess` | Mee assessment — body: `{scope: {type:"all"}                                                   | {type:"provider", providerId} | {type:"model", modelId}, trigger?}` |
-| GET | `/api/evals` | Depụta ngwugwu eval arụnyere n'ime ya + run ndị kacha ọhụrụ |
-| POST | `/api/evals` | Kpalite eval run |
-| POST | `/api/evals/suites` | Mepụta ngwugwu eval ahaziri iche — a na-eji `evalSuiteSaveSchema` enyocha body |
-| GET | `/api/evals/suites/[id]` | Nweta ngwugwu eval ahaziri iche |
 
-**Auth:** `/api/cloud/auth` na-enyocha igodo Bearer ozugbo ma na-eweghachi naanị igodo ezoro akụkụ ya na `projectId` nke njikọ ọ bụla maka igodo nwere scope `manage` / `admin`; ụzọ `/api/cloud/*`, `/api/evals/*`, na `/api/assess` ndị ọzọ chọrọ session/API key njikwa. POST `/api/assess` na-eji `validateBody` tinyere schema scope discriminated-union.
+**Auth:** `/api/cloud/auth` na-enyocha igodo Bearer ozugbo ma na-eweghachi naanị igodo ezoro akụkụ ya na `projectId` nke njikọ ọ bụla maka igodo nwere scope `manage` / `admin`; ụzọ `/api/cloud/*`, na `/api/assess` ndị ọzọ chọrọ session/API key njikwa. POST `/api/assess` na-eji `validateBody` tinyere schema scope discriminated-union.
 
 ---
 
@@ -2295,5 +2227,3 @@ igodo API nwere ikike njikwa) na otu ha si dị iche na igodo inference.
 - Enwere ike ịgbanwuo `requireLogin` site na `/api/settings/require-login`
 - Ụzọ `/v1/*` nwere ike ịchọ igodo API Bearer mgbe `REQUIRE_API_KEY=true`
 - “token njikwa” / “igodo API nwere ikike njikwa” n'ime ntụaka a pụtara otu n'ime ụdị ndị dị n'akwụkwọ ndu ahụ — ọ bụghị ụdị nzuzo ọzọ a na-akọwaghị
-
-> **Mgbanwe na-emebi ndakọrịta (v3.8.0)** — `/api/v1/agents/tasks/*` na endpoint njikwa cooldown chọrọzi **nyocha njirimara njikwa** (kuki dashboard `auth_token` ma ọ bụ igodo API nwere ikike njikwa). Ndị ahịa kpọburu ụzọ ndị a na-enweghị nyocha njirimara ga-enweta `401 Unauthorized`. Hụ commit `588a0333` (`fix(auth): require management auth for agent and cooldown APIs`).

@@ -4,7 +4,6 @@
 
 ---
 
-> **Källa:** `src/lib/{a2a,acp,cloudAgent}/`, `src/app/api/{a2a,acp,cloud}/`, `src/app/api/v1/agents/`
 > **Senast uppdaterad:** 2026-06-28 — v3.8.40
 
 67router exponerar tre olika agentrelaterade gränssnitt. De ser vid första anblicken likadana ut men löser olika problem. Använd den här sidan för att välja rätt gränssnitt.
@@ -20,52 +19,6 @@
 De tre är oberoende av varandra — välj valfri kombination.
 
 ## Beslutsträd
-
-```
-Behöver du en molntjänst som utför arbete utanför den här datorn (Codex Cloud / Cursor Cloud / Devin / Jules)?
-├─ JA → Molnagenter (POST /api/v1/agents/tasks)
-└─ NEJ → Fortsätt
-    │
-    Har du en annan agent som använder A2A och vill samarbeta?
-    ├─ JA → A2A (POST /a2a)
-    └─ NEJ → Fortsätt
-        │
-        Behöver du lista eller konfigurera lokalt installerade CLI-kodningsagenter?
-        ├─ JA → ACP (GET /api/acp/agents)
-        └─ NEJ → Använd vanliga /v1/chat/completions
-```
-
-## 1. A2A — agent till agent
-
-**Specifikation:** [A2A v0.3](https://a2a-protocol.org)
-**67router-slutpunkt:** `POST /a2a` (JSON-RPC 2.0)
-**Agentkort:** `GET /.well-known/agent.json`
-
-### När det ska användas
-
-- När du bygger ett fleragentsystem där 67router är en av deltagarna
-- När du exponerar 67routers routningsintelligens (smart routning, kvothantering osv.) för agenter i ramverk som Google ADK eller generiska agentnätverk
-- När du omsluter 67router med ett standardiserat gränssnitt för identifiering och anrop
-
-### Metoder
-
-- `message/send` — skicka ett meddelande och ta emot ett synkront svar
-- `message/stream` — skicka ett meddelande och ta emot SSE-strömmade förloppshändelser
-- `tasks/get` — läs en uppgift efter ID
-- `tasks/cancel` — avbryt en pågående uppgift
-
-### Inbyggda färdigheter (6)
-
-- `smart-routing` — dirigera en prompt genom den optimala kombinationen
-- `quota-management` — rapportera kvotstatus per leverantör
-- `provider-discovery` — lista installerade leverantörer och deras funktioner
-- `cost-analysis` — uppskatta kostnaden för en begäran eller konversation
-- `health-report` — sammanställ status för kretsbrytare, nedkylningsperioder och spärrar per leverantör
-- `list-capabilities` — räkna upp agentens tillgängliga färdigheter och metadata
-
-### Fördjupning
-
-Se [A2A-SERVER.md](./A2A-SERVER.md) för information om transport, agentkortets struktur, konfiguration av uppgifters TTL och mallen för att lägga till nya färdigheter.
 
 ## 2. ACP — Register för CLI-agenter
 
@@ -125,86 +78,7 @@ Brödtextformat för POST (`customAgentBodySchema` i `src/app/api/acp/agents/rou
   för leverantörer. För vanlig interaktiv användning startar du själv den konfigurerade CLI:n eller
   använder `omniroute run`.
 
-## 3. Molnagenter
-
-**67router-slutpunkter:** `/api/v1/agents/tasks/*` (livscykel) + `/api/cloud/*` (underliggande infrastruktur)
-**Källa:** `src/lib/cloudAgent/`
-
-### Vad det är
-
-Ett enhetligt gränssnitt mot molnbaserade programmeringsagenter från tredje part. Du skickar en prompt och en URL till ett repo, varefter 67router vidarebefordrar uppgiften till rätt molnagent, kontrollerar statusen regelbundet och returnerar resultaten.
-
-### Agenter som stöds (4, samtliga bekräftade i `src/lib/cloudAgent/agents/`)
-
-- `codex-cloud` — OpenAI Codex Cloud
-- `devin` — Cognition Devin
-- `jules` — Google Jules
-
-### Livscykel
-
-```
-POST /api/v1/agents/tasks
-  → BaseAgent.createTask() per agentklass
-  → extern tjänst påbörjar arbetet
-  → uppgiftsrad skapas i databasen (cloud_agent_tasks)
-  ↓
-GET /api/v1/agents/tasks/[id]
-  → lat synkronisering av status från leverantören
-  → returnerar aktuell status + plan + aktivitetslogg
-  ↓
-POST /api/v1/agents/tasks/[id]   (åtgärd: "approve" | "message" | "cancel")
-  → vidarebefordrar till leverantören (eller markerar som avbruten lokalt)
-  ↓
-DELETE /api/v1/agents/tasks/[id]
-  → lokal avbrytning
-```
-
-### Autentisering
-
-⚠️ **Alla slutpunkter under `/api/v1/agents/tasks/*` kräver administratörsautentisering** (commit `588a0333`). Anropare som enbart använder Bearer-token får 401 sedan v3.8.0.
-
-### Fördjupning
-
-Se [CLOUD_AGENT.md](./CLOUD_AGENT.md) för kontraktet `CloudAgentBase`, agentspecifika detaljer, schemadetaljer och slutpunkter för hantering av autentiseringsuppgifter.
-
-## Jämförelse: A2A kontra molnagenter
-
-Båda har ”långvariga uppgifter”, men på olika lager:
-
-| Aspekt                 | A2A                                                                                                     | Molnagenter                                     |
-| ---------------------- | ------------------------------------------------------------------------------------------------------- | ----------------------------------------------- |
-| Standard               | Öppna A2A v0.3                                                                                          | Specifik för 67router                           |
-| Var körs beräkningen   | Inuti 67router (använder konfigurerade kombinationer)                                                   | Externt (Codex-/Devin-/Jules-servrar)           |
-| Uppgiftens varaktighet | Standard-TTL på 5 min (kan konfigureras i `TaskManager`)                                                | Minuter till timmar                             |
-| Kodlageranpassad       | Nej (skickar endast prompter)                                                                           | Ja (kodlagrets URL + gren)                      |
-| Användningsfall        | Samarbete mellan agenter, smart dirigering som tjänst                                                   | Delegera ”implementera funktion X i kodlager Y” |
-| Autentisering          | Valfri `OMNIROUTE_API_KEY` för `/a2a`; administratörsbehörighet för REST-hjälpfunktionerna `/api/a2a/*` | Alltid administratörsbehörighet                 |
-
 ## Integrationsexempel
-
-### Upptäck 67routers A2A-funktioner
-
-```bash
-curl http://localhost:20128/.well-known/agent.json
-```
-
-Returnerar agentkortet med samtliga 6 färdigheter, transporter och version.
-
-### Anropa 67router som en A2A-agent
-
-```bash
-curl -X POST http://localhost:20128/a2a \
-  -H "Content-Type: application/json" \
-  -d '{
-    "jsonrpc": "2.0",
-    "method": "message/send",
-    "params": {
-      "messages": [{"role": "user", "content": "Route this prompt"}],
-      "skill": "smart-routing"
-    },
-    "id": 1
-  }'
-```
 
 ### Lista installerade CLI-agenter via ACP
 
@@ -227,30 +101,6 @@ curl -X POST http://localhost:20128/api/acp/agents \
     "versionCommand": "--version",
     "providerAlias": "openai"
   }'
-```
-
-### Skicka in en uppgift till en molnagent
-
-```bash
-curl -X POST http://localhost:20128/api/v1/agents/tasks \
-  -H "Cookie: auth_token=..." \
-  -H "Content-Type: application/json" \
-  -d '{
-    "providerId": "devin",
-    "prompt": "Implement feature X in repo Y",
-    "source": {
-      "repoName": "user/repo",
-      "repoUrl": "https://github.com/user/repo",
-      "branch": "main"
-    }
-  }'
-```
-
-### Kontrollera molnuppgiftens status regelbundet
-
-```bash
-curl http://localhost:20128/api/v1/agents/tasks/<task-id> \
-  -H "Cookie: auth_token=..."
 ```
 
 ## När du ska använda vad
@@ -283,8 +133,6 @@ curl http://localhost:20128/api/v1/agents/tasks/<task-id> \
 
 ## Se även
 
-- [A2A-SERVER.md](./A2A-SERVER.md) — Fördjupning om A2A
-- [CLOUD_AGENT.md](./CLOUD_AGENT.md) — Fördjupning om molnagenter
 - [CLI-TOOLS.md](../reference/CLI-TOOLS.md) — Externa CLI-integrationer (använder ACP)
 - [SKILLS.md](./SKILLS.md) — Ramverk för färdigheter (skiljer sig från A2A-färdigheter — lokal exekveringssandlåda)
 - [API_REFERENCE.md](../reference/API_REFERENCE.md#agents-protocol) — referens för slutpunkter

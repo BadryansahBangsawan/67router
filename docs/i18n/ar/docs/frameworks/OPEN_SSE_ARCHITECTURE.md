@@ -573,5 +573,4 @@ interface ProviderConfig {
 - [REPOSITORY_MAP.md](../architecture/REPOSITORY_MAP.md) — دليل لكل مجلد
 - [AUTO-COMBO.md](../routing/AUTO-COMBO.md) — تسجيل النقاط باستخدام 16 عاملًا
 - [MCP-SERVER.md](./MCP-SERVER.md) — خادم MCP
-- [A2A-SERVER.md](./A2A-SERVER.md) — خادم A2A
 - المصدر: `open-sse/` (أكثر من 400 ملف، ونحو 143 ألف سطر برمجي)

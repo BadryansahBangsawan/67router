@@ -4,7 +4,6 @@
 
 ---
 
-> **Bron:** `src/lib/{a2a,acp,cloudAgent}/`, `src/app/api/{a2a,acp,cloud}/`, `src/app/api/v1/agents/`
 > **Laatst bijgewerkt:** 2026-06-28 — v3.8.40
 
 67router biedt drie verschillende agentgerelateerde interfaces. Op het eerste gezicht lijken ze op elkaar, maar ze lossen verschillende problemen op. Gebruik deze pagina om de juiste te kiezen.
@@ -20,52 +19,6 @@
 De drie zijn onafhankelijk van elkaar — kies een willekeurige combinatie.
 
 ## Beslisboom
-
-```
-Heb je een cloudservice nodig om buiten deze machine werk uit te voeren (Codex Cloud / Cursor Cloud / Devin / Jules)?
-├─ JA → Cloudagents (POST /api/v1/agents/tasks)
-└─ NEE → Ga verder
-    │
-    Heb je een andere agent die A2A ondersteunt en wil samenwerken?
-    ├─ JA → A2A (POST /a2a)
-    └─ NEE → Ga verder
-        │
-        Moet je lokaal geïnstalleerde CLI-codingagents weergeven / configureren?
-        ├─ JA → ACP (GET /api/acp/agents)
-        └─ NEE → Gebruik gewoon /v1/chat/completions
-```
-
-## 1. A2A — Agent-naar-agent
-
-**Specificatie:** [A2A v0.3](https://a2a-protocol.org)
-**67router-endpoint:** `POST /a2a` (JSON-RPC 2.0)
-**Agentkaart:** `GET /.well-known/agent.json`
-
-### Wanneer te gebruiken
-
-- Bij het bouwen van een multi-agentsysteem waarin 67router een van de deelnemers is
-- Om de routeringsintelligentie van 67router (`smart-routing`, `quota-management` enz.) beschikbaar te stellen aan agents in frameworks zoals Google ADK of generieke agentnetwerken
-- Om 67router beschikbaar te stellen via een standaardinterface voor detectie en aanroepen
-
-### Methoden
-
-- `message/send` — een bericht indienen en een synchrone respons ontvangen
-- `message/stream` — een bericht indienen en via SSE gestreamde voortgangsgebeurtenissen ontvangen
-- `tasks/get` — een taak op basis van ID ophalen
-- `tasks/cancel` — een actieve taak annuleren
-
-### Ingebouwde vaardigheden (6)
-
-- `smart-routing` — een prompt via de optimale combinatie routeren
-- `quota-management` — de quotastatus per provider rapporteren
-- `provider-discovery` — geïnstalleerde providers met hun mogelijkheden weergeven
-- `cost-analysis` — de kosten van een verzoek/gesprek schatten
-- `health-report` — de status van stroomonderbrekers, afkoelperioden en blokkeringen per provider aggregeren
-- `list-capabilities` — de beschikbare vaardigheden en metadata van de agent opsommen
-
-### Meer informatie
-
-Zie [A2A-SERVER.md](./A2A-SERVER.md) voor transportdetails, de structuur van de agentkaart, configuratie van de TTL van taken en de sjabloon voor het toevoegen van nieuwe vaardigheden.
 
 ## 2. ACP — register van CLI-agents
 
@@ -125,86 +78,7 @@ Structuur van de body voor POST (`customAgentBodySchema` in `src/app/api/acp/age
   fallback voor providers. Start voor normaal interactief gebruik zelf de geconfigureerde CLI of
   gebruik `omniroute run`.
 
-## 3. Cloudagents
-
-**67router-endpoints:** `/api/v1/agents/tasks/*` (levenscyclus) + `/api/cloud/*` (infrastructuur)
-**Bron:** `src/lib/cloudAgent/`
-
-### Wat het is
-
-Een uniforme interface voor cloudgebaseerde programmeeragents van derden. U verstuurt een prompt + repository-URL, 67router stuurt deze door naar de juiste cloudagent, vraagt periodiek de status op en retourneert de resultaten.
-
-### Ondersteunde agents (4, allemaal bevestigd in `src/lib/cloudAgent/agents/`)
-
-- `codex-cloud` — OpenAI Codex Cloud
-- `devin` — Cognition Devin
-- `jules` — Google Jules
-
-### Levenscyclus
-
-```
-POST /api/v1/agents/tasks
-  → BaseAgent.createTask() per agentklasse
-  → externe service begint met het werk
-  → taakrij aangemaakt in de database (cloud_agent_tasks)
-  ↓
-GET /api/v1/agents/tasks/[id]
-  → uitgestelde statussynchronisatie vanaf provider
-  → retourneert huidige status + plan + activiteitenlogboek
-  ↓
-POST /api/v1/agents/tasks/[id]   (actie: "approve" | "message" | "cancel")
-  → stuurt door naar provider (of markeert lokaal als geannuleerd)
-  ↓
-DELETE /api/v1/agents/tasks/[id]
-  → lokale annulering
-```
-
-### Authenticatie
-
-⚠️ **Alle `/api/v1/agents/tasks/*`-endpoints vereisen beheerauthenticatie** (commit `588a0333`). Aanroepers die alleen Bearer-authenticatie gebruiken, ontvangen sinds v3.8.0 een 401-respons.
-
-### Diepgaande informatie
-
-Zie [CLOUD_AGENT.md](./CLOUD_AGENT.md) voor het `CloudAgentBase`-contract, details per agent, schemadetails en endpoints voor referentiebeheer.
-
-## Vergelijking: A2A versus Cloud Agents
-
-Beide ondersteunen "langlopende taken", maar op verschillende lagen:
-
-| Aspect                      | A2A                                                                                    | Cloud Agents                                |
-| --------------------------- | -------------------------------------------------------------------------------------- | ------------------------------------------- |
-| Standaard                   | Open A2A v0.3                                                                          | Specifiek voor 67router                     |
-| Waar verwerking plaatsvindt | Binnen 67router (gebruikt geconfigureerde combinaties)                                 | Extern (servers van Codex / Devin / Jules)  |
-| Taakduur                    | Standaard-TTL van 5 min. (configureerbaar in `TaskManager`)                            | Minuten tot uren                            |
-| Repositorybewust            | Nee (geeft alleen prompts door)                                                        | Ja (repository-URL + branch)                |
-| Gebruiksscenario            | Samenwerking tussen agents, slimme routering als een service                           | Delegeer "implementeer feature X in repo Y" |
-| Authenticatie               | Optionele `OMNIROUTE_API_KEY` voor `/a2a`; beheer voor REST-helpers onder `/api/a2a/*` | Altijd beheer                               |
-
 ## Integratievoorbeelden
-
-### Ontdek de A2A-mogelijkheden van 67router
-
-```bash
-curl http://localhost:20128/.well-known/agent.json
-```
-
-Retourneert de Agent Card met alle 6 vaardigheden, transportmethoden en de versie.
-
-### Roep 67router aan als een A2A-agent
-
-```bash
-curl -X POST http://localhost:20128/a2a \
-  -H "Content-Type: application/json" \
-  -d '{
-    "jsonrpc": "2.0",
-    "method": "message/send",
-    "params": {
-      "messages": [{"role": "user", "content": "Route this prompt"}],
-      "skill": "smart-routing"
-    },
-    "id": 1
-  }'
-```
 
 ### Geef geïnstalleerde CLI-agents weer via ACP
 
@@ -227,30 +101,6 @@ curl -X POST http://localhost:20128/api/acp/agents \
     "versionCommand": "--version",
     "providerAlias": "openai"
   }'
-```
-
-### Dien een Cloud Agent-taak in
-
-```bash
-curl -X POST http://localhost:20128/api/v1/agents/tasks \
-  -H "Cookie: auth_token=..." \
-  -H "Content-Type: application/json" \
-  -d '{
-    "providerId": "devin",
-    "prompt": "Implement feature X in repo Y",
-    "source": {
-      "repoName": "user/repo",
-      "repoUrl": "https://github.com/user/repo",
-      "branch": "main"
-    }
-  }'
-```
-
-### Vraag de status van een cloudtaak op
-
-```bash
-curl http://localhost:20128/api/v1/agents/tasks/<task-id> \
-  -H "Cookie: auth_token=..."
 ```
 
 ## Wanneer gebruikt u wat?
@@ -283,8 +133,6 @@ curl http://localhost:20128/api/v1/agents/tasks/<task-id> \
 
 ## Zie ook
 
-- [A2A-SERVER.md](./A2A-SERVER.md) — uitgebreide uitleg over A2A
-- [CLOUD_AGENT.md](./CLOUD_AGENT.md) — uitgebreide uitleg over Cloud Agents
 - [CLI-TOOLS.md](../reference/CLI-TOOLS.md) — externe CLI-integraties (gebruikt ACP)
 - [SKILLS.md](./SKILLS.md) — skills-framework (verschilt van A2A-skills — lokale uitvoeringssandbox)
 - [API_REFERENCE.md](../reference/API_REFERENCE.md#agents-protocol) — endpointreferentie

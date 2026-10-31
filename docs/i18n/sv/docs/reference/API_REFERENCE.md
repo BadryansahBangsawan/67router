@@ -1437,9 +1437,8 @@ GET-svaret inkluderar `agents[]` (id, name, binary, version, installed, protocol
 
 ### Utvärderingar
 
-| Slutpunkt    | Metod    | Beskrivning                              |
-| ------------ | -------- | ---------------------------------------- |
-| `/api/evals` | GET/POST | Lista utvärderingssviter/kör utvärdering |
+| Slutpunkt | Metod | Beskrivning |
+| --------- | ----- | ----------- |
 
 ### Policyer
 
@@ -1756,31 +1755,6 @@ Används av undersystemet för automatisk nyckelhantering för att utfärda och 
 
 ---
 
-## Agentprotokoll
-
-Molnagentuppgifter (Claude Code, Codex Cloud, OpenHands osv.) som körs på distans åt 67router-användare.
-
-| Metod  | Sökväg                        | Beskrivning                                                                                                                                                  |
-| ------ | ----------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------ |
-| GET    | `/api/v1/agents/tasks`        | Lista uppgifter — valfria `?provider=`, `?status=`, `?limit=` (1–500, standardvärde 50)                                                                      |
-| POST   | `/api/v1/agents/tasks`        | Skapa uppgift — innehållet valideras av `CreateCloudAgentTaskSchema` (`providerId`, `prompt`, `source`, `options?`). Returnerar `201` med ett uppgiftsomslag |
-| DELETE | `/api/v1/agents/tasks?id=...` | Ta bort en uppgift                                                                                                                                           |
-| GET    | `/api/v1/agents/tasks/[id]`   | Läs uppgift — uppdaterar synkront statusen från den överordnade molnagenten när ett `external_id` har angetts                                                |
-| POST   | `/api/v1/agents/tasks/[id]`   | Diskriminerad åtgärd: `{action: "approve"}`, `{action: "message", message}` eller `{action: "cancel"}`                                                       |
-| DELETE | `/api/v1/agents/tasks/[id]`   | Ta bort en specifik uppgift efter ID                                                                                                                         |
-
-> **Autentisering:** hanteringsautentisering krävs för varje metod (`requireCloudAgentManagementAuth`). Före v3.8.0 var dessa oautentiserade — se incheckning `588a0333` för den bakåtinkompatibla ändringen.
-
-```bash
-# Skapa en Claude Code-molnuppgift
-curl -X POST http://localhost:20128/api/v1/agents/tasks \
-  -H "Authorization: Bearer your-management-key" \
-  -H "Content-Type: application/json" \
-  -d '{"providerId":"claude-code-cloud","prompt":"Fix the failing test","source":{"repo":"...","branch":"..."}}'
-```
-
----
-
 ## Hanteringsproxyservrar
 
 Utgående HTTP(S)-/SOCKS-proxyservrar som kan tilldelas leverantörer, konton eller globalt.
@@ -1900,48 +1874,10 @@ Beständigt minne för konversationer/fakta, avgränsat per API-nyckel/session.
 
 67router tillhandahåller en A2A-slutpunkt (Agent-to-Agent) för JSON-RPC 2.0 samt ett REST-omslag för inspektion och användning i kontrollpaneler.
 
-### JSON-RPC
-
-```bash
-POST /a2a
-Authorization: Bearer your-api-key   # valfritt om inte OMNIROUTE_API_KEY har angetts
-Content-Type: application/json
-
-{
-  "jsonrpc": "2.0",
-  "id": 1,
-  "method": "message/send",
-  "params": {
-    "skill": "smart-routing",
-    "messages": [{"role": "user", "content": "Route this coding task"}]
-  }
-}
-```
-
-Metoder som stöds (samtliga styrs av `settings.a2aEnabled`):
-
-| Metod            | Beskrivning                                                            |
-| ---------------- | ---------------------------------------------------------------------- |
-| `message/send`   | Synkron körning av färdighet; returnerar `{task, artifacts, metadata}` |
-| `message/stream` | Strömmande SSE-körning av samma uppsättning färdigheter                |
-| `tasks/get`      | Hämtar en uppgift via `taskId`                                         |
-| `tasks/cancel`   | Avbryter en uppgift via `taskId`                                       |
-
-Inbyggda färdigheter: `smart-routing`, `quota-management`, `provider-discovery`, `cost-analysis`, `health-report`.
-
-### Agentkort
-
-```bash
-GET /.well-known/agent.json
-```
-
-Returnerar det offentliga A2A-agentkortet (namn, beskrivning, funktioner, färdighetskatalog och autentiseringsschema) — cachelagrat offentligt i 1 timme. Ingen autentisering krävs.
-
 ### REST-hjälpfunktioner
 
 | Metod | Sökväg                       | Beskrivning                                                                                                           |
 | ----- | ---------------------------- | --------------------------------------------------------------------------------------------------------------------- |
-| GET   | `/api/a2a/status`            | A2A-status + uppgiftsstatistik + sammanfattning av cachelagrat agentkort                                              |
 | GET   | `/api/a2a/tasks`             | Listar uppgifter — `?state=submitted\|working\|completed\|failed\|cancelled`, `?skill=`, `?limit=` (≤200), `?offset=` |
 | POST  | `/api/a2a/tasks`             | (Inte implementerad som REST-hjälpfunktion — skapa via JSON-RPC `message/send`)                                       |
 | GET   | `/api/a2a/tasks/[id]`        | Hämtar en uppgift                                                                                                     |
@@ -1961,12 +1897,8 @@ Returnerar det offentliga A2A-agentkortet (namn, beskrivning, funktioner, färdi
 | GET | `/api/cloud/models/alias` | Listar modellalias så som de exponeras för molnsynkronisering |
 | GET | `/api/assess` | Läser de senaste bedömningskategoriseringarna (per leverantör/modell) |
 | POST | `/api/assess` | Kör en bedömning — brödtext: `{scope: {type:"all"}                                                   | {type:"provider", providerId} | {type:"model", modelId}, trigger?}` |
-| GET | `/api/evals` | Listar inbyggda utvärderingssviter + de senaste körningarna |
-| POST | `/api/evals` | Startar en utvärderingskörning |
-| POST | `/api/evals/suites` | Skapar en anpassad utvärderingssvit — brödtexten valideras av `evalSuiteSaveSchema` |
-| GET | `/api/evals/suites/[id]` | Hämtar en anpassad utvärderingssvit |
 
-**Autentisering:** `/api/cloud/auth` validerar en Bearer-nyckel direkt och returnerar den maskerade nyckeln och `projectId` för varje anslutning endast för en nyckel med omfånget `manage` / `admin`; de övriga rutterna `/api/cloud/*`, `/api/evals/*` och `/api/assess` kräver en hanteringssession/API-nyckel. POST för `/api/assess` använder `validateBody` med ett diskriminerat unionsschema för omfång.
+**Autentisering:** `/api/cloud/auth` validerar en Bearer-nyckel direkt och returnerar den maskerade nyckeln och `projectId` för varje anslutning endast för en nyckel med omfånget `manage` / `admin`; de övriga rutterna `/api/cloud/*` och `/api/assess` kräver en hanteringssession/API-nyckel. POST för `/api/assess` använder `validateBody` med ett diskriminerat unionsschema för omfång.
 
 ---
 
@@ -2285,5 +2217,3 @@ Se [Autentisering för hantering](../guides/MANAGEMENT-AUTH.md) för de fyra typ
 - `requireLogin` kan aktiveras eller inaktiveras via `/api/settings/require-login`
 - `/v1/*`-rutter kan valfritt kräva en Bearer API-nyckel när `REQUIRE_API_KEY=true`
 - ”hanteringstoken”/”API-nyckel med hanteringsbehörighet” i denna referens avser någon av typerna i den guiden – inte en odefinierad extra typ av hemlighet
-
-> **Bakåtinkompatibel ändring (v3.8.0)** – `/api/v1/agents/tasks/*` och hanteringsändpunkterna för cooldown kräver nu **hanteringsautentisering** (dashboard-cookien `auth_token` eller en API-nyckel med hanteringsbehörighet). Klienter som tidigare anropade dessa rutter utan autentisering får nu `401 Unauthorized`. Se commit `588a0333` (`fix(auth): require management auth for agent and cooldown APIs`).

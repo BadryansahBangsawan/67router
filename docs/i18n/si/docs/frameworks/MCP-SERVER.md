@@ -245,17 +245,6 @@ curl -X DELETE http://localhost:20128/api/settings/notion
 ධාවන-කාලීන මාර්ගගත කිරීමේ/හැඹිලිගත කිරීමේ/සම්පීඩන/මතක/කුසලතා/ප්රොක්සි/සන්දර්භ-මූලාශ්ර මෙහෙයුම්වලට සීමා කර ඇත. යාබද
 රාමු දෙකක් v3.8.0හි MCP සේවාදායකය සමඟ නිකුත් කෙරෙන අතර ඒවා වෙන වෙනම ප්රලේඛනගත කර ඇත:
 
-### Cloud Agents
-
-Cloud Agents යනු LLM සැපයුම්කරුවන් සඳහා භාවිත කරන සම්බන්ධතා ආකෘතියම ඔස්සේ
-67router වෙත සම්බන්ධ කර ඇති ක්රියාවලියෙන් බැහැර AI කේතකරණ නියෝජිතයන් (codex-cloud, cursor-cloud, devin, jules) වේ. ඒවා
-තමන්ගේම REST අතුරුමුහුණත (`/api/v1/agents/*`) හරහා නිරාවරණය කෙරෙන අතර MCP මෙවලම් නාමාවලියේ කොටසක් **නොවේ**
-— Cloud Agent එකක් ඇමතීම MCP විෂය පථයක් පරිභෝජනය නොකරයි.
-
-- ක්රියාත්මක කිරීම: `src/lib/cloudAgent/` (`registry.ts`, `agents/codex.ts`, `agents/cursor.ts`, `agents/devin.ts`, `agents/jules.ts`).
-- ජීවන චක්රය: `createTask`, `getStatus`, `approvePlan`, `sendMessage`, `listSources`.
-- ප්රලේඛනය: [docs/frameworks/CLOUD_AGENT.md](./CLOUD_AGENT.md).
-
 ### Guardrails
 
 Guardrails යනු කතාබස් නල මාර්ගය තුළ යොදන පූර්ව/පසු-ක්රියාත්මක කිරීමේ පෙරහන් (vision-bridge, pii-masker, prompt-injection) වේ.

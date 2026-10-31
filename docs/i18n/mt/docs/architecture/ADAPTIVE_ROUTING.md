@@ -42,16 +42,15 @@ Aġent AI / IDE
 
 ### Dak li kien diġà jeżisti (awditjat, mhux idduplikat)
 
-| Kunċett                                        | Implimentazzjoni eżistenti                                                                               |
-| ---------------------------------------------- | -------------------------------------------------------------------------------------------------------- |
-| Disponibbiltà (nistgħu nibagħtu traffiku?)     | Circuit breaker (CLOSED/DEGRADED/OPEN/HALF_OPEN, ippersistit fid-DB), connection cooldown, model lockout |
-| Rappurtar tal-istat tas-sistema                | `providerHealthMatrix.ts`, `providerHealthAutopilot.ts`                                                  |
-| Traffiku parallel ta' osservazzjoni            | `open-sse/services/combo/shadowRouting.ts`                                                               |
-| Guardrails                                     | `src/lib/guardrails/` (hooks ta' qabel/wara)                                                             |
-| Cache eżatt                                    | `src/lib/semanticCache.ts` (ibbażat fuq firma)                                                           |
-| Evalwaturi / routing immexxi mill-evalwazzjoni | `src/lib/evals/`, `open-sse/services/evalRouting.ts`                                                     |
-| Spjegabbiltà tad-deċiżjonijiet tal-combo       | `open-sse/services/combo/decisionTrace.ts`                                                               |
-| Avvenimenti tad-dashboard f'ħin reali          | `src/lib/events/eventBus.ts` (kanal ta' notifiki tal-UI, payloads `unknown`, storja ta' 100 entrata)     |
+| Kunċett                                    | Implimentazzjoni eżistenti                                                                               |
+| ------------------------------------------ | -------------------------------------------------------------------------------------------------------- |
+| Disponibbiltà (nistgħu nibagħtu traffiku?) | Circuit breaker (CLOSED/DEGRADED/OPEN/HALF_OPEN, ippersistit fid-DB), connection cooldown, model lockout |
+| Rappurtar tal-istat tas-sistema            | `providerHealthMatrix.ts`, `providerHealthAutopilot.ts`                                                  |
+| Traffiku parallel ta' osservazzjoni        | `open-sse/services/combo/shadowRouting.ts`                                                               |
+| Guardrails                                 | `src/lib/guardrails/` (hooks ta' qabel/wara)                                                             |
+| Cache eżatt                                | `src/lib/semanticCache.ts` (ibbażat fuq firma)                                                           |
+| Spjegabbiltà tad-deċiżjonijiet tal-combo   | `open-sse/services/combo/decisionTrace.ts`                                                               |
+| Avvenimenti tad-dashboard f'ħin reali      | `src/lib/events/eventBus.ts` (kanal ta' notifiki tal-UI, payloads `unknown`, storja ta' 100 entrata)     |
 
 Is-saff tal-avvenimenti tar-routing **mhuwiex** implimentazzjoni mill-ġdid ta' `eventBus`: dak il-bus huwa
 l-kanal ta' notifiki f'ħin reali tad-dashboard (ismijiet ta' _avvenimenti_ ttajpjati, payloads
@@ -270,8 +269,6 @@ tal-intelliġenza/evalwazzjoni, mhux bħala dipendenza**. Il-punti ta’ integra
 - `Evaluator` futur (deterministiku, imħallef lokali, HTTP, WASM) jikkonsma
   l-avvenimenti/traċċi u jirritorna `QualityScore` li jidħol fl-istess
   perkors `getQualityScore`/tal-fattur tal-kwalità.
-- Ir-routing eżistenti mmexxi mill-evalwazzjonijiet (`open-sse/services/evalRouting.ts`) diġà
-  jerġa’ jordna l-miri tal-combo skont ir-rati ta’ suċċess ta’ `eval_runs` meta jkun attivat.
 
 Ebda evalwazzjoni ma titħaddem b’mod sinkronu fil-perkors tat-talba, u l-gateway jopera
 kompletament anki meta l-evalwatur ikun assenti.

@@ -69,20 +69,6 @@ het toestaan dat CORS-**preflightverzoeken slagen** op beheerroutes — waarvoor
 vereist is die een cross-origin-pagina niet kan leveren. Het is **geen** vector voor het kapen van sessies of
 diefstal van credentials op het gedeelde CORS-pad.
 
-### Eén echte uitzondering — `/api/v1/agents/`
-
-De Cloud-Agent-routes (`/api/v1/agents/{health,credentials,tasks,tasks/[id]}`) stellen
-hun **eigen** CORS-headers in
-(`src/lib/cloudAgent/api.ts`, `getCloudAgentCorsHeaders`) en verzenden **wel**
-`Access-Control-Allow-Origin: <origin>|*` samen met
-`Access-Control-Allow-Credentials: true`. Dit is het enige oppervlak waarop
-het terugsturen van origins en credentials samengaan, en het is **onafhankelijk van
-`CORS_ALLOW_ALL`**. Deze routes zijn geauthenticeerd voor beheer
-(`requireManagementAuth`); beheerders die het dashboard buiten de host beschikbaar stellen, moeten
-zich ervan bewust zijn dat dit de enige plek is waar de antwoordheaders het lezen van geauthenticeerde
-cross-origin-antwoorden toestaan. Het beperken hiervan tot een expliciete allowlist wordt
-los van deze CORS-richtlijnen bijgehouden.
-
 ## Productiechecklist
 
 - **Stel `CORS_ALLOW_ALL=true` nooit in productie in.** Laat deze variabele oningesteld.
@@ -156,15 +142,14 @@ tabblad Beveiliging), niet in de proxy.
 
 ## Bronbestanden
 
-| Onderwerp                                         | Bestand                                                              |
-| ------------------------------------------------- | -------------------------------------------------------------------- |
-| Allowlist-resolutie + `getCorsStatus()`           | `src/server/cors/origins.ts`                                         |
-| Toepassing van middleware (enige waarheid)        | `src/server/authz/pipeline.ts`                                       |
-| Instellingen → runtime-injectie van origins       | `src/lib/config/runtimeSettings.ts`                                  |
-| Runtimestatus voor het dashboard                  | `src/app/api/settings/authz-inventory/route.ts`                      |
-| Waarschuwingsbanner op het dashboard              | `src/app/(dashboard)/dashboard/settings/components/AuthzSection.tsx` |
-| Veld voor toegestane CORS-origins                 | `src/app/(dashboard)/dashboard/settings/components/SecurityTab.tsx`  |
-| CORS per route voor Cloud-Agent (de uitzondering) | `src/lib/cloudAgent/api.ts`                                          |
+| Onderwerp                                   | Bestand                                                              |
+| ------------------------------------------- | -------------------------------------------------------------------- |
+| Allowlist-resolutie + `getCorsStatus()`     | `src/server/cors/origins.ts`                                         |
+| Toepassing van middleware (enige waarheid)  | `src/server/authz/pipeline.ts`                                       |
+| Instellingen → runtime-injectie van origins | `src/lib/config/runtimeSettings.ts`                                  |
+| Runtimestatus voor het dashboard            | `src/app/api/settings/authz-inventory/route.ts`                      |
+| Waarschuwingsbanner op het dashboard        | `src/app/(dashboard)/dashboard/settings/components/AuthzSection.tsx` |
+| Veld voor toegestane CORS-origins           | `src/app/(dashboard)/dashboard/settings/components/SecurityTab.tsx`  |
 
 ## Zie ook
 

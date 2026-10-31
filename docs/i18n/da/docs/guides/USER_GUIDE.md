@@ -24,7 +24,6 @@ Komplet vejledning til konfiguration af udbydere, oprettelse af kombinationer, i
 - [Færdighedssystem](#-skills-system)
 - [Hukommelsessystem](#-memory-system)
 - [Webhooks](#-webhooks)
-- [Cloud-agenter](#-cloud-agents)
 - [Programmatisk administration](#-programmatic-management)
 - [Intern CLI](#-internal-cli)
 - [Desktopapplikation (Electron)](#-desktop-application-electron)
@@ -1240,8 +1239,6 @@ Brug SSE-URL'en `http://localhost:20128/api/mcp/sse` og en Bearer API-nøgle, de
 
 ### Omfang
 
-MCP definerer i øjeblikket 32 navngivne omfang. Hver Bearer-nøgle kan begrænses til specifikke omfang — se [MCP-SERVER.md](../frameworks/MCP-SERVER.md) for den autoritative oversigt over omfang og værktøjer samt [A2A-SERVER.md](../frameworks/A2A-SERVER.md) for JSON-RPC-skemaet.
-
 ---
 
 ## 🧠 Færdighedssystem
@@ -1250,7 +1247,6 @@ MCP definerer i øjeblikket 32 navngivne omfang. Hver Bearer-nøgle kan begræns
 
 - **Markedspladsgrænseflade** — Gennemse og installer færdigheder via **Kontrolpanel → Færdigheder**
 - **Omfang pr. nøgle** — Begræns, hvilke API-nøgler der kan aktivere hvilke færdigheder
-- **Brugerdefinerede færdigheder** — Placer en TypeScript-fil i `src/lib/a2a/skills/`, registrer den, og den kan straks aktiveres via A2A
 
 Fuld dokumentation: [SKILLS.md](../frameworks/SKILLS.md).
 
@@ -1279,18 +1275,6 @@ Abonner på 67router-hændelser med henblik på overvågning og automatisering i
 - Gentagne forsøg: 3 forsøg med eksponentiel ventetid og derefter en kø til meddelelser, der ikke kunne leveres
 
 Det fulde skema findes i [WEBHOOKS.md](../frameworks/WEBHOOKS.md).
-
----
-
-## ☁️ Cloudagenter
-
-67router integrerer med cloudbaserede kodeagenter (**OpenAI Codex Cloud**, **Devin**, **Jules**, **Antigravity**), så du kan sende langvarige opgaver fra det samme kontrolpanel, som håndterer din lokale routing.
-
-- Opret opgaver under **Kontrolpanel → Cloudagenter** eller via `POST /api/v1/agents/tasks`
-- Følg status, logfiler og artefakter for hver opgave
-- Brug din egen API-nøgle for hver udbyder — legitimationsoplysninger forlader aldrig 67router-instansen
-
-Fuld dokumentation: [CLOUD_AGENT.md](../frameworks/CLOUD_AGENT.md).
 
 ---
 
@@ -1347,7 +1331,6 @@ omniroute restore [<timestamp>]    # Gendan fra et øjebliksbillede
 omniroute health                   # Detaljeret sundhedsstatus (afbrydere, cache, hukommelse)
 omniroute quota                    # Brug af udbyderkvoter
 omniroute mcp status               # Status for MCP-server
-omniroute a2a status               # Status for A2A-server
 omniroute tunnel list|create|stop  # Cloudflare-/Tailscale-/ngrok-tunneler
 omniroute reset-password           # Nulstil administratoradgangskoden
 omniroute --mcp                    # Start MCP-serveren via stdio

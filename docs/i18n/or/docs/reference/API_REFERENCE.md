@@ -1415,9 +1415,8 @@ GET ପ୍ରତିକ୍ରିୟାରେ `agents[]` (id, name, binary, versio
 
 ### ମୂଲ୍ୟାଙ୍କନ
 
-| Endpoint     | ପଦ୍ଧତି   | ବର୍ଣ୍ଣନା                                                       |
-| ------------ | -------- | -------------------------------------------------------------- |
-| `/api/evals` | GET/POST | ମୂଲ୍ୟାଙ୍କନ ସୁଇଟ୍ଗୁଡ଼ିକ ତାଲିକାଭୁକ୍ତ କରନ୍ତୁ / ମୂଲ୍ୟାଙ୍କନ ଚଲାନ୍ତୁ |
+| Endpoint | ପଦ୍ଧତି | ବର୍ଣ୍ଣନା |
+| -------- | ------ | -------- |
 
 ### ନୀତିଗୁଡ଼ିକ
 
@@ -1740,31 +1739,6 @@ DELETE /api/usage/token-limits?id=tl-abc
 
 ---
 
-## ଏଜେଣ୍ଟ ପ୍ରୋଟୋକଲ୍
-
-67router ବ୍ୟବହାରକାରୀଙ୍କ ପକ୍ଷରୁ ଦୂରସ୍ଥ ଭାବେ କାର୍ଯ୍ୟକାରୀ କରାଯାଉଥିବା କ୍ଲାଉଡ୍ ଏଜେଣ୍ଟ କାର୍ଯ୍ୟଗୁଡ଼ିକ (Claude Code, Codex Cloud, OpenHands ଇତ୍ୟାଦି)।
-
-| ପଦ୍ଧତି | ପଥ                            | ବର୍ଣ୍ଣନା                                                                                                                                               |
-| ------ | ----------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------ |
-| GET    | `/api/v1/agents/tasks`        | କାର୍ଯ୍ୟଗୁଡ଼ିକର ତାଲିକା — ବୈକଳ୍ପିକ `?provider=`, `?status=`, `?limit=` (1–500, ଡିଫଲ୍ଟ 50)                                                                |
-| POST   | `/api/v1/agents/tasks`        | କାର୍ଯ୍ୟ ସୃଷ୍ଟି — ବଡିକୁ `CreateCloudAgentTaskSchema` (`providerId`, `prompt`, `source`, `options?`) ଦ୍ୱାରା ବୈଧ କରାଯାଏ। କାର୍ଯ୍ୟ ଏନଭେଲପ୍ ସହିତ `201` ଫେରାଏ |
-| DELETE | `/api/v1/agents/tasks?id=...` | ଏକ କାର୍ଯ୍ୟ ବିଲୋପ କରନ୍ତୁ                                                                                                                                |
-| GET    | `/api/v1/agents/tasks/[id]`   | କାର୍ଯ୍ୟ ପଢ଼ନ୍ତୁ — ଏକ `external_id` ସେଟ୍ ହୋଇଥିଲେ ଅପ୍ଷ୍ଟ୍ରିମ୍ କ୍ଲାଉଡ୍ ଏଜେଣ୍ଟରୁ ସମକାଳୀନ ଭାବେ ସ୍ଥିତି ରିଫ୍ରେଶ୍ କରେ                                          |
-| POST   | `/api/v1/agents/tasks/[id]`   | ପୃଥକୀକୃତ କାର୍ଯ୍ୟ: `{action: "approve"}`, `{action: "message", message}`, କିମ୍ବା `{action: "cancel"}`                                                   |
-| DELETE | `/api/v1/agents/tasks/[id]`   | id ଦ୍ୱାରା ଏକ ନିର୍ଦ୍ଦିଷ୍ଟ କାର୍ଯ୍ୟ ବିଲୋପ କରନ୍ତୁ                                                                                                          |
-
-> **ପ୍ରମାଣୀକରଣ:** ପ୍ରତ୍ୟେକ ପଦ୍ଧତିରେ ପରିଚାଳନା ପ୍ରମାଣୀକରଣ ଆବଶ୍ୟକ (`requireCloudAgentManagementAuth`)। v3.8.0 ପୂର୍ବରୁ ଏଗୁଡ଼ିକ ପ୍ରମାଣୀକରଣବିହୀନ ଥିଲା — ଏହି ବ୍ରେକିଂ ପରିବର୍ତ୍ତନ ପାଇଁ କମିଟ୍ `588a0333` ଦେଖନ୍ତୁ।
-
-```bash
-# ଏକ Claude Code କ୍ଲାଉଡ୍ କାର୍ଯ୍ୟ ସୃଷ୍ଟି କରନ୍ତୁ
-curl -X POST http://localhost:20128/api/v1/agents/tasks \
-  -H "Authorization: Bearer your-management-key" \
-  -H "Content-Type: application/json" \
-  -d '{"providerId":"claude-code-cloud","prompt":"Fix the failing test","source":{"repo":"...","branch":"..."}}'
-```
-
----
-
 ## ପରିଚାଳନା ପ୍ରକ୍ସିଗୁଡ଼ିକ
 
 ପ୍ରଦାନକାରୀ, ଆକାଉଣ୍ଟ କିମ୍ବା ବିଶ୍ୱବ୍ୟାପୀ ଭାବେ ନ୍ୟସ୍ତ କରାଯାଇପାରୁଥିବା ଆଉଟ୍ବାଉଣ୍ଡ HTTP(S)/SOCKS ପ୍ରକ୍ସିଗୁଡ଼ିକ।
@@ -1884,48 +1858,10 @@ curl -X DELETE http://localhost:20128/api/resilience/model-cooldowns \
 
 67router ଏକ A2A (ଏଜେଣ୍ଟ-ରୁ-ଏଜେଣ୍ଟ) JSON-RPC 2.0 ଏଣ୍ଡପଏଣ୍ଟ ସହିତ ନିରୀକ୍ଷଣ/ଡ୍ୟାଶବୋର୍ଡ ବ୍ୟବହାର ପାଇଁ ଏକ REST ରାପର୍ ପ୍ରଦାନ କରେ।
 
-### JSON-RPC
-
-```bash
-POST /a2a
-Authorization: Bearer your-api-key   # OMNIROUTE_API_KEY ସେଟ୍ ନଥିଲେ ଇଚ୍ଛାଧୀନ
-Content-Type: application/json
-
-{
-  "jsonrpc": "2.0",
-  "id": 1,
-  "method": "message/send",
-  "params": {
-    "skill": "smart-routing",
-    "messages": [{"role": "user", "content": "Route this coding task"}]
-  }
-}
-```
-
-ସମର୍ଥିତ ପଦ୍ଧତିଗୁଡ଼ିକ (ସମସ୍ତ `settings.a2aEnabled` ଦ୍ୱାରା ନିୟନ୍ତ୍ରିତ):
-
-| ପଦ୍ଧତି           | ବର୍ଣ୍ଣନା                                                     |
-| ---------------- | ------------------------------------------------------------ |
-| `message/send`   | ସମକାଳୀନ ସ୍କିଲ୍ ନିଷ୍ପାଦନ; `{task, artifacts, metadata}` ଫେରାଏ |
-| `message/stream` | ସମାନ ସ୍କିଲ୍ ସେଟ୍ର ଷ୍ଟ୍ରିମିଂ SSE ନିଷ୍ପାଦନ                     |
-| `tasks/get`      | `taskId` ଦ୍ୱାରା ଗୋଟିଏ ଟାସ୍କ ଆଣେ                              |
-| `tasks/cancel`   | `taskId` ଦ୍ୱାରା ଗୋଟିଏ ଟାସ୍କ ବାତିଲ କରେ                        |
-
-ବିଲ୍ଟ-ଇନ୍ ସ୍କିଲ୍ଗୁଡ଼ିକ: `smart-routing`, `quota-management`, `provider-discovery`, `cost-analysis`, `health-report`।
-
-### ଏଜେଣ୍ଟ କାର୍ଡ
-
-```bash
-GET /.well-known/agent.json
-```
-
-ସାର୍ବଜନୀନ A2A ଏଜେଣ୍ଟ କାର୍ଡ (ନାମ, ବର୍ଣ୍ଣନା, କ୍ଷମତା, ସ୍କିଲ୍ କ୍ୟାଟାଲଗ୍, ପ୍ରମାଣୀକରଣ ସ୍କିମ୍) ଫେରାଏ — ସାର୍ବଜନୀନ ଭାବେ 1h ପାଇଁ କ୍ୟାଶ୍ କରାଯାଏ। କୌଣସି ପ୍ରମାଣୀକରଣ ଆବଶ୍ୟକ ନାହିଁ।
-
 ### REST ସହାୟକଗୁଡ଼ିକ
 
 | ପଦ୍ଧତି | ପଥ                           | ବର୍ଣ୍ଣନା                                                                                                          |
 | ------ | ---------------------------- | ----------------------------------------------------------------------------------------------------------------- |
-| GET    | `/api/a2a/status`            | A2A ସକ୍ଷମ ସ୍ଥିତି + ଟାସ୍କ ପରିସଂଖ୍ୟାନ + କ୍ୟାଶ୍ ହୋଇଥିବା ଏଜେଣ୍ଟ କାର୍ଡ ସାରାଂଶ                                          |
 | GET    | `/api/a2a/tasks`             | ଟାସ୍କ ତାଲିକା — `?state=submitted\|working\|completed\|failed\|cancelled`, `?skill=`, `?limit=` (≤200), `?offset=` |
 | POST   | `/api/a2a/tasks`             | (REST ସହାୟକ ଭାବେ କାର୍ଯ୍ୟକାରୀ କରାଯାଇନାହିଁ — JSON-RPC `message/send` ମାଧ୍ୟମରେ ସୃଷ୍ଟି କରନ୍ତୁ)                        |
 | GET    | `/api/a2a/tasks/[id]`        | ଗୋଟିଏ ଟାସ୍କ ପୁନରୁଦ୍ଧାର କରେ                                                                                        |
@@ -1945,12 +1881,8 @@ GET /.well-known/agent.json
 | GET | `/api/cloud/models/alias` | କ୍ଲାଉଡ୍ ସିଙ୍କ୍ରେ ପ୍ରକାଶିତ ମଡେଲ୍ ଉପନାମଗୁଡ଼ିକ ତାଲିକାଭୁକ୍ତ କରେ |
 | GET | `/api/assess` | ସର୍ବଶେଷ ମୂଲ୍ୟାଙ୍କନ ବର୍ଗୀକରଣଗୁଡ଼ିକ ପଢ଼େ (ପ୍ରତ୍ୟେକ ପ୍ରଦାତା/ମଡେଲ୍ ପାଇଁ) |
 | POST | `/api/assess` | ଗୋଟିଏ ମୂଲ୍ୟାଙ୍କନ ଚଲାଏ — ବଡି: `{scope: {type:"all"}                                                   | {type:"provider", providerId} | {type:"model", modelId}, trigger?}` |
-| GET | `/api/evals` | ବିଲ୍ଟ-ଇନ୍ ଇଭାଲ୍ ସୁଇଟ୍ଗୁଡ଼ିକ + ସବୁଠାରୁ ସାମ୍ପ୍ରତିକ ରନ୍ଗୁଡ଼ିକ ତାଲିକାଭୁକ୍ତ କରେ |
-| POST | `/api/evals` | ଗୋଟିଏ ଇଭାଲ୍ ରନ୍ ଟ୍ରିଗର୍ କରେ |
-| POST | `/api/evals/suites` | ଗୋଟିଏ କଷ୍ଟମ୍ ଇଭାଲ୍ ସୁଇଟ୍ ସୃଷ୍ଟି କରେ — ବଡି `evalSuiteSaveSchema` ଦ୍ୱାରା ବୈଧୀକୃତ |
-| GET | `/api/evals/suites/[id]` | ଗୋଟିଏ କଷ୍ଟମ୍ ଇଭାଲ୍ ସୁଇଟ୍ ପୁନରୁଦ୍ଧାର କରେ |
 
-**ପ୍ରମାଣୀକରଣ:** `/api/cloud/auth` ସିଧାସଳଖ ଗୋଟିଏ Bearer କୀକୁ ସତ୍ୟାପନ କରେ ଏବଂ କେବଳ `manage` / `admin` ସ୍କୋପ୍ ଥିବା କୀ ପାଇଁ ପ୍ରତ୍ୟେକ ସଂଯୋଗର ମାସ୍କ୍ କରାଯାଇଥିବା କୀ ଏବଂ `projectId` ଫେରାଏ; ଅନ୍ୟ `/api/cloud/*`, `/api/evals/*`, ଏବଂ `/api/assess` ରୁଟ୍ଗୁଡ଼ିକ ପାଇଁ ପରିଚାଳନା ସେସନ୍/API କୀ ଆବଶ୍ୟକ। `/api/assess` POST ଏକ discriminated-union ସ୍କୋପ୍ ସ୍କିମା ସହିତ `validateBody` ବ୍ୟବହାର କରେ।
+**ପ୍ରମାଣୀକରଣ:** `/api/cloud/auth` ସିଧାସଳଖ ଗୋଟିଏ Bearer କୀକୁ ସତ୍ୟାପନ କରେ ଏବଂ କେବଳ `manage` / `admin` ସ୍କୋପ୍ ଥିବା କୀ ପାଇଁ ପ୍ରତ୍ୟେକ ସଂଯୋଗର ମାସ୍କ୍ କରାଯାଇଥିବା କୀ ଏବଂ `projectId` ଫେରାଏ; ଅନ୍ୟ `/api/cloud/*`, ଏବଂ `/api/assess` ରୁଟ୍ଗୁଡ଼ିକ ପାଇଁ ପରିଚାଳନା ସେସନ୍/API କୀ ଆବଶ୍ୟକ। `/api/assess` POST ଏକ discriminated-union ସ୍କୋପ୍ ସ୍କିମା ସହିତ `validateBody` ବ୍ୟବହାର କରେ।
 
 ---
 
@@ -2273,5 +2205,3 @@ AI ଏଜେଣ୍ଟ ଦକ୍ଷତାଗୁଡ଼ିକ ପରିଚାଳନ
 - `requireLogin`-କୁ `/api/settings/require-login` ମାଧ୍ୟମରେ ଟୋଗଲ୍ କରାଯାଇପାରେ
 - `REQUIRE_API_KEY=true` ଥିବାବେଳେ `/v1/*` ରୁଟ୍ଗୁଡ଼ିକ ପାଇଁ ଇଚ୍ଛାଧୀନ ଭାବେ Bearer API କୀ ଆବଶ୍ୟକ ହୁଏ
 - ଏହି ସନ୍ଦର୍ଭରେ "ପରିଚାଳନା ଟୋକନ୍" / "ପରିଚାଳନା-ସ୍କୋପ୍ଯୁକ୍ତ API କୀ"ର ଅର୍ଥ ହେଉଛି ସେହି ଗାଇଡ୍ରେ ଥିବା ପରିବାରଗୁଡ଼ିକ ମଧ୍ୟରୁ ଗୋଟିଏ — କୌଣସି ଅପରିଭାଷିତ ଅତିରିକ୍ତ ଗୁପ୍ତ ପ୍ରକାର ନୁହେଁ
-
-> **ଅସଙ୍ଗତି ସୃଷ୍ଟିକାରୀ ପରିବର୍ତ୍ତନ (v3.8.0)** — `/api/v1/agents/tasks/*` ଏବଂ କୁଲ୍ଡାଉନ୍ ପରିଚାଳନା ଏଣ୍ଡପଏଣ୍ଟଗୁଡ଼ିକ ପାଇଁ ବର୍ତ୍ତମାନ **ପରିଚାଳନା ପ୍ରମାଣୀକରଣ** (ଡ୍ୟାଶବୋର୍ଡ `auth_token` କୁକି କିମ୍ବା ପରିଚାଳନା-ସ୍କୋପ୍ଯୁକ୍ତ API କୀ) ଆବଶ୍ୟକ। ପୂର୍ବରୁ ପ୍ରମାଣୀକରଣ ବିନା ଏହି ରୁଟ୍ଗୁଡ଼ିକୁ କଲ୍ କରୁଥିବା କ୍ଲାଏଣ୍ଟମାନେ `401 Unauthorized` ପାଇବେ। କମିଟ୍ `588a0333` (`fix(auth): require management auth for agent and cooldown APIs`) ଦେଖନ୍ତୁ।

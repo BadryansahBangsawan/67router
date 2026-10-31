@@ -24,7 +24,6 @@ Objectieve functievergelijking versus populaire open-source AI-routers.
 | **A2A-protocol**                                        |                   ✅ 6 skills                    |           ❌            |         ❌          |     ❌      |
 | **Geheugen (FTS5 + vector)**                            |                        ✅                        |           ❌            |         ❌          |     ❌      |
 | **Guardrails (PII, injectie, vision)**                  |                        ✅                        |      gedeeltelijk       |         ❌          | ✅ betaald  |
-| **Cloud-agentintegraties**                              |           Codex, Cursor, Devin, Jules            |           ❌            |         ❌          |     ❌      |
 | **Circuit breaker per provider**                        |          ✅ 3 toestanden, lazy recovery          |          basis          |         ❌          |     ✅      |
 | **TLS-fingerprint-stealth (JA3/JA4)**                   |                    ✅ wreq-js                    |           ❌            |         ❌          |     ❌      |
 | **Evaluatieframework**                                  |                   ✅ ingebouwd                   |           ❌            |         ❌          |  ⚠ betaald  |
@@ -39,7 +38,7 @@ Objectieve functievergelijking versus populaire open-source AI-routers.
 
 ## Wanneer kiezen voor 67router
 
-- Je host zelf en wilt **maximale providerdekking** (375 providers, 155 gratis catalogusvermeldingen zonder authenticatie)
+- Je host zelf en wilt **maximale providerdekking** (372 providers, 155 gratis catalogusvermeldingen zonder authenticatie)
 - Je hebt een **ingebouwde MCP-server** nodig (LLM-tools, geheugen en skills die als tools worden aangeboden)
 - Je hebt het **A2A-protocol** nodig voor agent-to-agent-workflows
 - Je wilt **fingerprint-stealth** (JA3/JA4) om detectie door upstream-CAPTCHA's te voorkomen

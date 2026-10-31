@@ -1235,8 +1235,6 @@ Cuir `~/Library/Application Support/Claude/claude_desktop_config.json` (macOS) n
 
 ### Scóip
 
-Sainmhíníonn MCP faoi láthair 32 scóip ainmnithe. Is féidir gach eochair Bearer a theorannú do scóip shonracha — féach [MCP-SERVER.md](../frameworks/MCP-SERVER.md) le haghaidh an iontrála údarásach scóip agus uirlisí agus [A2A-SERVER.md](../frameworks/A2A-SERVER.md) le haghaidh an scéim JSON-RPC.
-
 ---
 
 ## � Áiseanna Scileanna
@@ -1245,7 +1243,6 @@ Taispeánann 67router **chreat scileanna in-infhiarmaithe** (`src/lib/skills/`) 
 
 - **Comhéadan Margaidh** — Brabhsáil agus suiteáil scileanna ó **Dashboard → Skills**
 - **Scóipeanna in aghaidh an eochracha** — Cuir teorainn le cén eochracha API a fhéadfaidh scileanna áirithe a thionscnamh
-- **Scileanna saincheaptha** - Cuir comhad TypeScript i bhfilléan `src/lib/a2a/skills/`, cláraigh é, agus beidh sé ar fáil láithreach tríd an A2A
 
 Lámhleabhar iomlán: [SKILLS.md](../frameworks/SKILLS.md).
 
@@ -1274,18 +1271,6 @@ Liostáil le haghaidh teagmhais 67router le haghaidh monatóireachta agus uathoi
 - Atreiseanna: 3 iarracht le meitreach drochchúl, ansin scuabadh litreacha marbh
 
 Scéimre iomlán i [WEBHOOKS.md](../frameworks/WEBHOOKS.md).
-
----
-
-## ☁️ Gníomhairí Scáileáin
-
-Comhtháthaíonn 67router le gníomhairí códála scáileáin (**OpenAI Codex Cloud**, **Devin**, **Jules**, **Antigravity**) ionas gur féidir leat tascanna fadthéarmacha a sheoladh ón an chéanna dashboard a bhainistíonn do ródú áitiúil.
-
-- Cruthaigh tascanna i **Dashboard → Cloud Agents** nó trí `POST /api/v1/agents/tasks`
-- Rianaigh stádas, logaanna, agus airtealaí in aghaidh an tasc
-- Eochracha API féin-iompairtha in aghaidh an soláthraí — ní fhágann ainmneacha teagmhasa instanciú 67router choíche
-
-Lámhleabhar iomlán: [CLOUD_AGENT.md](../frameworks/CLOUD_AGENT.md).
 
 ---
 
@@ -1340,7 +1325,6 @@ omniroute restore [<timestamp>]    # Athchóirigh ó ghrianghraf
 omniroute health                   # Sláinte mionsonraithe (briseoirí, taisce, cuimhne)
 omniroute quota                    # Úsáid cuóta soláthraí
 omniroute mcp status               # Stádas freastalaí MCP
-omniroute a2a status               # Stádas freastalaí A2A
 omniroute tunnel list|create|stop  # Toilí Cloudflare/Tailscale/ngrok
 omniroute reset-password           # Athshocraigh pasfhocal an riaracháin
 omniroute --mcp                    # Tosaigh freastalaí MCP thar stdio

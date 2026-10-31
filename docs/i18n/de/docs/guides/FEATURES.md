@@ -43,8 +43,6 @@ Der Zyklus v3.7.x → v3.8.0 bringt konfigurationsfreies automatisches Routing, 
 - 🤝 **GitLab Duo-OAuth-Anbieter** — Anmeldung mit GitLab-Anmeldedaten
 - 🧠 **Reasoning Replay Cache** — hybride Persistenz von Reasoning-Traces im Arbeitsspeicher und in SQLite
 
-📚 **Zugehörige Dokumentation:** [Skills-Framework](../frameworks/SKILLS.md) · [Speichersystem](../frameworks/MEMORY.md) · [Cloud-Agenten](../frameworks/CLOUD_AGENT.md) · [Webhooks](../frameworks/WEBHOOKS.md) · [Reasoning Replay Cache](../routing/REASONING_REPLAY.md)
-
 ---
 
 ## 🔌 Anbieter
@@ -104,12 +102,6 @@ Echtzeitüberwachung: Betriebszeit, Arbeitsspeicher, Version, Latenzperzentile (
 Vier Modi zum Debuggen von API-Übersetzungen: **Playground** (Formatkonverter), **Chat-Tester** (Live-Anfragen), **Testumgebung** (Batch-Tests) und **Live-Monitor** (Echtzeit-Stream).
 
 ![Übersetzungs-Playground](../screenshots/05-translator.png)
-
----
-
-## 🎮 Modell-Playground _(v2.0.9+)_
-
-Testen Sie jedes Modell direkt über das Dashboard. Wählen Sie Anbieter, Modell und Endpunkt aus, verfassen Sie Prompts mit dem Monaco Editor, streamen Sie Antworten in Echtzeit, brechen Sie sie während des Streams ab und sehen Sie sich Zeitmesswerte an.
 
 ---
 

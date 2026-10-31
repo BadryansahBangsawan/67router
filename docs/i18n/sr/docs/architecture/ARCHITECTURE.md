@@ -128,13 +128,11 @@ _Последње ажурирање: 2026-06-28_
 - `/dashboard/limits` — контроле квоте/rate-a
 - `/dashboard/cli-tools` — CLI онбординг, детекција runtime-а, генерисање конфигурације
 - `/dashboard/agents` — детектовани ACP агенти + регистрација прилагођених агената
-- `/dashboard/cloud-agents` — задаци агента хостовани у cloud-у (Codex Cloud, Devin, Jules) и животни циклус задатака
 - `/dashboard/skills` — A2A регистар вештина, sandbox извршавање, каталог уграђених вештина
 - `/dashboard/memory` — инспекција и претрага перзистентне conversational memory
 - `/dashboard/webhooks` — исходне webhook претплате, ротација тајних кључева, статистика поновних покушаја
 - `/dashboard/batch` — слање batch послова и праћење напретка
 - `/dashboard/cache` — статистике read-through и reasoning cache-a, контроле избацивања (eviction)
-- `/dashboard/playground` — интерактивни чет playground против било којег конфигурисаног combo/модела
 - `/dashboard/changelog` — приказивач changelog-а у апликацији (рендерује `CHANGELOG.md`)
 - `/dashboard/system` — runtime дијагностика, информације о верзији, површина за валидацију окружења
 - `/dashboard/onboarding` — чаробњак почетног подешавања за нове инсталације
@@ -252,7 +250,6 @@ flowchart LR
 - Буџет: `src/app/api/usage/budget` (GET/POST)
 - Резервни ланци (fallback chains): `src/app/api/fallback/chains` (GET/POST/DELETE)
 - Ревизија усклађености (compliance audit): `src/app/api/compliance/audit-log` (GET, са пагинацијом + структурираним метаподацима)
-- Евалуације: `src/app/api/evals` (GET/POST), `src/app/api/evals/[suiteId]` (GET)
 - Политике: `src/app/api/policies` (GET/POST)
 - Синхронизациони токени: `src/app/api/sync/tokens` (GET/POST), `src/app/api/sync/tokens/[id]` (GET/DELETE)
 - Пакет конфигурације: `src/app/api/sync/bundle` (GET, ETag-верзионисани снимак подешавања/провајдера/комбинација/кључева)
@@ -316,7 +313,6 @@ flowchart LR
 - Временско ограничење добављања: `src/shared/utils/fetchTimeout.ts`
 - Телеметрија захтева: `src/shared/utils/requestTelemetry.ts`
 - Усклађеност/ревизија: `src/lib/compliance/index.ts`
-- Покретач евалуација: `src/lib/evals/evalRunner.ts`
 - Перзистенција стања домена: `src/lib/db/domainState.ts` — SQLite CRUD за ланце резервног избора, буџете, историју трошкова, стање блокирања и прекидаче струјног кола
 
 Модули OAuth провајдера (27 засебних датотека у `src/lib/oauth/providers/`):
@@ -385,23 +381,6 @@ Auto Combo динамички оцењује и бира циљеве рутир
 
 За потпуне детаље алгоритма (формуле фактора, подешавање тежина), погледајте
 [`docs/routing/AUTO-COMBO.md`](../routing/AUTO-COMBO.md).
-
-### B. Агенти у облаку
-
-Агенти у облаку обједињују платформе независних добављача за хостоване агенте за кодирање (Codex Cloud, Devin,
-Jules) иза јединственог животног циклуса задатка подржаног базом података. Све крајње тачке за креирање/проверу
-задатака захтевају управљачку аутентификацију.
-
-- Корен модула: `src/lib/cloudAgent/` (`baseAgent.ts`, `registry.ts`, `api.ts`,
-  `types.ts`, `db.ts`, као и поддиректоријуми појединачних агената унутар `agents/`)
-- Имплементације по агенту: `agents/codex/`, `agents/devin/`, `agents/jules/`
-- Јавне крајње тачке: `/api/v1/agents/tasks/*` (набрајање/креирање/добављање/отказивање)
-- Управљачке крајње тачке: `/api/cloud/*` (омогућавање ресурса, статус, групна обрада)
-- Контролна табла: `/dashboard/cloud-agents`
-- Складиште: табела `cloud_agent_tasks`
-
-За детаље о омогућавању ресурса по агенту и специфичностима OAuth-а, погледајте
-[`docs/frameworks/CLOUD_AGENT.md`](../frameworks/CLOUD_AGENT.md).
 
 ### C. Заштитне мере
 

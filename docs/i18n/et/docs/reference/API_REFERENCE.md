@@ -1438,9 +1438,8 @@ GET-vastus sisaldab `agents[]` (id, name, binary, version, installed, protocol, 
 
 ### Hindamised
 
-| Lõpp-punkt   | Meetod   | Kirjeldus                                  |
-| ------------ | -------- | ------------------------------------------ |
-| `/api/evals` | GET/POST | Hindamiskomplektide loetlemine / hindamine |
+| Lõpp-punkt | Meetod | Kirjeldus |
+| ---------- | ------ | --------- |
 
 ### Reeglid
 
@@ -1763,31 +1762,6 @@ Automaatse võtmehalduse alamsüsteem kasutab neid API-võtmete väljastamiseks 
 
 ---
 
-## Agentide protokoll
-
-Pilveagentide ülesanded (Claude Code, Codex Cloud, OpenHands jne), mida täidetakse eemalt 67router’i kasutajate nimel.
-
-| Meetod | Tee                           | Kirjeldus                                                                                                                                              |
-| ------ | ----------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------ |
-| GET    | `/api/v1/agents/tasks`        | Ülesannete loend — valikulised `?provider=`, `?status=`, `?limit=` (1–500, vaikimisi 50)                                                               |
-| POST   | `/api/v1/agents/tasks`        | Ülesande loomine — keha valideerib `CreateCloudAgentTaskSchema` (`providerId`, `prompt`, `source`, `options?`). Tagastab `201` koos ülesande ümbrikuga |
-| DELETE | `/api/v1/agents/tasks?id=...` | Ülesande kustutamine                                                                                                                                   |
-| GET    | `/api/v1/agents/tasks/[id]`   | Ülesande lugemine — kui `external_id` on määratud, värskendab sünkroonselt olekut ülesvoolu pilveagendilt                                              |
-| POST   | `/api/v1/agents/tasks/[id]`   | Eristatud toiming: `{action: "approve"}`, `{action: "message", message}` või `{action: "cancel"}`                                                      |
-| DELETE | `/api/v1/agents/tasks/[id]`   | Konkreetse ülesande kustutamine ID alusel                                                                                                              |
-
-> **Autentimine:** igal meetodil on nõutav halduse autentimine (`requireCloudAgentManagementAuth`). Enne versiooni v3.8.0 ei nõudnud need autentimist — murrangulise muudatuse kohta vt commit’i `588a0333`.
-
-```bash
-# Claude Code'i pilveülesande loomine
-curl -X POST http://localhost:20128/api/v1/agents/tasks \
-  -H "Authorization: Bearer your-management-key" \
-  -H "Content-Type: application/json" \
-  -d '{"providerId":"claude-code-cloud","prompt":"Fix the failing test","source":{"repo":"...","branch":"..."}}'
-```
-
----
-
 ## Halduse puhverserverid
 
 Väljamineva HTTP(S)-/SOCKS-liikluse puhverserverid, mida saab määrata teenusepakkujatele, kontodele või globaalselt.
@@ -1907,48 +1881,10 @@ Püsiv vestlusliku/faktilise mälu hoidla, mille ulatus määratakse API-võtme/
 
 67router pakub A2A (agendilt agendile) JSON-RPC 2.0 lõpp-punkti ning REST-ümbrist kontrollimiseks ja töölaual kasutamiseks.
 
-### JSON-RPC
-
-```bash
-POST /a2a
-Authorization: Bearer your-api-key   # valikuline, kui OMNIROUTE_API_KEY pole määratud
-Content-Type: application/json
-
-{
-  "jsonrpc": "2.0",
-  "id": 1,
-  "method": "message/send",
-  "params": {
-    "skill": "smart-routing",
-    "messages": [{"role": "user", "content": "Route this coding task"}]
-  }
-}
-```
-
-Toetatud meetodid (kõik sõltuvad sättest `settings.a2aEnabled`):
-
-| Meetod           | Kirjeldus                                                             |
-| ---------------- | --------------------------------------------------------------------- |
-| `message/send`   | Oskuse sünkroonne käivitamine; tagastab `{task, artifacts, metadata}` |
-| `message/stream` | Sama oskustekomplekti voogedastusega SSE-käivitus                     |
-| `tasks/get`      | Toimingu hankimine `taskId` järgi                                     |
-| `tasks/cancel`   | Toimingu tühistamine `taskId` järgi                                   |
-
-Sisseehitatud oskused: `smart-routing`, `quota-management`, `provider-discovery`, `cost-analysis`, `health-report`.
-
-### Agendikaart
-
-```bash
-GET /.well-known/agent.json
-```
-
-Tagastab avaliku A2A-agendikaardi (nimi, kirjeldus, võimekused, oskuste kataloog, autentimisskeem) — avalikult vahemällu salvestatud 1 tunniks. Autentimine pole nõutav.
-
 ### REST-abimeetodid
 
 | Meetod | Tee                          | Kirjeldus                                                                                                             |
 | ------ | ---------------------------- | --------------------------------------------------------------------------------------------------------------------- |
-| GET    | `/api/a2a/status`            | A2A lubatud olek + toimingute statistika + vahemällu salvestatud agendikaardi kokkuvõte                               |
 | GET    | `/api/a2a/tasks`             | Toimingute loend — `?state=submitted\|working\|completed\|failed\|cancelled`, `?skill=`, `?limit=` (≤200), `?offset=` |
 | POST   | `/api/a2a/tasks`             | (Pole REST-abimeetodina rakendatud — looge JSON-RPC `message/send` kaudu)                                             |
 | GET    | `/api/a2a/tasks/[id]`        | Ühe toimingu hankimine                                                                                                |
@@ -1968,12 +1904,8 @@ Tagastab avaliku A2A-agendikaardi (nimi, kirjeldus, võimekused, oskuste kataloo
 | GET | `/api/cloud/models/alias` | Loetleb pilvesünkroonimisele avaldatud mudelialiased |
 | GET | `/api/assess` | Loeb uusimad hindamiskategooriad (teenusepakkuja/mudeli kaupa) |
 | POST | `/api/assess` | Käivitab hindamise — keha: `{scope: {type:"all"}                                                   | {type:"provider", providerId} | {type:"model", modelId}, trigger?}` |
-| GET | `/api/evals` | Loetleb sisseehitatud evalveerimiskomplektid ja viimatised käivitused |
-| POST | `/api/evals` | Käivitab evalveerimise |
-| POST | `/api/evals/suites` | Loob kohandatud evalveerimiskomplekti — keha valideeritakse skeemiga `evalSuiteSaveSchema` |
-| GET | `/api/evals/suites/[id]` | Hangib kohandatud evalveerimiskomplekti |
 
-**Autentimine:** `/api/cloud/auth` valideerib Bearer-võtme otse ning tagastab iga ühenduse maskeeritud võtme ja `projectId` ainult võtme puhul, millel on ulatus `manage` / `admin`; teised marsruudid `/api/cloud/*`, `/api/evals/*` ja `/api/assess` nõuavad haldusseanssi/API-võtit. `/api/assess` POST kasutab diskrimineeritud ühendi ulatuseskeemiga funktsiooni `validateBody`.
+**Autentimine:** `/api/cloud/auth` valideerib Bearer-võtme otse ning tagastab iga ühenduse maskeeritud võtme ja `projectId` ainult võtme puhul, millel on ulatus `manage` / `admin`; teised marsruudid `/api/cloud/*` ja `/api/assess` nõuavad haldusseanssi/API-võtit. `/api/assess` POST kasutab diskrimineeritud ühendi ulatuseskeemiga funktsiooni `validateBody`.
 
 ---
 
@@ -2297,5 +2229,3 @@ haldusulatusega API-võti) ja nende erinevuste kohta inferentsivõtmetest vaadak
 - Seadet `requireLogin` saab muuta marsruudi `/api/settings/require-login` kaudu
 - Marsruudid `/v1/*` võivad nõuda Bearer API-võtit, kui `REQUIRE_API_KEY=true`
 - „Haldusluba” / „haldusulatusega API-võti” tähendab selles viites üht vastavas juhendis kirjeldatud perekonda, mitte määratlemata täiendavat saladuse tüüpi
-
-> **Ühilduvust katkestav muudatus (v3.8.0)** — `/api/v1/agents/tasks/*` ja ooteaja halduse lõpp-punktid nõuavad nüüd **haldusautentimist** (juhtpaneeli küpsis `auth_token` või haldusulatusega API-võti). Kliendid, mis varem kutsusid neid marsruute autentimata, saavad vastuseks `401 Unauthorized`. Vaadake muudatust `588a0333` (`fix(auth): require management auth for agent and cooldown APIs`).

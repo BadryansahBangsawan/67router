@@ -596,7 +596,7 @@ trenutačnom katalogu na **[radar.omniroute.online/planos](https://radar.omnirou
 - **🔑 Upravljanje usmjeravanjem po ključu** — prikvačite API ključ za jedan model ili combo pomoću `forcedModel` te atomarno dodajte ili uklonite modele i comboe ključa (`/api/keys/{id}/access`). → [API Reference](docs/reference/API_REFERENCE.md) · [OpenAPI](docs/openapi.yaml)
 - **🛡️ Finija kontrola PII podataka** — odabir po vrsti, do 20 validiranih prilagođenih uzoraka maskiranja i brojači detekcije po vrsti; samo maskiranje ostaje opt-in. → [Guardrails](docs/security/GUARDRAILS.md)
 - **🌍 67 jezika** — nadzorna ploča, zrcaljene dokumentacije i CLI, s `npm run i18n:add-locale` koji dodaje jezik svugdje jednom naredbom. → [i18n Guide](docs/guides/I18N.md)
-- **🎛️ OmniConductor** — dolazno A2A delegiranje na vašu flotu agenata, Conductor vještine na Agent Card i panel nadzorne ploče s Faro push-to-talk glasovnim razgovorom. → [A2A Server](docs/frameworks/A2A-SERVER.md)
+- **🎛️ OmniConductor** — dolazno A2A delegiranje na vašu flotu agenata, Conductor vještine na Agent Card i panel nadzorne ploče s Faro push-to-talk glasovnim razgovorom.
 - **🛂 Prilagodljiv prihvat i zaštita od preopterećenja** — teški chat zahtjevi staju u red umjesto da vraćaju 503, s atomarnim RPM rolling leaseovima po vezi. → [Resilience Guide](docs/architecture/RESILIENCE_GUIDE.md)
 - **🗂️ Kanonski poredak `/v1/models`** — jedan neprekinuti blok grupiran po pružatelju za svakog pružatelja (comboi prikvačeni prvi), stabilan u svakom izvoru kataloga. → [API Reference](docs/reference/API_REFERENCE.md)
 - **🗜️ Ojačana kompresija** — guard protiv inflacije uključen prema zadanim postavkama, Caveman paketi za DE / FR / JA + kineski (wényán), RTK filtri za Gradle i .NET. → [Compression](docs/compression/COMPRESSION_ENGINES.md)
@@ -915,7 +915,6 @@ Izložite 67router putem **MCP-a**, **A2A-a**, **REST API-ja**, **web-dojavnika*
   <tr><td align="left" nowrap>🧰 <b>MCP (stdio)</b></td><td align="left" nowrap><code>omniroute --mcp</code></td><td align="left">Povezivanje s Claude Desktopom, Cursorom ili bilo kojim MCP klijentom</td></tr>
   <tr><td align="left" nowrap>🌊 <b>MCP (HTTP)</b></td><td align="left" nowrap><code>/api/mcp/stream</code></td><td align="left">Udaljeni MCP — <b>110 alata</b>, 33 opsega (provedba po izboru), potpuni revizijski trag</td></tr>
   <tr><td align="left" nowrap>📡 <b>MCP (SSE)</b></td><td align="left" nowrap><code>/api/mcp/sse</code></td><td align="left">MCP prijenos strujanjem</td></tr>
-  <tr><td align="left" nowrap>🤝 <b>A2A</b></td><td align="left" nowrap><code>/.well-known/agent.json</code></td><td align="left">Komunikacija između agenata, <b>JSON-RPC 2.0</b> + SSE, 6 vještina</td></tr>
   <tr><td align="left" nowrap>🌐 <b>REST API</b></td><td align="left" nowrap><code>/v1/*</code></td><td align="left">Kompatibilno s OpenAI-jem — razgovor, ugrađivanja, slike, zvuk, OCR</td></tr>
   <tr><td align="left" nowrap>🔔 <b>Web-dojavnici</b></td><td align="left" nowrap><code>/api/webhooks</code></td><td align="left">Šaljite događaje zahtjeva / kvota u Slack, Discord, Telegram ili na bilo koji URL</td></tr>
   <tr><td align="left" nowrap>🛰️ <b>Udaljeni CLI</b></td><td align="left" nowrap><code>omniroute connect <host></code></td><td align="left">Upravljajte udaljenom instancom pomoću pristupnih tokena ograničenog opsega</td></tr>
@@ -925,8 +924,6 @@ Izložite 67router putem **MCP-a**, **A2A-a**, **REST API-ja**, **web-dojavnika*
 # Omogućite Claude Codeu potpuni skup 67router alata putem MCP-a:
 claude mcp add-server omniroute --type http --url http://localhost:20128/api/mcp/stream
 ```
-
-<sub>📖 [MCP poslužitelj](docs/frameworks/MCP-SERVER.md) · [A2A poslužitelj](docs/frameworks/A2A-SERVER.md) · [Protokoli za agente](docs/frameworks/AGENT_PROTOCOLS_GUIDE.md)</sub>
 
 <br/>
 
@@ -1394,7 +1391,6 @@ Kanonske metrike na dan 2026-10-18: **1.976 jedinstvenih videozapisa** · **20.2
   <tr><td nowrap><b><a href="open-sse/mcp-server/README.md">MCP poslužitelj</a></b></td><td>110 MCP alata, IDE konfiguracije, Python/TS/Go klijenti</td></tr>
   <tr><td nowrap><b><a href="docs/frameworks/MCP-SERVER.md">Vodič za MCP poslužitelj</a></b></td><td>Instalacija MCP-a, prijenosni mehanizmi i referenca alata</td></tr>
   <tr><td nowrap><b><a href="src/lib/a2a/README.md">A2A poslužitelj</a></b></td><td>JSON-RPC 2.0 protokol, vještine, strujanje, upravljanje zadacima</td></tr>
-  <tr><td nowrap><b><a href="docs/frameworks/A2A-SERVER.md">Vodič za A2A poslužitelj</a></b></td><td>Kartica A2A agenta, zadaci, vještine i strujanje</td></tr>
 </table>
 
 ### 📋 Projekt i kvaliteta

@@ -86,7 +86,7 @@ dashboard settings ရှိ `blockedProviders` ထဲသို့ ထည့်�
 
 ## VS Code တက်ဘ်အတွင်းရှိ Dashboard
 
-`omnicopilot.dashboardOpen: "editor"` သည် 67router dashboard ကို ပြင်ပ browser တွင် ဖွင့်မည့်အစား Simple Browser မှတစ်ဆင့် editor တက်ဘ်တစ်ခုအတွင်း ဖော်ပြပေးသည်။ ထည့်သွင်းဖော်ပြခြင်းကို server ပေါ်တွင် **အထူးရွေးချယ်ဖွင့်ထားရန် လိုအပ်ပြီး** `DASHBOARD_ALLOW_EMBED=vscode` မှတစ်ဆင့် လုပ်ဆောင်ရသည်။ ၎င်းသည် HTML စာမျက်နှာများကို မူလသတ်မှတ်ချက်ဖြစ်သည့် `frame-ancestors 'none'` + `X-Frame-Options: DENY` အစား `frame-ancestors 'self' vscode-webview:` ဖြင့် ပံ့ပိုးပေးသည်။ API မျက်နှာပြင် (`/api`, `/v1`, `/v1beta`, `/a2a`, `/healthz`) သည် မည်သည့်အခြေအနေတွင်မဆို တင်းကျပ်သော header များကို ဆက်လက်အသုံးပြုသည်။
+`omnicopilot.dashboardOpen: "editor"` သည် 67router dashboard ကို ပြင်ပ browser တွင် ဖွင့်မည့်အစား Simple Browser မှတစ်ဆင့် editor တက်ဘ်တစ်ခုအတွင်း ဖော်ပြပေးသည်။ ထည့်သွင်းဖော်ပြခြင်းကို server ပေါ်တွင် **အထူးရွေးချယ်ဖွင့်ထားရန် လိုအပ်ပြီး** `DASHBOARD_ALLOW_EMBED=vscode` မှတစ်ဆင့် လုပ်ဆောင်ရသည်။ ၎င်းသည် HTML စာမျက်နှာများကို မူလသတ်မှတ်ချက်ဖြစ်သည့် `frame-ancestors 'none'` + `X-Frame-Options: DENY` အစား `frame-ancestors 'self' vscode-webview:` ဖြင့် ပံ့ပိုးပေးသည်။ API မျက်နှာပြင် (`/api`, `/v1`, `/v1beta`, `/healthz`) သည် မည်သည့်အခြေအနေတွင်မဆို တင်းကျပ်သော header များကို ဆက်လက်အသုံးပြုသည်။
 
 > ⚠️ **၎င်းသည် runtime flag မဟုတ်ဘဲ build-time flag ဖြစ်သည်။** Next.js သည် `headers()` ကို route
 > manifest အတွင်း compile လုပ်သဖြင့် bundle ကို build လုပ်နေချိန်တွင် `next.config.mjs` က variable ကို ဖတ်သည်

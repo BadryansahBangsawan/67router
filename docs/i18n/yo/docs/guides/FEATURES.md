@@ -43,8 +43,6 @@
 - 🤝 **Olùpèsè GitLab Duo OAuth** — wọlé pẹ̀lú àwọn ẹ̀rí GitLab
 - 🧠 **Reasoning Replay Cache** — ìtọ́jú àpapọ̀ inú-memory + SQLite fún àwọn ipa reasoning
 
-📚 **Àwọn ìwé tó jọmọ́:** [Skills Framework](../frameworks/SKILLS.md) · [Memory System](../frameworks/MEMORY.md) · [Cloud Agents](../frameworks/CLOUD_AGENT.md) · [Webhooks](../frameworks/WEBHOOKS.md) · [Reasoning Replay Cache](../routing/REASONING_REPLAY.md)
-
 ---
 
 ## 🔌 Àwọn Olùpèsè
@@ -104,12 +102,6 @@
 Àwọn ìpo mẹ́rin fún ṣíṣe àyẹ̀wò àṣìṣe àwọn ìtumọ̀ API: **Pápá Ìdánwò** (olùyípadà ìṣètò), **Olùdánwò Ìjíròrò** (àwọn ìbéèrè ní tààrà), **Pẹpẹ Ìdánwò** (àwọn ìdánwò lẹ́ẹ̀kan ṣoṣo), àti **Olùṣàkíyèsí Ní Tààrà** (ìṣàn ní àkókò gidi).
 
 ![Pápá Ìdánwò Atúmọ̀ Èdè](../screenshots/05-translator.png)
-
----
-
-## 🎮 Pápá Ìdánwò Módẹ́lì _(v2.0.9+)_
-
-Ṣe ìdánwò módẹ́lì èyíkéyìí ní tààrà láti ojú ìdarí. Yan olùpèsè, módẹ́lì, àti endpoint, kọ àwọn prompt pẹ̀lú Monaco Editor, gba àwọn ìdáhùn tí ń ṣàn ní àkókò gidi, dá a dúró láàárín ìṣàn, kí o sì wo àwọn ìwọ̀n àkókò.
 
 ---
 

@@ -1392,9 +1392,8 @@ GET レスポンスには、`agents[]`（id、name、binary、version、installe
 
 ### 評価
 
-| エンドポイント | メソッド | 説明                               |
-| -------------- | -------- | ---------------------------------- |
-| `/api/evals`   | GET/POST | 評価スイートの一覧表示／評価の実行 |
+| エンドポイント | メソッド | 説明 |
+| -------------- | -------- | ---- |
 
 ### ポリシー
 
@@ -1715,31 +1714,6 @@ DELETE /api/usage/token-limits?id=tl-abc
 
 ---
 
-## エージェントプロトコル
-
-67router ユーザーに代わってリモートで実行されるクラウドエージェントタスク（Claude Code、Codex Cloud、OpenHands など）。
-
-| メソッド | パス                          | 説明                                                                                                                                                                      |
-| -------- | ----------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| GET      | `/api/v1/agents/tasks`        | タスクを一覧表示 — オプションで `?provider=`、`?status=`、`?limit=`（1～500、デフォルトは50）を指定可能                                                                   |
-| POST     | `/api/v1/agents/tasks`        | タスクを作成 — リクエストボディは `CreateCloudAgentTaskSchema`（`providerId`、`prompt`、`source`、`options?`）で検証されます。タスクエンベロープとともに `201` を返します |
-| DELETE   | `/api/v1/agents/tasks?id=...` | タスクを削除                                                                                                                                                              |
-| GET      | `/api/v1/agents/tasks/[id]`   | タスクを取得 — `external_id` が設定されている場合、上流のクラウドエージェントからステータスを同期的に更新します                                                           |
-| POST     | `/api/v1/agents/tasks/[id]`   | 識別アクション：`{action: "approve"}`、`{action: "message", message}`、または `{action: "cancel"}`                                                                        |
-| DELETE   | `/api/v1/agents/tasks/[id]`   | ID を指定して特定のタスクを削除                                                                                                                                           |
-
-> **認証：** すべてのメソッドで管理認証（`requireCloudAgentManagementAuth`）が必要です。v3.8.0 より前は認証されていませんでした — 破壊的変更についてはコミット `588a0333` を参照してください。
-
-```bash
-# Claude Codeクラウドタスクを作成
-curl -X POST http://localhost:20128/api/v1/agents/tasks \
-  -H "Authorization: Bearer your-management-key" \
-  -H "Content-Type: application/json" \
-  -d '{"providerId":"claude-code-cloud","prompt":"Fix the failing test","source":{"repo":"...","branch":"..."}}'
-```
-
----
-
 ## 管理プロキシ
 
 プロバイダー、アカウント、またはグローバルに割り当て可能な送信 HTTP(S)/SOCKS プロキシ。
@@ -1859,48 +1833,10 @@ API キー／セッションごとにスコープ設定された、永続的な�
 
 67routerは、A2A（Agent-to-Agent）JSON-RPC 2.0エンドポイントに加えて、検査およびダッシュボード用途のRESTラッパーを公開します。
 
-### JSON-RPC
-
-```bash
-POST /a2a
-Authorization: Bearer your-api-key   # OMNIROUTE_API_KEYが設定されていない限り省略可能
-Content-Type: application/json
-
-{
-  "jsonrpc": "2.0",
-  "id": 1,
-  "method": "message/send",
-  "params": {
-    "skill": "smart-routing",
-    "messages": [{"role": "user", "content": "Route this coding task"}]
-  }
-}
-```
-
-サポートされているメソッド（すべて`settings.a2aEnabled`によって制御されます）：
-
-| メソッド         | 説明                                                    |
-| ---------------- | ------------------------------------------------------- |
-| `message/send`   | スキルを同期実行し、`{task, artifacts, metadata}`を返す |
-| `message/stream` | 同じスキルセットをストリーミングSSEで実行               |
-| `tasks/get`      | `taskId`でタスクを取得                                  |
-| `tasks/cancel`   | `taskId`でタスクをキャンセル                            |
-
-組み込みスキル：`smart-routing`、`quota-management`、`provider-discovery`、`cost-analysis`、`health-report`。
-
-### エージェントカード
-
-```bash
-GET /.well-known/agent.json
-```
-
-公開A2Aエージェントカード（名前、説明、機能、スキルカタログ、認証方式）を返します。公開キャッシュの有効期間は1時間です。認証は不要です。
-
 ### RESTヘルパー
 
 | メソッド | パス                         | 説明                                                                                                             |
 | -------- | ---------------------------- | ---------------------------------------------------------------------------------------------------------------- |
-| GET      | `/api/a2a/status`            | A2Aの有効状態、タスク統計、キャッシュ済みエージェントカードの概要                                                |
 | GET      | `/api/a2a/tasks`             | タスク一覧 — `?state=submitted\|working\|completed\|failed\|cancelled`、`?skill=`、`?limit=`（≤200）、`?offset=` |
 | POST     | `/api/a2a/tasks`             | （RESTヘルパーとしては未実装 — JSON-RPCの`message/send`で作成）                                                  |
 | GET      | `/api/a2a/tasks/[id]`        | 単一のタスクを取得                                                                                               |
@@ -1920,12 +1856,8 @@ GET /.well-known/agent.json
 | GET | `/api/cloud/models/alias` | クラウド同期に公開されているモデルエイリアスを一覧表示 |
 | GET | `/api/assess` | 最新のアセスメント分類を読み取り（プロバイダー／モデル単位） |
 | POST | `/api/assess` | アセスメントを実行 — 本文：`{scope: {type:"all"}                                                   | {type:"provider", providerId} | {type:"model", modelId}, trigger?}` |
-| GET | `/api/evals` | 組み込み評価スイートと最新の実行結果を一覧表示 |
-| POST | `/api/evals` | 評価実行を開始 |
-| POST | `/api/evals/suites` | カスタム評価スイートを作成 — 本文は`evalSuiteSaveSchema`で検証 |
-| GET | `/api/evals/suites/[id]` | カスタム評価スイートを取得 |
 
-**認証：** `/api/cloud/auth`はBearerキーを直接検証し、`manage` / `admin`スコープを持つキーの場合にのみ、各接続のマスクされたキーと`projectId`を返します。その他の`/api/cloud/*`、`/api/evals/*`、`/api/assess`ルートには、管理セッションまたはAPIキーが必要です。`/api/assess`のPOSTは、判別共用体のスコープスキーマとともに`validateBody`を使用します。
+**認証：** `/api/cloud/auth`はBearerキーを直接検証し、`manage` / `admin`スコープを持つキーの場合にのみ、各接続のマスクされたキーと`projectId`を返します。その他の`/api/cloud/*`、`/api/assess`ルートには、管理セッションまたはAPIキーが必要です。`/api/assess`のPOSTは、判別共用体のスコープスキーマとともに`validateBody`を使用します。
 
 ---
 
@@ -2244,5 +2176,3 @@ AI エージェントスキル（OpenAI のカスタム GPT に似ています�
 - `requireLogin` は `/api/settings/require-login` で切り替え可能です
 - `REQUIRE_API_KEY=true` の場合、`/v1/*` ルートでは必要に応じて Bearer API キーが要求されます
 - このリファレンスにおける「管理トークン」または「管理スコープの API キー」とは、そのガイドに記載されている認証情報ファミリーのいずれかを指し、未定義の追加シークレット種別を意味するものではありません
-
-> **破壊的変更（v3.8.0）** — `/api/v1/agents/tasks/*` およびクールダウン管理エンドポイントでは、**管理認証**（ダッシュボードの `auth_token` Cookie または管理スコープの API キー）が必須になりました。これまで認証なしでこれらのルートを呼び出していたクライアントには、`401 Unauthorized` が返されます。コミット `588a0333`（`fix(auth): require management auth for agent and cooldown APIs`）を参照してください。

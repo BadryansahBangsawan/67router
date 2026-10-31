@@ -24,7 +24,6 @@ Mwongozo kamili wa kusanidi watoa huduma, kuunda michanganyiko, kuunganisha zana
 - [Mfumo wa Ujuzi](#-skills-system)
 - [Mfumo wa Kumbukumbu](#-memory-system)
 - [Webhooks](#-webhooks)
-- [Mawakala wa Wingu](#-cloud-agents)
 - [Usimamizi wa Kiprogramu](#-programmatic-management)
 - [CLI ya Ndani](#-internal-cli)
 - [Programu ya Eneo-kazi (Electron)](#-desktop-application-electron)
@@ -1239,8 +1238,6 @@ Tumia URL ya SSE `http://localhost:20128/api/mcp/sse` na ufunguo wa API wa Beare
 
 ### Mawanda
 
-Kwa sasa MCP inafafanua mawanda 32 yenye majina. Kila ufunguo wa Bearer unaweza kuwekewa kikomo cha mawanda mahususi — angalia [MCP-SERVER.md](../frameworks/MCP-SERVER.md) kwa orodha rasmi ya mawanda na zana, na [A2A-SERVER.md](../frameworks/A2A-SERVER.md) kwa skema ya JSON-RPC.
-
 ---
 
 ## 🧠 Mfumo wa Ujuzi
@@ -1249,7 +1246,6 @@ Kwa sasa MCP inafafanua mawanda 32 yenye majina. Kila ufunguo wa Bearer unaweza 
 
 - **Kiolesura cha Marketplace** — Vinjari na usakinishe ujuzi kupitia **Dashboard → Skills**
 - **Mawanda kwa kila ufunguo** — Dhibiti ni funguo zipi za API zinazoweza kuitisha ujuzi upi
-- **Ujuzi maalum** — Weka faili ya TypeScript katika `src/lib/a2a/skills/`, isajili, na mara moja itaweza kuitishwa kupitia A2A
 
 Rejeleo kamili: [SKILLS.md](../frameworks/SKILLS.md).
 
@@ -1278,18 +1274,6 @@ Jisajili kupokea matukio ya 67router kwa ufuatiliaji na uendeshaji otomatiki wa 
 - Majaribio ya kurudia: majaribio 3 yenye muda wa kusubiri unaoongezeka kwa kasi, kisha foleni ya ujumbe ulioshindikana
 
 Schema kamili katika [WEBHOOKS.md](../frameworks/WEBHOOKS.md).
-
----
-
-## ☁️ Mawakala wa Wingu
-
-67router huunganishwa na mawakala wa uandishi wa msimbo wa wingu (**OpenAI Codex Cloud**, **Devin**, **Jules**, **Antigravity**) ili uweze kutuma kazi za muda mrefu kutoka kwenye dashboard ileile inayoshughulikia uratibu wako wa ndani.
-
-- Unda kazi katika **Dashboard → Cloud Agents** au kupitia `POST /api/v1/agents/tasks`
-- Fuatilia hali, kumbukumbu za matukio na vizalishwa kwa kila kazi
-- Tumia ufunguo wako mwenyewe wa API kwa kila mtoa huduma — vitambulisho haviondoki kamwe kwenye instance ya 67router
-
-Rejeleo kamili: [CLOUD_AGENT.md](../frameworks/CLOUD_AGENT.md).
 
 ---
 
@@ -1346,7 +1330,6 @@ omniroute restore [<timestamp>]    # Rejesha kutoka kwenye picha ya muda
 omniroute health                   # Afya ya kina (vikataji, akiba, kumbukumbu)
 omniroute quota                    # Matumizi ya kiwango cha mtoa huduma
 omniroute mcp status               # Hali ya seva ya MCP
-omniroute a2a status               # Hali ya seva ya A2A
 omniroute tunnel list|create|stop  # Vichuguu vya Cloudflare/Tailscale/ngrok
 omniroute reset-password           # Weka upya nenosiri la msimamizi
 omniroute --mcp                    # Anzisha seva ya MCP kupitia stdio

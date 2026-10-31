@@ -1438,9 +1438,8 @@ Odgovor GET vključuje `agents[]` (id, name, binary, version, installed, protoco
 
 ### Evalvacije
 
-| Endpoint     | Metoda   | Opis                                        |
-| ------------ | -------- | ------------------------------------------- |
-| `/api/evals` | GET/POST | Seznam zbirk evalvacij / izvedba evalvacije |
+| Endpoint | Metoda | Opis |
+| -------- | ------ | ---- |
 
 ### Pravilniki
 
@@ -1760,31 +1759,6 @@ Podsistem za samodejno upravljanje ključev jih uporablja za izdajanje in rotaci
 
 ---
 
-## Protokol agentov
-
-Opravila agentov v oblaku (Claude Code, Codex Cloud, OpenHands itd.), ki se izvajajo oddaljeno v imenu uporabnikov 67router.
-
-| Metoda | Pot                           | Opis                                                                                                                                        |
-| ------ | ----------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------- |
-| GET    | `/api/v1/agents/tasks`        | Prikaži opravila — izbirno `?provider=`, `?status=`, `?limit=` (1–500, privzeto 50)                                                         |
-| POST   | `/api/v1/agents/tasks`        | Ustvari opravilo — telo preveri `CreateCloudAgentTaskSchema` (`providerId`, `prompt`, `source`, `options?`). Vrne `201` z ovojnico opravila |
-| DELETE | `/api/v1/agents/tasks?id=...` | Izbriši opravilo                                                                                                                            |
-| GET    | `/api/v1/agents/tasks/[id]`   | Preberi opravilo — ko je nastavljen `external_id`, sinhrono osveži stanje iz zunanjega agenta v oblaku                                      |
-| POST   | `/api/v1/agents/tasks/[id]`   | Razlikovalno dejanje: `{action: "approve"}`, `{action: "message", message}` ali `{action: "cancel"}`                                        |
-| DELETE | `/api/v1/agents/tasks/[id]`   | Izbriši določeno opravilo glede na id                                                                                                       |
-
-> **Preverjanje pristnosti:** preverjanje pristnosti za upravljanje je zahtevano pri vsaki metodi (`requireCloudAgentManagementAuth`). Pred različico v3.8.0 te metode niso zahtevale preverjanja pristnosti — za prelomno spremembo glejte potrditev `588a0333`.
-
-```bash
-# Ustvari opravilo Claude Code v oblaku
-curl -X POST http://localhost:20128/api/v1/agents/tasks \
-  -H "Authorization: Bearer your-management-key" \
-  -H "Content-Type: application/json" \
-  -d '{"providerId":"claude-code-cloud","prompt":"Fix the failing test","source":{"repo":"...","branch":"..."}}'
-```
-
----
-
 ## Posredniški strežniki za upravljanje
 
 Izhodni posredniški strežniki HTTP(S)/SOCKS, ki jih je mogoče dodeliti ponudnikom, računom ali globalno.
@@ -1904,48 +1878,10 @@ Trajna shramba pogovornega pomnilnika in pomnilnika dejstev, omejena na posamezn
 
 67router ponuja končno točko A2A (Agent-to-Agent) JSON-RPC 2.0 in ovoj REST za pregledovanje ter uporabo na nadzorni plošči.
 
-### JSON-RPC
-
-```bash
-POST /a2a
-Authorization: Bearer your-api-key   # izbirno, razen če je nastavljena spremenljivka OMNIROUTE_API_KEY
-Content-Type: application/json
-
-{
-  "jsonrpc": "2.0",
-  "id": 1,
-  "method": "message/send",
-  "params": {
-    "skill": "smart-routing",
-    "messages": [{"role": "user", "content": "Route this coding task"}]
-  }
-}
-```
-
-Podprte metode (vse so odvisne od nastavitve `settings.a2aEnabled`):
-
-| Metoda           | Opis                                                              |
-| ---------------- | ----------------------------------------------------------------- |
-| `message/send`   | Sinhrono izvajanje spretnosti; vrne `{task, artifacts, metadata}` |
-| `message/stream` | Pretočno izvajanje SSE istega nabora spretnosti                   |
-| `tasks/get`      | Pridobi opravilo po `taskId`                                      |
-| `tasks/cancel`   | Prekliče opravilo po `taskId`                                     |
-
-Vgrajene spretnosti: `smart-routing`, `quota-management`, `provider-discovery`, `cost-analysis`, `health-report`.
-
-### Kartica agenta
-
-```bash
-GET /.well-known/agent.json
-```
-
-Vrne javno kartico agenta A2A (ime, opis, zmožnosti, katalog spretnosti, shemo avtentikacije) — javno predpomnjeno za 1 uro. Avtentikacija ni potrebna.
-
 ### Pomožne funkcije REST
 
 | Metoda | Pot                          | Opis                                                                                                                        |
 | ------ | ---------------------------- | --------------------------------------------------------------------------------------------------------------------------- |
-| GET    | `/api/a2a/status`            | Omogočenost A2A + statistika opravil + predpomnjen povzetek kartice agenta                                                  |
 | GET    | `/api/a2a/tasks`             | Prikaže seznam opravil — `?state=submitted\|working\|completed\|failed\|cancelled`, `?skill=`, `?limit=` (≤200), `?offset=` |
 | POST   | `/api/a2a/tasks`             | (Ni implementirano kot pomožna funkcija REST — ustvarite prek JSON-RPC `message/send`)                                      |
 | GET    | `/api/a2a/tasks/[id]`        | Pridobi posamezno opravilo                                                                                                  |
@@ -1965,12 +1901,8 @@ Vrne javno kartico agenta A2A (ime, opis, zmožnosti, katalog spretnosti, shemo 
 | GET | `/api/cloud/models/alias` | Prikaže seznam vzdevkov modelov, kot so izpostavljeni sinhronizaciji z oblakom |
 | GET | `/api/assess` | Prebere najnovejše kategorizacije ocenjevanja (po ponudniku/modelu) |
 | POST | `/api/assess` | Izvede ocenjevanje — telo: `{scope: {type:"all"}                                                   | {type:"provider", providerId} | {type:"model", modelId}, trigger?}` |
-| GET | `/api/evals` | Prikaže vgrajene zbirke evalvacij + najnovejša izvajanja |
-| POST | `/api/evals` | Sproži izvajanje evalvacije |
-| POST | `/api/evals/suites` | Ustvari zbirko evalvacij po meri — telo je preverjeno z `evalSuiteSaveSchema` |
-| GET | `/api/evals/suites/[id]` | Pridobi zbirko evalvacij po meri |
 
-**Avtentikacija:** `/api/cloud/auth` neposredno preveri ključ Bearer in vrne maskirani ključ ter `projectId` vsake povezave samo za ključ z obsegom `manage` / `admin`; druge poti `/api/cloud/*`, `/api/evals/*` in `/api/assess` zahtevajo skrbniško sejo/ključ API. Zahteva POST za `/api/assess` uporablja `validateBody` s shemo obsega diskriminirane unije.
+**Avtentikacija:** `/api/cloud/auth` neposredno preveri ključ Bearer in vrne maskirani ključ ter `projectId` vsake povezave samo za ključ z obsegom `manage` / `admin`; druge poti `/api/cloud/*` in `/api/assess` zahtevajo skrbniško sejo/ključ API. Zahteva POST za `/api/assess` uporablja `validateBody` s shemo obsega diskriminirane unije.
 
 ---
 
@@ -2293,5 +2225,3 @@ glejte [Preverjanje pristnosti za upravljanje](../guides/MANAGEMENT-AUTH.md).
 - Nastavitev `requireLogin` je mogoče preklopiti prek `/api/settings/require-login`
 - Poti `/v1/*` lahko zahtevajo API-ključ Bearer, ko je `REQUIRE_API_KEY=true`
 - »Upravljalski žeton« / »API-ključ z obsegom upravljanja« v tem priročniku pomeni eno od družin iz navedenega vodnika — ne pa dodatne, neopredeljene vrste skrivnosti
-
-> **Prelomna sprememba (v3.8.0)** — `/api/v1/agents/tasks/*` in končne točke za upravljanje obdobja ohlajanja zdaj zahtevajo **preverjanje pristnosti za upravljanje** (piškotek nadzorne plošče `auth_token` ali API-ključ z obsegom upravljanja). Odjemalci, ki so te poti prej klicali brez preverjanja pristnosti, bodo prejeli `401 Unauthorized`. Glejte potrditev `588a0333` (`fix(auth): require management auth for agent and cooldown APIs`).

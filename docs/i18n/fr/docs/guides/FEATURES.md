@@ -43,8 +43,6 @@ Le cycle v3.7.x → v3.8.0 a ajouté le routage automatique sans configuration, 
 - 🤝 **Fournisseur OAuth GitLab Duo** — connexion avec les identifiants GitLab
 - 🧠 **Cache de relecture du raisonnement** — persistance hybride en mémoire et dans SQLite des traces de raisonnement
 
-📚 **Documentation associée :** [Framework de compétences](../frameworks/SKILLS.md) · [Système de mémoire](../frameworks/MEMORY.md) · [Agents cloud](../frameworks/CLOUD_AGENT.md) · [Webhooks](../frameworks/WEBHOOKS.md) · [Cache de relecture du raisonnement](../routing/REASONING_REPLAY.md)
-
 ---
 
 ## 🔌 Fournisseurs
@@ -104,12 +102,6 @@ Surveillance en temps réel : durée de fonctionnement, mémoire, version, perce
 Quatre modes pour déboguer les traductions de l’API : **Playground** (convertisseur de format), **Chat Tester** (requêtes en direct), **Test Bench** (tests par lots) et **Live Monitor** (flux en temps réel).
 
 ![Espace de test du traducteur](../screenshots/05-translator.png)
-
----
-
-## 🎮 Espace de test des modèles _(v2.0.9+)_
-
-Testez n’importe quel modèle directement depuis le tableau de bord. Sélectionnez le fournisseur, le modèle et le point de terminaison, rédigez des invites avec Monaco Editor, diffusez les réponses en temps réel, interrompez la diffusion en cours et consultez les métriques de temps.
 
 ---
 

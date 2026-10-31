@@ -228,8 +228,6 @@ Kliendi API-võtme jõustamine kasutab funktsiooni `isRequireApiKeyEnabled()` fa
 
 ## Ühilduvust katkestav muudatus — v3.8.0
 
-Lõpp-punktid `/api/v1/agents/tasks/*` ja `/api/resilience/model-cooldowns` **nõuavad nüüd haldusautentimist** (commit `588a0333`). Kliendid, mis saatsid varem tavalise API-võtme ilma ulatuseta `manage`, saavad vastuseks `403`. Üleviimine: määrake võtmele API Keys juhtpaneelil ulatus `manage` või kasutage sisselogitud juhtpaneeliseanssi.
-
 ## Käitumise muudatus — v3.8.2
 
 `/api/mcp/*` (MCP kaugserver) on endiselt vaikimisi LOCAL_ONLY, kuid aktsepteerib nüüd mitte-loopback-päringuid, kui päis `Authorization: Bearer <api-key>` sisaldab ulatust `manage`. Erand lubatakse iga tee jaoks eraldi konstandi `LOCAL_ONLY_MANAGE_SCOPE_BYPASS_PREFIXES` kaudu failis `src/server/authz/routeGuard.ts`; sama taseme LOCAL_ONLY prefiksist `/api/cli-tools/runtime/*` ei saa tahtlikult mööda minna, sest see võib käivitada suvalisi alamprotsesse. Mitte-loopback-aadressidelt pärit anonüümsed päringud teele `/api/mcp/*` saavad jätkuvalt vastuseks `403 LOCAL_ONLY` — iga uue LOCAL_ONLY tee vaikekäitumiseks jääb range loopback-piirang. Vt [Marsruudikaitse tasemed](../security/ROUTE_GUARD_TIERS.md#manage-scope-carve-out).

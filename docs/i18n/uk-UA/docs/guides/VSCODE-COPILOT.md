@@ -91,7 +91,7 @@ HTTP 400 — Модель '<id>' призначена для генеруван�
 Simple Browser замість зовнішнього браузера. Вбудовування **активується на сервері за бажанням** через
 `DASHBOARD_ALLOW_EMBED=vscode`, унаслідок чого HTML-сторінки надсилаються із
 `frame-ancestors 'self' vscode-webview:` замість стандартних `frame-ancestors 'none'` +
-`X-Frame-Options: DENY`. Поверхня API (`/api`, `/v1`, `/v1beta`, `/a2a`, `/healthz`) у будь-якому разі
+`X-Frame-Options: DENY`. Поверхня API (`/api`, `/v1`, `/v1beta`, `/healthz`) у будь-якому разі
 зберігає суворі заголовки.
 
 > ⚠️ **Це параметр часу збирання, а не виконання.** Next.js компілює `headers()` у маніфест

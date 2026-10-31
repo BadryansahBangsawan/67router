@@ -246,17 +246,6 @@ curl -X DELETE http://localhost:20128/api/settings/notion
 പരിമിതപ്പെടുത്തിയിരിക്കുന്നു. v3.8.0-ൽ MCP സർവറിനൊപ്പം സമീപബന്ധമുള്ള രണ്ട്
 ഫ്രെയിംവർക്കുകൾ ലഭ്യമാക്കുകയും അവയെക്കുറിച്ച് പ്രത്യേകം രേഖപ്പെടുത്തുകയും ചെയ്തിട്ടുണ്ട്:
 
-### Cloud Agents
-
-Cloud Agents എന്നത് LLM പ്രൊവൈഡറുകൾക്കായി ഉപയോഗിക്കുന്ന അതേ കണക്ഷൻ മോഡൽ വഴി
-67router-ലേക്ക് ബന്ധിപ്പിച്ചിട്ടുള്ള, പ്രോസസിന് പുറത്തു പ്രവർത്തിക്കുന്ന AI കോഡിംഗ് ഏജന്റുകളാണ് (codex-cloud, cursor-cloud, devin, jules). അവ
-സ്വന്തമായ REST ഉപരിതലത്തിലൂടെ (`/api/v1/agents/*`) ലഭ്യമാക്കപ്പെടുന്നു, കൂടാതെ അവ MCP ടൂൾ കാറ്റലോഗിന്റെ ഭാഗമല്ല
-— ഒരു Cloud Agent-നെ വിളിക്കുന്നത് MCP സ്കോപ്പ് ഉപയോഗിക്കില്ല.
-
-- ഇംപ്ലിമെന്റേഷൻ: `src/lib/cloudAgent/` (`registry.ts`, `agents/codex.ts`, `agents/cursor.ts`, `agents/devin.ts`, `agents/jules.ts`).
-- ലൈഫ്സൈക്കിൾ: `createTask`, `getStatus`, `approvePlan`, `sendMessage`, `listSources`.
-- ഡോക്യുമെന്റേഷൻ: [docs/frameworks/CLOUD_AGENT.md](./CLOUD_AGENT.md).
-
 ### Guardrails
 
 Guardrails എന്നത് ചാറ്റ് പൈപ്പ്ലൈനിനുള്ളിൽ പ്രയോഗിക്കുന്ന, എക്സിക്യൂഷന് മുമ്പും ശേഷവും പ്രവർത്തിക്കുന്ന ഫിൽട്ടറുകളാണ് (vision-bridge, pii-masker, prompt-injection).

@@ -596,7 +596,6 @@ den aktuella katalogen på **[radar.omniroute.online/planos](https://radar.omnir
 - **🔑 Routingkontroll per nyckel** — lås en API-nyckel till en modell eller combo med `forcedModel`, och lägg till eller ta bort en nyckels modeller och combos atomiskt (`/api/keys/{id}/access`). → [API-referens](docs/reference/API_REFERENCE.md) · [OpenAPI](docs/openapi.yaml)
 - **🛡️ Finare PII-kontroller** — val per typ, upp till 20 validerade anpassade maskeringsmönster och detekteringsräknare per typ; själva maskeringen förblir opt-in. → [Guardrails](docs/security/GUARDRAILS.md)
 - **🌍 67 språk** — instrumentpanel, dokumentationsspeglar och CLI, med `npm run i18n:add-locale` som lägger till ett språk överallt med ett enda kommando. → [i18n-guide](docs/guides/I18N.md)
-- **🎛️ OmniConductor** — inkommande A2A-delegering till din agentflotta, Conductor-skills på Agent Card och en instrumentpanelspanel med Faro push-to-talk-röstchatt. → [A2A-server](docs/frameworks/A2A-SERVER.md)
 - **🛂 Adaptiv insläppning & överbelastningsskydd** — tunga chattförfrågningar köas i stället för att 503:a, med atomiska rullande RPM-leasar per anslutning. → [Resiliensguide](docs/architecture/RESILIENCE_GUIDE.md)
 - **🗂️ Kanonisk `/v1/models`-ordning** — ett sammanhängande leverantörsgrupperat block per leverantör (combos fästa först), stabilt över alla källkataloger. → [API-referens](docs/reference/API_REFERENCE.md)
 - **🗜️ Härdad komprimering** — uppblåsningsskydd på som standard, Caveman-paket för DE / FR / JA + kinesiska (wényán), RTK-filter för Gradle & .NET. → [Komprimering](docs/compression/COMPRESSION_ENGINES.md)
@@ -915,7 +914,6 @@ Exponera 67router via **MCP**, **A2A**, ett **REST-API**, **webhooks** eller ett
   <tr><td align="left" nowrap>🧰 <b>MCP (stdio)</b></td><td align="left" nowrap><code>omniroute --mcp</code></td><td align="left">Ansluta till Claude Desktop, Cursor eller valfri MCP-klient</td></tr>
   <tr><td align="left" nowrap>🌊 <b>MCP (HTTP)</b></td><td align="left" nowrap><code>/api/mcp/stream</code></td><td align="left">MCP på distans — <b>110 verktyg</b>, 33 behörighetsomfattningar (tillämpning är valfri), fullständig granskningslogg</td></tr>
   <tr><td align="left" nowrap>📡 <b>MCP (SSE)</b></td><td align="left" nowrap><code>/api/mcp/sse</code></td><td align="left">Strömmande MCP-transport</td></tr>
-  <tr><td align="left" nowrap>🤝 <b>A2A</b></td><td align="left" nowrap><code>/.well-known/agent.json</code></td><td align="left">Agent-till-agent, <b>JSON-RPC 2.0</b> + SSE, 6 färdigheter</td></tr>
   <tr><td align="left" nowrap>🌐 <b>REST-API</b></td><td align="left" nowrap><code>/v1/*</code></td><td align="left">OpenAI-kompatibelt — chatt, inbäddningar, bilder, ljud, OCR</td></tr>
   <tr><td align="left" nowrap>🔔 <b>Webhooks</b></td><td align="left" nowrap><code>/api/webhooks</code></td><td align="left">Skicka begärande- och kvothändelser till Slack, Discord, Telegram eller valfri URL</td></tr>
   <tr><td align="left" nowrap>🛰️ <b>CLI för fjärråtkomst</b></td><td align="left" nowrap><code>omniroute connect <host></code></td><td align="left">Styr en fjärrinstans med åtkomsttoken med avgränsad behörighet</td></tr>
@@ -925,8 +923,6 @@ Exponera 67router via **MCP**, **A2A**, ett **REST-API**, **webhooks** eller ett
 # Ge Claude Code tillgång till hela 67routers verktygsuppsättning via MCP:
 claude mcp add-server omniroute --type http --url http://localhost:20128/api/mcp/stream
 ```
-
-<sub>📖 [MCP-server](docs/frameworks/MCP-SERVER.md) · [A2A-server](docs/frameworks/A2A-SERVER.md) · [Agentprotokoll](docs/frameworks/AGENT_PROTOCOLS_GUIDE.md)</sub>
 
 <br/>
 
@@ -1392,7 +1388,6 @@ Kanoniska mätvärden den 2026-10-18: **1.976 unika videor** · **20.220.289 kä
   <tr><td nowrap><b><a href="open-sse/mcp-server/README.md">MCP-server</a></b></td><td>110 MCP-verktyg, IDE-konfigurationer, Python-/TS-/Go-klienter</td></tr>
   <tr><td nowrap><b><a href="docs/frameworks/MCP-SERVER.md">Guide för MCP-server</a></b></td><td>MCP-installation, transporter och verktygsreferens</td></tr>
   <tr><td nowrap><b><a href="src/lib/a2a/README.md">A2A-server</a></b></td><td>JSON-RPC 2.0-protokoll, färdigheter, strömning, uppgiftshantering</td></tr>
-  <tr><td nowrap><b><a href="docs/frameworks/A2A-SERVER.md">Guide för A2A-server</a></b></td><td>A2A-agentkort, uppgifter, färdigheter och strömning</td></tr>
 </table>
 
 ### 📋 Projekt och kvalitet

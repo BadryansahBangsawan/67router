@@ -24,7 +24,6 @@ Comparație obiectivă a funcționalităților față de routere AI open-source 
 | **Protocol A2A**                                           |                 ✅ 6 competențe                 |         ❌          |        ❌         |     ❌     |
 | **Memorie (FTS5 + vector)**                                |                       ✅                        |         ❌          |        ❌         |     ❌     |
 | **Mecanisme de protecție (PII, injecție, viziune)**        |                       ✅                        |       parțial       |        ❌         | ✅ plătit  |
-| **Integrări cu agenți cloud**                              |           Codex, Cursor, Devin, Jules           |         ❌          |        ❌         |     ❌     |
 | **Circuit breaker per furnizor**                           |          ✅ 3 stări, recuperare leneșă          |       de bază       |        ❌         |     ✅     |
 | **Camuflare a amprentei TLS (JA3/JA4)**                    |                   ✅ wreq-js                    |         ❌          |        ❌         |     ❌     |
 | **Cadru de evaluare**                                      |                   ✅ integrat                   |         ❌          |        ❌         |  ⚠ plătit  |

@@ -128,13 +128,11 @@ diğerlerine alana özgü kılavuzlardan bağlantı verilmiştir.
 - `/dashboard/limits` — kota/hız kontrolleri
 - `/dashboard/cli-tools` — CLI ilk kurulumu, çalışma zamanı algılama ve yapılandırma oluşturma
 - `/dashboard/agents` — algılanan ACP ajanları ve özel ajan kaydı
-- `/dashboard/cloud-agents` — bulutta barındırılan ajan görevleri (Codex Cloud, Devin, Jules) ve görev yaşam döngüsü
 - `/dashboard/skills` — A2A beceri kayıt defteri, korumalı alan yürütmesi ve yerleşik beceri kataloğu
 - `/dashboard/memory` — kalıcı konuşma belleğini inceleme ve geri getirme
 - `/dashboard/webhooks` — giden webhook abonelikleri, gizli anahtar döndürme ve yeniden deneme istatistikleri
 - `/dashboard/batch` — toplu iş gönderimi ve ilerleme durumu
 - `/dashboard/cache` — doğrudan okuma ve akıl yürütme önbelleği istatistikleri ile çıkarma kontrolleri
-- `/dashboard/playground` — yapılandırılmış herhangi bir kombinasyon/model ile etkileşimli sohbet deneme alanı
 - `/dashboard/changelog` — uygulama içi değişiklik günlüğü görüntüleyicisi (`CHANGELOG.md` dosyasını işler)
 - `/dashboard/system` — çalışma zamanı tanılaması, sürüm bilgileri ve ortam doğrulama yüzeyi
 - `/dashboard/onboarding` — yeni kurulumlar için ilk çalıştırma kurulum sihirbazı
@@ -252,7 +250,6 @@ Yönetim alanları:
 - Bütçe: `src/app/api/usage/budget` (GET/POST)
 - Geri dönüş zincirleri: `src/app/api/fallback/chains` (GET/POST/DELETE)
 - Uyumluluk denetimi: `src/app/api/compliance/audit-log` (GET, sayfalama + yapılandırılmış meta veriler ile)
-- Değerlendirmeler: `src/app/api/evals` (GET/POST), `src/app/api/evals/[suiteId]` (GET)
 - Politikalar: `src/app/api/policies` (GET/POST)
 - Senkronizasyon belirteçleri: `src/app/api/sync/tokens` (GET/POST), `src/app/api/sync/tokens/[id]` (GET/DELETE)
 - Yapılandırma paketi: `src/app/api/sync/bundle` (GET, ayarların/sağlayıcıların/kombinasyonların/anahtarların ETag sürümlü anlık görüntüsü)
@@ -316,7 +313,6 @@ Etki alanı katmanı modülleri:
 - Getirme zaman aşımı: `src/shared/utils/fetchTimeout.ts`
 - İstek telemetrisi: `src/shared/utils/requestTelemetry.ts`
 - Uyumluluk/denetim: `src/lib/compliance/index.ts`
-- Değerlendirme çalıştırıcısı: `src/lib/evals/evalRunner.ts`
 - Etki alanı durumu kalıcılığı: `src/lib/db/domainState.ts` — geri dönüş zincirleri, bütçeler, maliyet geçmişi, kilitleme durumu ve devre kesiciler için SQLite CRUD işlemleri
 
 OAuth sağlayıcı modülleri (`src/lib/oauth/providers/` altında 27 ayrı dosya):
@@ -382,23 +378,6 @@ Temel yetenekler:
 
 Algoritmaya ilişkin tüm ayrıntılar (faktör formülleri, ağırlık ayarlama) için
 [`docs/routing/AUTO-COMBO.md`](../routing/AUTO-COMBO.md) belgesine bakın.
-
-### B. Bulut Aracıları
-
-Bulut Aracıları, üçüncü taraf barındırılan kod aracısı platformlarını (Codex Cloud, Devin,
-Jules) tek tip, veritabanı destekli bir görev yaşam döngüsünün arkasında birleştirir. Tüm görev oluşturma/inceleme
-uç noktaları yönetim kimlik doğrulaması gerektirir.
-
-- Modül kökü: `src/lib/cloudAgent/` (`baseAgent.ts`, `registry.ts`, `api.ts`,
-  `types.ts`, `db.ts` ve `agents/` altındaki aracı başına alt dizinler)
-- Aracı başına uygulamalar: `agents/codex/`, `agents/devin/`, `agents/jules/`
-- Genel uç noktalar: `/api/v1/agents/tasks/*` (listeleme/oluşturma/getirme/iptal etme)
-- Yönetim uç noktaları: `/api/cloud/*` (kaynak sağlama, durum, toplu işlemler)
-- Kontrol paneli: `/dashboard/cloud-agents`
-- Depolama: `cloud_agent_tasks` tablosu
-
-Aracı başına kaynak sağlama ve OAuth ayrıntıları için
-[`docs/frameworks/CLOUD_AGENT.md`](../frameworks/CLOUD_AGENT.md) belgesine bakın.
 
 ### C. Koruma Önlemleri
 

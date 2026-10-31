@@ -24,7 +24,6 @@ Celovit vodnik za konfiguriranje ponudnikov, ustvarjanje kombinacij, integracijo
 - [Sistem veščin](#-skills-system)
 - [Pomnilniški sistem](#-memory-system)
 - [Spletni kavlji](#-webhooks)
-- [Agenti v oblaku](#-cloud-agents)
 - [Programsko upravljanje](#-programmatic-management)
 - [Notranji CLI](#-internal-cli)
 - [Namizna aplikacija (Electron)](#-desktop-application-electron)
@@ -1238,8 +1237,6 @@ Uporabite naslov URL SSE `http://localhost:20128/api/mcp/sse` in ključ API Bear
 
 ### Obsegi
 
-MCP trenutno določa 32 poimenovanih obsegov. Vsak ključ Bearer je mogoče omejiti na določene obsege — za merodajen seznam obsegov in orodij glejte [MCP-SERVER.md](../frameworks/MCP-SERVER.md), za shemo JSON-RPC pa [A2A-SERVER.md](../frameworks/A2A-SERVER.md).
-
 ---
 
 ## 🧠 Sistem veščin
@@ -1248,7 +1245,6 @@ MCP trenutno določa 32 poimenovanih obsegov. Vsak ključ Bearer je mogoče omej
 
 - **Tržnica** — Brskajte po veščinah in jih namestite prek **Nadzorna plošča → Veščine**
 - **Obsegi za posamezne ključe** — Omejite, kateri ključi API lahko prikličejo posamezne veščine
-- **Veščine po meri** — Dodajte datoteko TypeScript v `src/lib/a2a/skills/`, jo registrirajte in takoj jo bo mogoče priklicati prek A2A
 
 Celotna referenčna dokumentacija: [SKILLS.md](../frameworks/SKILLS.md).
 
@@ -1277,18 +1273,6 @@ Naročite se na dogodke 67router za spremljanje in avtomatizacijo v realnem čas
 - Ponovni poskusi: 3 poskusi z eksponentnim podaljševanjem premora, nato premik v čakalno vrsto neuspelih sporočil
 
 Celotna shema je na voljo v [WEBHOOKS.md](../frameworks/WEBHOOKS.md).
-
----
-
-## ☁️ Agenti v oblaku
-
-67router se integrira z agenti za programiranje v oblaku (**OpenAI Codex Cloud**, **Devin**, **Jules**, **Antigravity**), zato lahko dolgotrajna opravila pošiljate z iste nadzorne plošče, s katero upravljate lokalno usmerjanje.
-
-- Ustvarite opravila prek **Nadzorna plošča → Agenti v oblaku** ali z `POST /api/v1/agents/tasks`
-- Spremljajte stanje, dnevnike in artefakte posameznega opravila
-- Uporabite lasten ključ API za vsakega ponudnika — poverilnice nikoli ne zapustijo primerka 67router
-
-Celotna referenčna dokumentacija: [CLOUD_AGENT.md](../frameworks/CLOUD_AGENT.md).
 
 ---
 
@@ -1345,7 +1329,6 @@ omniroute restore [<timestamp>]    # Obnovi iz posnetka
 omniroute health                   # Podrobno stanje (odklopniki, predpomnilnik, pomnilnik)
 omniroute quota                    # Poraba kvote ponudnika
 omniroute mcp status               # Stanje strežnika MCP
-omniroute a2a status               # Stanje strežnika A2A
 omniroute tunnel list|create|stop  # Predori Cloudflare/Tailscale/ngrok
 omniroute reset-password           # Ponastavi skrbniško geslo
 omniroute --mcp                    # Zaženi strežnik MCP prek stdio

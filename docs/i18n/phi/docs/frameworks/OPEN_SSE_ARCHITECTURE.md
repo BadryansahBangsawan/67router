@@ -488,7 +488,7 @@ Ang `open-sse/config/` ay naglalaman ng layer ng konfigurasyon:
 
 | File                          | Layunin                                           |
 | ----------------------------- | ------------------------------------------------- |
-| `providerRegistry.ts`         | Registry ng chat-model sa catalog ng 375 provider |
+| `providerRegistry.ts`         | Registry ng chat-model sa catalog ng 372 provider |
 | `providerModels.ts`           | Mga alias ng modelo, mapping ng format            |
 | `constants.ts`                | Mga timeout, limit, status code                   |
 | `defaultThinkingSignature.ts` | Default na thinking signature ng Claude           |
@@ -573,5 +573,4 @@ May mahihigpit na badyet sa performance ang routing engine:
 - [REPOSITORY_MAP.md](../architecture/REPOSITORY_MAP.md) — bawat directory
 - [AUTO-COMBO.md](../routing/AUTO-COMBO.md) — 16-factor na pagmamarka
 - [MCP-SERVER.md](./MCP-SERVER.md) — MCP server
-- [A2A-SERVER.md](./A2A-SERVER.md) — A2A server
 - Source: `open-sse/` (400+ file, ~143K LOC)

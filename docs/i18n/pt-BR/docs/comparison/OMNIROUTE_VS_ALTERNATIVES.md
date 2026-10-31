@@ -24,7 +24,6 @@ Comparação objetiva de recursos vs roteadores de IA de código aberto populare
 | **Protocolo A2A**                                     |                   ✅ 6 skills                   |          ❌           |        ❌         |      ❌      |
 | **Memória (FTS5 + vetorial)**                         |                       ✅                        |          ❌           |        ❌         |      ❌      |
 | **Guardrails (PII, injeção, visão)**                  |                       ✅                        |        parcial        |        ❌         |   ✅ pago    |
-| **Integrações com agentes de nuvem**                  |           Codex, Cursor, Devin, Jules           |          ❌           |        ❌         |      ❌      |
 | **Circuit breaker por provedor**                      |         ✅ 3 estados, recuperação lazy          |        básico         |        ❌         |      ✅      |
 | **Furtividade de fingerprint TLS (JA3/JA4)**          |                   ✅ wreq-js                    |          ❌           |        ❌         |      ❌      |
 | **Framework de avaliação**                            |                  ✅ integrado                   |          ❌           |        ❌         |    ⚠ pago    |

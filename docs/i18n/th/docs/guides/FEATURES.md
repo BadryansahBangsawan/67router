@@ -43,8 +43,6 @@
 - 🤝 **ผู้ให้บริการ GitLab Duo OAuth** — เข้าสู่ระบบด้วยข้อมูลประจำตัว GitLab
 - 🧠 **Reasoning Replay Cache** — จัดเก็บร่องรอยการให้เหตุผลแบบผสมผสานระหว่างหน่วยความจำกับ SQLite
 
-📚 **เอกสารที่เกี่ยวข้อง:** [เฟรมเวิร์ก Skills](../frameworks/SKILLS.md) · [ระบบหน่วยความจำ](../frameworks/MEMORY.md) · [Cloud Agents](../frameworks/CLOUD_AGENT.md) · [Webhooks](../frameworks/WEBHOOKS.md) · [Reasoning Replay Cache](../routing/REASONING_REPLAY.md)
-
 ---
 
 ## 🔌 ผู้ให้บริการ
@@ -104,12 +102,6 @@
 โหมด 4 รูปแบบสำหรับดีบักการแปลผ่าน API ได้แก่ **Playground** (ตัวแปลงรูปแบบ), **Chat Tester** (คำขอแบบสด), **Test Bench** (การทดสอบแบบกลุ่ม) และ **Live Monitor** (สตรีมแบบเรียลไทม์)
 
 ![สนามทดลองการแปล](../screenshots/05-translator.png)
-
----
-
-## 🎮 สนามทดลองโมเดล _(v2.0.9+)_
-
-ทดสอบโมเดลใดก็ได้โดยตรงจากแดชบอร์ด เลือกผู้ให้บริการ โมเดล และเอนด์พอยต์ เขียนพรอมต์ด้วย Monaco Editor สตรีมการตอบกลับแบบเรียลไทม์ ยกเลิกระหว่างสตรีม และดูเมตริกด้านเวลา
 
 ---
 

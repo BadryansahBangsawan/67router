@@ -24,7 +24,6 @@
 | **Ìlànà A2A**                                        |             ✅ 6 àwọn ọgbọ́n              |       ❌       |        ❌         |    ❌    |
 | **Ìrántí (FTS5 + vector)**                           |                    ✅                    |       ❌       |        ❌         |    ❌    |
 | **Ààbò (PII, ìtúbọ̀sí, òwe)**                         |                    ✅                    |    apá kan     |        ❌         | ✅ sanwó |
-| **Àwọn ìsopọ̀ aṣojú-sánmà**                           |       Codex, Cursor, Devin, Jules        |       ❌       |        ❌         |    ❌    |
 | **Circuit breaker fún olùpèsè kọ̀ọ̀kan**               |     ✅ ipò mẹ́ta, ìmúpadàbọ̀ lẹ́ẹ̀kọ̀ọ̀kọ̀      |     ìpìlẹ̀      |        ❌         |    ✅    |
 | **Ìkúkú àmì-ẹ̀sẹ̀ TLS (JA3/JA4)**                      |                ✅ wreq-js                |       ❌       |        ❌         |    ❌    |
 | **Framework ìdánwò**                                 |              ✅ tó wà nínú               |       ❌       |        ❌         | ⚠ sanwó  |

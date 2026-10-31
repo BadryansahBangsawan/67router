@@ -596,7 +596,6 @@ Radar-ஐப் பயன்படுத்தத் தனியாகச் �
 - **🔑 ஒவ்வொரு சாவிக்குமான வழித்தடக் கட்டுப்பாடு** — `forcedModel` மூலம் ஓர் API சாவியை ஒரு மாதிரி அல்லது சேர்க்கையுடன் நிலைநிறுத்தலாம்; மேலும் ஒரு சாவிக்குரிய மாதிரிகளையும் சேர்க்கைகளையும் அணுவகையில் சேர்க்கவோ அகற்றவோ முடியும் (`/api/keys/{id}/access`). → [API குறிப்பேடு](docs/reference/API_REFERENCE.md) · [OpenAPI](docs/openapi.yaml)
 - **🛡️ மேலும் நுணுக்கமான PII கட்டுப்பாடுகள்** — ஒவ்வொரு வகைக்குமான தேர்வு, சரிபார்க்கப்பட்ட தனிப்பயன் மறைப்பு வடிவங்கள் அதிகபட்சம் 20 மற்றும் ஒவ்வொரு வகைக்குமான கண்டறிதல் எண்ணிகள்; மறைத்தல் என்பது விருப்பத்தேர்வாகவே தொடர்கிறது. → [பாதுகாப்புத் தடுப்புகள்](docs/security/GUARDRAILS.md)
 - **🌍 67 மொழிகள்** — டாஷ்போர்டு, ஆவணப் பிரதிகள் மற்றும் CLI ஆகிய அனைத்திலும், `npm run i18n:add-locale` ஒரே கட்டளையில் எல்லா இடங்களிலும் ஒரு மொழியைச் சேர்க்கிறது. → [i18n வழிகாட்டி](docs/guides/I18N.md)
-- **🎛️ OmniConductor** — உங்கள் முகவர் அணிக்கு உள்வரும் A2A ஒப்படைப்பு, Agent Card-இல் Conductor திறன்கள் மற்றும் Faro அழுத்திப்-பேசும் குரல் அரட்டையைக் கொண்ட டாஷ்போர்டு பலகம். → [A2A சேவையகம்](docs/frameworks/A2A-SERVER.md)
 - **🛂 தகவமைப்பு அனுமதி மற்றும் அதிகச்சுமைப் பாதுகாப்பு** — அதிக வளம் தேவைப்படும் அரட்டை கோரிக்கைகள் 503 பிழை வழங்குவதற்குப் பதிலாக வரிசைப்படுத்தப்படுகின்றன; ஒவ்வொரு இணைப்புக்கும் அணுவக RPM சுழலும் குத்தகைகள் வழங்கப்படுகின்றன. → [மீட்சித்திறன் வழிகாட்டி](docs/architecture/RESILIENCE_GUIDE.md)
 - **🗂️ நியமமான `/v1/models` வரிசைப்படுத்தல்** — ஒவ்வொரு வழங்குநருக்கும் வழங்குநரின்படி தொகுக்கப்பட்ட ஒரே தொடர்ச்சியான தொகுதி (சேர்க்கைகள் முதலில் நிலைநிறுத்தப்படும்), அனைத்து பட்டியல் மூலங்களிலும் நிலையாக இருக்கும். → [API குறிப்பேடு](docs/reference/API_REFERENCE.md)
 - **🗜️ சுருக்கப் பாதுகாப்பை வலுப்படுத்துதல்** — இயல்பாக இயக்கப்பட்ட விரிவாக்கத் தடுப்பு, DE / FR / JA + சீனம் (wényán) ஆகியவற்றுக்கான Caveman தொகுப்புகள், Gradle மற்றும் .NET-க்கான RTK வடிப்பான்கள். → [சுருக்கம்](docs/compression/COMPRESSION_ENGINES.md)
@@ -915,7 +914,6 @@ omniroute contexts use default            # ← உள்ளூர் சேவ�
   <tr><td align="left" nowrap>🧰 <b>MCP (stdio)</b></td><td align="left" nowrap><code>omniroute --mcp</code></td><td align="left">Claude Desktop, Cursor அல்லது எந்த MCP கிளையன்டுடனும் இணைக்கவும்</td></tr>
   <tr><td align="left" nowrap>🌊 <b>MCP (HTTP)</b></td><td align="left" nowrap><code>/api/mcp/stream</code></td><td align="left">தொலைநிலை MCP — <b>110 கருவிகள்</b>, 33 வரம்புகள் (அமலாக்கம் விருப்பத்திற்குரியது), முழுமையான தணிக்கைத் தடம்</td></tr>
   <tr><td align="left" nowrap>📡 <b>MCP (SSE)</b></td><td align="left" nowrap><code>/api/mcp/sse</code></td><td align="left">தொடர்வோட்ட MCP போக்குவரத்து</td></tr>
-  <tr><td align="left" nowrap>🤝 <b>A2A</b></td><td align="left" nowrap><code>/.well-known/agent.json</code></td><td align="left">முகவருக்கு-முகவர், <b>JSON-RPC 2.0</b> + SSE, 6 திறன்கள்</td></tr>
   <tr><td align="left" nowrap>🌐 <b>REST API</b></td><td align="left" nowrap><code>/v1/*</code></td><td align="left">OpenAI-இணக்கமானது — அரட்டை, embeddings, படங்கள், ஒலி, OCR</td></tr>
   <tr><td align="left" nowrap>🔔 <b>Webhooks</b></td><td align="left" nowrap><code>/api/webhooks</code></td><td align="left">கோரிக்கை / ஒதுக்கீட்டு நிகழ்வுகளை Slack, Discord, Telegram அல்லது எந்த URL-க்கும் அனுப்பவும்</td></tr>
   <tr><td align="left" nowrap>🛰️ <b>தொலைநிலை CLI</b></td><td align="left" nowrap><code>omniroute connect <host></code></td><td align="left">வரையறுக்கப்பட்ட அணுகல் டோக்கன்களுடன் ஒரு தொலைநிலை instance-ஐ இயக்கவும்</td></tr>
@@ -925,8 +923,6 @@ omniroute contexts use default            # ← உள்ளூர் சேவ�
 # MCP வழியாக முழுமையான 67router கருவித்தொகுப்பை Claude Code-க்கு வழங்குங்கள்:
 claude mcp add-server omniroute --type http --url http://localhost:20128/api/mcp/stream
 ```
-
-<sub>📖 [MCP சேவையகம்](docs/frameworks/MCP-SERVER.md) · [A2A சேவையகம்](docs/frameworks/A2A-SERVER.md) · [முகவர் நெறிமுறைகள்](docs/frameworks/AGENT_PROTOCOLS_GUIDE.md)</sub>
 
 <br/>
 
@@ -1392,7 +1388,6 @@ Dashboard இல்லாத headless runtime-க்கு Docker `base` profile
   <tr><td nowrap><b><a href="open-sse/mcp-server/README.md">MCP சேவையகம்</a></b></td><td>110 MCP கருவிகள், IDE உள்ளமைவுகள், Python/TS/Go கிளையன்ட்கள்</td></tr>
   <tr><td nowrap><b><a href="docs/frameworks/MCP-SERVER.md">MCP சேவையக வழிகாட்டி</a></b></td><td>MCP நிறுவல், போக்குவரத்து முறைகள் மற்றும் கருவிக் குறிப்பு</td></tr>
   <tr><td nowrap><b><a href="src/lib/a2a/README.md">A2A சேவையகம்</a></b></td><td>JSON-RPC 2.0 நெறிமுறை, திறன்கள், தொடர் தரவோட்டம், பணி மேலாண்மை</td></tr>
-  <tr><td nowrap><b><a href="docs/frameworks/A2A-SERVER.md">A2A சேவையக வழிகாட்டி</a></b></td><td>A2A முகவர் அட்டை, பணிகள், திறன்கள் மற்றும் தொடர் தரவோட்டம்</td></tr>
 </table>
 
 ### 📋 திட்டம் & தரம்

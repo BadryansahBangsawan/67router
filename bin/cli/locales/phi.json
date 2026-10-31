@@ -390,34 +390,6 @@
       "description": "MCP audit log (alias para sa audit --source mcp)"
     }
   },
-  "a2a": {
-    "skills": {
-      "description": "Ilista ang mga available na A2A skill mula sa agent card"
-    },
-    "invoke": {
-      "description": "Magpatakbo ng A2A skill at ibalik ang task ID",
-      "input": "JSON input object",
-      "input_file": "Path patungo sa JSON input file",
-      "wait": "Hintaying makumpleto ang task bago ibalik",
-      "timeout": "Timeout sa paghihintay na makumpleto sa ms (default: 60000)"
-    },
-    "tasks": {
-      "description": "Pamahalaan ang mga A2A task",
-      "list": {
-        "status": "I-filter ayon sa status",
-        "skill": "I-filter ayon sa skill ID"
-      },
-      "watch": {
-        "description": "I-poll ang status ng task hanggang sa makumpleto"
-      },
-      "stream": {
-        "description": "I-stream ang mga event sa pagpapatakbo ng task sa pamamagitan ng SSE"
-      },
-      "logs": {
-        "description": "Ipakita ang mga mensahe at artifact ng task"
-      }
-    }
-  },
   "policy": {
     "description": "Pamahalaan ang mga patakaran sa awtorisasyon ng 67router",
     "list": {
@@ -696,99 +668,6 @@
       "provider": "Provider ID na babawiin",
       "connection_id": "Bawiin ang isang partikular na koneksyon ayon sa ID",
       "yes": "Laktawan ang prompt ng kumpirmasyon"
-    }
-  },
-  "cloud": {
-    "description": "Pamahalaan ang mga gawain ng cloud AI agent (codex, devin, jules)",
-    "agents": {
-      "description": "Ilista ang mga available na cloud agent"
-    },
-    "agent": {
-      "description": "Pamahalaan ang mga gawain ng {agent} cloud agent",
-      "auth": {
-        "description": "Awtorisahan ang {agent} sa pamamagitan ng OAuth"
-      }
-    },
-    "task": {
-      "description": "Pamahalaan ang mga gawain ng cloud agent",
-      "create": {
-        "description": "Gumawa ng bagong gawain para sa agent",
-        "title": "Pamagat ng gawain (default ang unang 80 character ng prompt)",
-        "prompt": "Teksto ng prompt ng gawain",
-        "prompt_file": "Basahin ang prompt mula sa file",
-        "repo": "Repository URL na iko-clone para sa gawain",
-        "branch": "Pangalan ng branch na gagamitin",
-        "metadata": "JSON metadata object"
-      },
-      "list": {
-        "description": "Ilista ang mga gawain ng agent",
-        "status": "I-filter ayon sa status (running|completed|failed|cancelled)",
-        "limit": "Pinakamaraming resulta (default: 50)"
-      },
-      "get": {
-        "description": "Kunin ang mga detalye ng gawain ayon sa ID"
-      },
-      "status": {
-        "description": "I-print ang status ng gawain (running|completed|failed|cancelled)"
-      },
-      "cancel": {
-        "description": "Kanselahin ang tumatakbong gawain",
-        "yes": "Laktawan ang prompt sa pagkumpirma"
-      },
-      "approve": {
-        "description": "Aprubahan ang plano ng agent upang simulan ang pagpapatupad"
-      },
-      "message": {
-        "description": "Magpadala ng mensahe sa tumatakbong gawain"
-      }
-    },
-    "sources": {
-      "description": "Ilista ang mga source file na ginawa ng isang gawain"
-    }
-  },
-  "eval": {
-    "description": "Pamahalaan ang mga eval suite at pagpapatakbo",
-    "suites": {
-      "description": "Pamahalaan ang mga eval suite",
-      "list": {
-        "description": "Ilista ang mga eval suite"
-      },
-      "get": {
-        "description": "Kunin ang mga detalye ng eval suite ayon sa ID"
-      },
-      "create": {
-        "description": "Gumawa ng eval suite mula sa isang JSON file",
-        "file": "Path patungo sa JSON file ng depinisyon ng suite"
-      }
-    },
-    "run": {
-      "description": "Magsimula ng eval run para sa isang suite",
-      "model": "Model ID na susuriin (default: auto)",
-      "combo": "Pilitin ang isang partikular na combo ayon sa pangalan",
-      "concurrency": "Bilang ng magkakasabay na sample (default: 4)",
-      "tag": "Lagyan ng tag ang run na ito para sa pagsala sa ibang pagkakataon",
-      "watch": "Subaybayan ang progreso ng run hanggang sa makumpleto"
-    },
-    "list": {
-      "description": "Ilista ang mga eval run",
-      "suite": "I-filter ayon sa suite ID",
-      "status": "I-filter ayon sa status",
-      "since": "Ibalik ang mga run mula sa timestamp na ito",
-      "limit": "Pinakamaraming resulta (default: 50)"
-    },
-    "get": {
-      "description": "Kunin ang mga detalye ng eval run ayon sa ID"
-    },
-    "results": {
-      "description": "Ipakita ang mga resulta ng sample para sa isang eval run",
-      "failed": "Ipakita lamang ang mga nabigong sample"
-    },
-    "cancel": {
-      "description": "Kanselahin ang tumatakbong eval",
-      "yes": "Laktawan ang prompt sa pagkumpirma"
-    },
-    "scorecard": {
-      "description": "Ipakita ang scorecard para sa isang nakumpletong eval run"
     }
   },
   "program": {

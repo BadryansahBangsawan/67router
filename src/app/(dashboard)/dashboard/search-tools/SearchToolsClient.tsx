@@ -4,7 +4,7 @@ import { useState, useEffect } from "react";
 import { useTranslations } from "next-intl";
 import { PageHeader } from "@omniroute/ui-kit/page-header";
 import type { SearchProviderCatalogItem } from "@/shared/schemas/searchTools";
-import type { PlaygroundState } from "@/lib/playground/codeExport";
+import type { PlaygroundState } from "@/lib/codeExport";
 
 import SearchToolsTopBar, { type ActiveTab } from "./components/SearchToolsTopBar";
 import SearchToolsConfigPane, { type ConfigState } from "./components/SearchToolsConfigPane";

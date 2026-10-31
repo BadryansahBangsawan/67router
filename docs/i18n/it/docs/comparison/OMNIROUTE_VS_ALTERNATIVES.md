@@ -24,7 +24,6 @@ Confronto oggettivo delle funzionalità rispetto ai più diffusi router AI open-
 | **Protocollo A2A**                                            |                  ✅ 6 skill                   |         ❌         |        ❌         |       ❌       |
 | **Memoria (FTS5 + vettoriale)**                               |                      ✅                       |         ❌         |        ❌         |       ❌       |
 | **Guardrail (PII, injection, visione)**                       |                      ✅                       |      parziale      |        ❌         | ✅ a pagamento |
-| **Integrazioni con agenti cloud**                             |          Codex, Cursor, Devin, Jules          |         ❌         |        ❌         |       ❌       |
 | **Circuit breaker per provider**                              |         ✅ a 3 stati, ripristino lazy         |        base        |        ❌         |       ✅       |
 | **Fingerprint TLS stealth (JA3/JA4)**                         |                  ✅ wreq-js                   |         ❌         |        ❌         |       ❌       |
 | **Framework di valutazione**                                  |                 ✅ integrato                  |         ❌         |        ❌         | ⚠ a pagamento  |
@@ -39,7 +38,7 @@ Confronto oggettivo delle funzionalità rispetto ai più diffusi router AI open-
 
 ## Quando scegliere 67router
 
-- Fai self-hosting e vuoi la **massima copertura di provider** (375 provider, 155 voci di catalogo gratuite/senza autenticazione)
+- Fai self-hosting e vuoi la **massima copertura di provider** (372 provider, 155 voci di catalogo gratuite/senza autenticazione)
 - Hai bisogno di un **server MCP integrato** (strumenti LLM, memoria, skill esposte come strumenti)
 - Hai bisogno del **protocollo A2A** per flussi di lavoro agente-a-agente
 - Vuoi lo **stealth delle fingerprint** (JA3/JA4) per evitare il rilevamento da parte dei CAPTCHA a monte

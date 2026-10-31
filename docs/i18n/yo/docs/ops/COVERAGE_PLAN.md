@@ -71,11 +71,9 @@
 | 11  | `open-sse/services/compression/progressiveAging.ts`          |             13.26% |
 | 12  | `open-sse/services/compression/engines/rtk/smartTruncate.ts` |             13.43% |
 | 13  | `open-sse/services/compression/engines/rtk/deduplicator.ts`  |             13.51% |
-| 14  | `src/lib/cloudAgent/agents/jules.ts`                         |             13.52% |
 | 15  | `open-sse/services/compression/lite.ts`                      |             14.46% |
 | 16  | `src/app/api/v1/rerank/route.ts`                             |             14.94% |
 | 17  | `open-sse/services/compression/preservation.ts`              |             15.07% |
-| 18  | `src/lib/cloudAgent/agents/codex.ts`                         |             15.54% |
 | 19  | `open-sse/services/tierResolver.ts`                          |             16.66% |
 | 20  | `src/app/docs/components/DocsLazyWrapper.tsx`                |             16.66% |
 
@@ -83,7 +81,6 @@
 
 - `open-sse/services/compression/**` ni àkójọpọ̀ àwọn ibi tí ìbojú wọn kéré tó pọ̀ jù lọ, ó sì jẹ́ apá tó pọ̀ jù lọ nínú àlàfo tó ṣẹ́ kù.
 - Àwọn ipa-ọ̀nà API fún ìpele àti àtúntò-ipò (`src/app/api/v1/batches/**`, `src/app/api/v1/rerank/route.ts`) nílò àwọn àyẹ̀wò ní ìpele olùmójútó.
-- Àwọn ohun ìbámu aṣojú àwọsánmà (`src/lib/cloudAgent/agents/jules.ts`, `codex.ts`) àti `tierResolver.ts` nílò àwọn àyẹ̀wò ipò-ìṣẹ̀lẹ̀.
 - Àwọn àkópọ̀ UI ìwé àlàyé àti `src/mitm/systemCommands.ts` kò fi bẹ́ẹ̀ ṣe pàtàkì, ṣùgbọ́n wọ́n jẹ́ àwọn èrè ẹ̀ka tó rọrùn.
 
 ## Àkójọ àyẹ̀wò ìmúṣẹ

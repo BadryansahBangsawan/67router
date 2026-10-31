@@ -390,34 +390,6 @@
       "description": "MCP audit log (alias for audit --source mcp)"
     }
   },
-  "a2a": {
-    "skills": {
-      "description": "List available A2A skills from the agent card"
-    },
-    "invoke": {
-      "description": "Invoke an A2A skill and return the task ID",
-      "input": "JSON input object",
-      "input_file": "Path to JSON input file",
-      "wait": "Wait for task completion before returning",
-      "timeout": "Timeout waiting for completion in ms (default: 60000)"
-    },
-    "tasks": {
-      "description": "Manage A2A tasks",
-      "list": {
-        "status": "Filter by status",
-        "skill": "Filter by skill ID"
-      },
-      "watch": {
-        "description": "Poll task status until completion"
-      },
-      "stream": {
-        "description": "Stream task execution events via SSE"
-      },
-      "logs": {
-        "description": "Show task messages and artifacts"
-      }
-    }
-  },
   "policy": {
     "description": "Manage 67router authorization policies",
     "list": {
@@ -696,99 +668,6 @@
       "provider": "Provider ID to revoke",
       "connection_id": "Revoke a specific connection by ID",
       "yes": "Skip confirmation prompt"
-    }
-  },
-  "cloud": {
-    "description": "Manage cloud AI agent tasks (codex, devin, jules)",
-    "agents": {
-      "description": "List available cloud agents"
-    },
-    "agent": {
-      "description": "Manage {agent} cloud agent tasks",
-      "auth": {
-        "description": "Authorize {agent} via OAuth"
-      }
-    },
-    "task": {
-      "description": "Manage cloud agent tasks",
-      "create": {
-        "description": "Create a new agent task",
-        "title": "Task title (defaults to first 80 chars of prompt)",
-        "prompt": "Task prompt text",
-        "prompt_file": "Read prompt from file",
-        "repo": "Repository URL to clone for the task",
-        "branch": "Branch name to use",
-        "metadata": "JSON metadata object"
-      },
-      "list": {
-        "description": "List agent tasks",
-        "status": "Filter by status (running|completed|failed|cancelled)",
-        "limit": "Maximum results (default: 50)"
-      },
-      "get": {
-        "description": "Get task details by ID"
-      },
-      "status": {
-        "description": "Print task status (running|completed|failed|cancelled)"
-      },
-      "cancel": {
-        "description": "Cancel a running task",
-        "yes": "Skip confirmation prompt"
-      },
-      "approve": {
-        "description": "Approve the agent plan to start execution"
-      },
-      "message": {
-        "description": "Send a message to a running task"
-      }
-    },
-    "sources": {
-      "description": "List source files produced by a task"
-    }
-  },
-  "eval": {
-    "description": "Manage eval suites and runs",
-    "suites": {
-      "description": "Manage eval suites",
-      "list": {
-        "description": "List eval suites"
-      },
-      "get": {
-        "description": "Get eval suite details by ID"
-      },
-      "create": {
-        "description": "Create an eval suite from a JSON file",
-        "file": "Path to suite definition JSON file"
-      }
-    },
-    "run": {
-      "description": "Start an eval run for a suite",
-      "model": "Model ID to evaluate (default: auto)",
-      "combo": "Force a specific combo by name",
-      "concurrency": "Number of concurrent samples (default: 4)",
-      "tag": "Tag this run for later filtering",
-      "watch": "Watch run progress until completion"
-    },
-    "list": {
-      "description": "List eval runs",
-      "suite": "Filter by suite ID",
-      "status": "Filter by status",
-      "since": "Return runs since this timestamp",
-      "limit": "Maximum results (default: 50)"
-    },
-    "get": {
-      "description": "Get eval run details by ID"
-    },
-    "results": {
-      "description": "Show sample results for an eval run",
-      "failed": "Show only failed samples"
-    },
-    "cancel": {
-      "description": "Cancel a running eval",
-      "yes": "Skip confirmation prompt"
-    },
-    "scorecard": {
-      "description": "Show scorecard for a completed eval run"
     }
   },
   "program": {

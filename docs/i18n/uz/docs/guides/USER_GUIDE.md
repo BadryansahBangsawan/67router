@@ -24,7 +24,6 @@ Provayderlarni sozlash, kombinatsiyalar yaratish, CLI vositalarini integratsiya 
 - [Koʻnikmalar tizimi](#-skills-system)
 - [Xotira tizimi](#-memory-system)
 - [Vebhuklar](#-webhooks)
-- [Bulutli agentlar](#-cloud-agents)
 - [Dasturiy boshqaruv](#-programmatic-management)
 - [Ichki CLI](#-internal-cli)
 - [Ish stoli ilovasi (Electron)](#-desktop-application-electron)
@@ -1237,8 +1236,6 @@ macOS tizimida `~/Library/Application Support/Claude/claude_desktop_config.json`
 
 ### Qamrovlar
 
-MCP hozirda 32 ta nomlangan qamrovni belgilaydi. Har bir Bearer kalitini muayyan qamrovlar bilan cheklash mumkin — rasmiy qamrov va vositalar roʻyxati uchun [MCP-SERVER.md](../frameworks/MCP-SERVER.md), JSON-RPC sxemasi uchun esa [A2A-SERVER.md](../frameworks/A2A-SERVER.md) hujjatiga qarang.
-
 ---
 
 ## 🧠 Koʻnikmalar tizimi
@@ -1247,7 +1244,6 @@ MCP hozirda 32 ta nomlangan qamrovni belgilaydi. Har bir Bearer kalitini muayyan
 
 - **Marketpleys interfeysi** — **Boshqaruv paneli → Koʻnikmalar** orqali koʻnikmalarni koʻrib chiqing va oʻrnating
 - **Har bir kalit uchun ruxsat doiralari** — Qaysi API kalitlari qaysi koʻnikmalarni ishga tushirishi mumkinligini cheklang
-- **Maxsus koʻnikmalar** — TypeScript faylini `src/lib/a2a/skills/` ichiga joylashtirib, uni roʻyxatdan oʻtkazing, shunda uni A2A orqali darhol ishga tushirish mumkin boʻladi
 
 Toʻliq maʼlumotnoma: [SKILLS.md](../frameworks/SKILLS.md).
 
@@ -1276,18 +1272,6 @@ Real vaqt rejimida kuzatish va avtomatlashtirish uchun 67router hodisalariga obu
 - Qayta urinishlar: eksponensial kechikish bilan 3 ta urinish, shundan keyin yetkazilmagan xabarlar navbatiga yuboriladi
 
 Toʻliq sxema [WEBHOOKS.md](../frameworks/WEBHOOKS.md) faylida.
-
----
-
-## ☁️ Bulut agentlari
-
-67router bulutli dasturlash agentlari (**OpenAI Codex Cloud**, **Devin**, **Jules**, **Antigravity**) bilan integratsiyalashadi, shu sababli uzoq davom etadigan vazifalarni mahalliy marshrutlashni boshqaradigan oʻsha boshqaruv panelidan yuborishingiz mumkin.
-
-- Vazifalarni **Boshqaruv paneli → Bulut agentlari** orqali yoki `POST /api/v1/agents/tasks` yordamida yarating
-- Har bir vazifa boʻyicha holat, jurnallar va artefaktlarni kuzating
-- Har bir provayder uchun oʻz API kalitingizdan foydalaning — hisob maʼlumotlari 67router instansiyasidan hech qachon tashqariga chiqmaydi
-
-Toʻliq maʼlumotnoma: [CLOUD_AGENT.md](../frameworks/CLOUD_AGENT.md).
 
 ---
 
@@ -1344,7 +1328,6 @@ omniroute restore [<timestamp>]    # Oniy nusxadan tiklash
 omniroute health                   # Batafsil tizim holati (uzgichlar, kesh, xotira)
 omniroute quota                    # Provayder kvotasidan foydalanish
 omniroute mcp status               # MCP serveri holati
-omniroute a2a status               # A2A serveri holati
 omniroute tunnel list|create|stop  # Cloudflare/Tailscale/ngrok tunnellari
 omniroute reset-password           # Administrator parolini tiklash
 omniroute --mcp                    # MCP serverini stdio orqali ishga tushirish

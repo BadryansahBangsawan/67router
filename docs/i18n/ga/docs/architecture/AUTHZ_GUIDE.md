@@ -230,8 +230,6 @@ Socraíonn `isAuthRequired()` i `src/shared/utils/apiAuth.ts` an ndéanfar **aon
 
 ## Athrú Bristeach — v3.8.0
 
-Teastaíonn fíordheimhniú bainistíochta **anois** ó na críochphointí `/api/v1/agents/tasks/*` agus `/api/resilience/model-cooldowns` (tiomantas `588a0333`). Faigheann cliaint a sheol eochair API ghnáth gan an scóip `manage` roimhe seo freagra `403`. Aistriú: tabhair an scóip `manage` don eochair i ndeais na nEochracha API, nó úsáid seisiún deaise ina bhfuil tú logáilte isteach.
-
 ## Athrú Iompraíochta — v3.8.2
 
 Tá `/api/mcp/*` (an cianfhreastalaí MCP) fós LOCAL_ONLY de réir réamhshocraithe, ach glacann sé anois le hiarratais neamh-loopback nuair a bhíonn an scóip `manage` sa cheanntásc `Authorization: Bearer <api-key>`. Geataítear an díolúine go sainráite de réir conair trí `LOCAL_ONLY_MANAGE_SCOPE_BYPASS_PREFIXES` in `src/server/authz/routeGuard.ts`; ní féidir dul timpeall ar an réimír ghaolmhar LOCAL_ONLY `/api/cli-tools/runtime/*` d’aon ghnó toisc gur féidir léi fophróisis threallacha a thosú. Leanann iarratais anaithnide chuig `/api/mcp/*` ó fhoinsí neamh-loopback de `403 LOCAL_ONLY` a thabhairt ar ais — is é dian-loopback an réamhshocrú i gcónaí d’aon chonair nua LOCAL_ONLY. Féach [Sraitheanna Garda Bealaigh](../security/ROUTE_GUARD_TIERS.md#manage-scope-carve-out).

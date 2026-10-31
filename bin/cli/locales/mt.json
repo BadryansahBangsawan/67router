@@ -390,34 +390,6 @@
       "description": "Reġistru ta' verifika MCP (alias għal audit --source mcp)"
     }
   },
-  "a2a": {
-    "skills": {
-      "description": "Lista l-ħiliet A2A disponibbli mill-karta tal-aġent"
-    },
-    "invoke": {
-      "description": "Sejjaħ ħila A2A u rritorna l-ID tal-kompitu",
-      "input": "Oġġett JSON ta' input",
-      "input_file": "Triq għal fajl JSON ta' input",
-      "wait": "Stenna għat-tlestija tal-kompitu qabel ma tirritorna",
-      "timeout": "Timeout ta' stennija għat-tlestija f'ms (default: 60000)"
-    },
-    "tasks": {
-      "description": "Immaniġġja l-kompiti A2A",
-      "list": {
-        "status": "Iffiltra bl-istatus",
-        "skill": "Iffiltra bl-ID tal-ħila"
-      },
-      "watch": {
-        "description": "Iċċekkja l-istatus tal-kompitu sakemm jitlesta"
-      },
-      "stream": {
-        "description": "Stream avvenimenti ta' eżekuzzjoni tal-kompitu permezz ta' SSE"
-      },
-      "logs": {
-        "description": "Uri messaġġi u artifacts tal-kompitu"
-      }
-    }
-  },
   "policy": {
     "description": "Immaniġġja l-politiki ta' awtorizzazzjoni 67router",
     "list": {
@@ -696,99 +668,6 @@
       "provider": "ID tal-Fornitur biex jitneħħa",
       "connection_id": "Irrevoka konnessjoni speċifika bl-ID",
       "yes": "Qabżu l-konferma tal-iskrin"
-    }
-  },
-  "cloud": {
-    "description": "Immaniġġja l-kompiti tal-aġenti AI fil-cloud (codex, devin, jules)",
-    "agents": {
-      "description": "Tella' l-aġenti tal-cloud disponibbli"
-    },
-    "agent": {
-      "description": "Immaniġġja l-kompiti tal-aġent cloud {agent}",
-      "auth": {
-        "description": "Awtorizza {agent} permezz ta' OAuth"
-      }
-    },
-    "task": {
-      "description": "Immaniġġja l-kompiti tal-aġent cloud",
-      "create": {
-        "description": "Oħloq xogħol ġdid ta' aġent",
-        "title": "Titlu tal-Compiti (jista' jinbagħat b'mod awtomatiku għal l-ewwel 80 karattru tal-prompt)",
-        "prompt": "Test tal-Mistoqsija tax-Xogħol",
-        "prompt_file": "Aqra prompt minn fajl",
-        "repo": "URL tal-Repository biex tikkuntrabbja għat-task",
-        "branch": "Isem il-filjali biex tużah",
-        "metadata": "JSON metadata oġġett"
-      },
-      "list": {
-        "description": "Elenca l-kompiti tal-aġent",
-        "status": "Filtra bl-istatuth (jeġri|lest|falla|kanċellat)",
-        "limit": "Rizultati massimi (default: 50)"
-      },
-      "get": {
-        "description": "Iqbad dettalji tal-ħidma bl-ID"
-      },
-      "status": {
-        "description": "Ipprintja l-istatus tat-task (għaddej|tlesta|falla|ikkanċellat)"
-      },
-      "cancel": {
-        "description": "Ikkanċella kompitu li qed jaħdem",
-        "yes": "Aqbeż il-prompt ta' konferma"
-      },
-      "approve": {
-        "description": "Ipprova l-pjan tal-aġent biex tibda l-eżekuzzjoni"
-      },
-      "message": {
-        "description": "Ibgħat messaġġ lil kompitu li qed jaħdem"
-      }
-    },
-    "sources": {
-      "description": "Lista ta' fajls sors prodotti minn kompitu"
-    }
-  },
-  "eval": {
-    "description": "Immaniġġja suites u runs ta' evalwazzjoni",
-    "suites": {
-      "description": "Immaniġġja suites ta' evalwazzjoni",
-      "list": {
-        "description": "Lista ta' suites ta' evalwazzjoni"
-      },
-      "get": {
-        "description": "Ikseb dettalji tas-suite ta' evalwazzjoni bl-ID"
-      },
-      "create": {
-        "description": "Oħloq suite ta' evalwazzjoni minn fajl JSON",
-        "file": "Triq għall-fajl JSON tad-definizzjoni tas-suite"
-      }
-    },
-    "run": {
-      "description": "Ibda run ta' evalwazzjoni għal suite",
-      "model": "ID tal-mudell biex tiġi evalwata (default: awtomatiku)",
-      "combo": "Ġiegħel combo speċifiku bl-isem",
-      "concurrency": "Numru ta' kampjuni konkorrenti (default: 4)",
-      "tag": "Immarka dan ir-run għal filtrazzjoni aktar tard",
-      "watch": "Ara l-progress tar-run sakemm jitlesta"
-    },
-    "list": {
-      "description": "Lista ta' runs ta' evalwazzjoni",
-      "suite": "Iffiltra bl-ID tas-suite",
-      "status": "Iffiltra bl-istatus",
-      "since": "Irritorna runs minn dan it-timestamp",
-      "limit": "Riżultati massimi (default: 50)"
-    },
-    "get": {
-      "description": "Ikseb dettalji tar-run ta' evalwazzjoni bl-ID"
-    },
-    "results": {
-      "description": "Uri riżultati tal-kampjuni għal run ta' evalwazzjoni",
-      "failed": "Uri biss kampjuni falluti"
-    },
-    "cancel": {
-      "description": "Ikkanċella evalwazzjoni li qed taħdem",
-      "yes": "Aqbeż il-prompt ta' konferma"
-    },
-    "scorecard": {
-      "description": "Uri l-scorecard għal run ta' evalwazzjoni lest"
     }
   },
   "program": {

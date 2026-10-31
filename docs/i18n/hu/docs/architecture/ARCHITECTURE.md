@@ -128,13 +128,11 @@ A `src/app/(dashboard)/dashboard/` alatti fő oldalak:
 - `/dashboard/limits` — kvóta- és sebességkorlátozási vezérlők
 - `/dashboard/cli-tools` — CLI-bevezetés, futtatókörnyezet-észlelés és konfigurációgenerálás
 - `/dashboard/agents` — észlelt ACP-ügynökök és egyéni ügynökök regisztrálása
-- `/dashboard/cloud-agents` — felhőben futtatott ügynökfeladatok (Codex Cloud, Devin, Jules) és a feladatok életciklusa
 - `/dashboard/skills` — A2A-képességjegyzék, izolált végrehajtás és beépített képességkatalógus
 - `/dashboard/memory` — tartós társalgási memória vizsgálata és lekérése
 - `/dashboard/webhooks` — kimenő webhook-előfizetések, titokrotáció és újrapróbálkozási statisztikák
 - `/dashboard/batch` — kötegelt feladatok beküldése és előrehaladása
 - `/dashboard/cache` — olvasás közben feltöltődő gyorsítótár és következtetési gyorsítótár statisztikái, valamint kiürítési vezérlők
-- `/dashboard/playground` — interaktív csevegési tesztfelület bármely konfigurált kombinációval vagy modellel
 - `/dashboard/changelog` — alkalmazáson belüli változásnapló-megjelenítő (a `CHANGELOG.md` fájlt jeleníti meg)
 - `/dashboard/system` — futtatókörnyezeti diagnosztika, verzióinformációk és környezet-ellenőrzési felület
 - `/dashboard/onboarding` — első futtatáskor megjelenő beállítási varázsló új telepítésekhez
@@ -252,7 +250,6 @@ Felügyeleti területek:
 - Költségkeret: `src/app/api/usage/budget` (GET/POST)
 - Tartalék láncok: `src/app/api/fallback/chains` (GET/POST/DELETE)
 - Megfelelőségi audit: `src/app/api/compliance/audit-log` (GET, lapozással + strukturált metaadatokkal)
-- Kiértékelések: `src/app/api/evals` (GET/POST), `src/app/api/evals/[suiteId]` (GET)
 - Szabályzatok: `src/app/api/policies` (GET/POST)
 - Szinkronizálási tokenek: `src/app/api/sync/tokens` (GET/POST), `src/app/api/sync/tokens/[id]` (GET/DELETE)
 - Konfigurációs csomag: `src/app/api/sync/bundle` (GET, a beállításokról/szolgáltatókról/kombinációkról/kulcsokról készült, ETag-verziózott pillanatkép)
@@ -316,7 +313,6 @@ A tartományi réteg moduljai:
 - Lekérési időtúllépés: `src/shared/utils/fetchTimeout.ts`
 - Kéréstelemetria: `src/shared/utils/requestTelemetry.ts`
 - Megfelelőség/audit: `src/lib/compliance/index.ts`
-- Kiértékelés-futtató: `src/lib/evals/evalRunner.ts`
 - Tartományi állapot tartós tárolása: `src/lib/db/domainState.ts` — SQLite CRUD a visszaállási láncokhoz, keretekhez, költségelőzményekhez, kizárási állapothoz és megszakítókhoz
 
 OAuth-szolgáltatói modulok (27 különálló fájl a `src/lib/oauth/providers/` alatt):
@@ -383,23 +379,6 @@ Fő képességek:
 
 Az algoritmus teljes részleteiért (tényezőképletek, súlyhangolás) lásd:
 [`docs/routing/AUTO-COMBO.md`](../routing/AUTO-COMBO.md).
-
-### B. Felhőügynökök
-
-A Cloud Agents egységes, adatbázis-alapú feladat-életciklus mögé foglalja a külső felek által üzemeltetett kódügynök-platformokat (Codex Cloud, Devin,
-Jules). Minden feladatlétrehozási és -lekérdezési
-végpont kezelői hitelesítést igényel.
-
-- Modul gyökérkönyvtára: `src/lib/cloudAgent/` (`baseAgent.ts`, `registry.ts`, `api.ts`,
-  `types.ts`, `db.ts`, valamint az ügynökönkénti alkönyvtárak az `agents/` alatt)
-- Ügynökönkénti implementációk: `agents/codex/`, `agents/devin/`, `agents/jules/`
-- Nyilvános végpontok: `/api/v1/agents/tasks/*` (listázás/létrehozás/lekérés/megszakítás)
-- Kezelői végpontok: `/api/cloud/*` (kiépítés, állapot, kötegelt műveletek)
-- Irányítópult: `/dashboard/cloud-agents`
-- Tárolás: `cloud_agent_tasks` tábla
-
-Az ügynökönkénti kiépítés és az OAuth részleteiért lásd:
-[`docs/frameworks/CLOUD_AGENT.md`](../frameworks/CLOUD_AGENT.md).
 
 ### C. Védőkorlátok
 

@@ -44,7 +44,6 @@ src/app/api/agent-skills/
   generate/route.ts                    — POST /api/agent-skills/generate (인증 필요)
 
 open-sse/mcp-server/tools/agentSkillTools.ts  — MCP 도구 3개(목록, 조회, 커버리지)
-src/lib/a2a/skills/listCapabilities.ts        — A2A 스킬: list-capabilities
 ```
 
 ---
@@ -140,8 +139,6 @@ A2A 스킬 `list-capabilities`는 45개 스킬 전체 카탈로그를 마크다�
 }
 ```
 
-프로토콜 세부 정보는 [A2A-SERVER.md](./A2A-SERVER.md)를 참조하세요.
-
 ---
 
 ## 카탈로그 — 45개 스킬 ID
@@ -189,12 +186,11 @@ A2A 스킬 `list-capabilities`는 45개 스킬 전체 카탈로그를 마크다�
 | `cli-contexts`        | cli-contexts       | `omniroute contexts`    |
 | `cli-cost-usage`      | cli-cost-usage     | `omniroute cost`        |
 | `cli-mcp`             | cli-mcp            | `omniroute mcp`         |
-| `cli-a2a`             | cli-a2a            | `omniroute a2a`         |
 | `cli-tunnel`          | cli-tunnel         | `omniroute tunnel`      |
 | `cli-backup-sync`     | cli-backup-sync    | `omniroute backup`      |
 | `cli-policy-audit`    | cli-policy-audit   | `omniroute policy`      |
 | `cli-batches`         | cli-batches        | `omniroute batch`       |
-| `cli-eval`            | cli-eval           | `omniroute eval`        |
+| `cli-eval`            | cli-eval           | `omniroute simulate`    |
 | `cli-plugins-skills`  | cli-plugins-skills | `omniroute plugins`     |
 | `cli-setup`           | cli-setup          | `omniroute setup`       |
 | `cli-skill-collector` | cli-setup          | `omniroute skills`      |
@@ -312,6 +308,5 @@ curl "http://localhost:20128/api/agent-skills/coverage"
 
 - [SKILLS.md](./SKILLS.md) — Omni Skills 프레임워크(LLM 도구 주입 + 마켓플레이스)
 - [MCP-SERVER.md](./MCP-SERVER.md) — MCP 도구 카탈로그(`omniroute_agent_skills_*` 도구)
-- [A2A-SERVER.md](./A2A-SERVER.md) — A2A 프로토콜(`list-capabilities` 스킬)
 - `src/lib/agentSkills/` — 카탈로그, 생성기, 파서
 - `skills/` — 생성된 SKILL.md 파일(45개 항목)

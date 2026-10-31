@@ -16,8 +16,6 @@ process.env.API_KEY_SECRET = "test-secret";
 const core = await import("../../src/lib/db/core.ts");
 const rulesDb = await import("../../src/lib/db/reasoningRoutingRules.ts");
 const ruleRoute = await import("../../src/app/api/settings/reasoning-routing-rules/[id]/route.ts");
-const presetsDb = await import("../../src/lib/db/playgroundPresets.ts");
-const presetRoute = await import("../../src/app/api/playground/presets/[id]/route.ts");
 const proxiesDb = await import("../../src/lib/db/proxies.ts");
 const { handleProxyUpdate } = await import("../../src/lib/api/proxyRegistryRouteHandlers.ts");
 const bulkImportRoute = await import("../../src/app/api/settings/proxies/bulk-import/route.ts");
@@ -63,25 +61,6 @@ test("renaming a disabled reasoning rule keeps it disabled and keeps its setting
   assert.equal(stored?.description, "keep me");
   assert.deepEqual(stored?.requestTags, ["coding"]);
   assert.equal(stored?.tagMatchMode, "all");
-});
-
-test("renaming a playground preset keeps its params", async () => {
-  const preset = presetsDb.createPlaygroundPreset({
-    name: "before",
-    endpoint: "chat",
-    model: "m",
-    system: null,
-    params: { temperature: 0.2 },
-  });
-
-  const response = await presetRoute.PUT(jsonRequest("PUT", { name: "after" }), {
-    params: Promise.resolve({ id: preset.id }),
-  });
-
-  assert.equal(response.status, 200);
-  const body = (await response.json()) as { name: string; params: Record<string, unknown> };
-  assert.equal(body.name, "after");
-  assert.deepEqual(body.params, { temperature: 0.2 });
 });
 
 test("renaming a proxy keeps its address family", async () => {

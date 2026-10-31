@@ -43,8 +43,6 @@ Ciklus v3.7.x → v3.8.0 donio je automatsko usmjeravanje bez konfiguracije, nov
 - 🤝 **GitLab Duo OAuth pružatelj usluga** — prijava putem GitLab vjerodajnica
 - 🧠 **Predmemorija ponovnog odigravanja rezoniranja** — hibridna postojanost tragova rezoniranja u memoriji i SQLite bazi
 
-📚 **Povezana dokumentacija:** [Okvir vještina](../frameworks/SKILLS.md) · [Sustav memorije](../frameworks/MEMORY.md) · [Agenti u oblaku](../frameworks/CLOUD_AGENT.md) · [Webhookovi](../frameworks/WEBHOOKS.md) · [Predmemorija ponovnog odigravanja rezoniranja](../routing/REASONING_REPLAY.md)
-
 ---
 
 ## 🔌 Provideri
@@ -104,12 +102,6 @@ Praćenje u stvarnom vremenu: vrijeme aktivnosti (uptime), memorija, verzija, pe
 Četiri načina za otklanjanje pogrešaka u API prijevodima: **Playground** (pretvarač formata), **Chat Tester** (uživo zahtjevi), **Test Bench** (skupno testiranje) i **Live Monitor** (stream u stvarnom vremenu).
 
 ![Translator Playground](../screenshots/05-translator.png)
-
----
-
-## 🎮 Model Playground _(v2.0.9+)_
-
-Testirajte bilo koji model izravno s nadzorne ploče. Odaberite pružatelja usluge, model i endpoint, pišite upite pomoću Monaco Editora, streamajte odgovore u stvarnom vremenu, prekinite stream u sredini i pregledajte metrike vremena.
 
 ---
 

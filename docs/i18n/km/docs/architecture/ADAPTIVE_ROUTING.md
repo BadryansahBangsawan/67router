@@ -42,16 +42,15 @@ AI Agent / IDE
 
 ### អ្វីដែលមានរួចហើយ (បានធ្វើសវនកម្ម មិនបានអនុវត្តស្ទួន)
 
-| គោលគំនិត                                               | ការអនុវត្តដែលមានស្រាប់                                                                                 |
-| ------------------------------------------------------ | ------------------------------------------------------------------------------------------------------ |
-| ភាពអាចប្រើបាន (តើយើងអាចបញ្ជូនចរាចរណ៍បានទេ?)            | Circuit breaker (CLOSED/DEGRADED/OPEN/HALF_OPEN, រក្សាទុកក្នុង DB), connection cooldown, model lockout |
-| ការរាយការណ៍សុខភាព                                      | `providerHealthMatrix.ts`, `providerHealthAutopilot.ts`                                                |
-| ចរាចរណ៍ស្រមោល                                          | `open-sse/services/combo/shadowRouting.ts`                                                             |
-| របាំងការពារ                                            | `src/lib/guardrails/` (hook មុន/ក្រោយ)                                                                 |
-| ឃ្លាំងសម្ងាត់ត្រឹមត្រូវដាច់ខាត                         | `src/lib/semanticCache.ts` (ផ្អែកលើ signature)                                                         |
-| កម្មវិធីវាយតម្លៃ / ការកំណត់ផ្លូវដែលជំរុញដោយការវាយតម្លៃ | `src/lib/evals/`, `open-sse/services/evalRouting.ts`                                                   |
-| សមត្ថភាពពន្យល់ការសម្រេចចិត្ត Combo                     | `open-sse/services/combo/decisionTrace.ts`                                                             |
-| ព្រឹត្តិការណ៍តាមពេលវេលាជាក់ស្តែងរបស់ Dashboard         | `src/lib/events/eventBus.ts` (ឆានែលជូនដំណឹង UI, payload `unknown`, ប្រវត្តិ 100 ធាតុ)                  |
+| គោលគំនិត                                       | ការអនុវត្តដែលមានស្រាប់                                                                                 |
+| ---------------------------------------------- | ------------------------------------------------------------------------------------------------------ |
+| ភាពអាចប្រើបាន (តើយើងអាចបញ្ជូនចរាចរណ៍បានទេ?)    | Circuit breaker (CLOSED/DEGRADED/OPEN/HALF_OPEN, រក្សាទុកក្នុង DB), connection cooldown, model lockout |
+| ការរាយការណ៍សុខភាព                              | `providerHealthMatrix.ts`, `providerHealthAutopilot.ts`                                                |
+| ចរាចរណ៍ស្រមោល                                  | `open-sse/services/combo/shadowRouting.ts`                                                             |
+| របាំងការពារ                                    | `src/lib/guardrails/` (hook មុន/ក្រោយ)                                                                 |
+| ឃ្លាំងសម្ងាត់ត្រឹមត្រូវដាច់ខាត                 | `src/lib/semanticCache.ts` (ផ្អែកលើ signature)                                                         |
+| សមត្ថភាពពន្យល់ការសម្រេចចិត្ត Combo             | `open-sse/services/combo/decisionTrace.ts`                                                             |
+| ព្រឹត្តិការណ៍តាមពេលវេលាជាក់ស្តែងរបស់ Dashboard | `src/lib/events/eventBus.ts` (ឆានែលជូនដំណឹង UI, payload `unknown`, ប្រវត្តិ 100 ធាតុ)                  |
 
 ស្រទាប់ព្រឹត្តិការណ៍កំណត់ផ្លូវ **មិនមែន** ជាការអនុវត្ត `eventBus` ឡើងវិញទេ៖ bus នោះគឺជា
 ឆានែលជូនដំណឹងតាមពេលវេលាជាក់ស្តែងរបស់ dashboard (ឈ្មោះ _ព្រឹត្តិការណ៍_ ដែលមានប្រភេទច្បាស់លាស់
@@ -259,8 +258,6 @@ TTFT/ITL/interrupted ត្រូវបានបញ្ចូលទៅក្ន�
 - `Evaluator` នាពេលអនាគត (deterministic, local judge, HTTP, WASM) នឹងប្រើប្រាស់
   events/traces ហើយត្រឡប់ `QualityScore` ដែលបញ្ចូលទៅក្នុងផ្លូវ
   `getQualityScore`/quality-factor ដដែល។
-- Routing ដែលជំរុញដោយ eval មានស្រាប់ (`open-sse/services/evalRouting.ts`) បានរៀបលំដាប់
-  combo targets ឡើងវិញរួចហើយ ដោយផ្អែកលើអត្រាជោគជ័យរបស់ `eval_runs` នៅពេលបើកប្រើ។
 
 គ្មាន evaluation ណាមួយដំណើរការដោយសមកាលលើ request path ទេ ហើយ gateway ដំណើរការ
 បានពេញលេញ ទោះបីមិនមាន evaluator ក៏ដោយ។

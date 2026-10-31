@@ -44,7 +44,6 @@ src/app/api/agent-skills/
   generate/route.ts                    — POST /api/agent-skills/generate (yêu cầu xác thực)
 
 open-sse/mcp-server/tools/agentSkillTools.ts  — 3 công cụ MCP (liệt kê, lấy, độ bao phủ)
-src/lib/a2a/skills/listCapabilities.ts        — Skill A2A: list-capabilities
 ```
 
 ---
@@ -140,8 +139,6 @@ Kỹ năng A2A `list-capabilities` trả về danh mục đầy đủ gồm 45 k
 }
 ```
 
-Xem [A2A-SERVER.md](./A2A-SERVER.md) để biết chi tiết giao thức.
-
 ---
 
 ## Danh mục — 45 ID kỹ năng
@@ -189,12 +186,11 @@ Xem [A2A-SERVER.md](./A2A-SERVER.md) để biết chi tiết giao thức.
 | `cli-contexts`        | cli-contexts       | `omniroute contexts`    |
 | `cli-cost-usage`      | cli-cost-usage     | `omniroute cost`        |
 | `cli-mcp`             | cli-mcp            | `omniroute mcp`         |
-| `cli-a2a`             | cli-a2a            | `omniroute a2a`         |
 | `cli-tunnel`          | cli-tunnel         | `omniroute tunnel`      |
 | `cli-backup-sync`     | cli-backup-sync    | `omniroute backup`      |
 | `cli-policy-audit`    | cli-policy-audit   | `omniroute policy`      |
 | `cli-batches`         | cli-batches        | `omniroute batch`       |
-| `cli-eval`            | cli-eval           | `omniroute eval`        |
+| `cli-eval`            | cli-eval           | `omniroute simulate`    |
 | `cli-plugins-skills`  | cli-plugins-skills | `omniroute plugins`     |
 | `cli-setup`           | cli-setup          | `omniroute setup`       |
 | `cli-skill-collector` | cli-setup          | `omniroute skills`      |
@@ -312,6 +308,5 @@ curl "http://localhost:20128/api/agent-skills/coverage"
 
 - [SKILLS.md](./SKILLS.md) — khung Omni Skills (chèn công cụ LLM + chợ ứng dụng)
 - [MCP-SERVER.md](./MCP-SERVER.md) — danh mục công cụ MCP (các công cụ `omniroute_agent_skills_*`)
-- [A2A-SERVER.md](./A2A-SERVER.md) — giao thức A2A (kỹ năng `list-capabilities`)
 - `src/lib/agentSkills/` — danh mục, trình tạo, trình phân tích cú pháp
 - `skills/` — các tệp SKILL.md đã tạo (45 mục)

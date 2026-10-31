@@ -24,7 +24,6 @@
 - [سیستم مهارتها](#-skills-system)
 - [سیستم حافظه](#-memory-system)
 - [وبهوکها](#-webhooks)
-- [عاملهای ابری](#-cloud-agents)
 - [مدیریت برنامهنویسیشده](#-programmatic-management)
 - [CLI داخلی](#-internal-cli)
 - [برنامه دسکتاپ (Electron)](#-desktop-application-electron)
@@ -1239,8 +1238,6 @@ curl -X POST http://localhost:20128/v1/chat/completions \
 
 ### دامنهها
 
-MCP در حال حاضر 32 دامنه نامگذاریشده تعریف میکند. هر کلید Bearer را میتوان به دامنههای مشخصی محدود کرد — برای فهرست مرجع دامنهها و ابزارها به [MCP-SERVER.md](../frameworks/MCP-SERVER.md) و برای طرحواره JSON-RPC به [A2A-SERVER.md](../frameworks/A2A-SERVER.md) مراجعه کنید.
-
 ---
 
 ## 🧠 سیستم مهارتها
@@ -1249,7 +1246,6 @@ MCP در حال حاضر 32 دامنه نامگذاریشده تعریف میک�
 
 - **رابط کاربری بازارچه** — مهارتها را از مسیر **داشبورد ← مهارتها** مرور و نصب کنید
 - **دامنههای اختصاصی هر کلید** — مشخص کنید کدام کلیدهای API میتوانند کدام مهارتها را فراخوانی کنند
-- **مهارتهای سفارشی** — یک فایل TypeScript را در `src/lib/a2a/skills/` قرار دهید و آن را ثبت کنید تا بلافاصله از طریق A2A قابل فراخوانی شود
 
 مرجع کامل: [SKILLS.md](../frameworks/SKILLS.md).
 
@@ -1278,18 +1274,6 @@ MCP در حال حاضر 32 دامنه نامگذاریشده تعریف میک�
 - تلاشهای مجدد: 3 تلاش با تأخیر تصاعدی، سپس انتقال به صف نامههای مرده
 
 طرحواره کامل در [WEBHOOKS.md](../frameworks/WEBHOOKS.md).
-
----
-
-## ☁️ عاملهای ابری
-
-67router با عاملهای کدنویسی ابری (**OpenAI Codex Cloud**، **Devin**، **Jules** و **Antigravity**) یکپارچه میشود تا بتوانید وظایف طولانیمدت را از همان داشبوردی که مسیریابی محلی شما را مدیریت میکند، ارسال کنید.
-
-- وظایف را در **داشبورد ← عاملهای ابری** یا از طریق `POST /api/v1/agents/tasks` ایجاد کنید
-- وضعیت، گزارشها و مصنوعات هر وظیفه را پیگیری کنید
-- برای هر ارائهدهنده از کلید API خودتان استفاده کنید — اطلاعات ورود هرگز از نمونه 67router خارج نمیشوند
-
-مرجع کامل: [CLOUD_AGENT.md](../frameworks/CLOUD_AGENT.md).
 
 ---
 
@@ -1346,7 +1330,6 @@ omniroute restore [<timestamp>]    # بازیابی از یک اسنپشات
 omniroute health                   # جزئیات سلامت (قطعکنندهها، کش، حافظه)
 omniroute quota                    # میزان مصرف سهمیه ارائهدهنده
 omniroute mcp status               # وضعیت سرور MCP
-omniroute a2a status               # وضعیت سرور A2A
 omniroute tunnel list|create|stop  # تونلهای Cloudflare/Tailscale/ngrok
 omniroute reset-password           # بازنشانی رمز عبور مدیر
 omniroute --mcp                    # راهاندازی سرور MCP از طریق stdio

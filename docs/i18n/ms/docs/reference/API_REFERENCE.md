@@ -1437,9 +1437,8 @@ Respons GET merangkumi `agents[]` (id, name, binary, version, installed, protoco
 
 ### Penilaian
 
-| Endpoint     | Kaedah   | Penerangan                                    |
-| ------------ | -------- | --------------------------------------------- |
-| `/api/evals` | GET/POST | Senaraikan sut penilaian / jalankan penilaian |
+| Endpoint | Kaedah | Penerangan |
+| -------- | ------ | ---------- |
 
 ### Dasar
 
@@ -1757,31 +1756,6 @@ Digunakan oleh subsistem pengurusan kunci automatik untuk mengeluarkan dan mengg
 
 ---
 
-## Protokol Ejen
-
-Tugas ejen awan (Claude Code, Codex Cloud, OpenHands, dll.) yang dilaksanakan dari jauh bagi pihak pengguna 67router.
-
-| Kaedah | Laluan                        | Penerangan                                                                                                                                                 |
-| ------ | ----------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| GET    | `/api/v1/agents/tasks`        | Senaraikan tugas — pilihan `?provider=`, `?status=`, `?limit=` (1–500, lalai 50)                                                                           |
-| POST   | `/api/v1/agents/tasks`        | Cipta tugas — kandungan disahkan oleh `CreateCloudAgentTaskSchema` (`providerId`, `prompt`, `source`, `options?`). Mengembalikan `201` dengan sampul tugas |
-| DELETE | `/api/v1/agents/tasks?id=...` | Padam tugas                                                                                                                                                |
-| GET    | `/api/v1/agents/tasks/[id]`   | Baca tugas — menyegarkan status secara segerak daripada ejen awan huluan apabila `external_id` ditetapkan                                                  |
-| POST   | `/api/v1/agents/tasks/[id]`   | Tindakan terdiskriminasi: `{action: "approve"}`, `{action: "message", message}`, atau `{action: "cancel"}`                                                 |
-| DELETE | `/api/v1/agents/tasks/[id]`   | Padam tugas tertentu mengikut id                                                                                                                           |
-
-> **Pengesahan:** pengesahan pengurusan diperlukan untuk setiap kaedah (`requireCloudAgentManagementAuth`). Sebelum v3.8.0, kaedah ini tidak memerlukan pengesahan — lihat komit `588a0333` untuk perubahan yang memecahkan keserasian.
-
-```bash
-# Cipta tugas awan Claude Code
-curl -X POST http://localhost:20128/api/v1/agents/tasks \
-  -H "Authorization: Bearer your-management-key" \
-  -H "Content-Type: application/json" \
-  -d '{"providerId":"claude-code-cloud","prompt":"Fix the failing test","source":{"repo":"...","branch":"..."}}'
-```
-
----
-
 ## Proksi Pengurusan
 
 Proksi HTTP(S)/SOCKS keluar yang boleh diberikan kepada penyedia, akaun atau secara global.
@@ -1901,48 +1875,10 @@ Storan memori perbualan/fakta yang berterusan, dengan skop mengikut kunci API / 
 
 67router menyediakan titik akhir JSON-RPC 2.0 A2A (Ejen-ke-Ejen) serta pembalut REST untuk kegunaan pemeriksaan/papan pemuka.
 
-### JSON-RPC
-
-```bash
-POST /a2a
-Authorization: Bearer your-api-key   # pilihan melainkan OMNIROUTE_API_KEY ditetapkan
-Content-Type: application/json
-
-{
-  "jsonrpc": "2.0",
-  "id": 1,
-  "method": "message/send",
-  "params": {
-    "skill": "smart-routing",
-    "messages": [{"role": "user", "content": "Route this coding task"}]
-  }
-}
-```
-
-Kaedah yang disokong (semuanya bergantung pada `settings.a2aEnabled`):
-
-| Kaedah           | Penerangan                                                                 |
-| ---------------- | -------------------------------------------------------------------------- |
-| `message/send`   | Pelaksanaan kemahiran segerak; mengembalikan `{task, artifacts, metadata}` |
-| `message/stream` | Pelaksanaan penstriman SSE bagi set kemahiran yang sama                    |
-| `tasks/get`      | Dapatkan tugas mengikut `taskId`                                           |
-| `tasks/cancel`   | Batalkan tugas mengikut `taskId`                                           |
-
-Kemahiran terbina dalam: `smart-routing`, `quota-management`, `provider-discovery`, `cost-analysis`, `health-report`.
-
-### Kad Ejen
-
-```bash
-GET /.well-known/agent.json
-```
-
-Mengembalikan kad ejen A2A awam (nama, penerangan, keupayaan, katalog kemahiran, skim pengesahan) — dicache secara awam selama 1h. Pengesahan tidak diperlukan.
-
 ### Pembantu REST
 
 | Kaedah | Laluan                       | Penerangan                                                                                                            |
 | ------ | ---------------------------- | --------------------------------------------------------------------------------------------------------------------- |
-| GET    | `/api/a2a/status`            | A2A didayakan + statistik tugas + ringkasan kad ejen yang dicache                                                     |
 | GET    | `/api/a2a/tasks`             | Senaraikan tugas — `?state=submitted\|working\|completed\|failed\|cancelled`, `?skill=`, `?limit=` (≤200), `?offset=` |
 | POST   | `/api/a2a/tasks`             | (Tidak dilaksanakan sebagai pembantu REST — cipta melalui JSON-RPC `message/send`)                                    |
 | GET    | `/api/a2a/tasks/[id]`        | Dapatkan satu tugas                                                                                                   |
@@ -1962,12 +1898,8 @@ Mengembalikan kad ejen A2A awam (nama, penerangan, keupayaan, katalog kemahiran,
 | GET | `/api/cloud/models/alias` | Senaraikan alias model seperti yang didedahkan kepada penyegerakan awan |
 | GET | `/api/assess` | Baca pengkategorian pentaksiran terkini (bagi setiap penyedia/model) |
 | POST | `/api/assess` | Jalankan pentaksiran — isi: `{scope: {type:"all"}                                                   | {type:"provider", providerId} | {type:"model", modelId}, trigger?}` |
-| GET | `/api/evals` | Senaraikan suit penilaian terbina dalam + pelaksanaan terkini |
-| POST | `/api/evals` | Cetuskan pelaksanaan penilaian |
-| POST | `/api/evals/suites` | Cipta suit penilaian tersuai — isi disahkan oleh `evalSuiteSaveSchema` |
-| GET | `/api/evals/suites/[id]` | Dapatkan suit penilaian tersuai |
 
-**Pengesahan:** `/api/cloud/auth` mengesahkan kunci Bearer secara langsung dan mengembalikan kunci yang disamarkan serta `projectId` bagi setiap sambungan hanya untuk kunci dengan skop `manage` / `admin`; laluan `/api/cloud/*`, `/api/evals/*`, dan `/api/assess` yang lain memerlukan sesi/kunci API pengurusan. POST `/api/assess` menggunakan `validateBody` dengan skema skop kesatuan berpenghurai.
+**Pengesahan:** `/api/cloud/auth` mengesahkan kunci Bearer secara langsung dan mengembalikan kunci yang disamarkan serta `projectId` bagi setiap sambungan hanya untuk kunci dengan skop `manage` / `admin`; laluan `/api/cloud/*`, dan `/api/assess` yang lain memerlukan sesi/kunci API pengurusan. POST `/api/assess` menggunakan `validateBody` dengan skema skop kesatuan berpenghurai.
 
 ---
 
@@ -2291,5 +2223,3 @@ keluarga kelayakan (sesi papan pemuka, token CLI setempat, Token Akses
 - `requireLogin` boleh ditogol melalui `/api/settings/require-login`
 - Laluan `/v1/*` secara pilihan memerlukan kunci API Bearer apabila `REQUIRE_API_KEY=true`
 - "token pengurusan" / "kunci API berskop pengurusan" dalam rujukan ini bermaksud salah satu keluarga dalam panduan tersebut — bukan jenis rahsia tambahan yang tidak ditakrifkan
-
-> **Perubahan pecah keserasian (v3.8.0)** — `/api/v1/agents/tasks/*` dan titik akhir pengurusan tempoh bertenang kini memerlukan **pengesahan pengurusan** (kuki `auth_token` papan pemuka atau kunci API berskop pengurusan). Klien yang sebelum ini memanggil laluan ini tanpa pengesahan akan menerima `401 Unauthorized`. Lihat komit `588a0333` (`fix(auth): require management auth for agent and cooldown APIs`).

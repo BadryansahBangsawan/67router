@@ -390,34 +390,6 @@
       "description": "MCP audita žurnāls (alias for audit --source mcp)"
     }
   },
-  "a2a": {
-    "skills": {
-      "description": "Pieejamo A2A prasmju saraksts no aģenta kartītes"
-    },
-    "invoke": {
-      "description": "Izsaukt A2A prasmi un atgriezt uzdevuma ID",
-      "input": "JSON ievades objekts",
-      "input_file": "Ceļš uz JSON ievades failu",
-      "wait": "Gaidīt uzdevuma pabeigšanu pirms atgriešanās",
-      "timeout": "Laika limits gaidot pabeigšanu ms (noklusējums: 60000)"
-    },
-    "tasks": {
-      "description": "Pārvaldīt A2A uzdevumus",
-      "list": {
-        "status": "Filtrēt pēc statusa",
-        "skill": "Filtrēt pēc prasmes ID"
-      },
-      "watch": {
-        "description": "Balsot par uzdevuma statusu līdz pabeigšanai"
-      },
-      "stream": {
-        "description": "Strumēt uzdevuma izpildes notikumus caur SSE"
-      },
-      "logs": {
-        "description": "Rādīt uzdevuma ziņojumus un artefaktus"
-      }
-    }
-  },
   "policy": {
     "description": "Pārvaldīt 67router autorizācijas politikas",
     "list": {
@@ -696,99 +668,6 @@
       "provider": "Pakalpojumu sniedzēja ID, ko atcelt",
       "connection_id": "Atcelt konkrētu savienojumu pēc ID",
       "yes": "Izlaidīt apstiprinājuma uzvedni"
-    }
-  },
-  "cloud": {
-    "description": "Pārvaldīt mākoņa AI aģentu uzdevumus (codex, devin, jules)",
-    "agents": {
-      "description": "Uzskaitīt pieejamos mākoņa aģentus"
-    },
-    "agent": {
-      "description": "Pārvaldīt {agent} mākoņa aģenta uzdevumus",
-      "auth": {
-        "description": "Autorizēt {agent} caur OAuth"
-      }
-    },
-    "task": {
-      "description": "Pārvaldīt mākoņa aģenta uzdevumus",
-      "create": {
-        "description": "Izveidot jaunu aģenta uzdevumu",
-        "title": "Udevuma nosaukums (noklusējums: pirmie 80 rakstzīmes no uzvednes)",
-        "prompt": "Uzdevuma uzvednes teksts",
-        "prompt_file": "Lasīt uzvedni no faila",
-        "repo": "Repozitorija URL, ko klonēt uzdevumam",
-        "branch": "Filēja nosaukums, ko izmantot",
-        "metadata": "JSON metadatu objekts"
-      },
-      "list": {
-        "description": "Uzskaitīt aģenta uzdevumus",
-        "status": "Filtrēt pēc statusa (running|completed|failed|cancelled)",
-        "limit": "Maksimālie rezultāti (noklusējums: 50)"
-      },
-      "get": {
-        "description": "Iegūt uzdevuma detaļas pēc ID"
-      },
-      "status": {
-        "description": "Drukāt uzdevuma statusu (running|completed|failed|cancelled)"
-      },
-      "cancel": {
-        "description": "Atcelt darbojošos uzdevumu",
-        "yes": "Izlaidiet apstiprinājuma pieprasījumu"
-      },
-      "approve": {
-        "description": "Apstiprināt aģenta plānu, lai sāktu izpildi"
-      },
-      "message": {
-        "description": "Sūtīt ziņojumu darbojošamies uzdevumam"
-      }
-    },
-    "sources": {
-      "description": "Uzskaitīt avota failus, ko radījis uzdevums"
-    }
-  },
-  "eval": {
-    "description": "Pārvaldīt vērtēšanas komplektus un palaišanas",
-    "suites": {
-      "description": "Pārvaldīt vērtēšanas komplektus",
-      "list": {
-        "description": "Uzskaitīt vērtēšanas komplektus"
-      },
-      "get": {
-        "description": "Iegūt vērtēšanas komplekta detaļas pēc ID"
-      },
-      "create": {
-        "description": "Izveidot vērtēšanas komplektu no JSON faila",
-        "file": "Ceļš uz komplekta definīcijas JSON failu"
-      }
-    },
-    "run": {
-      "description": "Sākt vērtēšanas palaišanu komplektam",
-      "model": "Vērtējamais modeļa ID (noklusējums: auto)",
-      "combo": "Piespiest konkrētu kombināciju pēc nosaukuma",
-      "concurrency": "Vienlaicīgo paraugu skaits (noklusējums: 4)",
-      "tag": "Tagot šo palaišanu vēlākai filtrēšanai",
-      "watch": "Vērot palaišanas progresu līdz pabeigšanai"
-    },
-    "list": {
-      "description": "Uzskaitīt vērtēšanas palaišanas",
-      "suite": "Filtrēt pēc komplekta ID",
-      "status": "Filtrēt pēc statusa",
-      "since": "Atgriezt palaišanas kopš šī laika zīmogā",
-      "limit": "Maksimālie rezultāti (noklusējums: 50)"
-    },
-    "get": {
-      "description": "Iegūt vērtēšanas palaišanas detaļas pēc ID"
-    },
-    "results": {
-      "description": "Rādīt paraugu rezultātus vērtēšanas palaišanai",
-      "failed": "Rādīt tikai neizdevušos paraugus"
-    },
-    "cancel": {
-      "description": "Atcelt darbojošos vērtēšanu",
-      "yes": "Izlaidiet apstiprinājuma pieprasījumu"
-    },
-    "scorecard": {
-      "description": "Rādīt rezultātu karti pabeigtai vērtēšanas palaišanai"
     }
   },
   "program": {

@@ -58,12 +58,12 @@ test("each agentSkillTool has name, description, inputSchema, and handler", () =
 
 // ─── omniroute_agent_skills_list ────────────────────────────────────────────
 
-// 44 since #9058 added the ponytail external entry (43 canonical + 1 external).
-test("omniroute_agent_skills_list with no filters returns all 44 skills", async () => {
+// 43 since #9058 added the ponytail external entry (42 canonical + 1 external).
+test("omniroute_agent_skills_list with no filters returns all 43 skills", async () => {
   const result = await agentSkillTools.omniroute_agent_skills_list.handler({});
-  assert.equal(result.count, 44, `Expected 44 but got ${result.count}`);
+  assert.equal(result.count, 43, `Expected 43 but got ${result.count}`);
   assert.ok(Array.isArray(result.skills));
-  assert.equal(result.skills.length, 44);
+  assert.equal(result.skills.length, 43);
 });
 
 test("omniroute_agent_skills_list({category:'api'}) returns exactly 22 entries", async () => {
@@ -72,9 +72,9 @@ test("omniroute_agent_skills_list({category:'api'}) returns exactly 22 entries",
   assert.ok(result.skills.every((s: { category: string }) => s.category === "api"));
 });
 
-test("omniroute_agent_skills_list({category:'cli'}) returns exactly 20 entries", async () => {
+test("omniroute_agent_skills_list({category:'cli'}) returns exactly 19 entries", async () => {
   const result = await agentSkillTools.omniroute_agent_skills_list.handler({ category: "cli" });
-  assert.equal(result.count, 20, `Expected 20 cli skills but got ${result.count}`);
+  assert.equal(result.count, 19, `Expected 19 cli skills but got ${result.count}`);
   assert.ok(result.skills.every((s: { category: string }) => s.category === "cli"));
 });
 
@@ -91,7 +91,7 @@ test("omniroute_agent_skills_list result includes coverage shape", async () => {
   assert.ok(typeof result.coverage.cli === "object");
   assert.ok(typeof result.coverage.config === "object");
   assert.equal(result.coverage.api.total, 22);
-  assert.equal(result.coverage.cli.total, 20);
+  assert.equal(result.coverage.cli.total, 19);
   assert.equal(result.coverage.config.total, 1);
   assert.ok(typeof result.coverage.totalSkills === "number");
   assert.ok(typeof result.coverage.generatedAt === "string");
@@ -191,12 +191,12 @@ test("omniroute_agent_skills_coverage({}) returns coverage shape", async () => {
   assert.ok(typeof result.cli === "object");
   assert.ok(typeof result.config === "object");
   assert.equal(result.api.total, 22);
-  assert.equal(result.cli.total, 20);
+  assert.equal(result.cli.total, 19);
   assert.equal(result.config.total, 1);
   assert.ok(typeof result.api.have === "number");
   assert.ok(typeof result.cli.have === "number");
   assert.ok(result.api.have >= 0 && result.api.have <= 22);
-  assert.ok(result.cli.have >= 0 && result.cli.have <= 20);
+  assert.ok(result.cli.have >= 0 && result.cli.have <= 19);
   assert.ok(result.config.have >= 0 && result.config.have <= 1);
   assert.ok(typeof result.totalSkills === "number");
   assert.equal(result.totalSkills, result.api.have + result.cli.have + result.config.have);

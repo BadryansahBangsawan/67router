@@ -24,7 +24,6 @@ Comparáid oibiachtúil gnéithe le ródairí AI foinse oscailte coitianta.
 | **Prótacal A2A**                                                  |                ✅ 6 scileanna                 |           ❌           |          ❌          |    ❌     |
 | **Cuimhne (FTS5 + veicteoir)**                                    |                      ✅                       |           ❌           |          ❌          |    ❌     |
 | **Railingí cosanta (PII, instealladh, fisic)**                    |                      ✅                       |       páirteach        |          ❌          | ✅ íoctha |
-| **Comhtháthuithe gníomhairí néil**                                |          Codex, Cursor, Devin, Jules          |           ❌           |          ❌          |    ❌     |
 | **Bristeoir ciorcaid in aghaidh an tsoláthraí**                   |       ✅ 3-stát, aisghabháil leisciúil        |        bunúsach        |          ❌          |    ✅     |
 | **Folachán méarlorga TLS (JA3/JA4)**                              |                  ✅ wreq-js                   |           ❌           |          ❌          |    ❌     |
 | **Creat measúnaithe**                                             |                  ✅ ionsuite                  |           ❌           |          ❌          | ⚠ íoctha  |

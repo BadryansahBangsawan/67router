@@ -588,7 +588,6 @@ Radar-ში მონაწილეობა ნებაყოფლობი
 - **🔑 მარშრუტიზაციის მართვა თითო გასაღებზე** — მიამაგრეთ API-გასაღები ერთ მოდელს ან კომბოს `forcedModel`-ით და დაამატეთ ან წაშალეთ გასაღების მოდელები და კომბოები ატომურად (`/api/keys/{id}/access`). → [API მითითება](docs/reference/API_REFERENCE.md) · [OpenAPI](docs/openapi.yaml)
 - **🛡️ PII-ის უფრო წვრილმანი მართვა** — შერჩევა ტიპების მიხედვით, 20-მდე ვალიდირებული მორგებული დამალვის შაბლონი და აღმოჩენის მთვლელები ტიპების მიხედვით; თავად დამალვა რჩება არჩევითად (opt-in). → [Guardrails](docs/security/GUARDRAILS.md)
 - **🌍 67 ენა** — დაშბორდი, დოკუმენტაციის სარკეები და CLI, სადაც `npm run i18n:add-locale` ერთი ბრძანებით ყველგან ამატებს ენას. → [i18n გზამკვლევი](docs/guides/I18N.md)
-- **🎛️ OmniConductor** — შემომავალი A2A დელეგირება თქვენს აგენტთა ფლოტში, Conductor-ის უნარები Agent Card-ზე და დაშბორდის პანელი Faro push-to-talk ხმოვანი ჩატით. → [A2A სერვერი](docs/frameworks/A2A-SERVER.md)
 - **🛂 ადაპტური მიღება და გადატვირთვისგან დაცვა** — მძიმე ჩატის მოთხოვნები 503 შეცდომის დაბრუნების ნაცვლად რიგში დგება, ატომური RPM მოძრავი იჯარებით (rolling leases) თითო კავშირზე. → [გამძლეობის გზამკვლევი](docs/architecture/RESILIENCE_GUIDE.md)
 - **🗂️ `/v1/models`-ის კანონიკური დალაგება** — თითო პროვაიდერისთვის ერთი უწყვეტი, პროვაიდერებით დაჯგუფებული ბლოკი (კომბოები პირველებია მიმაგრებული), სტაბილური ყველა კატალოგის წყაროზე. → [API მითითება](docs/reference/API_REFERENCE.md)
 - **🗜️ შეკუმშვის გაძლიერება** — ნაგულისხმევად ჩართული ინფლაციის დამცავი, Caveman პაკეტები DE / FR / JA + ჩინური (wényán) ენებისთვის, RTK ფილტრები Gradle-სა და .NET-ისთვის. → [შეკუმშვა](docs/compression/COMPRESSION_ENGINES.md)
@@ -907,7 +906,6 @@ omniroute contexts use default            # ← ადგილობრივ �
   <tr><td align="left" nowrap>🧰 <b>MCP (stdio)</b></td><td align="left" nowrap><code>omniroute --mcp</code></td><td align="left">Claude Desktop-თან, Cursor-თან ან ნებისმიერ MCP კლიენტთან დაკავშირება</td></tr>
   <tr><td align="left" nowrap>🌊 <b>MCP (HTTP)</b></td><td align="left" nowrap><code>/api/mcp/stream</code></td><td align="left">დისტანციური MCP — <b>110 ინსტრუმენტი</b>, 33 წვდომის სფერო (აღსრულება სურვილისამებრ), სრული აუდიტის ჟურნალი</td></tr>
   <tr><td align="left" nowrap>📡 <b>MCP (SSE)</b></td><td align="left" nowrap><code>/api/mcp/sse</code></td><td align="left">MCP-ის ნაკადური ტრანსპორტი</td></tr>
-  <tr><td align="left" nowrap>🤝 <b>A2A</b></td><td align="left" nowrap><code>/.well-known/agent.json</code></td><td align="left">აგენტებს შორის კომუნიკაცია, <b>JSON-RPC 2.0</b> + SSE, 6 უნარი</td></tr>
   <tr><td align="left" nowrap>🌐 <b>REST API</b></td><td align="left" nowrap><code>/v1/*</code></td><td align="left">OpenAI-სთან თავსებადი — ჩატი, ვექტორული წარმოდგენები, სურათები, აუდიო, OCR</td></tr>
   <tr><td align="left" nowrap>🔔 <b>ვებჰუკები</b></td><td align="left" nowrap><code>/api/webhooks</code></td><td align="left">მოთხოვნების / კვოტის მოვლენების გაგზავნა Slack-ში, Discord-ში, Telegram-ში ან ნებისმიერ URL-ზე</td></tr>
   <tr><td align="left" nowrap>🛰️ <b>დისტანციური CLI</b></td><td align="left" nowrap><code>omniroute connect <host></code></td><td align="left">დისტანციური ინსტანციის მართვა შეზღუდული წვდომის ტოკენებით</td></tr>
@@ -917,8 +915,6 @@ omniroute contexts use default            # ← ადგილობრივ �
 # მიეცით Claude Code-ს 67router-ის ინსტრუმენტების სრული ნაკრები MCP-ის მეშვეობით:
 claude mcp add-server omniroute --type http --url http://localhost:20128/api/mcp/stream
 ```
-
-<sub>📖 [MCP სერვერი](docs/frameworks/MCP-SERVER.md) · [A2A სერვერი](docs/frameworks/A2A-SERVER.md) · [აგენტების პროტოკოლები](docs/frameworks/AGENT_PROTOCOLS_GUIDE.md)</sub>
 
 <br/>
 
@@ -1384,7 +1380,6 @@ OMNIROUTE_SKIP_POSTINSTALL=1 npm install -g omniroute   # CI=1-იც გამ�
   <tr><td nowrap><b><a href="open-sse/mcp-server/README.md">MCP სერვერი</a></b></td><td>110 MCP-ინსტრუმენტი, IDE-ის კონფიგურაციები, Python/TS/Go კლიენტები</td></tr>
   <tr><td nowrap><b><a href="docs/frameworks/MCP-SERVER.md">MCP სერვერის სახელმძღვანელო</a></b></td><td>MCP-ის ინსტალაცია, ტრანსპორტები და ინსტრუმენტების ცნობარი</td></tr>
   <tr><td nowrap><b><a href="src/lib/a2a/README.md">A2A სერვერი</a></b></td><td>JSON-RPC 2.0 პროტოკოლი, უნარები, ნაკადური გადაცემა, ამოცანების მართვა</td></tr>
-  <tr><td nowrap><b><a href="docs/frameworks/A2A-SERVER.md">A2A სერვერის სახელმძღვანელო</a></b></td><td>A2A აგენტის ბარათი, ამოცანები, უნარები და ნაკადური გადაცემა</td></tr>
 </table>
 
 ### 📋 პროექტი და ხარისხი

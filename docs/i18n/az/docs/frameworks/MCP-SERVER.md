@@ -244,17 +244,6 @@ Yuxarıdakı MCP alət inventarı (`countUniqueMcpTools()` tərəfindən hesabla
 icra vaxtı marşrutlaşdırma/keşləmə/sıxılma/yaddaş/bacarıqlar/proksi/kontekst-mənbə əməliyyatları ilə məhdudlaşdırılıb. İki əlaqəli
 freymvörk v3.8.0 versiyasında MCP serveri ilə birlikdə təqdim olunur və ayrıca sənədləşdirilir:
 
-### Bulud Agentləri
-
-Bulud Agentləri LLM provayderləri üçün istifadə olunan eyni bağlantı modeli vasitəsilə
-67router-a qoşulan, prosesdənkənar AI kodlaşdırma agentləridir (codex-cloud, cursor-cloud, devin, jules). Onlar
-öz REST səthləri (`/api/v1/agents/*`) vasitəsilə təqdim olunur və MCP alət kataloqunun bir hissəsi **deyil**
-— Bulud Agentinin çağırılması MCP əhatə dairəsini sərf etmir.
-
-- Reallaşdırma: `src/lib/cloudAgent/` (`registry.ts`, `agents/codex.ts`, `agents/cursor.ts`, `agents/devin.ts`, `agents/jules.ts`).
-- Həyat dövrü: `createTask`, `getStatus`, `approvePlan`, `sendMessage`, `listSources`.
-- Sənədləşdirmə: [docs/frameworks/CLOUD_AGENT.md](./CLOUD_AGENT.md).
-
 ### Qoruyucu Mexanizmlər
 
 Qoruyucu mexanizmlər söhbət emalı xətti daxilində tətbiq olunan icradan əvvəlki/sonrakı filtrlərdir (vision-bridge, pii-masker, prompt-injection).

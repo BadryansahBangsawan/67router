@@ -128,13 +128,11 @@ v3.8.0 പ്ലാറ്റ്ഫോമിനായുള്ള കാനോന
 - `/dashboard/limits` — ക്വോട്ട/നിരക്ക് നിയന്ത്രണങ്ങൾ
 - `/dashboard/cli-tools` — CLI ഓൺബോർഡിംഗ്, റൺടൈം കണ്ടെത്തൽ, കോൺഫിഗറേഷൻ സൃഷ്ടിക്കൽ
 - `/dashboard/agents` — കണ്ടെത്തിയ ACP ഏജന്റുകൾ + ഇഷ്ടാനുസൃത ഏജന്റ് രജിസ്ട്രേഷൻ
-- `/dashboard/cloud-agents` — ക്ലൗഡ്-ഹോസ്റ്റഡ് ഏജന്റ് ടാസ്കുകളും (Codex Cloud, Devin, Jules) ടാസ്ക് ലൈഫ്സൈക്കിളും
 - `/dashboard/skills` — A2A സ്കിൽ രജിസ്ട്രി, സാൻഡ്ബോക്സ് എക്സിക്യൂഷൻ, ബിൽറ്റ്-ഇൻ സ്കിൽ കാറ്റലോഗ്
 - `/dashboard/memory` — സ്ഥിരമായ സംഭാഷണ മെമ്മറിയുടെ പരിശോധനയും വീണ്ടെടുക്കലും
 - `/dashboard/webhooks` — ഔട്ട്ബൗണ്ട് വെബ്ഹുക്ക് സബ്സ്ക്രിപ്ഷനുകൾ, സീക്രട്ട് റൊട്ടേഷൻ, റീട്രൈ സ്ഥിതിവിവരക്കണക്കുകൾ
 - `/dashboard/batch` — ബാച്ച് ജോബ് സമർപ്പണവും പുരോഗതിയും
 - `/dashboard/cache` — റീഡ്-ത്രൂ, റീസണിംഗ് കാഷ് സ്ഥിതിവിവരക്കണക്കുകൾ, ഇവിക്ഷൻ നിയന്ത്രണങ്ങൾ
-- `/dashboard/playground` — കോൺഫിഗർ ചെയ്തിട്ടുള്ള ഏത് കോംബോ/മോഡലുമായും സംവദിക്കാവുന്ന ഇന്ററാക്ടീവ് ചാറ്റ് പ്ലേഗ്രൗണ്ട്
 - `/dashboard/changelog` — ആപ്പിനുള്ളിലെ ചേഞ്ച്ലോഗ് വ്യൂവർ (`CHANGELOG.md` റെൻഡർ ചെയ്യുന്നു)
 - `/dashboard/system` — റൺടൈം ഡയഗ്നോസ്റ്റിക്സ്, പതിപ്പ് വിവരങ്ങൾ, എൻവയോൺമെന്റ് വാലിഡേഷൻ പ്രതലം
 - `/dashboard/onboarding` — പുതിയ ഇൻസ്റ്റാളേഷനുകൾക്കായുള്ള ആദ്യ-റൺ സജ്ജീകരണ വിസാർഡ്
@@ -252,7 +250,6 @@ flowchart LR
 - ബജറ്റ്: `src/app/api/usage/budget` (GET/POST)
 - ഫാൾബാക്ക് ശൃംഖലകൾ: `src/app/api/fallback/chains` (GET/POST/DELETE)
 - പാലന ഓഡിറ്റ്: `src/app/api/compliance/audit-log` (GET, പേജിനേഷനും ഘടനാബദ്ധമായ മെറ്റാഡാറ്റയും സഹിതം)
-- മൂല്യനിർണ്ണയങ്ങൾ: `src/app/api/evals` (GET/POST), `src/app/api/evals/[suiteId]` (GET)
 - നയങ്ങൾ: `src/app/api/policies` (GET/POST)
 - സമന്വയ ടോക്കണുകൾ: `src/app/api/sync/tokens` (GET/POST), `src/app/api/sync/tokens/[id]` (GET/DELETE)
 - കോൺഫിഗറേഷൻ ബണ്ടിൽ: `src/app/api/sync/bundle` (GET, ക്രമീകരണങ്ങൾ/പ്രൊവൈഡറുകൾ/കോംബോകൾ/കീകൾ എന്നിവയുടെ ETag-പതിപ്പിട്ട സ്നാപ്പ്ഷോട്ട്)
@@ -316,7 +313,6 @@ flowchart LR
 - ഫെച്ച് ടൈംഔട്ട്: `src/shared/utils/fetchTimeout.ts`
 - റിക്വസ്റ്റ് ടെലിമെട്രി: `src/shared/utils/requestTelemetry.ts`
 - കംപ്ലയൻസ്/ഓഡിറ്റ്: `src/lib/compliance/index.ts`
-- ഇവാൽ റണ്ണർ: `src/lib/evals/evalRunner.ts`
 - ഡൊമെയ്ൻ സ്റ്റേറ്റ് പെർസിസ്റ്റൻസ്: `src/lib/db/domainState.ts` — ഫാൾബാക്ക് ചെയിനുകൾ, ബജറ്റുകൾ, ചെലവ് ചരിത്രം, ലോക്ക്ഔട്ട് സ്റ്റേറ്റ്, സർക്യൂട്ട് ബ്രേക്കറുകൾ എന്നിവയ്ക്കായുള്ള SQLite CRUD
 
 OAuth പ്രൊവൈഡർ മൊഡ്യൂളുകൾ (`src/lib/oauth/providers/` എന്നതിനു കീഴിലുള്ള 27 വ്യക്തിഗത ഫയലുകൾ):
@@ -382,23 +378,6 @@ OAuth പ്രൊവൈഡർ മൊഡ്യൂളുകൾ (`src/lib/oauth/pr
 
 അൽഗോരിതവുമായി ബന്ധപ്പെട്ട പൂർണ്ണ വിശദാംശങ്ങൾക്ക് (ഘടക ഫോർമുലകൾ, വെയിറ്റ് ട്യൂണിംഗ്),
 [`docs/routing/AUTO-COMBO.md`](../routing/AUTO-COMBO.md) കാണുക.
-
-### B. Cloud Agents
-
-മൂന്നാം കക്ഷി ഹോസ്റ്റ് ചെയ്ത കോഡ്-ഏജന്റ് പ്ലാറ്റ്ഫോമുകളെ (Codex Cloud, Devin,
-Jules) ഏകീകൃതവും DB പിന്തുണയുള്ളതുമായ ടാസ്ക് ലൈഫ്സൈക്കിളിന് പിന്നിൽ Cloud Agents പൊതിയുന്നു. എല്ലാ ടാസ്ക് സൃഷ്ടിക്കൽ/പരിശോധന
-എൻഡ്പോയിന്റുകൾക്കും മാനേജ്മെന്റ് ഓതന്റിക്കേഷൻ ആവശ്യമാണ്.
-
-- മൊഡ്യൂൾ റൂട്ട്: `src/lib/cloudAgent/` (`baseAgent.ts`, `registry.ts`, `api.ts`,
-  `types.ts`, `db.ts`, കൂടാതെ `agents/`-ന് കീഴിലുള്ള ഓരോ ഏജന്റിനുമുള്ള ഉപഡയറക്ടറികൾ)
-- ഓരോ ഏജന്റിനുമുള്ള ഇംപ്ലിമെന്റേഷനുകൾ: `agents/codex/`, `agents/devin/`, `agents/jules/`
-- പൊതു എൻഡ്പോയിന്റുകൾ: `/api/v1/agents/tasks/*` (പട്ടികപ്പെടുത്തൽ/സൃഷ്ടിക്കൽ/ലഭ്യമാക്കൽ/റദ്ദാക്കൽ)
-- മാനേജ്മെന്റ് എൻഡ്പോയിന്റുകൾ: `/api/cloud/*` (പ്രൊവിഷനിംഗ്, നില, ബാച്ച്)
-- ഡാഷ്ബോർഡ്: `/dashboard/cloud-agents`
-- സംഭരണം: `cloud_agent_tasks` പട്ടിക
-
-ഓരോ ഏജന്റിനുമുള്ള പ്രൊവിഷനിംഗിന്റെയും OAuth-ന്റെയും വിശദാംശങ്ങൾക്ക്,
-[`docs/frameworks/CLOUD_AGENT.md`](../frameworks/CLOUD_AGENT.md) കാണുക.
 
 ### C. Guardrails
 

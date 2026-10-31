@@ -241,26 +241,6 @@ claude mcp add-server omniroute --type http --url http://localhost:20128/api/mcp
 
 **முழுமையான MCP ஆவணம்:** [MCP Server README](../../open-sse/mcp-server/README.md) — 110 கருவிகள், IDE உள்ளமைவுகள், Python/TS/Go கிளையண்டுகள்.
 
-### A2A அமைப்பு (Agent-to-Agent Protocol)
-
-Agent Card-ஐச் சரிபார்க்கவும்:
-
-```bash
-curl http://localhost:20128/.well-known/agent.json
-```
-
-ஒரு பணியை அனுப்பவும்:
-
-```bash
-curl -X POST http://localhost:20128/a2a \
-  -H 'content-type: application/json' \
-  -d '{"jsonrpc":"2.0","id":"quickstart","method":"message/send","params":{"skill":"quota-management","messages":[{"role":"user","content":"Give me a short quota summary."}]}}'
-```
-
-**முழுமையான A2A ஆவணம்:** [A2A Server README](../../src/lib/a2a/README.md) — JSON-RPC 2.0, திறன்கள், ஸ்ட்ரீமிங், பணி வாழ்க்கைச் சுழற்சி.
-
----
-
 ## காலக்கெடு உள்ளமைவு
 
 ### அடிப்படை காலக்கெடுக்கள்

@@ -4,7 +4,6 @@
 
 ---
 
-> **Kaynak:** `src/lib/{a2a,acp,cloudAgent}/`, `src/app/api/{a2a,acp,cloud}/`, `src/app/api/v1/agents/`
 > **Son güncelleme:** 2026-06-28 — v3.8.40
 
 67router, ajanlarla ilgili üç farklı arayüz sunar. İlk bakışta benzer görünseler de farklı sorunları çözerler. Doğru olanı seçmek için bu sayfayı kullanın.
@@ -20,52 +19,6 @@
 Bu üçü birbirinden bağımsızdır — istediğiniz herhangi bir alt kümeyi seçebilirsiniz.
 
 ## Karar Ağacı
-
-```
-Bu makinenin dışında iş yapmak için bir bulut hizmetine (Codex Cloud / Cursor Cloud / Devin / Jules) ihtiyacınız var mı?
-├─ EVET → Bulut Ajanları (POST /api/v1/agents/tasks)
-└─ HAYIR → Devam edin
-    │
-    A2A kullanan ve iş birliği yapmak isteyen bir eş ajanınız var mı?
-    ├─ EVET → A2A (POST /a2a)
-    └─ HAYIR → Devam edin
-        │
-        Yerel olarak yüklü CLI kodlama ajanlarını listelemeniz / yapılandırmanız gerekiyor mu?
-        ├─ EVET → ACP (GET /api/acp/agents)
-        └─ HAYIR → Standart /v1/chat/completions kullanın
-```
-
-## 1. A2A — Ajandan Ajana
-
-**Standart:** [A2A v0.3](https://a2a-protocol.org)
-**67router uç noktası:** `POST /a2a` (JSON-RPC 2.0)
-**Ajan Kartı:** `GET /.well-known/agent.json`
-
-### Ne zaman kullanılmalı?
-
-- 67router'un eşlerden biri olduğu çok ajanlı bir sistem oluştururken
-- 67router'un yönlendirme zekâsını (akıllı yönlendirme, kota yönetimi vb.) Google ADK gibi çerçevelerdeki veya genel ajan ağlarındaki ajanlara sunarken
-- 67router'u standart bir keşif + çağırma arayüzünün arkasında sarmalarken
-
-### Yöntemler
-
-- `message/send` — bir mesaj gönderir ve eşzamanlı yanıt alır
-- `message/stream` — mesaj gönderir ve SSE ile aktarılan ilerleme olaylarını alır
-- `tasks/get` — görevi kimliğine göre okur
-- `tasks/cancel` — çalışan bir görevi iptal eder
-
-### Yerleşik beceriler (6)
-
-- `smart-routing` — bir istemi en uygun kombinasyon üzerinden yönlendirir
-- `quota-management` — sağlayıcı başına kota durumunu bildirir
-- `provider-discovery` — yüklü sağlayıcıları yetenekleriyle birlikte listeler
-- `cost-analysis` — bir isteğin/görüşmenin maliyetini tahmin eder
-- `health-report` — sağlayıcı başına devre kesici/bekleme/kilitleme durumunu toplu olarak bildirir
-- `list-capabilities` — ajanın kullanılabilir becerilerini ve meta verilerini sıralar
-
-### Ayrıntılı inceleme
-
-Aktarım ayrıntıları, ajan kartı yapısı, görev TTL yapılandırması ve yeni beceriler ekleme şablonu için [A2A-SERVER.md](./A2A-SERVER.md) belgesine bakın.
 
 ## 2. ACP — CLI Ajanları Kayıt Defteri
 
@@ -119,86 +72,7 @@ POST için gövde yapısı (`src/app/api/acp/agents/route.ts` içindeki `customA
 
 - HTTP kayıt defteri görev kabul etmez veya süreç başlatma işlevini kullanıma sunmaz. Dahili yönetici kayıtlı bir CLI'ı başlatabilir ancak otomatik sağlayıcı yedeği olarak bağlanmamıştır. Sıradan etkileşimli kullanım için yapılandırılmış CLI'ı kendiniz başlatın veya `omniroute run` kullanın.
 
-## 3. Bulut Aracıları
-
-**67router uç noktaları:** `/api/v1/agents/tasks/*` (yaşam döngüsü) + `/api/cloud/*` (altyapı)
-**Kaynak:** `src/lib/cloudAgent/`
-
-### Nedir?
-
-Üçüncü taraf bulut kodlama aracıları üzerinde birleşik bir arayüzdür. Bir istem + depo URL'si gönderirsiniz; 67router bunu doğru bulut aracısına iletir, durumu yoklar ve sonuçları döndürür.
-
-### Desteklenen aracılar (3, tümü `src/lib/cloudAgent/agents/` içinde doğrulanmıştır)
-
-- `codex-cloud` — OpenAI Codex Cloud
-- `devin` — Cognition Devin
-- `jules` — Google Jules
-
-### Yaşam döngüsü
-
-```
-POST /api/v1/agents/tasks
-  → Aracı sınıfı başına BaseAgent.createTask()
-  → harici hizmet çalışmaya başlar
-  → DB'de görev satırı oluşturulur (cloud_agent_tasks)
-  ↓
-GET /api/v1/agents/tasks/[id]
-  → sağlayıcıdan tembel durum eşitlemesi
-  → mevcut durumu + planı + etkinlik günlüğünü döndürür
-  ↓
-POST /api/v1/agents/tasks/[id]   (eylem: "approve" | "message" | "cancel")
-  → sağlayıcıya iletir (veya yerel olarak iptal edildi şeklinde işaretler)
-  ↓
-DELETE /api/v1/agents/tasks/[id]
-  → yerel iptal
-```
-
-### Kimlik doğrulama
-
-⚠️ **Tüm `/api/v1/agents/tasks/*` uç noktaları yönetim kimlik doğrulaması gerektirir** (`588a0333` kaydı). Yalnızca Bearer kullanan çağrılar, v3.8.0 sürümünden beri 401 yanıtı alır.
-
-### Ayrıntılı inceleme
-
-`CloudAgentBase` sözleşmesi, aracıya özgü ayrıntılar, şema detayları ve kimlik bilgileri altyapısı uç noktaları için [CLOUD_AGENT.md](./CLOUD_AGENT.md) dosyasına bakın.
-
-## Karşılaştırma: A2A ve Cloud Agents
-
-Her ikisi de "uzun süren görevler" sunar, ancak farklı katmanlarda:
-
-| Unsur                   | A2A                                                                                               | Cloud Agents                                        |
-| ----------------------- | ------------------------------------------------------------------------------------------------- | --------------------------------------------------- |
-| Standart                | Açık A2A v0.3                                                                                     | 67router'a özgü                                     |
-| İşlemin çalıştığı yer   | 67router içinde (yapılandırılmış kombinasyonları kullanır)                                        | Harici (Codex / Devin / Jules sunucuları)           |
-| Görev süresi            | Varsayılan TTL 5 dk. (`TaskManager` içinde yapılandırılabilir)                                    | Dakikalardan saatlere                               |
-| Depo bilgisine sahip mi | Hayır (yalnızca istemleri iletir)                                                                 | Evet (depo URL'si + dal)                            |
-| Kullanım alanı          | Ajanlar arası iş birliği, hizmet olarak akıllı yönlendirme                                        | "Y deposunda X özelliğini uygula" görevini devretme |
-| Kimlik doğrulama        | `/a2a` için isteğe bağlı `OMNIROUTE_API_KEY`; `/api/a2a/*` REST yardımcıları için yönetim erişimi | Her zaman yönetim erişimi                           |
-
 ## Entegrasyon Örnekleri
-
-### 67router'un A2A yeteneklerini keşfetme
-
-```bash
-curl http://localhost:20128/.well-known/agent.json
-```
-
-Tüm 6 beceriyi, aktarım yöntemlerini ve sürümü içeren Ajan Kartı'nı döndürür.
-
-### 67router'u bir A2A ajanı olarak çağırma
-
-```bash
-curl -X POST http://localhost:20128/a2a \
-  -H "Content-Type: application/json" \
-  -d '{
-    "jsonrpc": "2.0",
-    "method": "message/send",
-    "params": {
-      "messages": [{"role": "user", "content": "Bu istemi yönlendir"}],
-      "skill": "smart-routing"
-    },
-    "id": 1
-  }'
-```
 
 ### ACP aracılığıyla yüklü CLI ajanlarını listeleme
 
@@ -221,30 +95,6 @@ curl -X POST http://localhost:20128/api/acp/agents \
     "versionCommand": "--version",
     "providerAlias": "openai"
   }'
-```
-
-### Bir Cloud Agent görevi gönderme
-
-```bash
-curl -X POST http://localhost:20128/api/v1/agents/tasks \
-  -H "Cookie: auth_token=..." \
-  -H "Content-Type: application/json" \
-  -d '{
-    "providerId": "devin",
-    "prompt": "Y deposunda X özelliğini uygula",
-    "source": {
-      "repoName": "user/repo",
-      "repoUrl": "https://github.com/user/repo",
-      "branch": "main"
-    }
-  }'
-```
-
-### Bulut görevinin durumunu düzenli olarak sorgulama
-
-```bash
-curl http://localhost:20128/api/v1/agents/tasks/<task-id> \
-  -H "Cookie: auth_token=..."
 ```
 
 ## Hangisi Ne Zaman Kullanılmalı?
@@ -277,8 +127,6 @@ curl http://localhost:20128/api/v1/agents/tasks/<task-id> \
 
 ## Ayrıca Bkz.
 
-- [A2A-SERVER.md](./A2A-SERVER.md) — A2A hakkında ayrıntılı inceleme
-- [CLOUD_AGENT.md](./CLOUD_AGENT.md) — Bulut Ajanları hakkında ayrıntılı inceleme
 - [CLI-TOOLS.md](../reference/CLI-TOOLS.md) — Harici CLI entegrasyonları (ACP kullanır)
 - [SKILLS.md](./SKILLS.md) — Yetenekler çerçevesi (A2A yeteneklerinden farklıdır — yerel yürütme korumalı alanı)
 - [API_REFERENCE.md](../reference/API_REFERENCE.md#agents-protocol) — uç nokta referansı

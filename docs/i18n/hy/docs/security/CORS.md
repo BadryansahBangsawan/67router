@@ -68,20 +68,6 @@ OWASP-ի ընդհանուր նախազգուշացումը («համընդհան
 որը այլ սկզբնաղբյուրի էջը չի կարող տրամադրել։ Ընդհանուր CORS ուղու վրա սա **չի** հանդիսանում աշխատաշրջանի զավթման կամ
 հավաստագրերի գողության ուղի։
 
-### Մեկ իրական բացառություն — `/api/v1/agents/`
-
-Cloud-Agent-ի երթուղիները (`/api/v1/agents/{health,credentials,tasks,tasks/[id]}`) սահմանում են
-իրենց **սեփական** CORS վերնագրերը
-(`src/lib/cloudAgent/api.ts`, `getCloudAgentCorsHeaders`) և **ուղարկում են**
-`Access-Control-Allow-Origin: <origin>|*`-ը՝
-`Access-Control-Allow-Credentials: true`-ի հետ միասին։ Սա միակ մակերեսն է, որտեղ
-սկզբնաղբյուրի հետուղարկումն ու հավաստագրերը համատեղվում են, և այն **կախված չէ
-`CORS_ALLOW_ALL`-ից**։ Այս երթուղիները կառավարման նույնականացում են պահանջում
-(`requireManagementAuth`)․ այն օպերատորները, որոնք կառավարման վահանակը հասանելի են դարձնում հոսթից դուրս, պետք է
-իմանան, որ սա միակ տեղն է, որտեղ պատասխանի վերնագրերը թույլ են տալիս այլ սկզբնաղբյուրից հավաստագրված ընթերցում։
-Այն ճշգրիտ թույլատրված ցանկով սահմանափակելը հետևվում է
-CORS-ի այս ուղեցույցից առանձին։
-
 ## Արտադրական միջավայրի ստուգացանկ
 
 - **Արտադրական միջավայրում երբեք մի սահմանեք `CORS_ALLOW_ALL=true`։** Թողեք այն չսահմանված։
@@ -160,7 +146,6 @@ Security ներդիրում), այլ ոչ թե proxy-ում։
 | Կատարման միջավայրի վիճակը վահանակի համար                       | `src/app/api/settings/authz-inventory/route.ts`                      |
 | Վահանակի նախազգուշական ազդագիր                                 | `src/app/(dashboard)/dashboard/settings/components/AuthzSection.tsx` |
 | CORS Allowed Origins դաշտ                                      | `src/app/(dashboard)/dashboard/settings/components/SecurityTab.tsx`  |
-| Cloud-Agent-ի՝ ըստ երթուղու CORS-ը (բացառությունը)             | `src/lib/cloudAgent/api.ts`                                          |
 
 ## Տես նաև
 

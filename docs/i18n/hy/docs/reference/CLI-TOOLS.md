@@ -706,7 +706,6 @@ omniroute cache                        # Քեշի կարգավիճակ
 omniroute cache clear                  # Մաքրել իմաստային և ստորագրությունների քեշերը
 
 omniroute mcp status | restart         # MCP սերվերի կարգավիճակ / վերագործարկում
-omniroute a2a status | card            # A2A սերվերի կարգավիճակ / գործակալի քարտ
 
 omniroute tunnel list | create | stop  # Թունելների կառավարում (cloudflare/tailscale/ngrok)
 omniroute env show | get <k> | set <k> <v>  # Միջավայրի փոփոխականների դիտում / սահմանում (ժամանակավոր)

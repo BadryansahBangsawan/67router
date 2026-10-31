@@ -588,7 +588,6 @@ Radar hoạt động theo cơ chế chọn tham gia và chỉ sử dụng GET. �
 - **🔑 Điều khiển định tuyến theo từng key** — ghim một API key vào một mô hình hoặc combo bằng `forcedModel`, và thêm hoặc xóa mô hình và combo của một key một cách nguyên tử (`/api/keys/{id}/access`). → [Tham chiếu API](docs/reference/API_REFERENCE.md) · [OpenAPI](docs/openapi.yaml)
 - **🛡️ Kiểm soát PII tinh vi hơn** — lựa chọn theo từng loại, tối đa 20 mẫu che dữ liệu tùy chỉnh đã được xác thực và bộ đếm phát hiện theo từng loại; bản thân việc che dữ liệu vẫn là tùy chọn bật. → [Guardrails](docs/security/GUARDRAILS.md)
 - **🌍 67 ngôn ngữ** — dashboard, bản sao tài liệu và CLI, với `npm run i18n:add-locale` thêm một ngôn ngữ ở mọi nơi chỉ bằng một lệnh. → [Hướng dẫn i18n](docs/guides/I18N.md)
-- **🎛️ OmniConductor** — ủy quyền A2A đến cho đội agent của bạn, các kỹ năng Conductor trên Agent Card và một bảng điều khiển dashboard với trò chuyện thoại nhấn-để-nói Faro. → [Máy chủ A2A](docs/frameworks/A2A-SERVER.md)
 - **🛂 Tiếp nhận thích ứng & bảo vệ quá tải** — các yêu cầu trò chuyện hạng nặng xếp hàng thay vì trả 503, với lease luân chuyển RPM nguyên tử theo từng kết nối. → [Hướng dẫn khả năng phục hồi](docs/architecture/RESILIENCE_GUIDE.md)
 - **🗂️ Thứ tự chuẩn của `/v1/models`** — một khối liền mạch được nhóm theo provider cho mỗi provider (các combo được ghim trước), ổn định trên mọi nguồn catalog. → [Tham chiếu API](docs/reference/API_REFERENCE.md)
 - **🗜️ Gia cố nén** — guard chống phình bật mặc định, gói Caveman cho DE / FR / JA + tiếng Trung (wényán), bộ lọc RTK cho Gradle & .NET. → [Nén](docs/compression/COMPRESSION_ENGINES.md)
@@ -605,7 +604,7 @@ Radar hoạt động theo cơ chế chọn tham gia và chỉ sử dụng GET. �
 - **🖼️ Endpoint mới** — `/v1/ocr` (Mistral OCR) và `/v1/audio/translations` (kiểu Whisper) hoàn thiện bề mặt media. → [Tham chiếu API](docs/reference/API_REFERENCE.md)
 - **🎨 Tạo hình ảnh / video / âm thanh** — một API cho media: video xAI Grok Imagine & Novita AI, ComfyUI, Magnific, Adobe Firefly, Segmind và các provider giọng nói như ElevenLabs. → [Tham chiếu API](docs/reference/API_REFERENCE.md)
 - **🌍 Triển khai & vận hành** — `basePath` reverse-proxy, tự động phát hiện ngôn ngữ trình duyệt, theo dõi thiết bị theo từng key, tin cậy MITM không cần root, bản địa hóa zh-TW. → [Môi trường](docs/reference/ENVIRONMENT.md)
-- **🤝 Nhiều provider & agent hơn** — agent đám mây (Codex Cloud, Cursor, Devin, Jules), Grok Build (xAI) với đăng nhập bằng trình duyệt + OAuth, card hạng nhất cho Ollama, Claude Opus 5 & Sonnet 5, quan hệ đối tác chính thức với Kimi (Code/Web/Moonshot), Zed, Requesty, SenseNova, Yuanbao, Agnes AI… và **danh mục 375 provider** được làm mới. → [Provider](docs/reference/PROVIDER_REFERENCE.md)
+- **🤝 Nhiều provider & agent hơn** — agent đám mây (Codex Cloud, Cursor, Devin, Jules), Grok Build (xAI) với đăng nhập bằng trình duyệt + OAuth, card hạng nhất cho Ollama, Claude Opus 5 & Sonnet 5, quan hệ đối tác chính thức với Kimi (Code/Web/Moonshot), Zed, Requesty, SenseNova, Yuanbao, Agnes AI… và **danh mục 372 provider** được làm mới. → [Provider](docs/reference/PROVIDER_REFERENCE.md)
 - **📡 Minh bạch định tuyến** — mọi phản hồi mang header `X-OmniRoute-Decision` nêu tên chiến lược/provider/độ trễ đã phục vụ nó, một chiến lược combo `cache-optimized` mới + yếu tố `cacheAffinity` của Auto-Combo định tuyến các yêu cầu lặp lại về kết nối đang giữ prefix đã cache, và endpoint chỉ đọc `/v1/auto-combo/{channel}/candidates` hiển thị pool ứng viên trực tiếp của kênh `auto/*`. → [Auto-Combo](docs/routing/AUTO-COMBO.md)
 - **⚡ Hiệu năng & hạ tầng cục bộ** — Redis cục bộ một cú nhấp, trình triển khai relay Cloudflare Workers / Deno Deploy, Bifrost & Mux dưới dạng dịch vụ nhúng được giám sát. → [Dịch vụ nhúng](docs/frameworks/EMBEDDED-SERVICES.md)
 - **🧩 Còn có trong gói** — khung plugin + marketplace, các khung kỹ năng Omni/Agent/GitHub, tích hợp Obsidian vault (22 công cụ MCP), API Batch & Files tương thích OpenAI, bộ nhớ đệm phản hồi ngữ nghĩa, trò chơi hóa với bảng xếp hạng, khám phá tác nhân ACP (15 tác nhân tích hợp sẵn), xuất log theo lịch lên BigQuery, `auto/chaos` fan-out song song đa mô hình, cầu nối bot Telegram, trình quản lý phiên bản trong ứng dụng và bảng xếp hạng nhà cung cấp miễn phí theo LMArena-ELO. → [Tài liệu](docs/README.md)
@@ -907,7 +906,6 @@ Cung cấp 67router qua **MCP**, **A2A**, **REST API**, **webhook** hoặc **CLI
   <tr><td align="left" nowrap>🧰 <b>MCP (stdio)</b></td><td align="left" nowrap><code>omniroute --mcp</code></td><td align="left">Tích hợp với Claude Desktop, Cursor hoặc bất kỳ máy khách MCP nào</td></tr>
   <tr><td align="left" nowrap>🌊 <b>MCP (HTTP)</b></td><td align="left" nowrap><code>/api/mcp/stream</code></td><td align="left">MCP từ xa — <b>110 công cụ</b>, 33 phạm vi (tùy chọn bật thực thi), nhật ký kiểm tra đầy đủ</td></tr>
   <tr><td align="left" nowrap>📡 <b>MCP (SSE)</b></td><td align="left" nowrap><code>/api/mcp/sse</code></td><td align="left">Phương thức truyền tải MCP dạng streaming</td></tr>
-  <tr><td align="left" nowrap>🤝 <b>A2A</b></td><td align="left" nowrap><code>/.well-known/agent.json</code></td><td align="left">Tác nhân với tác nhân, <b>JSON-RPC 2.0</b> + SSE, 6 kỹ năng</td></tr>
   <tr><td align="left" nowrap>🌐 <b>REST API</b></td><td align="left" nowrap><code>/v1/*</code></td><td align="left">Tương thích với OpenAI — chat, embedding, hình ảnh, âm thanh, OCR</td></tr>
   <tr><td align="left" nowrap>🔔 <b>Webhook</b></td><td align="left" nowrap><code>/api/webhooks</code></td><td align="left">Đẩy các sự kiện yêu cầu / hạn ngạch đến Slack, Discord, Telegram hoặc bất kỳ URL nào</td></tr>
   <tr><td align="left" nowrap>🛰️ <b>CLI từ xa</b></td><td align="left" nowrap><code>omniroute connect <host></code></td><td align="left">Điều khiển một phiên bản từ xa bằng token truy cập có phạm vi</td></tr>
@@ -917,8 +915,6 @@ Cung cấp 67router qua **MCP**, **A2A**, **REST API**, **webhook** hoặc **CLI
 # Cung cấp cho Claude Code toàn bộ bộ công cụ 67router qua MCP:
 claude mcp add-server omniroute --type http --url http://localhost:20128/api/mcp/stream
 ```
-
-<sub>📖 [Máy chủ MCP](docs/frameworks/MCP-SERVER.md) · [Máy chủ A2A](docs/frameworks/A2A-SERVER.md) · [Giao thức tác nhân](docs/frameworks/AGENT_PROTOCOLS_GUIDE.md)</sub>
 
 <br/>
 
@@ -1381,7 +1377,6 @@ Số liệu chuẩn vào 2026-10-18: **1.976 video duy nhất** · **20.220.289 
   <tr><td nowrap><b><a href="open-sse/mcp-server/README.md">Máy chủ MCP</a></b></td><td>110 công cụ MCP, cấu hình IDE, client Python/TS/Go</td></tr>
   <tr><td nowrap><b><a href="docs/frameworks/MCP-SERVER.md">Hướng dẫn máy chủ MCP</a></b></td><td>Cài đặt MCP, phương thức truyền tải và tài liệu tham khảo công cụ</td></tr>
   <tr><td nowrap><b><a href="src/lib/a2a/README.md">Máy chủ A2A</a></b></td><td>Giao thức JSON-RPC 2.0, kỹ năng, truyền phát, quản lý tác vụ</td></tr>
-  <tr><td nowrap><b><a href="docs/frameworks/A2A-SERVER.md">Hướng dẫn máy chủ A2A</a></b></td><td>Thẻ tác nhân A2A, tác vụ, kỹ năng và truyền phát</td></tr>
 </table>
 
 ### 📋 Dự án & Chất lượng

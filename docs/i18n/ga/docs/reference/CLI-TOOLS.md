@@ -748,7 +748,6 @@ omniroute cache                        # Stádas na taisce
 omniroute cache clear                  # Glan taiscí séimeantacha + sínithe
 
 omniroute mcp status | restart         # Stádas / atosú fhreastalaí MCP
-omniroute a2a status | card            # Stádas fhreastalaí A2A / cárta gníomhaire
 
 omniroute tunnel list | create | stop  # Bainistigh tolláin (cloudflare/tailscale/ngrok)
 omniroute env show | get <k> | set <k> <v>  # Scrúdaigh / socraigh athróga timpeallachta (sealadach)

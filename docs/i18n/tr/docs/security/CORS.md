@@ -44,10 +44,6 @@ Genel OWASP uyarısını ("wildcard CORS = herhangi bir site API'nizi çağırab
 
 Dolayısıyla `CORS_ALLOW_ALL=true` ayarından kaynaklanan **artık** risk şunlarla sınırlıdır: (a) zaten kimlik doğrulaması gerektirmeyen verilerin, kimlik bilgileri içermeyen origin'ler arası **okumaları** ve (b) yönetim route'larında CORS **preflight isteğinin geçmesine** izin verilmesi — bu route'lar yine de origin'ler arası bir sayfanın sağlayamayacağı kimlik doğrulamasını gerektirir. Paylaşılan CORS yolunda bu, bir session ele geçirme veya kimlik bilgisi çalma vektörü **değildir**.
 
-### Gerçek bir istisna — `/api/v1/agents/`
-
-Cloud-Agent route'ları (`/api/v1/agents/{health,credentials,tasks,tasks/[id]}`) **kendi** CORS header'larını ayarlar (`src/lib/cloudAgent/api.ts`, `getCloudAgentCorsHeaders`) ve `Access-Control-Allow-Origin: <origin>|*` ile birlikte `Access-Control-Allow-Credentials: true` değerini **gönderir**. Bu, origin yansıtma ile kimlik bilgilerinin bir arada bulunduğu tek yüzeydir ve **`CORS_ALLOW_ALL` ayarından bağımsızdır**. Bu route'larda yönetim kimlik doğrulaması kullanılır (`requireManagementAuth`); dashboard'u host dışından erişime açan operatörler, yanıt header'larının origin'ler arası ve kimlik bilgileri içeren bir okumaya izin verdiği tek yerin burası olduğunu bilmelidir. Bunun açık bir izin listesiyle sınırlandırılması, bu CORS kılavuzundan ayrı olarak takip edilmektedir.
-
 ## Üretim kontrol listesi
 
 - **Üretimde asla `CORS_ALLOW_ALL=true` ayarlamayın.** Ayarlanmamış olarak bırakın.
@@ -130,7 +126,6 @@ Güvenlik sekmesi) ayarlayın.
 | Kontrol paneli için çalışma zamanı durumu                   | `src/app/api/settings/authz-inventory/route.ts`                      |
 | Kontrol paneli uyarı banner'ı                               | `src/app/(dashboard)/dashboard/settings/components/AuthzSection.tsx` |
 | İzin Verilen CORS Origin'leri alanı                         | `src/app/(dashboard)/dashboard/settings/components/SecurityTab.tsx`  |
-| Cloud-Agent rota başına CORS (istisna)                      | `src/lib/cloudAgent/api.ts`                                          |
 
 ## Ayrıca bakınız
 

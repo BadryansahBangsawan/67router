@@ -43,8 +43,6 @@ De cyclus v3.7.x → v3.8.0 voegde automatische routering zonder configuratie, n
 - 🤝 **GitLab Duo OAuth-provider** — aanmelden met GitLab-inloggegevens
 - 🧠 **Reasoning Replay Cache** — hybride persistentie van redeneertraces in het geheugen en SQLite
 
-📚 **Gerelateerde documentatie:** [Skills-framework](../frameworks/SKILLS.md) · [Geheugensysteem](../frameworks/MEMORY.md) · [Cloudagents](../frameworks/CLOUD_AGENT.md) · [Webhooks](../frameworks/WEBHOOKS.md) · [Reasoning Replay Cache](../routing/REASONING_REPLAY.md)
-
 ---
 
 ## 🔌 Providers
@@ -104,12 +102,6 @@ Realtimebewaking van uptime, geheugen, versie, latentiepercentielen (p50/p95/p99
 Vier modi voor het debuggen van API-vertalingen: **Playground** (formaatconverter), **Chat Tester** (liveverzoeken), **Test Bench** (batchtests) en **Live Monitor** (realtimestream).
 
 ![Translator Playground](../screenshots/05-translator.png)
-
----
-
-## 🎮 Model Playground _(v2.0.9+)_
-
-Test elk model rechtstreeks vanuit het dashboard. Selecteer de provider, het model en het endpoint, schrijf prompts met Monaco Editor, stream reacties in realtime, breek halverwege de stream af en bekijk timingstatistieken.
 
 ---
 

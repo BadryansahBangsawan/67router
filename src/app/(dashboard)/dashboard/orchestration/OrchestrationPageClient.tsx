@@ -23,7 +23,7 @@ const TABS = ["agents", "routing", "overview", "history"] as const;
 type Tab = (typeof TABS)[number];
 
 const VALID_STATES: ReadonlySet<OrchState> = new Set(ORCH_STATES);
-const VALID_SOURCES: ReadonlySet<OrchSource> = new Set(["cloud-agent", "a2a", "conductor"]);
+const VALID_SOURCES: ReadonlySet<OrchSource> = new Set(["a2a", "conductor"]);
 
 const TAB_KEY: Record<Tab, string> = {
   agents: "tabAgents",

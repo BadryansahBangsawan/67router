@@ -573,5 +573,4 @@ De routeringsengine heeft strikte prestatiebudgetten:
 - [REPOSITORY_MAP.md](../architecture/REPOSITORY_MAP.md) — overzicht per directory
 - [AUTO-COMBO.md](../routing/AUTO-COMBO.md) — scoring op basis van 16 factoren
 - [MCP-SERVER.md](./MCP-SERVER.md) — MCP-server
-- [A2A-SERVER.md](./A2A-SERVER.md) — A2A-server
 - Bron: `open-sse/` (400+ bestanden, ~143K regels code)

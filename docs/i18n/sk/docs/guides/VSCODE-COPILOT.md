@@ -91,7 +91,7 @@ pridajte ich do `blockedProviders` v nastaveniach ovládacieho panela; v rozší
 Simple Browser namiesto externého prehliadača. Vkladanie je **na serveri voliteľné** prostredníctvom
 `DASHBOARD_ALLOW_EMBED=vscode`, čo zabezpečí poskytovanie stránok HTML s
 `frame-ancestors 'self' vscode-webview:` namiesto predvoleného `frame-ancestors 'none'` +
-`X-Frame-Options: DENY`. Rozhrania API (`/api`, `/v1`, `/v1beta`, `/a2a`, `/healthz`) si v oboch
+`X-Frame-Options: DENY`. Rozhrania API (`/api`, `/v1`, `/v1beta`, `/healthz`) si v oboch
 prípadoch zachovávajú prísne hlavičky.
 
 > ⚠️ **Ide o príznak nastavený pri zostavení, nie počas behu.** Next.js skompiluje `headers()` do manifestu

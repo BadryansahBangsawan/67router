@@ -24,7 +24,6 @@ Comparação objetiva de funcionalidades face a routers de IA open-source popula
 | **Protocolo A2A**                                            |                   ✅ 6 skills                   |          ❌           |        ❌         |      ❌      |
 | **Memória (FTS5 + vetorial)**                                |                       ✅                        |          ❌           |        ❌         |      ❌      |
 | **Guardrails (PII, injeção, visão)**                         |                       ✅                        |        parcial        |        ❌         |   ✅ pago    |
-| **Integrações com agentes na cloud**                         |           Codex, Cursor, Devin, Jules           |          ❌           |        ❌         |      ❌      |
 | **Circuit breaker por fornecedor**                           |         ✅ 3 estados, recuperação lazy          |        básico         |        ❌         |      ✅      |
 | **Ofuscação de fingerprint TLS (JA3/JA4)**                   |                   ✅ wreq-js                    |          ❌           |        ❌         |      ❌      |
 | **Framework de avaliação**                                   |                  ✅ integrada                   |          ❌           |        ❌         |    ⚠ paga    |

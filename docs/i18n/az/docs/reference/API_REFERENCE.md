@@ -1360,9 +1360,8 @@ GET cavabına `agents[]` (id, name, binary, version, installed, protocol, isCust
 
 ### Qiymətləndirmələr
 
-| Endpoint     | Metod    | Təsvir                                                               |
-| ------------ | -------- | -------------------------------------------------------------------- |
-| `/api/evals` | GET/POST | Qiymətləndirmə paketlərini siyahıya alın / qiymətləndirməni başladın |
+| Endpoint | Metod | Təsvir |
+| -------- | ----- | ------ |
 
 ### Siyasətlər
 
@@ -1683,31 +1682,6 @@ Gündəlik/saatlıq kvotalarla təminatçı/hesab əsasında API açarlarını y
 
 ---
 
-## Agentlər Protokolu
-
-67router istifadəçiləri adından uzaqdan icra edilən bulud agenti tapşırıqları (Claude Code, Codex Cloud, OpenHands və s.).
-
-| Metod  | Yol                           | Təsvir                                                                                                                                               |
-| ------ | ----------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------- |
-| GET    | `/api/v1/agents/tasks`        | Tapşırıqları siyahıla — istəyə bağlı `?provider=`, `?status=`, `?limit=` (1–500, standart 50)                                                        |
-| POST   | `/api/v1/agents/tasks`        | Tapşırıq yarat — gövdə `CreateCloudAgentTaskSchema` (`providerId`, `prompt`, `source`, `options?`) ilə yoxlanılır. Tapşırıq zərfi ilə `201` qaytarır |
-| DELETE | `/api/v1/agents/tasks?id=...` | Tapşırığı sil                                                                                                                                        |
-| GET    | `/api/v1/agents/tasks/[id]`   | Tapşırığı oxu — `external_id` təyin edildikdə statusu yuxarı axındakı bulud agentindən sinxron şəkildə yeniləyir                                     |
-| POST   | `/api/v1/agents/tasks/[id]`   | Fərqləndirilən əməl: `{action: "approve"}`, `{action: "message", message}` və ya `{action: "cancel"}`                                                |
-| DELETE | `/api/v1/agents/tasks/[id]`   | Konkret tapşırığı id əsasında sil                                                                                                                    |
-
-> **Autentifikasiya:** hər metod üçün idarəetmə autentifikasiyası tələb olunur (`requireCloudAgentManagementAuth`). v3.8.0-dan əvvəl bunlar autentifikasiya tələb etmirdi — geriyə uyğunluğu pozan dəyişiklik üçün `588a0333` kommitinə baxın.
-
-```bash
-# Claude Code bulud tapşırığı yaradın
-curl -X POST http://localhost:20128/api/v1/agents/tasks \
-  -H "Authorization: Bearer your-management-key" \
-  -H "Content-Type: application/json" \
-  -d '{"providerId":"claude-code-cloud","prompt":"Fix the failing test","source":{"repo":"...","branch":"..."}}'
-```
-
----
-
 ## İdarəetmə Proksiləri
 
 Provayderlərə, hesablara və ya qlobal şəkildə təyin edilə bilən çıxış HTTP(S)/SOCKS proksiləri.
@@ -1827,48 +1801,10 @@ Hər API açarı / sessiya üzrə əhatə dairəsi müəyyən edilmiş davamlı 
 
 67router yoxlama və idarə panelində istifadə üçün A2A (Agent-to-Agent) JSON-RPC 2.0 son nöqtəsini və REST örtüyünü təqdim edir.
 
-### JSON-RPC
-
-```bash
-POST /a2a
-Authorization: Bearer your-api-key   # OMNIROUTE_API_KEY təyin edilməyibsə, istəyə bağlıdır
-Content-Type: application/json
-
-{
-  "jsonrpc": "2.0",
-  "id": 1,
-  "method": "message/send",
-  "params": {
-    "skill": "smart-routing",
-    "messages": [{"role": "user", "content": "Route this coding task"}]
-  }
-}
-```
-
-Dəstəklənən metodlar (hamısı `settings.a2aEnabled` ilə idarə olunur):
-
-| Metod            | Təsvir                                                         |
-| ---------------- | -------------------------------------------------------------- |
-| `message/send`   | Sinxron bacarıq icrası; `{task, artifacts, metadata}` qaytarır |
-| `message/stream` | Eyni bacarıq dəstinin SSE axınlı icrası                        |
-| `tasks/get`      | Tapşırığı `taskId` üzrə əldə edir                              |
-| `tasks/cancel`   | Tapşırığı `taskId` üzrə ləğv edir                              |
-
-Daxili bacarıqlar: `smart-routing`, `quota-management`, `provider-discovery`, `cost-analysis`, `health-report`.
-
-### Agent Kartı
-
-```bash
-GET /.well-known/agent.json
-```
-
-İctimai A2A agent kartını (ad, təsvir, imkanlar, bacarıq kataloqu, autentifikasiya sxemi) qaytarır — ictimai şəkildə 1 saat keşlənir. Autentifikasiya tələb olunmur.
-
 ### REST köməkçiləri
 
 | Metod | Yol                          | Təsvir                                                                                                                      |
 | ----- | ---------------------------- | --------------------------------------------------------------------------------------------------------------------------- |
-| GET   | `/api/a2a/status`            | A2A-nın aktivlik vəziyyəti + tapşırıq statistikası + keşlənmiş agent kartının xülasəsi                                      |
 | GET   | `/api/a2a/tasks`             | Tapşırıqları sadalayır — `?state=submitted\|working\|completed\|failed\|cancelled`, `?skill=`, `?limit=` (≤200), `?offset=` |
 | POST  | `/api/a2a/tasks`             | (REST köməkçisi kimi həyata keçirilməyib — JSON-RPC `message/send` vasitəsilə yaradın)                                      |
 | GET   | `/api/a2a/tasks/[id]`        | Bir tapşırığı əldə edir                                                                                                     |
@@ -1888,12 +1824,8 @@ GET /.well-known/agent.json
 | GET | `/api/cloud/models/alias` | Bulud sinxronizasiyasına təqdim edilən model aliaslarını sadalayır |
 | GET | `/api/assess` | Son qiymətləndirmə kateqoriyalarını oxuyur (hər provayder/model üzrə) |
 | POST | `/api/assess` | Qiymətləndirmə aparır — sorğu gövdəsi: `{scope: {type:"all"}                                                   | {type:"provider", providerId} | {type:"model", modelId}, trigger?}` |
-| GET | `/api/evals` | Daxili yoxlama dəstlərini və ən son icraları sadalayır |
-| POST | `/api/evals` | Yoxlama icrasını başladır |
-| POST | `/api/evals/suites` | Fərdi yoxlama dəsti yaradır — sorğu gövdəsi `evalSuiteSaveSchema` ilə doğrulanır |
-| GET | `/api/evals/suites/[id]` | Fərdi yoxlama dəstini əldə edir |
 
-**Autentifikasiya:** `/api/cloud/auth` Bearer açarını birbaşa doğrulayır və hər bağlantının maskalanmış açarı ilə `projectId` dəyərini yalnız `manage` / `admin` əhatə dairəsinə malik açar üçün qaytarır; digər `/api/cloud/*`, `/api/evals/*` və `/api/assess` marşrutları idarəetmə sessiyası/API açarı tələb edir. `/api/assess` POST diskriminasiya edilmiş birləşmə əhatə dairəsi sxemi ilə `validateBody` istifadə edir.
+**Autentifikasiya:** `/api/cloud/auth` Bearer açarını birbaşa doğrulayır və hər bağlantının maskalanmış açarı ilə `projectId` dəyərini yalnız `manage` / `admin` əhatə dairəsinə malik açar üçün qaytarır; digər `/api/cloud/*` və `/api/assess` marşrutları idarəetmə sessiyası/API açarı tələb edir. `/api/assess` POST diskriminasiya edilmiş birləşmə əhatə dairəsi sxemi ilə `validateBody` istifadə edir.
 
 ---
 
@@ -2215,5 +2147,3 @@ Dörd etimadnamə ailəsi (idarəetmə paneli sessiyası, lokal CLI tokeni, `oma
 - `requireLogin` parametri `/api/settings/require-login` vasitəsilə aktivləşdirilə və ya deaktivləşdirilə bilər
 - `REQUIRE_API_KEY=true` olduqda `/v1/*` marşrutları istəyə bağlı olaraq Bearer API açarı tələb edir
 - Bu arayışda "idarəetmə tokeni" / "idarəetmə əhatəli API açarı" həmin təlimatda göstərilən ailələrdən birini ifadə edir — ayrıca, müəyyən edilməmiş əlavə məxfi məlumat növünü deyil
-
-> **Uyğunluğu pozan dəyişiklik (v3.8.0)** — `/api/v1/agents/tasks/*` və gözləmə müddətinin idarə edilməsi son nöqtələri artıq **idarəetmə autentifikasiyası** (idarəetmə panelinin `auth_token` kukisi və ya idarəetmə əhatəli API açarı) tələb edir. Əvvəllər bu marşrutları autentifikasiya olmadan çağıran klientlər `401 Unauthorized` cavabı alacaqlar. `588a0333` kommitinə baxın (`fix(auth): require management auth for agent and cooldown APIs`).

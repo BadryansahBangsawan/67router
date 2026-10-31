@@ -488,7 +488,7 @@ Questo gestisce:
 
 | File                          | Scopo                                                     |
 | ----------------------------- | --------------------------------------------------------- |
-| `providerRegistry.ts`         | Registro dei modelli di chat sul catalogo di 375 provider |
+| `providerRegistry.ts`         | Registro dei modelli di chat sul catalogo di 372 provider |
 | `providerModels.ts`           | Alias dei modelli, mappatura dei formati                  |
 | `constants.ts`                | Timeout, limiti, codici di stato                          |
 | `defaultThinkingSignature.ts` | Firma di thinking predefinita di Claude                   |
@@ -573,5 +573,4 @@ Il motore di routing ha budget prestazionali rigorosi:
 - [REPOSITORY_MAP.md](../architecture/REPOSITORY_MAP.md) — descrizione directory per directory
 - [AUTO-COMBO.md](../routing/AUTO-COMBO.md) — punteggio basato su 16 fattori
 - [MCP-SERVER.md](./MCP-SERVER.md) — server MCP
-- [A2A-SERVER.md](./A2A-SERVER.md) — server A2A
 - Sorgente: `open-sse/` (oltre 400 file, ~143K righe di codice)

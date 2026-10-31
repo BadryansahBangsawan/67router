@@ -57,15 +57,6 @@
 ਪਹਿਲਾਂ ਹੀ ਗੈਰ-ਪ੍ਰਮਾਣਿਤ ਡਾਟੇ ਨੂੰ ਬਿਨਾਂ ਕ੍ਰੈਡੈਂਸ਼ਲਾਂ ਦੇ ਕ੍ਰਾਸ-ਓਰਿਜਨ **ਪੜ੍ਹਨਾ**, ਅਤੇ (b)
 ਮੈਨੇਜਮੈਂਟ ਰੂਟਾਂ 'ਤੇ CORS **ਪ੍ਰੀਫਲਾਈਟ ਨੂੰ ਪਾਸ ਹੋਣ ਦੇਣਾ** — ਜਿਨ੍ਹਾਂ ਲਈ ਫਿਰ ਵੀ ਅਜਿਹੇ ਪ੍ਰਮਾਣੀਕਰਨ ਦੀ ਲੋੜ ਹੁੰਦੀ ਹੈ ਜੋ ਕੋਈ ਕ੍ਰਾਸ-ਓਰਿਜਨ ਪੰਨਾ ਪ੍ਰਦਾਨ ਨਹੀਂ ਕਰ ਸਕਦਾ। ਇਹ ਸਾਂਝੇ CORS ਪਾਥ ਉੱਤੇ ਸੈਸ਼ਨ-ਹਾਈਜੈਕ ਜਾਂ ਕ੍ਰੈਡੈਂਸ਼ਲ-ਚੋਰੀ ਦਾ ਸਾਧਨ **ਨਹੀਂ** ਹੈ।
 
-### ਇੱਕ ਅਸਲ ਅਪਵਾਦ — `/api/v1/agents/`
-
-Cloud-Agent ਰੂਟ (`/api/v1/agents/{health,credentials,tasks,tasks/[id]}`) ਆਪਣੇ **ਖੁਦ ਦੇ** CORS ਹੈਡਰ ਸੈੱਟ ਕਰਦੇ ਹਨ
-(`src/lib/cloudAgent/api.ts`, `getCloudAgentCorsHeaders`) ਅਤੇ
-`Access-Control-Allow-Origin: <origin>|*` ਦੇ ਨਾਲ
-`Access-Control-Allow-Credentials: true` ਵੀ **ਭੇਜਦੇ ਹਨ**। ਇਹ ਉਹ ਇਕੱਲਾ ਸਰਫੇਸ ਹੈ ਜਿੱਥੇ
-ਮੂਲ-ਈਕੋ ਅਤੇ ਕ੍ਰੈਡੈਂਸ਼ਲ ਇਕੱਠੇ ਮੌਜੂਦ ਹਨ, ਅਤੇ ਇਹ **`CORS_ALLOW_ALL` ਤੋਂ ਸੁਤੰਤਰ** ਹੈ। ਇਹ ਰੂਟ ਮੈਨੇਜਮੈਂਟ-ਪ੍ਰਮਾਣਿਤ ਹਨ
-(`requireManagementAuth`); ਜਿਹੜੇ ਓਪਰੇਟਰ ਡੈਸ਼ਬੋਰਡ ਨੂੰ ਹੋਸਟ ਤੋਂ ਬਾਹਰ ਉਪਲਬਧ ਕਰਦੇ ਹਨ, ਉਨ੍ਹਾਂ ਨੂੰ ਪਤਾ ਹੋਣਾ ਚਾਹੀਦਾ ਹੈ ਕਿ ਇਹ ਉਹ ਇੱਕੋ ਥਾਂ ਹੈ ਜਿੱਥੇ ਜਵਾਬ ਦੇ ਹੈਡਰ ਕ੍ਰਾਸ-ਓਰਿਜਨ ਕ੍ਰੈਡੈਂਸ਼ਲ-ਯੁਕਤ ਪੜ੍ਹਨ ਦੀ ਇਜਾਜ਼ਤ ਦਿੰਦੇ ਹਨ। ਇਸਨੂੰ ਇੱਕ ਸਪਸ਼ਟ ਮਨਜ਼ੂਰ-ਸੂਚੀ ਤੱਕ ਸੀਮਤ ਕਰਨ ਦਾ ਕੰਮ ਇਸ CORS ਮਾਰਗਦਰਸ਼ਨ ਤੋਂ ਵੱਖਰੇ ਤੌਰ 'ਤੇ ਟ੍ਰੈਕ ਕੀਤਾ ਜਾ ਰਿਹਾ ਹੈ।
-
 ## ਪ੍ਰੋਡਕਸ਼ਨ ਚੈੱਕਲਿਸਟ
 
 - **ਪ੍ਰੋਡਕਸ਼ਨ ਵਿੱਚ ਕਦੇ ਵੀ `CORS_ALLOW_ALL=true` ਸੈੱਟ ਨਾ ਕਰੋ।** ਇਸਨੂੰ ਸੈੱਟ ਕੀਤੇ ਬਿਨਾਂ ਛੱਡੋ।
@@ -143,7 +134,6 @@ location / {
 | ਡੈਸ਼ਬੋਰਡ ਲਈ ਰਨਟਾਈਮ ਸਥਿਤੀ                    | `src/app/api/settings/authz-inventory/route.ts`                      |
 | ਡੈਸ਼ਬੋਰਡ ਚੇਤਾਵਨੀ ਬੈਨਰ                       | `src/app/(dashboard)/dashboard/settings/components/AuthzSection.tsx` |
 | CORS Allowed Origins ਖੇਤਰ                   | `src/app/(dashboard)/dashboard/settings/components/SecurityTab.tsx`  |
-| Cloud-Agent ਪ੍ਰਤੀ-ਰੂਟ CORS (ਅਪਵਾਦ)          | `src/lib/cloudAgent/api.ts`                                          |
 
 ## ਇਹ ਵੀ ਵੇਖੋ
 

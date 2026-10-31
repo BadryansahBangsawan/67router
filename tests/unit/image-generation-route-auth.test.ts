@@ -21,7 +21,7 @@ const apiKeysDb = await import("../../src/lib/db/apiKeys.ts");
 const { getCallLogs } = await import("../../src/lib/usage/callLogs.ts");
 const imageRoute = await import("../../src/app/api/v1/images/generations/route.ts");
 const { createPlaygroundImageStreamResponse } =
-  await import("../../src/lib/playground/imageGenerationStream.ts");
+  await import("../../src/lib/images/imageGenerationStream.ts");
 const providerImageRoute =
   await import("../../src/app/api/v1/providers/[provider]/images/generations/route.ts");
 const v1ModelsCatalog = await import("../../src/app/api/v1/models/catalog.ts");

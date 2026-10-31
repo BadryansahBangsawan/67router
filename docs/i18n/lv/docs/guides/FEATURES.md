@@ -43,8 +43,6 @@ Cikls v3.7.x → v3.8.0 pievienoja automātisko maršrutēšanu bez konfigurāci
 - 🤝 **GitLab Duo OAuth nodrošinātājs** — pieteikšanās ar GitLab akreditācijas datiem
 - 🧠 **Reasoning Replay Cache** — pamatojuma izsekojumu hibrīda saglabāšana atmiņā un SQLite
 
-📚 **Saistītā dokumentācija:** [Skills Framework](../frameworks/SKILLS.md) · [Memory System](../frameworks/MEMORY.md) · [Cloud Agents](../frameworks/CLOUD_AGENT.md) · [Webhooks](../frameworks/WEBHOOKS.md) · [Reasoning Replay Cache](../routing/REASONING_REPLAY.md)
-
 ---
 
 ## 🔌 Pakalpojumu sniedzēji
@@ -106,12 +104,6 @@ Reāllaika uzraudzība: darbspējas laiks, atmiņa, versija, latentuma procentil
 Četri režīmi API tulkojumu atkļūdošanai: **Playground** (formāta pārveidotājs), **Chat Tester** (tiešie pieprasījumi), **Test Bench** (grupveida testi) un **Live Monitor** (reāllaika straume).
 
 ![Translator Playground](../screenshots/05-translator.png)
-
----
-
-## 🎮 Modeļu izmēģinājuma vide _(v2.0.9+)_
-
-Testējiet jebkuru modeli tieši vadības panelī. Atlasiet nodrošinātāju, modeli un galapunktu, rakstiet uzvednes ar Monaco Editor, straumējiet atbildes reāllaikā, pārtrauciet straumi tās laikā un skatiet laika mērījumus.
 
 ---
 

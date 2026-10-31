@@ -24,7 +24,6 @@
 - [ប្រព័ន្ធជំនាញ](#-skills-system)
 - [ប្រព័ន្ធអង្គចងចាំ](#-memory-system)
 - [Webhooks](#-webhooks)
-- [Cloud Agents](#-cloud-agents)
 - [ការគ្រប់គ្រងតាមកម្មវិធី](#-programmatic-management)
 - [CLI ផ្ទៃក្នុង](#-internal-cli)
 - [កម្មវិធីកុំព្យូទ័រលើតុ (Electron)](#-desktop-application-electron)
@@ -1239,8 +1238,6 @@ curl -X POST http://localhost:20128/v1/chat/completions \
 
 ### វិសាលភាព
 
-បច្ចុប្បន្ន MCP កំណត់វិសាលភាពដែលមានឈ្មោះចំនួន 32។ សោ Bearer នីមួយៗអាចត្រូវបានកំណត់ឱ្យប្រើតែវិសាលភាពជាក់លាក់ — សូមមើល [MCP-SERVER.md](../frameworks/MCP-SERVER.md) សម្រាប់បញ្ជីវិសាលភាព និងឧបករណ៍ផ្លូវការ និង [A2A-SERVER.md](../frameworks/A2A-SERVER.md) សម្រាប់គ្រោងការណ៍ JSON-RPC។
-
 ---
 
 ## 🧠 ប្រព័ន្ធជំនាញ
@@ -1249,7 +1246,6 @@ curl -X POST http://localhost:20128/v1/chat/completions \
 
 - **ចំណុចប្រទាក់ Marketplace** — រុករក និងដំឡើងជំនាញពី **Dashboard → Skills**
 - **វិសាលភាពតាម key នីមួយៗ** — កំណត់ថា API key ណាខ្លះអាចហៅប្រើជំនាញណាខ្លះ
-- **ជំនាញផ្ទាល់ខ្លួន** — ដាក់ឯកសារ TypeScript មួយក្នុង `src/lib/a2a/skills/` ចុះឈ្មោះវា ហើយវានឹងអាចត្រូវបានហៅប្រើភ្លាមៗតាមរយៈ A2A
 
 ឯកសារយោងពេញលេញ៖ [SKILLS.md](../frameworks/SKILLS.md)។
 
@@ -1278,18 +1274,6 @@ curl -X POST http://localhost:20128/v1/chat/completions \
 - ការព្យាយាមឡើងវិញ៖ ព្យាយាម 3 ដងជាមួយការពន្យារពេលកើនឡើងជាអិចស្ប៉ូណង់ស្យែល បន្ទាប់មកបញ្ជូនទៅជួរ dead-letter
 
 គ្រោងការណ៍ពេញលេញមាននៅក្នុង [WEBHOOKS.md](../frameworks/WEBHOOKS.md)។
-
----
-
-## ☁️ ភ្នាក់ងារ Cloud
-
-67router រួមបញ្ចូលជាមួយភ្នាក់ងារសរសេរកូដលើ cloud (**OpenAI Codex Cloud**, **Devin**, **Jules**, **Antigravity**) ដូច្នេះអ្នកអាចបញ្ជូនភារកិច្ចដែលដំណើរការរយៈពេលយូរពី dashboard ដូចគ្នាដែលគ្រប់គ្រងការបញ្ជូនផ្លូវក្នុងម៉ាស៊ីនរបស់អ្នក។
-
-- បង្កើតភារកិច្ចក្នុង **Dashboard → Cloud Agents** ឬតាមរយៈ `POST /api/v1/agents/tasks`
-- តាមដានស្ថានភាព កំណត់ហេតុ និងវត្ថុលទ្ធផលតាមភារកិច្ចនីមួយៗ
-- ប្រើ API key ផ្ទាល់ខ្លួនរបស់អ្នកសម្រាប់ provider នីមួយៗ — ព័ត៌មានសម្ងាត់មិនដែលចាកចេញពី instance របស់ 67router ទេ
-
-ឯកសារយោងពេញលេញ៖ [CLOUD_AGENT.md](../frameworks/CLOUD_AGENT.md)។
 
 ---
 
@@ -1346,7 +1330,6 @@ omniroute restore [<timestamp>]    # ស្ដារពីរូបថតចម�
 omniroute health                   # ព័ត៌មានសុខភាពលម្អិត (ឧបករណ៍ផ្ដាច់ cache អង្គចងចាំ)
 omniroute quota                    # ការប្រើប្រាស់កូតារបស់អ្នកផ្តល់សេវា
 omniroute mcp status               # ស្ថានភាពម៉ាស៊ីនមេ MCP
-omniroute a2a status               # ស្ថានភាពម៉ាស៊ីនមេ A2A
 omniroute tunnel list|create|stop  # ផ្លូវរូង Cloudflare/Tailscale/ngrok
 omniroute reset-password           # កំណត់ពាក្យសម្ងាត់អ្នកគ្រប់គ្រងឡើងវិញ
 omniroute --mcp                    # ចាប់ផ្ដើមម៉ាស៊ីនមេ MCP តាម stdio

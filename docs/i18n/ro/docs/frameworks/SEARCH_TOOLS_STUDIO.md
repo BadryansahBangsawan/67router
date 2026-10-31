@@ -170,5 +170,4 @@ A fost necesară o singură modificare de backend pentru această funcționalita
 - Plan principal: `_tasks/features-v3.8.6/refactorpages/_orchestration/master-plan-group-C.md`
 - Planul funcționalității: `_tasks/features-v3.8.6/refactorpages/18-search-tools-studio-redesign.plan.md`
 - Registrul furnizorilor de căutare: `open-sse/config/searchRegistry.ts`
-- Playground Studio (`ExportCodeModal` + `codeExport.ts` partajate): `docs/frameworks/PLAYGROUND_STUDIO.md`
 - Backend pentru preluarea conținutului web: `src/app/api/v1/web/fetch/route.ts`

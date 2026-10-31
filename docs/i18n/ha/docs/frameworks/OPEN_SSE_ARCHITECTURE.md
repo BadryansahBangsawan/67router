@@ -573,5 +573,4 @@ Injin bayar da hanya yana da tsauraran iyakokin aiki:
 - [REPOSITORY_MAP.md](../architecture/REPOSITORY_MAP.md) — bayani kan kowane directory
 - [AUTO-COMBO.md](../routing/AUTO-COMBO.md) — ƙididdiga mai abubuwa 16
 - [MCP-SERVER.md](./MCP-SERVER.md) — MCP server
-- [A2A-SERVER.md](./A2A-SERVER.md) — A2A server
 - Tushe: `open-sse/` (fayiloli 400+, ~143K LOC)

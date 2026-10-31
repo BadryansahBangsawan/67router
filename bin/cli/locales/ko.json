@@ -390,34 +390,6 @@
       "description": "MCP 감사 로그(audit --source mcp의 별칭)"
     }
   },
-  "a2a": {
-    "skills": {
-      "description": "에이전트 카드에서 사용 가능한 A2A 스킬 목록 표시"
-    },
-    "invoke": {
-      "description": "A2A 스킬을 호출하고 작업 ID 반환",
-      "input": "JSON 입력 객체",
-      "input_file": "JSON 입력 파일 경로",
-      "wait": "반환하기 전에 작업이 완료될 때까지 대기",
-      "timeout": "완료 대기 시간 제한(ms)(기본값: 60000)"
-    },
-    "tasks": {
-      "description": "A2A 작업 관리",
-      "list": {
-        "status": "상태별 필터링",
-        "skill": "스킬 ID별 필터링"
-      },
-      "watch": {
-        "description": "완료될 때까지 작업 상태 폴링"
-      },
-      "stream": {
-        "description": "SSE를 통해 작업 실행 이벤트 스트리밍"
-      },
-      "logs": {
-        "description": "작업 메시지 및 아티팩트 표시"
-      }
-    }
-  },
   "policy": {
     "description": "67router 권한 부여 정책 관리",
     "list": {
@@ -696,99 +668,6 @@
       "provider": "해지할 제공자 ID",
       "connection_id": "ID로 특정 연결 해지",
       "yes": "확인 프롬프트 건너뛰기"
-    }
-  },
-  "cloud": {
-    "description": "클라우드 AI 에이전트 작업 관리(codex, devin, jules)",
-    "agents": {
-      "description": "사용 가능한 클라우드 에이전트 목록 표시"
-    },
-    "agent": {
-      "description": "{agent} 클라우드 에이전트 작업 관리",
-      "auth": {
-        "description": "OAuth를 통해 {agent} 인증"
-      }
-    },
-    "task": {
-      "description": "클라우드 에이전트 작업 관리",
-      "create": {
-        "description": "새 에이전트 작업 생성",
-        "title": "작업 제목(기본값: 프롬프트의 처음 80자)",
-        "prompt": "작업 프롬프트 텍스트",
-        "prompt_file": "파일에서 프롬프트 읽기",
-        "repo": "작업용으로 복제할 저장소 URL",
-        "branch": "사용할 브랜치 이름",
-        "metadata": "JSON 메타데이터 객체"
-      },
-      "list": {
-        "description": "에이전트 작업 목록 표시",
-        "status": "상태별 필터링(running|completed|failed|cancelled)",
-        "limit": "최대 결과 수(기본값: 50)"
-      },
-      "get": {
-        "description": "ID로 작업 세부 정보 가져오기"
-      },
-      "status": {
-        "description": "작업 상태 출력(running|completed|failed|cancelled)"
-      },
-      "cancel": {
-        "description": "실행 중인 작업 취소",
-        "yes": "확인 프롬프트 건너뛰기"
-      },
-      "approve": {
-        "description": "실행을 시작하도록 에이전트 계획 승인"
-      },
-      "message": {
-        "description": "실행 중인 작업에 메시지 보내기"
-      }
-    },
-    "sources": {
-      "description": "작업에서 생성된 소스 파일 목록 표시"
-    }
-  },
-  "eval": {
-    "description": "평가 스위트 및 실행 관리",
-    "suites": {
-      "description": "평가 스위트 관리",
-      "list": {
-        "description": "평가 스위트 목록 보기"
-      },
-      "get": {
-        "description": "ID로 평가 스위트 세부 정보 가져오기"
-      },
-      "create": {
-        "description": "JSON 파일에서 평가 스위트 만들기",
-        "file": "스위트 정의 JSON 파일 경로"
-      }
-    },
-    "run": {
-      "description": "스위트에 대한 평가 실행 시작",
-      "model": "평가할 모델 ID(기본값: auto)",
-      "combo": "이름으로 특정 조합 강제 지정",
-      "concurrency": "동시 실행 샘플 수(기본값: 4)",
-      "tag": "나중에 필터링할 수 있도록 이 실행에 태그 지정",
-      "watch": "완료될 때까지 실행 진행 상황 확인"
-    },
-    "list": {
-      "description": "평가 실행 목록 보기",
-      "suite": "스위트 ID로 필터링",
-      "status": "상태로 필터링",
-      "since": "이 타임스탬프 이후의 실행 반환",
-      "limit": "최대 결과 수(기본값: 50)"
-    },
-    "get": {
-      "description": "ID로 평가 실행 세부 정보 가져오기"
-    },
-    "results": {
-      "description": "평가 실행의 샘플 결과 보기",
-      "failed": "실패한 샘플만 보기"
-    },
-    "cancel": {
-      "description": "실행 중인 평가 취소",
-      "yes": "확인 프롬프트 건너뛰기"
-    },
-    "scorecard": {
-      "description": "완료된 평가 실행의 스코어카드 보기"
     }
   },
   "program": {

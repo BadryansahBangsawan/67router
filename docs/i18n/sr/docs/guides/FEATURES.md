@@ -43,8 +43,6 @@ Ciklus v3.7.x → v3.8.0 doneo je automatsko rutiranje bez konfiguracije, nove p
 - 🤝 **GitLab Duo OAuth provajder** — prijava sa GitLab akreditivima
 - 🧠 **Reasoning Replay Cache** — hibridna memorijska + SQLite trajna memorija tragova rezonovanja
 
-📚 **Related docs:** [Skills Framework](../frameworks/SKILLS.md) · [Memory System](../frameworks/MEMORY.md) · [Cloud Agents](../frameworks/CLOUD_AGENT.md) · [Webhooks](../frameworks/WEBHOOKS.md) · [Reasoning Replay Cache](../routing/REASONING_REPLAY.md)
-
 ---
 
 ## 🔌 Провајдери
@@ -101,12 +99,6 @@ OpenRouter везе могу да чувају `preset` по вези у Advance
 Четири режима за дебагирање API превода: **Playground** (конвертор формата), **Chat Tester** (тестирање уживо), **Test Bench** (групно тестирање) и **Live Monitor** (праћење у реалном времену).
 
 ![Playground преводиоца](../screenshots/05-translator.png)
-
----
-
-## 🎮 Model Playground _(v2.0.9+)_
-
-Тестирајте било који модел директно из контролне табле. Изаберите добављача, модел и крајњу тачку, пишите упите (промптове) уз Monaco Editor, стримујте одговоре у реалном времену, прекините стриминг у ходу и прикажите метрике времена извршавања.
 
 ---
 

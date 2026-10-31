@@ -573,5 +573,4 @@ Il-magna tar-routing għandha baġits stretti tal-prestazzjoni:
 - [REPOSITORY_MAP.md](../architecture/REPOSITORY_MAP.md) — direttorju b’direttorju
 - [AUTO-COMBO.md](../routing/AUTO-COMBO.md) — punteġġ ibbażat fuq 16-il fattur
 - [MCP-SERVER.md](./MCP-SERVER.md) — server MCP
-- [A2A-SERVER.md](./A2A-SERVER.md) — server A2A
 - Sors: `open-sse/` (aktar minn 400 fajl, madwar 143K linja ta’ kodiċi)

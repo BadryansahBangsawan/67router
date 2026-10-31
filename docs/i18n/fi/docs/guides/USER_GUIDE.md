@@ -24,7 +24,6 @@ Kattava opas palveluntarjoajien määrittämiseen, yhdistelmien luomiseen, CLI-t
 - [Taitojärjestelmä](#-skills-system)
 - [Muistijärjestelmä](#-memory-system)
 - [Webhookit](#-webhooks)
-- [Pilviagentit](#-cloud-agents)
 - [Ohjelmallinen hallinta](#-programmatic-management)
 - [Sisäinen CLI](#-internal-cli)
 - [Työpöytäsovellus (Electron)](#-desktop-application-electron)
@@ -1240,8 +1239,6 @@ Käytä SSE-URL-osoitetta `http://localhost:20128/api/mcp/sse` ja Bearer-API-ava
 
 ### Käyttöoikeusalueet
 
-MCP määrittelee tällä hetkellä 32 nimettyä käyttöoikeusaluetta. Kukin Bearer-avain voidaan rajata tiettyihin käyttöoikeusalueisiin — kattava käyttöoikeusalueiden ja työkalujen luettelo on tiedostossa [MCP-SERVER.md](../frameworks/MCP-SERVER.md), ja JSON-RPC-skeema on tiedostossa [A2A-SERVER.md](../frameworks/A2A-SERVER.md).
-
 ---
 
 ## 🧠 Taitojärjestelmä
@@ -1250,7 +1247,6 @@ MCP määrittelee tällä hetkellä 32 nimettyä käyttöoikeusaluetta. Kukin Be
 
 - **Markkinapaikan käyttöliittymä** — Selaa ja asenna taitoja kohdassa **Hallintapaneeli → Taidot**
 - **Avainkohtaiset käyttöoikeudet** — Rajoita, mitkä API-avaimet voivat kutsua mitäkin taitoja
-- **Mukautetut taidot** — Lisää TypeScript-tiedosto hakemistoon `src/lib/a2a/skills/`, rekisteröi se, minkä jälkeen sitä voidaan kutsua välittömästi A2A:n kautta
 
 Täydellinen viite: [SKILLS.md](../frameworks/SKILLS.md).
 
@@ -1279,18 +1275,6 @@ Tilaa 67router-tapahtumia reaaliaikaista valvontaa ja automaatiota varten.
 - Uudelleenyritykset: 3 yritystä eksponentiaalisella viiveellä, minkä jälkeen tapahtuma siirretään käsittelemättömien viestien jonoon
 
 Täydellinen skeema on tiedostossa [WEBHOOKS.md](../frameworks/WEBHOOKS.md).
-
----
-
-## ☁️ Pilviagentit
-
-67router integroituu pilvipohjaisiin koodausagentteihin (**OpenAI Codex Cloud**, **Devin**, **Jules**, **Antigravity**), joten voit lähettää pitkäkestoisia tehtäviä samasta hallintapaneelista, jolla hallitset paikallista reititystä.
-
-- Luo tehtäviä kohdassa **Hallintapaneeli → Pilviagentit** tai käyttäen `POST /api/v1/agents/tasks`
-- Seuraa kunkin tehtävän tilaa, lokeja ja artefakteja
-- Käytä omaa API-avaintasi kullekin palveluntarjoajalle — tunnistetiedot eivät koskaan poistu 67router-instanssista
-
-Täydellinen viite: [CLOUD_AGENT.md](../frameworks/CLOUD_AGENT.md).
 
 ---
 
@@ -1347,7 +1331,6 @@ omniroute restore [<timestamp>]    # Palauta tilannevedoksesta
 omniroute health                   # Yksityiskohtaiset kuntotiedot (katkaisimet, välimuisti, muisti)
 omniroute quota                    # Palveluntarjoajien kiintiöiden käyttö
 omniroute mcp status               # MCP-palvelimen tila
-omniroute a2a status               # A2A-palvelimen tila
 omniroute tunnel list|create|stop  # Cloudflare-/Tailscale-/ngrok-tunnelit
 omniroute reset-password           # Nollaa järjestelmänvalvojan salasana
 omniroute --mcp                    # Käynnistä MCP-palvelin stdio-yhteydellä

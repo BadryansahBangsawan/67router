@@ -43,8 +43,6 @@ El ciclo v3.7.x → v3.8.0 incorporó enrutamiento automático sin configuració
 - 🤝 **Proveedor OAuth de GitLab Duo** — inicio de sesión con credenciales de GitLab
 - 🧠 **Caché de reproducción de razonamiento** — persistencia híbrida en memoria + SQLite de trazas de razonamiento
 
-📚 **Documentación relacionada:** [Marco de habilidades](../frameworks/SKILLS.md) · [Sistema de memoria](../frameworks/MEMORY.md) · [Agentes en la nube](../frameworks/CLOUD_AGENT.md) · [Webhooks](../frameworks/WEBHOOKS.md) · [Caché de reproducción de razonamiento](../routing/REASONING_REPLAY.md)
-
 ---
 
 ## 🔌 Proveedores
@@ -104,12 +102,6 @@ Supervisión en tiempo real: tiempo de actividad, memoria, versión, percentiles
 Cuatro modos para depurar traducciones de la API: **Área de pruebas** (conversor de formatos), **Probador de chat** (solicitudes en vivo), **Banco de pruebas** (pruebas por lotes) y **Monitor en vivo** (transmisión en tiempo real).
 
 ![Área de pruebas del traductor](../screenshots/05-translator.png)
-
----
-
-## 🎮 Área de pruebas de modelos _(v2.0.9+)_
-
-Prueba cualquier modelo directamente desde el panel. Selecciona el proveedor, el modelo y el endpoint, escribe prompts con Monaco Editor, transmite las respuestas en tiempo real, interrumpe la transmisión y consulta las métricas de tiempo.
 
 ---
 

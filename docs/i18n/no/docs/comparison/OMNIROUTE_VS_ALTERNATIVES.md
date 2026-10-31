@@ -24,7 +24,6 @@ Objektiv funksjonssammenligning mot populære AI-rutere med åpen kildekode.
 | **A2A-protokoll**                                  |               ✅ 6 ferdigheter               |        ❌        |        ❌         |     ❌     |
 | **Minne (FTS5 + vektor)**                          |                      ✅                      |        ❌        |        ❌         |     ❌     |
 | **Sikkerhetsbarrierer (PII, injeksjon, visjon)**   |                      ✅                      |      delvis      |        ❌         | ✅ betalt  |
-| **Skyagentintegrasjoner**                          |         Codex, Cursor, Devin, Jules          |        ❌        |        ❌         |     ❌     |
 | **Circuit breaker per tilbyder**                   |     ✅ 3-tilstand, utsatt gjenoppretting     |  grunnleggende   |        ❌         |     ✅     |
 | **Skjuling av TLS-fingeravtrykk (JA3/JA4)**        |                  ✅ wreq-js                  |        ❌        |        ❌         |     ❌     |
 | **Evalueringsrammeverk**                           |                 ✅ innebygd                  |        ❌        |        ❌         |  ⚠ betalt  |

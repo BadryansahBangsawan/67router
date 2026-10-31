@@ -43,8 +43,6 @@ Nagdagdag ang siklong v3.7.x → v3.8.0 ng zero-config na awtomatikong pagruruta
 - 🤝 **GitLab Duo OAuth provider** — mag-login gamit ang mga kredensyal ng GitLab
 - 🧠 **Reasoning Replay Cache** — hybrid na in-memory + SQLite persistence ng mga reasoning trace
 
-📚 **Mga kaugnay na dokumento:** [Framework ng Mga Skill](../frameworks/SKILLS.md) · [Sistema ng Memory](../frameworks/MEMORY.md) · [Mga Cloud Agent](../frameworks/CLOUD_AGENT.md) · [Mga Webhook](../frameworks/WEBHOOKS.md) · [Reasoning Replay Cache](../routing/REASONING_REPLAY.md)
-
 ---
 
 ## 🔌 Mga Provider
@@ -103,12 +101,6 @@ Real-time na pagsubaybay: uptime, memory, version, mga latency percentile (p50/p
 Apat na mode para sa pag-debug ng mga pagsasalin ng API: **Playground** (tagapag-convert ng format), **Chat Tester** (mga live na request), **Test Bench** (mga batch test), at **Live Monitor** (real-time na stream).
 
 ![Translator Playground](../screenshots/05-translator.png)
-
----
-
-## 🎮 Model Playground _(v2.0.9+)_
-
-Subukan ang anumang model nang direkta mula sa dashboard. Piliin ang provider, model, at endpoint, magsulat ng mga prompt gamit ang Monaco Editor, mag-stream ng mga tugon nang real-time, ihinto habang nagsi-stream, at tingnan ang mga sukatan ng oras.
 
 ---
 

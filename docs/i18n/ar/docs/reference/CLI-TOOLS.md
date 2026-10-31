@@ -749,7 +749,6 @@ omniroute cache                        # حالة ذاكرة التخزين ال
 omniroute cache clear                  # مسح ذاكرات التخزين المؤقت الدلالية والخاصة بالتوقيعات
 
 omniroute mcp status | restart         # حالة خادم MCP / إعادة تشغيله
-omniroute a2a status | card            # حالة خادم A2A / بطاقة الوكيل
 
 omniroute tunnel list | create | stop  # إدارة الأنفاق (cloudflare/tailscale/ngrok)
 omniroute env show | get <k> | set <k> <v>  # فحص / تعيين متغيرات البيئة (مؤقتًا)

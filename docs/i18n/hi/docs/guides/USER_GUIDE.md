@@ -24,7 +24,6 @@
 - [स्किल्स सिस्टम](#-skills-system)
 - [मेमोरी सिस्टम](#-memory-system)
 - [वेबहुक](#-webhooks)
-- [क्लाउड एजेंट](#-cloud-agents)
 - [प्रोग्रामेटिक प्रबंधन](#-programmatic-management)
 - [आंतरिक CLI](#-internal-cli)
 - [डेस्कटॉप एप्लिकेशन (Electron)](#-desktop-application-electron)
@@ -1235,8 +1234,6 @@ SSE URL `http://localhost:20128/api/mcp/sse` और **डैशबोर्ड �
 
 ### स्कोप
 
-MCP वर्तमान में 32 नामित स्कोप परिभाषित करता है। प्रत्येक Bearer कुंजी को विशिष्ट स्कोप तक सीमित किया जा सकता है — प्रामाणिक स्कोप और टूल सूची के लिए [MCP-SERVER.md](../frameworks/MCP-SERVER.md) और JSON-RPC स्कीमा के लिए [A2A-SERVER.md](../frameworks/A2A-SERVER.md) देखें।
-
 ---
 
 ## 🧠 स्किल्स सिस्टम
@@ -1245,7 +1242,6 @@ MCP वर्तमान में 32 नामित स्कोप परि
 
 - **मार्केटप्लेस UI** — **Dashboard → Skills** से स्किल्स ब्राउज़ और इंस्टॉल करें
 - **प्रति-कुंजी स्कोप** — निर्धारित करें कि कौन-सी API कुंजियाँ किन स्किल्स को कॉल कर सकती हैं
-- **कस्टम स्किल्स** — `src/lib/a2a/skills/` में एक TypeScript फ़ाइल जोड़ें, उसे रजिस्टर करें, और वह तुरंत A2A के माध्यम से कॉल करने योग्य बन जाती है
 
 पूर्ण संदर्भ: [SKILLS.md](../frameworks/SKILLS.md)।
 
@@ -1274,18 +1270,6 @@ MCP वर्तमान में 32 नामित स्कोप परि
 - पुनः प्रयास: एक्सपोनेंशियल बैकऑफ़ के साथ 3 प्रयास, उसके बाद डेड-लेटर कतार
 
 पूर्ण स्कीमा [WEBHOOKS.md](../frameworks/WEBHOOKS.md) में उपलब्ध है।
-
----
-
-## ☁️ क्लाउड एजेंट्स
-
-67router क्लाउड कोडिंग एजेंट्स (**OpenAI Codex Cloud**, **Devin**, **Jules**, **Antigravity**) के साथ एकीकृत होता है, ताकि आप उसी डैशबोर्ड से लंबे समय तक चलने वाले कार्य भेज सकें जो आपकी स्थानीय रूटिंग को संभालता है।
-
-- **Dashboard → Cloud Agents** में या `POST /api/v1/agents/tasks` के माध्यम से कार्य बनाएँ
-- प्रत्येक कार्य की स्थिति, लॉग्स और आर्टिफ़ैक्ट्स ट्रैक करें
-- प्रत्येक प्रोवाइडर के लिए अपनी API कुंजी उपयोग करें — क्रेडेंशियल्स कभी भी 67router इंस्टेंस से बाहर नहीं जाते
-
-पूर्ण संदर्भ: [CLOUD_AGENT.md](../frameworks/CLOUD_AGENT.md)।
 
 ---
 
@@ -1342,7 +1326,6 @@ omniroute restore [<timestamp>]    # स्नैपशॉट से पुन�
 omniroute health                   # विस्तृत स्वास्थ्य जानकारी (ब्रेकर, कैश, मेमोरी)
 omniroute quota                    # प्रोवाइडर कोटा उपयोग
 omniroute mcp status               # MCP सर्वर की स्थिति
-omniroute a2a status               # A2A सर्वर की स्थिति
 omniroute tunnel list|create|stop  # Cloudflare/Tailscale/ngrok टनल
 omniroute reset-password           # एडमिन पासवर्ड रीसेट करें
 omniroute --mcp                    # stdio पर MCP सर्वर शुरू करें

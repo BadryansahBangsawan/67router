@@ -8,11 +8,9 @@ import assert from "node:assert/strict";
 import {
   buildHistoryGrid,
   historyItemFromA2A,
-  historyItemFromCloudAgent,
   historyRangeFromPreset,
   type HistoryItem,
 } from "../../../src/app/(dashboard)/dashboard/orchestration/model/historyModel.ts";
-import type { CloudAgentTask } from "../../../src/lib/cloudAgent/types.ts";
 
 function ts(ms: number): string {
   return new Date(ms).toISOString();
@@ -70,53 +68,6 @@ describe("historyItemFromA2A", () => {
   });
 });
 
-describe("historyItemFromCloudAgent", () => {
-  function task(overrides: Partial<CloudAgentTask> = {}): CloudAgentTask {
-    return {
-      id: "ca1",
-      providerId: "devin",
-      status: "completed",
-      prompt: "do the thing",
-      source: { repoName: "r", repoUrl: "https://x" },
-      options: {},
-      activities: [],
-      createdAt: ts(0),
-      updatedAt: ts(1000),
-      completedAt: ts(1000),
-      ...overrides,
-    } as CloudAgentTask;
-  }
-
-  it("maps state via the STATE_MAP, keeps the cloud-agent: prefix, identity=providerId", () => {
-    const item = historyItemFromCloudAgent(task());
-    assert.equal(item.id, "cloud-agent:ca1");
-    assert.equal(item.source, "cloud-agent");
-    assert.equal(item.identity, "devin");
-    assert.equal(item.state, "succeeded");
-    assert.equal(item.durationMs, 1000);
-  });
-
-  it("truncates a long prompt for the label", () => {
-    const longPrompt = "x".repeat(80);
-    const item = historyItemFromCloudAgent(task({ prompt: longPrompt }));
-    assert.ok(item.label.length <= 60);
-    assert.ok(item.label.endsWith("…"));
-  });
-
-  it("durationMs is null without completedAt; cost reads result.cost when present", () => {
-    const item = historyItemFromCloudAgent(
-      task({ completedAt: undefined, result: { cost: 0.42 } as CloudAgentTask["result"] })
-    );
-    assert.equal(item.durationMs, null);
-    assert.equal(item.cost, 0.42);
-  });
-
-  it("unknown status falls back to failed", () => {
-    const item = historyItemFromCloudAgent(task({ status: "bogus" as CloudAgentTask["status"] }));
-    assert.equal(item.state, "failed");
-  });
-});
-
 describe("buildHistoryGrid", () => {
   const FROM = 0;
   const TO = 10_000;
@@ -169,16 +120,17 @@ describe("buildHistoryGrid", () => {
 
   it("groups by identity, keeping distinct sources with the same identity in separate rows", () => {
     const a2aItem = item({ id: "a2a:1", source: "a2a", identity: "shared", createdAt: ts(1000) });
-    const cloudItem = item({
-      id: "cloud-agent:1",
-      source: "cloud-agent",
+    // HistoryItem only carries "a2a" today; the grid still keys rows by (source, identity).
+    const otherItem = item({
+      id: "conductor:task:1",
+      source: "conductor" as never,
       identity: "shared",
       createdAt: ts(1000),
     });
-    const grid = buildHistoryGrid([a2aItem, cloudItem], { fromMs: FROM, toMs: TO }, 10);
+    const grid = buildHistoryGrid([a2aItem, otherItem], { fromMs: FROM, toMs: TO }, 10);
     assert.equal(grid.rows.length, 2);
     const sources = grid.rows.map((r) => r.source).sort();
-    assert.deepEqual(sources, ["a2a", "cloud-agent"]);
+    assert.deepEqual(sources, ["a2a", "conductor"]);
   });
 
   it("sorts items within a cell by createdAt", () => {

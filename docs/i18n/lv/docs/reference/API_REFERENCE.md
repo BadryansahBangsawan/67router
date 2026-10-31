@@ -1438,9 +1438,8 @@ GET atbildē ir iekļauti `agents[]` (id, name, binary, version, installed, prot
 
 ### Novērtējumi
 
-| Galapunkts   | Metode   | Apraksts                                             |
-| ------------ | -------- | ---------------------------------------------------- |
-| `/api/evals` | GET/POST | Uzskaitīt novērtējumu komplektus / veikt novērtēšanu |
+| Galapunkts | Metode | Apraksts |
+| ---------- | ------ | -------- |
 
 ### Politikas
 
@@ -1763,31 +1762,6 @@ Izmanto automātiskās atslēgu pārvaldības apakšsistēma, lai izsniegtu un r
 
 ---
 
-## Aģentu protokols
-
-Mākoņa aģentu uzdevumi (Claude Code, Codex Cloud, OpenHands u.c.), kas tiek attālināti izpildīti 67router lietotāju vārdā.
-
-| Metode | Ceļš                          | Apraksts                                                                                                                                          |
-| ------ | ----------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------- |
-| GET    | `/api/v1/agents/tasks`        | Uzdevumu saraksts — neobligāti `?provider=`, `?status=`, `?limit=` (1–500, pēc noklusējuma 50)                                                    |
-| POST   | `/api/v1/agents/tasks`        | Izveido uzdevumu — ķermeni validē `CreateCloudAgentTaskSchema` (`providerId`, `prompt`, `source`, `options?`). Atgriež `201` ar uzdevuma aploksni |
-| DELETE | `/api/v1/agents/tasks?id=...` | Dzēš uzdevumu                                                                                                                                     |
-| GET    | `/api/v1/agents/tasks/[id]`   | Nolasa uzdevumu — sinhroni atsvaidzina statusu no ārējā mākoņa aģenta, ja ir iestatīts `external_id`                                              |
-| POST   | `/api/v1/agents/tasks/[id]`   | Diskriminēta darbība: `{action: "approve"}`, `{action: "message", message}` vai `{action: "cancel"}`                                              |
-| DELETE | `/api/v1/agents/tasks/[id]`   | Dzēš konkrētu uzdevumu pēc identifikatora                                                                                                         |
-
-> **Autentifikācija:** katrai metodei ir nepieciešama pārvaldības autentifikācija (`requireCloudAgentManagementAuth`). Pirms v3.8.0 šie galapunkti nebija autentificēti — par nesavietojamajām izmaiņām skatiet komitu `588a0333`.
-
-```bash
-# Izveido Claude Code mākoņa uzdevumu
-curl -X POST http://localhost:20128/api/v1/agents/tasks \
-  -H "Authorization: Bearer your-management-key" \
-  -H "Content-Type: application/json" \
-  -d '{"providerId":"claude-code-cloud","prompt":"Fix the failing test","source":{"repo":"...","branch":"..."}}'
-```
-
----
-
 ## Pārvaldības starpniekserveri
 
 Izejošie HTTP(S)/SOCKS starpniekserveri, kurus var piešķirt nodrošinātājiem, kontiem vai globāli.
@@ -1907,48 +1881,10 @@ Pastāvīga sarunu un faktu atmiņas krātuve, kuras tvērums ir noteikts katrai
 
 67router nodrošina A2A (aģents–aģents) JSON-RPC 2.0 galapunktu, kā arī REST ietvaru pārbaudes un informācijas paneļa vajadzībām.
 
-### JSON-RPC
-
-```bash
-POST /a2a
-Authorization: Bearer your-api-key   # neobligāts, ja vien nav iestatīts OMNIROUTE_API_KEY
-Content-Type: application/json
-
-{
-  "jsonrpc": "2.0",
-  "id": 1,
-  "method": "message/send",
-  "params": {
-    "skill": "smart-routing",
-    "messages": [{"role": "user", "content": "Route this coding task"}]
-  }
-}
-```
-
-Atbalstītās metodes (visas ir atkarīgas no `settings.a2aEnabled`):
-
-| Metode           | Apraksts                                                        |
-| ---------------- | --------------------------------------------------------------- |
-| `message/send`   | Sinhrona prasmes izpilde; atgriež `{task, artifacts, metadata}` |
-| `message/stream` | Tās pašas prasmju kopas straumēta SSE izpilde                   |
-| `tasks/get`      | Iegūst uzdevumu pēc `taskId`                                    |
-| `tasks/cancel`   | Atceļ uzdevumu pēc `taskId`                                     |
-
-Iebūvētās prasmes: `smart-routing`, `quota-management`, `provider-discovery`, `cost-analysis`, `health-report`.
-
-### Aģenta karte
-
-```bash
-GET /.well-known/agent.json
-```
-
-Atgriež publisko A2A aģenta karti (nosaukumu, aprakstu, iespējas, prasmju katalogu, autentifikācijas shēmu) — publiski kešota 1 stundu. Autentifikācija nav nepieciešama.
-
 ### REST palīgfunkcijas
 
 | Metode | Ceļš                         | Apraksts                                                                                                               |
 | ------ | ---------------------------- | ---------------------------------------------------------------------------------------------------------------------- |
-| GET    | `/api/a2a/status`            | A2A iespējots statuss + uzdevumu statistika + kešotās aģenta kartes kopsavilkums                                       |
 | GET    | `/api/a2a/tasks`             | Uzdevumu saraksts — `?state=submitted\|working\|completed\|failed\|cancelled`, `?skill=`, `?limit=` (≤200), `?offset=` |
 | POST   | `/api/a2a/tasks`             | (Nav ieviests kā REST palīgfunkcija — izveidojiet, izmantojot JSON-RPC `message/send`)                                 |
 | GET    | `/api/a2a/tasks/[id]`        | Iegūst vienu uzdevumu                                                                                                  |
@@ -1968,12 +1904,8 @@ Atgriež publisko A2A aģenta karti (nosaukumu, aprakstu, iespējas, prasmju kat
 | GET | `/api/cloud/models/alias` | Uzskaita modeļu aizstājvārdus, kas pieejami mākoņa sinhronizācijai |
 | GET | `/api/assess` | Nolasa jaunākās izvērtējuma kategorizācijas (katram pakalpojumu sniedzējam/modelim) |
 | POST | `/api/assess` | Izpilda izvērtējumu — pamatteksts: `{scope: {type:"all"}                                                   | {type:"provider", providerId} | {type:"model", modelId}, trigger?}` |
-| GET | `/api/evals` | Uzskaita iebūvētos novērtēšanas testu komplektus un jaunākās izpildes |
-| POST | `/api/evals` | Aktivizē novērtēšanas testa izpildi |
-| POST | `/api/evals/suites` | Izveido pielāgotu novērtēšanas testu komplektu — pamattekstu validē `evalSuiteSaveSchema` |
-| GET | `/api/evals/suites/[id]` | Iegūst pielāgotu novērtēšanas testu komplektu |
 
-**Autentifikācija:** `/api/cloud/auth` tieši validē Bearer atslēgu un atgriež katra savienojuma maskēto atslēgu un `projectId` tikai tad, ja atslēgai ir tvērums `manage` / `admin`; pārējiem `/api/cloud/*`, `/api/evals/*` un `/api/assess` maršrutiem ir nepieciešama pārvaldības sesija/API atslēga. `/api/assess` POST izmanto `validateBody` ar diskriminētas apvienības tvēruma shēmu.
+**Autentifikācija:** `/api/cloud/auth` tieši validē Bearer atslēgu un atgriež katra savienojuma maskēto atslēgu un `projectId` tikai tad, ja atslēgai ir tvērums `manage` / `admin`; pārējiem `/api/cloud/*` un `/api/assess` maršrutiem ir nepieciešama pārvaldības sesija/API atslēga. `/api/assess` POST izmanto `validateBody` ar diskriminētas apvienības tvēruma shēmu.
 
 ---
 
@@ -2297,5 +2229,3 @@ pilnvaru, API atslēgu ar pārvaldības tvērumu) un to atšķirībām no infere
 - `requireLogin` var ieslēgt vai izslēgt, izmantojot `/api/settings/require-login`
 - `/v1/*` maršruti var pieprasīt Bearer API atslēgu, ja `REQUIRE_API_KEY=true`
 - Šajā atsaucē „pārvaldības pilnvara” / „API atslēga ar pārvaldības tvērumu” nozīmē kādu no šajā ceļvedī aprakstītajām saimēm, nevis kādu nedefinētu papildu slepenā noslēpuma veidu
-
-> **Nesaderīga izmaiņa (v3.8.0)** — `/api/v1/agents/tasks/*` un atdzišanas perioda pārvaldības galapunktiem tagad ir nepieciešama **pārvaldības autentifikācija** (informācijas paneļa `auth_token` sīkfails vai API atslēga ar pārvaldības tvērumu). Klienti, kuri iepriekš izsauca šos maršrutus bez autentifikācijas, saņems `401 Unauthorized`. Skatiet komitu `588a0333` (`fix(auth): require management auth for agent and cooldown APIs`).

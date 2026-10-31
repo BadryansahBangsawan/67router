@@ -69,20 +69,6 @@ povolenie úspešného CORS **preflightu** na trasách správy — tie však st�
 ktorú stránka z iného zdroja nedokáže poskytnúť. Na zdieľanej ceste CORS **nejde** o vektor na
 únos relácie ani krádež prihlasovacích údajov.
 
-### Jedna skutočná výnimka — `/api/v1/agents/`
-
-Trasy Cloud-Agent (`/api/v1/agents/{health,credentials,tasks,tasks/[id]}`) nastavujú
-**vlastné** hlavičky CORS
-(`src/lib/cloudAgent/api.ts`, `getCloudAgentCorsHeaders`) a **odosielajú**
-`Access-Control-Allow-Origin: <origin>|*` spolu s
-`Access-Control-Allow-Credentials: true`. Ide o jediné rozhranie, kde
-vrátenie zdroja a prihlasovacie údaje existujú súčasne, pričom je **nezávislé od
-`CORS_ALLOW_ALL`**. Tieto trasy sú autentifikované pre správu
-(`requireManagementAuth`); prevádzkovatelia, ktorí sprístupňujú ovládací panel mimo hostiteľa, by si mali
-uvedomiť, že ide o jediné miesto, kde hlavičky odpovede povoľujú autentifikované čítanie
-medzi rôznymi zdrojmi. Jeho obmedzenie na explicitný zoznam povolených zdrojov sa sleduje
-oddelene od týchto usmernení pre CORS.
-
 ## Kontrolný zoznam pre produkciu
 
 - **V produkcii nikdy nenastavujte `CORS_ALLOW_ALL=true`.** Ponechajte túto premennú nenastavenú.
@@ -160,7 +146,6 @@ karte Zabezpečenie), nie na proxy serveri.
 | Stav za behu pre ovládací panel                             | `src/app/api/settings/authz-inventory/route.ts`                      |
 | Výstražný banner ovládacieho panela                         | `src/app/(dashboard)/dashboard/settings/components/AuthzSection.tsx` |
 | Pole CORS Allowed Origins                                   | `src/app/(dashboard)/dashboard/settings/components/SecurityTab.tsx`  |
-| CORS služby Cloud-Agent pre jednotlivé trasy (výnimka)      | `src/lib/cloudAgent/api.ts`                                          |
 
 ## Pozrite tiež
 

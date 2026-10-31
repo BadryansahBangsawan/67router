@@ -59,7 +59,6 @@ export const CLI_SKILL_IDS: readonly string[] = [
   "cli-contexts",
   "cli-cost-usage",
   "cli-mcp",
-  "cli-a2a",
   "cli-tunnel",
   "cli-backup-sync",
   "cli-policy-audit",

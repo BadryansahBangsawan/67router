@@ -258,12 +258,6 @@ Xem [MCP-SERVER.md](./MCP-SERVER.md) để biết cách thiết lập phương t
 
 ---
 
-## Tích hợp A2A
-
-`src/lib/skills/a2a.ts` xuất bộ mô tả skill A2A `memory_aware_routing` và hàm trợ giúp `registerA2ASkill(registry)`. Các skill A2A tùy chỉnh nằm trong `src/lib/a2a/skills/` và được điều phối thông qua `A2A_SKILL_HANDLERS` (`src/lib/a2a/taskExecution.ts`). Xem [A2A-SERVER.md](./A2A-SERVER.md) để biết toàn bộ vòng đời của tác vụ.
-
----
-
 ## Thêm một skill tích hợp sẵn mới
 
 1. **Định nghĩa trình xử lý** trong `src/lib/skills/builtins.ts` (hoặc một tệp cùng cấp trong `src/lib/skills/builtin/`). Chữ ký: `(input, { apiKeyId, sessionId }) => Promise<output>`.
@@ -478,7 +472,6 @@ Xem [SDK plugin & Tích hợp skill](./PLUGIN_SDK.md) để biết cách thêm m
 ## Xem thêm
 
 - [MCP-SERVER.md](./MCP-SERVER.md) — đăng ký công cụ MCP và các phương thức truyền tải
-- [A2A-SERVER.md](./A2A-SERVER.md) — vòng đời tác vụ A2A và điều phối kỹ năng
 - [USER_GUIDE.md](../guides/USER_GUIDE.md#-skills-system) — phần giới thiệu dành cho người dùng
 - [ARCHITECTURE.md](../architecture/ARCHITECTURE.md) — quy trình xử lý yêu cầu và sơ đồ thành phần
 - Mã nguồn: `src/lib/skills/`, `src/app/api/skills/`, `open-sse/mcp-server/tools/skillTools.ts`

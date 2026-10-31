@@ -390,34 +390,6 @@
       "description": "MCP audito žurnalas (audit --source mcp pseudonimas)"
     }
   },
-  "a2a": {
-    "skills": {
-      "description": "Išvardyti agento kortelėje nurodytus galimus A2A įgūdžius"
-    },
-    "invoke": {
-      "description": "Iškviesti A2A įgūdį ir grąžinti užduoties ID",
-      "input": "JSON įvesties objektas",
-      "input_file": "Kelias į JSON įvesties failą",
-      "wait": "Prieš grąžinant rezultatą palaukti, kol užduotis bus baigta",
-      "timeout": "Užduoties baigimo laukimo skirtasis laikas milisekundėmis (numatytoji reikšmė: 60000)"
-    },
-    "tasks": {
-      "description": "Tvarkyti A2A užduotis",
-      "list": {
-        "status": "Filtruoti pagal būseną",
-        "skill": "Filtruoti pagal įgūdžio ID"
-      },
-      "watch": {
-        "description": "Periodiškai tikrinti užduoties būseną, kol ji bus baigta"
-      },
-      "stream": {
-        "description": "Transliuoti užduoties vykdymo įvykius per SSE"
-      },
-      "logs": {
-        "description": "Rodyti užduoties pranešimus ir artefaktus"
-      }
-    }
-  },
   "policy": {
     "description": "Tvarkyti 67router autorizavimo strategijas",
     "list": {
@@ -696,99 +668,6 @@
       "provider": "Teikėjo, kurio ryšį atšaukti, ID",
       "connection_id": "Atšaukti konkretų ryšį pagal ID",
       "yes": "Praleisti patvirtinimo užklausą"
-    }
-  },
-  "cloud": {
-    "description": "Tvarkyti debesijos DI agentų užduotis (codex, devin, jules)",
-    "agents": {
-      "description": "Rodyti galimus debesijos agentus"
-    },
-    "agent": {
-      "description": "Tvarkyti {agent} debesijos agento užduotis",
-      "auth": {
-        "description": "Autorizuoti {agent} naudojant OAuth"
-      }
-    },
-    "task": {
-      "description": "Tvarkyti debesijos agentų užduotis",
-      "create": {
-        "description": "Sukurti naują agento užduotį",
-        "title": "Užduoties pavadinimas (numatytoji reikšmė – pirmieji 80 užklausos simbolių)",
-        "prompt": "Užklausos tekstas",
-        "prompt_file": "Skaityti užklausą iš failo",
-        "repo": "Saugyklos URL, skirtas klonuoti užduočiai",
-        "branch": "Naudotinos šakos pavadinimas",
-        "metadata": "JSON metaduomenų objektas"
-      },
-      "list": {
-        "description": "Rodyti agentų užduotis",
-        "status": "Filtruoti pagal būseną (running|completed|failed|cancelled)",
-        "limit": "Didžiausias rezultatų skaičius (numatytoji reikšmė: 50)"
-      },
-      "get": {
-        "description": "Gauti išsamią užduoties informaciją pagal ID"
-      },
-      "status": {
-        "description": "Išvesti užduoties būseną (running|completed|failed|cancelled)"
-      },
-      "cancel": {
-        "description": "Atšaukti vykdomą užduotį",
-        "yes": "Praleisti patvirtinimo raginimą"
-      },
-      "approve": {
-        "description": "Patvirtinti agento planą ir pradėti vykdymą"
-      },
-      "message": {
-        "description": "Siųsti pranešimą vykdomai užduočiai"
-      }
-    },
-    "sources": {
-      "description": "Rodyti užduoties sugeneruotų šaltinio failų sąrašą"
-    }
-  },
-  "eval": {
-    "description": "Tvarkyti vertinimo rinkinius ir vykdymus",
-    "suites": {
-      "description": "Tvarkyti vertinimo rinkinius",
-      "list": {
-        "description": "Rodyti vertinimo rinkinių sąrašą"
-      },
-      "get": {
-        "description": "Gauti vertinimo rinkinio informaciją pagal ID"
-      },
-      "create": {
-        "description": "Sukurti vertinimo rinkinį iš JSON failo",
-        "file": "Kelias į rinkinio aprašo JSON failą"
-      }
-    },
-    "run": {
-      "description": "Pradėti rinkinio vertinimo vykdymą",
-      "model": "Vertintino modelio ID (numatytoji reikšmė: auto)",
-      "combo": "Priverstinai naudoti konkretų derinį pagal pavadinimą",
-      "concurrency": "Vienu metu vykdomų pavyzdžių skaičius (numatytoji reikšmė: 4)",
-      "tag": "Pažymėti šį vykdymą žyma vėlesniam filtravimui",
-      "watch": "Stebėti vykdymo eigą iki pabaigos"
-    },
-    "list": {
-      "description": "Rodyti vertinimo vykdymų sąrašą",
-      "suite": "Filtruoti pagal rinkinio ID",
-      "status": "Filtruoti pagal būseną",
-      "since": "Grąžinti vykdymus nuo šios laiko žymos",
-      "limit": "Didžiausias rezultatų skaičius (numatytoji reikšmė: 50)"
-    },
-    "get": {
-      "description": "Gauti vertinimo vykdymo informaciją pagal ID"
-    },
-    "results": {
-      "description": "Rodyti vertinimo vykdymo pavyzdžių rezultatus",
-      "failed": "Rodyti tik nesėkmingus pavyzdžius"
-    },
-    "cancel": {
-      "description": "Atšaukti vykdomą vertinimą",
-      "yes": "Praleisti patvirtinimo raginimą"
-    },
-    "scorecard": {
-      "description": "Rodyti užbaigto vertinimo vykdymo rezultatų suvestinę"
     }
   },
   "program": {

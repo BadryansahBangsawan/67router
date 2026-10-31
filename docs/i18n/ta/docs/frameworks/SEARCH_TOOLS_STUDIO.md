@@ -167,5 +167,4 @@ API விசைக்கான இடநிரப்பி எப்போத�
 - முதன்மைத் திட்டம்: `_tasks/features-v3.8.6/refactorpages/_orchestration/master-plan-group-C.md`
 - அம்சத் திட்டம்: `_tasks/features-v3.8.6/refactorpages/18-search-tools-studio-redesign.plan.md`
 - தேடல் வழங்குநர் பதிவகம்: `open-sse/config/searchRegistry.ts`
-- Playground Studio (பகிரப்பட்ட `ExportCodeModal` + `codeExport.ts`): `docs/frameworks/PLAYGROUND_STUDIO.md`
 - Web fetch பின்தளம்: `src/app/api/v1/web/fetch/route.ts`

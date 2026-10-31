@@ -43,8 +43,6 @@ Mzunguko wa v3.7.x → v3.8.0 umeongeza uelekezaji otomatiki usiohitaji usanidi,
 - 🤝 **Mtoa huduma wa GitLab Duo OAuth** — ingia kwa kutumia vitambulisho vya GitLab
 - 🧠 **Akiba ya Kurudia Uchakataji wa Kimantiki** — uhifadhi mseto wa kumbukumbu ya ndani + SQLite wa vifuatilizi vya uchakataji wa kimantiki
 
-📚 **Nyaraka zinazohusiana:** [Mfumo wa Ujuzi](../frameworks/SKILLS.md) · [Mfumo wa Kumbukumbu](../frameworks/MEMORY.md) · [Mawakala wa Wingu](../frameworks/CLOUD_AGENT.md) · [Webhooks](../frameworks/WEBHOOKS.md) · [Akiba ya Kurudia Uchakataji wa Kimantiki](../routing/REASONING_REPLAY.md)
-
 ---
 
 ## 🔌 Watoa huduma
@@ -104,12 +102,6 @@ Ufuatiliaji wa wakati halisi: muda wa uendeshaji, kumbukumbu, toleo, asilimia za
 Hali nne za kutatua hitilafu za tafsiri za API: **Mazingira ya Majaribio** (kigeuzi cha umbizo), **Kijaribu Gumzo** (maombi ya moja kwa moja), **Benchi la Majaribio** (majaribio ya kundi), na **Kifuatiliaji cha Moja kwa Moja** (mtiririko wa wakati halisi).
 
 ![Mazingira ya Majaribio ya Kitafsiri](../screenshots/05-translator.png)
-
----
-
-## 🎮 Mazingira ya Majaribio ya Modeli _(v2.0.9+)_
-
-Jaribu modeli yoyote moja kwa moja kutoka kwenye dashibodi. Chagua mtoa huduma, modeli na endpoint, andika vidokezo kwa kutumia Monaco Editor, tiririsha majibu kwa wakati halisi, katisha katikati ya mtiririko, na uone vipimo vya muda.
 
 ---
 

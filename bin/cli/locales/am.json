@@ -390,34 +390,6 @@
       "description": "የMCP ኦዲት ምዝግብ (ለ audit --source mcp ተለዋጭ ስም)"
     }
   },
-  "a2a": {
-    "skills": {
-      "description": "ከወኪሉ ካርድ የሚገኙትን A2A ክህሎቶች ዘርዝር"
-    },
-    "invoke": {
-      "description": "የA2A ክህሎትን ጥራ እና የተግባሩን ID መልስ",
-      "input": "የJSON ግብዓት ነገር",
-      "input_file": "ወደ JSON ግብዓት ፋይል የሚወስድ ዱካ",
-      "wait": "ከመመለስ በፊት ተግባሩ እስኪጠናቀቅ ድረስ ጠብቅ",
-      "timeout": "ማጠናቀቅን ለመጠበቅ የሚፈቀደው ጊዜ በms (ነባሪ፦ 60000)"
-    },
-    "tasks": {
-      "description": "የA2A ተግባራትን አስተዳድር",
-      "list": {
-        "status": "በሁኔታ አጣራ",
-        "skill": "በክህሎት ID አጣራ"
-      },
-      "watch": {
-        "description": "እስኪጠናቀቅ ድረስ የተግባሩን ሁኔታ በየጊዜው ፈትሽ"
-      },
-      "stream": {
-        "description": "የተግባር አፈጻጸም ክስተቶችን በSSE በቀጥታ አስተላልፍ"
-      },
-      "logs": {
-        "description": "የተግባር መልዕክቶችን እና ቅርሶችን አሳይ"
-      }
-    }
-  },
   "policy": {
     "description": "የ67router ፈቃድ አሰጣጥ ፖሊሲዎችን አስተዳድር",
     "list": {
@@ -696,99 +668,6 @@
       "provider": "የሚሻረው የአቅራቢ ID",
       "connection_id": "አንድን የተወሰነ ግንኙነት በID ሻር",
       "yes": "የማረጋገጫ ጥያቄውን ዝለል"
-    }
-  },
-  "cloud": {
-    "description": "የደመና AI ወኪል ተግባራትን (codex, devin, jules) አስተዳድር",
-    "agents": {
-      "description": "ያሉትን የደመና ወኪሎች ዘርዝር"
-    },
-    "agent": {
-      "description": "የ{agent} የደመና ወኪል ተግባራትን አስተዳድር",
-      "auth": {
-        "description": "ለ{agent} በOAuth በኩል ፈቃድ ስጥ"
-      }
-    },
-    "task": {
-      "description": "የደመና ወኪል ተግባራትን አስተዳድር",
-      "create": {
-        "description": "አዲስ የወኪል ተግባር ፍጠር",
-        "title": "የተግባር ርዕስ (በነባሪ የጥያቄውን የመጀመሪያ 80 ቁምፊዎች ይጠቀማል)",
-        "prompt": "የተግባር ጥያቄ ጽሑፍ",
-        "prompt_file": "ጥያቄውን ከፋይል አንብብ",
-        "repo": "ለተግባሩ የሚባዛው የማከማቻ URL",
-        "branch": "የሚጠቀመው የቅርንጫፍ ስም",
-        "metadata": "የJSON ዲበ ውሂብ ነገር"
-      },
-      "list": {
-        "description": "የወኪል ተግባራትን ዘርዝር",
-        "status": "በሁኔታ አጣራ (running|completed|failed|cancelled)",
-        "limit": "ከፍተኛው የውጤቶች ብዛት (ነባሪ፦ 50)"
-      },
-      "get": {
-        "description": "የተግባር ዝርዝሮችን በID አግኝ"
-      },
-      "status": {
-        "description": "የተግባሩን ሁኔታ (running|completed|failed|cancelled) አትም"
-      },
-      "cancel": {
-        "description": "በሂደት ላይ ያለ ተግባርን ሰርዝ",
-        "yes": "የማረጋገጫ ጥያቄን ዝለል"
-      },
-      "approve": {
-        "description": "አፈጻጸሙን ለመጀመር የወኪሉን ዕቅድ አጽድቅ"
-      },
-      "message": {
-        "description": "በሂደት ላይ ላለ ተግባር መልዕክት ላክ"
-      }
-    },
-    "sources": {
-      "description": "በአንድ ተግባር የተፈጠሩ የምንጭ ፋይሎችን ዘርዝር"
-    }
-  },
-  "eval": {
-    "description": "የግምገማ ስብስቦችን እና አሂዶችን አስተዳድር",
-    "suites": {
-      "description": "የግምገማ ስብስቦችን አስተዳድር",
-      "list": {
-        "description": "የግምገማ ስብስቦችን ዘርዝር"
-      },
-      "get": {
-        "description": "የግምገማ ስብስብ ዝርዝሮችን በID አግኝ"
-      },
-      "create": {
-        "description": "ከJSON ፋይል የግምገማ ስብስብ ፍጠር",
-        "file": "የስብስብ መግለጫ JSON ፋይል ዱካ"
-      }
-    },
-    "run": {
-      "description": "ለአንድ ስብስብ የግምገማ አሂድ ጀምር",
-      "model": "የሚገመገመው የሞዴል ID (ነባሪ፦ auto)",
-      "combo": "አንድ የተወሰነ combo በስም አስገድድ",
-      "concurrency": "በተመሳሳይ ጊዜ የሚከናወኑ ናሙናዎች ብዛት (ነባሪ፦ 4)",
-      "tag": "በኋላ ለማጣራት ይህን አሂድ በመለያ ምልክት አድርግ",
-      "watch": "እስኪጠናቀቅ ድረስ የአሂዱን ሂደት ተከታተል"
-    },
-    "list": {
-      "description": "የግምገማ አሂዶችን ዘርዝር",
-      "suite": "በስብስብ ID አጣራ",
-      "status": "በሁኔታ አጣራ",
-      "since": "ከዚህ የጊዜ ማህተም ጀምሮ ያሉ አሂዶችን መልስ",
-      "limit": "ከፍተኛው የውጤቶች ብዛት (ነባሪ፦ 50)"
-    },
-    "get": {
-      "description": "የግምገማ አሂድ ዝርዝሮችን በID አግኝ"
-    },
-    "results": {
-      "description": "ለግምገማ አሂድ የናሙና ውጤቶችን አሳይ",
-      "failed": "ያልተሳኩ ናሙናዎችን ብቻ አሳይ"
-    },
-    "cancel": {
-      "description": "በሂደት ላይ ያለ ግምገማን ሰርዝ",
-      "yes": "የማረጋገጫ ጥያቄን ዝለል"
-    },
-    "scorecard": {
-      "description": "ለተጠናቀቀ የግምገማ አሂድ የውጤት ሰሌዳን አሳይ"
     }
   },
   "program": {

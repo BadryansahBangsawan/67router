@@ -247,13 +247,6 @@ const TOOLS_GROUP: SidebarItemGroup = {
       icon: "device_hub",
     },
     {
-      id: "cloud-agents",
-      href: "/dashboard/cloud-agents",
-      i18nKey: "cloudAgents",
-      subtitleKey: "cloudAgentsSubtitle",
-      icon: "cloud",
-    },
-    {
       id: "conductor",
       href: "/dashboard/conductor",
       i18nKey: "conductor",
@@ -368,13 +361,6 @@ const ANALYTICS_ITEMS: readonly SidebarItemDefinition[] = [
     i18nKey: "analyticsSearch",
     subtitleKey: "analyticsSearchSubtitle",
     icon: "manage_search",
-  },
-  {
-    id: "analytics-evals",
-    href: "/dashboard/analytics/evals",
-    i18nKey: "analyticsEvals",
-    subtitleKey: "analyticsEvalsSubtitle",
-    icon: "labs",
   },
   {
     id: "provider-stats",
@@ -542,13 +528,6 @@ const AUDIT_GROUP: SidebarItemGroup = {
       subtitleKey: "auditMcpSubtitle",
       icon: "security",
     },
-    {
-      id: "audit-a2a",
-      href: "/dashboard/audit/a2a",
-      i18nKey: "auditA2a",
-      subtitleKey: "auditA2aSubtitle",
-      icon: "device_hub",
-    },
   ],
 };
 
@@ -559,13 +538,6 @@ const DEVTOOLS_ITEMS: readonly SidebarItemDefinition[] = [
     i18nKey: "translator",
     subtitleKey: "translatorSubtitle",
     icon: "translate",
-  },
-  {
-    id: "playground",
-    href: "/dashboard/playground",
-    i18nKey: "playground",
-    subtitleKey: "playgroundSubtitle",
-    icon: "science",
   },
   {
     id: "search-tools",
@@ -616,13 +588,6 @@ const AGENTIC_FEATURES_ITEMS: readonly SidebarSectionChild[] = [
     icon: "auto_fix_high",
   },
   MCP_ITEM,
-  {
-    id: "a2a",
-    href: "/dashboard/a2a",
-    i18nKey: "a2a",
-    subtitleKey: "a2aSubtitle",
-    icon: "device_hub",
-  },
   {
     id: "plugins",
     href: "/dashboard/plugins",

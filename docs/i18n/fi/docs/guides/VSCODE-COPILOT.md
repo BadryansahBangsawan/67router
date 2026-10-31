@@ -88,7 +88,7 @@ muutoksia.
 
 ## Hallintapaneeli VS Code -välilehdellä
 
-`omnicopilot.dashboardOpen: "editor"` näyttää 67router-hallintapaneelin editorivälilehdellä Simple Browserin kautta ulkoisen selaimen sijaan. Upottaminen on **otettava erikseen käyttöön palvelimella** asetuksella `DASHBOARD_ALLOW_EMBED=vscode`, jolloin HTML-sivut toimitetaan otsakkeella `frame-ancestors 'self' vscode-webview:` oletusarvoisten otsakkeiden `frame-ancestors 'none'` + `X-Frame-Options: DENY` sijaan. API-rajapinnat (`/api`, `/v1`, `/v1beta`, `/a2a`, `/healthz`) säilyttävät tiukat otsakkeet kummassakin tapauksessa.
+`omnicopilot.dashboardOpen: "editor"` näyttää 67router-hallintapaneelin editorivälilehdellä Simple Browserin kautta ulkoisen selaimen sijaan. Upottaminen on **otettava erikseen käyttöön palvelimella** asetuksella `DASHBOARD_ALLOW_EMBED=vscode`, jolloin HTML-sivut toimitetaan otsakkeella `frame-ancestors 'self' vscode-webview:` oletusarvoisten otsakkeiden `frame-ancestors 'none'` + `X-Frame-Options: DENY` sijaan. API-rajapinnat (`/api`, `/v1`, `/v1beta`, `/healthz`) säilyttävät tiukat otsakkeet kummassakin tapauksessa.
 
 > ⚠️ **Tämä on käännösaikainen, ei ajonaikainen asetus.** Next.js kääntää `headers()`-määrityksen reittiluetteloon, joten `next.config.mjs` lukee muuttujan pakettia käännettäessä
 > (`next.config.mjs` → `resolveDashboardEmbedMode`, `scripts/build/dashboardEmbed.mjs`).

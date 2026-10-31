@@ -24,7 +24,6 @@ Objektivna usporedba značajki s popularnim open-source AI usmjerivačima.
 | **A2A protokol**                                           |                  ✅ 6 vještina                  |          ❌           |        ❌         |       ❌       |
 | **Memorija (FTS5 + vektor)**                               |                       ✅                        |          ❌           |        ❌         |       ❌       |
 | **Zaštitne mjere (PII, injekcija, vid)**                   |                       ✅                        |      djelomično       |        ❌         | ✅ uz plaćanje |
-| **Integracije s cloud agentima**                           |           Codex, Cursor, Devin, Jules           |          ❌           |        ❌         |       ❌       |
 | **Circuit breaker po pružatelju**                          |         ✅ 3 stanja, odgođeni oporavak          |        osnovni        |        ❌         |       ✅       |
 | **Prikrivanje TLS otiska (JA3/JA4)**                       |                   ✅ wreq-js                    |          ❌           |        ❌         |       ❌       |
 | **Evaluacijski okvir**                                     |                   ✅ ugrađen                    |          ❌           |        ❌         | ⚠ uz plaćanje  |

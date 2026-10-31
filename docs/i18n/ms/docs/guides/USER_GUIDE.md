@@ -24,7 +24,6 @@ Panduan lengkap untuk mengkonfigurasi penyedia, mencipta kombo, mengintegrasikan
 - [Sistem Kemahiran](#-skills-system)
 - [Sistem Memori](#-memory-system)
 - [Webhook](#-webhooks)
-- [Ejen Awan](#-cloud-agents)
 - [Pengurusan Secara Pengaturcaraan](#-programmatic-management)
 - [CLI Dalaman](#-internal-cli)
 - [Aplikasi Desktop (Electron)](#-desktop-application-electron)
@@ -1238,8 +1237,6 @@ Gunakan URL SSE `http://localhost:20128/api/mcp/sse` dan kunci API Bearer yang d
 
 ### Skop
 
-MCP kini mentakrifkan 32 skop bernama. Setiap kunci Bearer boleh dihadkan kepada skop tertentu — lihat [MCP-SERVER.md](../frameworks/MCP-SERVER.md) untuk inventori skop dan alat yang berwibawa serta [A2A-SERVER.md](../frameworks/A2A-SERVER.md) untuk skema JSON-RPC.
-
 ---
 
 ## 🧠 Sistem Kemahiran
@@ -1248,7 +1245,6 @@ MCP kini mentakrifkan 32 skop bernama. Setiap kunci Bearer boleh dihadkan kepada
 
 - **UI Marketplace** — Semak imbas dan pasang kemahiran melalui **Papan Pemuka → Kemahiran**
 - **Skop setiap kunci** — Hadkan kemahiran yang boleh digunakan oleh setiap kunci API
-- **Kemahiran tersuai** — Letakkan fail TypeScript dalam `src/lib/a2a/skills/`, daftarkannya, dan kemahiran itu boleh digunakan serta-merta melalui A2A
 
 Rujukan penuh: [SKILLS.md](../frameworks/SKILLS.md).
 
@@ -1277,18 +1273,6 @@ Langgan peristiwa 67router untuk pemantauan dan automasi masa nyata.
 - Percubaan semula: 3 percubaan dengan sela masa eksponen, kemudian dihantar ke baris gilir surat mati
 
 Skema penuh dalam [WEBHOOKS.md](../frameworks/WEBHOOKS.md).
-
----
-
-## ☁️ Ejen Awan
-
-67router bersepadu dengan ejen pengekodan awan (**OpenAI Codex Cloud**, **Devin**, **Jules**, **Antigravity**) supaya anda boleh menghantar tugas yang berjalan lama daripada papan pemuka yang sama yang mengendalikan penghalaan setempat anda.
-
-- Cipta tugas dalam **Papan Pemuka → Ejen Awan** atau melalui `POST /api/v1/agents/tasks`
-- Jejaki status, log dan artifak bagi setiap tugas
-- Gunakan kunci API anda sendiri bagi setiap penyedia — bukti kelayakan tidak pernah meninggalkan tika 67router
-
-Rujukan penuh: [CLOUD_AGENT.md](../frameworks/CLOUD_AGENT.md).
 
 ---
 
@@ -1345,7 +1329,6 @@ omniroute restore [<timestamp>]    # Pulihkan daripada petikan
 omniroute health                   # Kesihatan terperinci (pemutus, cache, memori)
 omniroute quota                    # Penggunaan kuota penyedia
 omniroute mcp status               # Status pelayan MCP
-omniroute a2a status               # Status pelayan A2A
 omniroute tunnel list|create|stop  # Terowong Cloudflare/Tailscale/ngrok
 omniroute reset-password           # Tetapkan semula kata laluan pentadbir
 omniroute --mcp                    # Mulakan pelayan MCP melalui stdio

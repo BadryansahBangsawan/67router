@@ -128,13 +128,11 @@ _Останнє оновлення: 2026-06-28_
 - `/dashboard/limits` — керування квотами й обмеженнями частоти
 - `/dashboard/cli-tools` — початкове налаштування CLI, виявлення середовища виконання, генерування конфігурації
 - `/dashboard/agents` — виявлені агенти ACP і реєстрація власних агентів
-- `/dashboard/cloud-agents` — завдання хмарних агентів (Codex Cloud, Devin, Jules) і життєвий цикл завдань
 - `/dashboard/skills` — реєстр навичок A2A, виконання в ізольованому середовищі, каталог вбудованих навичок
 - `/dashboard/memory` — перевірка та отримання постійної пам’яті розмов
 - `/dashboard/webhooks` — підписки на вихідні вебхуки, ротація секретів, статистика повторних спроб
 - `/dashboard/batch` — надсилання пакетних завдань і відстеження перебігу
 - `/dashboard/cache` — статистика наскрізного кешу й кешу міркувань, засоби керування витісненням
-- `/dashboard/playground` — інтерактивний чат для будь-якої налаштованої комбінації або моделі
 - `/dashboard/changelog` — вбудований переглядач журналу змін (відображає `CHANGELOG.md`)
 - `/dashboard/system` — діагностика середовища виконання, відомості про версію, інтерфейс перевірки середовища
 - `/dashboard/onboarding` — майстер першого налаштування для нових інсталяцій
@@ -252,7 +250,6 @@ flowchart LR
 - Бюджет: `src/app/api/usage/budget` (GET/POST)
 - Ланцюжки резервного перемикання: `src/app/api/fallback/chains` (GET/POST/DELETE)
 - Аудит відповідності: `src/app/api/compliance/audit-log` (GET, із пагінацією + структурованими метаданими)
-- Оцінювання: `src/app/api/evals` (GET/POST), `src/app/api/evals/[suiteId]` (GET)
 - Політики: `src/app/api/policies` (GET/POST)
 - Токени синхронізації: `src/app/api/sync/tokens` (GET/POST), `src/app/api/sync/tokens/[id]` (GET/DELETE)
 - Пакет конфігурації: `src/app/api/sync/bundle` (GET, версіонований за допомогою ETag знімок налаштувань/постачальників/комбінацій/ключів)
@@ -316,7 +313,6 @@ flowchart LR
 - Тайм-аут отримання даних: `src/shared/utils/fetchTimeout.ts`
 - Телеметрія запитів: `src/shared/utils/requestTelemetry.ts`
 - Відповідність вимогам/аудит: `src/lib/compliance/index.ts`
-- Засіб запуску оцінювання: `src/lib/evals/evalRunner.ts`
 - Збереження стану домену: `src/lib/db/domainState.ts` — операції CRUD у SQLite для ланцюжків резервного перемикання, бюджетів, історії витрат, стану блокування та автоматичних вимикачів
 
 Модулі OAuth-провайдерів (27 окремих файлів у `src/lib/oauth/providers/`):
@@ -375,23 +371,6 @@ Auto Combo динамічно оцінює та вибирає цільові м
 
 Повний опис алгоритмів (формули факторів, налаштування ваг) див. у
 [`docs/routing/AUTO-COMBO.md`](../routing/AUTO-COMBO.md).
-
-### B. Хмарні агенти
-
-Cloud Agents надає уніфіковану оболонку над сторонніми хостинговими платформами агентів програмування (Codex Cloud, Devin,
-Jules) зі збереженням життєвого циклу завдань у базі даних. Усі кінцеві точки створення та перегляду
-завдань вимагають автентифікації для керування.
-
-- Корінь модуля: `src/lib/cloudAgent/` (`baseAgent.ts`, `registry.ts`, `api.ts`,
-  `types.ts`, `db.ts`, а також окремі підкаталоги агентів у `agents/`)
-- Реалізації окремих агентів: `agents/codex/`, `agents/devin/`, `agents/jules/`
-- Публічні кінцеві точки: `/api/v1/agents/tasks/*` (перелік/створення/отримання/скасування)
-- Кінцеві точки керування: `/api/cloud/*` (підготовка, стан, пакетні операції)
-- Панель керування: `/dashboard/cloud-agents`
-- Сховище: таблиця `cloud_agent_tasks`
-
-Подробиці підготовки окремих агентів і особливості OAuth див. у
-[`docs/frameworks/CLOUD_AGENT.md`](../frameworks/CLOUD_AGENT.md).
 
 ### C. Захисні механізми
 

@@ -256,12 +256,6 @@ Lihat [MCP-SERVER.md](./MCP-SERVER.md) untuk penyiapan transport dan penetapan c
 
 ---
 
-## Integrasi A2A
-
-`src/lib/skills/a2a.ts` mengekspor deskriptor skill A2A `memory_aware_routing` dan helper `registerA2ASkill(registry)`. Skill A2A kustom berada di `src/lib/a2a/skills/` dan diteruskan melalui `A2A_SKILL_HANDLERS` (`src/lib/a2a/taskExecution.ts`). Lihat [A2A-SERVER.md](./A2A-SERVER.md) untuk siklus hidup tugas selengkapnya.
-
----
-
 ## Menambahkan Skill Bawaan Baru
 
 1. **Definisikan handler** di `src/lib/skills/builtins.ts` (atau file sejawat di bawah `src/lib/skills/builtin/`). Tanda tangan: `(input, { apiKeyId, sessionId }) => Promise<output>`.
@@ -473,7 +467,6 @@ Lihat [SDK Plugin & Integrasi Skill](./PLUGIN_SDK.md) untuk mengetahui cara mena
 ## Lihat Juga
 
 - [MCP-SERVER.md](./MCP-SERVER.md) — pendaftaran alat dan transport MCP
-- [A2A-SERVER.md](./A2A-SERVER.md) — siklus hidup tugas dan pengiriman keterampilan A2A
 - [USER_GUIDE.md](../guides/USER_GUIDE.md#-skills-system) — pengantar bagi pengguna
 - [ARCHITECTURE.md](../architecture/ARCHITECTURE.md) — alur permintaan dan peta komponen
 - Sumber: `src/lib/skills/`, `src/app/api/skills/`, `open-sse/mcp-server/tools/skillTools.ts`

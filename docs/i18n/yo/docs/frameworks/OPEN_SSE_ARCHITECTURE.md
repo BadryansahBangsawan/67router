@@ -573,5 +573,4 @@ interface ProviderConfig {
 - [REPOSITORY_MAP.md](../architecture/REPOSITORY_MAP.md) — àlàyé directory kọ̀ọ̀kan
 - [AUTO-COMBO.md](../routing/AUTO-COMBO.md) — ìfúnni-ní-ààmì oní-factor 16
 - [MCP-SERVER.md](./MCP-SERVER.md) — server MCP
-- [A2A-SERVER.md](./A2A-SERVER.md) — server A2A
 - Orísun: `open-sse/` (fáìlì 400+, ~143K LOC)

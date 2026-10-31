@@ -168,5 +168,4 @@ API കീ പ്ലേസ്ഹോൾഡർ എല്ലായ്പ്പോ�
 - മാസ്റ്റർ പ്ലാൻ: `_tasks/features-v3.8.6/refactorpages/_orchestration/master-plan-group-C.md`
 - ഫീച്ചർ പ്ലാൻ: `_tasks/features-v3.8.6/refactorpages/18-search-tools-studio-redesign.plan.md`
 - Search provider രജിസ്ട്രി: `open-sse/config/searchRegistry.ts`
-- Playground Studio (പങ്കിട്ട `ExportCodeModal` + `codeExport.ts`): `docs/frameworks/PLAYGROUND_STUDIO.md`
 - Web fetch ബാക്കെൻഡ്: `src/app/api/v1/web/fetch/route.ts`

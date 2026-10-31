@@ -227,8 +227,6 @@ Kliento API raktų vykdymui naudojama `isRequireApiKeyEnabled()` iš `src/shared
 
 ## Nesuderinamas pakeitimas — v3.8.0
 
-Galiniams taškams `/api/v1/agents/tasks/*` ir `/api/resilience/model-cooldowns` **dabar reikalingas valdymo autentifikavimas** (įsipareigojimas `588a0333`). Klientai, anksčiau siuntę įprastą API raktą be `manage` aprėpties, gauna `403`. Migravimas: API Keys valdymo skydelyje suteikite raktui `manage` aprėptį arba naudokite prisijungto valdymo skydelio seansą.
-
 ## Veikimo pakeitimas — v3.8.2
 
 `/api/mcp/*` (nuotolinis MCP serveris) pagal numatytąją nuostatą tebėra LOCAL_ONLY, tačiau dabar priima užklausas ne iš vietinio grįžtamojo ryšio adreso, kai antraštėje `Authorization: Bearer <api-key>` pateiktas raktas turi `manage` aprėptį. Ši išimtis kiekvienam keliui aiškiai valdoma per `LOCAL_ONLY_MANAGE_SCOPE_BYPASS_PREFIXES` faile `src/server/authz/routeGuard.ts`; susijusio LOCAL_ONLY prefikso `/api/cli-tools/runtime/*` tyčia negalima apeiti, nes jis gali paleisti bet kokius antrinius procesus. Anoniminėms užklausoms į `/api/mcp/*` ne iš vietinio grįžtamojo ryšio adreso ir toliau grąžinama `403 LOCAL_ONLY` — bet kuriam naujam LOCAL_ONLY keliui pagal numatytąją nuostatą tebėra taikomas griežtas vietinio grįžtamojo ryšio adreso reikalavimas. Žr. [Maršrutų apsaugos lygiai](../security/ROUTE_GUARD_TIERS.md#manage-scope-carve-out).

@@ -256,12 +256,6 @@ Lihat [MCP-SERVER.md](./MCP-SERVER.md) untuk persediaan pengangkutan dan penetap
 
 ---
 
-## Penyepaduan A2A
-
-`src/lib/skills/a2a.ts` mengeksport pemerihal kemahiran A2A `memory_aware_routing` dan pembantu `registerA2ASkill(registry)`. Kemahiran A2A tersuai ditempatkan dalam `src/lib/a2a/skills/` dan dihantar melalui `A2A_SKILL_HANDLERS` (`src/lib/a2a/taskExecution.ts`). Lihat [A2A-SERVER.md](./A2A-SERVER.md) untuk kitaran hayat tugas yang lengkap.
-
----
-
 ## Menambah Kemahiran Terbina Dalam Baharu
 
 1. **Takrifkan pengendali** dalam `src/lib/skills/builtins.ts` (atau fail setara di bawah `src/lib/skills/builtin/`). Tandatangan: `(input, { apiKeyId, sessionId }) => Promise<output>`.
@@ -476,7 +470,6 @@ Lihat [SDK Pemalam & Penyepaduan Kemahiran](./PLUGIN_SDK.md) untuk mengetahui ca
 ## Lihat Juga
 
 - [MCP-SERVER.md](./MCP-SERVER.md) — pendaftaran alat dan pengangkutan MCP
-- [A2A-SERVER.md](./A2A-SERVER.md) — kitar hayat tugas dan penghantaran kemahiran A2A
 - [USER_GUIDE.md](../guides/USER_GUIDE.md#-skills-system) — pengenalan untuk pengguna
 - [ARCHITECTURE.md](../architecture/ARCHITECTURE.md) — saluran pemprosesan permintaan dan peta komponen
 - Sumber: `src/lib/skills/`, `src/app/api/skills/`, `open-sse/mcp-server/tools/skillTools.ts`

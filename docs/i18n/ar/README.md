@@ -588,7 +588,7 @@ Radar اختياري ويستخدم طلبات GET فقط. لا يرفع عمي�
 - **🔑 تحكم بالتوجيه لكل مفتاح** — ثبّت مفتاح API على نموذج أو تجميعة واحدة عبر `forcedModel`، وأضف أو أزل نماذج المفتاح وتجميعاته بشكل ذرّي (`/api/keys/{id}/access`). → [API Reference](docs/reference/API_REFERENCE.md)
 - **🛡️ تحكم أدق في بيانات PII** — اختيار حسب النوع، وحتى 15 نمطًا مخصصًا موثّقًا، واكتشاف حسب النوع، بينما يبقى التمويه نفسه. → [Guardrails](docs/GUARDRAILS.md)
 - **🌍 67 لغة في قائمة الانتظار، ومرايا للتوثيق وCLI، مع `npm run i18n:add-locale` لإضافة لغة بأمر واحد.** → [i18n Guide](docs/guides/I18N.md)
-- **🎛️ OmniConductor** — لوحة تحكم موحّدة لتفويض المهام إلى وكيلك، ومهارات Connector على الوكيل، ولوحة استدعاء human2agent مع محادثة صوتية بنمط اضغط-لتتحدث. → [A2A Server](docs/frameworks/A2A-SERVER.md)
+- **🎛️ OmniConductor** — لوحة تحكم موحّدة لتفويض المهام إلى وكيلك، ومهارات Connector على الوكيل، ولوحة استدعاء human2agent مع محادثة صوتية بنمط اضغط-لتتحدث.
 - **🛂 قبول تكيفي + حماية من الحمل الزائد** — الطلبات الثقيلة في طريقها إلى 503، مع حدود RPM ذرّية لكل اتصال. → [Resilience Guide](docs/architecture/RESILIENCE_GUIDE.md)
 - **🗂️ ترتيب `/v1/models` القانوني** — كتلة واحدة متجاورة مجمّعة حسب المزوّد لكل مزوّد (مع تثبيت النماذج)، مستقرة عبر كل مصادر الكتالوج. → [API Reference](docs/reference/API_REFERENCE.md)
 - **🗜️ تقوية الضغط** — حماية من التضخّم مفعّلة افتراضيًا، وحزم Caveman للألمانية / الفرنسية / اليابانية + الصينية الكلاسيكية، ومرشّحات RTK لـ Gradle و.NET. → [Compression](docs/compression/COMPRESSION_ENGINES.md)
@@ -907,7 +907,6 @@ omniroute contexts use default            # ← العودة إلى الخادم
   <tr><td align="left" nowrap>🧰 <b>MCP (stdio)</b></td><td align="left" nowrap><code>omniroute --mcp</code></td><td align="left">التكامل مع Claude Desktop وCursor وأي عميل MCP</td></tr>
   <tr><td align="left" nowrap>🌊 <b>MCP (HTTP)</b></td><td align="left" nowrap><code>/api/mcp/stream</code></td><td align="left">MCP بعيد — <b>110 أداة</b>، و33 نطاقًا (التطبيق اختياري)، وسجل تدقيق كامل</td></tr>
   <tr><td align="left" nowrap>📡 <b>MCP (SSE)</b></td><td align="left" nowrap><code>/api/mcp/sse</code></td><td align="left">نقل MCP عبر البث</td></tr>
-  <tr><td align="left" nowrap>🤝 <b>A2A</b></td><td align="left" nowrap><code>/.well-known/agent.json</code></td><td align="left">اتصال من وكيل إلى وكيل، <b>JSON-RPC 2.0</b> + SSE، و6 مهارات</td></tr>
   <tr><td align="left" nowrap>🌐 <b>REST API</b></td><td align="left" nowrap><code>/v1/*</code></td><td align="left">متوافقة مع OpenAI — المحادثة، والتضمينات، والصور، والصوت، والتعرّف الضوئي على الأحرف</td></tr>
   <tr><td align="left" nowrap>🔔 <b>خطافات الويب</b></td><td align="left" nowrap><code>/api/webhooks</code></td><td align="left">دفع أحداث الطلبات / الحصص إلى Slack أو Discord أو Telegram أو أي عنوان URL</td></tr>
   <tr><td align="left" nowrap>🛰️ <b>واجهة CLI بعيدة</b></td><td align="left" nowrap><code>omniroute connect <host></code></td><td align="left">التحكم في مثيل بعيد باستخدام رموز وصول محددة النطاق</td></tr>
@@ -917,8 +916,6 @@ omniroute contexts use default            # ← العودة إلى الخادم
 # منح Claude Code مجموعة أدوات 67router الكاملة عبر MCP:
 claude mcp add-server omniroute --type http --url http://localhost:20128/api/mcp/stream
 ```
-
-<sub>📖 [خادم MCP](docs/frameworks/MCP-SERVER.md) · [خادم A2A](docs/frameworks/A2A-SERVER.md) · [بروتوكولات الوكلاء](docs/frameworks/AGENT_PROTOCOLS_GUIDE.md)</sub>
 
 <br/>
 
@@ -1381,7 +1378,6 @@ OMNIROUTE_SKIP_POSTINSTALL=1 npm install -g omniroute   # يؤدي CI=1 أيضً
   <tr><td nowrap><b><a href="open-sse/mcp-server/README.md">خادم MCP</a></b></td><td>110 أداة MCP، وإعدادات IDE، وعملاء Python/TS/Go</td></tr>
   <tr><td nowrap><b><a href="docs/frameworks/MCP-SERVER.md">دليل خادم MCP</a></b></td><td>تثبيت MCP، ووسائل النقل، ومرجع الأدوات</td></tr>
   <tr><td nowrap><b><a href="src/lib/a2a/README.md">خادم A2A</a></b></td><td>بروتوكول JSON-RPC 2.0، والمهارات، والبث، وإدارة المهام</td></tr>
-  <tr><td nowrap><b><a href="docs/frameworks/A2A-SERVER.md">دليل خادم A2A</a></b></td><td>بطاقة وكيل A2A، والمهام، والمهارات، والبث</td></tr>
 </table>
 
 ### 📋 المشروع والجودة

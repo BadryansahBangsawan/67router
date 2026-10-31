@@ -92,7 +92,7 @@ ekstensi.
 Simple Browser, bukan di browser eksternal. Penyematan harus **diaktifkan secara eksplisit di server** melalui
 `DASHBOARD_ALLOW_EMBED=vscode`, yang menyajikan halaman HTML dengan
 `frame-ancestors 'self' vscode-webview:`, bukan dengan nilai default `frame-ancestors 'none'` +
-`X-Frame-Options: DENY`. Permukaan API (`/api`, `/v1`, `/v1beta`, `/a2a`, `/healthz`) tetap
+`X-Frame-Options: DENY`. Permukaan API (`/api`, `/v1`, `/v1beta`, `/healthz`) tetap
 menggunakan header yang ketat dalam kedua kondisi tersebut.
 
 > ⚠️ **Ini adalah flag waktu build, bukan waktu proses.** Next.js mengompilasi `headers()` ke dalam manifes

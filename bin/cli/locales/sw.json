@@ -390,34 +390,6 @@
       "description": "Kumbukumbu ya ukaguzi ya MCP (jina mbadala la audit --source mcp)"
     }
   },
-  "a2a": {
-    "skills": {
-      "description": "Orodhesha ujuzi wa A2A unaopatikana kutoka kwenye kadi ya ajenti"
-    },
-    "invoke": {
-      "description": "Tekeleza ujuzi wa A2A na urudishe kitambulisho cha jukumu",
-      "input": "Objekti ya ingizo la JSON",
-      "input_file": "Njia ya faili ya ingizo la JSON",
-      "wait": "Subiri jukumu likamilike kabla ya kurudi",
-      "timeout": "Muda wa juu wa kusubiri kukamilika kwa ms (chaguo-msingi: 60000)"
-    },
-    "tasks": {
-      "description": "Dhibiti majukumu ya A2A",
-      "list": {
-        "status": "Chuja kwa hali",
-        "skill": "Chuja kwa kitambulisho cha ujuzi"
-      },
-      "watch": {
-        "description": "Kagua hali ya jukumu mara kwa mara hadi likamilike"
-      },
-      "stream": {
-        "description": "Tiririsha matukio ya utekelezaji wa jukumu kupitia SSE"
-      },
-      "logs": {
-        "description": "Onyesha ujumbe na vizalia vya jukumu"
-      }
-    }
-  },
   "policy": {
     "description": "Dhibiti sera za uidhinishaji za 67router",
     "list": {
@@ -696,99 +668,6 @@
       "provider": "ID ya mtoa huduma ya kubatilisha",
       "connection_id": "Batilisha muunganisho mahususi kwa ID",
       "yes": "Ruka ombi la uthibitisho"
-    }
-  },
-  "cloud": {
-    "description": "Dhibiti majukumu ya mawakala wa AI wa wingu (codex, devin, jules)",
-    "agents": {
-      "description": "Orodhesha mawakala wa wingu wanaopatikana"
-    },
-    "agent": {
-      "description": "Dhibiti majukumu ya wakala wa wingu wa {agent}",
-      "auth": {
-        "description": "Idhinisha {agent} kupitia OAuth"
-      }
-    },
-    "task": {
-      "description": "Dhibiti majukumu ya wakala wa wingu",
-      "create": {
-        "description": "Unda jukumu jipya la wakala",
-        "title": "Kichwa cha jukumu (chaguo-msingi ni herufi 80 za kwanza za kidokezo)",
-        "prompt": "Maandishi ya kidokezo cha jukumu",
-        "prompt_file": "Soma kidokezo kutoka kwenye faili",
-        "repo": "URL ya hazina ya kunakili kwa ajili ya jukumu",
-        "branch": "Jina la tawi la kutumia",
-        "metadata": "Kipengee cha metadata cha JSON"
-      },
-      "list": {
-        "description": "Orodhesha kazi za ajenti",
-        "status": "Chuja kwa hali (running|completed|failed|cancelled)",
-        "limit": "Idadi ya juu zaidi ya matokeo (chaguo-msingi: 50)"
-      },
-      "get": {
-        "description": "Pata maelezo ya kazi kwa ID"
-      },
-      "status": {
-        "description": "Chapisha hali ya kazi (running|completed|failed|cancelled)"
-      },
-      "cancel": {
-        "description": "Ghairi kazi inayoendelea",
-        "yes": "Ruka kidokezo cha uthibitishaji"
-      },
-      "approve": {
-        "description": "Idhinisha mpango wa ajenti ili kuanza utekelezaji"
-      },
-      "message": {
-        "description": "Tuma ujumbe kwa kazi inayoendelea"
-      }
-    },
-    "sources": {
-      "description": "Orodhesha faili chanzo zilizoundwa na kazi"
-    }
-  },
-  "eval": {
-    "description": "Dhibiti seti na uendeshaji wa tathmini",
-    "suites": {
-      "description": "Dhibiti seti za tathmini",
-      "list": {
-        "description": "Orodhesha seti za tathmini"
-      },
-      "get": {
-        "description": "Pata maelezo ya seti ya tathmini kwa ID"
-      },
-      "create": {
-        "description": "Unda seti ya tathmini kutoka kwenye faili ya JSON",
-        "file": "Njia ya faili ya JSON yenye ufafanuzi wa seti"
-      }
-    },
-    "run": {
-      "description": "Anzisha uendeshaji wa tathmini kwa seti",
-      "model": "ID ya modeli ya kutathmini (chaguo-msingi: auto)",
-      "combo": "Lazimisha mseto mahususi kwa jina",
-      "concurrency": "Idadi ya sampuli zinazoendeshwa kwa wakati mmoja (chaguo-msingi: 4)",
-      "tag": "Weka lebo kwenye uendeshaji huu kwa ajili ya kuchuja baadaye",
-      "watch": "Fuatilia maendeleo ya uendeshaji hadi ukamilike"
-    },
-    "list": {
-      "description": "Orodhesha uendeshaji wa tathmini",
-      "suite": "Chuja kwa ID ya seti",
-      "status": "Chuja kwa hali",
-      "since": "Rejesha uendeshaji tangu muhuri huu wa muda",
-      "limit": "Idadi ya juu zaidi ya matokeo (chaguo-msingi: 50)"
-    },
-    "get": {
-      "description": "Pata maelezo ya uendeshaji wa tathmini kwa ID"
-    },
-    "results": {
-      "description": "Onyesha matokeo ya sampuli kwa uendeshaji wa tathmini",
-      "failed": "Onyesha sampuli zilizofeli pekee"
-    },
-    "cancel": {
-      "description": "Ghairi tathmini inayoendelea",
-      "yes": "Ruka kidokezo cha uthibitishaji"
-    },
-    "scorecard": {
-      "description": "Onyesha kadi ya alama ya uendeshaji wa tathmini uliokamilika"
     }
   },
   "program": {

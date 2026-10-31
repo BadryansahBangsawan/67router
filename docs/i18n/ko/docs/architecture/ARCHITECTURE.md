@@ -128,13 +128,11 @@ v3.8.0 플랫폼의 표준 버전 관리 Mermaid 소스는
 - `/dashboard/limits` — 할당량/속도 제어
 - `/dashboard/cli-tools` — CLI 온보딩, 런타임 감지, 구성 생성
 - `/dashboard/agents` — 감지된 ACP 에이전트 + 사용자 정의 에이전트 등록
-- `/dashboard/cloud-agents` — 클라우드 호스팅 에이전트 작업(Codex Cloud, Devin, Jules) 및 작업 수명 주기
 - `/dashboard/skills` — A2A 스킬 레지스트리, 샌드박스 실행, 기본 제공 스킬 카탈로그
 - `/dashboard/memory` — 영속적 대화 메모리 검사 및 검색
 - `/dashboard/webhooks` — 아웃바운드 웹훅 구독, 시크릿 교체, 재시도 통계
 - `/dashboard/batch` — 배치 작업 제출 및 진행 상황
 - `/dashboard/cache` — 읽기 통과 및 추론 캐시 통계, 제거 제어
-- `/dashboard/playground` — 구성된 모든 콤보/모델을 대상으로 하는 대화형 채팅 플레이그라운드
 - `/dashboard/changelog` — 앱 내 변경 로그 뷰어(`CHANGELOG.md` 렌더링)
 - `/dashboard/system` — 런타임 진단, 버전 정보, 환경 검증 화면
 - `/dashboard/onboarding` — 새 설치를 위한 최초 실행 설정 마법사
@@ -252,7 +250,6 @@ flowchart LR
 - 예산: `src/app/api/usage/budget` (GET/POST)
 - 폴백 체인: `src/app/api/fallback/chains` (GET/POST/DELETE)
 - 규정 준수 감사: `src/app/api/compliance/audit-log` (GET, 페이지네이션 + 구조화된 메타데이터 포함)
-- 평가: `src/app/api/evals` (GET/POST), `src/app/api/evals/[suiteId]` (GET)
 - 정책: `src/app/api/policies` (GET/POST)
 - 동기화 토큰: `src/app/api/sync/tokens` (GET/POST), `src/app/api/sync/tokens/[id]` (GET/DELETE)
 - 구성 번들: `src/app/api/sync/bundle` (GET, 설정/제공자/조합/키의 ETag 버전 관리 스냅샷)
@@ -316,7 +313,6 @@ flowchart LR
 - 가져오기 타임아웃: `src/shared/utils/fetchTimeout.ts`
 - 요청 텔레메트리: `src/shared/utils/requestTelemetry.ts`
 - 규정 준수/감사: `src/lib/compliance/index.ts`
-- 평가 실행기: `src/lib/evals/evalRunner.ts`
 - 도메인 상태 영속성: `src/lib/db/domainState.ts` — 폴백 체인, 예산, 비용 기록, 잠금 상태, 회로 차단기를 위한 SQLite CRUD
 
 OAuth 제공자 모듈(`src/lib/oauth/providers/` 아래의 개별 파일 27개):
@@ -373,23 +369,6 @@ Auto Combo는 정적 combo 정의에 의존하는 대신 요청 시점에 라우
 
 전체 알고리즘 세부 사항(요소 공식, 가중치 조정)은
 [`docs/routing/AUTO-COMBO.md`](../routing/AUTO-COMBO.md)를 참조하십시오.
-
-### B. Cloud Agents
-
-Cloud Agents는 타사 호스팅 code-agent 플랫폼(Codex Cloud, Devin,
-Jules)을 DB 기반의 통합된 task lifecycle로 래핑합니다. 모든 task 생성/검사
-endpoint에는 management authentication이 필요합니다.
-
-- 모듈 루트: `src/lib/cloudAgent/` (`baseAgent.ts`, `registry.ts`, `api.ts`,
-  `types.ts`, `db.ts`, 그리고 `agents/` 아래 agent별 하위 디렉터리)
-- Agent별 구현: `agents/codex/`, `agents/devin/`, `agents/jules/`
-- Public endpoint: `/api/v1/agents/tasks/*` (목록/생성/조회/취소)
-- Management endpoint: `/api/cloud/*` (프로비저닝, 상태, 일괄 처리)
-- Dashboard: `/dashboard/cloud-agents`
-- Storage: `cloud_agent_tasks` table
-
-Agent별 프로비저닝 및 OAuth 세부 사항은
-[`docs/frameworks/CLOUD_AGENT.md`](../frameworks/CLOUD_AGENT.md)를 참조하십시오.
 
 ### C. Guardrails
 

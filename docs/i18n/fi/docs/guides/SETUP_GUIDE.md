@@ -248,26 +248,6 @@ Lisää MCP-asetuksiisi:
 
 **Täydellinen MCP-dokumentaatio:** [MCP-palvelimen README](../../open-sse/mcp-server/README.md) — 110 työkalua, IDE-määritykset sekä Python/TS/Go-asiakkaat.
 
-### A2A:n määritys (Agent-to-Agent Protocol)
-
-Tarkista Agent Card:
-
-```bash
-curl http://localhost:20128/.well-known/agent.json
-```
-
-Lähetä tehtävä:
-
-```bash
-curl -X POST http://localhost:20128/a2a \
-  -H 'content-type: application/json' \
-  -d '{"jsonrpc":"2.0","id":"quickstart","method":"message/send","params":{"skill":"quota-management","messages":[{"role":"user","content":"Anna minulle lyhyt yhteenveto kiintiöstä."}]}}'
-```
-
-**Täydellinen A2A-dokumentaatio:** [A2A-palvelimen README](../../src/lib/a2a/README.md) — JSON-RPC 2.0, taidot, suoratoisto ja tehtävän elinkaari.
-
----
-
 ## Aikakatkaisujen määritys
 
 ### Perusaikakatkaisut

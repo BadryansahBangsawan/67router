@@ -43,8 +43,6 @@ v3.7.x → v3.8.0 चक्रले शून्य-कन्फिग स्�
 - 🤝 **GitLab Duo OAuth प्रदायक** — GitLab प्रमाणहरूद्वारा लगइन गर्नुहोस्
 - 🧠 **Reasoning Replay Cache** — तर्क ट्रेसहरूको हाइब्रिड इन-मेमोरी + SQLite स्थायित्व
 
-📚 **सम्बन्धित दस्तावेजहरू:** [Skills Framework](../frameworks/SKILLS.md) · [Memory System](../frameworks/MEMORY.md) · [Cloud Agents](../frameworks/CLOUD_AGENT.md) · [Webhooks](../frameworks/WEBHOOKS.md) · [Reasoning Replay Cache](../routing/REASONING_REPLAY.md)
-
 ---
 
 ## 🔌 प्रदायकहरू
@@ -104,12 +102,6 @@ OpenRouter जडानहरूले Advanced Settings मा प्रत्�
 API अनुवादहरू डिबग गर्नका लागि चार मोड: **Playground** (ढाँचा रूपान्तरणकर्ता), **Chat Tester** (प्रत्यक्ष अनुरोधहरू), **Test Bench** (ब्याच परीक्षणहरू), र **Live Monitor** (रियल-टाइम स्ट्रिम)।
 
 ![अनुवादक प्लेग्राउन्ड](../screenshots/05-translator.png)
-
----
-
-## 🎮 मोडेल प्लेग्राउन्ड _(v2.0.9+)_
-
-ड्यासबोर्डबाटै कुनै पनि मोडेल परीक्षण गर्नुहोस्। प्रदायक, मोडेल र एन्डपोइन्ट चयन गर्नुहोस्, Monaco Editor मार्फत प्रम्प्टहरू लेख्नुहोस्, प्रतिक्रियाहरू रियल-टाइममा स्ट्रिम गर्नुहोस्, स्ट्रिमको बीचमै रोक्नुहोस्, र समयसम्बन्धी मेट्रिक्स हेर्नुहोस्।
 
 ---
 

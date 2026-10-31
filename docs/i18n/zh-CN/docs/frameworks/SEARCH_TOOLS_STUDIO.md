@@ -167,5 +167,4 @@ API 密钥占位符始终为 `$OMNIROUTE_API_KEY`（D11，与 Playground Studio 
 - 总体计划：`_tasks/features-v3.8.6/refactorpages/_orchestration/master-plan-group-C.md`
 - 功能计划：`_tasks/features-v3.8.6/refactorpages/18-search-tools-studio-redesign.plan.md`
 - 搜索提供者注册表：`open-sse/config/searchRegistry.ts`
-- Playground Studio（共享的 `ExportCodeModal` + `codeExport.ts`）：`docs/frameworks/PLAYGROUND_STUDIO.md`
 - Web fetch 后端：`src/app/api/v1/web/fetch/route.ts`

@@ -1415,9 +1415,8 @@ La réponse GET inclut `agents[]` (id, name, binary, version, installed, protoco
 
 ### Évaluations
 
-| Endpoint     | Méthode  | Description                                                 |
-| ------------ | -------- | ----------------------------------------------------------- |
-| `/api/evals` | GET/POST | Répertorier les suites d’évaluation / lancer une évaluation |
+| Endpoint | Méthode | Description |
+| -------- | ------- | ----------- |
 
 ### Politiques
 
@@ -1734,31 +1733,6 @@ Utilisées par le sous-système de gestion automatique des clés pour émettre e
 
 ---
 
-## Protocole des agents
-
-Tâches d’agents cloud (Claude Code, Codex Cloud, OpenHands, etc.) exécutées à distance pour le compte des utilisateurs de 67router.
-
-| Méthode | Chemin                        | Description                                                                                                                                               |
-| ------- | ----------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| GET     | `/api/v1/agents/tasks`        | Répertorie les tâches — paramètres facultatifs `?provider=`, `?status=`, `?limit=` (1–500, 50 par défaut)                                                 |
-| POST    | `/api/v1/agents/tasks`        | Crée une tâche — corps validé par `CreateCloudAgentTaskSchema` (`providerId`, `prompt`, `source`, `options?`). Renvoie `201` avec l’enveloppe de la tâche |
-| DELETE  | `/api/v1/agents/tasks?id=...` | Supprime une tâche                                                                                                                                        |
-| GET     | `/api/v1/agents/tasks/[id]`   | Lit une tâche — actualise de manière synchrone son statut depuis l’agent cloud en amont lorsqu’un `external_id` est défini                                |
-| POST    | `/api/v1/agents/tasks/[id]`   | Action discriminée : `{action: "approve"}`, `{action: "message", message}` ou `{action: "cancel"}`                                                        |
-| DELETE  | `/api/v1/agents/tasks/[id]`   | Supprime une tâche spécifique par identifiant                                                                                                             |
-
-> **Authentification :** authentification de gestion requise pour chaque méthode (`requireCloudAgentManagementAuth`). Avant la v3.8.0, ces méthodes n’étaient pas authentifiées — voir le commit `588a0333` pour cette modification incompatible.
-
-```bash
-# Créer une tâche cloud Claude Code
-curl -X POST http://localhost:20128/api/v1/agents/tasks \
-  -H "Authorization: Bearer your-management-key" \
-  -H "Content-Type: application/json" \
-  -d '{"providerId":"claude-code-cloud","prompt":"Fix the failing test","source":{"repo":"...","branch":"..."}}'
-```
-
----
-
 ## Proxys de gestion
 
 Proxys HTTP(S)/SOCKS sortants pouvant être attribués aux fournisseurs, aux comptes ou globalement.
@@ -1878,48 +1852,10 @@ Stockage persistant de la mémoire conversationnelle/factuelle, isolé par clé 
 
 67router expose un point de terminaison A2A (Agent-to-Agent) JSON-RPC 2.0 ainsi qu’une enveloppe REST à des fins d’inspection et d’utilisation dans le tableau de bord.
 
-### JSON-RPC
-
-```bash
-POST /a2a
-Authorization: Bearer your-api-key   # facultatif sauf si OMNIROUTE_API_KEY est défini
-Content-Type: application/json
-
-{
-  "jsonrpc": "2.0",
-  "id": 1,
-  "method": "message/send",
-  "params": {
-    "skill": "smart-routing",
-    "messages": [{"role": "user", "content": "Route this coding task"}]
-  }
-}
-```
-
-Méthodes prises en charge (toutes conditionnées par `settings.a2aEnabled`) :
-
-| Méthode          | Description                                                                  |
-| ---------------- | ---------------------------------------------------------------------------- |
-| `message/send`   | Exécution synchrone d’une compétence ; renvoie `{task, artifacts, metadata}` |
-| `message/stream` | Exécution en flux SSE du même ensemble de compétences                        |
-| `tasks/get`      | Récupère une tâche selon son `taskId`                                        |
-| `tasks/cancel`   | Annule une tâche selon son `taskId`                                          |
-
-Compétences intégrées : `smart-routing`, `quota-management`, `provider-discovery`, `cost-analysis`, `health-report`.
-
-### Fiche de l’agent
-
-```bash
-GET /.well-known/agent.json
-```
-
-Renvoie la fiche publique de l’agent A2A (nom, description, fonctionnalités, catalogue de compétences, schéma d’authentification), mise en cache publiquement pendant 1 h. Aucune authentification requise.
-
 ### Utilitaires REST
 
 | Méthode | Chemin                       | Description                                                                                                                |
 | ------- | ---------------------------- | -------------------------------------------------------------------------------------------------------------------------- |
-| GET     | `/api/a2a/status`            | État d’activation d’A2A, statistiques des tâches et résumé de la fiche d’agent mise en cache                               |
 | GET     | `/api/a2a/tasks`             | Répertorie les tâches — `?state=submitted\|working\|completed\|failed\|cancelled`, `?skill=`, `?limit=` (≤200), `?offset=` |
 | POST    | `/api/a2a/tasks`             | (Non implémenté en tant qu’utilitaire REST — créer via JSON-RPC `message/send`)                                            |
 | GET     | `/api/a2a/tasks/[id]`        | Récupère une tâche                                                                                                         |
@@ -1939,12 +1875,8 @@ Renvoie la fiche publique de l’agent A2A (nom, description, fonctionnalités, 
 | GET | `/api/cloud/models/alias` | Répertorie les alias de modèles tels qu’ils sont exposés à la synchronisation cloud |
 | GET | `/api/assess` | Lit les catégorisations de la dernière analyse (par fournisseur/modèle) |
 | POST | `/api/assess` | Exécute une analyse — corps : `{scope: {type:"all"}                                                   | {type:"provider", providerId} | {type:"model", modelId}, trigger?}` |
-| GET | `/api/evals` | Répertorie les suites d’évaluation intégrées et les exécutions les plus récentes |
-| POST | `/api/evals` | Déclenche une exécution d’évaluation |
-| POST | `/api/evals/suites` | Crée une suite d’évaluation personnalisée — corps validé par `evalSuiteSaveSchema` |
-| GET | `/api/evals/suites/[id]` | Récupère une suite d’évaluation personnalisée |
 
-**Authentification :** `/api/cloud/auth` valide directement une clé Bearer et ne renvoie la clé masquée et le `projectId` de chaque connexion que pour une clé disposant de la portée `manage` / `admin` ; les autres routes `/api/cloud/*`, `/api/evals/*` et `/api/assess` nécessitent une session de gestion ou une clé API. La requête POST vers `/api/assess` utilise `validateBody` avec un schéma de portée sous forme d’union discriminée.
+**Authentification :** `/api/cloud/auth` valide directement une clé Bearer et ne renvoie la clé masquée et le `projectId` de chaque connexion que pour une clé disposant de la portée `manage` / `admin` ; les autres routes `/api/cloud/*` et `/api/assess` nécessitent une session de gestion ou une clé API. La requête POST vers `/api/assess` utilise `validateBody` avec un schéma de portée sous forme d’union discriminée.
 
 ---
 
@@ -2263,5 +2195,3 @@ Consultez [Authentification de gestion](../guides/MANAGEMENT-AUTH.md) pour déco
 - `requireLogin` peut être activé ou désactivé via `/api/settings/require-login`
 - Les routes `/v1/*` peuvent exiger une clé API Bearer lorsque `REQUIRE_API_KEY=true`
 - Dans cette référence, « jeton de gestion » / « clé API limitée à la gestion » désigne l’une des familles décrites dans ce guide, et non un type de secret supplémentaire non défini
-
-> **Rupture de compatibilité (v3.8.0)** — `/api/v1/agents/tasks/*` et les points de terminaison de gestion du délai de récupération nécessitent désormais une **authentification de gestion** (cookie `auth_token` du tableau de bord ou clé API limitée à la gestion). Les clients qui appelaient auparavant ces routes sans authentification recevront `401 Unauthorized`. Consultez le commit `588a0333` (`fix(auth): require management auth for agent and cooldown APIs`).

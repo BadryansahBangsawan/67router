@@ -169,5 +169,4 @@ Kun én backendændring var nødvendig for denne funktion:
 - Hovedplan: `_tasks/features-v3.8.6/refactorpages/_orchestration/master-plan-group-C.md`
 - Funktionsplan: `_tasks/features-v3.8.6/refactorpages/18-search-tools-studio-redesign.plan.md`
 - Register over søgeudbydere: `open-sse/config/searchRegistry.ts`
-- Playground Studio (delt `ExportCodeModal` + `codeExport.ts`): `docs/frameworks/PLAYGROUND_STUDIO.md`
 - Backend til webhentning: `src/app/api/v1/web/fetch/route.ts`

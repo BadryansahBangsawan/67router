@@ -24,7 +24,6 @@ Nduzi zuru ezu maka ịhazi ndị na-enye ọrụ, imepụta combo, ijikọ ngwa
 - [Sistemụ Skills](#-skills-system)
 - [Sistemụ Memory](#-memory-system)
 - [Webhooks](#-webhooks)
-- [Cloud Agents](#-cloud-agents)
 - [Nlekọta Site na Mmemme](#-programmatic-management)
 - [CLI Dị n’Ime](#-internal-cli)
 - [Ngwa Desktop (Electron)](#-desktop-application-electron)
@@ -1236,8 +1235,6 @@ Jiri URL SSE `http://localhost:20128/api/mcp/sse` na igodo API Bearer e mepụta
 
 ### Scopes
 
-MCP na-akọwapụta scopes 32 nwere aha ugbu a. Enwere ike ịmachi igodo Bearer ọ bụla ka ọ bụrụ naanị scopes akọwapụtara — lee [MCP-SERVER.md](../frameworks/MCP-SERVER.md) maka ndepụta scope na ngwaọrụ bụ isi na [A2A-SERVER.md](../frameworks/A2A-SERVER.md) maka schema JSON-RPC.
-
 ---
 
 ## 🧠 Usoro Nkà
@@ -1246,7 +1243,6 @@ MCP na-akọwapụta scopes 32 nwere aha ugbu a. Enwere ike ịmachi igodo Beare
 
 - **UI Ahịa** — Chọgharịa ma wụnye nkà site na **Dashboard → Skills**
 - **Oke ikike n'otu igodo** — Machibido nkà ndị igodo API ọ bụla nwere ike ịkpọ
-- **Nkà ahaziri iche** — Tinye faịlụ TypeScript na `src/lib/a2a/skills/`, debanye ya aha, a ga-enwekwa ike ịkpọ ya ozugbo site na A2A
 
 Ntụaka zuru ezu: [SKILLS.md](../frameworks/SKILLS.md).
 
@@ -1275,18 +1271,6 @@ Debanye aha maka mmemme 67router iji mee nlekota na akpaaka ozugbo.
 - Nnwale ọzọ: mgbalị 3 nwere oge nchere na-abawanye n'usoro exponential, emesịa ebufe ya na dead-letter queue
 
 Schema zuru ezu dị na [WEBHOOKS.md](../frameworks/WEBHOOKS.md).
-
----
-
-## ☁️ Ndị Nnọchiteanya Cloud
-
-67router na-ejikọta na ndị nnọchiteanya cloud maka ide koodu (**OpenAI Codex Cloud**, **Devin**, **Jules**, **Antigravity**) ka ị nwee ike iziga ọrụ ndị na-ewe ogologo oge site n'otu dashboard ahụ nke na-ahụ maka routing mpaghara gị.
-
-- Mepụta ọrụ na **Dashboard → Cloud Agents** ma ọ bụ site na `POST /api/v1/agents/tasks`
-- Soro ọnọdụ, ndekọ, na artifacts nke ọrụ ọ bụla
-- Weta igodo API nke gị maka provider ọ bụla — ozi nzere anaghị apụ n'ime instance 67router
-
-Ntụaka zuru ezu: [CLOUD_AGENT.md](../frameworks/CLOUD_AGENT.md).
 
 ---
 
@@ -1343,7 +1327,6 @@ omniroute restore [<timestamp>]    # Weghachite site na snapshot
 omniroute health                   # Ọnọdụ ọrụ zuru ezu (ndị nkwụsị, cache, ebe nchekwa)
 omniroute quota                    # Ojiji oke onye na-eweta ọrụ
 omniroute mcp status               # Ọnọdụ sava MCP
-omniroute a2a status               # Ọnọdụ sava A2A
 omniroute tunnel list|create|stop  # Ọwara Cloudflare/Tailscale/ngrok
 omniroute reset-password           # Tọgharịa paswọọdụ onye nchịkwa
 omniroute --mcp                    # Malite sava MCP site na stdio

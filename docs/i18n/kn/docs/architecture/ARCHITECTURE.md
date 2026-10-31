@@ -128,13 +128,11 @@ v3.8.0 ಪ್ಲಾಟ್ಫಾರ್ಮ್ಗಾಗಿ ಅಧಿಕೃತ, ಆ�
 - `/dashboard/limits` — ಕೋಟಾ/ದರ ನಿಯಂತ್ರಣಗಳು
 - `/dashboard/cli-tools` — CLI ಪ್ರಾರಂಭಿಕ ಸಂರಚನೆ, ರನ್ಟೈಮ್ ಪತ್ತೆ, ಸಂರಚನೆ ರಚನೆ
 - `/dashboard/agents` — ಪತ್ತೆಯಾದ ACP ಏಜೆಂಟ್ಗಳು + ಕಸ್ಟಮ್ ಏಜೆಂಟ್ ನೋಂದಣಿ
-- `/dashboard/cloud-agents` — ಕ್ಲೌಡ್ನಲ್ಲಿ ಹೋಸ್ಟ್ ಮಾಡಲಾದ ಏಜೆಂಟ್ ಕಾರ್ಯಗಳು (Codex Cloud, Devin, Jules) ಮತ್ತು ಕಾರ್ಯದ ಜೀವನಚಕ್ರ
 - `/dashboard/skills` — A2A ಕೌಶಲ್ಯ ರಿಜಿಸ್ಟ್ರಿ, ಸ್ಯಾಂಡ್ಬಾಕ್ಸ್ ಕಾರ್ಯಗತಗೊಳಿಸುವಿಕೆ, ಅಂತರ್ನಿರ್ಮಿತ ಕೌಶಲ್ಯ ಕ್ಯಾಟಲಾಗ್
 - `/dashboard/memory` — ಶಾಶ್ವತ ಸಂಭಾಷಣಾ ಮೆಮೊರಿಯ ಪರಿಶೀಲನೆ ಮತ್ತು ಮರುಪಡೆಯುವಿಕೆ
 - `/dashboard/webhooks` — ಹೊರಹೋಗುವ ವೆಬ್ಹುಕ್ ಚಂದಾದಾರಿಕೆಗಳು, ರಹಸ್ಯ ಪರಿವರ್ತನೆ, ಮರುಪ್ರಯತ್ನದ ಅಂಕಿಅಂಶಗಳು
 - `/dashboard/batch` — ಬ್ಯಾಚ್ ಕಾರ್ಯ ಸಲ್ಲಿಕೆ ಮತ್ತು ಪ್ರಗತಿ
 - `/dashboard/cache` — ರೀಡ್-ಥ್ರೂ ಮತ್ತು ತಾರ್ಕಿಕ ಕ್ಯಾಶ್ ಅಂಕಿಅಂಶಗಳು, ಹೊರಹಾಕುವಿಕೆ ನಿಯಂತ್ರಣಗಳು
-- `/dashboard/playground` — ಸಂರಚಿಸಲಾದ ಯಾವುದೇ ಕಾಂಬೊ/ಮಾದರಿಯೊಂದಿಗೆ ಸಂವಾದಾತ್ಮಕ ಚಾಟ್ ಪ್ರಯೋಗಾಂಗಣ
 - `/dashboard/changelog` — ಅಪ್ಲಿಕೇಶನ್ನೊಳಗಿನ ಬದಲಾವಣೆಗಳ ದಾಖಲೆ ವೀಕ್ಷಕ (`CHANGELOG.md` ಅನ್ನು ರೆಂಡರ್ ಮಾಡುತ್ತದೆ)
 - `/dashboard/system` — ರನ್ಟೈಮ್ ರೋಗನಿರ್ಣಯ, ಆವೃತ್ತಿ ಮಾಹಿತಿ, ಪರಿಸರ ಮೌಲ್ಯೀಕರಣ ಇಂಟರ್ಫೇಸ್
 - `/dashboard/onboarding` — ಹೊಸ ಸ್ಥಾಪನೆಗಳಿಗಾಗಿ ಮೊದಲ ಚಾಲನೆಯ ಸೆಟಪ್ ವಿಜರ್ಡ್
@@ -252,7 +250,6 @@ flowchart LR
 - ಬಜೆಟ್: `src/app/api/usage/budget` (GET/POST)
 - ಫಾಲ್ಬ್ಯಾಕ್ ಸರಪಳಿಗಳು: `src/app/api/fallback/chains` (GET/POST/DELETE)
 - ಅನುಸರಣೆ ಆಡಿಟ್: `src/app/api/compliance/audit-log` (GET, ಪುಟೀಕರಣ + ರಚನಾತ್ಮಕ ಮೆಟಾಡೇಟಾದೊಂದಿಗೆ)
-- ಮೌಲ್ಯಮಾಪನಗಳು: `src/app/api/evals` (GET/POST), `src/app/api/evals/[suiteId]` (GET)
 - ನೀತಿಗಳು: `src/app/api/policies` (GET/POST)
 - ಸಿಂಕ್ ಟೋಕನ್ಗಳು: `src/app/api/sync/tokens` (GET/POST), `src/app/api/sync/tokens/[id]` (GET/DELETE)
 - ಕಾನ್ಫಿಗ್ ಬಂಡಲ್: `src/app/api/sync/bundle` (GET, ಸೆಟ್ಟಿಂಗ್ಗಳು/ಪೂರೈಕೆದಾರರು/ಕಾಂಬೊಗಳು/ಕೀಗಳ ETag-ಆವೃತ್ತೀಕರಿಸಿದ ಸ್ನ್ಯಾಪ್ಶಾಟ್)
@@ -316,7 +313,6 @@ flowchart LR
 - ಫೆಚ್ ಕಾಲಾವಧಿ ಮಿತಿ: `src/shared/utils/fetchTimeout.ts`
 - ವಿನಂತಿ ಟೆಲಿಮೆಟ್ರಿ: `src/shared/utils/requestTelemetry.ts`
 - ಅನುಸರಣೆ/ಲೆಕ್ಕಪರಿಶೋಧನೆ: `src/lib/compliance/index.ts`
-- ಮೌಲ್ಯಮಾಪನ ರನ್ನರ್: `src/lib/evals/evalRunner.ts`
 - ಡೊಮೇನ್ ಸ್ಥಿತಿ ಶಾಶ್ವತ ಸಂಗ್ರಹಣೆ: `src/lib/db/domainState.ts` — ಫಾಲ್ಬ್ಯಾಕ್ ಸರಪಳಿಗಳು, ಬಜೆಟ್ಗಳು, ವೆಚ್ಚ ಇತಿಹಾಸ, ಲಾಕ್ಔಟ್ ಸ್ಥಿತಿ ಮತ್ತು ಸರ್ಕ್ಯೂಟ್ ಬ್ರೇಕರ್ಗಳಿಗಾಗಿ SQLite CRUD
 
 OAuth ಪ್ರೊವೈಡರ್ ಮಾಡ್ಯೂಲ್ಗಳು (`src/lib/oauth/providers/` ಅಡಿಯಲ್ಲಿ 27 ಪ್ರತ್ಯೇಕ ಫೈಲ್ಗಳು):
@@ -383,23 +379,6 @@ OAuth ಪ್ರೊವೈಡರ್ ಮಾಡ್ಯೂಲ್ಗಳು (`src/lib/oa
 
 ಸಂಪೂರ್ಣ ಅಲ್ಗಾರಿದಮಿಕ್ ವಿವರಗಳಿಗಾಗಿ (ಅಂಶದ ಸೂತ್ರಗಳು, ತೂಕದ ಹೊಂದಾಣಿಕೆ),
 [`docs/routing/AUTO-COMBO.md`](../routing/AUTO-COMBO.md) ನೋಡಿ.
-
-### B. ಕ್ಲೌಡ್ ಏಜೆಂಟ್ಗಳು
-
-ಕ್ಲೌಡ್ ಏಜೆಂಟ್ಗಳು ತೃತೀಯ-ಪಕ್ಷದ ಹೋಸ್ಟ್ ಮಾಡಿದ ಕೋಡ್-ಏಜೆಂಟ್ ಪ್ಲಾಟ್ಫಾರ್ಮ್ಗಳನ್ನು (Codex Cloud, Devin,
-Jules) ಏಕರೂಪದ DB-ಬೆಂಬಲಿತ ಕಾರ್ಯ ಜೀವನಚಕ್ರದ ಹಿಂದೆ ಸುತ್ತುವರಿಯುತ್ತವೆ. ಎಲ್ಲಾ ಕಾರ್ಯ ರಚನೆ/ಪರಿಶೀಲನೆ
-ಎಂಡ್ಪಾಯಿಂಟ್ಗಳಿಗೆ ನಿರ್ವಹಣಾ ದೃಢೀಕರಣ ಅಗತ್ಯವಿದೆ.
-
-- ಮಾಡ್ಯೂಲ್ ಮೂಲ: `src/lib/cloudAgent/` (`baseAgent.ts`, `registry.ts`, `api.ts`,
-  `types.ts`, `db.ts`, ಜೊತೆಗೆ `agents/` ಅಡಿಯಲ್ಲಿನ ಪ್ರತಿ-ಏಜೆಂಟ್ ಉಪಡೈರೆಕ್ಟರಿಗಳು)
-- ಪ್ರತಿ-ಏಜೆಂಟ್ ಅನುಷ್ಠಾನಗಳು: `agents/codex/`, `agents/devin/`, `agents/jules/`
-- ಸಾರ್ವಜನಿಕ ಎಂಡ್ಪಾಯಿಂಟ್ಗಳು: `/api/v1/agents/tasks/*` (ಪಟ್ಟಿಮಾಡಿ/ರಚಿಸಿ/ಪಡೆಯಿರಿ/ರದ್ದುಗೊಳಿಸಿ)
-- ನಿರ್ವಹಣಾ ಎಂಡ್ಪಾಯಿಂಟ್ಗಳು: `/api/cloud/*` (ಪ್ರೊವಿಷನಿಂಗ್, ಸ್ಥಿತಿ, ಬ್ಯಾಚ್)
-- ಡ್ಯಾಶ್ಬೋರ್ಡ್: `/dashboard/cloud-agents`
-- ಸಂಗ್ರಹಣೆ: `cloud_agent_tasks` ಕೋಷ್ಟಕ
-
-ಪ್ರತಿ-ಏಜೆಂಟ್ ಪ್ರೊವಿಷನಿಂಗ್ ಮತ್ತು OAuth ನ ನಿರ್ದಿಷ್ಟ ವಿವರಗಳಿಗಾಗಿ,
-[`docs/frameworks/CLOUD_AGENT.md`](../frameworks/CLOUD_AGENT.md) ನೋಡಿ.
 
 ### C. ಗಾರ್ಡ್ರೇಲ್ಗಳು
 

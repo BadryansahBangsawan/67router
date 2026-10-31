@@ -50,7 +50,6 @@ Agent AI / IDE
 | Trafic în umbră                          | `open-sse/services/combo/shadowRouting.ts`                                                                                |
 | Mecanisme de protecție                   | `src/lib/guardrails/` (hook-uri pre/post)                                                                                 |
 | Cache exact                              | `src/lib/semanticCache.ts` (bazat pe semnătură)                                                                           |
-| Evaluatoare / rutare bazată pe evaluări  | `src/lib/evals/`, `open-sse/services/evalRouting.ts`                                                                      |
 | Explicabilitatea deciziei combo          | `open-sse/services/combo/decisionTrace.ts`                                                                                |
 | Evenimente în timp real pentru dashboard | `src/lib/events/eventBus.ts` (canal de notificare UI, payload-uri `unknown`, istoric cu 100 de intrări)                   |
 
@@ -270,8 +269,6 @@ backend de inteligență/evaluare, nu o dependență**. Punctele de integrare:
 - Un viitor `Evaluator` (determinist, evaluator local, HTTP, WASM) ar consuma
   evenimente/urme și ar returna un `QualityScore` care alimentează aceeași cale
   `getQualityScore`/factor-de-calitate.
-- Rutarea existentă bazată pe evaluări (`open-sse/services/evalRouting.ts`) deja
-  reordonează țintele combinației în funcție de ratele de succes `eval_runs` atunci când este activată.
 
 Nicio evaluare nu rulează sincron pe calea cererii, iar gateway-ul funcționează
 complet în absența evaluatorului.

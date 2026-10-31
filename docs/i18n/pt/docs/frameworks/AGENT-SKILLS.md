@@ -44,7 +44,6 @@ src/app/api/agent-skills/
   generate/route.ts                    — POST /api/agent-skills/generate (autenticação necessária)
 
 open-sse/mcp-server/tools/agentSkillTools.ts  — 3 ferramentas MCP (listar, obter, cobertura)
-src/lib/a2a/skills/listCapabilities.ts        — Skill A2A: list-capabilities
 ```
 
 ---
@@ -140,8 +139,6 @@ A competência A2A `list-capabilities` devolve o catálogo completo de 45 compet
 }
 ```
 
-Consulte [A2A-SERVER.md](./A2A-SERVER.md) para obter detalhes do protocolo.
-
 ---
 
 ## Catálogo — 45 IDs de competências
@@ -189,12 +186,11 @@ Consulte [A2A-SERVER.md](./A2A-SERVER.md) para obter detalhes do protocolo.
 | `cli-contexts`        | cli-contexts       | `omniroute contexts`    |
 | `cli-cost-usage`      | cli-cost-usage     | `omniroute cost`        |
 | `cli-mcp`             | cli-mcp            | `omniroute mcp`         |
-| `cli-a2a`             | cli-a2a            | `omniroute a2a`         |
 | `cli-tunnel`          | cli-tunnel         | `omniroute tunnel`      |
 | `cli-backup-sync`     | cli-backup-sync    | `omniroute backup`      |
 | `cli-policy-audit`    | cli-policy-audit   | `omniroute policy`      |
 | `cli-batches`         | cli-batches        | `omniroute batch`       |
-| `cli-eval`            | cli-eval           | `omniroute eval`        |
+| `cli-eval`            | cli-eval           | `omniroute simulate`    |
 | `cli-plugins-skills`  | cli-plugins-skills | `omniroute plugins`     |
 | `cli-setup`           | cli-setup          | `omniroute setup`       |
 | `cli-skill-collector` | cli-setup          | `omniroute skills`      |
@@ -312,6 +308,5 @@ curl "http://localhost:20128/api/agent-skills/coverage"
 
 - [SKILLS.md](./SKILLS.md) — framework Omni Skills (injeção de ferramentas em LLM + marketplace)
 - [MCP-SERVER.md](./MCP-SERVER.md) — catálogo de ferramentas MCP (ferramentas `omniroute_agent_skills_*`)
-- [A2A-SERVER.md](./A2A-SERVER.md) — protocolo A2A (competência `list-capabilities`)
 - `src/lib/agentSkills/` — catálogo, gerador, analisadores
 - `skills/` — ficheiros SKILL.md gerados (45 entradas)

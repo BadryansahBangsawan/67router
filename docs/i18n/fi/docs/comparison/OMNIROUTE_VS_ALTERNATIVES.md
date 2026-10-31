@@ -24,7 +24,6 @@ Objektiivinen ominaisuusvertailu suosittuihin avoimen lähdekoodin tekoälyreiti
 | **A2A-protokolla**                                                |                  ✅ 6 taitoa                  |          ❌           |        ❌         |       ❌       |
 | **Muisti (FTS5 + vektori)**                                       |                      ✅                       |          ❌           |        ❌         |       ❌       |
 | **Suojaukset (PII, injektio, koneänäkö)**                         |                      ✅                       |      osittainen       |        ❌         | ✅ maksullinen |
-| **Pilviagentti-integraatiot**                                     |          Codex, Cursor, Devin, Jules          |          ❌           |        ❌         |       ❌       |
 | **Katkaisija palveluntarjoajakohtaisesti**                        |        ✅ 3-tilainen, laiska palautus         |       perustaso       |        ❌         |       ✅       |
 | **TLS-sormenjäljen peitto (JA3/JA4)**                             |                  ✅ wreq-js                   |          ❌           |        ❌         |       ❌       |
 | **Arviointikehys**                                                |              ✅ sisäänrakennettu              |          ❌           |        ❌         | ⚠ maksullinen  |

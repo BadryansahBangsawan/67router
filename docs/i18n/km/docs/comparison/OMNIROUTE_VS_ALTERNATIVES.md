@@ -24,7 +24,6 @@
 | **ពិធីការ A2A**                                             |                 ✅ ជំនាញ 6                  |       ❌       |        ❌         |      ❌       |
 | **អង្គចងចាំ (FTS5 + vector)**                               |                     ✅                      |       ❌       |        ❌         |      ❌       |
 | **របាំងការពារ (PII, injection, រូបភាព)**                    |                     ✅                      |    មួយផ្នែក    |        ❌         | ✅ បង់ប្រាក់  |
-| **ការរួមបញ្ចូល cloud agent**                                |         Codex, Cursor, Devin, Jules         |       ❌       |        ❌         |      ❌       |
 | **Circuit breaker សម្រាប់ provider នីមួយៗ**                 |        ✅ 3 ស្ថានភាព, lazy recovery         |    មូលដ្ឋាន    |        ❌         |      ✅       |
 | **ការលាក់បាំង TLS fingerprint (JA3/JA4)**                   |                 ✅ wreq-js                  |       ❌       |        ❌         |      ❌       |
 | **ក្របខ័ណ្ឌ eval**                                          |                ✅ មានស្រាប់                 |       ❌       |        ❌         |  ⚠ បង់ប្រាក់  |

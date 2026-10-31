@@ -246,17 +246,6 @@ Pirmiau pateiktas MCP įrankių sąrašas (110 unikalių įrankių, apskaičiuot
 apribotas vykdymo maršruto parinkimo, talpyklos, glaudinimo, atminties, įgūdžių, tarpinio serverio ir konteksto šaltinio operacijomis. Dvi gretimos
 sistemos pateikiamos kartu su MCP serveriu versijoje v3.8.0 ir yra dokumentuotos atskirai:
 
-### Debesijos agentai
-
-Debesijos agentai yra už proceso ribų veikiantys DI programavimo agentai (codex-cloud, cursor-cloud, devin, jules), integruoti į
-67router naudojant tą patį ryšio modelį, kuris naudojamas LLM teikėjams. Jie pasiekiami per
-atskirą REST sąsają (`/api/v1/agents/*`) ir **nėra** MCP įrankių katalogo dalis
-— iškviečiant debesijos agentą MCP apimtis nenaudojama.
-
-- Įgyvendinimas: `src/lib/cloudAgent/` (`registry.ts`, `agents/codex.ts`, `agents/cursor.ts`, `agents/devin.ts`, `agents/jules.ts`).
-- Gyvavimo ciklas: `createTask`, `getStatus`, `approvePlan`, `sendMessage`, `listSources`.
-- Dokumentacija: [docs/frameworks/CLOUD_AGENT.md](./CLOUD_AGENT.md).
-
 ### Apsaugos priemonės
 
 Apsaugos priemonės yra prieš vykdymą ir po jo taikomi filtrai (vision-bridge, pii-masker, prompt-injection),

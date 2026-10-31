@@ -49,7 +49,6 @@ Agent AI / IDE
 | Ruch w tle                                 | `open-sse/services/combo/shadowRouting.ts`                                                                             |
 | Reguły ochronne                            | `src/lib/guardrails/` (hooki przed/po)                                                                                 |
 | Pamięć podręczna exact                     | `src/lib/semanticCache.ts` (oparta na sygnaturach)                                                                     |
-| Ewaluatory / routing oparty na ewaluacji   | `src/lib/evals/`, `open-sse/services/evalRouting.ts`                                                                   |
 | Wyjaśnialność decyzji combo                | `open-sse/services/combo/decisionTrace.ts`                                                                             |
 | Zdarzenia dashboardu w czasie rzeczywistym | `src/lib/events/eventBus.ts` (kanał powiadomień interfejsu użytkownika, payloady `unknown`, historia 100 wpisów)       |
 
@@ -269,8 +268,6 @@ backend inteligencji/ewaluacji, a nie zależność**. Punkty integracji:
 - Przyszły `Evaluator` (deterministyczny, lokalny sędzia, HTTP, WASM) będzie przetwarzać
   zdarzenia/ślady i zwracać `QualityScore`, który zasili tę samą ścieżkę
   `getQualityScore`/współczynnika jakości.
-- Istniejący routing oparty na ewaluacji (`open-sse/services/evalRouting.ts`) już
-  zmienia kolejność celów combo według współczynników zaliczeń `eval_runs`, gdy ta funkcja jest włączona.
 
 Żadna ewaluacja nie jest uruchamiana synchronicznie na ścieżce żądania, a brama działa
 w pełni także bez ewaluatora.

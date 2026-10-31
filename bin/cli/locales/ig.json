@@ -390,34 +390,6 @@
       "description": "Ndekọ nyocha MCP (aha ọzọ maka audit --source mcp)"
     }
   },
-  "a2a": {
-    "skills": {
-      "description": "Depụta nkà A2A dịnụ site na kaadị onye nnọchi anya"
-    },
-    "invoke": {
-      "description": "Kpọọ nkà A2A ma weghachite ID ọrụ ahụ",
-      "input": "Ihe JSON ntinye",
-      "input_file": "Ụzọ faịlụ ntinye JSON",
-      "wait": "Chere ka ọrụ ahụ gwụ tupu ịlaghachi",
-      "timeout": "Oge njedebe ichere ka ọ gwụ na ms (ndabara: 60000)"
-    },
-    "tasks": {
-      "description": "Jikwaa ọrụ A2A",
-      "list": {
-        "status": "Jiri ọkwa nyochaa",
-        "skill": "Jiri ID nkà nyochaa"
-      },
-      "watch": {
-        "description": "Na-ajụgharị ọkwa ọrụ ruo mgbe ọ gwụ"
-      },
-      "stream": {
-        "description": "Ziga mmemme mmezu ọrụ n'usoro site na SSE"
-      },
-      "logs": {
-        "description": "Gosi ozi na artefact ọrụ"
-      }
-    }
-  },
   "policy": {
     "description": "Jikwaa iwu ikike 67router",
     "list": {
@@ -696,99 +668,6 @@
       "provider": "ID onye na-eweta a ga-akagbu",
       "connection_id": "Kagbuo otu njikọ kpọmkwem site na ID",
       "yes": "Mafere ozi nkwenye"
-    }
-  },
-  "cloud": {
-    "description": "Jikwaa ọrụ ndị nnọchiteanya AI igwe ojii (codex, devin, jules)",
-    "agents": {
-      "description": "Depụta ndị nnọchiteanya igwe ojii dị"
-    },
-    "agent": {
-      "description": "Jikwaa ọrụ ndị nnọchiteanya igwe ojii {agent}",
-      "auth": {
-        "description": "Nye {agent} ikike site na OAuth"
-      }
-    },
-    "task": {
-      "description": "Jikwaa ọrụ ndị nnọchiteanya igwe ojii",
-      "create": {
-        "description": "Mepụta ọrụ nnọchiteanya ọhụrụ",
-        "title": "Aha ọrụ (ndabara bụ mkpụrụedemede 80 mbụ nke ntụziaka)",
-        "prompt": "Ederede ntụziaka ọrụ",
-        "prompt_file": "Gụọ ntụziaka site na faịlụ",
-        "repo": "URL ebe nchekwa koodu a ga-eme oyiri maka ọrụ ahụ",
-        "branch": "Aha alaka a ga-eji",
-        "metadata": "Ihe metadata JSON"
-      },
-      "list": {
-        "description": "Depụta ọrụ ndị nnọchiteanya",
-        "status": "Jiri ọnọdụ yọcha (running|completed|failed|cancelled)",
-        "limit": "Nsonaazụ kachasị (ndabara: 50)"
-      },
-      "get": {
-        "description": "Were nkọwa ọrụ site na ID"
-      },
-      "status": {
-        "description": "Bipụta ọnọdụ ọrụ (running|completed|failed|cancelled)"
-      },
-      "cancel": {
-        "description": "Kagbuo ọrụ na-aga n’ihu",
-        "yes": "Mafere ajụjụ nkwenye"
-      },
-      "approve": {
-        "description": "Kwado atụmatụ nke agent ka mmezu malite"
-      },
-      "message": {
-        "description": "Ziga ozi na ọrụ na-aga n’ihu"
-      }
-    },
-    "sources": {
-      "description": "Depụta faịlụ isi mmalite ndị otu ọrụ mepụtara"
-    }
-  },
-  "eval": {
-    "description": "Jikwaa nchịkọta na mmemme ntule",
-    "suites": {
-      "description": "Jikwaa nchịkọta ntule",
-      "list": {
-        "description": "Depụta nchịkọta ntule"
-      },
-      "get": {
-        "description": "Nweta nkọwa nchịkọta ntule site na ID"
-      },
-      "create": {
-        "description": "Jiri faịlụ JSON mepụta nchịkọta ntule",
-        "file": "Ụzọ faịlụ JSON nke na-akọwa nchịkọta ahụ"
-      }
-    },
-    "run": {
-      "description": "Malite mmemme ntule maka otu nchịkọta",
-      "model": "ID nke model a ga-enyocha (ndabara: auto)",
-      "combo": "Manye otu combo akọwapụtara site n’aha",
-      "concurrency": "Ọnụọgụ sample ndị a ga-eme n’otu oge (ndabara: 4)",
-      "tag": "Tinye mkpado na mmemme a maka nzacha n’ọdịnihu",
-      "watch": "Lelee ọganihu mmemme ruo mgbe ọ gwụchara"
-    },
-    "list": {
-      "description": "Depụta mmemme ntule",
-      "suite": "Jiri ID nchịkọta nyochaa",
-      "status": "Jiri ọnọdụ nyochaa",
-      "since": "Weghachite mmemme ndị malitere kemgbe timestamp a",
-      "limit": "Nsonaazụ kachasị (ndabara: 50)"
-    },
-    "get": {
-      "description": "Nweta nkọwa mmemme ntule site na ID"
-    },
-    "results": {
-      "description": "Gosi nsonaazụ sample maka otu mmemme ntule",
-      "failed": "Gosi naanị sample ndị dara"
-    },
-    "cancel": {
-      "description": "Kagbuo ntule na-aga n’ihu",
-      "yes": "Mafere ajụjụ nkwenye"
-    },
-    "scorecard": {
-      "description": "Gosi kaadị akara maka mmemme ntule emechara"
     }
   },
   "program": {

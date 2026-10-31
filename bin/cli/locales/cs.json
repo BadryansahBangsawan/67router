@@ -390,34 +390,6 @@
       "description": "Protokol auditu MCP (alias pro audit --source mcp)"
     }
   },
-  "a2a": {
-    "skills": {
-      "description": "Vypsat dostupné dovednosti A2A z karty agenta"
-    },
-    "invoke": {
-      "description": "Vyvolat dovednost A2A a vrátit ID úlohy",
-      "input": "Vstupní objekt JSON",
-      "input_file": "Cesta ke vstupnímu souboru JSON",
-      "wait": "Před návratem počkat na dokončení úlohy",
-      "timeout": "Časový limit čekání na dokončení v ms (výchozí: 60000)"
-    },
-    "tasks": {
-      "description": "Spravovat úlohy A2A",
-      "list": {
-        "status": "Filtrovat podle stavu",
-        "skill": "Filtrovat podle ID dovednosti"
-      },
-      "watch": {
-        "description": "Pravidelně kontrolovat stav úlohy až do dokončení"
-      },
-      "stream": {
-        "description": "Streamovat události provádění úlohy prostřednictvím SSE"
-      },
-      "logs": {
-        "description": "Zobrazit zprávy a artefakty úlohy"
-      }
-    }
-  },
   "policy": {
     "description": "Spravovat zásady autorizace 67router",
     "list": {
@@ -696,99 +668,6 @@
       "provider": "ID poskytovatele, kterého chcete odvolat",
       "connection_id": "Odvolat konkrétní připojení podle ID",
       "yes": "Přeskočit výzvu k potvrzení"
-    }
-  },
-  "cloud": {
-    "description": "Spravovat úlohy cloudových AI agentů (codex, devin, jules)",
-    "agents": {
-      "description": "Vypsat dostupné cloudové agenty"
-    },
-    "agent": {
-      "description": "Spravovat úlohy cloudového agenta {agent}",
-      "auth": {
-        "description": "Autorizovat agenta {agent} prostřednictvím OAuth"
-      }
-    },
-    "task": {
-      "description": "Spravovat úlohy cloudových agentů",
-      "create": {
-        "description": "Vytvořit novou úlohu agenta",
-        "title": "Název úlohy (výchozí je prvních 80 znaků zadání)",
-        "prompt": "Text zadání úlohy",
-        "prompt_file": "Načíst zadání ze souboru",
-        "repo": "URL repozitáře, který se má pro úlohu naklonovat",
-        "branch": "Název větve, která se má použít",
-        "metadata": "Objekt metadat JSON"
-      },
-      "list": {
-        "description": "Vypsat úlohy agenta",
-        "status": "Filtrovat podle stavu (running|completed|failed|cancelled)",
-        "limit": "Maximální počet výsledků (výchozí: 50)"
-      },
-      "get": {
-        "description": "Získat podrobnosti úlohy podle ID"
-      },
-      "status": {
-        "description": "Vypsat stav úlohy (running|completed|failed|cancelled)"
-      },
-      "cancel": {
-        "description": "Zrušit spuštěnou úlohu",
-        "yes": "Přeskočit výzvu k potvrzení"
-      },
-      "approve": {
-        "description": "Schválit plán agenta a zahájit provádění"
-      },
-      "message": {
-        "description": "Odeslat zprávu spuštěné úloze"
-      }
-    },
-    "sources": {
-      "description": "Vypsat zdrojové soubory vytvořené úlohou"
-    }
-  },
-  "eval": {
-    "description": "Spravovat sady vyhodnocení a jejich spuštění",
-    "suites": {
-      "description": "Spravovat sady vyhodnocení",
-      "list": {
-        "description": "Vypsat sady vyhodnocení"
-      },
-      "get": {
-        "description": "Získat podrobnosti sady vyhodnocení podle ID"
-      },
-      "create": {
-        "description": "Vytvořit sadu vyhodnocení ze souboru JSON",
-        "file": "Cesta k souboru JSON s definicí sady"
-      }
-    },
-    "run": {
-      "description": "Spustit běh vyhodnocení pro sadu",
-      "model": "ID modelu k vyhodnocení (výchozí: auto)",
-      "combo": "Vynutit konkrétní kombinaci podle názvu",
-      "concurrency": "Počet souběžných vzorků (výchozí: 4)",
-      "tag": "Označit tento běh štítkem pro pozdější filtrování",
-      "watch": "Sledovat průběh běhu až do dokončení"
-    },
-    "list": {
-      "description": "Vypsat běhy vyhodnocení",
-      "suite": "Filtrovat podle ID sady",
-      "status": "Filtrovat podle stavu",
-      "since": "Vrátit běhy od tohoto časového razítka",
-      "limit": "Maximální počet výsledků (výchozí: 50)"
-    },
-    "get": {
-      "description": "Získat podrobnosti běhu vyhodnocení podle ID"
-    },
-    "results": {
-      "description": "Zobrazit výsledky vzorků běhu vyhodnocení",
-      "failed": "Zobrazit pouze neúspěšné vzorky"
-    },
-    "cancel": {
-      "description": "Zrušit probíhající vyhodnocení",
-      "yes": "Přeskočit výzvu k potvrzení"
-    },
-    "scorecard": {
-      "description": "Zobrazit přehled skóre dokončeného běhu vyhodnocení"
     }
   },
   "program": {

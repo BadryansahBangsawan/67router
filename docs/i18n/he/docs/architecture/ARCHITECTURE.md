@@ -128,13 +128,11 @@ _עודכן לאחרונה: 2026-06-28_
 - `/dashboard/limits` — בקרות מכסה/קצב
 - `/dashboard/cli-tools` — קליטת CLI, זיהוי סביבת ריצה ויצירת תצורה
 - `/dashboard/agents` — סוכני ACP שזוהו + רישום סוכנים מותאמים אישית
-- `/dashboard/cloud-agents` — משימות סוכנים המתארחות בענן (Codex Cloud, Devin, Jules) ומחזור חיי המשימה
 - `/dashboard/skills` — מרשם מיומנויות A2A, הרצה בארגז חול וקטלוג מיומנויות מובנות
 - `/dashboard/memory` — בדיקה ואחזור של זיכרון שיחה מתמשך
 - `/dashboard/webhooks` — מינויים ל-webhook יוצא, החלפת סודות ונתוני ניסיונות חוזרים
 - `/dashboard/batch` — שליחת עבודות אצווה והתקדמותן
 - `/dashboard/cache` — נתונים סטטיסטיים של מטמון לקריאה-דרך ומטמון הסקה, ובקרות פינוי
-- `/dashboard/playground` — סביבת ניסוי אינטראקטיבית לצ׳אט מול כל שילוב/מודל מוגדר
 - `/dashboard/changelog` — מציג יומן שינויים בתוך היישום (מרנדר את `CHANGELOG.md`)
 - `/dashboard/system` — אבחון סביבת הריצה, פרטי גרסה וממשק לאימות הסביבה
 - `/dashboard/onboarding` — אשף הגדרה להפעלה ראשונה עבור התקנות חדשות
@@ -252,7 +250,6 @@ flowchart LR
 - תקציב: `src/app/api/usage/budget` (GET/POST)
 - שרשראות גיבוי: `src/app/api/fallback/chains` (GET/POST/DELETE)
 - ביקורת תאימות: `src/app/api/compliance/audit-log` (GET, עם עימוד + מטא-נתונים מובנים)
-- הערכות: `src/app/api/evals` (GET/POST), `src/app/api/evals/[suiteId]` (GET)
 - מדיניות: `src/app/api/policies` (GET/POST)
 - אסימוני סנכרון: `src/app/api/sync/tokens` (GET/POST), `src/app/api/sync/tokens/[id]` (GET/DELETE)
 - חבילת תצורה: `src/app/api/sync/bundle` (GET, תמונת מצב של הגדרות/ספקים/שילובים/מפתחות עם ניהול גרסאות באמצעות ETag)
@@ -316,7 +313,6 @@ flowchart LR
 - פסק זמן לאחזור: `src/shared/utils/fetchTimeout.ts`
 - טלמטריית בקשות: `src/shared/utils/requestTelemetry.ts`
 - תאימות/ביקורת: `src/lib/compliance/index.ts`
-- מריץ הערכות: `src/lib/evals/evalRunner.ts`
 - שמירת מצב התחום: `src/lib/db/domainState.ts` — פעולות CRUD של SQLite עבור שרשראות גיבוי, תקציבים, היסטוריית עלויות, מצב נעילה ומפסקי זרם
 
 מודולי ספקי OAuth ‏(27 קבצים נפרדים תחת `src/lib/oauth/providers/`):
@@ -385,23 +381,6 @@ Auto Combo מדרג ובוחר באופן דינמי יעדי ניתוב בזמ�
 
 לפרטים אלגוריתמיים מלאים (נוסחאות הגורמים, כוונון משקלים), ראו
 [`docs/routing/AUTO-COMBO.md`](../routing/AUTO-COMBO.md).
-
-### B. סוכני ענן
-
-Cloud Agents עוטף פלטפורמות צד שלישי מתארחות לסוכני קוד (Codex Cloud, Devin,
-Jules) מאחורי מחזור חיים אחיד של משימות המגובה במסד נתונים. כל נקודות הקצה
-ליצירה ולבדיקה של משימות דורשות אימות ניהולי.
-
-- שורש המודול: `src/lib/cloudAgent/` (`baseAgent.ts`, `registry.ts`, `api.ts`,
-  `types.ts`, `db.ts`, וכן תתי-תיקיות לכל סוכן תחת `agents/`)
-- מימושים לכל סוכן: `agents/codex/`, `agents/devin/`, `agents/jules/`
-- נקודות קצה ציבוריות: `/api/v1/agents/tasks/*` (הצגה/יצירה/אחזור/ביטול)
-- נקודות קצה ניהוליות: `/api/cloud/*` (הקצאה, מצב, אצווה)
-- לוח בקרה: `/dashboard/cloud-agents`
-- אחסון: טבלת `cloud_agent_tasks`
-
-לפרטי הקצאה ו-OAuth עבור כל סוכן, ראו
-[`docs/frameworks/CLOUD_AGENT.md`](../frameworks/CLOUD_AGENT.md).
 
 ### C. מנגנוני הגנה
 

@@ -168,5 +168,4 @@ Search Tools Studio፣ `/dashboard/search-tools`ን ከመሠረታዊ የፍለ
 - ዋና ዕቅድ፦ `_tasks/features-v3.8.6/refactorpages/_orchestration/master-plan-group-C.md`
 - የባህሪ ዕቅድ፦ `_tasks/features-v3.8.6/refactorpages/18-search-tools-studio-redesign.plan.md`
 - የፍለጋ አቅራቢ መዝገብ፦ `open-sse/config/searchRegistry.ts`
-- Playground Studio (የጋራ `ExportCodeModal` + `codeExport.ts`)፦ `docs/frameworks/PLAYGROUND_STUDIO.md`
 - የድር ማምጫ backend፦ `src/app/api/v1/web/fetch/route.ts`

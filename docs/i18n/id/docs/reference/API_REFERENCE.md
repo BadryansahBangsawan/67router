@@ -1437,9 +1437,8 @@ Respons GET mencakup `agents[]` (id, name, binary, version, installed, protocol,
 
 ### Evaluasi
 
-| Endpoint     | Metode   | Deskripsi                                         |
-| ------------ | -------- | ------------------------------------------------- |
-| `/api/evals` | GET/POST | Menampilkan suite evaluasi / menjalankan evaluasi |
+| Endpoint | Metode | Deskripsi |
+| -------- | ------ | --------- |
 
 ### Kebijakan
 
@@ -1762,31 +1761,6 @@ Digunakan oleh subsistem manajemen kunci otomatis untuk menerbitkan dan merotasi
 
 ---
 
-## Protokol Agen
-
-Tugas agen cloud (Claude Code, Codex Cloud, OpenHands, dll.) yang dijalankan dari jarak jauh atas nama pengguna 67router.
-
-| Metode | Path                          | Deskripsi                                                                                                                                                 |
-| ------ | ----------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| GET    | `/api/v1/agents/tasks`        | Menampilkan daftar tugas — mendukung `?provider=`, `?status=`, `?limit=` opsional (1–500, default 50)                                                     |
-| POST   | `/api/v1/agents/tasks`        | Membuat tugas — body divalidasi oleh `CreateCloudAgentTaskSchema` (`providerId`, `prompt`, `source`, `options?`). Mengembalikan `201` dengan amplop tugas |
-| DELETE | `/api/v1/agents/tasks?id=...` | Menghapus tugas                                                                                                                                           |
-| GET    | `/api/v1/agents/tasks/[id]`   | Membaca tugas — secara sinkron memperbarui status dari agen cloud upstream ketika `external_id` ditetapkan                                                |
-| POST   | `/api/v1/agents/tasks/[id]`   | Tindakan terdiskriminasi: `{action: "approve"}`, `{action: "message", message}`, atau `{action: "cancel"}`                                                |
-| DELETE | `/api/v1/agents/tasks/[id]`   | Menghapus tugas tertentu berdasarkan id                                                                                                                   |
-
-> **Autentikasi:** autentikasi pengelolaan diwajibkan pada setiap metode (`requireCloudAgentManagementAuth`). Sebelum v3.8.0, metode-metode ini tidak memerlukan autentikasi — lihat commit `588a0333` untuk perubahan yang tidak kompatibel tersebut.
-
-```bash
-# Membuat tugas cloud Claude Code
-curl -X POST http://localhost:20128/api/v1/agents/tasks \
-  -H "Authorization: Bearer your-management-key" \
-  -H "Content-Type: application/json" \
-  -d '{"providerId":"claude-code-cloud","prompt":"Fix the failing test","source":{"repo":"...","branch":"..."}}'
-```
-
----
-
 ## Proksi Pengelolaan
 
 Proksi HTTP(S)/SOCKS keluar yang dapat ditetapkan ke penyedia, akun, atau secara global.
@@ -1906,48 +1880,10 @@ Penyimpanan memori percakapan/faktual persisten, dengan cakupan per kunci API / 
 
 67router menyediakan endpoint A2A (Agent-to-Agent) JSON-RPC 2.0 serta pembungkus REST untuk keperluan inspeksi/dasbor.
 
-### JSON-RPC
-
-```bash
-POST /a2a
-Authorization: Bearer your-api-key   # opsional kecuali OMNIROUTE_API_KEY ditetapkan
-Content-Type: application/json
-
-{
-  "jsonrpc": "2.0",
-  "id": 1,
-  "method": "message/send",
-  "params": {
-    "skill": "smart-routing",
-    "messages": [{"role": "user", "content": "Route this coding task"}]
-  }
-}
-```
-
-Metode yang didukung (semuanya bergantung pada `settings.a2aEnabled`):
-
-| Metode           | Deskripsi                                                                  |
-| ---------------- | -------------------------------------------------------------------------- |
-| `message/send`   | Eksekusi keterampilan sinkron; mengembalikan `{task, artifacts, metadata}` |
-| `message/stream` | Eksekusi SSE streaming untuk kumpulan keterampilan yang sama               |
-| `tasks/get`      | Mengambil tugas berdasarkan `taskId`                                       |
-| `tasks/cancel`   | Membatalkan tugas berdasarkan `taskId`                                     |
-
-Keterampilan bawaan: `smart-routing`, `quota-management`, `provider-discovery`, `cost-analysis`, `health-report`.
-
-### Kartu Agen
-
-```bash
-GET /.well-known/agent.json
-```
-
-Mengembalikan kartu agen A2A publik (nama, deskripsi, kapabilitas, katalog keterampilan, skema autentikasi) — di-cache secara publik selama 1 jam. Tidak memerlukan autentikasi.
-
 ### Pembantu REST
 
 | Metode | Path                         | Deskripsi                                                                                                               |
 | ------ | ---------------------------- | ----------------------------------------------------------------------------------------------------------------------- |
-| GET    | `/api/a2a/status`            | Status aktif A2A + statistik tugas + ringkasan kartu agen yang di-cache                                                 |
 | GET    | `/api/a2a/tasks`             | Mencantumkan tugas — `?state=submitted\|working\|completed\|failed\|cancelled`, `?skill=`, `?limit=` (≤200), `?offset=` |
 | POST   | `/api/a2a/tasks`             | (Tidak diimplementasikan sebagai pembantu REST — buat melalui JSON-RPC `message/send`)                                  |
 | GET    | `/api/a2a/tasks/[id]`        | Mengambil satu tugas                                                                                                    |
@@ -1967,12 +1903,8 @@ Mengembalikan kartu agen A2A publik (nama, deskripsi, kapabilitas, katalog keter
 | GET | `/api/cloud/models/alias` | Mencantumkan alias model sebagaimana ditampilkan untuk sinkronisasi cloud |
 | GET | `/api/assess` | Membaca kategorisasi penilaian terbaru (per penyedia/model) |
 | POST | `/api/assess` | Menjalankan penilaian — isi: `{scope: {type:"all"}                                                   | {type:"provider", providerId} | {type:"model", modelId}, trigger?}` |
-| GET | `/api/evals` | Mencantumkan rangkaian evaluasi bawaan + eksekusi terbaru |
-| POST | `/api/evals` | Memicu eksekusi evaluasi |
-| POST | `/api/evals/suites` | Membuat rangkaian evaluasi khusus — isi divalidasi oleh `evalSuiteSaveSchema` |
-| GET | `/api/evals/suites/[id]` | Mengambil rangkaian evaluasi khusus |
 
-**Autentikasi:** `/api/cloud/auth` memvalidasi kunci Bearer secara langsung dan mengembalikan kunci yang disamarkan serta `projectId` dari setiap koneksi hanya untuk kunci dengan cakupan `manage` / `admin`; rute `/api/cloud/*`, `/api/evals/*`, dan `/api/assess` lainnya memerlukan sesi/kunci API manajemen. POST `/api/assess` menggunakan `validateBody` dengan skema cakupan discriminated-union.
+**Autentikasi:** `/api/cloud/auth` memvalidasi kunci Bearer secara langsung dan mengembalikan kunci yang disamarkan serta `projectId` dari setiap koneksi hanya untuk kunci dengan cakupan `manage` / `admin`; rute `/api/cloud/*`, dan `/api/assess` lainnya memerlukan sesi/kunci API manajemen. POST `/api/assess` menggunakan `validateBody` dengan skema cakupan discriminated-union.
 
 ---
 
@@ -2296,5 +2228,3 @@ kunci API dengan cakupan manajemen) dan perbedaannya dari kunci inferensi.
 - `requireLogin` dapat diaktifkan atau dinonaktifkan melalui `/api/settings/require-login`
 - Rute `/v1/*` secara opsional memerlukan kunci API Bearer ketika `REQUIRE_API_KEY=true`
 - "token manajemen" / "kunci API dengan cakupan manajemen" dalam referensi ini berarti salah satu kelompok dalam panduan tersebut — bukan jenis rahasia tambahan yang tidak didefinisikan
-
-> **Perubahan yang merusak kompatibilitas (v3.8.0)** — `/api/v1/agents/tasks/*` dan endpoint manajemen cooldown kini memerlukan **autentikasi manajemen** (cookie `auth_token` dasbor atau kunci API dengan cakupan manajemen). Klien yang sebelumnya memanggil rute ini tanpa autentikasi akan menerima `401 Unauthorized`. Lihat commit `588a0333` (`fix(auth): require management auth for agent and cooldown APIs`).

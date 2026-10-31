@@ -258,12 +258,6 @@ Wo [MCP-SERVER.md](./MCP-SERVER.md) fún ìṣètò ìgbékalẹ̀ àti àwọn 
 
 ---
 
-## Ìsopọ̀ A2A
-
-`src/lib/skills/a2a.ts` ń ṣe àgbéjáde olùṣàpèjúwe ọgbọ́n A2A `memory_aware_routing` àti olùrànlọ́wọ́ `registerA2ASkill(registry)`. Àwọn ọgbọ́n A2A àdáni wà nínú `src/lib/a2a/skills/`, a sì ń darí wọn nípasẹ̀ `A2A_SKILL_HANDLERS` (`src/lib/a2a/taskExecution.ts`). Wo [A2A-SERVER.md](./A2A-SERVER.md) fún gbogbo ìgbésí-ayé iṣẹ́ náà.
-
----
-
 ## Ṣíṣe Àfikún Ọgbọ́n Tí A Kọ́ Sínú Ètò Tuntun
 
 1. **Ṣàlàyé olùmúlò náà** nínú `src/lib/skills/builtins.ts` (tàbí fáìlì ẹlẹgbẹ́ kan lábẹ́ `src/lib/skills/builtin/`). Ìbuwọ́lù: `(input, { apiKeyId, sessionId }) => Promise<output>`.
@@ -478,7 +472,6 @@ Wo [SDK Plugin & Ìṣọ̀kan Àwọn Ọgbọ́n](./PLUGIN_SDK.md) fún ọ̀n
 ## Tún Wo Èyí
 
 - [MCP-SERVER.md](./MCP-SERVER.md) — ìforúkọsílẹ̀ irinṣẹ́ MCP àti àwọn ọ̀nà ìgbéwọlé
-- [A2A-SERVER.md](./A2A-SERVER.md) — ìgbésí-ayé iṣẹ́ A2A àti ìpínká ọgbọ́n
 - [USER_GUIDE.md](../guides/USER_GUIDE.md#-skills-system) — àkíyèsí ìṣáájú fún olùṣàmúlò
 - [ARCHITECTURE.md](../architecture/ARCHITECTURE.md) — ìlà ìṣiṣẹ́ ìbéèrè àti àwòrán àwọn ẹ̀yà ara
 - Orísun: `src/lib/skills/`, `src/app/api/skills/`, `open-sse/mcp-server/tools/skillTools.ts`

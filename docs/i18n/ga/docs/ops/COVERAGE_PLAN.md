@@ -71,11 +71,9 @@ Tá na comhaid seo ag an tsruth clúdaigh is ísle inniu (< 60%) agus tairgeann 
 | 11  | `open-sse/services/compression/progressiveAging.ts`          |  13.26% |
 | 12  | `open-sse/services/compression/engines/rtk/smartTruncate.ts` |  13.43% |
 | 13  | `open-sse/services/compression/engines/rtk/deduplicator.ts`  |  13.51% |
-| 14  | `src/lib/cloudAgent/agents/jules.ts`                         |  13.52% |
 | 15  | `open-sse/services/compression/lite.ts`                      |  14.46% |
 | 16  | `src/app/api/v1/rerank/route.ts`                             |  14.94% |
 | 17  | `open-sse/services/compression/preservation.ts`              |  15.07% |
-| 18  | `src/lib/cloudAgent/agents/codex.ts`                         |  15.54% |
 | 19  | `open-sse/services/tierResolver.ts`                          |  16.66% |
 | 20  | `src/app/docs/components/DocsLazyWrapper.tsx`                |  16.66% |
 
@@ -83,7 +81,6 @@ Téamaí do chéimeanna 6-7:
 
 - Tá `open-sse/services/compression/**` mar an lárna is dlúithe de chlúdach íseal agus bíonn sé ag rialú an bhearna atá fágtha.
 - Tá ródanna API na mbaisc agus an athranggalaithe (`src/app/api/v1/batches/**`, `src/app/api/v1/rerank/route.ts`) ag teastáil tástálacha ar leibhéal na láimhseálaithe.
-- Tá tástálacha cásanna ag teastáil ó chomhtháthóirí na ngníomhaire scamall (`src/lib/cloudAgent/agents/jules.ts`, `codex.ts`) agus `tierResolver.ts`.
 - Tá comhpháirteanna UI na ndoiciméad agus `src/mitm/systemCommands.ts` ag dul i ndiaidh tosaíochta ach is buanna brainse saor iad.
 
 ## Seiceáil curaclaim

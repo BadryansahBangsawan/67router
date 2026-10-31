@@ -43,8 +43,6 @@ Perėjimo iš v3.7.x į v3.8.0 cikle pridėtas automatinis maršruto parinkimas 
 - 🤝 **GitLab Duo OAuth paslaugų teikėjas** — prisijungimas naudojant GitLab prisijungimo duomenis
 - 🧠 **Samprotavimo pakartojimo podėlis** — hibridinis samprotavimo sekų išsaugojimas atmintyje ir SQLite
 
-📚 **Susiję dokumentai:** [Įgūdžių sistema](../frameworks/SKILLS.md) · [Atminties sistema](../frameworks/MEMORY.md) · [Debesijos agentai](../frameworks/CLOUD_AGENT.md) · [Žiniatinklio atgaliniai iškvietimai](../frameworks/WEBHOOKS.md) · [Samprotavimo pakartojimo podėlis](../routing/REASONING_REPLAY.md)
-
 ---
 
 ## 🔌 Teikėjai
@@ -104,12 +102,6 @@ Stebėjimas realiuoju laiku: veikimo trukmė, atmintis, versija, delsos procenti
 Keturi API vertimų derinimo režimai: **Bandomoji aplinka** (formatų keitiklis), **Pokalbių testavimo įrankis** (tiesioginės užklausos), **Testavimo stendas** (paketiniai testai) ir **Tiesioginis stebėjimas** (srautas realiuoju laiku).
 
 ![Vertėjo bandomoji aplinka](../screenshots/05-translator.png)
-
----
-
-## 🎮 Modelių bandomoji aplinka _(v2.0.9+)_
-
-Išbandykite bet kurį modelį tiesiogiai valdymo skydelyje. Pasirinkite teikėją, modelį ir galinį tašką, kurkite užklausas naudodami Monaco Editor, gaukite atsakymų srautą realiuoju laiku, nutraukite jį vykdymo metu ir peržiūrėkite laiko metrikas.
 
 ---
 

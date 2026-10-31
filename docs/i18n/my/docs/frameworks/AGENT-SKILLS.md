@@ -44,7 +44,6 @@ src/app/api/agent-skills/
   generate/route.ts                    — POST /api/agent-skills/generate (အထောက်အထားစိစစ်မှု လိုအပ်သည်)
 
 open-sse/mcp-server/tools/agentSkillTools.ts  — MCP ကိရိယာ 3 ခု (စာရင်းပြုစုခြင်း၊ ရယူခြင်း၊ လွှမ်းခြုံမှု)
-src/lib/a2a/skills/listCapabilities.ts        — A2A skill: list-capabilities
 ```
 
 ---
@@ -140,8 +139,6 @@ A2A skill `list-capabilities` သည် skill 45 ခုလုံးပါဝင�
 }
 ```
 
-Protocol အသေးစိတ်အချက်အလက်များအတွက် [A2A-SERVER.md](./A2A-SERVER.md) ကို ကြည့်ပါ။
-
 ---
 
 ## ကတ်တလောက် — Skill ID 45 ခု
@@ -189,12 +186,11 @@ Protocol အသေးစိတ်အချက်အလက်များအတ�
 | `cli-contexts`        | cli-contexts       | `omniroute contexts`    |
 | `cli-cost-usage`      | cli-cost-usage     | `omniroute cost`        |
 | `cli-mcp`             | cli-mcp            | `omniroute mcp`         |
-| `cli-a2a`             | cli-a2a            | `omniroute a2a`         |
 | `cli-tunnel`          | cli-tunnel         | `omniroute tunnel`      |
 | `cli-backup-sync`     | cli-backup-sync    | `omniroute backup`      |
 | `cli-policy-audit`    | cli-policy-audit   | `omniroute policy`      |
 | `cli-batches`         | cli-batches        | `omniroute batch`       |
-| `cli-eval`            | cli-eval           | `omniroute eval`        |
+| `cli-eval`            | cli-eval           | `omniroute simulate`    |
 | `cli-plugins-skills`  | cli-plugins-skills | `omniroute plugins`     |
 | `cli-setup`           | cli-setup          | `omniroute setup`       |
 | `cli-skill-collector` | cli-setup          | `omniroute skills`      |
@@ -312,6 +308,5 @@ curl "http://localhost:20128/api/agent-skills/coverage"
 
 - [SKILLS.md](./SKILLS.md) — Omni Skills framework (LLM tool ထည့်သွင်းခြင်း + marketplace)
 - [MCP-SERVER.md](./MCP-SERVER.md) — MCP tool catalog (`omniroute_agent_skills_*` tools)
-- [A2A-SERVER.md](./A2A-SERVER.md) — A2A protocol (`list-capabilities` skill)
 - `src/lib/agentSkills/` — catalog၊ generator နှင့် parser များ
 - `skills/` — ထုတ်လုပ်ထားသော SKILL.md ဖိုင်များ (entry 45 ခု)

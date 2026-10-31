@@ -128,13 +128,11 @@ Pages principales sous `src/app/(dashboard)/dashboard/` :
 - `/dashboard/limits` — contrôles des quotas et des débits
 - `/dashboard/cli-tools` — prise en main de la CLI, détection de l’environnement d’exécution, génération de la configuration
 - `/dashboard/agents` — agents ACP détectés et enregistrement d’agents personnalisés
-- `/dashboard/cloud-agents` — tâches des agents hébergés dans le cloud (Codex Cloud, Devin, Jules) et cycle de vie des tâches
 - `/dashboard/skills` — registre des compétences A2A, exécution en bac à sable, catalogue de compétences intégrées
 - `/dashboard/memory` — inspection et récupération de la mémoire conversationnelle persistante
 - `/dashboard/webhooks` — abonnements aux webhooks sortants, rotation des secrets, statistiques de nouvelles tentatives
 - `/dashboard/batch` — soumission de tâches par lots et progression
 - `/dashboard/cache` — statistiques du cache avec lecture au travers et du cache de raisonnement, contrôles d’éviction
-- `/dashboard/playground` — espace de test conversationnel interactif utilisant n’importe quelle combinaison ou n’importe quel modèle configuré
 - `/dashboard/changelog` — visionneuse du journal des modifications intégrée à l’application (affiche `CHANGELOG.md`)
 - `/dashboard/system` — diagnostics de l’environnement d’exécution, informations de version, interface de validation de l’environnement
 - `/dashboard/onboarding` — assistant de configuration initiale pour les nouvelles installations
@@ -252,7 +250,6 @@ Domaines de gestion :
 - Budget : `src/app/api/usage/budget` (GET/POST)
 - Chaînes de repli : `src/app/api/fallback/chains` (GET/POST/DELETE)
 - Audit de conformité : `src/app/api/compliance/audit-log` (GET, avec pagination + métadonnées structurées)
-- Évaluations : `src/app/api/evals` (GET/POST), `src/app/api/evals/[suiteId]` (GET)
 - Politiques : `src/app/api/policies` (GET/POST)
 - Jetons de synchronisation : `src/app/api/sync/tokens` (GET/POST), `src/app/api/sync/tokens/[id]` (GET/DELETE)
 - Lot de configuration : `src/app/api/sync/bundle` (GET, instantané des paramètres/fournisseurs/combinaisons/clés versionné par ETag)
@@ -316,7 +313,6 @@ Modules de la couche domaine :
 - Délai d’expiration de récupération : `src/shared/utils/fetchTimeout.ts`
 - Télémétrie des requêtes : `src/shared/utils/requestTelemetry.ts`
 - Conformité/audit : `src/lib/compliance/index.ts`
-- Exécuteur d’évaluations : `src/lib/evals/evalRunner.ts`
 - Persistance de l’état du domaine : `src/lib/db/domainState.ts` — opérations CRUD SQLite pour les chaînes de repli, les budgets, l’historique des coûts, l’état de verrouillage et les disjoncteurs
 
 Modules des fournisseurs OAuth (27 fichiers individuels sous `src/lib/oauth/providers/`) :
@@ -385,23 +381,6 @@ Fonctionnalités principales :
 
 Pour obtenir tous les détails algorithmiques (formules des facteurs, réglage des pondérations), consultez
 [`docs/routing/AUTO-COMBO.md`](../routing/AUTO-COMBO.md).
-
-### B. Agents cloud
-
-Cloud Agents encapsule les plateformes tierces hébergées d’agents de code (Codex Cloud, Devin,
-Jules) derrière un cycle de vie uniforme des tâches, adossé à une base de données. Tous les points de terminaison de création et d’inspection
-des tâches nécessitent une authentification de gestion.
-
-- Racine du module : `src/lib/cloudAgent/` (`baseAgent.ts`, `registry.ts`, `api.ts`,
-  `types.ts`, `db.ts`, ainsi que les sous-répertoires propres à chaque agent sous `agents/`)
-- Implémentations propres à chaque agent : `agents/codex/`, `agents/devin/`, `agents/jules/`
-- Points de terminaison publics : `/api/v1/agents/tasks/*` (lister/créer/obtenir/annuler)
-- Points de terminaison de gestion : `/api/cloud/*` (provisionnement, état, traitement par lots)
-- Tableau de bord : `/dashboard/cloud-agents`
-- Stockage : table `cloud_agent_tasks`
-
-Pour les détails de provisionnement et les spécificités OAuth propres à chaque agent, consultez
-[`docs/frameworks/CLOUD_AGENT.md`](../frameworks/CLOUD_AGENT.md).
 
 ### C. Garde-fous
 

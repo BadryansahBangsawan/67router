@@ -24,7 +24,6 @@ Komplett guide för att konfigurera leverantörer, skapa kombinationer, integrer
 - [Kompetenssystem](#-skills-system)
 - [Minnessystem](#-memory-system)
 - [Webhooks](#-webhooks)
-- [Molnagenter](#-cloud-agents)
 - [Programmatisk hantering](#-programmatic-management)
 - [Internt CLI](#-internal-cli)
 - [Skrivbordsapplikation (Electron)](#-desktop-application-electron)
@@ -1240,8 +1239,6 @@ Använd SSE-URL:en `http://localhost:20128/api/mcp/sse` och en Bearer-API-nyckel
 
 ### Omfattningar
 
-MCP definierar för närvarande 32 namngivna omfattningar. Varje Bearer-nyckel kan begränsas till specifika omfattningar — se [MCP-SERVER.md](../frameworks/MCP-SERVER.md) för den auktoritativa förteckningen över omfattningar och verktyg samt [A2A-SERVER.md](../frameworks/A2A-SERVER.md) för JSON-RPC-schemat.
-
 ---
 
 ## 🧠 Färdighetssystem
@@ -1250,7 +1247,6 @@ MCP definierar för närvarande 32 namngivna omfattningar. Varje Bearer-nyckel k
 
 - **Marknadsplatsgränssnitt** — Bläddra bland och installera färdigheter via **Instrumentpanel → Färdigheter**
 - **Omfattningar per nyckel** — Begränsa vilka API-nycklar som kan anropa vilka färdigheter
-- **Anpassade färdigheter** — Lägg en TypeScript-fil i `src/lib/a2a/skills/`, registrera den, så kan den omedelbart anropas via A2A
 
 Fullständig referens: [SKILLS.md](../frameworks/SKILLS.md).
 
@@ -1279,18 +1275,6 @@ Prenumerera på 67router-händelser för övervakning och automatisering i realt
 - Återförsök: 3 försök med exponentiell väntetid, därefter kö för obearbetade meddelanden
 
 Fullständigt schema finns i [WEBHOOKS.md](../frameworks/WEBHOOKS.md).
-
----
-
-## ☁️ Molnagenter
-
-67router integreras med molnbaserade kodningsagenter (**OpenAI Codex Cloud**, **Devin**, **Jules**, **Antigravity**) så att du kan skicka långvariga uppgifter från samma instrumentpanel som hanterar din lokala routning.
-
-- Skapa uppgifter via **Instrumentpanel → Molnagenter** eller `POST /api/v1/agents/tasks`
-- Följ status, loggar och artefakter för varje uppgift
-- Använd en egen API-nyckel per leverantör — autentiseringsuppgifterna lämnar aldrig 67router-instansen
-
-Fullständig referens: [CLOUD_AGENT.md](../frameworks/CLOUD_AGENT.md).
 
 ---
 
@@ -1347,7 +1331,6 @@ omniroute restore [<timestamp>]    # Återställ från en ögonblicksbild
 omniroute health                   # Detaljerad hälsa (brytare, cache, minne)
 omniroute quota                    # Leverantörernas kvotanvändning
 omniroute mcp status               # MCP-serverns status
-omniroute a2a status               # A2A-serverns status
 omniroute tunnel list|create|stop  # Cloudflare-/Tailscale-/ngrok-tunnlar
 omniroute reset-password           # Återställ administratörslösenordet
 omniroute --mcp                    # Starta MCP-servern via stdio

@@ -71,11 +71,9 @@ Waɗannan fayiloli ne suke da mafi ƙarancin ɗaukar layuka a yau (< 60%) kuma s
 | 11  | `open-sse/services/compression/progressiveAging.ts`          |   13.26% |
 | 12  | `open-sse/services/compression/engines/rtk/smartTruncate.ts` |   13.43% |
 | 13  | `open-sse/services/compression/engines/rtk/deduplicator.ts`  |   13.51% |
-| 14  | `src/lib/cloudAgent/agents/jules.ts`                         |   13.52% |
 | 15  | `open-sse/services/compression/lite.ts`                      |   14.46% |
 | 16  | `src/app/api/v1/rerank/route.ts`                             |   14.94% |
 | 17  | `open-sse/services/compression/preservation.ts`              |   15.07% |
-| 18  | `src/lib/cloudAgent/agents/codex.ts`                         |   15.54% |
 | 19  | `open-sse/services/tierResolver.ts`                          |   16.66% |
 | 20  | `src/app/docs/components/DocsLazyWrapper.tsx`                |   16.66% |
 
@@ -83,7 +81,6 @@ Jigogin Matakai na 6-7:
 
 - `open-sse/services/compression/**` shi ne rukuni mafi cunkoso na ƙarancin ɗaukar gwaji, kuma shi ne ya fi rinjayar sauran gibin.
 - Hanyoyin API na batch da rerank (`src/app/api/v1/batches/**`, `src/app/api/v1/rerank/route.ts`) suna buƙatar gwaje-gwaje a matakin handler.
-- Adaftocin cloud agent (`src/lib/cloudAgent/agents/jules.ts`, `codex.ts`) da `tierResolver.ts` suna buƙatar gwaje-gwajen yanayi.
 - Abubuwan haɗin UI na takardu da `src/mitm/systemCommands.ts` ba su da babban fifiko, amma rassansu suna da sauƙin ɗauka.
 
 ## Jerin binciken aiwatarwa

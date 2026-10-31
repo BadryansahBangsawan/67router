@@ -128,13 +128,11 @@ _መጨረሻ የተዘመነው: 2026-06-28_
 - `/dashboard/limits` — የኮታ/ፍጥነት መቆጣጠሪያዎች
 - `/dashboard/cli-tools` — የCLI መጀመሪያ ዝግጅት፣ የአሂድ አካባቢ ማወቂያ፣ የውቅር ማመንጫ
 - `/dashboard/agents` — የተገኙ ACP agentዎች + ብጁ agent ምዝገባ
-- `/dashboard/cloud-agents` — በcloud የሚስተናገዱ የagent ተግባራት (Codex Cloud፣ Devin፣ Jules) እና የተግባር የሕይወት ዑደት
 - `/dashboard/skills` — የA2A skill ምዝገባ፣ የsandbox አፈጻጸም፣ አብሮገነብ የskill ካታሎግ
 - `/dashboard/memory` — የቋሚ ውይይት ማህደረ ትውስታ ምርመራ እና ሰርስሮ ማውጣት
 - `/dashboard/webhooks` — ወደ ውጭ የሚላኩ የwebhook ምዝገባዎች፣ የsecret ማዞሪያ፣ የድጋሚ ሙከራ ስታቲስቲክስ
 - `/dashboard/batch` — የbatch ሥራ ማስገባት እና ሂደት
 - `/dashboard/cache` — የread-through እና reasoning cache ስታቲስቲክስ፣ የማስወገጃ መቆጣጠሪያዎች
-- `/dashboard/playground` — በማንኛውም በተዋቀረ combo/model ላይ የሚሠራ መስተጋብራዊ የውይይት መሞከሪያ
 - `/dashboard/changelog` — በመተግበሪያው ውስጥ ያለ የለውጥ ምዝግብ መመልከቻ (`CHANGELOG.md`ን ያሳያል)
 - `/dashboard/system` — የአሂድ አካባቢ ምርመራዎች፣ የስሪት መረጃ፣ የአካባቢ ማረጋገጫ ገጽታ
 - `/dashboard/onboarding` — ለአዲስ ጭነቶች የመጀመሪያ አሂድ ማዋቀሪያ አዋቂ
@@ -252,7 +250,6 @@ flowchart LR
 - በጀት፦ `src/app/api/usage/budget` (GET/POST)
 - የመጠባበቂያ ሰንሰለቶች፦ `src/app/api/fallback/chains` (GET/POST/DELETE)
 - የተገዢነት ኦዲት፦ `src/app/api/compliance/audit-log` (GET፣ ከገጽ ክፍፍል + ከተዋቀረ ሜታዳታ ጋር)
-- ግምገማዎች፦ `src/app/api/evals` (GET/POST), `src/app/api/evals/[suiteId]` (GET)
 - ፖሊሲዎች፦ `src/app/api/policies` (GET/POST)
 - የማመሳሰል ቶከኖች፦ `src/app/api/sync/tokens` (GET/POST), `src/app/api/sync/tokens/[id]` (GET/DELETE)
 - የውቅር ጥቅል፦ `src/app/api/sync/bundle` (GET፣ በETag ስሪት የተያዘ የቅንብሮች/አቅራቢዎች/ጥምረቶች/ቁልፎች ቅጽበታዊ ቅጂ)
@@ -316,7 +313,6 @@ flowchart LR
 - የFetch የጊዜ ገደብ፦ `src/shared/utils/fetchTimeout.ts`
 - የጥያቄ ቴሌሜትሪ፦ `src/shared/utils/requestTelemetry.ts`
 - ተገዢነት/ኦዲት፦ `src/lib/compliance/index.ts`
-- የግምገማ አስኪያጅ፦ `src/lib/evals/evalRunner.ts`
 - የጎራ ሁኔታ ማቆያ፦ `src/lib/db/domainState.ts` — ለምትክ ሰንሰለቶች፣ በጀቶች፣ የወጪ ታሪክ፣ የመቆለፊያ ሁኔታ እና የወረዳ መቆራረጫዎች SQLite CRUD
 
 የOAuth አቅራቢ ሞጁሎች (በ`src/lib/oauth/providers/` ስር ያሉ 27 የተናጠል ፋይሎች)፦
@@ -384,23 +380,6 @@ Auto Combo በቋሚ combo ትርጉም ላይ ከመመርኮዝ ይልቅ፣ �
 
 ለሙሉ የአልጎሪዝም ዝርዝር (የምክንያት ቀመሮች፣ የክብደት ማስተካከያ)፣
 [`docs/routing/AUTO-COMBO.md`](../routing/AUTO-COMBO.md)ን ይመልከቱ።
-
-### B. Cloud Agents
-
-Cloud Agents በሦስተኛ ወገን የሚስተናገዱ የኮድ-ወኪል መድረኮችን (Codex Cloud፣ Devin፣
-Jules) በወጥ የውሂብ ጎታ የተደገፈ የተግባር የሕይወት ዑደት ጀርባ ያቀርባል። ሁሉም የተግባር መፍጠሪያ/መመርመሪያ
-መጨረሻ ነጥቦች የአስተዳደር ማረጋገጫ ይፈልጋሉ።
-
-- የሞጁሉ ሥር፦ `src/lib/cloudAgent/` (`baseAgent.ts`, `registry.ts`, `api.ts`,
-  `types.ts`, `db.ts`፣ እንዲሁም በ`agents/` ስር ያሉ የየወኪሉ ንዑስ ማውጫዎች)
-- የየወኪሉ ትግበራዎች፦ `agents/codex/`፣ `agents/devin/`፣ `agents/jules/`
-- ይፋዊ መጨረሻ ነጥቦች፦ `/api/v1/agents/tasks/*` (መዘርዘር/መፍጠር/ማግኘት/መሰረዝ)
-- የአስተዳደር መጨረሻ ነጥቦች፦ `/api/cloud/*` (ማቅረብ፣ ሁኔታ፣ ባች)
-- ዳሽቦርድ፦ `/dashboard/cloud-agents`
-- ማከማቻ፦ `cloud_agent_tasks` ሰንጠረዥ
-
-ለየወኪሉ የማቅረብ እና የOAuth ዝርዝሮች፣
-[`docs/frameworks/CLOUD_AGENT.md`](../frameworks/CLOUD_AGENT.md)ን ይመልከቱ።
 
 ### C. Guardrails
 

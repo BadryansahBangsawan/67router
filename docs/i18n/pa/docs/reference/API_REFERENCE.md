@@ -1434,9 +1434,8 @@ GET ਜਵਾਬ ਵਿੱਚ `agents[]` (id, name, binary, version, installed, 
 
 ### ਮੁਲਾਂਕਣ
 
-| Endpoint     | ਵਿਧੀ     | ਵੇਰਵਾ                                    |
-| ------------ | -------- | ---------------------------------------- |
-| `/api/evals` | GET/POST | ਮੁਲਾਂਕਣ ਸੂਟਾਂ ਦੀ ਸੂਚੀ ਦਿਓ / ਮੁਲਾਂਕਣ ਚਲਾਓ |
+| Endpoint | ਵਿਧੀ | ਵੇਰਵਾ |
+| -------- | ---- | ----- |
 
 ### ਨੀਤੀਆਂ
 
@@ -1759,31 +1758,6 @@ DELETE /api/usage/token-limits?id=tl-abc
 
 ---
 
-## ਏਜੰਟ ਪ੍ਰੋਟੋਕੋਲ
-
-67router ਵਰਤੋਂਕਾਰਾਂ ਦੀ ਤਰਫ਼ੋਂ ਰਿਮੋਟ ਤੌਰ 'ਤੇ ਚਲਾਏ ਜਾਂਦੇ ਕਲਾਉਡ ਏਜੰਟ ਟਾਸਕ (Claude Code, Codex Cloud, OpenHands ਆਦਿ)।
-
-| ਵਿਧੀ   | ਪਾਥ                           | ਵੇਰਵਾ                                                                                                                                                             |
-| ------ | ----------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| GET    | `/api/v1/agents/tasks`        | ਟਾਸਕਾਂ ਦੀ ਸੂਚੀ — ਵਿਕਲਪਿਕ `?provider=`, `?status=`, `?limit=` (1–500, ਮੂਲ 50)                                                                                      |
-| POST   | `/api/v1/agents/tasks`        | ਟਾਸਕ ਬਣਾਓ — ਬਾਡੀ ਨੂੰ `CreateCloudAgentTaskSchema` (`providerId`, `prompt`, `source`, `options?`) ਦੁਆਰਾ ਪ੍ਰਮਾਣਿਤ ਕੀਤਾ ਜਾਂਦਾ ਹੈ। ਟਾਸਕ ਐਨਵਲਪ ਸਮੇਤ `201` ਵਾਪਸ ਕਰਦਾ ਹੈ |
-| DELETE | `/api/v1/agents/tasks?id=...` | ਕੋਈ ਟਾਸਕ ਮਿਟਾਓ                                                                                                                                                    |
-| GET    | `/api/v1/agents/tasks/[id]`   | ਟਾਸਕ ਪੜ੍ਹੋ — ਜਦੋਂ ਕੋਈ `external_id` ਸੈੱਟ ਹੋਵੇ, ਤਾਂ ਅੱਪਸਟ੍ਰੀਮ ਕਲਾਉਡ ਏਜੰਟ ਤੋਂ ਸਥਿਤੀ ਨੂੰ ਸਮਕਾਲੀ ਢੰਗ ਨਾਲ ਤਾਜ਼ਾ ਕਰਦਾ ਹੈ                                                |
-| POST   | `/api/v1/agents/tasks/[id]`   | ਭੇਦਕ ਕਾਰਵਾਈ: `{action: "approve"}`, `{action: "message", message}`, ਜਾਂ `{action: "cancel"}`                                                                      |
-| DELETE | `/api/v1/agents/tasks/[id]`   | id ਦੁਆਰਾ ਕੋਈ ਖਾਸ ਟਾਸਕ ਮਿਟਾਓ                                                                                                                                       |
-
-> **ਪ੍ਰਮਾਣੀਕਰਨ:** ਹਰ ਵਿਧੀ ਲਈ ਪ੍ਰਬੰਧਨ ਪ੍ਰਮਾਣੀਕਰਨ ਲਾਜ਼ਮੀ ਹੈ (`requireCloudAgentManagementAuth`)। v3.8.0 ਤੋਂ ਪਹਿਲਾਂ ਇਹ ਬਿਨਾਂ ਪ੍ਰਮਾਣੀਕਰਨ ਦੇ ਸਨ — ਬ੍ਰੇਕਿੰਗ ਤਬਦੀਲੀ ਲਈ commit `588a0333` ਵੇਖੋ।
-
-```bash
-# ਇੱਕ Claude Code ਕਲਾਉਡ ਟਾਸਕ ਬਣਾਓ
-curl -X POST http://localhost:20128/api/v1/agents/tasks \
-  -H "Authorization: Bearer your-management-key" \
-  -H "Content-Type: application/json" \
-  -d '{"providerId":"claude-code-cloud","prompt":"Fix the failing test","source":{"repo":"...","branch":"..."}}'
-```
-
----
-
 ## ਪ੍ਰਬੰਧਨ ਪ੍ਰਾਕਸੀ
 
 ਆਊਟਬਾਊਂਡ HTTP(S)/SOCKS ਪ੍ਰਾਕਸੀ, ਜਿਨ੍ਹਾਂ ਨੂੰ ਪ੍ਰਦਾਤਾਵਾਂ, ਖਾਤਿਆਂ ਜਾਂ ਗਲੋਬਲ ਤੌਰ 'ਤੇ ਨਿਰਧਾਰਤ ਕੀਤਾ ਜਾ ਸਕਦਾ ਹੈ।
@@ -1903,48 +1877,10 @@ curl -X DELETE http://localhost:20128/api/resilience/model-cooldowns \
 
 67router ਨਿਰੀਖਣ/ਡੈਸ਼ਬੋਰਡ ਦੀ ਵਰਤੋਂ ਲਈ ਇੱਕ A2A (Agent-to-Agent) JSON-RPC 2.0 ਐਂਡਪੌਇੰਟ ਦੇ ਨਾਲ ਇੱਕ REST ਰੈਪਰ ਉਪਲਬਧ ਕਰਵਾਉਂਦਾ ਹੈ।
 
-### JSON-RPC
-
-```bash
-POST /a2a
-Authorization: Bearer your-api-key   # ਵਿਕਲਪਿਕ, ਜਦੋਂ ਤੱਕ OMNIROUTE_API_KEY ਸੈੱਟ ਨਾ ਹੋਵੇ
-Content-Type: application/json
-
-{
-  "jsonrpc": "2.0",
-  "id": 1,
-  "method": "message/send",
-  "params": {
-    "skill": "smart-routing",
-    "messages": [{"role": "user", "content": "Route this coding task"}]
-  }
-}
-```
-
-ਸਮਰਥਿਤ ਵਿਧੀਆਂ (ਸਾਰੀਆਂ `settings.a2aEnabled` ਦੁਆਰਾ ਨਿਯੰਤਰਿਤ ਹਨ):
-
-| ਵਿਧੀ             | ਵੇਰਵਾ                                                                |
-| ---------------- | -------------------------------------------------------------------- |
-| `message/send`   | ਸਮਕਾਲੀ ਸਕਿੱਲ ਐਗਜ਼ੀਕਿਊਸ਼ਨ; `{task, artifacts, metadata}` ਵਾਪਸ ਕਰਦਾ ਹੈ |
-| `message/stream` | ਉਸੇ ਸਕਿੱਲ ਸੈੱਟ ਦਾ ਸਟ੍ਰੀਮਿੰਗ SSE ਐਗਜ਼ੀਕਿਊਸ਼ਨ                          |
-| `tasks/get`      | `taskId` ਰਾਹੀਂ ਕੋਈ ਟਾਸਕ ਪ੍ਰਾਪਤ ਕਰੋ                                   |
-| `tasks/cancel`   | `taskId` ਰਾਹੀਂ ਕੋਈ ਟਾਸਕ ਰੱਦ ਕਰੋ                                      |
-
-ਬਿਲਟ-ਇਨ ਸਕਿੱਲ: `smart-routing`, `quota-management`, `provider-discovery`, `cost-analysis`, `health-report`।
-
-### ਏਜੰਟ ਕਾਰਡ
-
-```bash
-GET /.well-known/agent.json
-```
-
-ਜਨਤਕ A2A ਏਜੰਟ ਕਾਰਡ (ਨਾਮ, ਵੇਰਵਾ, ਸਮਰੱਥਾਵਾਂ, ਸਕਿੱਲ ਕੈਟਾਲੌਗ, ਪ੍ਰਮਾਣੀਕਰਨ ਸਕੀਮ) ਵਾਪਸ ਕਰਦਾ ਹੈ — 1 ਘੰਟੇ ਲਈ ਜਨਤਕ ਤੌਰ 'ਤੇ ਕੈਸ਼ ਕੀਤਾ ਜਾਂਦਾ ਹੈ। ਕਿਸੇ ਪ੍ਰਮਾਣੀਕਰਨ ਦੀ ਲੋੜ ਨਹੀਂ ਹੈ।
-
 ### REST ਸਹਾਇਕ
 
 | ਵਿਧੀ | ਪਾਥ                          | ਵੇਰਵਾ                                                                                                               |
 | ---- | ---------------------------- | ------------------------------------------------------------------------------------------------------------------- |
-| GET  | `/api/a2a/status`            | A2A ਸਮਰੱਥ ਸਥਿਤੀ + ਟਾਸਕ ਅੰਕੜੇ + ਕੈਸ਼ ਕੀਤੇ ਏਜੰਟ ਕਾਰਡ ਦਾ ਸੰਖੇਪ                                                         |
 | GET  | `/api/a2a/tasks`             | ਟਾਸਕਾਂ ਦੀ ਸੂਚੀ — `?state=submitted\|working\|completed\|failed\|cancelled`, `?skill=`, `?limit=` (≤200), `?offset=` |
 | POST | `/api/a2a/tasks`             | (REST ਸਹਾਇਕ ਵਜੋਂ ਲਾਗੂ ਨਹੀਂ ਕੀਤਾ ਗਿਆ — JSON-RPC `message/send` ਰਾਹੀਂ ਬਣਾਓ)                                           |
 | GET  | `/api/a2a/tasks/[id]`        | ਇੱਕ ਟਾਸਕ ਪ੍ਰਾਪਤ ਕਰੋ                                                                                                 |
@@ -1964,12 +1900,8 @@ GET /.well-known/agent.json
 | GET | `/api/cloud/models/alias` | ਕਲਾਉਡ ਸਿੰਕ ਲਈ ਉਪਲਬਧ ਕਰਵਾਏ ਗਏ ਮਾਡਲ ਉਪਨਾਮਾਂ ਦੀ ਸੂਚੀ |
 | GET | `/api/assess` | ਨਵੀਨਤਮ ਮੁਲਾਂਕਣ ਵਰਗੀਕਰਨ ਪੜ੍ਹੋ (ਹਰੇਕ ਪ੍ਰਦਾਤਾ/ਮਾਡਲ ਲਈ) |
 | POST | `/api/assess` | ਮੁਲਾਂਕਣ ਚਲਾਓ — ਬਾਡੀ: `{scope: {type:"all"}                                                   | {type:"provider", providerId} | {type:"model", modelId}, trigger?}` |
-| GET | `/api/evals` | ਬਿਲਟ-ਇਨ ਈਵੈਲ ਸੂਟਾਂ + ਸਭ ਤੋਂ ਹਾਲੀਆ ਰਨਾਂ ਦੀ ਸੂਚੀ |
-| POST | `/api/evals` | ਇੱਕ ਈਵੈਲ ਰਨ ਟ੍ਰਿਗਰ ਕਰੋ |
-| POST | `/api/evals/suites` | ਇੱਕ ਕਸਟਮ ਈਵੈਲ ਸੂਟ ਬਣਾਓ — ਬਾਡੀ ਦੀ ਪੁਸ਼ਟੀ `evalSuiteSaveSchema` ਦੁਆਰਾ ਕੀਤੀ ਜਾਂਦੀ ਹੈ |
-| GET | `/api/evals/suites/[id]` | ਇੱਕ ਕਸਟਮ ਈਵੈਲ ਸੂਟ ਪ੍ਰਾਪਤ ਕਰੋ |
 
-**ਪ੍ਰਮਾਣੀਕਰਨ:** `/api/cloud/auth` ਸਿੱਧੇ ਤੌਰ 'ਤੇ ਇੱਕ Bearer ਕੁੰਜੀ ਦੀ ਪੁਸ਼ਟੀ ਕਰਦਾ ਹੈ ਅਤੇ ਸਿਰਫ਼ `manage` / `admin` ਸਕੋਪ ਵਾਲੀ ਕੁੰਜੀ ਲਈ ਹਰੇਕ ਕਨੈਕਸ਼ਨ ਦੀ ਮਾਸਕ ਕੀਤੀ ਕੁੰਜੀ ਅਤੇ `projectId` ਵਾਪਸ ਕਰਦਾ ਹੈ; ਹੋਰ `/api/cloud/*`, `/api/evals/*`, ਅਤੇ `/api/assess` ਰੂਟਾਂ ਲਈ ਪ੍ਰਬੰਧਨ ਸੈਸ਼ਨ/API ਕੁੰਜੀ ਦੀ ਲੋੜ ਹੁੰਦੀ ਹੈ। `/api/assess` POST ਇੱਕ ਡਿਸਕ੍ਰਿਮਿਨੇਟਿਡ-ਯੂਨੀਅਨ ਸਕੋਪ ਸਕੀਮਾ ਨਾਲ `validateBody` ਦੀ ਵਰਤੋਂ ਕਰਦਾ ਹੈ।
+**ਪ੍ਰਮਾਣੀਕਰਨ:** `/api/cloud/auth` ਸਿੱਧੇ ਤੌਰ 'ਤੇ ਇੱਕ Bearer ਕੁੰਜੀ ਦੀ ਪੁਸ਼ਟੀ ਕਰਦਾ ਹੈ ਅਤੇ ਸਿਰਫ਼ `manage` / `admin` ਸਕੋਪ ਵਾਲੀ ਕੁੰਜੀ ਲਈ ਹਰੇਕ ਕਨੈਕਸ਼ਨ ਦੀ ਮਾਸਕ ਕੀਤੀ ਕੁੰਜੀ ਅਤੇ `projectId` ਵਾਪਸ ਕਰਦਾ ਹੈ; ਹੋਰ `/api/cloud/*`, ਅਤੇ `/api/assess` ਰੂਟਾਂ ਲਈ ਪ੍ਰਬੰਧਨ ਸੈਸ਼ਨ/API ਕੁੰਜੀ ਦੀ ਲੋੜ ਹੁੰਦੀ ਹੈ। `/api/assess` POST ਇੱਕ ਡਿਸਕ੍ਰਿਮਿਨੇਟਿਡ-ਯੂਨੀਅਨ ਸਕੋਪ ਸਕੀਮਾ ਨਾਲ `validateBody` ਦੀ ਵਰਤੋਂ ਕਰਦਾ ਹੈ।
 
 ---
 
@@ -2291,5 +2223,3 @@ AI ਏਜੰਟ ਹੁਨਰਾਂ ਦਾ ਪ੍ਰਬੰਧਨ ਕਰੋ (OpenA
 - `requireLogin` ਨੂੰ `/api/settings/require-login` ਰਾਹੀਂ ਟੌਗਲ ਕੀਤਾ ਜਾ ਸਕਦਾ ਹੈ
 - ਜਦੋਂ `REQUIRE_API_KEY=true` ਹੋਵੇ, ਤਾਂ `/v1/*` ਰੂਟਾਂ ਲਈ ਵਿਕਲਪਿਕ ਤੌਰ 'ਤੇ ਬੇਅਰਰ API ਕੁੰਜੀ ਦੀ ਲੋੜ ਹੁੰਦੀ ਹੈ
 - ਇਸ ਹਵਾਲੇ ਵਿੱਚ "ਪ੍ਰਬੰਧਨ ਟੋਕਨ" / "ਪ੍ਰਬੰਧਨ-ਸਕੋਪ ਵਾਲੀ API ਕੁੰਜੀ" ਦਾ ਅਰਥ ਉਸ ਗਾਈਡ ਵਿੱਚ ਦਿੱਤੇ ਪਰਿਵਾਰਾਂ ਵਿੱਚੋਂ ਇੱਕ ਹੈ — ਕੋਈ ਅਪਰਿਭਾਸ਼ਿਤ ਵਾਧੂ ਗੁਪਤ ਕਿਸਮ ਨਹੀਂ
-
-> **ਅਨੁਕੂਲਤਾ ਤੋੜਨ ਵਾਲਾ ਬਦਲਾਅ (v3.8.0)** — `/api/v1/agents/tasks/*` ਅਤੇ ਕੂਲਡਾਊਨ ਪ੍ਰਬੰਧਨ ਐਂਡਪੌਇੰਟਾਂ ਲਈ ਹੁਣ **ਪ੍ਰਬੰਧਨ ਪ੍ਰਮਾਣੀਕਰਨ** (ਡੈਸ਼ਬੋਰਡ `auth_token` ਕੁਕੀ ਜਾਂ ਪ੍ਰਬੰਧਨ-ਸਕੋਪ ਵਾਲੀ API ਕੁੰਜੀ) ਦੀ ਲੋੜ ਹੈ। ਜਿਹੜੇ ਕਲਾਇੰਟ ਪਹਿਲਾਂ ਬਿਨਾਂ ਪ੍ਰਮਾਣੀਕਰਨ ਦੇ ਇਨ੍ਹਾਂ ਰੂਟਾਂ ਨੂੰ ਕਾਲ ਕਰਦੇ ਸਨ, ਉਨ੍ਹਾਂ ਨੂੰ `401 Unauthorized` ਮਿਲੇਗਾ। ਕਮਿਟ `588a0333` (`fix(auth): require management auth for agent and cooldown APIs`) ਵੇਖੋ।

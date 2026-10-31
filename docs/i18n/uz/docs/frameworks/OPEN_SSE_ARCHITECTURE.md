@@ -573,5 +573,4 @@ Marshrutlash mexanizmi qatʼiy unumdorlik limitlariga ega:
 - [REPOSITORY_MAP.md](../architecture/REPOSITORY_MAP.md) — kataloglar boʻyicha tavsif
 - [AUTO-COMBO.md](../routing/AUTO-COMBO.md) — 16 omilli baholash
 - [MCP-SERVER.md](./MCP-SERVER.md) — MCP serveri
-- [A2A-SERVER.md](./A2A-SERVER.md) — A2A serveri
 - Manba: `open-sse/` (400+ ta fayl, ~143K kod qatori)

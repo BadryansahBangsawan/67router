@@ -68,20 +68,6 @@ CORS-i **eelkontrolli läbimise** võimaldamine haldusmarsruutidel — need nõu
 mida päritoluülene leht ei saa pakkuda. See **ei ole** ühisel CORS-i teel seansi kaaperdamise ega
 mandaatide varastamise vektor.
 
-### Üks tegelik erand — `/api/v1/agents/`
-
-Cloud-Agenti marsruudid (`/api/v1/agents/{health,credentials,tasks,tasks/[id]}`) määravad
-oma **CORS-i päised**
-(`src/lib/cloudAgent/api.ts`, `getCloudAgentCorsHeaders`) ning **väljastavad**
-`Access-Control-Allow-Origin: <origin>|*` koos päisega
-`Access-Control-Allow-Credentials: true`. See on ainus pind, kus
-päritolu tagastamine ja mandaadid esinevad koos, ning see on **sõltumatu seadistusest
-`CORS_ALLOW_ALL`**. Need marsruudid kasutavad haldusautentimist
-(`requireManagementAuth`); operaatorid, kes teevad juhtpaneeli kohalikust hostist väljaspool kättesaadavaks, peaksid
-teadma, et see on ainus koht, kus vastuse päised lubavad päritoluülest autenditud lugemist.
-Selle piiramine selgesõnalise lubatud loendiga on jälgimisel
-sellest CORS-i juhendist eraldi.
-
 ## Tootmiskeskkonna kontrollnimekiri
 
 - **Ärge kunagi määrake tootmiskeskkonnas väärtust `CORS_ALLOW_ALL=true`.** Jätke see määramata.
@@ -160,7 +146,6 @@ vahekaardil Security), mitte proksis.
 | Käitusaegne olek juhtpaneeli jaoks                | `src/app/api/settings/authz-inventory/route.ts`                      |
 | Juhtpaneeli hoiatusriba                           | `src/app/(dashboard)/dashboard/settings/components/AuthzSection.tsx` |
 | CORS-i lubatud päritoluallikate väli              | `src/app/(dashboard)/dashboard/settings/components/SecurityTab.tsx`  |
-| Cloud-Agenti marsruudipõhine CORS (erand)         | `src/lib/cloudAgent/api.ts`                                          |
 
 ## Vaata ka
 

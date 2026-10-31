@@ -43,8 +43,6 @@ v3.7.x → v3.8.0 주기에는 설정이 필요 없는 자동 라우팅, 새로�
 - 🤝 **GitLab Duo OAuth 제공자** — GitLab 자격 증명으로 로그인
 - 🧠 **Reasoning Replay Cache** — 추론 추적을 위한 인메모리 + SQLite 하이브리드 영속성
 
-📚 **관련 문서:** [Skills 프레임워크](../frameworks/SKILLS.md) · [메모리 시스템](../frameworks/MEMORY.md) · [클라우드 에이전트](../frameworks/CLOUD_AGENT.md) · [웹훅](../frameworks/WEBHOOKS.md) · [Reasoning Replay Cache](../routing/REASONING_REPLAY.md)
-
 ---
 
 ## 🔌 제공업체
@@ -104,12 +102,6 @@ OpenRouter 연결은 Advanced Settings에서 연결별 `preset`을 저장할 수
 API 번역을 디버깅하기 위한 네 가지 모드: **플레이그라운드**(형식 변환기), **채팅 테스터**(실시간 요청), **테스트 벤치**(일괄 테스트), **라이브 모니터**(실시간 스트림).
 
 ![번역기 플레이그라운드](../screenshots/05-translator.png)
-
----
-
-## 🎮 모델 플레이그라운드 _(v2.0.9+)_
-
-대시보드에서 모든 모델을 직접 테스트할 수 있습니다. 제공자, 모델 및 엔드포인트를 선택하고 Monaco Editor로 프롬프트를 작성하며, 응답을 실시간으로 스트리밍하고, 스트리밍 도중 중단하며, 타이밍 지표를 확인할 수 있습니다.
 
 ---
 

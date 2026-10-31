@@ -51,7 +51,6 @@ Ejen AI / IDE
 | Trafik bayangan                                 | `open-sse/services/combo/shadowRouting.ts`                                                                      |
 | Batasan                                         | `src/lib/guardrails/` (cangkuk pra/pasca)                                                                       |
 | Cache tepat                                     | `src/lib/semanticCache.ts` (berasaskan tandatangan)                                                             |
-| Penilai / penghalaan dipacu penilaian           | `src/lib/evals/`, `open-sse/services/evalRouting.ts`                                                            |
 | Kebolehjelasan keputusan combo                  | `open-sse/services/combo/decisionTrace.ts`                                                                      |
 | Peristiwa masa nyata papan pemuka               | `src/lib/events/eventBus.ts` (saluran pemberitahuan UI, muatan `unknown`, sejarah 100 entri)                    |
 
@@ -266,8 +265,6 @@ kecerdasan/penilaian yang berpotensi, bukan kebergantungan**. Titik penyepaduann
 - `Evaluator` pada masa hadapan (deterministik, penilai setempat, HTTP, WASM) akan menggunakan
   peristiwa/jejak dan mengembalikan `QualityScore` yang disalurkan ke laluan
   `getQualityScore`/faktor kualiti yang sama.
-- Penghalaan dipacu penilaian sedia ada (`open-sse/services/evalRouting.ts`) sudah
-  menyusun semula sasaran kombo mengikut kadar kelulusan `eval_runs` apabila didayakan.
 
 Tiada penilaian dijalankan secara segerak pada laluan permintaan, dan get laluan beroperasi
 sepenuhnya tanpa penilai.

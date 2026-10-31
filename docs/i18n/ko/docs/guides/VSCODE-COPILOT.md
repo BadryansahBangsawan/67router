@@ -86,7 +86,7 @@ HTTP 400 — 모델 '<id>'은(는) 이미지 생성 모델이므로
 
 ## VS Code 탭 내부의 대시보드
 
-`omnicopilot.dashboardOpen: "editor"`는 외부 브라우저 대신 Simple Browser를 통해 67router 대시보드를 편집기 탭에 렌더링합니다. 임베딩은 서버에서 `DASHBOARD_ALLOW_EMBED=vscode`를 통해 **명시적으로 활성화**해야 합니다. 이 설정은 기본값인 `frame-ancestors 'none'` + `X-Frame-Options: DENY` 대신 `frame-ancestors 'self' vscode-webview:`가 포함된 HTML 페이지를 제공합니다. API 표면(`/api`, `/v1`, `/v1beta`, `/a2a`, `/healthz`)에는 어느 경우든 엄격한 헤더가 유지됩니다.
+`omnicopilot.dashboardOpen: "editor"`는 외부 브라우저 대신 Simple Browser를 통해 67router 대시보드를 편집기 탭에 렌더링합니다. 임베딩은 서버에서 `DASHBOARD_ALLOW_EMBED=vscode`를 통해 **명시적으로 활성화**해야 합니다. 이 설정은 기본값인 `frame-ancestors 'none'` + `X-Frame-Options: DENY` 대신 `frame-ancestors 'self' vscode-webview:`가 포함된 HTML 페이지를 제공합니다. API 표면(`/api`, `/v1`, `/v1beta`, `/healthz`)에는 어느 경우든 엄격한 헤더가 유지됩니다.
 
 > ⚠️ **이는 런타임 플래그가 아니라 빌드 타임 플래그입니다.** Next.js는 `headers()`를 라우트
 > 매니페스트에 컴파일하므로, 번들을 빌드할 때 `next.config.mjs`가 변수를 읽습니다

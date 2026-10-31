@@ -390,34 +390,6 @@
       "description": "Registo de auditoria MCP (alias de audit --source mcp)"
     }
   },
-  "a2a": {
-    "skills": {
-      "description": "Listar as competências A2A disponíveis no cartão do agente"
-    },
-    "invoke": {
-      "description": "Invocar uma competência A2A e devolver o ID da tarefa",
-      "input": "Objeto de entrada JSON",
-      "input_file": "Caminho para o ficheiro de entrada JSON",
-      "wait": "Aguardar pela conclusão da tarefa antes de devolver",
-      "timeout": "Tempo limite de espera pela conclusão em ms (predefinição: 60000)"
-    },
-    "tasks": {
-      "description": "Gerir tarefas A2A",
-      "list": {
-        "status": "Filtrar por estado",
-        "skill": "Filtrar por ID da competência"
-      },
-      "watch": {
-        "description": "Consultar periodicamente o estado da tarefa até à conclusão"
-      },
-      "stream": {
-        "description": "Transmitir eventos de execução da tarefa via SSE"
-      },
-      "logs": {
-        "description": "Mostrar mensagens e artefactos da tarefa"
-      }
-    }
-  },
   "policy": {
     "description": "Gerir políticas de autorização do 67router",
     "list": {
@@ -696,99 +668,6 @@
       "provider": "ID do fornecedor a revogar",
       "connection_id": "Revogar uma ligação específica por ID",
       "yes": "Ignorar pedido de confirmação"
-    }
-  },
-  "cloud": {
-    "description": "Gerir tarefas de agentes de IA na cloud (codex, devin, jules)",
-    "agents": {
-      "description": "Listar agentes disponíveis na cloud"
-    },
-    "agent": {
-      "description": "Gerir tarefas do agente {agent} na cloud",
-      "auth": {
-        "description": "Autorizar {agent} através de OAuth"
-      }
-    },
-    "task": {
-      "description": "Gerir tarefas de agentes na cloud",
-      "create": {
-        "description": "Criar uma nova tarefa de agente",
-        "title": "Título da tarefa (por predefinição, os primeiros 80 carateres do pedido)",
-        "prompt": "Texto do pedido da tarefa",
-        "prompt_file": "Ler o pedido a partir de um ficheiro",
-        "repo": "URL do repositório a clonar para a tarefa",
-        "branch": "Nome do ramo a utilizar",
-        "metadata": "Objeto de metadados JSON"
-      },
-      "list": {
-        "description": "Listar tarefas de agentes",
-        "status": "Filtrar por estado (running|completed|failed|cancelled)",
-        "limit": "Número máximo de resultados (predefinição: 50)"
-      },
-      "get": {
-        "description": "Obter detalhes da tarefa por ID"
-      },
-      "status": {
-        "description": "Mostrar o estado da tarefa (running|completed|failed|cancelled)"
-      },
-      "cancel": {
-        "description": "Cancelar uma tarefa em execução",
-        "yes": "Ignorar pedido de confirmação"
-      },
-      "approve": {
-        "description": "Aprovar o plano do agente para iniciar a execução"
-      },
-      "message": {
-        "description": "Enviar uma mensagem para uma tarefa em execução"
-      }
-    },
-    "sources": {
-      "description": "Listar ficheiros de origem produzidos por uma tarefa"
-    }
-  },
-  "eval": {
-    "description": "Gerir conjuntos e execuções de avaliação",
-    "suites": {
-      "description": "Gerir conjuntos de avaliação",
-      "list": {
-        "description": "Listar conjuntos de avaliação"
-      },
-      "get": {
-        "description": "Obter detalhes do conjunto de avaliação por ID"
-      },
-      "create": {
-        "description": "Criar um conjunto de avaliação a partir de um ficheiro JSON",
-        "file": "Caminho para o ficheiro JSON de definição do conjunto"
-      }
-    },
-    "run": {
-      "description": "Iniciar uma execução de avaliação para um conjunto",
-      "model": "ID do modelo a avaliar (predefinição: auto)",
-      "combo": "Forçar uma combinação específica pelo nome",
-      "concurrency": "Número de amostras simultâneas (predefinição: 4)",
-      "tag": "Adicionar uma etiqueta a esta execução para filtragem posterior",
-      "watch": "Acompanhar o progresso da execução até à conclusão"
-    },
-    "list": {
-      "description": "Listar execuções de avaliação",
-      "suite": "Filtrar por ID do conjunto",
-      "status": "Filtrar por estado",
-      "since": "Devolver execuções desde esta data e hora",
-      "limit": "Número máximo de resultados (predefinição: 50)"
-    },
-    "get": {
-      "description": "Obter detalhes da execução de avaliação por ID"
-    },
-    "results": {
-      "description": "Mostrar resultados das amostras de uma execução de avaliação",
-      "failed": "Mostrar apenas amostras com falha"
-    },
-    "cancel": {
-      "description": "Cancelar uma avaliação em execução",
-      "yes": "Ignorar pedido de confirmação"
-    },
-    "scorecard": {
-      "description": "Mostrar o quadro de pontuações de uma execução de avaliação concluída"
     }
   },
   "program": {

@@ -1439,9 +1439,8 @@ Odpowiedź GET zawiera `agents[]` (id, name, binary, version, installed, protoco
 
 ### Ewaluacje
 
-| Punkt końcowy | Metoda   | Opis                                                         |
-| ------------- | -------- | ------------------------------------------------------------ |
-| `/api/evals`  | GET/POST | Wyświetlanie zestawów ewaluacyjnych / uruchamianie ewaluacji |
+| Punkt końcowy | Metoda | Opis |
+| ------------- | ------ | ---- |
 
 ### Zasady
 
@@ -1761,31 +1760,6 @@ Używane przez podsystem automatycznego zarządzania kluczami do wydawania i rot
 
 ---
 
-## Protokół agentów
-
-Zadania agentów chmurowych (Claude Code, Codex Cloud, OpenHands itp.) wykonywane zdalnie w imieniu użytkowników 67router.
-
-| Metoda | Ścieżka                       | Opis                                                                                                                                                          |
-| ------ | ----------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| GET    | `/api/v1/agents/tasks`        | Wyświetla listę zadań — opcjonalne `?provider=`, `?status=`, `?limit=` (1–500, domyślnie 50)                                                                  |
-| POST   | `/api/v1/agents/tasks`        | Tworzy zadanie — treść żądania walidowana przez `CreateCloudAgentTaskSchema` (`providerId`, `prompt`, `source`, `options?`). Zwraca `201` z obwiednią zadania |
-| DELETE | `/api/v1/agents/tasks?id=...` | Usuwa zadanie                                                                                                                                                 |
-| GET    | `/api/v1/agents/tasks/[id]`   | Odczytuje zadanie — synchronicznie odświeża stan z nadrzędnego agenta chmurowego, gdy ustawiono `external_id`                                                 |
-| POST   | `/api/v1/agents/tasks/[id]`   | Akcja rozróżniana: `{action: "approve"}`, `{action: "message", message}` lub `{action: "cancel"}`                                                             |
-| DELETE | `/api/v1/agents/tasks/[id]`   | Usuwa określone zadanie według identyfikatora                                                                                                                 |
-
-> **Uwierzytelnianie:** uwierzytelnianie zarządzania jest wymagane dla każdej metody (`requireCloudAgentManagementAuth`). Przed wersją v3.8.0 te punkty końcowe nie wymagały uwierzytelniania — zmianę niezgodną wstecznie opisuje commit `588a0333`.
-
-```bash
-# Utwórz zadanie chmurowe Claude Code
-curl -X POST http://localhost:20128/api/v1/agents/tasks \
-  -H "Authorization: Bearer your-management-key" \
-  -H "Content-Type: application/json" \
-  -d '{"providerId":"claude-code-cloud","prompt":"Fix the failing test","source":{"repo":"...","branch":"..."}}'
-```
-
----
-
 ## Serwery proxy zarządzania
 
 Wychodzące serwery proxy HTTP(S)/SOCKS, które można przypisać do dostawców, kont lub globalnie.
@@ -1905,48 +1879,10 @@ Trwały magazyn pamięci konwersacyjnej/faktograficznej, z zakresem ograniczonym
 
 67router udostępnia punkt końcowy A2A (Agent-to-Agent) zgodny z JSON-RPC 2.0 oraz nakładkę REST do inspekcji i wykorzystania w panelu.
 
-### JSON-RPC
-
-```bash
-POST /a2a
-Authorization: Bearer your-api-key   # opcjonalne, chyba że ustawiono OMNIROUTE_API_KEY
-Content-Type: application/json
-
-{
-  "jsonrpc": "2.0",
-  "id": 1,
-  "method": "message/send",
-  "params": {
-    "skill": "smart-routing",
-    "messages": [{"role": "user", "content": "Route this coding task"}]
-  }
-}
-```
-
-Obsługiwane metody (wszystkie zależne od `settings.a2aEnabled`):
-
-| Metoda           | Opis                                                                       |
-| ---------------- | -------------------------------------------------------------------------- |
-| `message/send`   | Synchroniczne wykonanie umiejętności; zwraca `{task, artifacts, metadata}` |
-| `message/stream` | Strumieniowe wykonanie SSE tego samego zestawu umiejętności                |
-| `tasks/get`      | Pobranie zadania według `taskId`                                           |
-| `tasks/cancel`   | Anulowanie zadania według `taskId`                                         |
-
-Wbudowane umiejętności: `smart-routing`, `quota-management`, `provider-discovery`, `cost-analysis`, `health-report`.
-
-### Karta agenta
-
-```bash
-GET /.well-known/agent.json
-```
-
-Zwraca publiczną kartę agenta A2A (nazwę, opis, możliwości, katalog umiejętności i schemat uwierzytelniania) — publicznie buforowaną przez 1 godz. Uwierzytelnianie nie jest wymagane.
-
 ### Pomocnicze punkty końcowe REST
 
 | Metoda | Ścieżka                      | Opis                                                                                                             |
 | ------ | ---------------------------- | ---------------------------------------------------------------------------------------------------------------- |
-| GET    | `/api/a2a/status`            | Stan włączenia A2A, statystyki zadań i podsumowanie karty agenta z pamięci podręcznej                            |
 | GET    | `/api/a2a/tasks`             | Lista zadań — `?state=submitted\|working\|completed\|failed\|cancelled`, `?skill=`, `?limit=` (≤200), `?offset=` |
 | POST   | `/api/a2a/tasks`             | (Niezaimplementowane jako pomocniczy punkt końcowy REST — utwórz za pomocą JSON-RPC `message/send`)              |
 | GET    | `/api/a2a/tasks/[id]`        | Pobranie pojedynczego zadania                                                                                    |
@@ -1966,12 +1902,8 @@ Zwraca publiczną kartę agenta A2A (nazwę, opis, możliwości, katalog umieję
 | GET | `/api/cloud/models/alias` | Wyświetla aliasy modeli udostępniane synchronizacji z chmurą |
 | GET | `/api/assess` | Odczytuje najnowsze kategoryzacje oceny (dla poszczególnych dostawców/modeli) |
 | POST | `/api/assess` | Uruchamia ocenę — treść żądania: `{scope: {type:"all"}                                                   | {type:"provider", providerId} | {type:"model", modelId}, trigger?}` |
-| GET | `/api/evals` | Wyświetla wbudowane zestawy ewaluacyjne i najnowsze uruchomienia |
-| POST | `/api/evals` | Uruchamia ewaluację |
-| POST | `/api/evals/suites` | Tworzy niestandardowy zestaw ewaluacyjny — treść żądania walidowana przez `evalSuiteSaveSchema` |
-| GET | `/api/evals/suites/[id]` | Pobiera niestandardowy zestaw ewaluacyjny |
 
-**Uwierzytelnianie:** `/api/cloud/auth` bezpośrednio weryfikuje klucz Bearer i zwraca zamaskowany klucz oraz `projectId` każdego połączenia wyłącznie dla klucza z zakresem `manage` / `admin`; pozostałe trasy `/api/cloud/*`, `/api/evals/*` i `/api/assess` wymagają sesji administracyjnej lub klucza API. Żądanie POST do `/api/assess` używa `validateBody` ze schematem zakresu będącym sumą rozłączną.
+**Uwierzytelnianie:** `/api/cloud/auth` bezpośrednio weryfikuje klucz Bearer i zwraca zamaskowany klucz oraz `projectId` każdego połączenia wyłącznie dla klucza z zakresem `manage` / `admin`; pozostałe trasy `/api/cloud/*` i `/api/assess` wymagają sesji administracyjnej lub klucza API. Żądanie POST do `/api/assess` używa `validateBody` ze schematem zakresu będącym sumą rozłączną.
 
 ---
 
@@ -2292,5 +2224,3 @@ klucz API z zakresem zarządzania) oraz różnice między nimi a kluczami infere
 - Opcję `requireLogin` można przełączać za pomocą `/api/settings/require-login`
 - Trasy `/v1/*` mogą opcjonalnie wymagać klucza API Bearer, gdy `REQUIRE_API_KEY=true`
 - „token zarządzania” / „klucz API z zakresem zarządzania” w tym dokumencie oznacza jedną z rodzin opisanych w tym przewodniku — nie dodatkowy, niezdefiniowany typ sekretu
-
-> **Zmiana niezgodna wstecznie (v3.8.0)** — `/api/v1/agents/tasks/*` oraz punkty końcowe zarządzania okresem oczekiwania wymagają teraz **uwierzytelniania zarządzania** (pliku cookie panelu `auth_token` lub klucza API z zakresem zarządzania). Klienci, którzy wcześniej wywoływali te trasy bez uwierzytelniania, otrzymają odpowiedź `401 Unauthorized`. Zobacz commit `588a0333` (`fix(auth): require management auth for agent and cooldown APIs`).

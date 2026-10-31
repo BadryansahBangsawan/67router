@@ -573,5 +573,4 @@ Reititysmoottorilla on tiukat suorituskykyrajat:
 - [REPOSITORY_MAP.md](../architecture/REPOSITORY_MAP.md) — hakemistokohtainen kuvaus
 - [AUTO-COMBO.md](../routing/AUTO-COMBO.md) — 16 tekijän pisteytys
 - [MCP-SERVER.md](./MCP-SERVER.md) — MCP-palvelin
-- [A2A-SERVER.md](./A2A-SERVER.md) — A2A-palvelin
 - Lähdekoodi: `open-sse/` (yli 400 tiedostoa, noin 143 000 koodiriviä)

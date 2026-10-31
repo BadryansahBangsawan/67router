@@ -4,7 +4,6 @@
 
 ---
 
-> **Sors:** `src/lib/{a2a,acp,cloudAgent}/`, `src/app/api/{a2a,acp,cloud}/`, `src/app/api/v1/agents/`
 > **Aġġornat l-aħħar:** 2026-06-28 — v3.8.40
 
 67router jesponi tliet interfaċċi differenti relatati mal-aġenti. Għall-ewwel jidhru simili, iżda jsolvu problemi differenti. Uża din il-paġna biex tagħżel dik it-tajba.
@@ -20,52 +19,6 @@
 It-tlieta huma indipendenti — agħżel kwalunkwe subsett.
 
 ## Siġra tad-Deċiżjonijiet
-
-```
-Għandek bżonn servizz cloud biex jagħmel xogħol barra minn din il-magna (Codex Cloud / Cursor Cloud / Devin / Jules)?
-├─ IVA → Aġenti tal-Cloud (POST /api/v1/agents/tasks)
-└─ LE → Kompli
-    │
-    Għandek aġent pari li juża A2A u jrid jikkollabora?
-    ├─ IVA → A2A (POST /a2a)
-    └─ LE → Kompli
-        │
-        Għandek bżonn telenka / tikkonfigura aġenti CLI għall-ipprogrammar installati lokalment?
-        ├─ IVA → ACP (GET /api/acp/agents)
-        └─ LE → Uża /v1/chat/completions direttament
-```
-
-## 1. A2A — Minn Aġent għal Aġent
-
-**Speċifikazzjoni:** [A2A v0.3](https://a2a-protocol.org)
-**Endpoint ta' 67router:** `POST /a2a` (JSON-RPC 2.0)
-**Kard tal-Aġent:** `GET /.well-known/agent.json`
-
-### Meta għandek tużah
-
-- Meta tkun qed tibni sistema b'diversi aġenti fejn 67router ikun wieħed mill-pari
-- Meta tkun qed tesponi l-intelliġenza tar-routing ta' 67router (routing intelliġenti, ġestjoni tal-kwoti, eċċ.) lil aġenti f'oqfsa bħal Google ADK jew f'networks ġeneriċi ta' aġenti
-- Meta tkun qed tqiegħed 67router wara interfaċċa standard ta' skoperta + invokazzjoni
-
-### Metodi
-
-- `message/send` — issottometti messaġġ u rċievi tweġiba sinkronika
-- `message/stream` — issottometti u rċievi avvenimenti tal-progress trażmessi permezz ta' SSE
-- `tasks/get` — aqra kompitu skont l-ID
-- `tasks/cancel` — ikkanċella kompitu li jkun qed jitħaddem
-
-### Ħiliet integrati (6)
-
-- `smart-routing` — għaddi prompt mill-aħjar kombinazzjoni
-- `quota-management` — irrapporta l-istat tal-kwota għal kull fornitur
-- `provider-discovery` — elenka l-fornituri installati flimkien mal-kapaċitajiet tagħhom
-- `cost-analysis` — stima l-ispiża ta' talba/konverżazzjoni
-- `health-report` — agħmel aggregazzjoni tal-istat tal-breaker/cooldown/lockout għal kull fornitur
-- `list-capabilities` — elenka l-ħiliet disponibbli tal-aġent u l-metadata
-
-### Analiżi fil-fond
-
-Ara [A2A-SERVER.md](./A2A-SERVER.md) għad-dettalji tat-trasport, l-istruttura tal-kard tal-aġent, il-konfigurazzjoni tat-TTL tal-kompiti, u l-mudell biex iżżid ħiliet ġodda.
 
 ## 2. ACP — Reġistru tal-Aġenti CLI
 
@@ -125,86 +78,7 @@ Struttura tal-body għal POST (`customAgentBodySchema` f’`src/app/api/acp/agen
   tal-fornitur. Għal użu interattiv ordinarju, niedi l-CLI kkonfigurata int stess jew
   uża `omniroute run`.
 
-## 3. Aġenti tal-Cloud
-
-**Endpoints ta’ 67router:** `/api/v1/agents/tasks/*` (ċiklu tal-ħajja) + `/api/cloud/*` (infrastruttura ta’ konnessjoni)
-**Sors:** `src/lib/cloudAgent/`
-
-### X’inhu
-
-Interfaċċa uniformi għall-aġenti tal-ipprogrammar tal-cloud ta’ partijiet terzi. Int tibgħat prompt + URL tar-repożitorju, 67router jgħaddih lill-aġent tal-cloud it-tajjeb, jiċċekkja perjodikament l-istatus, u jirritorna r-riżultati.
-
-### Aġenti appoġġjati (4, kollha kkonfermati f’`src/lib/cloudAgent/agents/`)
-
-- `codex-cloud` — OpenAI Codex Cloud
-- `devin` — Cognition Devin
-- `jules` — Google Jules
-
-### Ċiklu tal-ħajja
-
-```
-POST /api/v1/agents/tasks
-  → BaseAgent.createTask() għal kull klassi ta’ aġent
-  → is-servizz estern jibda x-xogħol
-  → tinħoloq ringiela tal-kompitu fid-DB (cloud_agent_tasks)
-  ↓
-GET /api/v1/agents/tasks/[id]
-  → sinkronizzazzjoni għażżiena tal-istatus mill-fornitur
-  → jirritorna l-istatus attwali + il-pjan + ir-reġistru tal-attività
-  ↓
-POST /api/v1/agents/tasks/[id]   (azzjoni: "approve" | "message" | "cancel")
-  → jgħaddiha lill-fornitur (jew jimmarkaha bħala kkanċellata lokalment)
-  ↓
-DELETE /api/v1/agents/tasks/[id]
-  → kanċellazzjoni lokali
-```
-
-### Awtentikazzjoni
-
-⚠️ **L-endpoints kollha `/api/v1/agents/tasks/*` jeħtieġu awtentikazzjoni tal-ġestjoni** (commit `588a0333`). Min jagħmel sejħiet b’Bearer biss jirċievi 401 minn v3.8.0 ’l quddiem.
-
-### Analiżi dettaljata
-
-Ara [CLOUD_AGENT.md](./CLOUD_AGENT.md) għall-kuntratt `CloudAgentBase`, id-dettalji speċifiċi għal kull aġent, id-dettalji tal-iskema, u l-endpoints tal-infrastruttura tal-kredenzjali.
-
-## Tqabbil: A2A vs Aġenti tal-Cloud
-
-It-tnejn għandhom "kompiti fit-tul", iżda f'livelli differenti:
-
-| Aspett                     | A2A                                                                                                                  | Aġenti tal-Cloud                                           |
-| -------------------------- | -------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------- |
-| Standard                   | Open A2A v0.3                                                                                                        | Speċifiku għal 67router                                    |
-| Fejn isir il-komputazzjoni | Ġewwa 67router (juża l-kombinazzjonijiet ikkonfigurati)                                                              | Esternament (servers ta' Codex / Devin / Jules)            |
-| Tul tal-kompitu            | TTL predefinit ta' 5 minuti (konfigurabbli f'`TaskManager`)                                                          | Minn minuti sa sigħat                                      |
-| Konxju tar-repożitorju     | Le (jgħaddi biss il-prompts)                                                                                         | Iva (URL tar-repożitorju + fergħa)                         |
-| Każ ta' użu                | Kollaborazzjoni bejn l-aġenti, routing intelliġenti bħala servizz                                                    | Iddelega "implimenta l-karatteristika X fir-repożitorju Y" |
-| Awtentikazzjoni            | `OMNIROUTE_API_KEY` fakultattiva għal `/a2a`; awtentikazzjoni ta' ġestjoni għall-għodod awżiljarji REST `/api/a2a/*` | Dejjem awtentikazzjoni ta' ġestjoni                        |
-
 ## Eżempji ta' Integrazzjoni
-
-### Skopri l-kapaċitajiet A2A ta' 67router
-
-```bash
-curl http://localhost:20128/.well-known/agent.json
-```
-
-Jirritorna l-Kard tal-Aġent bis-6 ħiliet kollha, it-trasporti u l-verżjoni.
-
-### Sejjaħ lil 67router bħala aġent A2A
-
-```bash
-curl -X POST http://localhost:20128/a2a \
-  -H "Content-Type: application/json" \
-  -d '{
-    "jsonrpc": "2.0",
-    "method": "message/send",
-    "params": {
-      "messages": [{"role": "user", "content": "Route this prompt"}],
-      "skill": "smart-routing"
-    },
-    "id": 1
-  }'
-```
 
 ### Elenka l-aġenti CLI installati permezz ta' ACP
 
@@ -227,30 +101,6 @@ curl -X POST http://localhost:20128/api/acp/agents \
     "versionCommand": "--version",
     "providerAlias": "openai"
   }'
-```
-
-### Issottometti kompitu lil Aġent tal-Cloud
-
-```bash
-curl -X POST http://localhost:20128/api/v1/agents/tasks \
-  -H "Cookie: auth_token=..." \
-  -H "Content-Type: application/json" \
-  -d '{
-    "providerId": "devin",
-    "prompt": "Implement feature X in repo Y",
-    "source": {
-      "repoName": "user/repo",
-      "repoUrl": "https://github.com/user/repo",
-      "branch": "main"
-    }
-  }'
-```
-
-### Iċċekkja perjodikament l-istatus tal-kompitu fil-cloud
-
-```bash
-curl http://localhost:20128/api/v1/agents/tasks/<task-id> \
-  -H "Cookie: auth_token=..."
 ```
 
 ## Meta Għandek Tuża Xiex
@@ -283,8 +133,6 @@ curl http://localhost:20128/api/v1/agents/tasks/<task-id> \
 
 ## Ara Wkoll
 
-- [A2A-SERVER.md](./A2A-SERVER.md) — Analiżi fil-fond ta’ A2A
-- [CLOUD_AGENT.md](./CLOUD_AGENT.md) — Analiżi fil-fond tal-Aġenti tal-Cloud
 - [CLI-TOOLS.md](../reference/CLI-TOOLS.md) — Integrazzjonijiet CLI esterni (juża ACP)
 - [SKILLS.md](./SKILLS.md) — Qafas tal-ħiliet (differenti mill-ħiliet A2A — sandbox ta’ eżekuzzjoni lokali)
 - [API_REFERENCE.md](../reference/API_REFERENCE.md#agents-protocol) — referenza tal-endpoint

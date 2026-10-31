@@ -588,7 +588,6 @@ Radar는 선택적으로 사용할 수 있으며 GET 전용입니다. 67router �
 - **🔑 키별 라우팅 제어** — `forcedModel`을 사용해 API 키를 하나의 모델 또는 콤보에 고정하고, 키의 모델과 콤보를 원자적으로 추가하거나 제거할 수 있습니다(`/api/keys/{id}/access`). → [API 레퍼런스](docs/reference/API_REFERENCE.md) · [OpenAPI](docs/openapi.yaml)
 - **🛡️ 더 세밀한 PII 제어** — 유형별 선택, 검증된 사용자 지정 마스킹 패턴 최대 20개, 유형별 탐지 카운터를 지원하며, 마스킹 자체는 계속 명시적으로 활성화해야 합니다. → [가드레일](docs/security/GUARDRAILS.md)
 - **🌍 67개 언어** — 대시보드, 문서 미러 및 CLI를 지원하며, `npm run i18n:add-locale` 명령 하나로 모든 위치에 언어를 추가할 수 있습니다. → [i18n 가이드](docs/guides/I18N.md)
-- **🎛️ OmniConductor** — 에이전트 플릿으로 들어오는 A2A 위임, Agent Card의 Conductor 스킬, Faro 푸시투토크 음성 채팅이 포함된 대시보드 패널을 제공합니다. → [A2A 서버](docs/frameworks/A2A-SERVER.md)
 - **🛂 적응형 수락 제어 및 과부하 보호** — 부하가 큰 채팅 요청은 503을 반환하는 대신 대기열에 들어가며, 연결별 원자적 RPM 롤링 리스를 사용합니다. → [복원력 가이드](docs/architecture/RESILIENCE_GUIDE.md)
 - **🗂️ 표준 `/v1/models` 정렬** — 각 공급자마다 연속된 하나의 공급자별 그룹 블록을 구성하며(콤보 우선 고정), 모든 카탈로그 소스에서 안정적인 순서를 유지합니다. → [API 레퍼런스](docs/reference/API_REFERENCE.md)
 - **🗜️ 압축 강화** — 기본적으로 활성화되는 인플레이션 가드, DE / FR / JA + 중국어(문언문)용 Caveman 팩, Gradle 및 .NET용 RTK 필터를 제공합니다. → [압축](docs/compression/COMPRESSION_ENGINES.md)
@@ -906,7 +905,6 @@ omniroute contexts use default            # ← 로컬 서버로 다시 전환
   <tr><td align="left" nowrap>🧰 <b>MCP (stdio)</b></td><td align="left" nowrap><code>omniroute --mcp</code></td><td align="left">Claude Desktop, Cursor 또는 모든 MCP 클라이언트에 연결</td></tr>
   <tr><td align="left" nowrap>🌊 <b>MCP (HTTP)</b></td><td align="left" nowrap><code>/api/mcp/stream</code></td><td align="left">원격 MCP — <b>110개 도구</b>, 33개 범위(선택적 적용), 완전한 감사 추적</td></tr>
   <tr><td align="left" nowrap>📡 <b>MCP (SSE)</b></td><td align="left" nowrap><code>/api/mcp/sse</code></td><td align="left">스트리밍 MCP 전송</td></tr>
-  <tr><td align="left" nowrap>🤝 <b>A2A</b></td><td align="left" nowrap><code>/.well-known/agent.json</code></td><td align="left">에이전트 간 통신, <b>JSON-RPC 2.0</b> + SSE, 6개 스킬</td></tr>
   <tr><td align="left" nowrap>🌐 <b>REST API</b></td><td align="left" nowrap><code>/v1/*</code></td><td align="left">OpenAI 호환 — 채팅, 임베딩, 이미지, 오디오, OCR</td></tr>
   <tr><td align="left" nowrap>🔔 <b>웹훅</b></td><td align="left" nowrap><code>/api/webhooks</code></td><td align="left">요청 / 할당량 이벤트를 Slack, Discord, Telegram 또는 모든 URL로 푸시</td></tr>
   <tr><td align="left" nowrap>🛰️ <b>원격 CLI</b></td><td align="left" nowrap><code>omniroute connect <host></code></td><td align="left">범위가 지정된 액세스 토큰으로 원격 인스턴스 제어</td></tr>
@@ -916,8 +914,6 @@ omniroute contexts use default            # ← 로컬 서버로 다시 전환
 # MCP를 통해 Claude Code에 전체 67router 도구 세트 제공:
 claude mcp add-server omniroute --type http --url http://localhost:20128/api/mcp/stream
 ```
-
-<sub>📖 [MCP 서버](docs/frameworks/MCP-SERVER.md) · [A2A 서버](docs/frameworks/A2A-SERVER.md) · [에이전트 프로토콜](docs/frameworks/AGENT_PROTOCOLS_GUIDE.md)</sub>
 
 <br/>
 
@@ -1380,7 +1376,6 @@ OMNIROUTE_SKIP_POSTINSTALL=1 npm install -g omniroute   # CI=1도 이를 건너�
   <tr><td nowrap><b><a href="open-sse/mcp-server/README.md">MCP 서버</a></b></td><td>MCP 도구 110개, IDE 구성, Python/TS/Go 클라이언트</td></tr>
   <tr><td nowrap><b><a href="docs/frameworks/MCP-SERVER.md">MCP 서버 가이드</a></b></td><td>MCP 설치, 전송 방식 및 도구 레퍼런스</td></tr>
   <tr><td nowrap><b><a href="src/lib/a2a/README.md">A2A 서버</a></b></td><td>JSON-RPC 2.0 프로토콜, 스킬, 스트리밍, 작업 관리</td></tr>
-  <tr><td nowrap><b><a href="docs/frameworks/A2A-SERVER.md">A2A 서버 가이드</a></b></td><td>A2A 에이전트 카드, 작업, 스킬 및 스트리밍</td></tr>
 </table>
 
 ### 📋 프로젝트 및 품질

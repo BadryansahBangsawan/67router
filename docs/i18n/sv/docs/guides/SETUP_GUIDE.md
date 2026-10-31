@@ -248,26 +248,6 @@ Lägg till följande i dina MCP-inställningar:
 
 **Fullständig MCP-dokumentation:** [README för MCP-servern](../../open-sse/mcp-server/README.md) — 110 verktyg, IDE-konfigurationer samt Python-/TS-/Go-klienter.
 
-### A2A-konfiguration (Agent-to-Agent Protocol)
-
-Verifiera Agent Card:
-
-```bash
-curl http://localhost:20128/.well-known/agent.json
-```
-
-Skicka en uppgift:
-
-```bash
-curl -X POST http://localhost:20128/a2a \
-  -H 'content-type: application/json' \
-  -d '{"jsonrpc":"2.0","id":"quickstart","method":"message/send","params":{"skill":"quota-management","messages":[{"role":"user","content":"Give me a short quota summary."}]}}'
-```
-
-**Fullständig A2A-dokumentation:** [README för A2A-servern](../../src/lib/a2a/README.md) — JSON-RPC 2.0, färdigheter, strömning och uppgifters livscykel.
-
----
-
 ## Konfiguration av tidsgränser
 
 ### Grundläggande tidsgränser

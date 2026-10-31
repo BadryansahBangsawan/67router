@@ -9,7 +9,7 @@ lastUpdated: 2026-06-28
 AgentBridge is 67router's MITM (Man-in-the-Middle) proxy that intercepts HTTPS traffic from IDE AI agents and reroutes it through 67router's unified routing engine. It supports **10 IDE agents** — Antigravity, Kiro, GitHub Copilot, GHE Copilot, OpenAI Codex, Cursor, Zed, Claude Code, Open Code, and Trae (investigating) — making 67router the broadest-coverage MITM proxy for AI coding assistants on the market.
 
 **Dashboard location:** `/dashboard/tools/agent-bridge`
-**Sidebar group:** Tools (after Cloud Agents)
+**Sidebar group:** Tools
 **See also:** [`TRAFFIC_INSPECTOR.md`](./TRAFFIC_INSPECTOR.md) — monitor all intercepted traffic in real-time; `docs/security/MITM-TPROXY-DECRYPT.md` (git; not compiled into `/docs`) — the Linux TPROXY transparent-decrypt capture mode driven by the `/api/tools/agent-bridge/tproxy` route.
 
 ---
@@ -22,7 +22,7 @@ When an IDE agent (e.g., GitHub Copilot, Cursor, Claude Code) makes an API call,
 
 This means you can:
 
-- **Reroute any agent to any provider**: Copilot talking to OpenAI? Redirect it to Anthropic Claude, Gemini, or any of 67router's 375 providers.
+- **Reroute any agent to any provider**: Copilot talking to OpenAI? Redirect it to Anthropic Claude, Gemini, or any of 67router's 372 providers.
 - **Apply model mappings**: `gemini-3-flash` → `claude-sonnet-4.7` transparently at the handler level.
 - **Observe all agent traffic**: every intercepted request is published to the [Traffic Inspector](./TRAFFIC_INSPECTOR.md).
 - **Apply 67router resilience**: combo routing, circuit breakers, fallbacks, and cost tracking work for IDE agent traffic too.

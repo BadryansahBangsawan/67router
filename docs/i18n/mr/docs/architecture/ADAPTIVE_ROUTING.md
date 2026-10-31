@@ -41,7 +41,6 @@ AI एजंट / IDE
 | शॅडो ट्रॅफिक                          | `open-sse/services/combo/shadowRouting.ts`                                                       |
 | संरक्षक                               | `src/lib/guardrails/` (पूर्व/उत्तर हुक्स)                                                        |
 | अचूक कॅशे                             | `src/lib/semanticCache.ts` (स्वाक्षरी-आधारित)                                                    |
-| मूल्यमापक / मूल्यमापन-चालित रूटिंग    | `src/lib/evals/`, `open-sse/services/evalRouting.ts`                                             |
 | कॉम्बो निर्णय स्पष्टीकरणक्षमता        | `open-sse/services/combo/decisionTrace.ts`                                                       |
 | डॅशबोर्ड रिअल-टाइम इव्हेंट्स          | `src/lib/events/eventBus.ts` (UI सूचना चॅनेल, `unknown` पेलोड्स, 100-नोंदींचा इतिहास)            |
 
@@ -255,8 +254,6 @@ OTel सिंकद्वारे GenAI/OmniRoute स्पॅन अॅट्
 - भविष्यातील `Evaluator` (निर्धारक, स्थानिक जज, HTTP, WASM) इव्हेंट्स/ट्रेसेस
   वापरेल आणि त्याच `getQualityScore`/गुणवत्ता-घटक मार्गाला पुरवला जाणारा
   `QualityScore` परत करेल.
-- विद्यमान मूल्यमापन-चालित राउटिंग (`open-sse/services/evalRouting.ts`) सक्षम
-  असताना `eval_runs` पास-दरांनुसार कॉम्बो लक्ष्यांचा क्रम आधीच बदलते.
 
 विनंती मार्गावर कोणतेही मूल्यमापन सिंक्रोनसरीत्या चालत नाही आणि मूल्यमापक
 अनुपस्थित असतानाही गेटवे पूर्णपणे कार्यरत राहतो.

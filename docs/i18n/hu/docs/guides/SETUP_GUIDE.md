@@ -248,26 +248,6 @@ Adja hozzá az MCP-beállításokhoz:
 
 **Teljes MCP-dokumentáció:** [MCP Server README](../../open-sse/mcp-server/README.md) — 110 eszköz, IDE-konfigurációk, Python/TS/Go kliensek.
 
-### A2A beállítása (ügynökök közötti protokoll)
-
-Ellenőrizze az ügynökkártyát:
-
-```bash
-curl http://localhost:20128/.well-known/agent.json
-```
-
-Küldjön egy feladatot:
-
-```bash
-curl -X POST http://localhost:20128/a2a \
-  -H 'content-type: application/json' \
-  -d '{"jsonrpc":"2.0","id":"quickstart","method":"message/send","params":{"skill":"quota-management","messages":[{"role":"user","content":"Give me a short quota summary."}]}}'
-```
-
-**Teljes A2A-dokumentáció:** [A2A Server README](../../src/lib/a2a/README.md) — JSON-RPC 2.0, képességek, streamelés, feladat-életciklus.
-
----
-
 ## Időtúllépési konfiguráció
 
 ### Alapvető időtúllépések

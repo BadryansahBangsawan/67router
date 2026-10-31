@@ -390,34 +390,6 @@
       "description": "Jurnal de audit MCP (alias pentru audit --source mcp)"
     }
   },
-  "a2a": {
-    "skills": {
-      "description": "Listează abilitățile A2A disponibile din cardul agentului"
-    },
-    "invoke": {
-      "description": "Invocă o abilitate A2A și returnează ID-ul sarcinii",
-      "input": "Obiect JSON de intrare",
-      "input_file": "Calea către fișierul JSON de intrare",
-      "wait": "Așteaptă finalizarea sarcinii înainte de returnare",
-      "timeout": "Timp maxim de așteptare pentru finalizare, în ms (implicit: 60000)"
-    },
-    "tasks": {
-      "description": "Gestionează sarcinile A2A",
-      "list": {
-        "status": "Filtrează după stare",
-        "skill": "Filtrează după ID-ul abilității"
-      },
-      "watch": {
-        "description": "Verifică periodic starea sarcinii până la finalizare"
-      },
-      "stream": {
-        "description": "Transmite în flux evenimentele de execuție a sarcinii prin SSE"
-      },
-      "logs": {
-        "description": "Afișează mesajele și artefactele sarcinii"
-      }
-    }
-  },
   "policy": {
     "description": "Gestionează politicile de autorizare 67router",
     "list": {
@@ -696,99 +668,6 @@
       "provider": "ID-ul furnizorului pentru revocare",
       "connection_id": "Revocă o anumită conexiune după ID",
       "yes": "Omite solicitarea de confirmare"
-    }
-  },
-  "cloud": {
-    "description": "Gestionează sarcinile agenților AI din cloud (codex, devin, jules)",
-    "agents": {
-      "description": "Listează agenții din cloud disponibili"
-    },
-    "agent": {
-      "description": "Gestionează sarcinile agentului {agent} din cloud",
-      "auth": {
-        "description": "Autorizează {agent} prin OAuth"
-      }
-    },
-    "task": {
-      "description": "Gestionează sarcinile agenților din cloud",
-      "create": {
-        "description": "Creează o sarcină nouă pentru agent",
-        "title": "Titlul sarcinii (implicit, primele 80 de caractere ale solicitării)",
-        "prompt": "Textul solicitării pentru sarcină",
-        "prompt_file": "Citește solicitarea din fișier",
-        "repo": "URL-ul depozitului de clonat pentru sarcină",
-        "branch": "Numele ramurii de utilizat",
-        "metadata": "Obiect JSON cu metadate"
-      },
-      "list": {
-        "description": "Listează sarcinile agentului",
-        "status": "Filtrează după stare (running|completed|failed|cancelled)",
-        "limit": "Numărul maxim de rezultate (implicit: 50)"
-      },
-      "get": {
-        "description": "Obține detaliile sarcinii după ID"
-      },
-      "status": {
-        "description": "Afișează starea sarcinii (running|completed|failed|cancelled)"
-      },
-      "cancel": {
-        "description": "Anulează o sarcină în curs de executare",
-        "yes": "Omite solicitarea de confirmare"
-      },
-      "approve": {
-        "description": "Aprobă planul agentului pentru a începe executarea"
-      },
-      "message": {
-        "description": "Trimite un mesaj unei sarcini în curs de executare"
-      }
-    },
-    "sources": {
-      "description": "Listează fișierele sursă produse de o sarcină"
-    }
-  },
-  "eval": {
-    "description": "Gestionează suitele și rulările de evaluare",
-    "suites": {
-      "description": "Gestionează suitele de evaluare",
-      "list": {
-        "description": "Listează suitele de evaluare"
-      },
-      "get": {
-        "description": "Obține detaliile suitei de evaluare după ID"
-      },
-      "create": {
-        "description": "Creează o suită de evaluare dintr-un fișier JSON",
-        "file": "Calea către fișierul JSON cu definiția suitei"
-      }
-    },
-    "run": {
-      "description": "Pornește o rulare de evaluare pentru o suită",
-      "model": "ID-ul modelului de evaluat (implicit: auto)",
-      "combo": "Forțează o anumită combinație după nume",
-      "concurrency": "Numărul de eșantioane procesate simultan (implicit: 4)",
-      "tag": "Etichetează această rulare pentru filtrare ulterioară",
-      "watch": "Urmărește progresul rulării până la finalizare"
-    },
-    "list": {
-      "description": "Listează rulările de evaluare",
-      "suite": "Filtrează după ID-ul suitei",
-      "status": "Filtrează după stare",
-      "since": "Returnează rulările începând de la această marcă temporală",
-      "limit": "Numărul maxim de rezultate (implicit: 50)"
-    },
-    "get": {
-      "description": "Obține detaliile rulării de evaluare după ID"
-    },
-    "results": {
-      "description": "Afișează rezultatele eșantioanelor pentru o rulare de evaluare",
-      "failed": "Afișează numai eșantioanele nereușite"
-    },
-    "cancel": {
-      "description": "Anulează o evaluare în curs de rulare",
-      "yes": "Omite solicitarea de confirmare"
-    },
-    "scorecard": {
-      "description": "Afișează fișa de evaluare pentru o rulare de evaluare finalizată"
     }
   },
   "program": {

@@ -1437,9 +1437,8 @@ GET atsakyme pateikiami `agents[]` (id, name, binary, version, installed, protoc
 
 ### Vertinimai
 
-| Galinis taškas | Metodas  | Aprašymas                                              |
-| -------------- | -------- | ------------------------------------------------------ |
-| `/api/evals`   | GET/POST | Pateikti vertinimo rinkinių sąrašą / vykdyti vertinimą |
+| Galinis taškas | Metodas | Aprašymas |
+| -------------- | ------- | --------- |
 
 ### Strategijos
 
@@ -1759,31 +1758,6 @@ Naudojama automatinio raktų valdymo posistemio API raktams išduoti ir keisti n
 
 ---
 
-## Agentų protokolas
-
-Debesijos agentų užduotys („Claude Code“, „Codex Cloud“, „OpenHands“ ir kt.), nuotoliniu būdu vykdomos „67router“ naudotojų vardu.
-
-| Metodas | Kelias                        | Aprašymas                                                                                                                                            |
-| ------- | ----------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------- |
-| GET     | `/api/v1/agents/tasks`        | Pateikti užduočių sąrašą — pasirinktinai `?provider=`, `?status=`, `?limit=` (1–500, numatytoji reikšmė 50)                                          |
-| POST    | `/api/v1/agents/tasks`        | Sukurti užduotį — turinį patikrina `CreateCloudAgentTaskSchema` (`providerId`, `prompt`, `source`, `options?`). Grąžina `201` su užduoties apvalkalu |
-| DELETE  | `/api/v1/agents/tasks?id=...` | Ištrinti užduotį                                                                                                                                     |
-| GET     | `/api/v1/agents/tasks/[id]`   | Nuskaityti užduotį — sinchroniškai atnaujina būseną iš pirminio debesijos agento, kai nustatytas `external_id`                                       |
-| POST    | `/api/v1/agents/tasks/[id]`   | Veiksmas pagal skiriamąjį lauką: `{action: "approve"}`, `{action: "message", message}` arba `{action: "cancel"}`                                     |
-| DELETE  | `/api/v1/agents/tasks/[id]`   | Ištrinti konkrečią užduotį pagal ID                                                                                                                  |
-
-> **Autentifikavimas:** kiekvienam metodui būtinas valdymo autentifikavimas (`requireCloudAgentManagementAuth`). Iki v3.8.0 šie metodai nebuvo autentifikuojami — apie nesuderinamą pakeitimą žr. įsipareigojimą `588a0333`.
-
-```bash
-# Sukurti „Claude Code“ debesijos užduotį
-curl -X POST http://localhost:20128/api/v1/agents/tasks \
-  -H "Authorization: Bearer your-management-key" \
-  -H "Content-Type: application/json" \
-  -d '{"providerId":"claude-code-cloud","prompt":"Fix the failing test","source":{"repo":"...","branch":"..."}}'
-```
-
----
-
 ## Valdymo tarpiniai serveriai
 
 Išeinamojo HTTP(S)/SOCKS srauto tarpiniai serveriai, kuriuos galima priskirti teikėjams, paskyroms arba visuotinai.
@@ -1903,48 +1877,10 @@ Nuolatinė pokalbių / faktinės atminties saugykla, susieta su konkrečiu API r
 
 „67router“ teikia A2A („Agent-to-Agent“) JSON-RPC 2.0 galinį tašką ir REST apvalkalą, skirtą tikrinimui bei ataskaitų skydeliui.
 
-### JSON-RPC
-
-```bash
-POST /a2a
-Authorization: Bearer your-api-key   # neprivaloma, nebent nustatytas OMNIROUTE_API_KEY
-Content-Type: application/json
-
-{
-  "jsonrpc": "2.0",
-  "id": 1,
-  "method": "message/send",
-  "params": {
-    "skill": "smart-routing",
-    "messages": [{"role": "user", "content": "Route this coding task"}]
-  }
-}
-```
-
-Palaikomi metodai (visi priklauso nuo `settings.a2aEnabled`):
-
-| Metodas          | Aprašymas                                                             |
-| ---------------- | --------------------------------------------------------------------- |
-| `message/send`   | Sinchroninis gebėjimo vykdymas; grąžina `{task, artifacts, metadata}` |
-| `message/stream` | To paties gebėjimų rinkinio srautinis vykdymas naudojant SSE          |
-| `tasks/get`      | Gauti užduotį pagal `taskId`                                          |
-| `tasks/cancel`   | Atšaukti užduotį pagal `taskId`                                       |
-
-Integruoti gebėjimai: `smart-routing`, `quota-management`, `provider-discovery`, `cost-analysis`, `health-report`.
-
-### Agento kortelė
-
-```bash
-GET /.well-known/agent.json
-```
-
-Grąžina viešą A2A agento kortelę (pavadinimą, aprašymą, galimybes, gebėjimų katalogą ir autentifikavimo schemą) — viešai saugoma podėlyje 1 val. Autentifikavimas nereikalingas.
-
 ### REST pagalbinės sąsajos
 
 | Metodas | Kelias                       | Aprašymas                                                                                                             |
 | ------- | ---------------------------- | --------------------------------------------------------------------------------------------------------------------- |
-| GET     | `/api/a2a/status`            | A2A įjungimo būsena + užduočių statistika + podėlyje saugomos agento kortelės santrauka                               |
 | GET     | `/api/a2a/tasks`             | Užduočių sąrašas — `?state=submitted\|working\|completed\|failed\|cancelled`, `?skill=`, `?limit=` (≤200), `?offset=` |
 | POST    | `/api/a2a/tasks`             | (Neįgyvendinta kaip REST pagalbinė sąsaja — kurkite naudodami JSON-RPC `message/send`)                                |
 | GET     | `/api/a2a/tasks/[id]`        | Gauti vieną užduotį                                                                                                   |
@@ -1964,12 +1900,8 @@ Grąžina viešą A2A agento kortelę (pavadinimą, aprašymą, galimybes, gebė
 | GET | `/api/cloud/models/alias` | Pateikti modelių alternatyviųjų vardų, prieinamų debesijos sinchronizavimui, sąrašą |
 | GET | `/api/assess` | Gauti naujausias vertinimo kategorijas (pagal teikėją / modelį) |
 | POST | `/api/assess` | Vykdyti vertinimą — užklausos turinys: `{scope: {type:"all"}                                                   | {type:"provider", providerId} | {type:"model", modelId}, trigger?}` |
-| GET | `/api/evals` | Pateikti integruotų testų rinkinių ir naujausių jų vykdymų sąrašą |
-| POST | `/api/evals` | Pradėti testo vykdymą |
-| POST | `/api/evals/suites` | Sukurti pasirinktinį testų rinkinį — užklausos turinys tikrinamas naudojant `evalSuiteSaveSchema` |
-| GET | `/api/evals/suites/[id]` | Gauti pasirinktinį testų rinkinį |
 
-**Autentifikavimas:** `/api/cloud/auth` tiesiogiai patikrina Bearer raktą ir grąžina kiekvieno ryšio užmaskuotą raktą bei `projectId` tik tada, kai raktas turi `manage` / `admin` aprėptį; kitiems `/api/cloud/*`, `/api/evals/*` ir `/api/assess` maršrutams reikia valdymo seanso / API rakto. `/api/assess` POST naudoja `validateBody` su diskriminuotosios sąjungos aprėpties schema.
+**Autentifikavimas:** `/api/cloud/auth` tiesiogiai patikrina Bearer raktą ir grąžina kiekvieno ryšio užmaskuotą raktą bei `projectId` tik tada, kai raktas turi `manage` / `admin` aprėptį; kitiems `/api/cloud/*` ir `/api/assess` maršrutams reikia valdymo seanso / API rakto. `/api/assess` POST naudoja `validateBody` su diskriminuotosios sąjungos aprėpties schema.
 
 ---
 
@@ -2292,5 +2224,3 @@ raktą ir valdymo aprėpties API raktą) bei jų skirtumus nuo išvadų generavi
 - `requireLogin` galima perjungti naudojant `/api/settings/require-login`
 - Kai `REQUIRE_API_KEY=true`, `/v1/*` maršrutams gali būti privalomas „Bearer“ API raktas
 - Šiame apraše „valdymo prieigos raktas“ / „valdymo aprėpties API raktas“ reiškia vieną iš tame vadove aprašytų grupių, o ne neapibrėžtą papildomą slaptojo rakto tipą
-
-> **Nesuderinamas pakeitimas (v3.8.0)** — `/api/v1/agents/tasks/*` ir atvėsimo laikotarpio valdymo galiniai taškai dabar reikalauja **valdymo autentifikavimo** (valdymo skydelio `auth_token` slapuko arba valdymo aprėpties API rakto). Klientai, kurie anksčiau šiuos maršrutus iškviesdavo be autentifikavimo, gaus `401 Unauthorized`. Žr. pakeitimą `588a0333` (`fix(auth): require management auth for agent and cooldown APIs`).

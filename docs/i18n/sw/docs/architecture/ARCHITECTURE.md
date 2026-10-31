@@ -128,13 +128,11 @@ Kurasa kuu zilizo chini ya `src/app/(dashboard)/dashboard/`:
 - `/dashboard/limits` — vidhibiti vya kiwango cha matumizi/kasi
 - `/dashboard/cli-tools` — utambulishaji wa CLI, utambuzi wa mazingira ya utekelezaji, utengenezaji wa usanidi
 - `/dashboard/agents` — mawakala wa ACP waliotambuliwa + usajili wa mawakala maalum
-- `/dashboard/cloud-agents` — kazi za mawakala wanaopangishwa kwenye cloud (Codex Cloud, Devin, Jules) na mzunguko wa maisha wa kazi
 - `/dashboard/skills` — sajili ya ujuzi wa A2A, utekelezaji katika sandbox, katalogi ya ujuzi uliojengewa ndani
 - `/dashboard/memory` — ukaguzi na urejeshaji wa kumbukumbu endelevu za mazungumzo
 - `/dashboard/webhooks` — usajili wa webhook zinazotoka, ubadilishaji wa siri, takwimu za majaribio ya kutuma tena
 - `/dashboard/batch` — uwasilishaji wa kazi za kundi na maendeleo
 - `/dashboard/cache` — takwimu za akiba ya usomaji-pitia na uhoji, vidhibiti vya uondoaji
-- `/dashboard/playground` — mazingira shirikishi ya mazungumzo dhidi ya combo/modeli yoyote iliyosanidiwa
 - `/dashboard/changelog` — kitazamaji cha kumbukumbu ya mabadiliko ndani ya programu (huonyesha `CHANGELOG.md`)
 - `/dashboard/system` — uchunguzi wa mazingira ya utekelezaji, taarifa za toleo, sehemu ya uthibitishaji wa mazingira
 - `/dashboard/onboarding` — mchawi wa usanidi wa matumizi ya kwanza kwa usakinishaji mpya
@@ -252,7 +250,6 @@ Vikoa vya usimamizi:
 - Bajeti: `src/app/api/usage/budget` (GET/POST)
 - Minyororo ya mbadala: `src/app/api/fallback/chains` (GET/POST/DELETE)
 - Ukaguzi wa utiifu: `src/app/api/compliance/audit-log` (GET, pamoja na upangaji wa kurasa + metadata iliyopangwa)
-- Tathmini: `src/app/api/evals` (GET/POST), `src/app/api/evals/[suiteId]` (GET)
 - Sera: `src/app/api/policies` (GET/POST)
 - Tokeni za usawazishaji: `src/app/api/sync/tokens` (GET/POST), `src/app/api/sync/tokens/[id]` (GET/DELETE)
 - Kifurushi cha usanidi: `src/app/api/sync/bundle` (GET, picha-tuli yenye toleo la ETag ya mipangilio/watoa huduma/michanganyiko/funguo)
@@ -316,7 +313,6 @@ Moduli za safu ya kikoa:
 - Muda wa kusubiri wa uchotaji: `src/shared/utils/fetchTimeout.ts`
 - Telemetria ya maombi: `src/shared/utils/requestTelemetry.ts`
 - Uzingatiaji/ukaguzi: `src/lib/compliance/index.ts`
-- Kiendesha tathmini: `src/lib/evals/evalRunner.ts`
 - Udumishaji wa hali ya kikoa: `src/lib/db/domainState.ts` — SQLite CRUD kwa misururu ya kutumia mbadala, bajeti, historia ya gharama, hali ya kufungia na vivunja mzunguko
 
 Moduli za watoa huduma wa OAuth (faili 27 mahususi chini ya `src/lib/oauth/providers/`):
@@ -385,23 +381,6 @@ Uwezo mkuu:
 
 Kwa maelezo kamili ya kialgorithimu (fomula za vipengele, urekebishaji wa uzani), angalia
 [`docs/routing/AUTO-COMBO.md`](../routing/AUTO-COMBO.md).
-
-### B. Mawakala wa Wingu
-
-Cloud Agents hufunika majukwaa ya mawakala wa msimbo yanayopangishwa na wahusika wengine (Codex Cloud, Devin,
-Jules) nyuma ya mzunguko mmoja wa maisha ya jukumu unaotegemea DB. Vituo vyote vya kuunda/kukagua majukumu
-vinahitaji uthibitishaji wa usimamizi.
-
-- Mzizi wa moduli: `src/lib/cloudAgent/` (`baseAgent.ts`, `registry.ts`, `api.ts`,
-  `types.ts`, `db.ts`, pamoja na saraka ndogo za kila wakala chini ya `agents/`)
-- Utekelezaji wa kila wakala: `agents/codex/`, `agents/devin/`, `agents/jules/`
-- Vituo vya umma: `/api/v1/agents/tasks/*` (orodhesha/unda/pata/ghairi)
-- Vituo vya usimamizi: `/api/cloud/*` (uandaaji, hali, kundi)
-- Dashibodi: `/dashboard/cloud-agents`
-- Hifadhi: jedwali la `cloud_agent_tasks`
-
-Kwa maelezo ya uandaaji wa kila wakala na vipengele maalum vya OAuth, angalia
-[`docs/frameworks/CLOUD_AGENT.md`](../frameworks/CLOUD_AGENT.md).
 
 ### C. Vizuizi vya Usalama
 

@@ -43,8 +43,6 @@ O ciclo v3.7.x → v3.8.0 adicionou roteamento automático sem configuração, n
 - 🤝 **Provedor OAuth do GitLab Duo** — login com credenciais do GitLab
 - 🧠 **Cache de repetição de raciocínio** — persistência híbrida em memória + SQLite de rastros de raciocínio
 
-📚 **Documentos relacionados:** [Framework de Skills](../frameworks/SKILLS.md) · [Sistema de memória](../frameworks/MEMORY.md) · [Agentes na nuvem](../frameworks/CLOUD_AGENT.md) · [Webhooks](../frameworks/WEBHOOKS.md) · [Cache de repetição de raciocínio](../routing/REASONING_REPLAY.md)
-
 ---
 
 ## 🔌 Provedores
@@ -104,12 +102,6 @@ Monitoramento em tempo real: tempo de atividade, memória, versão, percentis de
 Quatro modos para depurar traduções da API: **Playground** (conversor de formatos), **Testador de Chat** (solicitações ao vivo), **Bancada de Testes** (testes em lote) e **Monitor ao Vivo** (fluxo em tempo real).
 
 ![Playground do Tradutor](../screenshots/05-translator.png)
-
----
-
-## 🎮 Playground de Modelos _(v2.0.9+)_
-
-Teste qualquer modelo diretamente pelo painel. Selecione o provedor, o modelo e o endpoint, escreva prompts com o Monaco Editor, acompanhe as respostas em tempo real, interrompa durante o fluxo e visualize métricas de tempo.
 
 ---
 

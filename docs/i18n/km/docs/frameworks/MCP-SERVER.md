@@ -244,17 +244,6 @@ The following table lists the tools available in the MCP tool catalog.
 ចំពោះប្រតិបត្តិការកំណត់ផ្លូវ/ឃ្លាំងសម្ងាត់/ការបង្ហាប់/អង្គចងចាំ/ជំនាញ/ប្រូកស៊ី/ប្រភពបរិបទនៅពេលដំណើរការ។ ក្របខ័ណ្ឌជាប់គ្នាពីរ
 ត្រូវបានដឹកជញ្ជូនរួមជាមួយម៉ាស៊ីនមេ MCP ក្នុង v3.8.0 ហើយត្រូវបានចងក្រងជាឯកសារដោយឡែកពីគ្នា៖
 
-### ភ្នាក់ងារ Cloud
-
-ភ្នាក់ងារ Cloud គឺជាភ្នាក់ងារសរសេរកូដ AI (codex-cloud, cursor-cloud, devin, jules) ដែលដំណើរការក្រៅដំណើរការ
-ដែលត្រូវបានភ្ជាប់ទៅ 67router តាមរយៈគំរូការតភ្ជាប់ដូចគ្នាដែលប្រើសម្រាប់អ្នកផ្តល់ LLM។ ពួកវាត្រូវបានបង្ហាញតាមរយៈ
-ផ្ទៃ REST ផ្ទាល់ខ្លួនរបស់ពួកគេ (`/api/v1/agents/*`) ហើយ **មិនមែន** ជាផ្នែកនៃកាតាឡុកឧបករណ៍ MCP ទេ។
-— ការហៅភ្នាក់ងារ Cloud មិនប្រើប្រាស់វិសាលភាព MCP ទេ។
-
-- ការអនុវត្ត៖ `src/lib/cloudAgent/` (`registry.ts`, `agents/codex.ts`, `agents/cursor.ts`, `agents/devin.ts`, `agents/jules.ts`)។
-- វដ្តជីវិត៖ `createTask`, `getStatus`, `approvePlan`, `sendMessage`, `listSources`។
-- ឯកសារ៖ [docs/frameworks/CLOUD_AGENT.md](./CLOUD_AGENT.md)។
-
 ### Guardrails
 
 Guardrails គឺជាតម្រងមុន/ក្រោយការប្រតិបត្តិ (vision-bridge, pii-masker, prompt-injection)

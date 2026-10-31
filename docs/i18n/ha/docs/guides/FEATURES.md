@@ -43,8 +43,6 @@ Zagayen v3.7.x → v3.8.0 ya ƙara sarrafa hanya ta atomatik ba tare da saiti ba
 - 🤝 **Mai samar da GitLab Duo OAuth** — shiga da bayanan shaidar GitLab
 - 🧠 **Reasoning Replay Cache** — haɗaɗɗen adanawa na cikin ƙwaƙwalwa + SQLite na sawun tunani
 
-📚 **Takardu masu alaƙa:** [Tsarin Skills](../frameworks/SKILLS.md) · [Tsarin Ƙwaƙwalwa](../frameworks/MEMORY.md) · [Wakilan Cloud](../frameworks/CLOUD_AGENT.md) · [Webhooks](../frameworks/WEBHOOKS.md) · [Reasoning Replay Cache](../routing/REASONING_REPLAY.md)
-
 ---
 
 ## 🔌 Masu Bayarwa
@@ -104,12 +102,6 @@ Sa-ido na ainihin lokaci: tsawon lokacin aiki, ƙwaƙwalwa, siga, kaso-kason jin
 Hanyoyi huɗu don gano matsalolin fassarar API: **Filin Gwaji** (mai sauya tsari), **Mai Gwajin Tattaunawa** (buƙatun kai-tsaye), **Dandalin Gwaji** (gwaje-gwajen rukuni), da **Mai Sa Ido Kai-tsaye** (kwararar bayanai a ainihin lokaci).
 
 ![Filin Gwajin Fassara](../screenshots/05-translator.png)
-
----
-
-## 🎮 Filin Gwajin Samfuri _(v2.0.9+)_
-
-Gwada kowane samfuri kai-tsaye daga dashboard. Zaɓi mai bayarwa, samfuri, da endpoint, rubuta prompts da Monaco Editor, watsa amsoshi a ainihin lokaci, dakatar a tsakiyar watsawa, sannan duba ma'aunin lokuta.
 
 ---
 

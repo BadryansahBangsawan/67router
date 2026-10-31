@@ -214,8 +214,6 @@ export async function POST(request: Request) {
 
 ## การเปลี่ยนแปลงที่ส่งผลกระทบ — v3.8.0
 
-เอนด์พอยต์ `/api/v1/agents/tasks/*` และ `/api/resilience/model-cooldowns` **ตอนนี้ต้องมีการรับรองความถูกต้องของการจัดการ** (คอมมิต `588a0333`) ไคลเอ็นต์ที่เคยส่งคีย์ API ปกติโดยไม่มีสโคป `manage` จะได้รับ `403` การย้ายข้อมูล: ออกสโคป `manage` ให้กับคีย์ในแดชบอร์ด API Keys หรือใช้เซสชันแดชบอร์ดที่เข้าสู่ระบบแล้ว
-
 ## การเปลี่ยนแปลงพฤติกรรม — v3.8.2
 
 `/api/mcp/*` (เซิร์ฟเวอร์ MCP ระยะไกล) ยังคงเป็น LOCAL_ONLY โดยค่าเริ่มต้น แต่ตอนนี้ยอมรับคำขอที่ไม่ใช่ loopback เมื่อส่วนหัว `Authorization: Bearer <api-key>` มีสโคป `manage` ส่วนที่แยกออกมาถูกจำกัดอย่างชัดเจนต่อเส้นทางผ่าน `LOCAL_ONLY_MANAGE_SCOPE_BYPASS_PREFIXES` ใน `src/server/authz/routeGuard.ts`; ส่วนนำหน้า LOCAL_ONLY ที่เป็นพี่น้องกัน `/api/cli-tools/runtime/*` ไม่สามารถข้ามได้โดยเจตนาเนื่องจากสามารถสร้างกระบวนการย่อยแบบสุ่มได้ คำขอที่ไม่ระบุชื่อไปยัง `/api/mcp/*` จากที่ไม่ใช่ loopback ยังคงส่งคืน `403 LOCAL_ONLY` — ค่าเริ่มต้นสำหรับเส้นทาง LOCAL_ONLY ใหม่ใดๆ ยังคงเป็น strict-loopback ดู [Route Guard Tiers](../security/ROUTE_GUARD_TIERS.md#manage-scope-carve-out)

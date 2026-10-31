@@ -128,13 +128,11 @@ v3.8.0 ప్లాట్ఫారమ్కు సంబంధించిన �
 - `/dashboard/limits` — కోటా/రేట్ నియంత్రణలు
 - `/dashboard/cli-tools` — CLI ఆన్బోర్డింగ్, రన్టైమ్ గుర్తింపు, కాన్ఫిగరేషన్ ఉత్పత్తి
 - `/dashboard/agents` — గుర్తించబడిన ACP ఏజెంట్లు + అనుకూల ఏజెంట్ నమోదు
-- `/dashboard/cloud-agents` — క్లౌడ్లో హోస్ట్ చేయబడిన ఏజెంట్ టాస్క్లు (Codex Cloud, Devin, Jules) మరియు టాస్క్ జీవితచక్రం
 - `/dashboard/skills` — A2A స్కిల్ రిజిస్ట్రీ, శాండ్బాక్స్ అమలు, అంతర్నిర్మిత స్కిల్ కేటలాగ్
 - `/dashboard/memory` — స్థిరమైన సంభాషణ మెమరీ పరిశీలన మరియు తిరిగి పొందడం
 - `/dashboard/webhooks` — అవుట్బౌండ్ వెబ్హుక్ సబ్స్క్రిప్షన్లు, సీక్రెట్ రొటేషన్, రీట్రై గణాంకాలు
 - `/dashboard/batch` — బ్యాచ్ జాబ్ సమర్పణ మరియు పురోగతి
 - `/dashboard/cache` — రీడ్-త్రూ మరియు రీజనింగ్ క్యాష్ గణాంకాలు, తొలగింపు నియంత్రణలు
-- `/dashboard/playground` — కాన్ఫిగర్ చేసిన ఏదైనా కాంబో/మోడల్తో ఇంటరాక్టివ్ చాట్ ప్లేగ్రౌండ్
 - `/dashboard/changelog` — యాప్లోని చేంజ్లాగ్ వ్యూయర్ (`CHANGELOG.md`ను రెండర్ చేస్తుంది)
 - `/dashboard/system` — రన్టైమ్ డయాగ్నస్టిక్స్, వెర్షన్ సమాచారం, ఎన్విరాన్మెంట్ ధ్రువీకరణ ఉపరితలం
 - `/dashboard/onboarding` — కొత్త ఇన్స్టాలేషన్ల కోసం మొదటి-అమలు సెటప్ విజార్డ్
@@ -252,7 +250,6 @@ flowchart LR
 - బడ్జెట్: `src/app/api/usage/budget` (GET/POST)
 - ఫాల్బ్యాక్ చైన్లు: `src/app/api/fallback/chains` (GET/POST/DELETE)
 - కంప్లయన్స్ ఆడిట్: `src/app/api/compliance/audit-log` (GET, పేజినేషన్ + నిర్మిత మెటాడేటాతో)
-- మూల్యాంకనాలు: `src/app/api/evals` (GET/POST), `src/app/api/evals/[suiteId]` (GET)
 - విధానాలు: `src/app/api/policies` (GET/POST)
 - సింక్ టోకెన్లు: `src/app/api/sync/tokens` (GET/POST), `src/app/api/sync/tokens/[id]` (GET/DELETE)
 - కాన్ఫిగరేషన్ బండిల్: `src/app/api/sync/bundle` (GET, సెట్టింగ్లు/ప్రొవైడర్లు/కాంబోలు/కీల యొక్క ETag-వెర్షన్ చేయబడిన స్నాప్షాట్)
@@ -316,7 +313,6 @@ flowchart LR
 - ఫెచ్ టైమ్అవుట్: `src/shared/utils/fetchTimeout.ts`
 - అభ్యర్థన టెలిమెట్రీ: `src/shared/utils/requestTelemetry.ts`
 - అనుసరణ/ఆడిట్: `src/lib/compliance/index.ts`
-- మూల్యాంకన రన్నర్: `src/lib/evals/evalRunner.ts`
 - డొమైన్ స్థితి నిల్వ: `src/lib/db/domainState.ts` — ఫాల్బ్యాక్ చైన్లు, బడ్జెట్లు, ఖర్చు చరిత్ర, లాకౌట్ స్థితి, సర్క్యూట్ బ్రేకర్ల కోసం SQLite CRUD
 
 OAuth ప్రొవైడర్ మాడ్యూల్లు (`src/lib/oauth/providers/` కింద 27 వ్యక్తిగత ఫైల్లు):
@@ -382,23 +378,6 @@ Auto Combo స్థిరమైన కాంబో నిర్వచనంప�
 
 పూర్తి అల్గోరిథమిక్ వివరాల కోసం (కారకాల ఫార్ములాలు, వెయిట్ ట్యూనింగ్),
 [`docs/routing/AUTO-COMBO.md`](../routing/AUTO-COMBO.md) చూడండి.
-
-### B. క్లౌడ్ ఏజెంట్లు
-
-Cloud Agents అనేది మూడవ-పక్ష హోస్ట్ చేసిన కోడ్-ఏజెంట్ ప్లాట్ఫారమ్లను (Codex Cloud, Devin,
-Jules) ఏకరీతి DB-ఆధారిత టాస్క్ లైఫ్సైకిల్ వెనుక ర్యాప్ చేస్తుంది. అన్ని టాస్క్ సృష్టి/పరిశీలన
-ఎండ్పాయింట్లకు మేనేజ్మెంట్ ఆథెంటికేషన్ అవసరం.
-
-- మాడ్యూల్ రూట్: `src/lib/cloudAgent/` (`baseAgent.ts`, `registry.ts`, `api.ts`,
-  `types.ts`, `db.ts`, అలాగే `agents/` కింద ఒక్కో ఏజెంట్కు సంబంధించిన సబ్డైరెక్టరీలు)
-- ఒక్కో ఏజెంట్కు సంబంధించిన అమలులు: `agents/codex/`, `agents/devin/`, `agents/jules/`
-- పబ్లిక్ ఎండ్పాయింట్లు: `/api/v1/agents/tasks/*` (జాబితా/సృష్టించడం/పొందడం/రద్దు చేయడం)
-- మేనేజ్మెంట్ ఎండ్పాయింట్లు: `/api/cloud/*` (ప్రొవిజనింగ్, స్థితి, బ్యాచ్)
-- డ్యాష్బోర్డ్: `/dashboard/cloud-agents`
-- నిల్వ: `cloud_agent_tasks` పట్టిక
-
-ఒక్కో ఏజెంట్కు సంబంధించిన ప్రొవిజనింగ్ మరియు OAuth ప్రత్యేకతల కోసం,
-[`docs/frameworks/CLOUD_AGENT.md`](../frameworks/CLOUD_AGENT.md) చూడండి.
 
 ### C. గార్డ్రైల్స్
 

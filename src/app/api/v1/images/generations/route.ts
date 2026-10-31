@@ -62,7 +62,7 @@ import {
   isCommonChatGptWebRetirementError,
 } from "@/shared/constants/chatgptWebRetirement";
 import { PLAYGROUND_IMAGE_STREAM_HEADER } from "@/shared/utils/playgroundImageStream";
-import { createPlaygroundImageStreamResponse } from "@/lib/playground/imageGenerationStream";
+import { createPlaygroundImageStreamResponse } from "@/lib/images/imageGenerationStream";
 import { getImageLongJobOptions } from "@/lib/images/imageGenerationLongJobs";
 import { isImageGenerationLongJobsEnabled } from "@/shared/utils/featureFlags";
 

@@ -167,5 +167,4 @@ API 키 플레이스홀더는 항상 `$OMNIROUTE_API_KEY`입니다(D11, Playgrou
 - 마스터 플랜: `_tasks/features-v3.8.6/refactorpages/_orchestration/master-plan-group-C.md`
 - 기능 플랜: `_tasks/features-v3.8.6/refactorpages/18-search-tools-studio-redesign.plan.md`
 - 검색 제공자 레지스트리: `open-sse/config/searchRegistry.ts`
-- Playground Studio(공유 `ExportCodeModal` + `codeExport.ts`): `docs/frameworks/PLAYGROUND_STUDIO.md`
 - 웹 가져오기 백엔드: `src/app/api/v1/web/fetch/route.ts`

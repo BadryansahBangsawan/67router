@@ -127,5 +127,3 @@ um teste de fumaça autorizado separadamente no ambiente de destino.
 - [Protocolos de agentes](./AGENT_PROTOCOLS_GUIDE.md)
 - [Contratos de inicialização de CLI](../guides/CLI-LAUNCH-CONTRACTS.md)
 - [Ferramentas de CLI](../reference/CLI-TOOLS.md)
-- [Servidor A2A](./A2A-SERVER.md)
-- [Agentes de nuvem](./CLOUD_AGENT.md)

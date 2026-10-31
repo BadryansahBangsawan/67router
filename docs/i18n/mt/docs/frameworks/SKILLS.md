@@ -258,12 +258,6 @@ Ara [MCP-SERVER.md](./MCP-SERVER.md) għall-konfigurazzjoni tat-trasport u l-ass
 
 ---
 
-## Integrazzjoni A2A
-
-`src/lib/skills/a2a.ts` jesporta d-deskrittur tal-ħila A2A `memory_aware_routing` u helper `registerA2ASkill(registry)`. Il-ħiliet A2A personalizzati jinsabu f'`src/lib/a2a/skills/` u jintbagħtu permezz ta' `A2A_SKILL_HANDLERS` (`src/lib/a2a/taskExecution.ts`). Ara [A2A-SERVER.md](./A2A-SERVER.md) għaċ-ċiklu tal-ħajja sħiħ tal-kompitu.
-
----
-
 ## Żieda ta' Ħila Inkorporata Ġdida
 
 1. **Iddefinixxi l-handler** f'`src/lib/skills/builtins.ts` (jew f'fajl ieħor taħt `src/lib/skills/builtin/`). Firma: `(input, { apiKeyId, sessionId }) => Promise<output>`.
@@ -478,7 +472,6 @@ Ara [SDK tal-Plugin u Integrazzjoni tal-Ħiliet](./PLUGIN_SDK.md) biex titgħall
 ## Ara Wkoll
 
 - [MCP-SERVER.md](./MCP-SERVER.md) — ir-reġistrazzjoni tal-għodod MCP u t-trasporti
-- [A2A-SERVER.md](./A2A-SERVER.md) — iċ-ċiklu tal-ħajja tal-kompiti A2A u d-dispaċċ tal-ħiliet
 - [USER_GUIDE.md](../guides/USER_GUIDE.md#-skills-system) — introduzzjoni għall-utenti
 - [ARCHITECTURE.md](../architecture/ARCHITECTURE.md) — il-pipeline tat-talbiet u l-mappa tal-komponenti
 - Sors: `src/lib/skills/`, `src/app/api/skills/`, `open-sse/mcp-server/tools/skillTools.ts`

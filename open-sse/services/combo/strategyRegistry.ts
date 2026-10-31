@@ -65,7 +65,7 @@ export interface StrategyTraits {
   promptCacheAffinityScope: "model" | "global";
   /** Strategy-selected first target is re-pinned ahead of a cache-affinity reorder (#8370). */
   protectsFirstTargetFromAffinity: boolean;
-  /** Cache-affinity ordering outranks session stickiness / eval routing when it applied. */
+  /** Cache-affinity ordering outranks session stickiness when it applied. */
   cacheAffinityOwnsOrdering: boolean;
   /** Smart / pipeline-enabled combos may route through the multi-stage pipeline. */
   smartPipeline: boolean;

@@ -1415,9 +1415,8 @@ curl -X PATCH "$OMNIROUTE_URL/api/keys/$KEY_ID" \
 
 ### ارزیابیها
 
-| Endpoint     | Method   | Description                             |
-| ------------ | -------- | --------------------------------------- |
-| `/api/evals` | GET/POST | فهرست مجموعههای ارزیابی / اجرای ارزیابی |
+| Endpoint | Method | Description |
+| -------- | ------ | ----------- |
 
 ### سیاستها
 
@@ -1737,31 +1736,6 @@ DELETE /api/usage/token-limits?id=tl-abc
 
 ---
 
-## پروتکل عاملها
-
-وظایف عامل ابری (Claude Code، Codex Cloud، OpenHands و غیره) که از راه دور و از طرف کاربران 67router اجرا میشوند.
-
-| متد    | مسیر                          | توضیحات                                                                                                                                                       |
-| ------ | ----------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| GET    | `/api/v1/agents/tasks`        | فهرست وظایف — پارامترهای اختیاری `?provider=`، `?status=`، `?limit=` (از 1 تا 500، پیشفرض 50)                                                                 |
-| POST   | `/api/v1/agents/tasks`        | ایجاد وظیفه — بدنه توسط `CreateCloudAgentTaskSchema` اعتبارسنجی میشود (`providerId`، `prompt`، `source`، `options?`). پاکت وظیفه را با وضعیت `201` برمیگرداند |
-| DELETE | `/api/v1/agents/tasks?id=...` | حذف یک وظیفه                                                                                                                                                  |
-| GET    | `/api/v1/agents/tasks/[id]`   | خواندن وظیفه — هنگامی که `external_id` تنظیم شده باشد، وضعیت را بهصورت همگام از عامل ابری بالادستی بهروزرسانی میکند                                           |
-| POST   | `/api/v1/agents/tasks/[id]`   | اقدام تفکیکشده: `{action: "approve"}`، `{action: "message", message}` یا `{action: "cancel"}`                                                                 |
-| DELETE | `/api/v1/agents/tasks/[id]`   | حذف یک وظیفه مشخص بر اساس شناسه                                                                                                                               |
-
-> **احراز هویت:** احراز هویت مدیریتی برای همه متدها الزامی است (`requireCloudAgentManagementAuth`). پیش از v3.8.0 این مسیرها بدون احراز هویت بودند — برای مشاهده تغییر ناسازگار، به کامیت `588a0333` مراجعه کنید.
-
-```bash
-# ایجاد یک وظیفه ابری Claude Code
-curl -X POST http://localhost:20128/api/v1/agents/tasks \
-  -H "Authorization: Bearer your-management-key" \
-  -H "Content-Type: application/json" \
-  -d '{"providerId":"claude-code-cloud","prompt":"Fix the failing test","source":{"repo":"...","branch":"..."}}'
-```
-
----
-
 ## پروکسیهای مدیریتی
 
 پروکسیهای خروجی HTTP(S)/SOCKS که میتوان آنها را به ارائهدهندگان، حسابها یا بهصورت سراسری اختصاص داد.
@@ -1881,48 +1855,10 @@ curl -X DELETE http://localhost:20128/api/resilience/model-cooldowns \
 
 67router یک نقطه پایانی A2A (عاملبهعامل) مبتنی بر JSON-RPC 2.0، بههمراه یک پوشش REST برای بازرسی و استفاده در داشبورد ارائه میکند.
 
-### JSON-RPC
-
-```bash
-POST /a2a
-Authorization: Bearer your-api-key   # اختیاری است، مگر اینکه OMNIROUTE_API_KEY تنظیم شده باشد
-Content-Type: application/json
-
-{
-  "jsonrpc": "2.0",
-  "id": 1,
-  "method": "message/send",
-  "params": {
-    "skill": "smart-routing",
-    "messages": [{"role": "user", "content": "Route this coding task"}]
-  }
-}
-```
-
-متدهای پشتیبانیشده (همه وابسته به فعال بودن `settings.a2aEnabled` هستند):
-
-| متد              | توضیحات                                                        |
-| ---------------- | -------------------------------------------------------------- |
-| `message/send`   | اجرای همگام مهارت؛ `{task, artifacts, metadata}` را برمیگرداند |
-| `message/stream` | اجرای جریانی SSE برای همان مجموعه مهارتها                      |
-| `tasks/get`      | دریافت یک وظیفه بر اساس `taskId`                               |
-| `tasks/cancel`   | لغو یک وظیفه بر اساس `taskId`                                  |
-
-مهارتهای داخلی: `smart-routing`، `quota-management`، `provider-discovery`، `cost-analysis`، `health-report`.
-
-### کارت عامل
-
-```bash
-GET /.well-known/agent.json
-```
-
-کارت عمومی عامل A2A (نام، توضیحات، قابلیتها، کاتالوگ مهارتها و طرح احراز هویت) را برمیگرداند — این کارت بهمدت 1h بهصورت عمومی کش میشود. نیازی به احراز هویت نیست.
-
 ### ابزارهای کمکی REST
 
 | متد  | مسیر                         | توضیحات                                                                                                          |
 | ---- | ---------------------------- | ---------------------------------------------------------------------------------------------------------------- |
-| GET  | `/api/a2a/status`            | وضعیت فعال بودن A2A + آمار وظایف + خلاصه کارت عامل کششده                                                         |
 | GET  | `/api/a2a/tasks`             | فهرست وظایف — `?state=submitted\|working\|completed\|failed\|cancelled`، `?skill=`، `?limit=` (≤200)، `?offset=` |
 | POST | `/api/a2a/tasks`             | (بهعنوان ابزار کمکی REST پیادهسازی نشده است — از طریق JSON-RPC و `message/send` ایجاد کنید)                      |
 | GET  | `/api/a2a/tasks/[id]`        | بازیابی یک وظیفه                                                                                                 |
@@ -1942,12 +1878,8 @@ GET /.well-known/agent.json
 | GET | `/api/cloud/models/alias` | فهرست نامهای مستعار مدل، همانگونه که برای همگامسازی ابری ارائه میشوند |
 | GET | `/api/assess` | خواندن جدیدترین دستهبندیهای ارزیابی (برای هر ارائهدهنده/مدل) |
 | POST | `/api/assess` | اجرای یک ارزیابی — بدنه: `{scope: {type:"all"}                                                   | {type:"provider", providerId} | {type:"model", modelId}, trigger?}` |
-| GET | `/api/evals` | فهرست مجموعههای ارزیابی داخلی + جدیدترین اجراها |
-| POST | `/api/evals` | آغاز یک اجرای ارزیابی |
-| POST | `/api/evals/suites` | ایجاد یک مجموعه ارزیابی سفارشی — بدنه توسط `evalSuiteSaveSchema` اعتبارسنجی میشود |
-| GET | `/api/evals/suites/[id]` | بازیابی یک مجموعه ارزیابی سفارشی |
 
-**احراز هویت:** `/api/cloud/auth` مستقیماً یک کلید Bearer را اعتبارسنجی میکند و فقط برای کلیدی با دامنه `manage` / `admin`، کلید ماسکشده و `projectId` هر اتصال را برمیگرداند؛ سایر مسیرهای `/api/cloud/*`، `/api/evals/*` و `/api/assess` به نشست مدیریتی/کلید API نیاز دارند. درخواست POST به `/api/assess` از `validateBody` همراه با یک شِمای دامنه از نوع اجتماع متمایزشده استفاده میکند.
+**احراز هویت:** `/api/cloud/auth` مستقیماً یک کلید Bearer را اعتبارسنجی میکند و فقط برای کلیدی با دامنه `manage` / `admin`، کلید ماسکشده و `projectId` هر اتصال را برمیگرداند؛ سایر مسیرهای `/api/cloud/*` و `/api/assess` به نشست مدیریتی/کلید API نیاز دارند. درخواست POST به `/api/assess` از `validateBody` همراه با یک شِمای دامنه از نوع اجتماع متمایزشده استفاده میکند.
 
 ---
 
@@ -2266,5 +2198,3 @@ devin-cli و غیره) مدیریت کنید. برای مشاهده فهرست �
 - گزینهٔ `requireLogin` از طریق `/api/settings/require-login` قابل تغییر است
 - مسیرهای `/v1/*` در صورت تنظیم `REQUIRE_API_KEY=true` میتوانند به کلید API از نوع Bearer نیاز داشته باشند
 - «توکن مدیریتی» / «کلید API با دامنهٔ مدیریتی» در این مرجع به یکی از خانوادههای ذکرشده در آن راهنما اشاره دارد — نه به یک نوع رمز محرمانهٔ اضافی و تعریفنشده
-
-> **تغییر ناسازگار (v3.8.0)** — مسیرهای `/api/v1/agents/tasks/*` و نقاط پایانی مدیریت دورهٔ انتظار اکنون به **احراز هویت مدیریتی** (کوکی `auth_token` داشبورد یا یک کلید API با دامنهٔ مدیریتی) نیاز دارند. کلاینتهایی که پیشتر این مسیرها را بدون احراز هویت فراخوانی میکردند، پاسخ `401 Unauthorized` دریافت خواهند کرد. به کامیت `588a0333` (`fix(auth): require management auth for agent and cooldown APIs`) مراجعه کنید.

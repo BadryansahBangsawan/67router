@@ -201,8 +201,8 @@ for (const [alias, load] of Object.entries(lazyExecutors)) {
   registerLazyExecutor(alias, load);
 }
 
-// #6699 — providers that exist ONLY as Cloud Agent task-API entries
-// (CLOUD_AGENT_PROVIDERS / staticModels "Available Models" catalog) and have no
+// #6699 — providers that existed ONLY as Cloud Agent task-API entries (the Cloud Agents
+// feature is removed from 67router; old connection rows may remain) and have no
 // chat-completions REGISTRY entry anywhere in open-sse/. Without this guard,
 // getExecutor() silently falls through to DefaultExecutor's
 // `PROVIDERS[provider] || PROVIDERS.openai` fallback, sending the user's real
@@ -231,7 +231,7 @@ export async function getExecutor(provider: string): Promise<BaseExecutor> {
   if (loaded) return loaded;
   if (CHAT_UNSUPPORTED_CLOUD_AGENT_PROVIDERS.has(provider)) {
     const err = new Error(
-      `Provider "${provider}" is a cloud-agent provider and does not support direct chat completions; use the Cloud Agents task API instead.`
+      `Provider "${provider}" is a cloud-agent provider and does not support direct chat completions.`
     );
     (err as Error & { status?: number }).status = 400;
     throw err;

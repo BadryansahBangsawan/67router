@@ -1433,9 +1433,8 @@ Jibu la GET linajumuisha `agents[]` (id, name, binary, version, installed, proto
 
 ### Tathmini
 
-| Endpoint     | Mbinu    | Maelezo                                          |
-| ------------ | -------- | ------------------------------------------------ |
-| `/api/evals` | GET/POST | Orodhesha makundi ya tathmini / endesha tathmini |
+| Endpoint | Mbinu | Maelezo |
+| -------- | ----- | ------- |
 
 ### Sera
 
@@ -1758,31 +1757,6 @@ Hutumiwa na mfumo mdogo wa usimamizi otomatiki wa funguo kutoa na kubadilisha fu
 
 ---
 
-## Itifaki ya Ajenti
-
-Kazi za ajenti wa wingu (Claude Code, Codex Cloud, OpenHands, n.k.) zinazotekelezwa kwa mbali kwa niaba ya watumiaji wa 67router.
-
-| Mbinu  | Njia                          | Maelezo                                                                                                                                                                 |
-| ------ | ----------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| GET    | `/api/v1/agents/tasks`        | Orodhesha kazi — hiari `?provider=`, `?status=`, `?limit=` (1–500, chaguo-msingi 50)                                                                                    |
-| POST   | `/api/v1/agents/tasks`        | Unda kazi — sehemu kuu ya ombi inathibitishwa na `CreateCloudAgentTaskSchema` (`providerId`, `prompt`, `source`, `options?`). Hurejesha `201` pamoja na bahasha ya kazi |
-| DELETE | `/api/v1/agents/tasks?id=...` | Futa kazi                                                                                                                                                               |
-| GET    | `/api/v1/agents/tasks/[id]`   | Soma kazi — husasisha hali kwa wakati mmoja kutoka kwa ajenti wa wingu wa chanzo wakati `external_id` imewekwa                                                          |
-| POST   | `/api/v1/agents/tasks/[id]`   | Kitendo bainifu: `{action: "approve"}`, `{action: "message", message}`, au `{action: "cancel"}`                                                                         |
-| DELETE | `/api/v1/agents/tasks/[id]`   | Futa kazi mahususi kwa kutumia id                                                                                                                                       |
-
-> **Uthibitishaji:** uthibitishaji wa usimamizi unahitajika kwa kila mbinu (`requireCloudAgentManagementAuth`). Kabla ya v3.8.0, hizi hazikuhitaji uthibitishaji — tazama commit `588a0333` kwa mabadiliko yanayovunja utangamano.
-
-```bash
-# Unda kazi ya wingu ya Claude Code
-curl -X POST http://localhost:20128/api/v1/agents/tasks \
-  -H "Authorization: Bearer your-management-key" \
-  -H "Content-Type: application/json" \
-  -d '{"providerId":"claude-code-cloud","prompt":"Fix the failing test","source":{"repo":"...","branch":"..."}}'
-```
-
----
-
 ## Proksi za Usimamizi
 
 Proksi za HTTP(S)/SOCKS zinazotoka ambazo zinaweza kukabidhiwa kwa watoa huduma, akaunti, au kwa kiwango cha kimataifa.
@@ -1902,48 +1876,10 @@ Hifadhi endelevu ya kumbukumbu za mazungumzo/ukweli, yenye mawanda kulingana na 
 
 67router hutoa kituo cha mwisho cha A2A (Agent-to-Agent) cha JSON-RPC 2.0 pamoja na kifungashio cha REST kwa ajili ya ukaguzi/matumizi ya dashibodi.
 
-### JSON-RPC
-
-```bash
-POST /a2a
-Authorization: Bearer your-api-key   # si lazima isipokuwa OMNIROUTE_API_KEY imewekwa
-Content-Type: application/json
-
-{
-  "jsonrpc": "2.0",
-  "id": 1,
-  "method": "message/send",
-  "params": {
-    "skill": "smart-routing",
-    "messages": [{"role": "user", "content": "Route this coding task"}]
-  }
-}
-```
-
-Mbinu zinazotumika (zote zinategemea `settings.a2aEnabled`):
-
-| Mbinu            | Maelezo                                                             |
-| ---------------- | ------------------------------------------------------------------- |
-| `message/send`   | Utekelezaji sawia wa ujuzi; hurejesha `{task, artifacts, metadata}` |
-| `message/stream` | Utekelezaji wa utiririshaji wa SSE wa seti ileile ya ujuzi          |
-| `tasks/get`      | Leta jukumu kwa kutumia `taskId`                                    |
-| `tasks/cancel`   | Ghairi jukumu kwa kutumia `taskId`                                  |
-
-Ujuzi uliojengewa ndani: `smart-routing`, `quota-management`, `provider-discovery`, `cost-analysis`, `health-report`.
-
-### Kadi ya Agent
-
-```bash
-GET /.well-known/agent.json
-```
-
-Hurejesha kadi ya umma ya agent wa A2A (jina, maelezo, uwezo, katalogi ya ujuzi, mpango wa uthibitishaji) — imehifadhiwa kwenye akiba hadharani kwa saa 1. Uthibitishaji hauhitajiki.
-
 ### Visaidizi vya REST
 
 | Mbinu | Njia                         | Maelezo                                                                                                                 |
 | ----- | ---------------------------- | ----------------------------------------------------------------------------------------------------------------------- |
-| GET   | `/api/a2a/status`            | A2A imewezeshwa + takwimu za majukumu + muhtasari wa kadi ya agent uliohifadhiwa kwenye akiba                           |
 | GET   | `/api/a2a/tasks`             | Orodhesha majukumu — `?state=submitted\|working\|completed\|failed\|cancelled`, `?skill=`, `?limit=` (≤200), `?offset=` |
 | POST  | `/api/a2a/tasks`             | (Haijatekelezwa kama kisaidizi cha REST — unda kupitia JSON-RPC `message/send`)                                         |
 | GET   | `/api/a2a/tasks/[id]`        | Rejesha jukumu moja                                                                                                     |
@@ -1963,12 +1899,8 @@ Hurejesha kadi ya umma ya agent wa A2A (jina, maelezo, uwezo, katalogi ya ujuzi,
 | GET | `/api/cloud/models/alias` | Orodhesha lakabu za modeli kama zinavyoonyeshwa kwa usawazishaji wa wingu |
 | GET | `/api/assess` | Soma uainishaji wa hivi karibuni wa ukadiriaji (kwa kila mtoa huduma/modeli) |
 | POST | `/api/assess` | Endesha ukadiriaji — mwili: `{scope: {type:"all"}                                                   | {type:"provider", providerId} | {type:"model", modelId}, trigger?}` |
-| GET | `/api/evals` | Orodhesha seti za tathmini za utendaji zilizojengewa ndani + utekelezaji wa hivi karibuni |
-| POST | `/api/evals` | Anzisha utekelezaji wa tathmini ya utendaji |
-| POST | `/api/evals/suites` | Unda seti maalum ya tathmini ya utendaji — mwili unathibitishwa na `evalSuiteSaveSchema` |
-| GET | `/api/evals/suites/[id]` | Rejesha seti maalum ya tathmini ya utendaji |
 
-**Uthibitishaji:** `/api/cloud/auth` huthibitisha ufunguo wa Bearer moja kwa moja na kurejesha ufunguo uliofichwa kwa sehemu na `projectId` ya kila muunganisho kwa ufunguo wenye upeo wa `manage` / `admin` pekee; njia nyingine za `/api/cloud/*`, `/api/evals/*`, na `/api/assess` zinahitaji kipindi/ufunguo wa API wa usimamizi. POST ya `/api/assess` hutumia `validateBody` pamoja na skima ya upeo ya muungano wenye kibainishi.
+**Uthibitishaji:** `/api/cloud/auth` huthibitisha ufunguo wa Bearer moja kwa moja na kurejesha ufunguo uliofichwa kwa sehemu na `projectId` ya kila muunganisho kwa ufunguo wenye upeo wa `manage` / `admin` pekee; njia nyingine za `/api/cloud/*`, na `/api/assess` zinahitaji kipindi/ufunguo wa API wa usimamizi. POST ya `/api/assess` hutumia `validateBody` pamoja na skima ya upeo ya muungano wenye kibainishi.
 
 ---
 
@@ -2289,5 +2221,3 @@ vitambulisho (kipindi cha dashibodi, tokeni ya ndani ya CLI, Tokeni ya Ufikiaji 
 - `requireLogin` inaweza kuwashwa au kuzimwa kupitia `/api/settings/require-login`
 - Njia za `/v1/*` zinaweza kuhitaji ufunguo wa API wa Bearer wakati `REQUIRE_API_KEY=true`
 - "tokeni ya usimamizi" / "ufunguo wa API wenye upeo wa usimamizi" katika rejeleo hili humaanisha mojawapo ya familia zilizo katika mwongozo huo — si aina ya ziada ya siri ambayo haijafafanuliwa
-
-> **Mabadiliko yanayovunja utangamano (v3.8.0)** — `/api/v1/agents/tasks/*` na vituo vya usimamizi wa vipindi vya kusubiri sasa vinahitaji **uthibitishaji wa usimamizi** (kidakuzi cha `auth_token` cha dashibodi au ufunguo wa API wenye upeo wa usimamizi). Wateja ambao hapo awali walitumia njia hizi bila uthibitishaji watapokea `401 Unauthorized`. Tazama commit `588a0333` (`fix(auth): require management auth for agent and cooldown APIs`).

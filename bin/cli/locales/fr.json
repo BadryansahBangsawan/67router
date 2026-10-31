@@ -390,34 +390,6 @@
       "description": "Journal d’audit MCP (alias de audit --source mcp)"
     }
   },
-  "a2a": {
-    "skills": {
-      "description": "Répertorier les compétences A2A disponibles depuis la fiche de l’agent"
-    },
-    "invoke": {
-      "description": "Invoquer une compétence A2A et renvoyer l’ID de la tâche",
-      "input": "Objet d’entrée JSON",
-      "input_file": "Chemin vers le fichier d’entrée JSON",
-      "wait": "Attendre la fin de la tâche avant de renvoyer le résultat",
-      "timeout": "Délai d’attente maximal avant la fin, en ms (par défaut : 60000)"
-    },
-    "tasks": {
-      "description": "Gérer les tâches A2A",
-      "list": {
-        "status": "Filtrer par statut",
-        "skill": "Filtrer par ID de compétence"
-      },
-      "watch": {
-        "description": "Interroger le statut de la tâche jusqu’à sa fin"
-      },
-      "stream": {
-        "description": "Diffuser les événements d’exécution de la tâche via SSE"
-      },
-      "logs": {
-        "description": "Afficher les messages et les artefacts de la tâche"
-      }
-    }
-  },
   "policy": {
     "description": "Gérer les politiques d’autorisation d’67router",
     "list": {
@@ -696,99 +668,6 @@
       "provider": "ID du fournisseur à révoquer",
       "connection_id": "Révoquer une connexion spécifique par ID",
       "yes": "Ignorer l’invite de confirmation"
-    }
-  },
-  "cloud": {
-    "description": "Gérer les tâches des agents IA cloud (codex, devin, jules)",
-    "agents": {
-      "description": "Lister les agents cloud disponibles"
-    },
-    "agent": {
-      "description": "Gérer les tâches de l’agent cloud {agent}",
-      "auth": {
-        "description": "Autoriser {agent} via OAuth"
-      }
-    },
-    "task": {
-      "description": "Gérer les tâches des agents cloud",
-      "create": {
-        "description": "Créer une nouvelle tâche d’agent",
-        "title": "Titre de la tâche (par défaut, les 80 premiers caractères de l’invite)",
-        "prompt": "Texte de l’invite de la tâche",
-        "prompt_file": "Lire l’invite depuis un fichier",
-        "repo": "URL du dépôt à cloner pour la tâche",
-        "branch": "Nom de la branche à utiliser",
-        "metadata": "Objet de métadonnées JSON"
-      },
-      "list": {
-        "description": "Lister les tâches des agents",
-        "status": "Filtrer par statut (running|completed|failed|cancelled)",
-        "limit": "Nombre maximal de résultats (par défaut : 50)"
-      },
-      "get": {
-        "description": "Obtenir les détails d’une tâche par ID"
-      },
-      "status": {
-        "description": "Afficher le statut de la tâche (running|completed|failed|cancelled)"
-      },
-      "cancel": {
-        "description": "Annuler une tâche en cours d’exécution",
-        "yes": "Ignorer l’invite de confirmation"
-      },
-      "approve": {
-        "description": "Approuver le plan de l’agent pour démarrer l’exécution"
-      },
-      "message": {
-        "description": "Envoyer un message à une tâche en cours d’exécution"
-      }
-    },
-    "sources": {
-      "description": "Lister les fichiers sources produits par une tâche"
-    }
-  },
-  "eval": {
-    "description": "Gérer les suites et les exécutions d’évaluation",
-    "suites": {
-      "description": "Gérer les suites d’évaluation",
-      "list": {
-        "description": "Lister les suites d’évaluation"
-      },
-      "get": {
-        "description": "Obtenir les détails d’une suite d’évaluation par ID"
-      },
-      "create": {
-        "description": "Créer une suite d’évaluation à partir d’un fichier JSON",
-        "file": "Chemin vers le fichier JSON de définition de la suite"
-      }
-    },
-    "run": {
-      "description": "Démarrer une exécution d’évaluation pour une suite",
-      "model": "ID du modèle à évaluer (par défaut : auto)",
-      "combo": "Forcer une combinaison spécifique par son nom",
-      "concurrency": "Nombre d’échantillons simultanés (par défaut : 4)",
-      "tag": "Ajouter une étiquette à cette exécution pour la filtrer ultérieurement",
-      "watch": "Suivre la progression de l’exécution jusqu’à son terme"
-    },
-    "list": {
-      "description": "Lister les exécutions d’évaluation",
-      "suite": "Filtrer par ID de suite",
-      "status": "Filtrer par statut",
-      "since": "Renvoyer les exécutions depuis cet horodatage",
-      "limit": "Nombre maximal de résultats (par défaut : 50)"
-    },
-    "get": {
-      "description": "Obtenir les détails d’une exécution d’évaluation par ID"
-    },
-    "results": {
-      "description": "Afficher les résultats des échantillons d’une exécution d’évaluation",
-      "failed": "Afficher uniquement les échantillons ayant échoué"
-    },
-    "cancel": {
-      "description": "Annuler une évaluation en cours",
-      "yes": "Ignorer l’invite de confirmation"
-    },
-    "scorecard": {
-      "description": "Afficher la fiche de résultats d’une exécution d’évaluation terminée"
     }
   },
   "program": {

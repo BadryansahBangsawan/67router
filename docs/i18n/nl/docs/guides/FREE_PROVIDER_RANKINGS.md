@@ -13,7 +13,7 @@
 
 ## Wat het is
 
-67router registreert 375 providers, waaronder 155 catalogusitems gemarkeerd als **free/no-auth**
+67router registreert 372 providers, waaronder 155 catalogusitems gemarkeerd als **free/no-auth**
 (no-auth,
 free-tier OAuth of free-tier API-sleutel — zie de
 [gids voor gratis tiers](../getting-started/FREE-TIERS-GUIDE.md) en de volledige

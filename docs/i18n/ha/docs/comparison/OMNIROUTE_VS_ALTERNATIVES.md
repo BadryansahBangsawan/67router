@@ -24,7 +24,6 @@ Kwatancen fasaloli cikin adalci da shahararrun mashiga AI na buɗaɗɗen tushe.
 | **Tsarin A2A**                                         |                ✅ ƙwarewa 6                 |     ❌      |        ❌         |     ❌      |
 | **Ƙwaƙwalwar ajiya (FTS5 + vector)**                   |                     ✅                      |     ❌      |        ❌         |     ❌      |
 | **Matakan kariya (PII, injection, gani)**              |                     ✅                      | ɗan ɓangare |        ❌         | ✅ mai biya |
-| **Haɗin cloud agents**                                 |         Codex, Cursor, Devin, Jules         |     ❌      |        ❌         |     ❌      |
 | **Circuit breaker ga kowane mai samarwa**              |    ✅ yanayi 3, murmurewa marar hanzari     |  na asali   |        ❌         |     ✅      |
 | **Boyewar TLS fingerprint (JA3/JA4)**                  |                 ✅ wreq-js                  |     ❌      |        ❌         |     ❌      |
 | **Tsarin kimantawa**                                   |                  ✅ a ciki                  |     ❌      |        ❌         | ⚠ mai biya  |

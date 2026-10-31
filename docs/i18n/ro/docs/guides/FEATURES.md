@@ -43,8 +43,6 @@ Ciclul v3.7.x → v3.8.0 a adăugat rutare automată fără configurare, furnizo
 - 🤝 **Furnizor OAuth GitLab Duo** — autentificare cu acreditările GitLab
 - 🧠 **Cache pentru redarea raționamentului** — persistență hibridă, în memorie + SQLite, a urmelor de raționament
 
-📚 **Documentație asociată:** [Cadrul pentru abilități](../frameworks/SKILLS.md) · [Sistemul de memorie](../frameworks/MEMORY.md) · [Agenți cloud](../frameworks/CLOUD_AGENT.md) · [Webhook-uri](../frameworks/WEBHOOKS.md) · [Cache pentru redarea raționamentului](../routing/REASONING_REPLAY.md)
-
 ---
 
 ## 🔌 Furnizori
@@ -104,12 +102,6 @@ Monitorizare în timp real: durata de funcționare, memoria, versiunea, percenti
 Patru moduri pentru depanarea traducerilor API: **Spațiu de testare** (convertor de formate), **Tester de chat** (solicitări live), **Banc de testare** (teste în lot) și **Monitorizare live** (flux în timp real).
 
 ![Spațiu de testare pentru traducător](../screenshots/05-translator.png)
-
----
-
-## 🎮 Spațiu de testare pentru modele _(v2.0.9+)_
-
-Testați orice model direct din panoul de control. Selectați furnizorul, modelul și endpoint-ul, scrieți prompturi cu Monaco Editor, transmiteți răspunsurile în timp real, întrerupeți-le în timpul fluxului și vizualizați metricile temporale.
 
 ---
 

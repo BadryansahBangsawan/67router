@@ -390,34 +390,6 @@
       "description": "MCP zapisnik revizije (alias za audit --source mcp)"
     }
   },
-  "a2a": {
-    "skills": {
-      "description": "Prikaz dostupnih A2A vještina iz kartice agenta"
-    },
-    "invoke": {
-      "description": "Pozovi A2A vještinu i vrati ID zadatka",
-      "input": "Ulazni JSON objekt",
-      "input_file": "Putanja do ulazne JSON datoteke",
-      "wait": "Čekaj dovršetak zadatka prije vraćanja rezultata",
-      "timeout": "Vremensko ograničenje za čekanje dovršetka u ms (zadano: 60000)"
-    },
-    "tasks": {
-      "description": "Upravljanje A2A zadacima",
-      "list": {
-        "status": "Filtriraj po statusu",
-        "skill": "Filtriraj po ID-u vještine"
-      },
-      "watch": {
-        "description": "Provjeravaj status zadatka do dovršetka"
-      },
-      "stream": {
-        "description": "Streaming događaja izvršavanja zadatka putem SSE"
-      },
-      "logs": {
-        "description": "Prikaz poruka i artefakata zadatka"
-      }
-    }
-  },
   "policy": {
     "description": "Upravljanje 67router politikama autorizacije",
     "list": {
@@ -696,99 +668,6 @@
       "provider": "ID pružatelja usluge za opoziv",
       "connection_id": "Opozovi određenu vezu po ID-u",
       "yes": "Preskoči potvrdu"
-    }
-  },
-  "cloud": {
-    "description": "Upravljaj zadacima cloud AI agenata (codex, devin, jules)",
-    "agents": {
-      "description": "Prikaži dostupne cloud agente"
-    },
-    "agent": {
-      "description": "Upravljaj zadacima {agent} cloud agenta",
-      "auth": {
-        "description": "Autoriziraj {agent} putem OAuth-a"
-      }
-    },
-    "task": {
-      "description": "Upravljaj zadacima cloud agenta",
-      "create": {
-        "description": "Stvori novi zadatak agenta",
-        "title": "Naslov zadatka (zadano: prvih 80 znakova upita)",
-        "prompt": "Tekst upita zadatka",
-        "prompt_file": "Pročitaj upit iz datoteke",
-        "repo": "URL repozitorija za kloniranje za zadatak",
-        "branch": "Naziv granice za korištenje",
-        "metadata": "JSON objekt metapodataka"
-      },
-      "list": {
-        "description": "Prikaži zadatke agenta",
-        "status": "Filtriraj po statusu (running|completed|failed|cancelled)",
-        "limit": "Maksimalan broj rezultata (zadano: 50)"
-      },
-      "get": {
-        "description": "Dohvati detalje zadatka po ID-u"
-      },
-      "status": {
-        "description": "Ispiši status zadatka (running|completed|failed|cancelled)"
-      },
-      "cancel": {
-        "description": "Otkaži zadatak koji je u tijeku",
-        "yes": "Zaobiđi upit za potvrdu"
-      },
-      "approve": {
-        "description": "Odobri plan agenta za pokretanje izvršavanja"
-      },
-      "message": {
-        "description": "Pošalji poruku zadatku koji je u tijeku"
-      }
-    },
-    "sources": {
-      "description": "Prikaži popis izvornih datoteka koje je izradio zadatak"
-    }
-  },
-  "eval": {
-    "description": "Upravljaj evaluacijskim paketima i pokretanjima",
-    "suites": {
-      "description": "Upravljaj evaluacijskim paketima",
-      "list": {
-        "description": "Prikaži popis evaluacijskih paketa"
-      },
-      "get": {
-        "description": "Prikaži pojedinosti evaluacijskog paketa po ID-u"
-      },
-      "create": {
-        "description": "Izradi evaluacijski paket iz JSON datoteke",
-        "file": "Putanja do JSON datoteke s definicijom paketa"
-      }
-    },
-    "run": {
-      "description": "Pokreni evaluacijsko izvršavanje za paket",
-      "model": "ID modela za evaluaciju (zadano: automatski)",
-      "combo": "Prisilno koristi određenu kombinaciju po nazivu",
-      "concurrency": "Broj istovremenih uzoraka (zadano: 4)",
-      "tag": "Označi ovo izvršavanje za kasnije filtriranje",
-      "watch": "Pratite napredak izvršavanja do završetka"
-    },
-    "list": {
-      "description": "Prikaži popis evaluacijskih izvršavanja",
-      "suite": "Filtriraj po ID-u paketa",
-      "status": "Filtriraj po statusu",
-      "since": "Vrati izvršavanja od ove vremenske oznake",
-      "limit": "Maksimalan broj rezultata (zadano: 50)"
-    },
-    "get": {
-      "description": "Prikaži pojedinosti evaluacijskog izvršavanja po ID-u"
-    },
-    "results": {
-      "description": "Prikaži rezultate uzoraka za evaluacijsko izvršavanje",
-      "failed": "Prikaži samo neuspjele uzorke"
-    },
-    "cancel": {
-      "description": "Otkaži evaluacijsko izvršavanje koje je u tijeku",
-      "yes": "Zaobiđi upit za potvrdu"
-    },
-    "scorecard": {
-      "description": "Prikaži rezultatsku karticu za dovršeno evaluacijsko izvršavanje"
     }
   },
   "program": {

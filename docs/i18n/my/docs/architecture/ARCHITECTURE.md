@@ -128,13 +128,11 @@ v3.8.0 ပလက်ဖောင်းအတွက် စံသတ်မှတ်
 - `/dashboard/limits` — quota/rate ထိန်းချုပ်မှုများ
 - `/dashboard/cli-tools` — CLI စတင်အသုံးပြုမှု၊ runtime ရှာဖွေသတ်မှတ်မှုနှင့် config ထုတ်လုပ်မှု
 - `/dashboard/agents` — ရှာဖွေတွေ့ရှိထားသော ACP agent များ + စိတ်ကြိုက် agent မှတ်ပုံတင်ခြင်း
-- `/dashboard/cloud-agents` — cloud ပေါ်တွင် လက်ခံထားသော agent လုပ်ငန်းများ (Codex Cloud၊ Devin၊ Jules) နှင့် လုပ်ငန်းသက်တမ်းစက်ဝန်း
 - `/dashboard/skills` — A2A skill registry၊ sandbox လုပ်ဆောင်မှုနှင့် ထည့်သွင်းပေးထားသော skill catalog
 - `/dashboard/memory` — အမြဲတမ်းသိမ်းဆည်းထားသော စကားဝိုင်းမှတ်ဉာဏ်ကို စစ်ဆေးခြင်းနှင့် ပြန်လည်ရယူခြင်း
 - `/dashboard/webhooks` — အပြင်သို့ပို့သည့် webhook စာရင်းသွင်းမှုများ၊ secret လှည့်လည်ပြောင်းလဲခြင်းနှင့် ပြန်လည်ကြိုးစားမှု ကိန်းဂဏန်းများ
 - `/dashboard/batch` — batch job တင်သွင်းခြင်းနှင့် တိုးတက်မှု
 - `/dashboard/cache` — read-through နှင့် reasoning cache ကိန်းဂဏန်းများ၊ ဖယ်ရှားမှု ထိန်းချုပ်ချက်များ
-- `/dashboard/playground` — စီစဉ်သတ်မှတ်ထားသော မည်သည့် combo/model နှင့်မဆို အပြန်အလှန်အသုံးပြုနိုင်သည့် chat playground
 - `/dashboard/changelog` — အက်ပ်အတွင်း changelog ကြည့်ရှုကိရိယာ (`CHANGELOG.md` ကို ပုံဖော်ပြသသည်)
 - `/dashboard/system` — runtime စစ်ဆေးမှုများ၊ ဗားရှင်းအချက်အလက်နှင့် ပတ်ဝန်းကျင် အတည်ပြုမျက်နှာပြင်
 - `/dashboard/onboarding` — အသစ်ထည့်သွင်းမှုများအတွက် ပထမဆုံးအသုံးပြုချိန် စီစဉ်သတ်မှတ်မှု wizard
@@ -252,7 +250,6 @@ flowchart LR
 - ဘတ်ဂျက်: `src/app/api/usage/budget` (GET/POST)
 - Fallback chain များ: `src/app/api/fallback/chains` (GET/POST/DELETE)
 - စည်းမျဉ်းလိုက်နာမှု စစ်ဆေးမှတ်တမ်း: `src/app/api/compliance/audit-log` (GET၊ pagination + ဖွဲ့စည်းပုံသတ်မှတ်ထားသော metadata ပါဝင်သည်)
-- အကဲဖြတ်မှုများ: `src/app/api/evals` (GET/POST), `src/app/api/evals/[suiteId]` (GET)
 - မူဝါဒများ: `src/app/api/policies` (GET/POST)
 - Sync token များ: `src/app/api/sync/tokens` (GET/POST), `src/app/api/sync/tokens/[id]` (GET/DELETE)
 - Config bundle: `src/app/api/sync/bundle` (GET၊ ဆက်တင်များ/provider များ/combo များ/key များ၏ ETag-versioned snapshot)
@@ -316,7 +313,6 @@ Domain layer module များ:
 - Fetch timeout: `src/shared/utils/fetchTimeout.ts`
 - Request telemetry: `src/shared/utils/requestTelemetry.ts`
 - Compliance/audit: `src/lib/compliance/index.ts`
-- Eval runner: `src/lib/evals/evalRunner.ts`
 - Domain state persistence: `src/lib/db/domainState.ts` — fallback chain များ၊ budget များ၊ cost history၊ lockout state နှင့် circuit breaker များအတွက် SQLite CRUD
 
 OAuth provider module များ (`src/lib/oauth/providers/` အောက်ရှိ သီးခြား file 27 ခု):
@@ -374,23 +370,6 @@ Auto Combo သည် ပုံသေ combo သတ်မှတ်ချက်အ�
 
 algorithm ဆိုင်ရာ အသေးစိတ်အပြည့်အစုံ (factor formula များ၊ weight ချိန်ညှိခြင်း) အတွက်
 [`docs/routing/AUTO-COMBO.md`](../routing/AUTO-COMBO.md) ကို ကြည့်ပါ။
-
-### B. Cloud Agents
-
-Cloud Agents သည် third-party hosted code-agent platform များ (Codex Cloud, Devin,
-Jules) ကို တူညီသော DB-backed task lifecycle နောက်ကွယ်တွင် ထုပ်ပိုးပေးသည်။ task ဖန်တီးခြင်း/စစ်ဆေးခြင်း
-endpoint အားလုံးအတွက် management authentication လိုအပ်သည်။
-
-- Module root: `src/lib/cloudAgent/` (`baseAgent.ts`, `registry.ts`, `api.ts`,
-  `types.ts`, `db.ts` နှင့် `agents/` အောက်ရှိ agent တစ်ခုချင်းစီဆိုင်ရာ subdirectory များ)
-- Agent တစ်ခုချင်းစီဆိုင်ရာ implementation များ: `agents/codex/`, `agents/devin/`, `agents/jules/`
-- Public endpoint များ: `/api/v1/agents/tasks/*` (စာရင်းပြုစု/ဖန်တီး/ရယူ/ပယ်ဖျက်)
-- Management endpoint များ: `/api/cloud/*` (provisioning၊ အခြေအနေ၊ batch)
-- Dashboard: `/dashboard/cloud-agents`
-- Storage: `cloud_agent_tasks` table
-
-Agent တစ်ခုချင်းစီ၏ provisioning နှင့် OAuth အသေးစိတ်များအတွက်
-[`docs/frameworks/CLOUD_AGENT.md`](../frameworks/CLOUD_AGENT.md) ကို ကြည့်ပါ။
 
 ### C. Guardrails
 

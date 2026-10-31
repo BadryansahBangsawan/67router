@@ -573,5 +573,4 @@ Yönlendirme motorunun katı performans bütçeleri vardır:
 - [REPOSITORY_MAP.md](../architecture/REPOSITORY_MAP.md) — dizin bazında açıklamalar
 - [AUTO-COMBO.md](../routing/AUTO-COMBO.md) — 16 faktörlü puanlama
 - [MCP-SERVER.md](./MCP-SERVER.md) — MCP sunucusu
-- [A2A-SERVER.md](./A2A-SERVER.md) — A2A sunucusu
 - Kaynak: `open-sse/` (400+ dosya, ~143K LOC)

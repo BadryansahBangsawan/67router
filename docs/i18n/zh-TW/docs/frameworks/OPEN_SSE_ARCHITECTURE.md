@@ -573,5 +573,4 @@ interface ProviderConfig {
 - [REPOSITORY_MAP.md](../architecture/REPOSITORY_MAP.md) — 逐目錄說明
 - [AUTO-COMBO.md](../routing/AUTO-COMBO.md) — 16 因子評分
 - [MCP-SERVER.md](./MCP-SERVER.md) — MCP 伺服器
-- [A2A-SERVER.md](./A2A-SERVER.md) — A2A 伺服器
 - 原始碼：`open-sse/`（400+ 個檔案，約 143K 行程式碼）

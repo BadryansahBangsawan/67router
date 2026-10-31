@@ -128,13 +128,11 @@ Peeji ndị bụ isi dị n’okpuru `src/app/(dashboard)/dashboard/`:
 - `/dashboard/limits` — njikwa quota/rate
 - `/dashboard/cli-tools` — ntinye CLI, nchọpụta runtime, na imepụta nhazi
 - `/dashboard/agents` — agent ACP achọpụtara + ndebanye agent ahaziri iche
-- `/dashboard/cloud-agents` — ọrụ agent ndị a na-akwado na cloud (Codex Cloud, Devin, Jules) na usoro ndụ ọrụ
 - `/dashboard/skills` — ndekọ skill A2A, mmezu sandbox, na katalọgụ skill arụnyere n’ime ya
 - `/dashboard/memory` — nyocha na iweghachite ebe nchekwa mkparịta ụka na-adịgide adịgide
 - `/dashboard/webhooks` — ndebanye webhook na-apụ apụ, mgbanwe secret, na ọnụ ọgụgụ nnwale ọzọ
 - `/dashboard/batch` — izipu ọrụ batch na ọganihu
 - `/dashboard/cache` — ọnụ ọgụgụ cache read-through na reasoning, yana njikwa eviction
-- `/dashboard/playground` — ebe nnwale nkata na-emekọrịta ihe megide combo/model ọ bụla ahaziri
 - `/dashboard/changelog` — ihe nlele changelog dị n’ime ngwa (na-egosipụta `CHANGELOG.md`)
 - `/dashboard/system` — nchọpụta nsogbu runtime, ozi ụdị, na akụkụ nkwado gburugburu
 - `/dashboard/onboarding` — ọkachamara nhazi mbụ maka nrụnye ọhụrụ
@@ -252,7 +250,6 @@ Ngalaba nlekọta:
 - Mmefu ego: `src/app/api/usage/budget` (GET/POST)
 - Usoro fallback: `src/app/api/fallback/chains` (GET/POST/DELETE)
 - Nyocha nrubeisi: `src/app/api/compliance/audit-log` (GET, nwere nkewa peeji + metadata ahaziri)
-- Nnwale nyocha: `src/app/api/evals` (GET/POST), `src/app/api/evals/[suiteId]` (GET)
 - Iwu: `src/app/api/policies` (GET/POST)
 - Token mmekọrịta: `src/app/api/sync/tokens` (GET/POST), `src/app/api/sync/tokens/[id]` (GET/DELETE)
 - Ngwugwu nhazi: `src/app/api/sync/bundle` (GET, snapshot nke ntọala/ndị na-enye ọrụ/ngwakọta/igodo nke ETag kewara dịka ụdị)
@@ -316,7 +313,6 @@ Modul oyi akwa ngalaba:
 - Oge ngwụcha nnweta: `src/shared/utils/fetchTimeout.ts`
 - Telemetry arịrịọ: `src/shared/utils/requestTelemetry.ts`
 - Nrubeisi/nyocha: `src/lib/compliance/index.ts`
-- Ihe na-agba ntule: `src/lib/evals/evalRunner.ts`
 - Nchekwa na-adịgide adịgide nke ọnọdụ ngalaba: `src/lib/db/domainState.ts` — SQLite CRUD maka agbụ ndabere, oke ego, akụkọ ihe mere eme nke ọnụ ahịa, ọnọdụ mkpọchi, na ihe nkwụsị sekit
 
 Modul ndị na-eweta OAuth (faịlụ 27 dị iche iche n'okpuru `src/lib/oauth/providers/`):
@@ -385,23 +381,6 @@ Ike ndị bụ isi:
 
 Maka nkọwa algọridim zuru ezu (usoro mgbako ihe, nhazi ibu), lee
 [`docs/routing/AUTO-COMBO.md`](../routing/AUTO-COMBO.md).
-
-### B. Ndị Nnọchi Anya Cloud
-
-Cloud Agents na-etinye nyiwe code-agent ndị ọzọ na-akwado (Codex Cloud, Devin,
-Jules) n'azụ okirikiri ndụ ọrụ edo edo nke DB na-akwado. Endpoint niile maka imepụta/nyochaa
-ọrụ chọrọ nkwenye njikwa.
-
-- Mgbọrọgwụ modul: `src/lib/cloudAgent/` (`baseAgent.ts`, `registry.ts`, `api.ts`,
-  `types.ts`, `db.ts`, tinyere subdirectory nke agent ọ bụla n'okpuru `agents/`)
-- Mmejuputa nke agent ọ bụla: `agents/codex/`, `agents/devin/`, `agents/jules/`
-- Endpoint ọha: `/api/v1/agents/tasks/*` (depụta/mepụta/nweta/kagbuo)
-- Endpoint njikwa: `/api/cloud/*` (ịkwadebe, ọnọdụ, batch)
-- Dashboard: `/dashboard/cloud-agents`
-- Nchekwa: tebụl `cloud_agent_tasks`
-
-Maka nkọwa gbasara ịkwadebe agent ọ bụla na OAuth, lee
-[`docs/frameworks/CLOUD_AGENT.md`](../frameworks/CLOUD_AGENT.md).
 
 ### C. Ihe Nchekwa
 

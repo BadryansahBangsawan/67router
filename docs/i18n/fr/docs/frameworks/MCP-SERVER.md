@@ -246,17 +246,6 @@ L’inventaire des outils MCP ci-dessus (110 outils uniques, calculés par `coun
 limité aux opérations d’exécution relatives au routage, au cache, à la compression, à la mémoire, aux compétences, au proxy et aux sources de contexte. Deux frameworks adjacents
 sont fournis avec le serveur MCP dans v3.8.0 et font l’objet d’une documentation distincte :
 
-### Agents cloud
-
-Les agents cloud sont des agents de codage IA hors processus (codex-cloud, cursor-cloud, devin, jules) intégrés à
-67router au moyen du même modèle de connexion que celui utilisé pour les fournisseurs de LLM. Ils sont exposés via
-leur propre interface REST (`/api/v1/agents/*`) et ne font **pas** partie du catalogue d’outils MCP
-— l’appel d’un agent cloud ne consomme aucune portée MCP.
-
-- Implémentation : `src/lib/cloudAgent/` (`registry.ts`, `agents/codex.ts`, `agents/cursor.ts`, `agents/devin.ts`, `agents/jules.ts`).
-- Cycle de vie : `createTask`, `getStatus`, `approvePlan`, `sendMessage`, `listSources`.
-- Documentation : [docs/frameworks/CLOUD_AGENT.md](./CLOUD_AGENT.md).
-
 ### Garde-fous
 
 Les garde-fous sont des filtres pré/post-exécution (vision-bridge, pii-masker, prompt-injection)

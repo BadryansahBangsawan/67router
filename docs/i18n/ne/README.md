@@ -596,7 +596,6 @@ Radar वैकल्पिक रूपमा सक्रिय गर्न �
 - **🔑 प्रति-कुञ्जी रूटिङ नियन्त्रण** — `forcedModel` सँग एउटा API कुञ्जीलाई एउटै मोडेल वा कम्बोमा पिन गर्नुहोस्, र कुञ्जीका मोडेल तथा कम्बोहरू एटोमिक रूपमा थप्नुहोस् वा हटाउनुहोस् (`/api/keys/{id}/access`)। → [API सन्दर्भ](docs/reference/API_REFERENCE.md) · [OpenAPI](docs/openapi.yaml)
 - **🛡️ सूक्ष्म PII नियन्त्रणहरू** — प्रकार-अनुसार छनोट, २० सम्म मान्य कस्टम मास्किङ ढाँचाहरू र प्रकार-अनुसार पत्ता लगाउने काउन्टरहरू; मास्किङ आफैँ opt-in नै रहन्छ। → [गार्डरेलहरू](docs/security/GUARDRAILS.md)
 - **🌍 ६७ भाषाहरू** — ड्यासबोर्ड, डक्स मिररहरू र CLI, जसमा `npm run i18n:add-locale` ले एउटै कमान्डमा सबैतिर भाषा थप्छ। → [i18n गाइड](docs/guides/I18N.md)
-- **🎛️ OmniConductor** — तपाईंको एजेन्ट फ्लिटतिर इनबाउन्ड A2A डेलिगेसन, Agent Card मा Conductor स्किलहरू, र Faro पुश-टु-टक भ्वाइस च्याटसहितको ड्यासबोर्ड प्यानल। → [A2A सर्भर](docs/frameworks/A2A-SERVER.md)
 - **🛂 अनुकूलनशील भर्ना र ओभरलोड सुरक्षा** — हेभीवेट च्याट अनुरोधहरू 503 फर्काउनुको सट्टा कतारमा बस्छन्, प्रति कनेक्सन एटोमिक RPM रोलिङ लिजहरूसहित। → [रिजिलियन्स गाइड](docs/architecture/RESILIENCE_GUIDE.md)
 - **🗂️ क्यानोनिकल `/v1/models` क्रम** — प्रति प्रोभाइडर एउटा निरन्तर प्रोभाइडर-समूहित ब्लक (कम्बोहरू पहिले पिन गरिएका), हरेक क्याटालग स्रोतमा स्थिर। → [API सन्दर्भ](docs/reference/API_REFERENCE.md)
 - **🗜️ कम्प्रेसन कठोरकरण** — डिफल्ट-अन इन्फ्लेसन गार्ड, DE / FR / JA + चाइनिज (wényán) का लागि Caveman प्याकहरू, Gradle र .NET का लागि RTK फिल्टरहरू। → [कम्प्रेसन](docs/compression/COMPRESSION_ENGINES.md)
@@ -915,7 +914,6 @@ omniroute contexts use default            # ← स्थानीय सर्�
   <tr><td align="left" nowrap>🧰 <b>MCP (stdio)</b></td><td align="left" nowrap><code>omniroute --mcp</code></td><td align="left">Claude Desktop, Cursor वा कुनै पनि MCP क्लाइन्टमा जडान गर्नुहोस्</td></tr>
   <tr><td align="left" nowrap>🌊 <b>MCP (HTTP)</b></td><td align="left" nowrap><code>/api/mcp/stream</code></td><td align="left">रिमोट MCP — <b>110 उपकरणहरू</b>, 33 दायराहरू (प्रवर्तन ऐच्छिक), पूर्ण अडिट ट्रेल</td></tr>
   <tr><td align="left" nowrap>📡 <b>MCP (SSE)</b></td><td align="left" nowrap><code>/api/mcp/sse</code></td><td align="left">स्ट्रिमिङ MCP ट्रान्सपोर्ट</td></tr>
-  <tr><td align="left" nowrap>🤝 <b>A2A</b></td><td align="left" nowrap><code>/.well-known/agent.json</code></td><td align="left">एजेन्ट-देखि-एजेन्ट, <b>JSON-RPC 2.0</b> + SSE, 6 सीपहरू</td></tr>
   <tr><td align="left" nowrap>🌐 <b>REST API</b></td><td align="left" nowrap><code>/v1/*</code></td><td align="left">OpenAI-संगत — च्याट, एम्बेडिङहरू, छविहरू, अडियो, OCR</td></tr>
   <tr><td align="left" nowrap>🔔 <b>वेबहुकहरू</b></td><td align="left" nowrap><code>/api/webhooks</code></td><td align="left">अनुरोध / कोटा इभेन्टहरू Slack, Discord, Telegram वा कुनै पनि URL मा पठाउनुहोस्</td></tr>
   <tr><td align="left" nowrap>🛰️ <b>रिमोट CLI</b></td><td align="left" nowrap><code>omniroute connect <host></code></td><td align="left">सीमित दायराका पहुँच टोकनहरूमार्फत रिमोट इन्स्ट्यान्स सञ्चालन गर्नुहोस्</td></tr>
@@ -925,8 +923,6 @@ omniroute contexts use default            # ← स्थानीय सर्�
 # Claude Code लाई MCP मार्फत पूर्ण 67router उपकरणसेट दिनुहोस्:
 claude mcp add-server omniroute --type http --url http://localhost:20128/api/mcp/stream
 ```
-
-<sub>📖 [MCP सर्भर](docs/frameworks/MCP-SERVER.md) · [A2A सर्भर](docs/frameworks/A2A-SERVER.md) · [एजेन्ट प्रोटोकलहरू](docs/frameworks/AGENT_PROTOCOLS_GUIDE.md)</sub>
 
 <br/>
 
@@ -1392,7 +1388,6 @@ OMNIROUTE_SKIP_POSTINSTALL=1 npm install -g omniroute   # CI=1 ले पनि 
   <tr><td nowrap><b><a href="open-sse/mcp-server/README.md">MCP सर्भर</a></b></td><td>११० MCP उपकरणहरू, IDE कन्फिगरेसनहरू, Python/TS/Go क्लाइन्टहरू</td></tr>
   <tr><td nowrap><b><a href="docs/frameworks/MCP-SERVER.md">MCP सर्भर गाइड</a></b></td><td>MCP स्थापना, ट्रान्सपोर्टहरू र उपकरण सन्दर्भ</td></tr>
   <tr><td nowrap><b><a href="src/lib/a2a/README.md">A2A सर्भर</a></b></td><td>JSON-RPC 2.0 प्रोटोकल, सीपहरू, स्ट्रिमिङ, कार्य व्यवस्थापन</td></tr>
-  <tr><td nowrap><b><a href="docs/frameworks/A2A-SERVER.md">A2A सर्भर गाइड</a></b></td><td>A2A एजेन्ट कार्ड, कार्यहरू, सीपहरू र स्ट्रिमिङ</td></tr>
 </table>
 
 ### 📋 परियोजना र गुणस्तर

@@ -588,7 +588,7 @@ curl http://localhost:20128/v1/chat/completions \
 - **🔑 کنترل مسیریابی بهازای هر کلید** — یک کلید API را با `forcedModel` به یک مدل یا ترکیب مشخص سنجاق کنید، و مدلها و ترکیبهای یک کلید را بهصورت اتمی اضافه یا حذف کنید (`/api/keys/{id}/access`). → [API Reference](docs/reference/API_REFERENCE.md) · [OpenAPI](docs/openapi.yaml)
 - **🛡️ کنترلهای دقیقتر PII** — انتخاب بهازای هر نوع، تا ۲۰ الگوی ماسک سفارشی اعتبارسنجیشده و شمارندههای تشخیص بهازای هر نوع؛ خودِ ماسککردن همچنان اختیاری است. → [Guardrails](docs/security/GUARDRAILS.md)
 - **🌍 ۶۷ زبان** — داشبورد، آینههای مستندات و CLI، و `npm run i18n:add-locale` با یک فرمان یک زبان را همهجا اضافه میکند. → [i18n Guide](docs/guides/I18N.md)
-- **🎛️ OmniConductor** — واگذاری ورودی A2A به ناوگان عاملهای شما، مهارتهای Conductor روی Agent Card، و یک پنل داشبورد با چت صوتی push-to-talk Faro. → [A2A Server](docs/frameworks/A2A-SERVER.md)
+- **🎛️ OmniConductor** — واگذاری ورودی A2A به ناوگان عاملهای شما، مهارتهای Conductor روی Agent Card، و یک پنل داشبورد با چت صوتی push-to-talk Faro.
 - **🛂 پذیرش تطبیقی و محافظت در برابر اضافهبار** — درخواستهای سنگین چت بهجای دریافت خطای 503 در صف قرار میگیرند، با اجارههای چرخشی RPM اتمی بهازای هر اتصال. → [Resilience Guide](docs/architecture/RESILIENCE_GUIDE.md)
 - **🗂️ ترتیب متعارف `/v1/models`** — یک بلوک پیوسته و گروهبندیشده بر اساس ارائهدهنده برای هر ارائهدهنده (ترکیبها ابتدا سنجاق شده)، پایدار در همه منابع کاتالوگ. → [API Reference](docs/reference/API_REFERENCE.md)
 - **🗜️ سختسازی فشردهسازی** — محافظ بادکردگی بهصورت پیشفرض فعال، بستههای Caveman برای DE / FR / JA + چینی (wényán)، فیلترهای RTK برای Gradle و .NET. → [Compression](docs/compression/COMPRESSION_ENGINES.md)
@@ -907,7 +907,6 @@ omniroute contexts use default            # ← بازگشت به سرور مح�
   <tr><td align="left" nowrap>🧰 <b>MCP (stdio)</b></td><td align="left" nowrap><code>omniroute --mcp</code></td><td align="left">اتصال به Claude Desktop، Cursor یا هر کلاینت MCP</td></tr>
   <tr><td align="left" nowrap>🌊 <b>MCP (HTTP)</b></td><td align="left" nowrap><code>/api/mcp/stream</code></td><td align="left">MCP راه دور — <b>110 ابزار</b>، 33 دامنه (اعمال محدودیت اختیاری)، ردپای ممیزی کامل</td></tr>
   <tr><td align="left" nowrap>📡 <b>MCP (SSE)</b></td><td align="left" nowrap><code>/api/mcp/sse</code></td><td align="left">انتقال جریانی MCP</td></tr>
-  <tr><td align="left" nowrap>🤝 <b>A2A</b></td><td align="left" nowrap><code>/.well-known/agent.json</code></td><td align="left">ارتباط عاملبهعامل، <b>JSON-RPC 2.0</b> + SSE، با 6 مهارت</td></tr>
   <tr><td align="left" nowrap>🌐 <b>REST API</b></td><td align="left" nowrap><code>/v1/*</code></td><td align="left">سازگار با OpenAI — گفتوگو، تعبیهها، تصاویر، صدا و OCR</td></tr>
   <tr><td align="left" nowrap>🔔 <b>وبهوکها</b></td><td align="left" nowrap><code>/api/webhooks</code></td><td align="left">ارسال رویدادهای درخواست / سهمیه به Slack، Discord، Telegram یا هر URL</td></tr>
   <tr><td align="left" nowrap>🛰️ <b>رابط خط فرمان راه دور</b></td><td align="left" nowrap><code>omniroute connect <host></code></td><td align="left">کنترل یک نمونه راه دور با توکنهای دسترسی دارای دامنه</td></tr>
@@ -917,8 +916,6 @@ omniroute contexts use default            # ← بازگشت به سرور مح�
 # ارائه مجموعه کامل ابزارهای 67router به Claude Code از طریق MCP:
 claude mcp add-server omniroute --type http --url http://localhost:20128/api/mcp/stream
 ```
-
-<sub>📖 [سرور MCP](docs/frameworks/MCP-SERVER.md) · [سرور A2A](docs/frameworks/A2A-SERVER.md) · [پروتکلهای عامل](docs/frameworks/AGENT_PROTOCOLS_GUIDE.md)</sub>
 
 <br/>
 
@@ -1381,7 +1378,6 @@ OMNIROUTE_SKIP_POSTINSTALL=1 npm install -g omniroute   # CI=1 نیز از آن 
   <tr><td nowrap><b><a href="open-sse/mcp-server/README.md">سرور MCP</a></b></td><td>۱۱۰ ابزار MCP، پیکربندیهای IDE و کلاینتهای Python/TS/Go</td></tr>
   <tr><td nowrap><b><a href="docs/frameworks/MCP-SERVER.md">راهنمای سرور MCP</a></b></td><td>نصب MCP، روشهای انتقال و مرجع ابزارها</td></tr>
   <tr><td nowrap><b><a href="src/lib/a2a/README.md">سرور A2A</a></b></td><td>پروتکل JSON-RPC 2.0، مهارتها، استریم و مدیریت وظایف</td></tr>
-  <tr><td nowrap><b><a href="docs/frameworks/A2A-SERVER.md">راهنمای سرور A2A</a></b></td><td>کارت عامل A2A، وظایف، مهارتها و استریم</td></tr>
 </table>
 
 ### 📋 پروژه و کیفیت

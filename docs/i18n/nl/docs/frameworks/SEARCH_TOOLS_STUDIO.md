@@ -170,5 +170,4 @@ Voor deze functie was slechts één backendwijziging nodig:
 - Hoofdplan: `_tasks/features-v3.8.6/refactorpages/_orchestration/master-plan-group-C.md`
 - Functieplan: `_tasks/features-v3.8.6/refactorpages/18-search-tools-studio-redesign.plan.md`
 - Register met zoekproviders: `open-sse/config/searchRegistry.ts`
-- Playground Studio (gedeelde `ExportCodeModal` + `codeExport.ts`): `docs/frameworks/PLAYGROUND_STUDIO.md`
 - Backend voor webophaling: `src/app/api/v1/web/fetch/route.ts`

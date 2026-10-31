@@ -91,7 +91,7 @@ Catalog រាយបញ្ជីម៉ូដែលពីអ្នកផ្តល
 Simple Browser ជំនួសឱ្យកម្មវិធីរុករកខាងក្រៅ។ ការបង្កប់ត្រូវតែ **ជ្រើសរើសបើកនៅលើម៉ាស៊ីនមេ** តាមរយៈ
 `DASHBOARD_ALLOW_EMBED=vscode` ដែលបម្រើទំព័រ HTML ជាមួយ
 `frame-ancestors 'self' vscode-webview:` ជំនួសឱ្យលំនាំដើម `frame-ancestors 'none'` +
-`X-Frame-Options: DENY`។ ផ្ទៃ API (`/api`, `/v1`, `/v1beta`, `/a2a`, `/healthz`) នៅតែរក្សា
+`X-Frame-Options: DENY`។ ផ្ទៃ API (`/api`, `/v1`, `/v1beta`, `/healthz`) នៅតែរក្សា
 បឋមកថាដ៏តឹងរ៉ឹងដដែល ទោះជាក្នុងករណីណាក៏ដោយ។
 
 > ⚠️ **វាជាទង់ពេលស្ថាបនា មិនមែនទង់ពេលដំណើរការទេ។** Next.js ចងក្រង `headers()` ទៅក្នុងបញ្ជីផ្លូវ

@@ -24,7 +24,6 @@
 - [Ètò Àwọn Òye](#-skills-system)
 - [Ètò Ìrántí](#-memory-system)
 - [Àwọn Webhook](#-webhooks)
-- [Àwọn Aṣojú Àwọsánmà](#-cloud-agents)
 - [Ìṣàkóso Nípasẹ̀ Ètò](#-programmatic-management)
 - [CLI Abẹ́nú](#-internal-cli)
 - [Ohun Èlò Orí Kọ̀ǹpútà (Electron)](#-desktop-application-electron)
@@ -1234,8 +1233,6 @@ Lo URL SSE `http://localhost:20128/api/mcp/sse` àti kọ́kọ́rọ́ API Bear
 
 ### Àwọn ààlà-àṣẹ
 
-MCP ń ṣàlàyé àwọn ààlà-àṣẹ 32 tí a dárúkọ lọ́wọ́lọ́wọ́. A lè fi kọ́kọ́rọ́ Bearer kọ̀ọ̀kan mọ́ àwọn ààlà-àṣẹ pàtó — wo [MCP-SERVER.md](../frameworks/MCP-SERVER.md) fún àkójọ àṣẹ àti irinṣẹ́ tó jẹ́ ìtọ́kasí pàtàkì, àti [A2A-SERVER.md](../frameworks/A2A-SERVER.md) fún schema JSON-RPC.
-
 ---
 
 ## 🧠 Ètò Àwọn Ọgbọ́n
@@ -1244,7 +1241,6 @@ MCP ń ṣàlàyé àwọn ààlà-àṣẹ 32 tí a dárúkọ lọ́wọ́lọ
 
 - **Ìrísí Marketplace** — Ṣàwárí kí o sì fi àwọn ọgbọ́n sílẹ̀ láti **Dashboard → Skills**
 - **Àwọn scope fún kọ́kọ́rọ́ kọ̀ọ̀kan** — Dín àwọn ọgbọ́n tí kọ́kọ́rọ́ API kọ̀ọ̀kan lè pè lò kù
-- **Àwọn ọgbọ́n àdáni** — Fi fáìlì TypeScript kan sínú `src/lib/a2a/skills/`, forúkọ rẹ̀ sílẹ̀, yóò sì lè jẹ́ pípè lẹ́sẹ̀kẹsẹ̀ lórí A2A
 
 Ìtọ́kasí kíkún: [SKILLS.md](../frameworks/SKILLS.md).
 
@@ -1273,18 +1269,6 @@ Forúkọ sílẹ̀ fún àwọn ìṣẹ̀lẹ̀ 67router láti ṣe àbójút�
 - Àwọn àtúngbìyànjú: ìgbìyànjú mẹ́ta pẹ̀lú ìdádúró tó ń pọ̀ sí i lọ́nà exponential, lẹ́yìn náà a ó fi sí dead-letter queue
 
 Schema kíkún wà ní [WEBHOOKS.md](../frameworks/WEBHOOKS.md).
-
----
-
-## ☁️ Àwọn Aṣojú Cloud
-
-67router ń ṣiṣẹ́ pọ̀ mọ́ àwọn aṣojú ìkọ̀wé kóòdù lórí cloud (**OpenAI Codex Cloud**, **Devin**, **Jules**, **Antigravity**) kí o lè rán àwọn iṣẹ́ tó máa gba àkókò gígùn láti dashboard kan náà tó ń ṣàkóso routing abẹ́lé rẹ.
-
-- Ṣẹ̀dá àwọn iṣẹ́ ní **Dashboard → Cloud Agents** tàbí nípasẹ̀ `POST /api/v1/agents/tasks`
-- Tọpinpin ipò, àwọn log, àti àwọn artifact fún iṣẹ́ kọ̀ọ̀kan
-- Mú kọ́kọ́rọ́ API tìrẹ fún provider kọ̀ọ̀kan — àwọn credential kì í fi instance 67router sílẹ̀ láéláé
-
-Ìtọ́kasí kíkún: [CLOUD_AGENT.md](../frameworks/CLOUD_AGENT.md).
 
 ---
 
@@ -1341,7 +1325,6 @@ omniroute restore [<timestamp>]    # Mú padà láti inú àwòrán ìpamọ́
 omniroute health                   # Ìlera ní ẹ̀kúnrẹ́rẹ́ (breakers, cache, memory)
 omniroute quota                    # Lílo ìwọ̀n olùpèsè
 omniroute mcp status               # Ipò server MCP
-omniroute a2a status               # Ipò server A2A
 omniroute tunnel list|create|stop  # Àwọn tunnel Cloudflare/Tailscale/ngrok
 omniroute reset-password           # Tún ọ̀rọ̀ aṣínà alákóso ṣètò
 omniroute --mcp                    # Bẹ̀rẹ̀ server MCP lórí stdio

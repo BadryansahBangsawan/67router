@@ -128,13 +128,11 @@ Hlavné stránky v `src/app/(dashboard)/dashboard/`:
 - `/dashboard/limits` — ovládanie kvót/limitov frekvencie
 - `/dashboard/cli-tools` — úvodné nastavenie CLI, detekcia prostredia spustenia, generovanie konfigurácie
 - `/dashboard/agents` — detegovaní agenti ACP + registrácia vlastných agentov
-- `/dashboard/cloud-agents` — úlohy agentov hosťovaných v cloude (Codex Cloud, Devin, Jules) a životný cyklus úloh
 - `/dashboard/skills` — register zručností A2A, vykonávanie v sandboxe, katalóg vstavaných zručností
 - `/dashboard/memory` — kontrola a načítavanie perzistentnej konverzačnej pamäte
 - `/dashboard/webhooks` — odbery odchádzajúcich webhookov, rotácia tajných kľúčov, štatistiky opakovaných pokusov
 - `/dashboard/batch` — odosielanie dávkových úloh a ich priebeh
 - `/dashboard/cache` — štatistiky priebežnej vyrovnávacej pamäte a vyrovnávacej pamäte uvažovania, ovládanie vysúvania
-- `/dashboard/playground` — interaktívne chatové testovacie prostredie pre ľubovoľnú nakonfigurovanú kombináciu/model
 - `/dashboard/changelog` — prehliadač zoznamu zmien v aplikácii (vykresľuje `CHANGELOG.md`)
 - `/dashboard/system` — diagnostika prostredia spustenia, informácie o verzii, rozhranie na overenie prostredia
 - `/dashboard/onboarding` — sprievodca prvotným nastavením pre nové inštalácie
@@ -252,7 +250,6 @@ Oblasti správy:
 - Rozpočet: `src/app/api/usage/budget` (GET/POST)
 - Reťazce záložných možností: `src/app/api/fallback/chains` (GET/POST/DELETE)
 - Audit súladu: `src/app/api/compliance/audit-log` (GET, so stránkovaním + štruktúrovanými metadátami)
-- Vyhodnotenia: `src/app/api/evals` (GET/POST), `src/app/api/evals/[suiteId]` (GET)
 - Zásady: `src/app/api/policies` (GET/POST)
 - Synchronizačné tokeny: `src/app/api/sync/tokens` (GET/POST), `src/app/api/sync/tokens/[id]` (GET/DELETE)
 - Konfiguračný balík: `src/app/api/sync/bundle` (GET, snímka nastavení/poskytovateľov/kombinácií/kľúčov s verziami ETag)
@@ -316,7 +313,6 @@ Moduly doménovej vrstvy:
 - Časový limit načítania: `src/shared/utils/fetchTimeout.ts`
 - Telemetria požiadaviek: `src/shared/utils/requestTelemetry.ts`
 - Súlad/audit: `src/lib/compliance/index.ts`
-- Spúšťač vyhodnotení: `src/lib/evals/evalRunner.ts`
 - Perzistencia stavu domény: `src/lib/db/domainState.ts` — operácie CRUD v SQLite pre reťazce záložných riešení, rozpočty, históriu nákladov, stav uzamknutia a ističe
 
 Moduly poskytovateľov OAuth (27 samostatných súborov v `src/lib/oauth/providers/`):
@@ -385,23 +381,6 @@ Kľúčové funkcie:
 
 Úplné podrobnosti o algoritme (vzorce faktorov, ladenie váh) nájdete v
 [`docs/routing/AUTO-COMBO.md`](../routing/AUTO-COMBO.md).
-
-### B. Cloudoví agenti
-
-Cloud Agents zastrešuje hostované platformy agentov pre kód od tretích strán (Codex Cloud, Devin,
-Jules) jednotným životným cyklom úloh podporovaným databázou. Všetky koncové body na vytváranie a kontrolu
-úloh vyžadujú autentifikáciu na správu.
-
-- Koreň modulu: `src/lib/cloudAgent/` (`baseAgent.ts`, `registry.ts`, `api.ts`,
-  `types.ts`, `db.ts` a podadresáre jednotlivých agentov v `agents/`)
-- Implementácie jednotlivých agentov: `agents/codex/`, `agents/devin/`, `agents/jules/`
-- Verejné koncové body: `/api/v1/agents/tasks/*` (zoznam/vytvorenie/získanie/zrušenie)
-- Koncové body správy: `/api/cloud/*` (zriaďovanie, stav, dávkové operácie)
-- Ovládací panel: `/dashboard/cloud-agents`
-- Úložisko: tabuľka `cloud_agent_tasks`
-
-Podrobnosti o zriaďovaní jednotlivých agentov a špecifikách OAuth nájdete v
-[`docs/frameworks/CLOUD_AGENT.md`](../frameworks/CLOUD_AGENT.md).
 
 ### C. Ochranné mechanizmy
 

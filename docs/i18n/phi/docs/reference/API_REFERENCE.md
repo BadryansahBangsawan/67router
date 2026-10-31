@@ -1437,9 +1437,8 @@ Kasama sa tugon ng GET ang `agents[]` (id, name, binary, version, installed, pro
 
 ### Mga Eval
 
-| Endpoint     | Paraan   | Paglalarawan                                        |
-| ------------ | -------- | --------------------------------------------------- |
-| `/api/evals` | GET/POST | Ilista ang mga eval suite / magsagawa ng evaluation |
+| Endpoint | Paraan | Paglalarawan |
+| -------- | ------ | ------------ |
 
 ### Mga Patakaran
 
@@ -1757,31 +1756,6 @@ Ginagamit ng subsystem para sa awtomatikong pamamahala ng key upang mag-isyu at 
 
 ---
 
-## Protocol ng mga Agent
-
-Mga gawain ng cloud agent (Claude Code, Codex Cloud, OpenHands, atbp.) na isinasagawa nang malayuan para sa mga user ng 67router.
-
-| Paraan | Path                          | Paglalarawan                                                                                                                                                           |
-| ------ | ----------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| GET    | `/api/v1/agents/tasks`        | Ilista ang mga gawain — opsyonal ang `?provider=`, `?status=`, `?limit=` (1–500, default na 50)                                                                        |
-| POST   | `/api/v1/agents/tasks`        | Gumawa ng gawain — bina-validate ang body ng `CreateCloudAgentTaskSchema` (`providerId`, `prompt`, `source`, `options?`). Nagbabalik ng `201` kasama ang task envelope |
-| DELETE | `/api/v1/agents/tasks?id=...` | Magtanggal ng gawain                                                                                                                                                   |
-| GET    | `/api/v1/agents/tasks/[id]`   | Basahin ang gawain — sabayang nire-refresh ang status mula sa upstream cloud agent kapag nakatakda ang `external_id`                                                   |
-| POST   | `/api/v1/agents/tasks/[id]`   | Discriminated action: `{action: "approve"}`, `{action: "message", message}`, o `{action: "cancel"}`                                                                    |
-| DELETE | `/api/v1/agents/tasks/[id]`   | Magtanggal ng partikular na gawain ayon sa id                                                                                                                          |
-
-> **Auth:** kinakailangan ang management auth sa bawat paraan (`requireCloudAgentManagementAuth`). Bago ang v3.8.0, walang authentication ang mga ito — tingnan ang commit `588a0333` para sa breaking change.
-
-```bash
-# Gumawa ng Claude Code cloud task
-curl -X POST http://localhost:20128/api/v1/agents/tasks \
-  -H "Authorization: Bearer your-management-key" \
-  -H "Content-Type: application/json" \
-  -d '{"providerId":"claude-code-cloud","prompt":"Fix the failing test","source":{"repo":"...","branch":"..."}}'
-```
-
----
-
 ## Mga Management Proxy
 
 Mga outbound HTTP(S)/SOCKS proxy na maaaring italaga sa mga provider, account, o sa buong sistema.
@@ -1901,48 +1875,10 @@ May kasamang naka-embed na server ng Model Context Protocol ang 67router na may 
 
 Naglalantad ang 67router ng A2A (Agent-to-Agent) JSON-RPC 2.0 endpoint at isang REST wrapper para sa inspeksiyon/paggamit ng dashboard.
 
-### JSON-RPC
-
-```bash
-POST /a2a
-Authorization: Bearer your-api-key   # opsyonal maliban kung nakatakda ang OMNIROUTE_API_KEY
-Content-Type: application/json
-
-{
-  "jsonrpc": "2.0",
-  "id": 1,
-  "method": "message/send",
-  "params": {
-    "skill": "smart-routing",
-    "messages": [{"role": "user", "content": "Route this coding task"}]
-  }
-}
-```
-
-Mga sinusuportahang method (lahat ay nakadepende sa `settings.a2aEnabled`):
-
-| Method           | Paglalarawan                                                                |
-| ---------------- | --------------------------------------------------------------------------- |
-| `message/send`   | Sabayang pagpapatupad ng skill; nagbabalik ng `{task, artifacts, metadata}` |
-| `message/stream` | Pagpapatupad gamit ang streaming SSE para sa parehong hanay ng mga skill    |
-| `tasks/get`      | Kunin ang isang task gamit ang `taskId`                                     |
-| `tasks/cancel`   | Kanselahin ang isang task gamit ang `taskId`                                |
-
-Mga built-in na skill: `smart-routing`, `quota-management`, `provider-discovery`, `cost-analysis`, `health-report`.
-
-### Agent Card
-
-```bash
-GET /.well-known/agent.json
-```
-
-Ibinabalik ang pampublikong A2A agent card (pangalan, paglalarawan, mga kakayahan, katalogo ng skill, auth scheme) — pampublikong naka-cache nang 1 oras. Hindi kailangan ang auth.
-
 ### Mga REST helper
 
 | Method | Path                         | Paglalarawan                                                                                                             |
 | ------ | ---------------------------- | ------------------------------------------------------------------------------------------------------------------------ |
-| GET    | `/api/a2a/status`            | Naka-enable ang A2A + mga istatistika ng task + buod ng naka-cache na agent card                                         |
 | GET    | `/api/a2a/tasks`             | Ilista ang mga task — `?state=submitted\|working\|completed\|failed\|cancelled`, `?skill=`, `?limit=` (≤200), `?offset=` |
 | POST   | `/api/a2a/tasks`             | (Hindi ipinatupad bilang REST helper — gumawa gamit ang JSON-RPC `message/send`)                                         |
 | GET    | `/api/a2a/tasks/[id]`        | Kunin ang isang task                                                                                                     |
@@ -1962,12 +1898,8 @@ Ibinabalik ang pampublikong A2A agent card (pangalan, paglalarawan, mga kakayaha
 | GET | `/api/cloud/models/alias` | Ilista ang mga model alias gaya ng inilalantad sa cloud sync |
 | GET | `/api/assess` | Basahin ang mga pinakabagong pagkakategorya ng assessment (bawat provider/model) |
 | POST | `/api/assess` | Magpatakbo ng assessment — body: `{scope: {type:"all"}                                                   | {type:"provider", providerId} | {type:"model", modelId}, trigger?}` |
-| GET | `/api/evals` | Ilista ang mga built-in na eval suite + mga pinakabagong run |
-| POST | `/api/evals` | Mag-trigger ng isang eval run |
-| POST | `/api/evals/suites` | Gumawa ng custom na eval suite — bina-validate ang body ng `evalSuiteSaveSchema` |
-| GET | `/api/evals/suites/[id]` | Kunin ang isang custom na eval suite |
 
-**Auth:** direktang bina-validate ng `/api/cloud/auth` ang isang Bearer key at ibinabalik lamang ang naka-mask na key at `projectId` ng bawat koneksiyon para sa key na may saklaw na `manage` / `admin`; nangangailangan ang iba pang `/api/cloud/*`, `/api/evals/*`, at `/api/assess` route ng management session/API key. Ginagamit ng `/api/assess` POST ang `validateBody` na may discriminated-union scope schema.
+**Auth:** direktang bina-validate ng `/api/cloud/auth` ang isang Bearer key at ibinabalik lamang ang naka-mask na key at `projectId` ng bawat koneksiyon para sa key na may saklaw na `manage` / `admin`; nangangailangan ang iba pang `/api/cloud/*`, at `/api/assess` route ng management session/API key. Ginagamit ng `/api/assess` POST ang `validateBody` na may discriminated-union scope schema.
 
 ---
 
@@ -2288,5 +2220,3 @@ Token, API key na may saklaw na manage) at kung paano naiiba ang mga ito sa mga 
 - Maaaring i-toggle ang `requireLogin` sa pamamagitan ng `/api/settings/require-login`
 - Opsyonal na nangangailangan ang mga rutang `/v1/*` ng Bearer API key kapag `REQUIRE_API_KEY=true`
 - Ang "token sa pamamahala" / "API key na may saklaw sa pamamahala" sa sangguniang ito ay tumutukoy sa isa sa mga pamilya sa gabay na iyon — hindi sa isang hindi tinukoy na karagdagang uri ng lihim
-
-> **Pagbabagong hindi backward-compatible (v3.8.0)** — Nangangailangan na ngayon ang `/api/v1/agents/tasks/*` at ang mga endpoint sa pamamahala ng cooldown ng **pagpapatunay sa pamamahala** (cookie na `auth_token` ng dashboard o API key na may saklaw sa pamamahala). Makakatanggap ang mga client na dating tumatawag sa mga rutang ito nang walang pagpapatunay ng `401 Unauthorized`. Tingnan ang commit na `588a0333` (`fix(auth): require management auth for agent and cooldown APIs`).

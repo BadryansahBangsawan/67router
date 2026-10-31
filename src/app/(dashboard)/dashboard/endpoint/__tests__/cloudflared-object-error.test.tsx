@@ -102,7 +102,6 @@ describe("#15294 cloudflare tunnel object error body", () => {
         if (
           path === "/v1/models" ||
           path === "/api/mcp/status" ||
-          path === "/api/a2a/status" ||
           path === "/api/search/providers" ||
           path === "/api/cli-tools/keys" ||
           path === "/api/network/info"

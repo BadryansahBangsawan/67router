@@ -573,5 +573,4 @@ interface ProviderConfig {
 - [REPOSITORY_MAP.md](../architecture/REPOSITORY_MAP.md) — описание по директории
 - [AUTO-COMBO.md](../routing/AUTO-COMBO.md) — оценяване по 16 фактора
 - [MCP-SERVER.md](./MCP-SERVER.md) — MCP сървър
-- [A2A-SERVER.md](./A2A-SERVER.md) — A2A сървър
 - Изходен код: `open-sse/` (над 400 файла, ~143K реда код)

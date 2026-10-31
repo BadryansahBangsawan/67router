@@ -243,11 +243,6 @@
       "count": 1
     }
   },
-  "open-sse/mcp-server/__tests__/a2aLifecycle.test.ts": {
-    "@typescript-eslint/no-explicit-any": {
-      "count": 1
-    }
-  },
   "open-sse/mcp-server/__tests__/dbHealthTool.test.ts": {
     "@typescript-eslint/no-explicit-any": {
       "count": 1
@@ -700,11 +695,6 @@
       "count": 1
     }
   },
-  "src/app/(dashboard)/dashboard/playground/components/tabs/CompareTab.tsx": {
-    "@typescript-eslint/no-unused-vars": {
-      "count": 1
-    }
-  },
   "src/app/(dashboard)/dashboard/providers/[id]/ProviderDetailPageClient.tsx": {
     "@typescript-eslint/no-unused-vars": {
       "count": 2
@@ -1136,16 +1126,6 @@
     }
   },
   "src/hooks/useLiveDashboard.ts": {
-    "@typescript-eslint/no-unused-vars": {
-      "count": 1
-    }
-  },
-  "src/lib/a2a/skills/healthReport.ts": {
-    "no-restricted-syntax": {
-      "count": 1
-    }
-  },
-  "src/lib/a2a/streaming.ts": {
     "@typescript-eslint/no-unused-vars": {
       "count": 1
     }
@@ -1661,11 +1641,6 @@
       "count": 8
     }
   },
-  "src/shared/validation/schemas/evals.ts": {
-    "@typescript-eslint/no-unused-vars": {
-      "count": 10
-    }
-  },
   "src/shared/validation/schemas/gemini.ts": {
     "@typescript-eslint/no-unused-vars": {
       "count": 10
@@ -1748,7 +1723,7 @@
   },
   "tests/e2e/ecosystem.test.ts": {
     "@typescript-eslint/no-explicit-any": {
-      "count": 17
+      "count": 13
     }
   },
   "tests/e2e/group-b-redirect-logs-activity.spec.ts": {
@@ -1768,7 +1743,7 @@
   },
   "tests/e2e/protocol-clients.test.ts": {
     "@typescript-eslint/no-explicit-any": {
-      "count": 6
+      "count": 2
     }
   },
   "tests/e2e/responsiveSpecs.ts": {
@@ -2477,14 +2452,6 @@
       "count": 1
     }
   },
-  "tests/unit/cli-a2a-invoke-commands.test.ts": {
-    "@typescript-eslint/no-explicit-any": {
-      "count": 16
-    },
-    "@typescript-eslint/no-unused-vars": {
-      "count": 1
-    }
-  },
   "tests/unit/cli-audit-commands.test.ts": {
     "@typescript-eslint/no-explicit-any": {
       "count": 15
@@ -2496,14 +2463,6 @@
     },
     "@typescript-eslint/no-unused-vars": {
       "count": 3
-    }
-  },
-  "tests/unit/cli-cloud-commands.test.ts": {
-    "@typescript-eslint/no-explicit-any": {
-      "count": 18
-    },
-    "@typescript-eslint/no-unused-vars": {
-      "count": 6
     }
   },
   "tests/unit/cli-combo-suggest-commands.test.ts": {
@@ -2535,11 +2494,6 @@
   "tests/unit/cli-cost.test.ts": {
     "@typescript-eslint/no-explicit-any": {
       "count": 16
-    }
-  },
-  "tests/unit/cli-eval-commands.test.ts": {
-    "@typescript-eslint/no-explicit-any": {
-      "count": 22
     }
   },
   "tests/unit/cli-expanded-commands.test.ts": {
@@ -2763,11 +2717,6 @@
       "count": 3
     }
   },
-  "tests/unit/cloud-agent-cursor-4227.test.ts": {
-    "@typescript-eslint/no-explicit-any": {
-      "count": 2
-    }
-  },
   "tests/unit/cloudflare-models-uuid-4259.test.ts": {
     "@typescript-eslint/no-explicit-any": {
       "count": 3
@@ -2861,7 +2810,7 @@
   },
   "tests/unit/combo-routing-engine.test.ts": {
     "@typescript-eslint/no-explicit-any": {
-      "count": 267
+      "count": 257
     }
   },
   "tests/unit/combo-same-provider-cascade.test.ts": {
@@ -3024,11 +2973,6 @@
       "count": 2
     }
   },
-  "tests/unit/conductor-agent-card.test.ts": {
-    "@typescript-eslint/no-unused-vars": {
-      "count": 1
-    }
-  },
   "tests/unit/conductor-ask-route.test.ts": {
     "@typescript-eslint/no-unused-vars": {
       "count": 1
@@ -3163,11 +3107,6 @@
   "tests/unit/db-models-extended.test.ts": {
     "@typescript-eslint/no-explicit-any": {
       "count": 5
-    }
-  },
-  "tests/unit/db-playground-presets.test.ts": {
-    "@typescript-eslint/no-explicit-any": {
-      "count": 1
     }
   },
   "tests/unit/db-provider-plans.test.ts": {
@@ -4762,16 +4701,6 @@
       "count": 1
     }
   },
-  "tests/unit/ui/playground-compare-tab.test.tsx": {
-    "@typescript-eslint/no-unused-vars": {
-      "count": 1
-    }
-  },
-  "tests/unit/ui/playground-structured-output-editor.test.tsx": {
-    "@typescript-eslint/no-unused-vars": {
-      "count": 1
-    }
-  },
   "tests/unit/ui/provider-quota-widget-auto-refresh-label-4611.test.tsx": {
     "@typescript-eslint/no-unused-vars": {
       "count": 2
@@ -4788,11 +4717,6 @@
     }
   },
   "tests/unit/ui/search-tools-search-tab.test.tsx": {
-    "@typescript-eslint/no-unused-vars": {
-      "count": 1
-    }
-  },
-  "tests/unit/ui/use-stream-metrics.test.tsx": {
     "@typescript-eslint/no-unused-vars": {
       "count": 1
     }

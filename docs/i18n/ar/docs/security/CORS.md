@@ -70,21 +70,6 @@
 الإدارة — التي تظل تتطلب مصادقة لا تستطيع صفحة من أصل آخر توفيرها. ولا يشكّل
 ذلك وسيلة لاختطاف الجلسة أو سرقة بيانات الاعتماد ضمن مسار CORS المشترك.
 
-### استثناء حقيقي واحد — `/api/v1/agents/`
-
-تضبط مسارات Cloud-Agent
-(`/api/v1/agents/{health,credentials,tasks,tasks/[id]}`) ترويسات CORS
-**الخاصة بها**
-(`src/lib/cloudAgent/api.ts`، `getCloudAgentCorsHeaders`) كما أنها **ترسل**
-`Access-Control-Allow-Origin: <origin>|*` إلى جانب
-`Access-Control-Allow-Credentials: true`. وهذه هي الواجهة الوحيدة التي
-يتزامن فيها تكرار الأصل مع بيانات الاعتماد، وهي **مستقلة عن
-`CORS_ALLOW_ALL`**. تخضع هذه المسارات لمصادقة الإدارة
-(`requireManagementAuth`)؛ وينبغي للمشغّلين الذين يتيحون لوحة المعلومات خارج
-المضيف إدراك أن هذا هو الموضع الوحيد الذي تسمح فيه ترويسات الاستجابة بقراءة
-عبر الأصول مرفقة ببيانات اعتماد. ويُتابَع تقييدها بقائمة سماح صريحة بصورة
-منفصلة عن إرشادات CORS هذه.
-
 ## قائمة التحقق للإنتاج
 
 - **لا تضبط `CORS_ALLOW_ALL=true` مطلقًا في بيئة الإنتاج.** اتركه دون تعيين.
@@ -155,15 +140,14 @@ location / {
 
 ## ملفات المصدر
 
-| الجانب                                         | الملف                                                                |
-| ---------------------------------------------- | -------------------------------------------------------------------- |
-| تحديد قائمة السماح + `getCorsStatus()`         | `src/server/cors/origins.ts`                                         |
-| تطبيق البرمجيات الوسيطة (مصدر الحقيقة الوحيد)  | `src/server/authz/pipeline.ts`                                       |
-| الإعدادات → حقن المصادر في وقت التشغيل         | `src/lib/config/runtimeSettings.ts`                                  |
-| حالة وقت التشغيل للوحة المعلومات               | `src/app/api/settings/authz-inventory/route.ts`                      |
-| شريط التحذير في لوحة المعلومات                 | `src/app/(dashboard)/dashboard/settings/components/AuthzSection.tsx` |
-| حقل مصادر CORS المسموح بها                     | `src/app/(dashboard)/dashboard/settings/components/SecurityTab.tsx`  |
-| CORS الخاص بكل مسار في Cloud-Agent (الاستثناء) | `src/lib/cloudAgent/api.ts`                                          |
+| الجانب                                        | الملف                                                                |
+| --------------------------------------------- | -------------------------------------------------------------------- |
+| تحديد قائمة السماح + `getCorsStatus()`        | `src/server/cors/origins.ts`                                         |
+| تطبيق البرمجيات الوسيطة (مصدر الحقيقة الوحيد) | `src/server/authz/pipeline.ts`                                       |
+| الإعدادات → حقن المصادر في وقت التشغيل        | `src/lib/config/runtimeSettings.ts`                                  |
+| حالة وقت التشغيل للوحة المعلومات              | `src/app/api/settings/authz-inventory/route.ts`                      |
+| شريط التحذير في لوحة المعلومات                | `src/app/(dashboard)/dashboard/settings/components/AuthzSection.tsx` |
+| حقل مصادر CORS المسموح بها                    | `src/app/(dashboard)/dashboard/settings/components/SecurityTab.tsx`  |
 
 ## انظر أيضًا
 

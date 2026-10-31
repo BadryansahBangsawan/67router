@@ -68,20 +68,6 @@ l’autorisation de la **requête préliminaire** CORS sur les routes de gestion
 qu’une page interorigine ne peut pas fournir. Il ne s’agit **pas** d’un vecteur de détournement de session ni
 de vol d’informations d’identification sur le chemin CORS partagé.
 
-### Une véritable exception — `/api/v1/agents/`
-
-Les routes Cloud-Agent (`/api/v1/agents/{health,credentials,tasks,tasks/[id]}`) définissent
-leurs **propres** en-têtes CORS
-(`src/lib/cloudAgent/api.ts`, `getCloudAgentCorsHeaders`) et **émettent bien**
-`Access-Control-Allow-Origin: <origin>|*` avec
-`Access-Control-Allow-Credentials: true`. Il s’agit de la seule surface où
-le renvoi de l’origine et les informations d’identification coexistent, et elle est **indépendante de
-`CORS_ALLOW_ALL`**. Ces routes utilisent l’authentification de gestion
-(`requireManagementAuth`) ; les opérateurs qui exposent le tableau de bord hors de l’hôte doivent savoir
-qu’il s’agit du seul endroit où une lecture interorigine avec informations d’identification est autorisée par
-les en-têtes de réponse. Son durcissement au moyen d’une liste d’autorisation explicite fait l’objet d’un suivi
-distinct de ces recommandations CORS.
-
 ## Liste de contrôle pour la production
 
 - **Ne définissez jamais `CORS_ALLOW_ALL=true` en production.** Laissez cette variable non définie.
@@ -163,7 +149,6 @@ l’onglet Sécurité), et non dans le proxy.
 | État d’exécution pour le tableau de bord                  | `src/app/api/settings/authz-inventory/route.ts`                      |
 | Bannière d’avertissement du tableau de bord               | `src/app/(dashboard)/dashboard/settings/components/AuthzSection.tsx` |
 | Champ Origines CORS autorisées                            | `src/app/(dashboard)/dashboard/settings/components/SecurityTab.tsx`  |
-| CORS par route de Cloud-Agent (l’exception)               | `src/lib/cloudAgent/api.ts`                                          |
 
 ## Voir aussi
 

@@ -128,13 +128,11 @@ v3.8.0 प्लॅटफॉर्मसाठीचे अधिकृत, आ�
 - `/dashboard/limits` — कोटा/दर नियंत्रणे
 - `/dashboard/cli-tools` — CLI प्रारंभिक मार्गदर्शन, रनटाइम शोध, कॉन्फिगरेशन निर्मिती
 - `/dashboard/agents` — शोधलेले ACP एजंट + सानुकूल एजंट नोंदणी
-- `/dashboard/cloud-agents` — क्लाउडवर होस्ट केलेली एजंट कार्ये (Codex Cloud, Devin, Jules) आणि कार्य जीवनचक्र
 - `/dashboard/skills` — A2A कौशल्य नोंदणी, सँडबॉक्स अंमलबजावणी, अंगभूत कौशल्य सूची
 - `/dashboard/memory` — सातत्यपूर्ण संभाषणात्मक मेमरीची तपासणी आणि पुनर्प्राप्ती
 - `/dashboard/webhooks` — आउटबाउंड वेबहुक सदस्यत्वे, गुप्त मूल्यांचे रोटेशन, पुनर्प्रयत्न आकडेवारी
 - `/dashboard/batch` — बॅच जॉब सादरीकरण आणि प्रगती
 - `/dashboard/cache` — रीड-थ्रू आणि रिझनिंग कॅशे आकडेवारी, निष्कासन नियंत्रणे
-- `/dashboard/playground` — कॉन्फिगर केलेल्या कोणत्याही कॉम्बो/मॉडेलसाठी परस्परसंवादी चॅट प्लेग्राउंड
 - `/dashboard/changelog` — ॲपमधील बदलनोंद दर्शक (`CHANGELOG.md` रेंडर करतो)
 - `/dashboard/system` — रनटाइम निदान, आवृत्ती माहिती, पर्यावरण प्रमाणीकरण पृष्ठभाग
 - `/dashboard/onboarding` — नवीन इंस्टॉलेशनसाठी प्रथम-वापर सेटअप विझार्ड
@@ -252,7 +250,6 @@ flowchart LR
 - बजेट: `src/app/api/usage/budget` (GET/POST)
 - फॉलबॅक साखळ्या: `src/app/api/fallback/chains` (GET/POST/DELETE)
 - अनुपालन ऑडिट: `src/app/api/compliance/audit-log` (GET, पृष्ठांकन + संरचित मेटाडेटासह)
-- मूल्यमापन: `src/app/api/evals` (GET/POST), `src/app/api/evals/[suiteId]` (GET)
 - धोरणे: `src/app/api/policies` (GET/POST)
 - सिंक टोकन्स: `src/app/api/sync/tokens` (GET/POST), `src/app/api/sync/tokens/[id]` (GET/DELETE)
 - कॉन्फिगरेशन बंडल: `src/app/api/sync/bundle` (GET, सेटिंग्ज/प्रदाते/कॉम्बोज/की यांचा ETag-आवृत्तीकृत स्नॅपशॉट)
@@ -316,7 +313,6 @@ flowchart LR
 - फेच टाइमआउट: `src/shared/utils/fetchTimeout.ts`
 - विनंती टेलिमेट्री: `src/shared/utils/requestTelemetry.ts`
 - अनुपालन/ऑडिट: `src/lib/compliance/index.ts`
-- मूल्यमापन रनर: `src/lib/evals/evalRunner.ts`
 - डोमेन स्थिती पर्सिस्टन्स: `src/lib/db/domainState.ts` — फॉलबॅक चेन्स, बजेट्स, खर्चाचा इतिहास, लॉकआउट स्थिती आणि सर्किट ब्रेकर्ससाठी SQLite CRUD
 
 OAuth प्रोव्हायडर मॉड्यूल्स (`src/lib/oauth/providers/` अंतर्गत 27 स्वतंत्र फाइल्स):
@@ -374,23 +370,6 @@ Auto Combo स्थिर combo व्याख्येवर अवलंब�
 
 अल्गोरिदमच्या संपूर्ण तपशीलांसाठी (factor formulas, weight tuning),
 [`docs/routing/AUTO-COMBO.md`](../routing/AUTO-COMBO.md) पहा.
-
-### B. Cloud Agents
-
-Cloud Agents तृतीय-पक्षीय hosted code-agent platforms (Codex Cloud, Devin,
-Jules) ना एकसमान, DB-backed task lifecycle च्या मागे समाविष्ट करते. सर्व task creation/inspection
-endpoints साठी management authentication आवश्यक आहे.
-
-- Module root: `src/lib/cloudAgent/` (`baseAgent.ts`, `registry.ts`, `api.ts`,
-  `types.ts`, `db.ts`, तसेच `agents/` अंतर्गत प्रत्येक agent साठी स्वतंत्र subdirectories)
-- प्रत्येक agent ची अंमलबजावणी: `agents/codex/`, `agents/devin/`, `agents/jules/`
-- Public endpoints: `/api/v1/agents/tasks/*` (यादी/निर्मिती/मिळवणे/रद्द करणे)
-- Management endpoints: `/api/cloud/*` (provisioning, status, batch)
-- Dashboard: `/dashboard/cloud-agents`
-- Storage: `cloud_agent_tasks` table
-
-प्रत्येक agent चे provisioning आणि OAuth-संबंधित तपशील यांसाठी,
-[`docs/frameworks/CLOUD_AGENT.md`](../frameworks/CLOUD_AGENT.md) पहा.
 
 ### C. Guardrails
 

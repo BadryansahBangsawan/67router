@@ -241,26 +241,6 @@ claude mcp add-server omniroute --type http --url http://localhost:20128/api/mcp
 
 **Пълна документация за MCP:** [README на MCP сървъра](../../open-sse/mcp-server/README.md) — 110 инструмента, конфигурации за IDE, клиенти за Python/TS/Go.
 
-### Настройване на A2A (Agent-to-Agent Protocol)
-
-Проверете Agent Card:
-
-```bash
-curl http://localhost:20128/.well-known/agent.json
-```
-
-Изпратете задача:
-
-```bash
-curl -X POST http://localhost:20128/a2a \
-  -H 'content-type: application/json' \
-  -d '{"jsonrpc":"2.0","id":"quickstart","method":"message/send","params":{"skill":"quota-management","messages":[{"role":"user","content":"Give me a short quota summary."}]}}'
-```
-
-**Пълна документация за A2A:** [README на A2A сървъра](../../src/lib/a2a/README.md) — JSON-RPC 2.0, умения, поточно предаване, жизнен цикъл на задачите.
-
----
-
 ## Конфигурация на времето за изчакване
 
 ### Основни времена за изчакване

@@ -69,20 +69,6 @@ omogočanje uspešne **predhodne zahteve** CORS na upravljavskih poteh — ki š
 ki ga stran drugega izvora ne more zagotoviti. Na skupni poti CORS to **ni** vektor za ugrabitev seje ali
 krajo poverilnic.
 
-### Ena dejanska izjema — `/api/v1/agents/`
-
-Poti Cloud-Agent (`/api/v1/agents/{health,credentials,tasks,tasks/[id]}`) nastavljajo
-**lastne** glave CORS
-(`src/lib/cloudAgent/api.ts`, `getCloudAgentCorsHeaders`) in **oddajo**
-`Access-Control-Allow-Origin: <origin>|*` skupaj z
-`Access-Control-Allow-Credentials: true`. To je edino območje, kjer
-vračanje izvora in poverilnice obstajajo sočasno, ter je **neodvisno od
-`CORS_ALLOW_ALL`**. Te poti so overjene za upravljanje
-(`requireManagementAuth`); skrbniki, ki nadzorno ploščo izpostavijo zunaj gostitelja, se morajo
-zavedati, da je to edino mesto, kjer glave odgovora dovoljujejo overjeno branje med različnimi
-izvori. Omejitev na izrecni seznam dovoljenih izvorov se obravnava
-ločeno od teh smernic CORS.
-
 ## Kontrolni seznam za produkcijo
 
 - **V produkciji nikoli ne nastavite `CORS_ALLOW_ALL=true`.** Pustite ga nenastavljenega.
@@ -160,7 +146,6 @@ zavihku Varnost), ne v posredniškem strežniku.
 | Stanje izvajalnega okolja za nadzorno ploščo          | `src/app/api/settings/authz-inventory/route.ts`                      |
 | Opozorilna pasica nadzorne plošče                     | `src/app/(dashboard)/dashboard/settings/components/AuthzSection.tsx` |
 | Polje CORS Allowed Origins                            | `src/app/(dashboard)/dashboard/settings/components/SecurityTab.tsx`  |
-| CORS za posamezne poti Cloud-Agent (izjema)           | `src/lib/cloudAgent/api.ts`                                          |
 
 ## Glejte tudi
 

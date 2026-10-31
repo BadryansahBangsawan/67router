@@ -19,7 +19,6 @@ process.env.DATA_DIR = TEST_DATA_DIR;
 //   G3  targetTimeoutRunner warns when per-model timeout is disabled
 //   G4  round-robin loop safety timer (hung model → 504)
 //   G5  chaosEngine logs all-panel failures with per-model errors
-//   G7  evalRunner rejects catastrophic regex (ReDoS) via safe-regex
 //   G8  autoRefreshDaemon logs network errors per provider
 // ---------------------------------------------------------------------------
 
@@ -27,7 +26,6 @@ const { buildTargetTimeoutRunner } =
   await import("../../open-sse/services/combo/targetTimeoutRunner.ts");
 const { handleComboChat } = await import("../../open-sse/services/combo.ts");
 const { handleChaosChat } = await import("../../open-sse/services/autoCombo/chaosEngine.ts");
-const { evaluateCase } = await import("../../src/lib/evals/evalRunner.ts");
 const { saveModelsDevCapabilities } = await import("../../src/lib/modelsDevSync.ts");
 
 function capabilityEntry(limitContext: unknown, overrides: Record<string, unknown> = {}) {
@@ -232,27 +230,6 @@ test("G5: chaos all-panel failure is logged with per-model errors", async () => 
     ),
     "expected the all-failed warn with model errors"
   );
-});
-
-// ── G7: evalRunner rejects catastrophic regex (ReDoS guard) ─────────────────
-test("G7: catastrophic regex is rejected instead of hanging the eval loop", () => {
-  const startedAt = Date.now();
-  const result = evaluateCase(
-    { id: "redos", name: "redos", expected: { strategy: "regex", value: "(a+)+$" } },
-    "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa!"
-  );
-  const elapsed = Date.now() - startedAt;
-  assert.equal(result.passed, false);
-  assert.match(String(result.details?.error ?? ""), /unsafe|backtracking/i);
-  assert.ok(elapsed < 1000, `regex eval took ${elapsed}ms — ReDoS guard failed`);
-});
-
-test("G7: benign regex still evaluates normally", () => {
-  const result = evaluateCase(
-    { id: "ok-regex", name: "ok-regex", expected: { strategy: "regex", value: "^hello" } },
-    "hello world"
-  );
-  assert.equal(result.passed, true);
 });
 
 // ── G8: autoRefreshDaemon logs network errors per provider ──────────────────

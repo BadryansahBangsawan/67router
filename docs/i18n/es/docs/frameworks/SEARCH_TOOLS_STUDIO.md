@@ -169,5 +169,4 @@ Se amplió `src/app/api/search/providers/route.ts` para:
 - Plan maestro: `_tasks/features-v3.8.6/refactorpages/_orchestration/master-plan-group-C.md`
 - Plan de la funcionalidad: `_tasks/features-v3.8.6/refactorpages/18-search-tools-studio-redesign.plan.md`
 - Registro de proveedores de búsqueda: `open-sse/config/searchRegistry.ts`
-- Playground Studio (`ExportCodeModal` + `codeExport.ts` compartidos): `docs/frameworks/PLAYGROUND_STUDIO.md`
 - Backend de obtención web: `src/app/api/v1/web/fetch/route.ts`

@@ -1374,9 +1374,8 @@ GET प्रतिक्रियामा `agents[]` (id, name, binary, versio
 
 ### मूल्याङ्कनहरू
 
-| Endpoint     | विधि     | विवरण                                               |
-| ------------ | -------- | --------------------------------------------------- |
-| `/api/evals` | GET/POST | मूल्याङ्कन suite हरूको सूची / मूल्याङ्कन चलाउनुहोस् |
+| Endpoint | विधि | विवरण |
+| -------- | ---- | ----- |
 
 ### नीतिहरू
 
@@ -1700,31 +1699,6 @@ DELETE /api/usage/token-limits?id=tl-abc
 
 ---
 
-## एजेन्ट प्रोटोकल
-
-67router प्रयोगकर्ताहरूका तर्फबाट टाढैबाट कार्यान्वयन गरिने क्लाउड एजेन्ट कार्यहरू (Claude Code, Codex Cloud, OpenHands आदि)।
-
-| विधि   | पथ                            | विवरण                                                                                                                                                                            |
-| ------ | ----------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| GET    | `/api/v1/agents/tasks`        | कार्यहरूको सूची — वैकल्पिक `?provider=`, `?status=`, `?limit=` (1–500, पूर्वनिर्धारित 50)                                                                                        |
-| POST   | `/api/v1/agents/tasks`        | कार्य सिर्जना गर्नुहोस् — अनुरोधको मुख्य भाग `CreateCloudAgentTaskSchema` (`providerId`, `prompt`, `source`, `options?`) द्वारा प्रमाणीकरण गरिन्छ। कार्य आवरणसहित `201` फर्काउँछ |
-| DELETE | `/api/v1/agents/tasks?id=...` | कार्य मेटाउनुहोस्                                                                                                                                                                |
-| GET    | `/api/v1/agents/tasks/[id]`   | कार्य पढ्नुहोस् — `external_id` सेट हुँदा अपस्ट्रिम क्लाउड एजेन्टबाट स्थिति समकालिक रूपमा ताजा गर्छ                                                                              |
-| POST   | `/api/v1/agents/tasks/[id]`   | विभेदित कार्य: `{action: "approve"}`, `{action: "message", message}`, वा `{action: "cancel"}`                                                                                    |
-| DELETE | `/api/v1/agents/tasks/[id]`   | id द्वारा निर्दिष्ट कार्य मेटाउनुहोस्                                                                                                                                            |
-
-> **प्रमाणीकरण:** प्रत्येक विधिमा व्यवस्थापन प्रमाणीकरण आवश्यक छ (`requireCloudAgentManagementAuth`)। v3.8.0 भन्दा पहिले यी प्रमाणीकरणरहित थिए — असंगत परिवर्तनका लागि कमिट `588a0333` हेर्नुहोस्।
-
-```bash
-# Claude Code क्लाउड कार्य सिर्जना गर्नुहोस्
-curl -X POST http://localhost:20128/api/v1/agents/tasks \
-  -H "Authorization: Bearer your-management-key" \
-  -H "Content-Type: application/json" \
-  -d '{"providerId":"claude-code-cloud","prompt":"Fix the failing test","source":{"repo":"...","branch":"..."}}'
-```
-
----
-
 ## व्यवस्थापन प्रोक्सीहरू
 
 प्रदायकहरू, खाताहरू वा विश्वव्यापी रूपमा तोक्न सकिने आउटबाउन्ड HTTP(S)/SOCKS प्रोक्सीहरू।
@@ -1844,48 +1818,10 @@ curl -X DELETE http://localhost:20128/api/resilience/model-cooldowns \
 
 67router ले निरीक्षण/ड्यासबोर्ड प्रयोगका लागि REST र्यापरसहित A2A (Agent-to-Agent) JSON-RPC 2.0 एन्डपोइन्ट उपलब्ध गराउँछ।
 
-### JSON-RPC
-
-```bash
-POST /a2a
-Authorization: Bearer your-api-key   # OMNIROUTE_API_KEY सेट नगरिएको अवस्थामा वैकल्पिक
-Content-Type: application/json
-
-{
-  "jsonrpc": "2.0",
-  "id": 1,
-  "method": "message/send",
-  "params": {
-    "skill": "smart-routing",
-    "messages": [{"role": "user", "content": "Route this coding task"}]
-  }
-}
-```
-
-समर्थित विधिहरू (सबै `settings.a2aEnabled` द्वारा नियन्त्रित):
-
-| विधि             | विवरण                                                                 |
-| ---------------- | --------------------------------------------------------------------- |
-| `message/send`   | सिङ्क्रोनस सीप कार्यान्वयन; `{task, artifacts, metadata}` फिर्ता गर्छ |
-| `message/stream` | उही सीप समूहको स्ट्रिमिङ SSE कार्यान्वयन                              |
-| `tasks/get`      | `taskId` अनुसार कार्य प्राप्त गर्छ                                    |
-| `tasks/cancel`   | `taskId` अनुसार कार्य रद्द गर्छ                                       |
-
-अन्तर्निर्मित सीपहरू: `smart-routing`, `quota-management`, `provider-discovery`, `cost-analysis`, `health-report`।
-
-### एजेन्ट कार्ड
-
-```bash
-GET /.well-known/agent.json
-```
-
-सार्वजनिक A2A एजेन्ट कार्ड (नाम, विवरण, क्षमताहरू, सीप सूची, प्रमाणीकरण योजना) फिर्ता गर्छ — सार्वजनिक रूपमा 1 घण्टाका लागि क्यास गरिन्छ। प्रमाणीकरण आवश्यक पर्दैन।
-
 ### REST सहायकहरू
 
 | विधि | पथ                           | विवरण                                                                                                                |
 | ---- | ---------------------------- | -------------------------------------------------------------------------------------------------------------------- |
-| GET  | `/api/a2a/status`            | A2A सक्षम स्थिति + कार्य तथ्याङ्क + क्यास गरिएको एजेन्ट कार्डको सारांश                                               |
 | GET  | `/api/a2a/tasks`             | कार्यहरूको सूची — `?state=submitted\|working\|completed\|failed\|cancelled`, `?skill=`, `?limit=` (≤200), `?offset=` |
 | POST | `/api/a2a/tasks`             | (REST सहायकका रूपमा कार्यान्वयन गरिएको छैन — JSON-RPC `message/send` मार्फत सिर्जना गर्नुहोस्)                       |
 | GET  | `/api/a2a/tasks/[id]`        | एउटा कार्य प्राप्त गर्छ                                                                                              |
@@ -1905,12 +1841,8 @@ GET /.well-known/agent.json
 | GET | `/api/cloud/models/alias` | क्लाउड सिङ्कमा उपलब्ध गराइएका मोडेल उपनामहरूको सूची देखाउँछ |
 | GET | `/api/assess` | नवीनतम आकलन वर्गीकरणहरू (प्रत्येक प्रदायक/मोडेलका लागि) पढ्छ |
 | POST | `/api/assess` | आकलन चलाउँछ — अनुरोध बडी: `{scope: {type:"all"}                                                   | {type:"provider", providerId} | {type:"model", modelId}, trigger?}` |
-| GET | `/api/evals` | अन्तर्निर्मित मूल्याङ्कन सुइटहरू + सबैभन्दा हालका रनहरूको सूची देखाउँछ |
-| POST | `/api/evals` | मूल्याङ्कन रन सुरु गर्छ |
-| POST | `/api/evals/suites` | अनुकूलित मूल्याङ्कन सुइट सिर्जना गर्छ — अनुरोध बडी `evalSuiteSaveSchema` द्वारा प्रमाणीकरण गरिन्छ |
-| GET | `/api/evals/suites/[id]` | अनुकूलित मूल्याङ्कन सुइट प्राप्त गर्छ |
 
-**प्रमाणीकरण:** `/api/cloud/auth` ले Bearer कुञ्जीलाई प्रत्यक्ष रूपमा प्रमाणित गर्छ र `manage` / `admin` स्कोप भएको कुञ्जीका लागि मात्र प्रत्येक जडानको मास्क गरिएको कुञ्जी र `projectId` फिर्ता गर्छ; अन्य `/api/cloud/*`, `/api/evals/*`, र `/api/assess` रुटहरूलाई व्यवस्थापन सत्र/API कुञ्जी आवश्यक पर्छ। `/api/assess` POST ले विभेदित-युनियन स्कोप स्किमासहित `validateBody` प्रयोग गर्छ।
+**प्रमाणीकरण:** `/api/cloud/auth` ले Bearer कुञ्जीलाई प्रत्यक्ष रूपमा प्रमाणित गर्छ र `manage` / `admin` स्कोप भएको कुञ्जीका लागि मात्र प्रत्येक जडानको मास्क गरिएको कुञ्जी र `projectId` फिर्ता गर्छ; अन्य `/api/cloud/*`, र `/api/assess` रुटहरूलाई व्यवस्थापन सत्र/API कुञ्जी आवश्यक पर्छ। `/api/assess` POST ले विभेदित-युनियन स्कोप स्किमासहित `validateBody` प्रयोग गर्छ।
 
 ---
 
@@ -2232,5 +2164,3 @@ AI एजेन्टका सीपहरू व्यवस्थापन �
 - `requireLogin` लाई `/api/settings/require-login` मार्फत टगल गर्न सकिन्छ
 - `REQUIRE_API_KEY=true` हुँदा `/v1/*` रुटहरूलाई वैकल्पिक रूपमा Bearer API कुञ्जी आवश्यक पर्छ
 - यस सन्दर्भमा "व्यवस्थापन टोकन" / "व्यवस्थापन-स्कोप गरिएको API कुञ्जी" भन्नाले उक्त गाइडमा उल्लेख गरिएका समूहमध्ये कुनै एकलाई जनाउँछ — कुनै अपरिभाषित अतिरिक्त गोप्य प्रकारलाई होइन
-
-> **ब्रेकिङ परिवर्तन (v3.8.0)** — `/api/v1/agents/tasks/*` र कूलडाउन व्यवस्थापन एन्डपोइन्टहरूलाई अब **व्यवस्थापन प्रमाणीकरण** (ड्यासबोर्ड `auth_token` कुकी वा व्यवस्थापन-स्कोप गरिएको API कुञ्जी) आवश्यक पर्छ। पहिले यी रुटहरूलाई प्रमाणीकरणविना कल गर्ने क्लाइन्टहरूले अब `401 Unauthorized` प्राप्त गर्नेछन्। commit `588a0333` (`fix(auth): require management auth for agent and cooldown APIs`) हेर्नुहोस्।

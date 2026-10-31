@@ -241,17 +241,6 @@ curl -X DELETE http://localhost:20128/api/settings/notion
 రన్టైమ్ రూటింగ్/క్యాష్/కంప్రెషన్/మెమరీ/స్కిల్స్/ప్రాక్సీ/కాంటెక్స్ట్-సోర్స్ కార్యకలాపాలకు పరిమితం చేయబడింది. v3.8.0లో MCP సర్వర్తో పాటు రెండు అనుబంధ
 ఫ్రేమ్వర్క్లు అందించబడతాయి మరియు అవి విడిగా డాక్యుమెంట్ చేయబడ్డాయి:
 
-### క్లౌడ్ ఏజెంట్లు
-
-క్లౌడ్ ఏజెంట్లు అనేవి LLM ప్రొవైడర్ల కోసం ఉపయోగించే అదే కనెక్షన్ మోడల్ ద్వారా
-67routerకు అనుసంధానించబడిన అవుట్-ఆఫ్-ప్రాసెస్ AI కోడింగ్ ఏజెంట్లు (codex-cloud, cursor-cloud, devin, jules). అవి
-వాటి స్వంత REST సర్ఫేస్ (`/api/v1/agents/*`) ద్వారా అందుబాటులో ఉంటాయి మరియు MCP టూల్ కాటలాగ్లో భాగం **కావు**
-— క్లౌడ్ ఏజెంట్ను కాల్ చేయడం MCP స్కోప్ను వినియోగించదు.
-
-- అమలు: `src/lib/cloudAgent/` (`registry.ts`, `agents/codex.ts`, `agents/cursor.ts`, `agents/devin.ts`, `agents/jules.ts`).
-- లైఫ్సైకిల్: `createTask`, `getStatus`, `approvePlan`, `sendMessage`, `listSources`.
-- డాక్యుమెంటేషన్: [docs/frameworks/CLOUD_AGENT.md](./CLOUD_AGENT.md).
-
 ### గార్డ్రైల్స్
 
 గార్డ్రైల్స్ అనేవి చాట్ పైప్లైన్లో వర్తింపజేయబడే ప్రీ/పోస్ట్-ఎగ్జిక్యూషన్ ఫిల్టర్లు (vision-bridge, pii-masker, prompt-injection).

@@ -24,7 +24,6 @@
 - [Skills 系統](#-skills-system)
 - [記憶系統](#-memory-system)
 - [Webhooks](#-webhooks)
-- [雲端代理](#-cloud-agents)
 - [程式化管理](#-programmatic-management)
 - [內部 CLI](#-internal-cli)
 - [桌面應用程式（Electron）](#-desktop-application-electron)
@@ -1233,8 +1232,6 @@ curl -X POST http://localhost:20128/v1/chat/completions \
 
 ### 權限範圍
 
-MCP 目前定義了 32 個具名權限範圍。每個 Bearer 金鑰都能限制為僅可存取特定權限範圍——如需具權威性的權限範圍與工具清單，請參閱 [MCP-SERVER.md](../frameworks/MCP-SERVER.md)；如需 JSON-RPC 結構描述，請參閱 [A2A-SERVER.md](../frameworks/A2A-SERVER.md)。
-
 ---
 
 ## 🧠 技能系統
@@ -1243,7 +1240,6 @@ MCP 目前定義了 32 個具名權限範圍。每個 Bearer 金鑰都能限制�
 
 - **市集 UI** — 從**儀表板 → 技能**瀏覽並安裝技能
 - **各金鑰的作用域** — 限制哪些 API 金鑰可以叫用哪些技能
-- **自訂技能** — 將 TypeScript 檔案放入 `src/lib/a2a/skills/`、進行註冊後，即可立即透過 A2A 叫用
 
 完整參考資料：[SKILLS.md](../frameworks/SKILLS.md)。
 
@@ -1272,18 +1268,6 @@ MCP 目前定義了 32 個具名權限範圍。每個 Bearer 金鑰都能限制�
 - 重試：採用指數退避進行 3 次嘗試，之後移至無效信件佇列
 
 完整結構定義請參閱 [WEBHOOKS.md](../frameworks/WEBHOOKS.md)。
-
----
-
-## ☁️ 雲端代理程式
-
-67router 可與雲端程式設計代理程式（**OpenAI Codex Cloud**、**Devin**、**Jules**、**Antigravity**）整合，讓您能從管理本機路由的同一個儀表板派送長時間執行的任務。
-
-- 在**儀表板 → 雲端代理程式**中建立任務，或透過 `POST /api/v1/agents/tasks` 建立
-- 追蹤每個任務的狀態、日誌與成品
-- 各提供者可使用自備的 API 金鑰 — 認證資料絕不會離開 67router 執行個體
-
-完整參考資料：[CLOUD_AGENT.md](../frameworks/CLOUD_AGENT.md)。
 
 ---
 
@@ -1340,7 +1324,6 @@ omniroute restore [<timestamp>]    # 從快照還原
 omniroute health                   # 詳細健康狀態（斷路器、快取、記憶體）
 omniroute quota                    # 提供者配額使用情況
 omniroute mcp status               # MCP 伺服器狀態
-omniroute a2a status               # A2A 伺服器狀態
 omniroute tunnel list|create|stop  # Cloudflare/Tailscale/ngrok 通道
 omniroute reset-password           # 重設管理員密碼
 omniroute --mcp                    # 透過 stdio 啟動 MCP 伺服器

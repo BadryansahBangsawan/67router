@@ -123,5 +123,3 @@ try {
 - [ਏਜੰਟ ਪ੍ਰੋਟੋਕੋਲ](./AGENT_PROTOCOLS_GUIDE.md)
 - [CLI ਲਾਂਚ ਇਕਰਾਰਨਾਮੇ](../guides/CLI-LAUNCH-CONTRACTS.md)
 - [CLI ਟੂਲ](../reference/CLI-TOOLS.md)
-- [A2A ਸਰਵਰ](./A2A-SERVER.md)
-- [ਕਲਾਉਡ ਏਜੰਟ](./CLOUD_AGENT.md)

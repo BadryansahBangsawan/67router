@@ -588,7 +588,6 @@ A Radar használata opcionális, és kizárólag GET-kéréseket alkalmaz. A 67r
 - **🔑 Kulcsonkénti útvonalvezérlés** — rögzíts egy API-kulcsot egyetlen modellhez vagy kombóhoz a `forcedModel` segítségével, és atomikusan add hozzá vagy távolítsd el egy kulcs modelljeit és kombóit (`/api/keys/{id}/access`). → [API-referencia](docs/reference/API_REFERENCE.md) · [OpenAPI](docs/openapi.yaml)
 - **🛡️ Finomabb PII-vezérlők** — típusonkénti kiválasztás, akár 20 validált egyéni maszkolási minta és típusonkénti észlelési számlálók; maga a maszkolás továbbra is opt-in. → [Guardrails](docs/security/GUARDRAILS.md)
 - **🌍 67 nyelv** — irányítópult, dokumentáció-tükrök és CLI, ahol az `npm run i18n:add-locale` egyetlen paranccsal mindenhol hozzáad egy nyelvet. → [i18n útmutató](docs/guides/I18N.md)
-- **🎛️ OmniConductor** — bejövő A2A delegálás az ügynökflottádhoz, Conductor készségek az Agent Cardon, és egy irányítópult-panel Faro push-to-talk hangcsevegéssel. → [A2A szerver](docs/frameworks/A2A-SERVER.md)
 - **🛂 Adaptív beléptetés és túlterhelés-védelem** — a nagy súlyú csevegési kérések sorba állnak 503 helyett, atomi RPM gördülő lease-ekkel kapcsolatonként. → [Reziliencia-útmutató](docs/architecture/RESILIENCE_GUIDE.md)
 - **🗂️ Kanonikus `/v1/models` sorrend** — szolgáltatónként egy összefüggő, szolgáltató szerint csoportosított blokk (a kombók elöl rögzítve), minden katalógusforrás esetében stabil. → [API-referencia](docs/reference/API_REFERENCE.md)
 - **🗜️ Tömörítés megerősítése** — alapértelmezés szerint bekapcsolt inflation guard, Caveman csomagok DE / FR / JA + kínai (wényán) nyelvhez, RTK szűrők Gradle & .NET-hez. → [Tömörítés](docs/compression/COMPRESSION_ENGINES.md)
@@ -907,7 +906,6 @@ Tegye elérhetővé a 67router-ot **MCP**, **A2A**, **REST API**, **webhookok** 
   <tr><td align="left" nowrap>🧰 <b>MCP (stdio)</b></td><td align="left" nowrap><code>omniroute --mcp</code></td><td align="left">Integráció a Claude Desktop, a Cursor vagy bármely MCP-kliens használatával</td></tr>
   <tr><td align="left" nowrap>🌊 <b>MCP (HTTP)</b></td><td align="left" nowrap><code>/api/mcp/stream</code></td><td align="left">Távoli MCP — <b>110 eszköz</b>, 33 hatókör (a kikényszerítés opcionális), teljes auditnapló</td></tr>
   <tr><td align="left" nowrap>📡 <b>MCP (SSE)</b></td><td align="left" nowrap><code>/api/mcp/sse</code></td><td align="left">Adatfolyam-alapú MCP-átvitel</td></tr>
-  <tr><td align="left" nowrap>🤝 <b>A2A</b></td><td align="left" nowrap><code>/.well-known/agent.json</code></td><td align="left">Ügynökök közötti kommunikáció, <b>JSON-RPC 2.0</b> + SSE, 6 készség</td></tr>
   <tr><td align="left" nowrap>🌐 <b>REST API</b></td><td align="left" nowrap><code>/v1/*</code></td><td align="left">OpenAI-kompatibilis — csevegés, beágyazások, képek, hang és OCR</td></tr>
   <tr><td align="left" nowrap>🔔 <b>Webhookok</b></td><td align="left" nowrap><code>/api/webhooks</code></td><td align="left">Kérés- és kvótaesemények továbbítása a Slack, Discord vagy Telegram felé, illetve bármely URL-re</td></tr>
   <tr><td align="left" nowrap>🛰️ <b>Távoli CLI</b></td><td align="left" nowrap><code>omniroute connect <host></code></td><td align="left">Távoli példány vezérlése korlátozott hatókörű hozzáférési tokenekkel</td></tr>
@@ -917,8 +915,6 @@ Tegye elérhetővé a 67router-ot **MCP**, **A2A**, **REST API**, **webhookok** 
 # A teljes 67router-eszközkészlet biztosítása a Claude Code számára MCP-n keresztül:
 claude mcp add-server omniroute --type http --url http://localhost:20128/api/mcp/stream
 ```
-
-<sub>📖 [MCP-szerver](docs/frameworks/MCP-SERVER.md) · [A2A-szerver](docs/frameworks/A2A-SERVER.md) · [Ügynökprotokollok](docs/frameworks/AGENT_PROTOCOLS_GUIDE.md)</sub>
 
 <br/>
 
@@ -1384,7 +1380,6 @@ Kanonikus mérőszámok 2026-10-18-án: **1.976 egyedi videó** · **20.220.289 
   <tr><td nowrap><b><a href="open-sse/mcp-server/README.md">MCP-szerver</a></b></td><td>110 MCP-eszköz, IDE-konfigurációk, Python-/TS-/Go-kliensek</td></tr>
   <tr><td nowrap><b><a href="docs/frameworks/MCP-SERVER.md">MCP-szerver útmutatója</a></b></td><td>MCP-telepítés, átviteli módok és eszközreferencia</td></tr>
   <tr><td nowrap><b><a href="src/lib/a2a/README.md">A2A-szerver</a></b></td><td>JSON-RPC 2.0 protokoll, képességek, streamelés, feladatkezelés</td></tr>
-  <tr><td nowrap><b><a href="docs/frameworks/A2A-SERVER.md">A2A-szerver útmutatója</a></b></td><td>A2A-ügynökkártya, feladatok, képességek és streamelés</td></tr>
 </table>
 
 ### 📋 Projekt és minőség

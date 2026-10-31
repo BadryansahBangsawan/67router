@@ -258,12 +258,6 @@ Katso siirtoyhteyden määritys ja käyttöoikeuksien kohdistukset tiedostosta [
 
 ---
 
-## A2A-integraatio
-
-`src/lib/skills/a2a.ts` vie `memory_aware_routing`-A2A-taitokuvauksen ja `registerA2ASkill(registry)`-apufunktion. Mukautetut A2A-taidot sijaitsevat hakemistossa `src/lib/a2a/skills/`, ja ne välitetään käsiteltäviksi `A2A_SKILL_HANDLERS`-kohteen kautta (`src/lib/a2a/taskExecution.ts`). Katso tehtävän koko elinkaari tiedostosta [A2A-SERVER.md](./A2A-SERVER.md).
-
----
-
 ## Uuden sisäänrakennetun taidon lisääminen
 
 1. **Määritä käsittelijä** tiedostossa `src/lib/skills/builtins.ts` (tai rinnakkaistiedostossa hakemiston `src/lib/skills/builtin/` alla). Allekirjoitus: `(input, { apiKeyId, sessionId }) => Promise<output>`.
@@ -478,7 +472,6 @@ Katso ohjeet mukautetun taidon lisäämiseen liitännäisjärjestelmän kautta d
 ## Katso myös
 
 - [MCP-SERVER.md](./MCP-SERVER.md) — MCP-työkalujen rekisteröinti ja siirtomekanismit
-- [A2A-SERVER.md](./A2A-SERVER.md) — A2A-tehtävien elinkaari ja taitojen välitys
 - [USER_GUIDE.md](../guides/USER_GUIDE.md#-skills-system) — käyttäjille suunnattu johdanto
 - [ARCHITECTURE.md](../architecture/ARCHITECTURE.md) — pyyntöjen käsittelyketju ja komponenttikartta
 - Lähdekoodi: `src/lib/skills/`, `src/app/api/skills/`, `open-sse/mcp-server/tools/skillTools.ts`

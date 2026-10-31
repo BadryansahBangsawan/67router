@@ -43,8 +43,6 @@ A v3.7.x → v3.8.0 fejlesztési ciklus konfigurációmentes automatikus útvál
 - 🤝 **GitLab Duo OAuth-szolgáltató** — bejelentkezés GitLab hitelesítő adatokkal
 - 🧠 **Reasoning Replay Cache** — az érvelési nyomvonalak hibrid, memóriában és SQLite-ban történő megőrzése
 
-📚 **Kapcsolódó dokumentáció:** [Készségkeretrendszer](../frameworks/SKILLS.md) · [Memóriarendszer](../frameworks/MEMORY.md) · [Felhőügynökök](../frameworks/CLOUD_AGENT.md) · [Webhookok](../frameworks/WEBHOOKS.md) · [Reasoning Replay Cache](../routing/REASONING_REPLAY.md)
-
 ---
 
 ## 🔌 Szolgáltatók
@@ -104,12 +102,6 @@ Valós idejű monitorozás: rendelkezésre állási idő, memória, verzió, ké
 Négy mód az API-fordítások hibakereséséhez: **Játszótér** (formátumkonvertáló), **Csevegéstesztelő** (élő kérések), **Tesztpad** (kötegelt tesztek) és **Élő monitor** (valós idejű adatfolyam).
 
 ![Fordítói játszótér](../screenshots/05-translator.png)
-
----
-
-## 🎮 Modelljátszótér _(v2.0.9+)_
-
-Teszteljen bármilyen modellt közvetlenül az irányítópultról. Válassza ki a szolgáltatót, a modellt és a végpontot, írja meg a promptokat a Monaco Editor segítségével, kövesse valós időben a válaszfolyamot, szakítsa meg azt menet közben, és tekintse meg az időzítési mérőszámokat.
 
 ---
 

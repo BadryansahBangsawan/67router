@@ -43,8 +43,6 @@ v3.7.x → v3.8.0 döngüsü; sıfır yapılandırmalı otomatik yönlendirme, y
 - 🤝 **GitLab Duo OAuth sağlayıcısı** — GitLab kimlik bilgileriyle oturum açma
 - 🧠 **Akıl Yürütme Yeniden Oynatma Önbelleği** — akıl yürütme izlerinin hibrit bellek içi + SQLite kalıcılığı
 
-📚 **İlgili belgeler:** [Beceri Çerçevesi](../frameworks/SKILLS.md) · [Bellek Sistemi](../frameworks/MEMORY.md) · [Bulut Aracıları](../frameworks/CLOUD_AGENT.md) · [Webhook'lar](../frameworks/WEBHOOKS.md) · [Akıl Yürütme Yeniden Oynatma Önbelleği](../routing/REASONING_REPLAY.md)
-
 ---
 
 ## 🔌 Sağlayıcılar
@@ -104,12 +102,6 @@ Gerçek zamanlı izleme: çalışma süresi, bellek, sürüm, gecikme yüzdelikl
 API çevirilerinde hata ayıklamak için dört mod: **Deneme Alanı** (biçim dönüştürücü), **Sohbet Test Aracı** (canlı istekler), **Test Tezgâhı** (toplu testler) ve **Canlı İzleyici** (gerçek zamanlı akış).
 
 ![Çevirmen Deneme Alanı](../screenshots/05-translator.png)
-
----
-
-## 🎮 Model Deneme Alanı _(v2.0.9+)_
-
-Herhangi bir modeli doğrudan kontrol panelinden test edin. Sağlayıcıyı, modeli ve uç noktayı seçin; Monaco Editor ile istemler yazın, yanıtları gerçek zamanlı olarak akış halinde alın, akışı devam ederken iptal edin ve zamanlama metriklerini görüntüleyin.
 
 ---
 

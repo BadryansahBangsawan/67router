@@ -86,7 +86,7 @@ dashboard settings තුළ `blockedProviders` වෙත ඒවා එක් �
 
 ## VS Code ටැබයක් තුළ Dashboard එක
 
-`omnicopilot.dashboardOpen: "editor"` මඟින් 67router dashboard එක බාහිර browser එකක නොව Simple Browser හරහා editor ටැබයක render කරයි. Embed කිරීම **server එකෙහි opt-in කළ යුතුය**. ඒ සඳහා `DASHBOARD_ALLOW_EMBED=vscode` භාවිත කරන අතර, එවිට default `frame-ancestors 'none'` + `X-Frame-Options: DENY` වෙනුවට `frame-ancestors 'self' vscode-webview:` සමඟ HTML පිටු serve කරයි. කෙසේ වෙතත් API පරාසය (`/api`, `/v1`, `/v1beta`, `/a2a`, `/healthz`) සෑම අවස්ථාවකම දැඩි headers පවත්වා ගනී.
+`omnicopilot.dashboardOpen: "editor"` මඟින් 67router dashboard එක බාහිර browser එකක නොව Simple Browser හරහා editor ටැබයක render කරයි. Embed කිරීම **server එකෙහි opt-in කළ යුතුය**. ඒ සඳහා `DASHBOARD_ALLOW_EMBED=vscode` භාවිත කරන අතර, එවිට default `frame-ancestors 'none'` + `X-Frame-Options: DENY` වෙනුවට `frame-ancestors 'self' vscode-webview:` සමඟ HTML පිටු serve කරයි. කෙසේ වෙතත් API පරාසය (`/api`, `/v1`, `/v1beta`, `/healthz`) සෑම අවස්ථාවකම දැඩි headers පවත්වා ගනී.
 
 > ⚠️ **මෙය runtime flag එකක් නොව build-time flag එකකි.** Next.js විසින් `headers()` route manifest එකට compile කරන බැවින්, bundle එක build කරන අතරතුර `next.config.mjs` විසින් variable එක කියවයි
 > (`next.config.mjs` → `resolveDashboardEmbedMode`, `scripts/build/dashboardEmbed.mjs`).

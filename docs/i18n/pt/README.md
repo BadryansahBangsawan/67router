@@ -588,7 +588,7 @@ O Radar é opcional e utiliza apenas pedidos GET. O cliente 67router não envia 
 - **🔑 Controlo de encaminhamento por chave** — fixe uma chave API a um modelo ou combo com `forcedModel`, e adicione ou remova modelos e combos de uma chave de forma atómica (`/api/keys/{id}/access`). → [API Reference](docs/reference/API_REFERENCE.md) · [OpenAPI](docs/openapi.yaml)
 - **🛡️ Controlos de PII mais finos** — seleção por tipo, até 20 padrões de mascaramento personalizados validados e contadores de deteção por tipo; o mascaramento continua a ser opt-in. → [Guardrails](docs/security/GUARDRAILS.md)
 - **🌍 67 idiomas** — dashboard, espelhos da documentação e CLI, com `npm run i18n:add-locale` a adicionar um idioma em todo o lado num único comando. → [i18n Guide](docs/guides/I18N.md)
-- **🎛️ OmniConductor** — delegação A2A de entrada para a sua frota de agentes, competências do Conductor no Agent Card, e um painel no dashboard com chat por voz push-to-talk do Faro. → [A2A Server](docs/frameworks/A2A-SERVER.md)
+- **🎛️ OmniConductor** — delegação A2A de entrada para a sua frota de agentes, competências do Conductor no Agent Card, e um painel no dashboard com chat por voz push-to-talk do Faro.
 - **🛂 Admissão adaptativa e proteção contra sobrecarga** — pedidos de chat pesados entram em fila em vez de devolver 503, com leases rotativos de RPM atómicos por ligação. → [Resilience Guide](docs/architecture/RESILIENCE_GUIDE.md)
 - **🗂️ Ordenação canónica de `/v1/models`** — um bloco contíguo agrupado por fornecedor por cada fornecedor (combos fixados primeiro), estável em todas as fontes de catálogo. → [API Reference](docs/reference/API_REFERENCE.md)
 - **🗜️ Reforço da compressão** — proteção contra inflação ativa por omissão, pacotes Caveman para DE / FR / JA + chinês (wényán), filtros RTK para Gradle e .NET. → [Compression](docs/compression/COMPRESSION_ENGINES.md)
@@ -907,7 +907,6 @@ Exponha o 67router através de **MCP**, **A2A**, uma **API REST**, **webhooks** 
   <tr><td align="left" nowrap>🧰 <b>MCP (stdio)</b></td><td align="left" nowrap><code>omniroute --mcp</code></td><td align="left">Integração com o Claude Desktop, Cursor ou qualquer cliente MCP</td></tr>
   <tr><td align="left" nowrap>🌊 <b>MCP (HTTP)</b></td><td align="left" nowrap><code>/api/mcp/stream</code></td><td align="left">MCP remoto — <b>110 ferramentas</b>, 33 âmbitos (aplicação opcional), registo de auditoria completo</td></tr>
   <tr><td align="left" nowrap>📡 <b>MCP (SSE)</b></td><td align="left" nowrap><code>/api/mcp/sse</code></td><td align="left">Transporte MCP por streaming</td></tr>
-  <tr><td align="left" nowrap>🤝 <b>A2A</b></td><td align="left" nowrap><code>/.well-known/agent.json</code></td><td align="left">Agente para agente, <b>JSON-RPC 2.0</b> + SSE, 6 competências</td></tr>
   <tr><td align="left" nowrap>🌐 <b>API REST</b></td><td align="left" nowrap><code>/v1/*</code></td><td align="left">Compatível com OpenAI — chat, embeddings, imagens, áudio e OCR</td></tr>
   <tr><td align="left" nowrap>🔔 <b>Webhooks</b></td><td align="left" nowrap><code>/api/webhooks</code></td><td align="left">Envio de eventos de pedidos / quotas para o Slack, Discord, Telegram ou qualquer URL</td></tr>
   <tr><td align="left" nowrap>🛰️ <b>CLI remota</b></td><td align="left" nowrap><code>omniroute connect <host></code></td><td align="left">Controle uma instância remota com tokens de acesso com âmbito definido</td></tr>
@@ -917,8 +916,6 @@ Exponha o 67router através de **MCP**, **A2A**, uma **API REST**, **webhooks** 
 # Dê ao Claude Code o conjunto completo de ferramentas do 67router através de MCP:
 claude mcp add-server omniroute --type http --url http://localhost:20128/api/mcp/stream
 ```
-
-<sub>📖 [Servidor MCP](docs/frameworks/MCP-SERVER.md) · [Servidor A2A](docs/frameworks/A2A-SERVER.md) · [Protocolos de Agentes](docs/frameworks/AGENT_PROTOCOLS_GUIDE.md)</sub>
 
 <br/>
 
@@ -1384,7 +1381,6 @@ Métricas canónicas em 2026-10-18: **1.976 vídeos únicos** · **20.220.289 vi
   <tr><td nowrap><b><a href="open-sse/mcp-server/README.md">Servidor MCP</a></b></td><td>110 ferramentas MCP, configurações de IDE, clientes Python/TS/Go</td></tr>
   <tr><td nowrap><b><a href="docs/frameworks/MCP-SERVER.md">Guia do Servidor MCP</a></b></td><td>Instalação do MCP, transportes e referência de ferramentas</td></tr>
   <tr><td nowrap><b><a href="src/lib/a2a/README.md">Servidor A2A</a></b></td><td>Protocolo JSON-RPC 2.0, competências, streaming, gestão de tarefas</td></tr>
-  <tr><td nowrap><b><a href="docs/frameworks/A2A-SERVER.md">Guia do Servidor A2A</a></b></td><td>Cartão de agente A2A, tarefas, competências e streaming</td></tr>
 </table>
 
 ### 📋 Projeto e Qualidade

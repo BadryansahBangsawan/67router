@@ -42,16 +42,15 @@ Agente AI / IDE
 
 ### Ciò che era già presente (verificato, non duplicato)
 
-| Concetto                                       | Implementazione esistente                                                                                            |
-| ---------------------------------------------- | -------------------------------------------------------------------------------------------------------------------- |
-| Disponibilità (possiamo inviare traffico?)     | Circuit breaker (CLOSED/DEGRADED/OPEN/HALF_OPEN, persistito nel DB), cooldown della connessione, lockout del modello |
-| Report sull'integrità                          | `providerHealthMatrix.ts`, `providerHealthAutopilot.ts`                                                              |
-| Traffico shadow                                | `open-sse/services/combo/shadowRouting.ts`                                                                           |
-| Vincoli di sicurezza                           | `src/lib/guardrails/` (hook pre/post)                                                                                |
-| Cache esatta                                   | `src/lib/semanticCache.ts` (basata sulla firma)                                                                      |
-| Valutatori / routing guidato dalle valutazioni | `src/lib/evals/`, `open-sse/services/evalRouting.ts`                                                                 |
-| Spiegabilità delle decisioni combo             | `open-sse/services/combo/decisionTrace.ts`                                                                           |
-| Eventi in tempo reale della dashboard          | `src/lib/events/eventBus.ts` (canale di notifica UI, payload `unknown`, cronologia di 100 elementi)                  |
+| Concetto                                   | Implementazione esistente                                                                                            |
+| ------------------------------------------ | -------------------------------------------------------------------------------------------------------------------- |
+| Disponibilità (possiamo inviare traffico?) | Circuit breaker (CLOSED/DEGRADED/OPEN/HALF_OPEN, persistito nel DB), cooldown della connessione, lockout del modello |
+| Report sull'integrità                      | `providerHealthMatrix.ts`, `providerHealthAutopilot.ts`                                                              |
+| Traffico shadow                            | `open-sse/services/combo/shadowRouting.ts`                                                                           |
+| Vincoli di sicurezza                       | `src/lib/guardrails/` (hook pre/post)                                                                                |
+| Cache esatta                               | `src/lib/semanticCache.ts` (basata sulla firma)                                                                      |
+| Spiegabilità delle decisioni combo         | `open-sse/services/combo/decisionTrace.ts`                                                                           |
+| Eventi in tempo reale della dashboard      | `src/lib/events/eventBus.ts` (canale di notifica UI, payload `unknown`, cronologia di 100 elementi)                  |
 
 Il livello degli eventi di routing **non** è una reimplementazione di `eventBus`: quel bus
 è il canale di notifica in tempo reale della dashboard (nomi degli _eventi_ tipizzati,
@@ -268,8 +267,6 @@ backend di intelligence/valutazione, non come una dipendenza**. I punti di integ
 - Un futuro `Evaluator` (deterministico, giudice locale, HTTP, WASM) potrebbe elaborare
   eventi/tracce e restituire un `QualityScore` da immettere nello stesso percorso
   `getQualityScore`/fattore di qualità.
-- Il routing esistente basato sulle valutazioni (`open-sse/services/evalRouting.ts`) già
-  riordina le destinazioni delle combo in base ai tassi di superamento di `eval_runs`, quando abilitato.
 
 Nessuna valutazione viene eseguita in modo sincrono nel percorso della richiesta e il gateway funziona
 completamente anche in assenza del valutatore.

@@ -70,20 +70,6 @@
 පිටුවකට සැපයිය නොහැකි සත්යාපනය අවශ්ය වේ. හවුල් CORS මාර්ගයේ මෙය සැසියක් පැහැරගැනීමේ හෝ
 අක්තපත්ර සොරකම් කිරීමේ මාර්ගයක් **නොවේ**.
 
-### එක් සැබෑ ව්යතිරේකයක් — `/api/v1/agents/`
-
-Cloud-Agent මාර්ග (`/api/v1/agents/{health,credentials,tasks,tasks/[id]}`) තමන්ගේම
-CORS ශීර්ෂ සකසන අතර
-(`src/lib/cloudAgent/api.ts`, `getCloudAgentCorsHeaders`),
-`Access-Control-Allow-Credentials: true` සමඟ
-`Access-Control-Allow-Origin: <origin>|*` ද **නිකුත් කරයි**. මූලය ප්රතිරාවය කිරීම සහ
-අක්තපත්ර එකට පවතින එකම පෘෂ්ඨය මෙය වන අතර, එය
-`CORS_ALLOW_ALL` වෙතින් **ස්වාධීනය**. මෙම මාර්ග කළමනාකරණ-සත්යාපිතය
-(`requireManagementAuth`); සත්කාරකයෙන් පිටත උපකරණ පුවරුව නිරාවරණය කරන ක්රියාකරුවන්,
-ප්රතිචාර ශීර්ෂ මඟින් හරස්-මූල අක්තපත්ර සහිත කියවීමකට අවසර දෙන එකම ස්ථානය මෙය බව
-දැන සිටිය යුතුය. එය පැහැදිලි අවසර ලැයිස්තුවකට සීමා කිරීම මෙම CORS මාර්ගෝපදේශයෙන්
-වෙන්ව නිරීක්ෂණය කෙරේ.
-
 ## නිෂ්පාදන පිරික්සුම් ලැයිස්තුව
 
 - **නිෂ්පාදන පරිසරයේදී කිසිවිටෙකත් `CORS_ALLOW_ALL=true` ලෙස සකසන්න එපා.** එය සකසා නොතබන්න.
@@ -152,15 +138,14 @@ Security tab එකෙහි) සකසන්න.
 
 ## මූලාශ්ර ගොනු
 
-| අදාළ කරුණ                                       | ගොනුව                                                                |
-| ----------------------------------------------- | -------------------------------------------------------------------- |
-| Allowlist නිරාකරණය + `getCorsStatus()`          | `src/server/cors/origins.ts`                                         |
-| Middleware යෙදීම (සත්යයේ එකම මූලාශ්රය)          | `src/server/authz/pipeline.ts`                                       |
-| Settings → runtime origin ඇතුළත් කිරීම          | `src/lib/config/runtimeSettings.ts`                                  |
-| dashboard එක සඳහා runtime තත්ත්වය               | `src/app/api/settings/authz-inventory/route.ts`                      |
-| Dashboard අනතුරු ඇඟවීමේ බැනරය                   | `src/app/(dashboard)/dashboard/settings/components/AuthzSection.tsx` |
-| CORS Allowed Origins ක්ෂේත්රය                   | `src/app/(dashboard)/dashboard/settings/components/SecurityTab.tsx`  |
-| එක් එක් route සඳහා Cloud-Agent CORS (ව්යතිරේකය) | `src/lib/cloudAgent/api.ts`                                          |
+| අදාළ කරුණ                              | ගොනුව                                                                |
+| -------------------------------------- | -------------------------------------------------------------------- |
+| Allowlist නිරාකරණය + `getCorsStatus()` | `src/server/cors/origins.ts`                                         |
+| Middleware යෙදීම (සත්යයේ එකම මූලාශ්රය) | `src/server/authz/pipeline.ts`                                       |
+| Settings → runtime origin ඇතුළත් කිරීම | `src/lib/config/runtimeSettings.ts`                                  |
+| dashboard එක සඳහා runtime තත්ත්වය      | `src/app/api/settings/authz-inventory/route.ts`                      |
+| Dashboard අනතුරු ඇඟවීමේ බැනරය          | `src/app/(dashboard)/dashboard/settings/components/AuthzSection.tsx` |
+| CORS Allowed Origins ක්ෂේත්රය          | `src/app/(dashboard)/dashboard/settings/components/SecurityTab.tsx`  |
 
 ## තවද බලන්න
 

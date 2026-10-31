@@ -596,7 +596,6 @@ catalogul actual la **[radar.omniroute.online/planos](https://radar.omniroute.on
 - **🔑 Controlul rutării pe cheie** — fixează o cheie API pe un singur model sau combo cu `forcedModel`, și adaugă sau elimină atomic modelele și combo-urile unei chei (`/api/keys/{id}/access`). → [Referință API](docs/reference/API_REFERENCE.md) · [OpenAPI](docs/openapi.yaml)
 - **🛡️ Controale PII mai fine** — selecție pe tip, până la 20 de șabloane de mascare personalizate validate și contoare de detectare pe tip; mascarea în sine rămâne opt-in. → [Guardrails](docs/security/GUARDRAILS.md)
 - **🌍 67 de limbi** — dashboard, mirror-uri de documentație și CLI, cu `npm run i18n:add-locale` care adaugă o limbă peste tot cu o singură comandă. → [Ghid i18n](docs/guides/I18N.md)
-- **🎛️ OmniConductor** — delegare A2A inbound către flota ta de agenți, skill-uri Conductor pe Agent Card și un panou în dashboard cu chat vocal push-to-talk Faro. → [Server A2A](docs/frameworks/A2A-SERVER.md)
 - **🛂 Admitere adaptivă & protecție la supraîncărcare** — cererile grele de chat intră în coadă în loc să returneze 503, cu lease-uri rulante RPM atomice per conexiune. → [Ghid de reziliență](docs/architecture/RESILIENCE_GUIDE.md)
 - **🗂️ Ordine canonică `/v1/models`** — un singur bloc contiguu grupat pe provider pentru fiecare provider (combo-urile fixate primele), stabil în orice sursă de catalog. → [Referință API](docs/reference/API_REFERENCE.md)
 - **🗜️ Consolidarea compresiei** — gardă de inflație activată implicit, pachete Caveman pentru DE / FR / JA + chineză (wényán), filtre RTK pentru Gradle & .NET. → [Compresie](docs/compression/COMPRESSION_ENGINES.md)
@@ -915,7 +914,6 @@ Expuneți 67router prin **MCP**, **A2A**, un **API REST**, **webhook-uri** sau u
   <tr><td align="left" nowrap>🧰 <b>MCP (stdio)</b></td><td align="left" nowrap><code>omniroute --mcp</code></td><td align="left">Integrare cu Claude Desktop, Cursor sau orice client MCP</td></tr>
   <tr><td align="left" nowrap>🌊 <b>MCP (HTTP)</b></td><td align="left" nowrap><code>/api/mcp/stream</code></td><td align="left">MCP la distanță — <b>110 instrumente</b>, 33 de domenii (aplicare opțională), pistă de audit completă</td></tr>
   <tr><td align="left" nowrap>📡 <b>MCP (SSE)</b></td><td align="left" nowrap><code>/api/mcp/sse</code></td><td align="left">Transport MCP prin streaming</td></tr>
-  <tr><td align="left" nowrap>🤝 <b>A2A</b></td><td align="left" nowrap><code>/.well-known/agent.json</code></td><td align="left">Agent-la-agent, <b>JSON-RPC 2.0</b> + SSE, 6 abilități</td></tr>
   <tr><td align="left" nowrap>🌐 <b>API REST</b></td><td align="left" nowrap><code>/v1/*</code></td><td align="left">Compatibil cu OpenAI — chat, reprezentări vectoriale, imagini, audio, OCR</td></tr>
   <tr><td align="left" nowrap>🔔 <b>Webhook-uri</b></td><td align="left" nowrap><code>/api/webhooks</code></td><td align="left">Trimite evenimente privind cererile / cotele către Slack, Discord, Telegram sau orice URL</td></tr>
   <tr><td align="left" nowrap>🛰️ <b>CLI la distanță</b></td><td align="left" nowrap><code>omniroute connect <host></code></td><td align="left">Controlează o instanță la distanță cu tokenuri de acces cu domeniu limitat</td></tr>
@@ -925,8 +923,6 @@ Expuneți 67router prin **MCP**, **A2A**, un **API REST**, **webhook-uri** sau u
 # Oferă-i lui Claude Code setul complet de instrumente 67router prin MCP:
 claude mcp add-server omniroute --type http --url http://localhost:20128/api/mcp/stream
 ```
-
-<sub>📖 [Server MCP](docs/frameworks/MCP-SERVER.md) · [Server A2A](docs/frameworks/A2A-SERVER.md) · [Protocoale pentru agenți](docs/frameworks/AGENT_PROTOCOLS_GUIDE.md)</sub>
 
 <br/>
 
@@ -1392,7 +1388,6 @@ Metrici canonice la 2026-10-18: **1.976 de videoclipuri unice** · **20.220.289 
   <tr><td nowrap><b><a href="open-sse/mcp-server/README.md">Server MCP</a></b></td><td>110 instrumente MCP, configurări IDE, clienți Python/TS/Go</td></tr>
   <tr><td nowrap><b><a href="docs/frameworks/MCP-SERVER.md">Ghid pentru serverul MCP</a></b></td><td>Instalarea MCP, transporturi și referința instrumentelor</td></tr>
   <tr><td nowrap><b><a href="src/lib/a2a/README.md">Server A2A</a></b></td><td>Protocol JSON-RPC 2.0, abilități, streaming, gestionarea sarcinilor</td></tr>
-  <tr><td nowrap><b><a href="docs/frameworks/A2A-SERVER.md">Ghid pentru serverul A2A</a></b></td><td>Fișa agentului A2A, sarcini, abilități și streaming</td></tr>
 </table>
 
 ### 📋 Proiect și calitate

@@ -45,8 +45,6 @@ Ciklus v3.7.x → v3.8.0 uveo je automatsko rutiranje bez konfiguracije (zero-co
 - 🤝 **GitLab Duo OAuth provider** — prijava sa GitLab vjerodostojnostima
 - 🧠 **Reasoning Replay Cache** — hibridna in-memory + SQLite persistencija tragova zaključivanja (reasoning traces)
 
-📚 **Povezana dokumentacija:** [Skills Framework](../frameworks/SKILLS.md) · [Memory System](../frameworks/MEMORY.md) · [Cloud Agents](../frameworks/CLOUD_AGENT.md) · [Webhooks](../frameworks/WEBHOOKS.md) · [Reasoning Replay Cache](../routing/REASONING_REPLAY.md)
-
 ---
 
 ## 🔌 Provajderi
@@ -106,12 +104,6 @@ Monitoring u stvarnom vremenu: uptime, memorija, verzija, percentili latencije (
 Četiri načina za otklanjanje grešaka u API prevodima: **Playground** (konvertor formata), **Chat Tester** (zahtjevi uživo), **Test Bench** (serijski testovi) i **Live Monitor** (strim u stvarnom vremenu).
 
 ![Translator Playground](../screenshots/05-translator.png)
-
----
-
-## 🎮 Model Playground _(v2.0.9+)_
-
-Testirajte bilo koji model direktno iz kontrolne table. Odaberite provider, model i endpoint, pišite promptove pomoću Monaco Editora, strimujte odgovore u stvarnom vremenu, prekinite strim usred procesa i pregledajte metrike vremena.
 
 ---
 

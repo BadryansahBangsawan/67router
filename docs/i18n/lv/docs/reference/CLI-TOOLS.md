@@ -748,7 +748,6 @@ omniroute cache                        # Kešatmiņas statuss
 omniroute cache clear                  # Semantiskās un parakstu kešatmiņas notīrīšana
 
 omniroute mcp status | restart         # MCP servera statuss / restartēšana
-omniroute a2a status | card            # A2A servera statuss / aģenta kartīte
 
 omniroute tunnel list | create | stop  # Tuneļu pārvaldība (cloudflare/tailscale/ngrok)
 omniroute env show | get <k> | set <k> <v>  # Vides mainīgo apskate / iestatīšana (īslaicīgi)

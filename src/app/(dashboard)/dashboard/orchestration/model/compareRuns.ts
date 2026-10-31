@@ -3,8 +3,7 @@
  * PR-A / Task A1). No React, no side effects.
  *
  * `normalizeRunSide` turns a `HistoryItem` plus its raw detail payload (the JSON body of
- * `GET /api/a2a/tasks/[id]` for `source === "a2a"`, or the in-memory `CloudAgentTask` for
- * `source === "cloud-agent"`) into a `RunSide` with a normalized `events` timeline and
+ * `GET /api/a2a/tasks/[id]`) into a `RunSide` with a normalized `events` timeline and
  * `memoryHits` list. `detail` is untrusted: for A2A it round-trips through
  * `reconstituteHistoricalTask` (`src/app/api/a2a/tasks/[id]/route.ts`) plus client-supplied
  * `metadata` with no Zod validation, so every field is read defensively — a malformed shape
@@ -84,24 +83,6 @@ function a2aEventsFrom(detail: Record<string, unknown>): RunEvent[] {
   return out;
 }
 
-/** `CloudAgentActivity[]` (`src/lib/cloudAgent/types.ts`) — each item has `type` and `content`. */
-function cloudAgentEventsFrom(detail: Record<string, unknown>): RunEvent[] {
-  const activities = detail.activities;
-  if (!Array.isArray(activities)) return [];
-  const out: RunEvent[] = [];
-  for (const raw of activities) {
-    if (!isRecord(raw)) continue;
-    const { content, timestamp } = raw;
-    if (!isNonEmptyString(content)) continue;
-    if (timestamp !== undefined && timestamp !== null && typeof timestamp !== "string") continue;
-    out.push({
-      label: content,
-      timestamp: typeof timestamp === "string" ? timestamp : null,
-    });
-  }
-  return out;
-}
-
 function memoryHitsFrom(detail: Record<string, unknown>): RunMemoryHit[] {
   const metadata = detail.metadata;
   if (!isRecord(metadata)) return [];
@@ -132,8 +113,8 @@ export function normalizeRunSide(item: HistoryItem, detail: unknown): RunSide {
   if (!isRecord(detail)) {
     return { item, events: [], memoryHits: [] };
   }
-  const events = item.source === "a2a" ? a2aEventsFrom(detail) : cloudAgentEventsFrom(detail);
-  const memoryHits = item.source === "a2a" ? memoryHitsFrom(detail) : [];
+  const events = a2aEventsFrom(detail);
+  const memoryHits = memoryHitsFrom(detail);
   return { item, events, memoryHits };
 }
 

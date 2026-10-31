@@ -43,8 +43,6 @@ Razvojni cikel v3.7.x → v3.8.0 je prinesel samodejno usmerjanje brez konfigura
 - 🤝 **Ponudnik GitLab Duo OAuth** — prijava s poverilnicami GitLab
 - 🧠 **Predpomnilnik Reasoning Replay** — hibridna hramba sledi sklepanja v pomnilniku in zbirki SQLite
 
-📚 **Povezana dokumentacija:** [Ogrodje veščin](../frameworks/SKILLS.md) · [Pomnilniški sistem](../frameworks/MEMORY.md) · [Agenti v oblaku](../frameworks/CLOUD_AGENT.md) · [Spletni kavlji](../frameworks/WEBHOOKS.md) · [Predpomnilnik Reasoning Replay](../routing/REASONING_REPLAY.md)
-
 ---
 
 ## 🔌 Ponudniki
@@ -104,12 +102,6 @@ Spremljanje v realnem času: čas delovanja, pomnilnik, različica, percentili z
 Štirje načini za odpravljanje napak pri prevodih API-ja: **Preizkusno okolje** (pretvornik oblik), **Preizkuševalnik klepeta** (zahteve v živo), **Testno okolje** (paketni preizkusi) in **Nadzor v živo** (tok v realnem času).
 
 ![Preizkusno okolje prevajalnika](../screenshots/05-translator.png)
-
----
-
-## 🎮 Preizkusno okolje modelov _(v2.0.9+)_
-
-Preizkusite kateri koli model neposredno na nadzorni plošči. Izberite ponudnika, model in končno točko, napišite pozive z urejevalnikom Monaco Editor, pretakajte odgovore v realnem času, prekinite jih med pretakanjem in si oglejte časovne metrike.
 
 ---
 

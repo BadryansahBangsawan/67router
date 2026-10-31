@@ -43,8 +43,6 @@ Syklusen v3.7.x → v3.8.0 introduserte automatisk ruting uten konfigurasjon, ny
 - 🤝 **GitLab Duo OAuth-leverandør** — logg inn med GitLab-legitimasjon
 - 🧠 **Reasoning Replay Cache** — hybrid lagring av resonneringsspor i minnet og SQLite
 
-📚 **Relatert dokumentasjon:** [Rammeverk for ferdigheter](../frameworks/SKILLS.md) · [Minnesystem](../frameworks/MEMORY.md) · [Skyagenter](../frameworks/CLOUD_AGENT.md) · [Webhooks](../frameworks/WEBHOOKS.md) · [Reasoning Replay Cache](../routing/REASONING_REPLAY.md)
-
 ---
 
 ## 🔌 Leverandører
@@ -104,12 +102,6 @@ Sanntidsovervåking: oppetid, minne, versjon, latenspersentiler (p50/p95/p99), h
 Fire moduser for feilsøking av API-oversettelser: **Sandkasse** (formatkonvertering), **Chat-tester** (direkteforespørsler), **Testbenk** (gruppetester) og **Direkteovervåking** (sanntidsstrøm).
 
 ![Oversetter-sandkasse](../screenshots/05-translator.png)
-
----
-
-## 🎮 Modell-sandkasse _(v2.0.9+)_
-
-Test en hvilken som helst modell direkte fra kontrollpanelet. Velg leverandør, modell og endepunkt, skriv ledetekster med Monaco Editor, strøm svar i sanntid, avbryt underveis og se tidsmålinger.
 
 ---
 

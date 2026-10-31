@@ -246,17 +246,6 @@ curl -X DELETE http://localhost:20128/api/settings/notion
 به عملیات مسیریابی زمان اجرا/کش/فشردهسازی/حافظه/مهارتها/پراکسی/منبع زمینه محدود شده است. دو
 چارچوب مجاور نیز همراه با سرور MCP در v3.8.0 ارائه میشوند و مستندات جداگانهای دارند:
 
-### عاملهای ابری
-
-عاملهای ابری، عاملهای کدنویسی هوش مصنوعی خارج از فرایند (codex-cloud، cursor-cloud، devin، jules) هستند که از طریق
-همان مدل اتصال مورد استفاده برای ارائهدهندگان LLM به 67router متصل شدهاند. این عاملها از طریق
-سطح REST اختصاصی خود (`/api/v1/agents/*`) ارائه میشوند و بخشی از کاتالوگ ابزار MCP
-**نیستند** — فراخوانی یک عامل ابری هیچ دامنه MCPای را مصرف نمیکند.
-
-- پیادهسازی: `src/lib/cloudAgent/` (`registry.ts`، `agents/codex.ts`، `agents/cursor.ts`، `agents/devin.ts`، `agents/jules.ts`).
-- چرخه حیات: `createTask`، `getStatus`، `approvePlan`، `sendMessage`، `listSources`.
-- مستندات: [docs/frameworks/CLOUD_AGENT.md](./CLOUD_AGENT.md).
-
 ### گاردریلها
 
 گاردریلها فیلترهای پیش/پس از اجرا (vision-bridge، pii-masker، prompt-injection) هستند که

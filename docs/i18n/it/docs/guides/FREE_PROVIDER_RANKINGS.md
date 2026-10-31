@@ -13,7 +13,7 @@
 
 ## Che cos'è
 
-67router registra 375 provider, di cui 155 voci di catalogo contrassegnate come **free/no-auth**
+67router registra 372 provider, di cui 155 voci di catalogo contrassegnate come **free/no-auth**
 (no-auth,
 OAuth con livello gratuito, o chiave API con livello gratuito — vedi la
 [Guida ai livelli gratuiti](../getting-started/FREE-TIERS-GUIDE.md) e la directory completa

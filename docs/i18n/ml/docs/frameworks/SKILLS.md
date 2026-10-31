@@ -258,12 +258,6 @@ curl -X POST http://localhost:20128/api/skills/install \
 
 ---
 
-## A2A സംയോജനം
-
-`src/lib/skills/a2a.ts`, `memory_aware_routing` A2A സ്കിൽ ഡിസ്ക്രിപ്റ്ററും `registerA2ASkill(registry)` ഹെൽപ്പറും എക്സ്പോർട്ട് ചെയ്യുന്നു. ഇഷ്ടാനുസൃത A2A സ്കില്ലുകൾ `src/lib/a2a/skills/`-ൽ സ്ഥിതിചെയ്യുന്നു, അവ `A2A_SKILL_HANDLERS` (`src/lib/a2a/taskExecution.ts`) വഴി ഡിസ്പാച്ച് ചെയ്യപ്പെടുന്നു. സമ്പൂർണ്ണ ടാസ്ക് ലൈഫ്സൈക്കിളിനായി [A2A-SERVER.md](./A2A-SERVER.md) കാണുക.
-
----
-
 ## പുതിയൊരു ബിൽറ്റ്-ഇൻ സ്കിൽ ചേർക്കൽ
 
 1. **ഹാൻഡ്ലർ നിർവചിക്കുക** `src/lib/skills/builtins.ts`-ൽ (അല്ലെങ്കിൽ `src/lib/skills/builtin/`-ന് കീഴിലുള്ള മറ്റൊരു ഫയലിൽ). സിഗ്നേച്ചർ: `(input, { apiKeyId, sessionId }) => Promise<output>`.
@@ -478,7 +472,6 @@ const config: SkillConfig = {
 ## ഇതും കാണുക
 
 - [MCP-SERVER.md](./MCP-SERVER.md) — MCP ടൂൾ രജിസ്ട്രേഷനും ട്രാൻസ്പോർട്ടുകളും
-- [A2A-SERVER.md](./A2A-SERVER.md) — A2A ടാസ്ക് ലൈഫ്സൈക്കിളും സ്കിൽ ഡിസ്പാച്ചും
 - [USER_GUIDE.md](../guides/USER_GUIDE.md#-skills-system) — ഉപയോക്താക്കൾക്കായുള്ള ആമുഖം
 - [ARCHITECTURE.md](../architecture/ARCHITECTURE.md) — റിക്വസ്റ്റ് പൈപ്പ്ലൈനും ഘടക മാപ്പും
 - സോഴ്സ്: `src/lib/skills/`, `src/app/api/skills/`, `open-sse/mcp-server/tools/skillTools.ts`

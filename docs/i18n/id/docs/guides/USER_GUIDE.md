@@ -24,7 +24,6 @@ Panduan lengkap untuk mengonfigurasi penyedia, membuat combo, mengintegrasikan a
 - [Sistem Skill](#-skills-system)
 - [Sistem Memori](#-memory-system)
 - [Webhook](#-webhooks)
-- [Agen Cloud](#-cloud-agents)
 - [Pengelolaan Terprogram](#-programmatic-management)
 - [CLI Internal](#-internal-cli)
 - [Aplikasi Desktop (Electron)](#-desktop-application-electron)
@@ -1240,8 +1239,6 @@ Gunakan URL SSE `http://localhost:20128/api/mcp/sse` dan kunci API Bearer yang d
 
 ### Cakupan
 
-MCP saat ini mendefinisikan 32 cakupan bernama. Setiap kunci Bearer dapat dibatasi untuk cakupan tertentu — lihat [MCP-SERVER.md](../frameworks/MCP-SERVER.md) untuk daftar cakupan dan alat yang menjadi acuan resmi, serta [A2A-SERVER.md](../frameworks/A2A-SERVER.md) untuk skema JSON-RPC.
-
 ---
 
 ## 🧠 Sistem Skill
@@ -1250,7 +1247,6 @@ MCP saat ini mendefinisikan 32 cakupan bernama. Setiap kunci Bearer dapat dibata
 
 - **UI Marketplace** — Jelajahi dan instal skill dari **Dasbor → Skill**
 - **Cakupan per kunci** — Batasi skill yang dapat dipanggil oleh setiap API key
-- **Skill kustom** — Letakkan file TypeScript di `src/lib/a2a/skills/`, daftarkan, dan skill tersebut dapat segera dipanggil melalui A2A
 
 Referensi lengkap: [SKILLS.md](../frameworks/SKILLS.md).
 
@@ -1279,18 +1275,6 @@ Berlangganan event 67router untuk pemantauan dan otomatisasi secara real-time.
 - Percobaan ulang: 3 kali dengan backoff eksponensial, lalu dimasukkan ke antrean dead-letter
 
 Skema lengkap tersedia di [WEBHOOKS.md](../frameworks/WEBHOOKS.md).
-
----
-
-## ☁️ Agen Cloud
-
-67router terintegrasi dengan agen pemrograman cloud (**OpenAI Codex Cloud**, **Devin**, **Jules**, **Antigravity**) sehingga Anda dapat mengirim tugas berdurasi panjang dari dasbor yang sama untuk menangani perutean lokal Anda.
-
-- Buat tugas di **Dasbor → Agen Cloud** atau melalui `POST /api/v1/agents/tasks`
-- Lacak status, log, dan artefak untuk setiap tugas
-- Gunakan API key Anda sendiri untuk setiap penyedia — kredensial tidak pernah meninggalkan instans 67router
-
-Referensi lengkap: [CLOUD_AGENT.md](../frameworks/CLOUD_AGENT.md).
 
 ---
 
@@ -1347,7 +1331,6 @@ omniroute restore [<timestamp>]    # Pulihkan dari snapshot
 omniroute health                   # Informasi kesehatan mendetail (pemutus, cache, memori)
 omniroute quota                    # Penggunaan kuota penyedia
 omniroute mcp status               # Status server MCP
-omniroute a2a status               # Status server A2A
 omniroute tunnel list|create|stop  # Tunnel Cloudflare/Tailscale/ngrok
 omniroute reset-password           # Atur ulang kata sandi admin
 omniroute --mcp                    # Mulai server MCP melalui stdio

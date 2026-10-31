@@ -51,13 +51,13 @@ Manifest imesanidiwa kwa `display: "fullscreen"`, kumaanisha kuwa programu iliyo
 
 67router inajumuisha service worker (`sw.js`) inayowezesha uhifadhi mahiri kwenye akiba:
 
-| Aina ya Rasilimali                                          | Mkakati                                    | Tabia                                                                                                                             |
-| ----------------------------------------------------------- | ------------------------------------------ | --------------------------------------------------------------------------------------------------------------------------------- |
-| **Gamba la Programu**                                       | Akiba kwanza                               | `/`, `/offline`, manifest na ikoni huhifadhiwa mapema kwenye akiba wakati wa usakinishaji                                         |
-| **Rasilimali tuli** (CSS, JS, picha, fonti)                 | Mtandao kwanza, akiba kama mbadala         | Hupata nakala mpya kutoka kwenye mtandao; hutumia akiba ikiwa hakuna muunganisho                                                  |
-| **Vifurushi vya Next.js** (`/_next/`)                       | Mtandao kwanza pamoja na kusasisha akiba   | Hupata kutoka kwenye mtandao na kusasisha akiba; hutoa toleo lililohifadhiwa ikiwa hakuna muunganisho                             |
-| **Maombi ya uelekezaji**                                    | Hupitwa (hayazuiliwi kamwe)                | Kivinjari hudhibiti urejeaji mbadala wa HTTP/3→HTTP/2; soketi ya QUIC isiyofanya kazi haipaswi kubadilika kuwa `Response.error()` |
-| **API / njia za dashibodi** (`/api/`, `/a2a`, `/dashboard`) | Hupitwa (hazihifadhiwi kamwe kwenye akiba) | Daima huenda moja kwa moja kwenye seva — hazizuiliwi kamwe na service worker                                                      |
+| Aina ya Rasilimali                                  | Mkakati                                    | Tabia                                                                                                                             |
+| --------------------------------------------------- | ------------------------------------------ | --------------------------------------------------------------------------------------------------------------------------------- |
+| **Gamba la Programu**                               | Akiba kwanza                               | `/`, `/offline`, manifest na ikoni huhifadhiwa mapema kwenye akiba wakati wa usakinishaji                                         |
+| **Rasilimali tuli** (CSS, JS, picha, fonti)         | Mtandao kwanza, akiba kama mbadala         | Hupata nakala mpya kutoka kwenye mtandao; hutumia akiba ikiwa hakuna muunganisho                                                  |
+| **Vifurushi vya Next.js** (`/_next/`)               | Mtandao kwanza pamoja na kusasisha akiba   | Hupata kutoka kwenye mtandao na kusasisha akiba; hutoa toleo lililohifadhiwa ikiwa hakuna muunganisho                             |
+| **Maombi ya uelekezaji**                            | Hupitwa (hayazuiliwi kamwe)                | Kivinjari hudhibiti urejeaji mbadala wa HTTP/3→HTTP/2; soketi ya QUIC isiyofanya kazi haipaswi kubadilika kuwa `Response.error()` |
+| **API / njia za dashibodi** (`/api/`, `/dashboard`) | Hupitwa (hazihifadhiwi kamwe kwenye akiba) | Daima huenda moja kwa moja kwenye seva — hazizuiliwi kamwe na service worker                                                      |
 
 ### Ukurasa wa Hali Isiyo na Muunganisho
 

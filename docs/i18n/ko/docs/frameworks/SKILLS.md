@@ -258,12 +258,6 @@ curl -X POST http://localhost:20128/api/skills/install \
 
 ---
 
-## A2A 통합
-
-`src/lib/skills/a2a.ts`는 `memory_aware_routing` A2A 스킬 설명자와 `registerA2ASkill(registry)` 헬퍼를 내보냅니다. 사용자 정의 A2A 스킬은 `src/lib/a2a/skills/`에 위치하며 `A2A_SKILL_HANDLERS`(`src/lib/a2a/taskExecution.ts`)를 통해 디스패치됩니다. 전체 작업 수명 주기는 [A2A-SERVER.md](./A2A-SERVER.md)를 참조하세요.
-
----
-
 ## 새로운 기본 제공 스킬 추가
 
 1. `src/lib/skills/builtins.ts`(또는 `src/lib/skills/builtin/` 아래의 인접 파일)에 **핸들러를 정의합니다**. 시그니처: `(input, { apiKeyId, sessionId }) => Promise<output>`.
@@ -471,7 +465,6 @@ const config: SkillConfig = {
 ## 참고 자료
 
 - [MCP-SERVER.md](./MCP-SERVER.md) — MCP 도구 등록 및 전송 방식
-- [A2A-SERVER.md](./A2A-SERVER.md) — A2A 작업 수명 주기 및 스킬 디스패치
 - [USER_GUIDE.md](../guides/USER_GUIDE.md#-skills-system) — 사용자용 소개
 - [ARCHITECTURE.md](../architecture/ARCHITECTURE.md) — 요청 파이프라인 및 컴포넌트 맵
 - 소스: `src/lib/skills/`, `src/app/api/skills/`, `open-sse/mcp-server/tools/skillTools.ts`

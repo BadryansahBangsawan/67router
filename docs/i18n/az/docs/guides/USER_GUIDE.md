@@ -24,7 +24,6 @@ Provayderlərin konfiqurasiyası, kombinasiyaların yaradılması, CLI alətlər
 - [Bacarıqlar sistemi](#-skills-system)
 - [Yaddaş sistemi](#-memory-system)
 - [Vebhuklar](#-webhooks)
-- [Bulud agentləri](#-cloud-agents)
 - [Proqram vasitəsilə idarəetmə](#-programmatic-management)
 - [Daxili CLI](#-internal-cli)
 - [Masaüstü tətbiqi (Electron)](#-desktop-application-electron)
@@ -1235,8 +1234,6 @@ Avtomatik marşrutlaşdırıcı [AUTO-COMBO.md](../routing/AUTO-COMBO.md) sənə
 
 ### Əhatə dairələri
 
-MCP hazırda 32 adlandırılmış əhatə dairəsi müəyyən edir. Hər bir Bearer açarı konkret əhatə dairələri ilə məhdudlaşdırıla bilər — səlahiyyətli əhatə dairəsi və alətlər siyahısı üçün [MCP-SERVER.md](../frameworks/MCP-SERVER.md), JSON-RPC sxemi üçün isə [A2A-SERVER.md](../frameworks/A2A-SERVER.md) sənədinə baxın.
-
 ---
 
 ## 🧠 Bacarıqlar Sistemi
@@ -1245,7 +1242,6 @@ MCP hazırda 32 adlandırılmış əhatə dairəsi müəyyən edir. Hər bir Bea
 
 - **Marketplace interfeysi** — **İdarəetmə paneli → Bacarıqlar** bölməsindən bacarıqlara baxın və onları quraşdırın
 - **Hər açar üzrə əhatə dairələri** — Hansı API açarlarının hansı bacarıqları çağıra biləcəyini məhdudlaşdırın
-- **Fərdi bacarıqlar** — TypeScript faylını `src/lib/a2a/skills/` qovluğuna yerləşdirib qeydiyyatdan keçirin və o, dərhal A2A üzərindən çağırıla bilsin
 
 Tam istinad sənədi: [SKILLS.md](../frameworks/SKILLS.md).
 
@@ -1274,18 +1270,6 @@ Real vaxt rejimində monitorinq və avtomatlaşdırma üçün 67router hadisəl�
 - Təkrar cəhdlər: eksponensial gecikmə ilə 3 cəhd, sonra ölü məktublar növbəsi
 
 Tam sxem [WEBHOOKS.md](../frameworks/WEBHOOKS.md) sənədindədir.
-
----
-
-## ☁️ Bulud Agentləri
-
-67router bulud kodlaşdırma agentləri (**OpenAI Codex Cloud**, **Devin**, **Jules**, **Antigravity**) ilə inteqrasiya olunur, beləliklə, lokal marşrutlaşdırmanızı idarə edən eyni paneldən uzunmüddətli tapşırıqlar göndərə bilərsiniz.
-
-- Tapşırıqları **İdarəetmə paneli → Bulud Agentləri** bölməsində və ya `POST /api/v1/agents/tasks` vasitəsilə yaradın
-- Hər tapşırıq üzrə statusu, jurnalları və artefaktları izləyin
-- Hər provayder üçün öz API açarınızı istifadə edin — giriş məlumatları heç vaxt 67router instansiyasını tərk etmir
-
-Tam istinad sənədi: [CLOUD_AGENT.md](../frameworks/CLOUD_AGENT.md).
 
 ---
 
@@ -1342,7 +1326,6 @@ omniroute restore [<timestamp>]    # Anlıq surətdən bərpa et
 omniroute health                   # Ətraflı sağlamlıq məlumatı (qoruyucular, keş, yaddaş)
 omniroute quota                    # Provayder kvotasının istifadəsi
 omniroute mcp status               # MCP serverinin statusu
-omniroute a2a status               # A2A serverinin statusu
 omniroute tunnel list|create|stop  # Cloudflare/Tailscale/ngrok tunelləri
 omniroute reset-password           # Administrator parolunu sıfırla
 omniroute --mcp                    # MCP serverini stdio üzərindən işə sal

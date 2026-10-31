@@ -1438,9 +1438,8 @@ Răspunsul GET include `agents[]` (id, name, binary, version, installed, protoco
 
 ### Evaluări
 
-| Endpoint     | Metodă   | Descriere                                      |
-| ------------ | -------- | ---------------------------------------------- |
-| `/api/evals` | GET/POST | Listează suitele de evaluare/rulează evaluarea |
+| Endpoint | Metodă | Descriere |
+| -------- | ------ | --------- |
 
 ### Politici
 
@@ -1763,31 +1762,6 @@ Utilizate de subsistemul de administrare automată a cheilor pentru a emite și 
 
 ---
 
-## Protocolul agenților
-
-Sarcini pentru agenți cloud (Claude Code, Codex Cloud, OpenHands etc.) executate de la distanță în numele utilizatorilor 67router.
-
-| Metodă | Cale                          | Descriere                                                                                                                                              |
-| ------ | ----------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------ |
-| GET    | `/api/v1/agents/tasks`        | Listează sarcinile — parametri opționali `?provider=`, `?status=`, `?limit=` (1–500, implicit 50)                                                      |
-| POST   | `/api/v1/agents/tasks`        | Creează o sarcină — corp validat de `CreateCloudAgentTaskSchema` (`providerId`, `prompt`, `source`, `options?`). Returnează `201` cu anvelopa sarcinii |
-| DELETE | `/api/v1/agents/tasks?id=...` | Șterge o sarcină                                                                                                                                       |
-| GET    | `/api/v1/agents/tasks/[id]`   | Citește sarcina — actualizează sincron starea de la agentul cloud din amonte când este setat un `external_id`                                          |
-| POST   | `/api/v1/agents/tasks/[id]`   | Acțiune discriminatorie: `{action: "approve"}`, `{action: "message", message}` sau `{action: "cancel"}`                                                |
-| DELETE | `/api/v1/agents/tasks/[id]`   | Șterge o anumită sarcină după id                                                                                                                       |
-
-> **Autentificare:** autentificarea de administrare este obligatorie pentru fiecare metodă (`requireCloudAgentManagementAuth`). Înainte de v3.8.0, acestea nu necesitau autentificare — consultați commitul `588a0333` pentru modificarea incompatibilă.
-
-```bash
-# Creează o sarcină cloud Claude Code
-curl -X POST http://localhost:20128/api/v1/agents/tasks \
-  -H "Authorization: Bearer your-management-key" \
-  -H "Content-Type: application/json" \
-  -d '{"providerId":"claude-code-cloud","prompt":"Fix the failing test","source":{"repo":"...","branch":"..."}}'
-```
-
----
-
 ## Proxy-uri de administrare
 
 Proxy-uri HTTP(S)/SOCKS pentru trafic de ieșire, care pot fi atribuite furnizorilor, conturilor sau la nivel global.
@@ -1907,48 +1881,10 @@ Spațiu persistent de stocare a memoriei conversaționale/factuale, izolat pentr
 
 67router expune un endpoint A2A (Agent-to-Agent) JSON-RPC 2.0, precum și un wrapper REST pentru inspectare/utilizare în panoul de control.
 
-### JSON-RPC
-
-```bash
-POST /a2a
-Authorization: Bearer your-api-key   # opțional, cu excepția cazului în care OMNIROUTE_API_KEY este setată
-Content-Type: application/json
-
-{
-  "jsonrpc": "2.0",
-  "id": 1,
-  "method": "message/send",
-  "params": {
-    "skill": "smart-routing",
-    "messages": [{"role": "user", "content": "Route this coding task"}]
-  }
-}
-```
-
-Metode acceptate (toate condiționate de `settings.a2aEnabled`):
-
-| Metodă           | Descriere                                                                  |
-| ---------------- | -------------------------------------------------------------------------- |
-| `message/send`   | Executarea sincronă a abilității; returnează `{task, artifacts, metadata}` |
-| `message/stream` | Executarea prin flux SSE a aceluiași set de abilități                      |
-| `tasks/get`      | Preia o sarcină după `taskId`                                              |
-| `tasks/cancel`   | Anulează o sarcină după `taskId`                                           |
-
-Abilități încorporate: `smart-routing`, `quota-management`, `provider-discovery`, `cost-analysis`, `health-report`.
-
-### Fișa agentului
-
-```bash
-GET /.well-known/agent.json
-```
-
-Returnează fișa publică a agentului A2A (nume, descriere, capabilități, catalog de abilități, schemă de autentificare) — stocată în cache public timp de 1 h. Nu este necesară autentificarea.
-
 ### Utilitare REST
 
 | Metodă | Cale                         | Descriere                                                                                                               |
 | ------ | ---------------------------- | ----------------------------------------------------------------------------------------------------------------------- |
-| GET    | `/api/a2a/status`            | Starea de activare A2A + statistici despre sarcini + rezumatul fișei agentului din cache                                |
 | GET    | `/api/a2a/tasks`             | Listează sarcinile — `?state=submitted\|working\|completed\|failed\|cancelled`, `?skill=`, `?limit=` (≤200), `?offset=` |
 | POST   | `/api/a2a/tasks`             | (Neimplementat ca utilitar REST — creați prin JSON-RPC `message/send`)                                                  |
 | GET    | `/api/a2a/tasks/[id]`        | Preia o sarcină                                                                                                         |
@@ -1968,12 +1904,8 @@ Returnează fișa publică a agentului A2A (nume, descriere, capabilități, cat
 | GET | `/api/cloud/models/alias` | Listează aliasurile modelelor așa cum sunt expuse sincronizării în cloud |
 | GET | `/api/assess` | Citește cele mai recente clasificări ale evaluărilor (pentru fiecare furnizor/model) |
 | POST | `/api/assess` | Rulează o analiză — corp: `{scope: {type:"all"}                                                   | {type:"provider", providerId} | {type:"model", modelId}, trigger?}` |
-| GET | `/api/evals` | Listează suitele de evaluare încorporate + cele mai recente rulări |
-| POST | `/api/evals` | Declanșează o rulare de evaluare |
-| POST | `/api/evals/suites` | Creează o suită de evaluare personalizată — corp validat de `evalSuiteSaveSchema` |
-| GET | `/api/evals/suites/[id]` | Preia o suită de evaluare personalizată |
 
-**Autentificare:** `/api/cloud/auth` validează direct o cheie Bearer și returnează cheia mascată și `projectId` pentru fiecare conexiune numai în cazul unei chei cu domeniul de aplicare `manage` / `admin`; celelalte rute `/api/cloud/*`, `/api/evals/*` și `/api/assess` necesită o sesiune/cheie API de administrare. Solicitările POST către `/api/assess` utilizează `validateBody` cu o schemă de domeniu de aplicare de tip uniune discriminată.
+**Autentificare:** `/api/cloud/auth` validează direct o cheie Bearer și returnează cheia mascată și `projectId` pentru fiecare conexiune numai în cazul unei chei cu domeniul de aplicare `manage` / `admin`; celelalte rute `/api/cloud/*` și `/api/assess` necesită o sesiune/cheie API de administrare. Solicitările POST către `/api/assess` utilizează `validateBody` cu o schemă de domeniu de aplicare de tip uniune discriminată.
 
 ---
 
@@ -2297,5 +2229,3 @@ familii de credențiale (sesiune de panou de control, token CLI local, token de 
 - `requireLogin` poate fi activat sau dezactivat prin `/api/settings/require-login`
 - Rutele `/v1/*` necesită opțional o cheie API Bearer când `REQUIRE_API_KEY=true`
 - În această documentație de referință, „token de administrare” / „cheie API cu domeniu de administrare” înseamnă una dintre familiile descrise în ghidul respectiv — nu un tip suplimentar de secret nedefinit
-
-> **Modificare incompatibilă (v3.8.0)** — `/api/v1/agents/tasks/*` și endpointurile de administrare a perioadei de așteptare necesită acum **autentificare pentru administrare** (cookie-ul `auth_token` al panoului de control sau o cheie API cu domeniu de administrare). Clienții care apelau anterior aceste rute fără autentificare vor primi `401 Unauthorized`. Consultați commitul `588a0333` (`fix(auth): require management auth for agent and cooldown APIs`).

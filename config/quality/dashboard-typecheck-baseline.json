@@ -83,12 +83,6 @@
   "src/app/(dashboard)/dashboard/omni-skills/components/SkillInspectorPane.tsx": {
     "TS2503": 2
   },
-  "src/app/(dashboard)/dashboard/playground/components/PresetPicker.tsx": {
-    "TS2352": 2
-  },
-  "src/app/(dashboard)/dashboard/playground/components/ToolsBuilder.tsx": {
-    "TS2339": 2
-  },
   "src/app/(dashboard)/dashboard/providers/[id]/ProviderDetailPageClient.tsx": {
     "TS2322": 5
   },

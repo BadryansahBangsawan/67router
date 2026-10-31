@@ -128,13 +128,11 @@ v3.8.0 پلیٹ فارم کے لیے مستند، ورژن کنٹرول شدہ M
 - `/dashboard/limits` — کوٹا/شرح کے کنٹرولز
 - `/dashboard/cli-tools` — CLI آن بورڈنگ، رن ٹائم کی شناخت، کنفیگریشن کی تخلیق
 - `/dashboard/agents` — شناخت شدہ ACP ایجنٹس + حسبِ ضرورت ایجنٹ رجسٹریشن
-- `/dashboard/cloud-agents` — کلاؤڈ پر ہوسٹ کردہ ایجنٹ ٹاسکس (Codex Cloud، Devin، Jules) اور ٹاسک لائف سائیکل
 - `/dashboard/skills` — A2A اسکل رجسٹری، سینڈ باکس عمل درآمد، بلٹ اِن اسکل کیٹلاگ
 - `/dashboard/memory` — مستقل مکالماتی میموری کا معائنہ اور بازیافت
 - `/dashboard/webhooks` — آؤٹ باؤنڈ ویب ہُک سبسکرپشنز، سیکرٹ روٹیشن، دوبارہ کوشش کے اعداد و شمار
 - `/dashboard/batch` — بیچ جاب جمع کروانا اور پیش رفت
 - `/dashboard/cache` — ریڈ تھرو اور ریزننگ کیش کے اعداد و شمار، اخراج کے کنٹرولز
-- `/dashboard/playground` — کسی بھی کنفیگر کردہ کومبو/ماڈل کے ساتھ انٹرایکٹو چیٹ پلے گراؤنڈ
 - `/dashboard/changelog` — ایپ کے اندر چینج لاگ ویور (`CHANGELOG.md` کو رینڈر کرتا ہے)
 - `/dashboard/system` — رن ٹائم تشخیص، ورژن کی معلومات، ماحول کی توثیق کی سطح
 - `/dashboard/onboarding` — نئی تنصیبات کے لیے پہلی بار سیٹ اپ وزرڈ
@@ -252,7 +250,6 @@ flowchart LR
 - بجٹ: `src/app/api/usage/budget` (GET/POST)
 - فال بیک چینز: `src/app/api/fallback/chains` (GET/POST/DELETE)
 - تعمیلی آڈٹ: `src/app/api/compliance/audit-log` (GET، پیجینیشن + منظم میٹا ڈیٹا کے ساتھ)
-- ایویلز: `src/app/api/evals` (GET/POST)، `src/app/api/evals/[suiteId]` (GET)
 - پالیسیاں: `src/app/api/policies` (GET/POST)
 - سنک ٹوکنز: `src/app/api/sync/tokens` (GET/POST)، `src/app/api/sync/tokens/[id]` (GET/DELETE)
 - کنفیگریشن بنڈل: `src/app/api/sync/bundle` (GET، ترتیبات/پرووائیڈرز/کومبوز/کیز کا ETag-ورژن شدہ اسنیپ شاٹ)
@@ -316,7 +313,6 @@ flowchart LR
 - فیچ ٹائم آؤٹ: `src/shared/utils/fetchTimeout.ts`
 - درخواست ٹیلی میٹری: `src/shared/utils/requestTelemetry.ts`
 - تعمیل/آڈٹ: `src/lib/compliance/index.ts`
-- ایویل رنر: `src/lib/evals/evalRunner.ts`
 - ڈومین اسٹیٹ پرسسٹنس: `src/lib/db/domainState.ts` — فال بیک چینز، بجٹس، لاگت کی تاریخ، لاک آؤٹ اسٹیٹ، اور سرکٹ بریکرز کے لیے SQLite CRUD
 
 OAuth پرووائیڈر ماڈیولز (`src/lib/oauth/providers/` کے تحت 27 انفرادی فائلیں):
@@ -385,23 +381,6 @@ OAuth پرووائیڈر ماڈیولز (`src/lib/oauth/providers/` کے تحت 
 
 الگورتھم کی مکمل تفصیل (عوامل کے فارمولے، وزن کی ٹیوننگ) کے لیے،
 [`docs/routing/AUTO-COMBO.md`](../routing/AUTO-COMBO.md) دیکھیں۔
-
-### B. کلاؤڈ ایجنٹس
-
-کلاؤڈ ایجنٹس فریقِ ثالث کے ہوسٹ کردہ کوڈ ایجنٹ پلیٹ فارمز (Codex Cloud، Devin،
-Jules) کو یکساں، DB سے تقویت یافتہ ٹاسک لائف سائیکل کے پیچھے یکجا کرتا ہے۔ ٹاسک بنانے/معائنہ کرنے کے
-تمام اینڈ پوائنٹس کے لیے مینجمنٹ توثیق درکار ہے۔
-
-- ماڈیول روٹ: `src/lib/cloudAgent/` (`baseAgent.ts`, `registry.ts`, `api.ts`,
-  `types.ts`, `db.ts`، نیز `agents/` کے تحت ہر ایجنٹ کی ذیلی ڈائریکٹریاں)
-- ہر ایجنٹ کے نفاذ: `agents/codex/`, `agents/devin/`, `agents/jules/`
-- عوامی اینڈ پوائنٹس: `/api/v1/agents/tasks/*` (فہرست/تخلیق/حصول/منسوخی)
-- مینجمنٹ اینڈ پوائنٹس: `/api/cloud/*` (فراہمی، حیثیت، بیچ)
-- ڈیش بورڈ: `/dashboard/cloud-agents`
-- اسٹوریج: `cloud_agent_tasks` ٹیبل
-
-ہر ایجنٹ کی فراہمی اور OAuth کی مخصوص تفصیلات کے لیے،
-[`docs/frameworks/CLOUD_AGENT.md`](../frameworks/CLOUD_AGENT.md) دیکھیں۔
 
 ### C. حفاظتی پابندیاں
 

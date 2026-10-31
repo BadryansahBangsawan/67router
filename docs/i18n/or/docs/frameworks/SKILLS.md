@@ -258,12 +258,6 @@ curl -X POST http://localhost:20128/api/skills/install \
 
 ---
 
-## A2A ଏକୀକରଣ
-
-`src/lib/skills/a2a.ts`, `memory_aware_routing` A2A ସ୍କିଲ୍ ଡେସ୍କ୍ରିପ୍ଟର୍ ଏବଂ ଏକ `registerA2ASkill(registry)` ସହାୟକକୁ ଏକ୍ସପୋର୍ଟ କରେ। କଷ୍ଟମ୍ A2A ସ୍କିଲ୍ଗୁଡ଼ିକ `src/lib/a2a/skills/`ରେ ରହେ ଏବଂ `A2A_SKILL_HANDLERS` (`src/lib/a2a/taskExecution.ts`) ମାଧ୍ୟମରେ ଡିସ୍ପ୍ୟାଚ୍ କରାଯାଏ। ସମ୍ପୂର୍ଣ୍ଣ ଟାସ୍କ ଲାଇଫ୍ସାଇକଲ୍ ପାଇଁ [A2A-SERVER.md](./A2A-SERVER.md) ଦେଖନ୍ତୁ।
-
----
-
 ## ଏକ ନୂତନ ବିଲ୍ଟ-ଇନ୍ ସ୍କିଲ୍ ଯୋଡ଼ିବା
 
 1. `src/lib/skills/builtins.ts`ରେ (କିମ୍ବା `src/lib/skills/builtin/` ଅଧୀନରେ ଥିବା ଏକ ସହୋଦର ଫାଇଲ୍ରେ) **ହ୍ୟାଣ୍ଡଲର୍କୁ ପରିଭାଷିତ କରନ୍ତୁ**। ସିଗ୍ନେଚର୍: `(input, { apiKeyId, sessionId }) => Promise<output>`।
@@ -478,7 +472,6 @@ const config: SkillConfig = {
 ## ଏହା ମଧ୍ୟ ଦେଖନ୍ତୁ
 
 - [MCP-SERVER.md](./MCP-SERVER.md) — MCP ଟୁଲ୍ ପଞ୍ଜୀକରଣ ଏବଂ ଟ୍ରାନ୍ସପୋର୍ଟଗୁଡ଼ିକ
-- [A2A-SERVER.md](./A2A-SERVER.md) — A2A ଟାସ୍କ ଜୀବନଚକ୍ର ଏବଂ ସ୍କିଲ୍ ଡିସ୍ପାଚ୍
 - [USER_GUIDE.md](../guides/USER_GUIDE.md#-skills-system) — ବ୍ୟବହାରକାରୀଙ୍କ ପାଇଁ ପରିଚୟ
 - [ARCHITECTURE.md](../architecture/ARCHITECTURE.md) — ଅନୁରୋଧ ପାଇପ୍ଲାଇନ୍ ଏବଂ କମ୍ପୋନେଣ୍ଟ ମ୍ୟାପ୍
 - ଉତ୍ସ: `src/lib/skills/`, `src/app/api/skills/`, `open-sse/mcp-server/tools/skillTools.ts`

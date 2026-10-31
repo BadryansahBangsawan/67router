@@ -24,7 +24,6 @@
 - [කුසලතා පද්ධතිය](#-skills-system)
 - [මතක පද්ධතිය](#-memory-system)
 - [Webhooks](#-webhooks)
-- [Cloud Agents](#-cloud-agents)
 - [ක්රමලේඛනගත කළමනාකරණය](#-programmatic-management)
 - [අභ්යන්තර CLI](#-internal-cli)
 - [ඩෙස්ක්ටොප් යෙදුම (Electron)](#-desktop-application-electron)
@@ -1237,8 +1236,6 @@ SSE URL එක වන `http://localhost:20128/api/mcp/sse` සහ **Dashboard �
 
 ### විෂය පථ
 
-MCP දැනට නම් කරන ලද විෂය පථ 32ක් නිර්වචනය කරයි. එක් එක් Bearer යතුර නිශ්චිත විෂය පථවලට සීමා කළ හැක — නිල විෂය පථ සහ මෙවලම් ලැයිස්තුව සඳහා [MCP-SERVER.md](../frameworks/MCP-SERVER.md) ද, JSON-RPC යෝජනා ක්රමය සඳහා [A2A-SERVER.md](../frameworks/A2A-SERVER.md) ද බලන්න.
-
 ---
 
 ## 🧠 කුසලතා පද්ධතිය
@@ -1247,7 +1244,6 @@ MCP දැනට නම් කරන ලද විෂය පථ 32ක් නි�
 
 - **වෙළඳපොළ UI** — **උපකරණ පුවරුව → කුසලතා** වෙතින් කුසලතා පිරික්සා ස්ථාපනය කරන්න
 - **යතුරකට අදාළ විෂය පථ** — කුමන API යතුරුවලට කුමන කුසලතා කැඳවිය හැකිද යන්න සීමා කරන්න
-- **අභිරුචි කුසලතා** — TypeScript ගොනුවක් `src/lib/a2a/skills/` තුළට දමා, එය ලියාපදිංචි කරන්න; එවිට එය වහාම A2A හරහා කැඳවිය හැකි වේ
 
 සම්පූර්ණ යොමුව: [SKILLS.md](../frameworks/SKILLS.md).
 
@@ -1276,18 +1272,6 @@ MCP දැනට නම් කරන ලද විෂය පථ 32ක් නි�
 - නැවත උත්සාහ කිරීම්: ඝාතීය ප්රමාදය සමඟ උත්සාහ 3ක්, ඉන්පසු dead-letter පෝලිමට යොමු කෙරේ
 
 සම්පූර්ණ schema එක [WEBHOOKS.md](../frameworks/WEBHOOKS.md) තුළ ඇත.
-
----
-
-## ☁️ Cloud නියෝජිතයන්
-
-ඔබේ දේශීය routing කළමනාකරණය කරන එම උපකරණ පුවරුවෙන්ම දිගු වේලාවක් ධාවනය වන කාර්යයන් යැවිය හැකි වන පරිදි 67router cloud coding නියෝජිතයන් (**OpenAI Codex Cloud**, **Devin**, **Jules**, **Antigravity**) සමඟ ඒකාබද්ධ වේ.
-
-- **උපකරණ පුවරුව → Cloud නියෝජිතයන්** තුළින් හෝ `POST /api/v1/agents/tasks` හරහා කාර්යයන් සාදන්න
-- එක් එක් කාර්යයේ තත්ත්වය, ලොග් සහ කෘතිකයන් නිරීක්ෂණය කරන්න
-- එක් එක් provider සඳහා ඔබේම API යතුර රැගෙන එන්න — අක්තපත්ර කිසිවිටෙක 67router instance එකෙන් පිටතට නොයයි
-
-සම්පූර්ණ යොමුව: [CLOUD_AGENT.md](../frameworks/CLOUD_AGENT.md).
 
 ---
 
@@ -1344,7 +1328,6 @@ omniroute restore [<timestamp>]    # ස්නැප්ෂොට් එකකි
 omniroute health                   # සවිස්තරාත්මක සෞඛ්ය තොරතුරු (බ්රේකර්, හැඹිලිය, මතකය)
 omniroute quota                    # සපයන්නන්ගේ කෝටා භාවිතය
 omniroute mcp status               # MCP සේවාදායකයේ තත්ත්වය
-omniroute a2a status               # A2A සේවාදායකයේ තත්ත්වය
 omniroute tunnel list|create|stop  # Cloudflare/Tailscale/ngrok ටනල්
 omniroute reset-password           # පරිපාලක මුරපදය යළි සකසන්න
 omniroute --mcp                    # stdio හරහා MCP සේවාදායකය ආරම්භ කරන්න

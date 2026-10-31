@@ -91,7 +91,7 @@ HTTP 400 — โมเดล '<id>' เป็นโมเดลสร้าง�
 Simple Browser แทนเบราว์เซอร์ภายนอก การฝังต้อง **เปิดใช้งานโดยสมัครใจบนเซิร์ฟเวอร์** ผ่าน
 `DASHBOARD_ALLOW_EMBED=vscode` ซึ่งจะให้บริการหน้า HTML พร้อม
 `frame-ancestors 'self' vscode-webview:` แทนค่าเริ่มต้น `frame-ancestors 'none'` +
-`X-Frame-Options: DENY` ส่วน API (`/api`, `/v1`, `/v1beta`, `/a2a`, `/healthz`) จะยังคงใช้
+`X-Frame-Options: DENY` ส่วน API (`/api`, `/v1`, `/v1beta`, `/healthz`) จะยังคงใช้
 ส่วนหัวที่เข้มงวดไม่ว่าจะตั้งค่าแบบใดก็ตาม
 
 > ⚠️ **นี่เป็นแฟล็กในเวลาบิลด์ ไม่ใช่ในเวลารันไทม์** Next.js จะคอมไพล์ `headers()` ลงในรายการเส้นทาง

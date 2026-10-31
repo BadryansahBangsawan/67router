@@ -43,8 +43,6 @@ v3.7.x → v3.8.0 週期新增了零設定自動路由、新提供者、OAuth �
 - 🤝 **GitLab Duo OAuth 提供者** — 使用 GitLab 憑證登入
 - 🧠 **推理重播快取** — 以混合式記憶體內 + SQLite 持久化方式儲存推理軌跡
 
-📚 **相關文件：** [技能框架](../frameworks/SKILLS.md) · [記憶系統](../frameworks/MEMORY.md) · [雲端代理](../frameworks/CLOUD_AGENT.md) · [Webhooks](../frameworks/WEBHOOKS.md) · [推理重播快取](../routing/REASONING_REPLAY.md)
-
 ---
 
 ## 🔌 提供者
@@ -104,12 +102,6 @@ OpenRouter 連線可在「進階設定」中儲存每個連線專屬的 `preset`
 四種用於偵錯 API 翻譯的模式：**遊樂場**（格式轉換器）、**聊天測試器**（即時請求）、**測試平台**（批次測試）及**即時監控器**（即時串流）。
 
 ![翻譯器遊樂場](../screenshots/05-translator.png)
-
----
-
-## 🎮 模型遊樂場 _(v2.0.9+)_
-
-直接從儀表板測試任何模型。選擇提供者、模型及端點，使用 Monaco Editor 撰寫提示詞、即時串流回應、在串流途中中止，並檢視計時指標。
 
 ---
 

@@ -24,7 +24,6 @@ Vollständige Anleitung zum Konfigurieren von Anbietern, Erstellen von Kombinati
 - [Skills-System](#-skills-system)
 - [Speichersystem](#-memory-system)
 - [Webhooks](#-webhooks)
-- [Cloud-Agenten](#-cloud-agents)
 - [Programmatische Verwaltung](#-programmatic-management)
 - [Interne CLI](#-internal-cli)
 - [Desktop-Anwendung (Electron)](#-desktop-application-electron)
@@ -1236,8 +1235,6 @@ Verwenden Sie die SSE-URL `http://localhost:20128/api/mcp/sse` und einen Bearer-
 
 ### Berechtigungsbereiche
 
-MCP definiert derzeit 32 benannte Berechtigungsbereiche. Jeder Bearer-Schlüssel kann auf bestimmte Berechtigungsbereiche beschränkt werden — das maßgebliche Verzeichnis der Berechtigungsbereiche und Tools finden Sie in [MCP-SERVER.md](../frameworks/MCP-SERVER.md), das JSON-RPC-Schema in [A2A-SERVER.md](../frameworks/A2A-SERVER.md).
-
 ---
 
 ## 🧠 Skills-System
@@ -1246,7 +1243,6 @@ MCP definiert derzeit 32 benannte Berechtigungsbereiche. Jeder Bearer-Schlüssel
 
 - **Marketplace-UI** — Skills über **Dashboard → Skills** durchsuchen und installieren
 - **Schlüsselbezogene Scopes** — Einschränken, welche API-Schlüssel welche Skills aufrufen dürfen
-- **Benutzerdefinierte Skills** — Eine TypeScript-Datei in `src/lib/a2a/skills/` ablegen und registrieren; anschließend kann sie sofort über A2A aufgerufen werden
 
 Vollständige Referenz: [SKILLS.md](../frameworks/SKILLS.md).
 
@@ -1275,18 +1271,6 @@ Abonnieren Sie 67router-Ereignisse für Echtzeitüberwachung und Automatisierung
 - Wiederholungsversuche: 3 Versuche mit exponentiellem Backoff, danach Übertragung in die Dead-Letter-Queue
 
 Das vollständige Schema finden Sie in [WEBHOOKS.md](../frameworks/WEBHOOKS.md).
-
----
-
-## ☁️ Cloud-Agenten
-
-67router lässt sich in cloudbasierte Coding-Agenten (**OpenAI Codex Cloud**, **Devin**, **Jules**, **Antigravity**) integrieren, sodass Sie lang laufende Aufgaben über dasselbe Dashboard ausführen können, das auch Ihr lokales Routing verwaltet.
-
-- Erstellen Sie Aufgaben unter **Dashboard → Cloud Agents** oder über `POST /api/v1/agents/tasks`
-- Verfolgen Sie Status, Protokolle und Artefakte für jede Aufgabe
-- Verwenden Sie für jeden Anbieter einen eigenen API-Schlüssel — die Anmeldedaten verlassen niemals die 67router-Instanz
-
-Vollständige Referenz: [CLOUD_AGENT.md](../frameworks/CLOUD_AGENT.md).
 
 ---
 
@@ -1343,7 +1327,6 @@ omniroute restore [<timestamp>]    # Aus einem Snapshot wiederherstellen
 omniroute health                   # Detaillierter Systemzustand (Schutzschalter, Cache, Arbeitsspeicher)
 omniroute quota                    # Nutzung der Anbieter-Kontingente
 omniroute mcp status               # Status des MCP-Servers
-omniroute a2a status               # Status des A2A-Servers
 omniroute tunnel list|create|stop  # Cloudflare-/Tailscale-/ngrok-Tunnel
 omniroute reset-password           # Administratorpasswort zurücksetzen
 omniroute --mcp                    # MCP-Server über stdio starten

@@ -390,34 +390,6 @@
       "description": "Log de auditoria MCP (alias para audit --source mcp)"
     }
   },
-  "a2a": {
-    "skills": {
-      "description": "Listar skills A2A disponíveis na agent card"
-    },
-    "invoke": {
-      "description": "Invocar uma skill A2A e retornar o ID da task",
-      "input": "Objeto JSON de entrada",
-      "input_file": "Caminho para arquivo JSON de entrada",
-      "wait": "Aguardar conclusão da task antes de retornar",
-      "timeout": "Timeout aguardando conclusão em ms (padrão: 60000)"
-    },
-    "tasks": {
-      "description": "Gerenciar tasks A2A",
-      "list": {
-        "status": "Filtrar por status",
-        "skill": "Filtrar por ID de skill"
-      },
-      "watch": {
-        "description": "Monitorar status da task até conclusão"
-      },
-      "stream": {
-        "description": "Transmitir eventos de execução da task via SSE"
-      },
-      "logs": {
-        "description": "Exibir mensagens e artefatos da task"
-      }
-    }
-  },
   "policy": {
     "description": "Gerenciar políticas de autorização do 67router",
     "list": {
@@ -696,99 +668,6 @@
       "provider": "ID do provedor a revogar",
       "connection_id": "Revogar uma conexão específica por ID",
       "yes": "Pular confirmação"
-    }
-  },
-  "cloud": {
-    "description": "Gerenciar tarefas de agentes cloud de IA (codex, devin, jules)",
-    "agents": {
-      "description": "Listar agentes cloud disponíveis"
-    },
-    "agent": {
-      "description": "Gerenciar tarefas do agente cloud {agent}",
-      "auth": {
-        "description": "Autorizar {agent} via OAuth"
-      }
-    },
-    "task": {
-      "description": "Gerenciar tarefas de agentes cloud",
-      "create": {
-        "description": "Criar nova tarefa de agente",
-        "title": "Título da tarefa (padrão: primeiros 80 chars do prompt)",
-        "prompt": "Texto do prompt da tarefa",
-        "prompt_file": "Ler prompt de arquivo",
-        "repo": "URL do repositório para clonar na tarefa",
-        "branch": "Nome do branch a usar",
-        "metadata": "Objeto JSON de metadados"
-      },
-      "list": {
-        "description": "Listar tarefas de agentes",
-        "status": "Filtrar por status (running|completed|failed|cancelled)",
-        "limit": "Máximo de resultados (padrão: 50)"
-      },
-      "get": {
-        "description": "Obter detalhes da tarefa por ID"
-      },
-      "status": {
-        "description": "Exibir status da tarefa (running|completed|failed|cancelled)"
-      },
-      "cancel": {
-        "description": "Cancelar uma tarefa em execução",
-        "yes": "Pular confirmação"
-      },
-      "approve": {
-        "description": "Aprovar o plano do agente para iniciar execução"
-      },
-      "message": {
-        "description": "Enviar mensagem para uma tarefa em execução"
-      }
-    },
-    "sources": {
-      "description": "Listar arquivos de origem produzidos por uma tarefa"
-    }
-  },
-  "eval": {
-    "description": "Gerenciar suites e execuções de avaliação",
-    "suites": {
-      "description": "Gerenciar suites de avaliação",
-      "list": {
-        "description": "Listar suites de avaliação"
-      },
-      "get": {
-        "description": "Obter detalhes de suite por ID"
-      },
-      "create": {
-        "description": "Criar suite de avaliação a partir de arquivo JSON",
-        "file": "Caminho para arquivo JSON de definição da suite"
-      }
-    },
-    "run": {
-      "description": "Iniciar execução de avaliação para uma suite",
-      "model": "ID do modelo a avaliar (padrão: auto)",
-      "combo": "Forçar combo específico por nome",
-      "concurrency": "Número de amostras concorrentes (padrão: 4)",
-      "tag": "Tag para esta execução",
-      "watch": "Monitorar progresso até conclusão"
-    },
-    "list": {
-      "description": "Listar execuções de avaliação",
-      "suite": "Filtrar por ID de suite",
-      "status": "Filtrar por status",
-      "since": "Retornar execuções desde este timestamp",
-      "limit": "Máximo de resultados (padrão: 50)"
-    },
-    "get": {
-      "description": "Obter detalhes de execução por ID"
-    },
-    "results": {
-      "description": "Exibir resultados de amostras de uma execução",
-      "failed": "Exibir apenas amostras que falharam"
-    },
-    "cancel": {
-      "description": "Cancelar uma avaliação em execução",
-      "yes": "Pular confirmação"
-    },
-    "scorecard": {
-      "description": "Exibir scorecard de uma execução concluída"
     }
   },
   "program": {

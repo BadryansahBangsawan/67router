@@ -69,9 +69,27 @@ test("sortProviderEntriesFeaturedFirst pins Kimi providers first, alphabetical o
 
 test("filterConfiguredProviderEntries surfaces Kimi first within a mixed category (oauth section shape)", () => {
   const entries = [
-    { providerId: "claude", provider: { name: "Claude" }, stats: { total: 1 }, displayAuthType: "oauth", toggleAuthType: "oauth" },
-    { providerId: "kimi-coding", provider: { name: "Kimi Code CLI" }, stats: { total: 0 }, displayAuthType: "oauth", toggleAuthType: "oauth" },
-    { providerId: "amazon-q", provider: { name: "Amazon Q" }, stats: { total: 0 }, displayAuthType: "oauth", toggleAuthType: "oauth" },
+    {
+      providerId: "claude",
+      provider: { name: "Claude" },
+      stats: { total: 1 },
+      displayAuthType: "oauth",
+      toggleAuthType: "oauth",
+    },
+    {
+      providerId: "kimi-coding",
+      provider: { name: "Kimi Code CLI" },
+      stats: { total: 0 },
+      displayAuthType: "oauth",
+      toggleAuthType: "oauth",
+    },
+    {
+      providerId: "amazon-q",
+      provider: { name: "Amazon Q" },
+      stats: { total: 0 },
+      displayAuthType: "oauth",
+      toggleAuthType: "oauth",
+    },
   ];
 
   // No filters applied (showConfiguredOnly=false) — pure ordering behavior.
@@ -167,8 +185,14 @@ test("real API Key -> LLM subsection pins moonshot first (page.tsx's llmProvider
 
   // kimi-coding-apikey and kimi (both hiddenFromDashboard) never surface as
   // their own card here or in any other section — see the dedicated test below.
-  assert.equal(llmEntries.some((e) => e.providerId === "kimi-coding-apikey"), false);
-  assert.equal(llmEntries.some((e) => e.providerId === "kimi"), false);
+  assert.equal(
+    llmEntries.some((e) => e.providerId === "kimi-coding-apikey"),
+    false
+  );
+  assert.equal(
+    llmEntries.some((e) => e.providerId === "kimi"),
+    false
+  );
 });
 
 test("kimi-coding-apikey and kimi never render as their own dashboard card in ANY section (hiddenFromDashboard)", () => {
@@ -182,7 +206,6 @@ test("kimi-coding-apikey and kimi never render as their own dashboard card in AN
     "audio",
     "upstream-proxy",
     "apikey",
-    "cloud-agent",
   ] as const;
 
   for (const category of categories) {

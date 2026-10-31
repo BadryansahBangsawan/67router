@@ -68,20 +68,6 @@ management route-এ CORS **preflight pass** করতে দেওয়া —
 প্রয়োজন যা একটি cross-origin page সরবরাহ করতে পারে না। shared CORS path-এ এটি **session hijack** বা
 credential চুরির vector **নয়**।
 
-### একটি প্রকৃত ব্যতিক্রম — `/api/v1/agents/`
-
-Cloud-Agent route-গুলো (`/api/v1/agents/{health,credentials,tasks,tasks/[id]}`)
-তাদের **নিজস্ব** CORS header সেট করে
-(`src/lib/cloudAgent/api.ts`, `getCloudAgentCorsHeaders`) এবং
-`Access-Control-Allow-Origin: <origin>|*`-এর সঙ্গে
-`Access-Control-Allow-Credentials: true`-ও পাঠায়। এটিই একমাত্র surface যেখানে
-origin-echo এবং credential একসঙ্গে থাকে, এবং এটি **`CORS_ALLOW_ALL`-এর ওপর
-নির্ভরশীল নয়**। এই route-গুলো management-authenticated
-(`requireManagementAuth`); যেসব operator dashboard-কে host-এর বাইরে expose করেন, তাঁদের
-সচেতন থাকা উচিত যে এটিই একমাত্র স্থান যেখানে response header দ্বারা cross-origin credentialed read
-অনুমোদিত। এটিকে একটি explicit allowlist-এ সীমিত করার কাজ
-এই CORS নির্দেশিকা থেকে আলাদাভাবে track করা হচ্ছে।
-
 ## প্রোডাকশন চেকলিস্ট
 
 - **প্রোডাকশনে কখনোই `CORS_ALLOW_ALL=true` সেট করবেন না।** এটি আনসেট রাখুন।
@@ -159,7 +145,6 @@ Security ট্যাবে) সেট করুন।
 | ড্যাশবোর্ডের জন্য runtime status             | `src/app/api/settings/authz-inventory/route.ts`                      |
 | ড্যাশবোর্ড warning banner                    | `src/app/(dashboard)/dashboard/settings/components/AuthzSection.tsx` |
 | CORS Allowed Origins ফিল্ড                   | `src/app/(dashboard)/dashboard/settings/components/SecurityTab.tsx`  |
-| Cloud-Agent-এর প্রতি-রুট CORS (ব্যতিক্রমটি)  | `src/lib/cloudAgent/api.ts`                                          |
 
 ## আরও দেখুন
 

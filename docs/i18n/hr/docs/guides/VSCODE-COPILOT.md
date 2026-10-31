@@ -91,7 +91,7 @@ dodajte ih u `blockedProviders` u postavkama nadzorne ploče; u proširenju se n
 Simple Browsera umjesto u vanjskom pregledniku. Ugrađivanje se **mora izričito omogućiti na poslužitelju** putem
 `DASHBOARD_ALLOW_EMBED=vscode`, čime se HTML stranice poslužuju sa zaglavljem
 `frame-ancestors 'self' vscode-webview:` umjesto zadanog `frame-ancestors 'none'` +
-`X-Frame-Options: DENY`. API površina (`/api`, `/v1`, `/v1beta`, `/a2a`, `/healthz`) u oba slučaja zadržava
+`X-Frame-Options: DENY`. API površina (`/api`, `/v1`, `/v1beta`, `/healthz`) u oba slučaja zadržava
 stroga zaglavlja.
 
 > ⚠️ **To je opcija za vrijeme izgradnje, a ne za vrijeme izvođenja.** Next.js ugrađuje `headers()` u manifest

@@ -258,12 +258,6 @@ curl -X POST http://localhost:20128/api/skills/install \
 
 ---
 
-## تكامل A2A
-
-يُصدّر `src/lib/skills/a2a.ts` واصف مهارة A2A المسمى `memory_aware_routing` ودالة المساعدة `registerA2ASkill(registry)`. توجد مهارات A2A المخصصة في `src/lib/a2a/skills/`، ويجري توجيهها عبر `A2A_SKILL_HANDLERS` (`src/lib/a2a/taskExecution.ts`). راجع [A2A-SERVER.md](./A2A-SERVER.md) للاطلاع على دورة حياة المهمة كاملةً.
-
----
-
 ## إضافة مهارة مضمّنة جديدة
 
 1. **عرّف المعالج** في `src/lib/skills/builtins.ts` (أو في ملف مجاور ضمن `src/lib/skills/builtin/`). التوقيع: `(input, { apiKeyId, sessionId }) => Promise<output>`.
@@ -478,7 +472,6 @@ const config: SkillConfig = {
 ## انظر أيضًا
 
 - [MCP-SERVER.md](./MCP-SERVER.md) — تسجيل أدوات MCP ووسائل النقل
-- [A2A-SERVER.md](./A2A-SERVER.md) — دورة حياة مهام A2A وتوجيه المهارات
 - [USER_GUIDE.md](../guides/USER_GUIDE.md#-skills-system) — مقدمة موجّهة للمستخدم
 - [ARCHITECTURE.md](../architecture/ARCHITECTURE.md) — مسار معالجة الطلبات وخريطة المكوّنات
 - المصدر: `src/lib/skills/`، `src/app/api/skills/`، `open-sse/mcp-server/tools/skillTools.ts`

@@ -24,7 +24,6 @@
 - [스킬 시스템](#-skills-system)
 - [메모리 시스템](#-memory-system)
 - [웹훅](#-webhooks)
-- [클라우드 에이전트](#-cloud-agents)
 - [프로그래밍 방식 관리](#-programmatic-management)
 - [내부 CLI](#-internal-cli)
 - [데스크톱 애플리케이션(Electron)](#-desktop-application-electron)
@@ -1237,8 +1236,6 @@ SSE URL `http://localhost:20128/api/mcp/sse`과 **Dashboard → API Keys**에서
 
 ### 범위
 
-MCP는 현재 이름이 지정된 32개의 범위를 정의합니다. 각 Bearer 키를 특정 범위로 제한할 수 있습니다. 공식 범위 및 도구 목록은 [MCP-SERVER.md](../frameworks/MCP-SERVER.md)를, JSON-RPC 스키마는 [A2A-SERVER.md](../frameworks/A2A-SERVER.md)를 참조하세요.
-
 ---
 
 ## 🧠 스킬 시스템
@@ -1247,7 +1244,6 @@ MCP는 현재 이름이 지정된 32개의 범위를 정의합니다. 각 Bearer
 
 - **마켓플레이스 UI** — **대시보드 → 스킬**에서 스킬 탐색 및 설치
 - **키별 범위** — 각 API 키가 호출할 수 있는 스킬 제한
-- **사용자 정의 스킬** — TypeScript 파일을 `src/lib/a2a/skills/`에 추가하고 등록하면 A2A를 통해 즉시 호출 가능
 
 전체 레퍼런스: [SKILLS.md](../frameworks/SKILLS.md).
 
@@ -1276,18 +1272,6 @@ MCP는 현재 이름이 지정된 32개의 범위를 정의합니다. 각 Bearer
 - 재시도: 지수 백오프 방식으로 3회 시도한 후 데드 레터 큐로 이동
 
 전체 스키마는 [WEBHOOKS.md](../frameworks/WEBHOOKS.md)를 참조하세요.
-
----
-
-## ☁️ 클라우드 에이전트
-
-67router는 클라우드 코딩 에이전트(**OpenAI Codex Cloud**, **Devin**, **Jules**, **Antigravity**)와 통합되어 로컬 라우팅을 처리하는 동일한 대시보드에서 장시간 실행되는 작업을 전달할 수 있습니다.
-
-- **대시보드 → 클라우드 에이전트** 또는 `POST /api/v1/agents/tasks`를 통해 작업 생성
-- 작업별 상태, 로그 및 아티팩트 추적
-- 제공자별로 자체 API 키 사용 — 자격 증명은 67router 인스턴스 외부로 절대 전송되지 않음
-
-전체 레퍼런스: [CLOUD_AGENT.md](../frameworks/CLOUD_AGENT.md).
 
 ---
 
@@ -1344,7 +1328,6 @@ omniroute restore [<timestamp>]    # 스냅샷에서 복원
 omniroute health                   # 상세 상태(차단기, 캐시, 메모리)
 omniroute quota                    # 공급자 할당량 사용량
 omniroute mcp status               # MCP 서버 상태
-omniroute a2a status               # A2A 서버 상태
 omniroute tunnel list|create|stop  # Cloudflare/Tailscale/ngrok 터널
 omniroute reset-password           # 관리자 비밀번호 재설정
 omniroute --mcp                    # stdio를 통해 MCP 서버 시작

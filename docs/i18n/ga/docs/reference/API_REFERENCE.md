@@ -1419,9 +1419,8 @@ gach cúltaca). Coinníonn liostú (`GET`) agus cruthú cúltaca de láimh (`PUT
 
 ### Meastóireachtaí
 
-| Críochphointe | Modh     | Cur síos                                             |
-| ------------- | -------- | ---------------------------------------------------- |
-| `/api/evals`  | GET/POST | Liostaigh tacair meastóireachta / rith meastóireacht |
+| Críochphointe | Modh | Cur síos |
+| ------------- | ---- | -------- |
 
 ### Beartais
 
@@ -1741,31 +1740,6 @@ Síntiúis crúca gréasáin amach do theagmhais 67router (cur i gcrích iarrata
 
 ---
 
-## Prótacal Gníomhairí
-
-Tascanna gníomhairí néil (Claude Code, Codex Cloud, OpenHands, srl.) a chuirtear i gcrích go cianda thar ceann úsáideoirí 67router.
-
-| Modh   | Conair                        | Cur síos                                                                                                                                                |
-| ------ | ----------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| GET    | `/api/v1/agents/tasks`        | Liostaigh tascanna — `?provider=`, `?status=`, `?limit=` roghnach (1–500, 50 de réir réamhshocraithe)                                                   |
-| POST   | `/api/v1/agents/tasks`        | Cruthaigh tasc — corp bailíochtaithe ag `CreateCloudAgentTaskSchema` (`providerId`, `prompt`, `source`, `options?`). Filleann sé `201` le clúdach taisc |
-| DELETE | `/api/v1/agents/tasks?id=...` | Scrios tasc                                                                                                                                             |
-| GET    | `/api/v1/agents/tasks/[id]`   | Léigh tasc — athnuachan sioncrónach ar an stádas ón ngníomhaire néil réamhtheachtach nuair atá `external_id` socraithe                                  |
-| POST   | `/api/v1/agents/tasks/[id]`   | Gníomh idirdhealaithe: `{action: "approve"}`, `{action: "message", message}`, nó `{action: "cancel"}`                                                   |
-| DELETE | `/api/v1/agents/tasks/[id]`   | Scrios tasc sonrach de réir id                                                                                                                          |
-
-> **Údarú:** tá údarú bainistíochta riachtanach do gach modh (`requireCloudAgentManagementAuth`). Roimh v3.8.0 ní raibh siad seo údaraithe — féach gealltanas `588a0333` don athrú bristeach.
-
-```bash
-# Cruthaigh tasc néil Claude Code
-curl -X POST http://localhost:20128/api/v1/agents/tasks \
-  -H "Authorization: Bearer your-management-key" \
-  -H "Content-Type: application/json" \
-  -d '{"providerId":"claude-code-cloud","prompt":"Fix the failing test","source":{"repo":"...","branch":"..."}}'
-```
-
----
-
 ## Seachfhreastalaithe Bainistíochta
 
 Seachfhreastalaithe HTTP(S)/SOCKS amach is féidir a shannadh do sholáthraithe, do chuntais, nó go domhanda.
@@ -1885,48 +1859,10 @@ Tagann 67router le freastalaí leabaithe Model Context Protocol ina bhfuil 3 iom
 
 Cuireann 67router críochphointe A2A (Gníomhaire le Gníomhaire) JSON-RPC 2.0 ar fáil, chomh maith le fillteán REST le haghaidh iniúchta agus úsáide deaise.
 
-### JSON-RPC
-
-```bash
-POST /a2a
-Authorization: Bearer your-api-key   # roghnach mura bhfuil OMNIROUTE_API_KEY socraithe
-Content-Type: application/json
-
-{
-  "jsonrpc": "2.0",
-  "id": 1,
-  "method": "message/send",
-  "params": {
-    "skill": "smart-routing",
-    "messages": [{"role": "user", "content": "Route this coding task"}]
-  }
-}
-```
-
-Modhanna a dtacaítear leo (iad uile faoi rialú `settings.a2aEnabled`):
-
-| Modh             | Cur síos                                                            |
-| ---------------- | ------------------------------------------------------------------- |
-| `message/send`   | Rith sioncrónach scile; tugtar `{task, artifacts, metadata}` ar ais |
-| `message/stream` | Rith sruthaithe SSE den tacar céanna scileanna                      |
-| `tasks/get`      | Faigh tasc de réir `taskId`                                         |
-| `tasks/cancel`   | Cealaigh tasc de réir `taskId`                                      |
-
-Scileanna ionsuite: `smart-routing`, `quota-management`, `provider-discovery`, `cost-analysis`, `health-report`.
-
-### Cárta Gníomhaire
-
-```bash
-GET /.well-known/agent.json
-```
-
-Tugtar an cárta poiblí gníomhaire A2A ar ais (ainm, cur síos, cumais, catalóg scileanna, scéim fíordheimhnithe) — taiscthe go poiblí ar feadh 1u. Ní theastaíonn fíordheimhniú.
-
 ### Cúntóirí REST
 
 | Modh | Conair                       | Cur síos                                                                                                                |
 | ---- | ---------------------------- | ----------------------------------------------------------------------------------------------------------------------- |
-| GET  | `/api/a2a/status`            | A2A cumasaithe + staitisticí tascanna + achoimre thaiscthe ar chárta an ghníomhaire                                     |
 | GET  | `/api/a2a/tasks`             | Liostaigh tascanna — `?state=submitted\|working\|completed\|failed\|cancelled`, `?skill=`, `?limit=` (≤200), `?offset=` |
 | POST | `/api/a2a/tasks`             | (Níl sé curtha i bhfeidhm mar chúntóir REST — cruthaigh trí JSON-RPC `message/send`)                                    |
 | GET  | `/api/a2a/tasks/[id]`        | Aisghabh tasc amháin                                                                                                    |
@@ -1946,12 +1882,8 @@ Tugtar an cárta poiblí gníomhaire A2A ar ais (ainm, cur síos, cumais, catal�
 | GET | `/api/cloud/models/alias` | Liostaigh ailiasanna samhlacha mar a nochtar iad do shioncronú néil |
 | GET | `/api/assess` | Léigh na catagóirithe measúnaithe is déanaí (de réir soláthraí/samhla) |
 | POST | `/api/assess` | Rith measúnú — corp: `{scope: {type:"all"}                                                   | {type:"provider", providerId} | {type:"model", modelId}, trigger?}` |
-| GET | `/api/evals` | Liostaigh na pacáistí meastóireachta ionsuite + na riteanna is déanaí |
-| POST | `/api/evals` | Spreag rith meastóireachta |
-| POST | `/api/evals/suites` | Cruthaigh pacáiste saincheaptha meastóireachta — corp bailíochtaithe ag `evalSuiteSaveSchema` |
-| GET | `/api/evals/suites/[id]` | Aisghabh pacáiste saincheaptha meastóireachta |
 
-**Fíordheimhniú:** bailíochtaíonn `/api/cloud/auth` eochair Bearer go díreach agus ní thugann sé ar ais eochair mhasctha agus `projectId` gach naisc ach amháin i gcás eochrach a bhfuil an raon feidhme `manage` / `admin` aici; teastaíonn seisiún bainistíochta/eochair API ó na conairí eile `/api/cloud/*`, `/api/evals/*`, agus `/api/assess`. Úsáideann POST `/api/assess` `validateBody` le scéim raoin feidhme d’aontas idirdhealaithe.
+**Fíordheimhniú:** bailíochtaíonn `/api/cloud/auth` eochair Bearer go díreach agus ní thugann sé ar ais eochair mhasctha agus `projectId` gach naisc ach amháin i gcás eochrach a bhfuil an raon feidhme `manage` / `admin` aici; teastaíonn seisiún bainistíochta/eochair API ó na conairí eile `/api/cloud/*`, agus `/api/assess`. Úsáideann POST `/api/assess` `validateBody` le scéim raoin feidhme d’aontas idirdhealaithe.
 
 ---
 
@@ -2275,5 +2207,3 @@ theaghlach dintiúr (seisiún deais, comhartha CLI áitiúil, Comhartha Rochtana
 - Is féidir `requireLogin` a scoránú trí `/api/settings/require-login`
 - Féadfaidh eochair API Bearer a bheith riachtanach do bhealaí `/v1/*` nuair atá `REQUIRE_API_KEY=true`
 - Ciallaíonn "comhartha bainistíochta" / "eochair API le raon feidhme bainistíochta" sa tagairt seo ceann de na teaghlaigh sa treoir sin — ní cineál rúin bhreise neamhshainithe
-
-> **Athrú bristeach (v3.8.0)** — teastaíonn **fíordheimhniú bainistíochta** anois ó `/api/v1/agents/tasks/*` agus ó chríochphointí bainistíochta na tréimhse fuaraithe (fianán deais `auth_token` nó eochair API le raon feidhme bainistíochta). Gheobhaidh cliaint a ghlaoigh ar na bealaí seo roimhe seo gan fíordheimhniú `401 Unauthorized`. Féach gealltanas `588a0333` (`fix(auth): require management auth for agent and cooldown APIs`).

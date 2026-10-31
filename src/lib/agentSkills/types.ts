@@ -40,7 +40,6 @@ export type SkillArea =
   | "cli-contexts"
   | "cli-cost-usage"
   | "cli-mcp"
-  | "cli-a2a"
   | "cli-tunnel"
   | "cli-backup-sync"
   | "cli-policy-audit"

@@ -44,10 +44,6 @@
 
 因此，`CORS_ALLOW_ALL=true` 的**剩餘**暴露範圍僅限於：(a) 對原本就不需要驗證的資料進行未攜帶認證資訊的跨來源**讀取**，以及 (b) 讓管理路由的 CORS **預檢請求通過**——但這些路由仍需要跨來源頁面無法提供的驗證資訊。在共用 CORS 路徑上，這**並非**工作階段劫持或認證資訊竊取的攻擊向量。
 
-### 一個真正的例外——`/api/v1/agents/`
-
-Cloud-Agent 路由（`/api/v1/agents/{health,credentials,tasks,tasks/[id]}`）會設定其**自己的** CORS 標頭（`src/lib/cloudAgent/api.ts`、`getCloudAgentCorsHeaders`），而且**確實會**同時發出 `Access-Control-Allow-Origin: <origin>|*` 與 `Access-Control-Allow-Credentials: true`。這是唯一同時存在來源回傳與認證資訊的介面，而且它**獨立於 `CORS_ALLOW_ALL`**。這些路由採用管理驗證（`requireManagementAuth`）；若操作人員將儀表板開放給主機以外的存取，應注意這是唯一允許跨來源讀取含認證資訊回應的地方。將其限縮為明確的允許清單，會與本 CORS 指引分開追蹤。
-
 ## 正式環境檢查清單
 
 - **切勿在正式環境中設定 `CORS_ALLOW_ALL=true`。** 請維持未設定狀態。
@@ -124,7 +120,6 @@ location / {
 | 儀表板的執行階段狀態             | `src/app/api/settings/authz-inventory/route.ts`                      |
 | 儀表板警告橫幅                   | `src/app/(dashboard)/dashboard/settings/components/AuthzSection.tsx` |
 | CORS Allowed Origins 欄位        | `src/app/(dashboard)/dashboard/settings/components/SecurityTab.tsx`  |
-| Cloud-Agent 每路由 CORS（例外）  | `src/lib/cloudAgent/api.ts`                                          |
 
 ## 另請參閱
 

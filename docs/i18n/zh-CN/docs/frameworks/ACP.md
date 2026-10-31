@@ -111,5 +111,3 @@ try {
 - [智能体协议](./AGENT_PROTOCOLS_GUIDE.md)
 - [CLI 启动契约](../guides/CLI-LAUNCH-CONTRACTS.md)
 - [CLI 工具](../reference/CLI-TOOLS.md)
-- [A2A 服务器](./A2A-SERVER.md)
-- [云端智能体](./CLOUD_AGENT.md)

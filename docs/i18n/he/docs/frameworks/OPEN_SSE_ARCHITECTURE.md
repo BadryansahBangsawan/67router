@@ -573,5 +573,4 @@ interface ProviderConfig {
 - [REPOSITORY_MAP.md](../architecture/REPOSITORY_MAP.md) — פירוט לפי ספריות
 - [AUTO-COMBO.md](../routing/AUTO-COMBO.md) — ניקוד המבוסס על 16 גורמים
 - [MCP-SERVER.md](./MCP-SERVER.md) — שרת MCP
-- [A2A-SERVER.md](./A2A-SERVER.md) — שרת A2A
 - מקור: `open-sse/` (יותר מ-400 קבצים, כ-143K שורות קוד)

@@ -20,7 +20,7 @@ Quando un agente IDE (ad esempio GitHub Copilot, Cursor, Claude Code) effettua u
 
 Questo significa che puoi:
 
-- **Reindirizzare qualsiasi agente verso qualsiasi provider**: Copilot che comunica con OpenAI? Reindirizzalo ad Anthropic Claude, Gemini o a uno qualsiasi dei 375 provider di 67router.
+- **Reindirizzare qualsiasi agente verso qualsiasi provider**: Copilot che comunica con OpenAI? Reindirizzalo ad Anthropic Claude, Gemini o a uno qualsiasi dei 372 provider di 67router.
 - **Applicare mappature dei modelli**: `gemini-3-flash` → `claude-sonnet-4.7` in modo trasparente a livello di handler.
 - **Osservare tutto il traffico degli agenti**: ogni richiesta intercettata viene pubblicata nel [Traffic Inspector](./TRAFFIC_INSPECTOR.md).
 - **Applicare la resilienza di 67router**: combo routing, circuit breaker, fallback e tracciamento dei costi funzionano anche per il traffico degli agenti IDE.

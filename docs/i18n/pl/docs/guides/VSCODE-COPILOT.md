@@ -92,7 +92,7 @@ niczego zmieniać.
 Simple Browser zamiast w zewnętrznej przeglądarce. Osadzanie jest **opcjonalne po stronie serwera** i włącza się je za pomocą
 `DASHBOARD_ALLOW_EMBED=vscode`, co powoduje udostępnianie stron HTML z nagłówkiem
 `frame-ancestors 'self' vscode-webview:` zamiast domyślnego `frame-ancestors 'none'` +
-`X-Frame-Options: DENY`. Powierzchnia API (`/api`, `/v1`, `/v1beta`, `/a2a`, `/healthz`) zachowuje
+`X-Frame-Options: DENY`. Powierzchnia API (`/api`, `/v1`, `/v1beta`, `/healthz`) zachowuje
 rygorystyczne nagłówki niezależnie od tego ustawienia.
 
 > ⚠️ **Jest to flaga czasu kompilacji, a nie czasu wykonywania.** Next.js kompiluje `headers()` do manifestu

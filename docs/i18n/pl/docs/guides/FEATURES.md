@@ -43,8 +43,6 @@ Cykl v3.7.x → v3.8.0 wprowadził automatyczny routing bez konfiguracji, nowych
 - 🤝 **Dostawca GitLab Duo OAuth** — logowanie przy użyciu danych uwierzytelniających GitLab
 - 🧠 **Pamięć podręczna Reasoning Replay Cache** — hybrydowe przechowywanie śladów rozumowania w pamięci i SQLite
 
-📚 **Powiązana dokumentacja:** [Framework umiejętności](../frameworks/SKILLS.md) · [System pamięci](../frameworks/MEMORY.md) · [Agenci chmurowi](../frameworks/CLOUD_AGENT.md) · [Webhooki](../frameworks/WEBHOOKS.md) · [Pamięć podręczna Reasoning Replay Cache](../routing/REASONING_REPLAY.md)
-
 ---
 
 ## 🔌 Dostawcy
@@ -104,12 +102,6 @@ Monitorowanie w czasie rzeczywistym: czas działania, pamięć, wersja, percenty
 Cztery tryby debugowania tłumaczeń API: **Playground** (konwerter formatów), **Chat Tester** (żądania na żywo), **Test Bench** (testy wsadowe) oraz **Live Monitor** (strumień w czasie rzeczywistym).
 
 ![Translator Playground](../screenshots/05-translator.png)
-
----
-
-## 🎮 Model Playground _(v2.0.9+)_
-
-Testuj dowolny model bezpośrednio z poziomu panelu. Wybierz dostawcę, model i punkt końcowy, twórz prompty w edytorze Monaco Editor, odbieraj strumieniowo odpowiedzi w czasie rzeczywistym, przerywaj je w trakcie przesyłania i przeglądaj metryki czasowe.
 
 ---
 

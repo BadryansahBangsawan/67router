@@ -240,17 +240,6 @@ Danh mục công cụ MCP ở trên (110 công cụ duy nhất, được tính b
 giới hạn trong các hoạt động định tuyến/bộ nhớ đệm/nén/bộ nhớ/kỹ năng/proxy/nguồn ngữ cảnh khi chạy. Hai
 framework liền kề được cung cấp cùng máy chủ MCP trong v3.8.0 và được ghi lại riêng:
 
-### Cloud Agents
-
-Cloud Agents là các agent lập trình AI chạy ngoài tiến trình (codex-cloud, cursor-cloud, devin, jules), được kết nối với
-67router thông qua cùng mô hình kết nối dùng cho các nhà cung cấp LLM. Chúng được cung cấp qua
-bề mặt REST riêng (`/api/v1/agents/*`) và **không** thuộc danh mục công cụ MCP
-— việc gọi một Cloud Agent không tiêu thụ phạm vi MCP.
-
-- Triển khai: `src/lib/cloudAgent/` (`registry.ts`, `agents/codex.ts`, `agents/cursor.ts`, `agents/devin.ts`, `agents/jules.ts`).
-- Vòng đời: `createTask`, `getStatus`, `approvePlan`, `sendMessage`, `listSources`.
-- Tài liệu: [docs/frameworks/CLOUD_AGENT.md](./CLOUD_AGENT.md).
-
 ### Guardrails
 
 Guardrails là các bộ lọc trước/sau khi thực thi (vision-bridge, pii-masker, prompt-injection)

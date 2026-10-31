@@ -69,20 +69,6 @@ kuruhusu **preflight ya CORS ipite** kwenye route za usimamizi — ambazo bado z
 ambao ukurasa wa asili tofauti hauwezi kutoa. Hii **si** njia ya kuteka kipindi au
 kuiba vitambulisho kwenye njia ya pamoja ya CORS.
 
-### Isipokuwa moja halisi — `/api/v1/agents/`
-
-Route za Cloud-Agent (`/api/v1/agents/{health,credentials,tasks,tasks/[id]}`) huweka
-header zao **wenyewe** za CORS
-(`src/lib/cloudAgent/api.ts`, `getCloudAgentCorsHeaders`) na **hutoa**
-`Access-Control-Allow-Origin: <origin>|*` pamoja na
-`Access-Control-Allow-Credentials: true`. Hii ndiyo sehemu pekee ambapo
-kurudisha asili na vitambulisho hutokea pamoja, na **haitegemei
-`CORS_ALLOW_ALL`**. Route hizi zimethibitishwa kwa usimamizi
-(`requireManagementAuth`); waendeshaji wanaofichua dashibodi nje ya host wanapaswa
-kufahamu kuwa hapa ndipo mahali pekee ambapo usomaji wa asili tofauti wenye vitambulisho unaruhusiwa na
-header za jibu. Kuibana kwa kutumia orodha dhahiri ya ruhusa kunafuatiliwa
-kando na mwongozo huu wa CORS.
-
 ## Orodha ya ukaguzi wa uzalishaji
 
 - **Kamwe usiweke `CORS_ALLOW_ALL=true` katika mazingira ya uzalishaji.** Iache bila kuwekwa.
@@ -161,7 +147,6 @@ Security), si katika proksi.
 | Hali ya wakati wa utekelezaji kwa dashibodi          | `src/app/api/settings/authz-inventory/route.ts`                      |
 | Bango la onyo la dashibodi                           | `src/app/(dashboard)/dashboard/settings/components/AuthzSection.tsx` |
 | Sehemu ya CORS Allowed Origins                       | `src/app/(dashboard)/dashboard/settings/components/SecurityTab.tsx`  |
-| CORS ya Cloud-Agent kwa kila route (hali ya kipekee) | `src/lib/cloudAgent/api.ts`                                          |
 
 ## Tazama pia
 

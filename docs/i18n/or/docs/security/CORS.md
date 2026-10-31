@@ -69,20 +69,6 @@
 ଆବଶ୍ୟକ ଯାହା ଏକ କ୍ରସ୍-ଅରିଜିନ୍ ପୃଷ୍ଠା ଯୋଗାଇପାରିବ ନାହିଁ। ସହଭାଗୀ CORS ପଥରେ ଏହା
 ସେସନ୍-ହାଇଜ୍ୟାକ୍ କିମ୍ବା ପ୍ରମାଣପତ୍ର-ଚୋରିର ବାହକ **ନୁହେଁ**।
 
-### ଏକ ପ୍ରକୃତ ବ୍ୟତିକ୍ରମ — `/api/v1/agents/`
-
-Cloud-Agent ରୁଟ୍ଗୁଡ଼ିକ (`/api/v1/agents/{health,credentials,tasks,tasks/[id]}`) ସେମାନଙ୍କ
-**ନିଜସ୍ୱ** CORS ହେଡର୍ ସେଟ୍ କରନ୍ତି
-(`src/lib/cloudAgent/api.ts`, `getCloudAgentCorsHeaders`) ଏବଂ
-`Access-Control-Allow-Origin: <origin>|*` ସହିତ
-`Access-Control-Allow-Credentials: true` ମଧ୍ୟ **ନିର୍ଗତ କରନ୍ତି**। ଏହା ଏକମାତ୍ର ପୃଷ୍ଠଭାଗ ଯେଉଁଠାରେ
-ଅରିଜିନ୍-ପୁନଃପ୍ରେରଣ ଏବଂ ପ୍ରମାଣପତ୍ର ଏକାଠି ରହେ, ଏବଂ ଏହା
-`CORS_ALLOW_ALL`ଠାରୁ **ସ୍ୱାଧୀନ**। ଏହି ରୁଟ୍ଗୁଡ଼ିକ ପରିଚାଳନା-ପ୍ରମାଣିତ
-(`requireManagementAuth`); ଯେଉଁ ଅପରେଟର୍ମାନେ ଡ୍ୟାସବୋର୍ଡକୁ ହୋଷ୍ଟ ବାହାରେ ଉନ୍ମୁକ୍ତ କରନ୍ତି, ସେମାନେ
-ସଚେତନ ରହିବା ଉଚିତ ଯେ ପ୍ରତିକ୍ରିୟା ହେଡର୍ଗୁଡ଼ିକ ଦ୍ୱାରା କ୍ରସ୍-ଅରିଜିନ୍ ପ୍ରମାଣପତ୍ର-ସହିତ ପଠନକୁ ଅନୁମତି ମିଳୁଥିବା ଏହା ହିଁ ଏକମାତ୍ର ସ୍ଥାନ।
-ଏହାକୁ ଏକ ସ୍ପଷ୍ଟ ଅନୁମତି-ତାଲିକାରେ ସୀମିତ କରିବା କାର୍ଯ୍ୟ ଏହି CORS ମାର୍ଗଦର୍ଶନଠାରୁ
-ପୃଥକ୍ ଭାବେ ଟ୍ରାକ୍ କରାଯାଉଛି।
-
 ## ପ୍ରଡକ୍ସନ୍ ଯାଞ୍ଚସୂଚୀ
 
 - **ପ୍ରଡକ୍ସନ୍ରେ କେବେବି `CORS_ALLOW_ALL=true` ସେଟ୍ କରନ୍ତୁ ନାହିଁ।** ଏହାକୁ ସେଟ୍ ନକରି ରଖନ୍ତୁ।
@@ -157,7 +143,6 @@ location / {
 | ଡ୍ୟାସ୍ବୋର୍ଡ ପାଇଁ ରନ୍ଟାଇମ୍ ସ୍ଥିତି          | `src/app/api/settings/authz-inventory/route.ts`                      |
 | ଡ୍ୟାସ୍ବୋର୍ଡ ଚେତାବନୀ ବ୍ୟାନର୍               | `src/app/(dashboard)/dashboard/settings/components/AuthzSection.tsx` |
 | CORS Allowed Origins ଫିଲ୍ଡ                | `src/app/(dashboard)/dashboard/settings/components/SecurityTab.tsx`  |
-| ପ୍ରତି-ରୁଟ୍ Cloud-Agent CORS (ବ୍ୟତିକ୍ରମ)   | `src/lib/cloudAgent/api.ts`                                          |
 
 ## ଏହା ମଧ୍ୟ ଦେଖନ୍ତୁ
 

@@ -573,5 +573,4 @@ interface ProviderConfig {
 - [REPOSITORY_MAP.md](../architecture/REPOSITORY_MAP.md) — በማውጫ የተከፋፈለ መግለጫ
 - [AUTO-COMBO.md](../routing/AUTO-COMBO.md) — ባለ16-ንጥረ ነገር ነጥብ አሰጣጥ
 - [MCP-SERVER.md](./MCP-SERVER.md) — MCP አገልጋይ
-- [A2A-SERVER.md](./A2A-SERVER.md) — A2A አገልጋይ
 - ምንጭ፦ `open-sse/` (400+ ፋይሎች፣ ~143K LOC)

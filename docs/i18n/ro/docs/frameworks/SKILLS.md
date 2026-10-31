@@ -258,12 +258,6 @@ Consultați [MCP-SERVER.md](./MCP-SERVER.md) pentru configurarea transportului �
 
 ---
 
-## Integrarea A2A
-
-`src/lib/skills/a2a.ts` exportă descriptorul skill-ului A2A `memory_aware_routing` și un helper `registerA2ASkill(registry)`. Skill-urile A2A personalizate se află în `src/lib/a2a/skills/` și sunt distribuite prin `A2A_SKILL_HANDLERS` (`src/lib/a2a/taskExecution.ts`). Consultați [A2A-SERVER.md](./A2A-SERVER.md) pentru ciclul de viață complet al sarcinii.
-
----
-
 ## Adăugarea unui skill integrat nou
 
 1. **Definiți handlerul** în `src/lib/skills/builtins.ts` (sau într-un fișier alăturat din `src/lib/skills/builtin/`). Semnătură: `(input, { apiKeyId, sessionId }) => Promise<output>`.
@@ -478,7 +472,6 @@ Consultați [SDK-ul pentru pluginuri și integrarea skill-urilor](./PLUGIN_SDK.m
 ## Vezi și
 
 - [MCP-SERVER.md](./MCP-SERVER.md) — înregistrarea instrumentelor MCP și transporturile
-- [A2A-SERVER.md](./A2A-SERVER.md) — ciclul de viață al sarcinilor A2A și distribuirea abilităților
 - [USER_GUIDE.md](../guides/USER_GUIDE.md#-skills-system) — introducere pentru utilizatori
 - [ARCHITECTURE.md](../architecture/ARCHITECTURE.md) — fluxul de procesare a cererilor și harta componentelor
 - Sursă: `src/lib/skills/`, `src/app/api/skills/`, `open-sse/mcp-server/tools/skillTools.ts`

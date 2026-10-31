@@ -128,13 +128,11 @@ Pagini principale din `src/app/(dashboard)/dashboard/`:
 - `/dashboard/limits` — controale pentru cote/limite de rată
 - `/dashboard/cli-tools` — integrarea CLI, detectarea mediului de execuție, generarea configurației
 - `/dashboard/agents` — agenți ACP detectați + înregistrarea agenților personalizați
-- `/dashboard/cloud-agents` — sarcini ale agenților găzduiți în cloud (Codex Cloud, Devin, Jules) și ciclul de viață al sarcinilor
 - `/dashboard/skills` — registrul abilităților A2A, execuția în sandbox, catalogul de abilități integrate
 - `/dashboard/memory` — inspectarea și recuperarea memoriei conversaționale persistente
 - `/dashboard/webhooks` — abonamente webhook pentru ieșire, rotația secretelor, statistici privind reîncercările
 - `/dashboard/batch` — trimiterea sarcinilor în lot și progresul acestora
 - `/dashboard/cache` — statistici pentru memoria cache de tip read-through și pentru raționament, controale de evacuare
-- `/dashboard/playground` — spațiu de testare interactiv pentru conversații cu orice combinație/model configurat
 - `/dashboard/changelog` — vizualizator integrat al istoricului modificărilor (afișează `CHANGELOG.md`)
 - `/dashboard/system` — diagnosticarea mediului de execuție, informații despre versiune, interfață pentru validarea mediului
 - `/dashboard/onboarding` — expert de configurare la prima rulare pentru instalările noi
@@ -252,7 +250,6 @@ Domenii de administrare:
 - Buget: `src/app/api/usage/budget` (GET/POST)
 - Lanțuri de rezervă: `src/app/api/fallback/chains` (GET/POST/DELETE)
 - Audit de conformitate: `src/app/api/compliance/audit-log` (GET, cu paginare + metadate structurate)
-- Evaluări: `src/app/api/evals` (GET/POST), `src/app/api/evals/[suiteId]` (GET)
 - Politici: `src/app/api/policies` (GET/POST)
 - Tokenuri de sincronizare: `src/app/api/sync/tokens` (GET/POST), `src/app/api/sync/tokens/[id]` (GET/DELETE)
 - Pachet de configurare: `src/app/api/sync/bundle` (GET, instantaneu al setărilor/furnizorilor/combinațiilor/cheilor, versionat prin ETag)
@@ -316,7 +313,6 @@ Modulele stratului de domeniu:
 - Expirarea preluării: `src/shared/utils/fetchTimeout.ts`
 - Telemetria cererilor: `src/shared/utils/requestTelemetry.ts`
 - Conformitate/audit: `src/lib/compliance/index.ts`
-- Executorul de evaluări: `src/lib/evals/evalRunner.ts`
 - Persistența stării domeniului: `src/lib/db/domainState.ts` — operațiuni CRUD SQLite pentru lanțuri de rezervă, bugete, istoricul costurilor, starea blocărilor și întrerupătoare de circuit
 
 Modulele furnizorilor OAuth (27 de fișiere individuale în `src/lib/oauth/providers/`):
@@ -385,23 +381,6 @@ Capabilități principale:
 
 Pentru detalii complete despre algoritm (formulele factorilor, ajustarea ponderilor), consultați
 [`docs/routing/AUTO-COMBO.md`](../routing/AUTO-COMBO.md).
-
-### B. Agenți cloud
-
-Cloud Agents integrează platforme terțe găzduite pentru agenți de cod (Codex Cloud, Devin,
-Jules) în spatele unui ciclu de viață uniform al sarcinilor, susținut de o bază de date. Toate endpointurile pentru crearea/inspectarea
-sarcinilor necesită autentificare de administrare.
-
-- Rădăcina modulului: `src/lib/cloudAgent/` (`baseAgent.ts`, `registry.ts`, `api.ts`,
-  `types.ts`, `db.ts`, plus subdirectoare pentru fiecare agent în `agents/`)
-- Implementări pentru fiecare agent: `agents/codex/`, `agents/devin/`, `agents/jules/`
-- Endpointuri publice: `/api/v1/agents/tasks/*` (listare/creare/obținere/anulare)
-- Endpointuri de administrare: `/api/cloud/*` (provizionare, stare, procesare în lot)
-- Panou de control: `/dashboard/cloud-agents`
-- Stocare: tabelul `cloud_agent_tasks`
-
-Pentru detalii despre provizionare și OAuth specifice fiecărui agent, consultați
-[`docs/frameworks/CLOUD_AGENT.md`](../frameworks/CLOUD_AGENT.md).
 
 ### C. Mecanisme de protecție
 

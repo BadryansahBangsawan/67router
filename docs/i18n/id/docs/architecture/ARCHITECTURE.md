@@ -128,13 +128,11 @@ Halaman utama di bawah `src/app/(dashboard)/dashboard/`:
 - `/dashboard/limits` — kontrol kuota/laju
 - `/dashboard/cli-tools` — onboarding CLI, deteksi runtime, pembuatan konfigurasi
 - `/dashboard/agents` — agen ACP yang terdeteksi + pendaftaran agen khusus
-- `/dashboard/cloud-agents` — tugas agen yang di-host di cloud (Codex Cloud, Devin, Jules) dan siklus hidup tugas
 - `/dashboard/skills` — registri skill A2A, eksekusi sandbox, katalog skill bawaan
 - `/dashboard/memory` — pemeriksaan dan pengambilan memori percakapan persisten
 - `/dashboard/webhooks` — langganan webhook keluar, rotasi secret, statistik percobaan ulang
 - `/dashboard/batch` — pengiriman pekerjaan batch dan progres
 - `/dashboard/cache` — statistik cache read-through dan penalaran, kontrol eviksi
-- `/dashboard/playground` — playground chat interaktif terhadap combo/model apa pun yang dikonfigurasi
 - `/dashboard/changelog` — penampil changelog dalam aplikasi (merender `CHANGELOG.md`)
 - `/dashboard/system` — diagnostik runtime, info versi, permukaan validasi lingkungan
 - `/dashboard/onboarding` — wizard penyiapan penggunaan pertama untuk instalasi baru
@@ -252,7 +250,6 @@ Domain manajemen:
 - Anggaran: `src/app/api/usage/budget` (GET/POST)
 - Rantai fallback: `src/app/api/fallback/chains` (GET/POST/DELETE)
 - Audit kepatuhan: `src/app/api/compliance/audit-log` (GET, dengan paginasi + metadata terstruktur)
-- Evaluasi: `src/app/api/evals` (GET/POST), `src/app/api/evals/[suiteId]` (GET)
 - Kebijakan: `src/app/api/policies` (GET/POST)
 - Token sinkronisasi: `src/app/api/sync/tokens` (GET/POST), `src/app/api/sync/tokens/[id]` (GET/DELETE)
 - Bundel konfigurasi: `src/app/api/sync/bundle` (GET, snapshot pengaturan/penyedia/kombinasi/kunci yang diberi versi dengan ETag)
@@ -316,7 +313,6 @@ Modul lapisan domain:
 - Batas waktu fetch: `src/shared/utils/fetchTimeout.ts`
 - Telemetri permintaan: `src/shared/utils/requestTelemetry.ts`
 - Kepatuhan/audit: `src/lib/compliance/index.ts`
-- Runner evaluasi: `src/lib/evals/evalRunner.ts`
 - Persistensi status domain: `src/lib/db/domainState.ts` — CRUD SQLite untuk rantai fallback, anggaran, riwayat biaya, status penguncian, dan pemutus sirkuit
 
 Modul penyedia OAuth (27 file individual di bawah `src/lib/oauth/providers/`):
@@ -385,23 +381,6 @@ Kemampuan utama:
 
 Untuk detail algoritmik lengkap (rumus faktor, penyesuaian bobot), lihat
 [`docs/routing/AUTO-COMBO.md`](../routing/AUTO-COMBO.md).
-
-### B. Agen Cloud
-
-Agen Cloud membungkus platform agen kode yang dihosting pihak ketiga (Codex Cloud, Devin,
-Jules) di balik siklus hidup tugas seragam yang didukung basis data. Semua endpoint pembuatan/pemeriksaan
-tugas memerlukan autentikasi manajemen.
-
-- Root modul: `src/lib/cloudAgent/` (`baseAgent.ts`, `registry.ts`, `api.ts`,
-  `types.ts`, `db.ts`, beserta subdirektori per agen di bawah `agents/`)
-- Implementasi per agen: `agents/codex/`, `agents/devin/`, `agents/jules/`
-- Endpoint publik: `/api/v1/agents/tasks/*` (daftar/buat/dapatkan/batalkan)
-- Endpoint manajemen: `/api/cloud/*` (penyediaan, status, batch)
-- Dasbor: `/dashboard/cloud-agents`
-- Penyimpanan: tabel `cloud_agent_tasks`
-
-Untuk detail penyediaan per agen dan OAuth, lihat
-[`docs/frameworks/CLOUD_AGENT.md`](../frameworks/CLOUD_AGENT.md).
 
 ### C. Guardrail
 

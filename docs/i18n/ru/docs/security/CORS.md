@@ -69,20 +69,6 @@
 недоступную междоменной странице. В общем механизме CORS это **не** создаёт
 вектор перехвата сеанса или кражи учётных данных.
 
-### Одно реальное исключение — `/api/v1/agents/`
-
-Маршруты Cloud-Agent (`/api/v1/agents/{health,credentials,tasks,tasks/[id]}`) задают
-**собственные** заголовки CORS
-(`src/lib/cloudAgent/api.ts`, `getCloudAgentCorsHeaders`) и **действительно** отправляют
-`Access-Control-Allow-Origin: <origin>|*` вместе с
-`Access-Control-Allow-Credentials: true`. Это единственная поверхность, где
-возврат источника и учётные данные используются одновременно, и она **не зависит от
-`CORS_ALLOW_ALL`**. Эти маршруты требуют аутентификацию управления
-(`requireManagementAuth`); операторам, открывающим доступ к панели управления за пределами локального узла, следует
-учитывать, что это единственное место, где заголовки ответа разрешают междоменное чтение
-с учётными данными. Переход к явному списку разрешённых источников отслеживается
-отдельно от этого руководства по CORS.
-
 ## Контрольный список для продакшена
 
 - **Никогда не устанавливайте `CORS_ALLOW_ALL=true` в продакшене.** Оставьте эту переменную не заданной.
@@ -161,7 +147,6 @@ location / {
 | Состояние среды выполнения для панели управления      | `src/app/api/settings/authz-inventory/route.ts`                      |
 | Предупреждающий баннер панели управления              | `src/app/(dashboard)/dashboard/settings/components/AuthzSection.tsx` |
 | Поле CORS Allowed Origins                             | `src/app/(dashboard)/dashboard/settings/components/SecurityTab.tsx`  |
-| CORS Cloud-Agent для отдельных маршрутов (исключение) | `src/lib/cloudAgent/api.ts`                                          |
 
 ## См. также
 

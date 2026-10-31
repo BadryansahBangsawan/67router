@@ -390,34 +390,6 @@
       "description": "Registro di audit MCP (alias di audit --source mcp)"
     }
   },
-  "a2a": {
-    "skills": {
-      "description": "Elenca le competenze A2A disponibili dalla scheda dell'agente"
-    },
-    "invoke": {
-      "description": "Invoca una competenza A2A e restituisce l'ID dell'attività",
-      "input": "Oggetto JSON di input",
-      "input_file": "Percorso del file JSON di input",
-      "wait": "Attendi il completamento dell'attività prima di restituire il risultato",
-      "timeout": "Timeout di attesa per il completamento in ms (predefinito: 60000)"
-    },
-    "tasks": {
-      "description": "Gestisci le attività A2A",
-      "list": {
-        "status": "Filtra per stato",
-        "skill": "Filtra per ID della competenza"
-      },
-      "watch": {
-        "description": "Verifica periodicamente lo stato dell'attività fino al completamento"
-      },
-      "stream": {
-        "description": "Trasmetti gli eventi di esecuzione dell'attività tramite SSE"
-      },
-      "logs": {
-        "description": "Mostra i messaggi e gli artefatti dell'attività"
-      }
-    }
-  },
   "policy": {
     "description": "Gestisci le policy di autorizzazione di 67router",
     "list": {
@@ -696,99 +668,6 @@
       "provider": "ID del provider da revocare",
       "connection_id": "Revoca una connessione specifica tramite ID",
       "yes": "Salta la richiesta di conferma"
-    }
-  },
-  "cloud": {
-    "description": "Gestisci le attività degli agenti AI nel cloud (codex, devin, jules)",
-    "agents": {
-      "description": "Elenca gli agenti cloud disponibili"
-    },
-    "agent": {
-      "description": "Gestisci le attività dell'agente cloud {agent}",
-      "auth": {
-        "description": "Autorizza {agent} tramite OAuth"
-      }
-    },
-    "task": {
-      "description": "Gestisci le attività degli agenti cloud",
-      "create": {
-        "description": "Crea una nuova attività dell'agente",
-        "title": "Titolo dell'attività (per impostazione predefinita, i primi 80 caratteri del prompt)",
-        "prompt": "Testo del prompt dell'attività",
-        "prompt_file": "Leggi il prompt da un file",
-        "repo": "URL del repository da clonare per l'attività",
-        "branch": "Nome del branch da utilizzare",
-        "metadata": "Oggetto JSON con i metadati"
-      },
-      "list": {
-        "description": "Elenca le attività dell'agente",
-        "status": "Filtra per stato (running|completed|failed|cancelled)",
-        "limit": "Numero massimo di risultati (valore predefinito: 50)"
-      },
-      "get": {
-        "description": "Ottieni i dettagli dell'attività tramite ID"
-      },
-      "status": {
-        "description": "Stampa lo stato dell'attività (running|completed|failed|cancelled)"
-      },
-      "cancel": {
-        "description": "Annulla un'attività in esecuzione",
-        "yes": "Salta la richiesta di conferma"
-      },
-      "approve": {
-        "description": "Approva il piano dell'agente per avviare l'esecuzione"
-      },
-      "message": {
-        "description": "Invia un messaggio a un'attività in esecuzione"
-      }
-    },
-    "sources": {
-      "description": "Elenca i file sorgente prodotti da un'attività"
-    }
-  },
-  "eval": {
-    "description": "Gestisci le suite di valutazione e le esecuzioni",
-    "suites": {
-      "description": "Gestisci le suite di valutazione",
-      "list": {
-        "description": "Elenca le suite di valutazione"
-      },
-      "get": {
-        "description": "Ottieni i dettagli della suite di valutazione in base all'ID"
-      },
-      "create": {
-        "description": "Crea una suite di valutazione da un file JSON",
-        "file": "Percorso del file JSON di definizione della suite"
-      }
-    },
-    "run": {
-      "description": "Avvia un'esecuzione di valutazione per una suite",
-      "model": "ID del modello da valutare (predefinito: auto)",
-      "combo": "Forza una combinazione specifica in base al nome",
-      "concurrency": "Numero di campioni simultanei (predefinito: 4)",
-      "tag": "Assegna un tag a questa esecuzione per filtrarla in seguito",
-      "watch": "Monitora l'avanzamento dell'esecuzione fino al completamento"
-    },
-    "list": {
-      "description": "Elenca le esecuzioni di valutazione",
-      "suite": "Filtra per ID della suite",
-      "status": "Filtra per stato",
-      "since": "Restituisci le esecuzioni successive a questo timestamp",
-      "limit": "Numero massimo di risultati (predefinito: 50)"
-    },
-    "get": {
-      "description": "Ottieni i dettagli dell'esecuzione di valutazione in base all'ID"
-    },
-    "results": {
-      "description": "Mostra i risultati dei campioni per un'esecuzione di valutazione",
-      "failed": "Mostra solo i campioni non riusciti"
-    },
-    "cancel": {
-      "description": "Annulla un'esecuzione di valutazione in corso",
-      "yes": "Salta la richiesta di conferma"
-    },
-    "scorecard": {
-      "description": "Mostra la scheda dei punteggi per un'esecuzione di valutazione completata"
     }
   },
   "program": {

@@ -247,26 +247,6 @@ claude mcp add-server omniroute --type http --url http://localhost:20128/api/mcp
 
 **MCP کی مکمل دستاویزات:** [MCP سرور README](../../open-sse/mcp-server/README.md) — 110 ٹولز، IDE کنفیگز، Python/TS/Go کلائنٹس۔
 
-### A2A سیٹ اپ (Agent-to-Agent Protocol)
-
-Agent Card کی توثیق کریں:
-
-```bash
-curl http://localhost:20128/.well-known/agent.json
-```
-
-ایک ٹاسک بھیجیں:
-
-```bash
-curl -X POST http://localhost:20128/a2a \
-  -H 'content-type: application/json' \
-  -d '{"jsonrpc":"2.0","id":"quickstart","method":"message/send","params":{"skill":"quota-management","messages":[{"role":"user","content":"Give me a short quota summary."}]}}'
-```
-
-**A2A کی مکمل دستاویزات:** [A2A سرور README](../../src/lib/a2a/README.md) — JSON-RPC 2.0، مہارتیں، اسٹریمنگ، ٹاسک لائف سائیکل۔
-
----
-
 ## ٹائم آؤٹ کی تشکیل
 
 ### بنیادی ٹائم آؤٹس

@@ -241,26 +241,6 @@ Thêm vào phần cài đặt MCP của bạn:
 
 **Tài liệu MCP đầy đủ:** [README máy chủ MCP](../../open-sse/mcp-server/README.md) — 110 công cụ, cấu hình IDE, máy khách Python/TS/Go.
 
-### Thiết lập A2A (Agent-to-Agent Protocol)
-
-Xác minh Agent Card:
-
-```bash
-curl http://localhost:20128/.well-known/agent.json
-```
-
-Gửi một tác vụ:
-
-```bash
-curl -X POST http://localhost:20128/a2a \
-  -H 'content-type: application/json' \
-  -d '{"jsonrpc":"2.0","id":"quickstart","method":"message/send","params":{"skill":"quota-management","messages":[{"role":"user","content":"Give me a short quota summary."}]}}'
-```
-
-**Tài liệu A2A đầy đủ:** [README máy chủ A2A](../../src/lib/a2a/README.md) — JSON-RPC 2.0, kỹ năng, truyền trực tuyến, vòng đời tác vụ.
-
----
-
 ## Cấu hình thời gian chờ
 
 ### Thời gian chờ cơ bản

@@ -244,14 +244,6 @@ Kataloğun tamamı ve harici agent'ların bunu nasıl kullandığı için [AGENT
 
 Yukarıdaki MCP araç envanteri (`countUniqueMcpTools()` tarafından hesaplanan 110 benzersiz araç), çalışma zamanı yönlendirme/önbellek/sıkıştırma/bellek/yetenekler/proxy/bağlam kaynağı işlemleriyle bilinçli olarak sınırlandırılmıştır. v3.8.0 sürümünde MCP sunucusuyla birlikte iki ilişkili framework sunulur ve bunlar ayrı olarak belgelenmiştir:
 
-### Cloud Agents
-
-Cloud Agents, LLM sağlayıcıları için kullanılan aynı bağlantı modeli üzerinden 67router'a bağlanan, işlem dışı AI kodlama agent'larıdır (codex-cloud, cursor-cloud, devin, jules). Kendi REST yüzeyleri (`/api/v1/agents/*`) üzerinden sunulurlar ve MCP araç kataloğunun parçası **değildirler** — bir Cloud Agent çağırmak herhangi bir MCP kapsamını tüketmez.
-
-- Uygulama: `src/lib/cloudAgent/` (`registry.ts`, `agents/codex.ts`, `agents/cursor.ts`, `agents/devin.ts`, `agents/jules.ts`).
-- Yaşam döngüsü: `createTask`, `getStatus`, `approvePlan`, `sendMessage`, `listSources`.
-- Dokümantasyon: [docs/frameworks/CLOUD_AGENT.md](./CLOUD_AGENT.md).
-
 ### Guardrails
 
 Guardrails, sohbet işlem hattı içinde uygulanan yürütme öncesi/sonrası filtrelerdir (vision-bridge, pii-masker, prompt-injection). MCP araç/yönlendirme katmanına ulaşılmadan önce çalışırlar ve denetim işlem hattına yapılandırılmış ihlaller gönderirler; MCP araçları olarak çağrılmazlar.

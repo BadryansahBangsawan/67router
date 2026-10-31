@@ -15,7 +15,7 @@ Nagbibigay ito ng iisang endpoint na compatible sa OpenAI (`/v1/*`) at nagruruta
 
 Mga pangunahing kakayahan:
 
-- API surface na compatible sa OpenAI para sa CLI/mga tool (375 provider, 156 executor module)
+- API surface na compatible sa OpenAI para sa CLI/mga tool (372 provider, 156 executor module)
 - Translation ng request/response sa iba't ibang format ng provider
 - Model combo fallback (sunod-sunod na paggamit ng maraming modelo)
 - Mga structured combo step (`provider + model + connection`) na may runtime ordering ayon sa `compositeTiers`
@@ -128,13 +128,11 @@ Mga pangunahing page sa ilalim ng `src/app/(dashboard)/dashboard/`:
 - `/dashboard/limits` — mga kontrol sa quota/rate
 - `/dashboard/cli-tools` — onboarding sa CLI, pagtukoy sa runtime, pagbuo ng config
 - `/dashboard/agents` — mga natukoy na ACP agent + pagpaparehistro ng custom agent
-- `/dashboard/cloud-agents` — mga task ng agent na naka-host sa cloud (Codex Cloud, Devin, Jules) at lifecycle ng task
 - `/dashboard/skills` — registry ng A2A skill, sandbox execution, built-in na catalog ng skill
 - `/dashboard/memory` — inspeksyon at retrieval ng persistent na memorya ng pag-uusap
 - `/dashboard/webhooks` — mga outbound webhook subscription, pag-rotate ng secret, mga istatistika ng retry
 - `/dashboard/batch` — pagsusumite ng batch job at progreso
 - `/dashboard/cache` — mga istatistika ng read-through at reasoning cache, mga kontrol sa eviction
-- `/dashboard/playground` — interactive na chat playground para sa anumang naka-configure na combo/modelo
 - `/dashboard/changelog` — viewer ng changelog sa loob ng app (nire-render ang `CHANGELOG.md`)
 - `/dashboard/system` — mga diagnostic ng runtime, impormasyon ng bersyon, surface para sa validation ng environment
 - `/dashboard/onboarding` — wizard para sa unang setup ng mga bagong installation
@@ -252,7 +250,6 @@ Mga domain ng pamamahala:
 - Badyet: `src/app/api/usage/budget` (GET/POST)
 - Mga fallback chain: `src/app/api/fallback/chains` (GET/POST/DELETE)
 - Audit ng compliance: `src/app/api/compliance/audit-log` (GET, may pagination + structured metadata)
-- Mga eval: `src/app/api/evals` (GET/POST), `src/app/api/evals/[suiteId]` (GET)
 - Mga patakaran: `src/app/api/policies` (GET/POST)
 - Mga sync token: `src/app/api/sync/tokens` (GET/POST), `src/app/api/sync/tokens/[id]` (GET/DELETE)
 - Config bundle: `src/app/api/sync/bundle` (GET, snapshot ng mga setting/provider/combo/key na may bersyon gamit ang ETag)
@@ -316,7 +313,6 @@ Mga module ng domain layer:
 - Timeout ng fetch: `src/shared/utils/fetchTimeout.ts`
 - Telemetry ng request: `src/shared/utils/requestTelemetry.ts`
 - Compliance/audit: `src/lib/compliance/index.ts`
-- Runner ng eval: `src/lib/evals/evalRunner.ts`
 - Persistence ng state ng domain: `src/lib/db/domainState.ts` — SQLite CRUD para sa mga fallback chain, budget, history ng gastos, state ng lockout, at mga circuit breaker
 
 Mga module ng OAuth provider (27 indibidwal na file sa ilalim ng `src/lib/oauth/providers/`):
@@ -385,23 +381,6 @@ Mga pangunahing kakayahan:
 
 Para sa buong detalye ng algorithm (mga formula ng salik, pag-tune ng weight), tingnan ang
 [`docs/routing/AUTO-COMBO.md`](../routing/AUTO-COMBO.md).
-
-### B. Cloud Agents
-
-Inilalagay ng Cloud Agents ang mga third-party na naka-host na platform ng code agent (Codex Cloud, Devin,
-Jules) sa likod ng isang pare-parehong lifecycle ng task na sinusuportahan ng DB. Nangangailangan ng management authentication
-ang lahat ng endpoint para sa paggawa/pagsusuri ng task.
-
-- Root ng module: `src/lib/cloudAgent/` (`baseAgent.ts`, `registry.ts`, `api.ts`,
-  `types.ts`, `db.ts`, kasama ang mga subdirectory ng bawat agent sa ilalim ng `agents/`)
-- Mga implementation ng bawat agent: `agents/codex/`, `agents/devin/`, `agents/jules/`
-- Mga pampublikong endpoint: `/api/v1/agents/tasks/*` (list/create/get/cancel)
-- Mga management endpoint: `/api/cloud/*` (provisioning, status, batch)
-- Dashboard: `/dashboard/cloud-agents`
-- Storage: table na `cloud_agent_tasks`
-
-Para sa mga detalye ng provisioning at OAuth ng bawat agent, tingnan ang
-[`docs/frameworks/CLOUD_AGENT.md`](../frameworks/CLOUD_AGENT.md).
 
 ### C. Guardrails
 

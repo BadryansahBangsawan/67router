@@ -43,8 +43,6 @@ v3.7.x → v3.8.0 dövründə sıfır konfiqurasiyalı avtomatik marşrutlaşdı
 - 🤝 **GitLab Duo OAuth provayderi** — GitLab giriş məlumatları ilə daxil olun
 - 🧠 **Reasoning Replay Cache** — düşünmə izlərinin hibrid, yaddaşdaxili + SQLite əsaslı davamlı saxlanması
 
-📚 **Əlaqəli sənədlər:** [Bacarıqlar Çərçivəsi](../frameworks/SKILLS.md) · [Yaddaş Sistemi](../frameworks/MEMORY.md) · [Bulud Agentləri](../frameworks/CLOUD_AGENT.md) · [Vebhuklar](../frameworks/WEBHOOKS.md) · [Reasoning Replay Cache](../routing/REASONING_REPLAY.md)
-
 ---
 
 ## 🔌 Provayderlər
@@ -103,12 +101,6 @@ Real vaxt rejimində monitorinq: işləmə müddəti, yaddaş, versiya, gecikmə
 API tərcümələrini sazlamaq üçün dörd rejim: **Sınaq Mühiti** (format çeviricisi), **Söhbət Test Aləti** (canlı sorğular), **Test Stendi** (toplu testlər) və **Canlı Monitor** (real vaxt axını).
 
 ![Tərcüməçi Sınaq Mühiti](../screenshots/05-translator.png)
-
----
-
-## 🎮 Model Sınaq Mühiti _(v2.0.9+)_
-
-İstənilən modeli birbaşa idarəetmə panelindən sınaqdan keçirin. Provayderi, modeli və son nöqtəni seçin, Monaco Editor ilə sorğular yazın, cavabları real vaxtda axın şəklində alın, axını yarıda dayandırın və vaxt göstəricilərinə baxın.
 
 ---
 

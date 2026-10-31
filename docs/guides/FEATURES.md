@@ -45,8 +45,6 @@ The v3.7.x → v3.8.0 cycle added zero-config auto routing, new providers, OAuth
 - 🤝 **GitLab Duo OAuth provider** — login with GitLab credentials
 - 🧠 **Reasoning Replay Cache** — hybrid in-memory + SQLite persistence of reasoning traces
 
-📚 **Related docs:** [Skills Framework](../frameworks/SKILLS.md) · [Memory System](../frameworks/MEMORY.md) · [Cloud Agents](../frameworks/CLOUD_AGENT.md) · [Reasoning Replay Cache](../routing/REASONING_REPLAY.md)
-
 ---
 
 ## 🔌 Providers
@@ -106,12 +104,6 @@ Real-time monitoring: uptime, memory, version, latency percentiles (p50/p95/p99)
 Four modes for debugging API translations: **Playground** (format converter), **Chat Tester** (live requests), **Test Bench** (batch tests), and **Live Monitor** (real-time stream).
 
 ![Translator Playground](../screenshots/05-translator.png)
-
----
-
-## 🎮 Model Playground _(v2.0.9+)_
-
-Test any model directly from the dashboard. Select provider, model, and endpoint, write prompts with Monaco Editor, stream responses in real-time, abort mid-stream, and view timing metrics.
 
 ---
 

@@ -43,8 +43,6 @@ Siklus v3.7.x → v3.8.0 menghadirkan perutean otomatis tanpa konfigurasi, penye
 - 🤝 **Penyedia OAuth GitLab Duo** — masuk dengan kredensial GitLab
 - 🧠 **Cache Pemutaran Ulang Penalaran** — persistensi jejak penalaran secara hibrida dalam memori + SQLite
 
-📚 **Dokumentasi terkait:** [Kerangka Kerja Skills](../frameworks/SKILLS.md) · [Sistem Memori](../frameworks/MEMORY.md) · [Agen Cloud](../frameworks/CLOUD_AGENT.md) · [Webhook](../frameworks/WEBHOOKS.md) · [Cache Pemutaran Ulang Penalaran](../routing/REASONING_REPLAY.md)
-
 ---
 
 ## 🔌 Penyedia
@@ -104,12 +102,6 @@ Pemantauan waktu nyata: waktu aktif, memori, versi, persentil latensi (p50/p95/p
 Empat mode untuk men-debug terjemahan API: **Playground** (konverter format), **Penguji Chat** (permintaan langsung), **Bangku Uji** (pengujian batch), dan **Monitor Langsung** (stream waktu nyata).
 
 ![Playground Penerjemah](../screenshots/05-translator.png)
-
----
-
-## 🎮 Playground Model _(v2.0.9+)_
-
-Uji model apa pun secara langsung dari dasbor. Pilih penyedia, model, dan endpoint, tulis prompt dengan Monaco Editor, stream respons secara waktu nyata, hentikan di tengah stream, dan lihat metrik waktu.
 
 ---
 

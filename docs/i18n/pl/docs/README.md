@@ -83,23 +83,19 @@ Materiały referencyjne — powierzchnia API, zmienne środowiskowe, flagi CLI, 
 Podsystemy wtykowe udostępniane klientom, agentom i operatorom.
 
 - [MCP-SERVER.md](frameworks/MCP-SERVER.md) — serwer Model Context Protocol.
-- [A2A-SERVER.md](frameworks/A2A-SERVER.md) — serwer Agent-to-Agent (A2A) JSON-RPC.
 - [ACP.md](frameworks/ACP.md) — Agent Client Protocol.
 - [AGENT_PROTOCOLS_GUIDE.md](frameworks/AGENT_PROTOCOLS_GUIDE.md) — przegląd agentów A2A / ACP / Cloud.
 - [AGENTBRIDGE.md](frameworks/AGENTBRIDGE.md) — most agenta IDE.
 - [AGENT-SKILLS.md](frameworks/AGENT-SKILLS.md) — katalog umiejętności agentów.
-- [CLOUD_AGENT.md](frameworks/CLOUD_AGENT.md) — runtime i dostawcy cloud agent.
 - [SKILLS.md](frameworks/SKILLS.md) — framework Skills (piaskownicowe rozszerzenie).
 - [MEMORY.md](frameworks/MEMORY.md) — trwała pamięć (FTS5 + Qdrant).
 - [WEBHOOKS.md](frameworks/WEBHOOKS.md) — zdarzenia webhook i dyspozycja.
-- [EVALS.md](frameworks/EVALS.md) — zestawy ewaluacji.
 - [GAMIFICATION.md](frameworks/GAMIFICATION.md) — system grywalizacji i rankingów.
 - [EMBEDDED-SERVICES.md](frameworks/EMBEDDED-SERVICES.md) — wbudowane usługi sidecar (9Router, CLIProxyAPI).
 - [NOTION_CONTEXT.md](frameworks/NOTION_CONTEXT.md) — źródło kontekstu Notion.
 - [OBSIDIAN_CONTEXT.md](frameworks/OBSIDIAN_CONTEXT.md) — źródło kontekstu Obsidian.
 - [OPENCODE.md](frameworks/OPENCODE.md) — integracja OpenCode.
 - [OPEN_SSE_ARCHITECTURE.md](frameworks/OPEN_SSE_ARCHITECTURE.md) — wnętrze silnika streamingu open-sse.
-- [PLAYGROUND_STUDIO.md](frameworks/PLAYGROUND_STUDIO.md) — UI Playground Studio.
 - [SEARCH_TOOLS_STUDIO.md](frameworks/SEARCH_TOOLS_STUDIO.md) — UI Search Tools Studio.
 - [TRAFFIC_INSPECTOR.md](frameworks/TRAFFIC_INSPECTOR.md) — inspector ruchu (MITM).
 - [PLUGINS.md](frameworks/PLUGINS.md) — przegląd systemu wtyczek CLI.

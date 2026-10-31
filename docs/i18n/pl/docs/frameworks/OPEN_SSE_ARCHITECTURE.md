@@ -580,5 +580,4 @@ Silnik routingu ma ścisłe budżety wydajności:
 - [REPOSITORY_MAP.md](../architecture/REPOSITORY_MAP.md) — katalog po katalogu
 - [AUTO-COMBO.md](../routing/AUTO-COMBO.md) — scoring 13-czynnikowy
 - [MCP-SERVER.md](./MCP-SERVER.md) — serwer MCP
-- [A2A-SERVER.md](./A2A-SERVER.md) — serwer A2A
 - Źródło: `open-sse/` (400+ plików, ~143K LOC)

@@ -588,7 +588,6 @@ Radar વૈકલ્પિક છે અને માત્ર GET નો ઉ�
 - **🔑 Per-key રૂટિંગ નિયંત્રણ** — `forcedModel` વડે API કીને એક મોડલ કે કોમ્બો સાથે પિન કરો, અને કીના મોડલ્સ અને કોમ્બો એટોમિક રીતે ઉમેરો કે દૂર કરો (`/api/keys/{id}/access`). → [API સંદર્ભ](docs/reference/API_REFERENCE.md) · [OpenAPI](docs/openapi.yaml)
 - **🛡️ વધુ સૂક્ષ્મ PII નિયંત્રણો** — પ્રકાર-પ્રમાણે પસંદગી, 20 સુધીની માન્ય કસ્ટમ માસ્કિંગ પેટર્ન્સ અને પ્રકાર-પ્રમાણે ડિટેક્શન કાઉન્ટર્સ; માસ્કિંગ જાતે opt-in જ રહે છે. → [ગાર્ડરેલ્સ](docs/security/GUARDRAILS.md)
 - **🌍 67 ભાષાઓ** — ડેશબોર્ડ, ડોક્સ મિરર્સ અને CLI, જેમાં `npm run i18n:add-locale` એક જ કમાન્ડમાં દરેક જગ્યાએ ભાષા ઉમેરે છે. → [i18n માર્ગદર્શિકા](docs/guides/I18N.md)
-- **🎛️ OmniConductor** — તમારા એજન્ટ ફ્લીટ માટે inbound A2A ડેલિગેશન, Agent Card પર Conductor સ્કિલ્સ, અને Faro push-to-talk વોઇસ ચેટ સાથે ડેશબોર્ડ પેનલ. → [A2A સર્વર](docs/frameworks/A2A-SERVER.md)
 - **🛂 એડેપ્ટિવ એડમિશન અને ઓવરલોડ પ્રોટેક્શન** — ભારે ચેટ રિક્વેસ્ટ્સ 503 આપવાને બદલે કતારમાં લાગે છે, દરેક કનેક્શન માટે એટોમિક RPM રોલિંગ લીઝ સાથે. → [રેઝિલિયન્સ માર્ગદર્શિકા](docs/architecture/RESILIENCE_GUIDE.md)
 - **🗂️ કેનોનિકલ `/v1/models` ક્રમ** — દરેક પ્રોવાઇડર માટે એક સતત પ્રોવાઇડર-ગ્રુપ કરેલો બ્લોક (કોમ્બો પહેલા પિન કરેલા), દરેક કેટલોગ સોર્સમાં સ્થિર. → [API સંદર્ભ](docs/reference/API_REFERENCE.md)
 - **🗜️ કોમ્પ્રેશન હાર્ડનિંગ** — ડિફોલ્ટ-ઓન ઇન્ફ્લેશન ગાર્ડ, DE / FR / JA + Chinese (wényán) માટે Caveman પેક્સ, Gradle & .NET માટે RTK ફિલ્ટર્સ. → [કોમ્પ્રેશન](docs/compression/COMPRESSION_ENGINES.md)
@@ -907,7 +906,6 @@ omniroute contexts use default            # ← સ્થાનિક સર્�
   <tr><td align="left" nowrap>🧰 <b>MCP (stdio)</b></td><td align="left" nowrap><code>omniroute --mcp</code></td><td align="left">Claude Desktop, Cursor અથવા કોઈપણ MCP ક્લાયન્ટ સાથે જોડો</td></tr>
   <tr><td align="left" nowrap>🌊 <b>MCP (HTTP)</b></td><td align="left" nowrap><code>/api/mcp/stream</code></td><td align="left">રિમોટ MCP — <b>110 ટૂલ્સ</b>, 33 સ્કોપ્સ (અમલીકરણ ઑપ્ટ-ઇન), સંપૂર્ણ ઑડિટ ટ્રેઇલ</td></tr>
   <tr><td align="left" nowrap>📡 <b>MCP (SSE)</b></td><td align="left" nowrap><code>/api/mcp/sse</code></td><td align="left">સ્ટ્રીમિંગ MCP ટ્રાન્સપોર્ટ</td></tr>
-  <tr><td align="left" nowrap>🤝 <b>A2A</b></td><td align="left" nowrap><code>/.well-known/agent.json</code></td><td align="left">એજન્ટ-ટુ-એજન્ટ, <b>JSON-RPC 2.0</b> + SSE, 6 સ્કિલ્સ</td></tr>
   <tr><td align="left" nowrap>🌐 <b>REST API</b></td><td align="left" nowrap><code>/v1/*</code></td><td align="left">OpenAI-સુસંગત — ચેટ, એમ્બેડિંગ્સ, ઇમેજિસ, ઑડિયો, OCR</td></tr>
   <tr><td align="left" nowrap>🔔 <b>Webhooks</b></td><td align="left" nowrap><code>/api/webhooks</code></td><td align="left">રિક્વેસ્ટ / ક્વોટા ઇવેન્ટ્સને Slack, Discord, Telegram અથવા કોઈપણ URL પર પુશ કરો</td></tr>
   <tr><td align="left" nowrap>🛰️ <b>રિમોટ CLI</b></td><td align="left" nowrap><code>omniroute connect <host></code></td><td align="left">સ્કોપ્ડ ઍક્સેસ ટોકન્સ વડે રિમોટ ઇન્સ્ટન્સનું સંચાલન કરો</td></tr>
@@ -917,8 +915,6 @@ omniroute contexts use default            # ← સ્થાનિક સર્�
 # Claude Codeને MCP દ્વારા સંપૂર્ણ 67router ટૂલસેટ આપો:
 claude mcp add-server omniroute --type http --url http://localhost:20128/api/mcp/stream
 ```
-
-<sub>📖 [MCP સર્વર](docs/frameworks/MCP-SERVER.md) · [A2A સર્વર](docs/frameworks/A2A-SERVER.md) · [એજન્ટ પ્રોટોકોલ્સ](docs/frameworks/AGENT_PROTOCOLS_GUIDE.md)</sub>
 
 <br/>
 
@@ -1384,7 +1380,6 @@ OMNIROUTE_SKIP_POSTINSTALL=1 npm install -g omniroute   # CI=1 પણ તેન�
   <tr><td nowrap><b><a href="open-sse/mcp-server/README.md">MCP સર્વર</a></b></td><td>110 MCP ટૂલ્સ, IDE કૉન્ફિગરેશન્સ, Python/TS/Go ક્લાયન્ટ્સ</td></tr>
   <tr><td nowrap><b><a href="docs/frameworks/MCP-SERVER.md">MCP સર્વર માર્ગદર્શિકા</a></b></td><td>MCP ઇન્સ્ટોલેશન, ટ્રાન્સપોર્ટ્સ અને ટૂલ સંદર્ભ</td></tr>
   <tr><td nowrap><b><a href="src/lib/a2a/README.md">A2A સર્વર</a></b></td><td>JSON-RPC 2.0 પ્રોટોકોલ, કૌશલ્યો, સ્ટ્રીમિંગ, કાર્ય વ્યવસ્થાપન</td></tr>
-  <tr><td nowrap><b><a href="docs/frameworks/A2A-SERVER.md">A2A સર્વર માર્ગદર્શિકા</a></b></td><td>A2A એજન્ટ કાર્ડ, કાર્યો, કૌશલ્યો અને સ્ટ્રીમિંગ</td></tr>
 </table>
 
 ### 📋 પ્રોજેક્ટ અને ગુણવત્તા

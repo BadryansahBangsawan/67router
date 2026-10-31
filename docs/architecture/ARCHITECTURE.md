@@ -17,7 +17,7 @@ It provides a single OpenAI-compatible endpoint (`/v1/*`) and routes traffic acr
 
 Core capabilities:
 
-- OpenAI-compatible API surface for CLI/tools (375 providers, 156 executor modules)
+- OpenAI-compatible API surface for CLI/tools (372 providers, 156 executor modules)
 - Request/response translation across provider formats
 - Model combo fallback (multi-model sequence)
 - Structured combo steps (`provider + model + connection`) with runtime ordering by `compositeTiers`
@@ -58,7 +58,7 @@ Core capabilities:
 - Eval framework for LLM quality assurance
 - Health dashboard with real-time provider circuit breaker status
 - MCP Server (107 tools) with 3 transports (stdio/SSE/Streamable HTTP)
-- A2A Server (JSON-RPC 2.0 + SSE) with skills and task lifecycle
+- A2A task store (Conductor-mirrored tasks, `/api/a2a/tasks`)
 - Memory system (extraction, injection, retrieval, summarization)
 - Skills system (registry, executor, sandbox, built-in skills)
 - MITM proxy with certificate management and DNS handling
@@ -120,7 +120,7 @@ the rest are linked from their domain-specific guides.
 Main pages under `src/app/(dashboard)/dashboard/`:
 
 - `/dashboard` — quick start + provider overview
-- `/dashboard/endpoint` — endpoint proxy + MCP + A2A + API endpoint tabs
+- `/dashboard/endpoint` — endpoint proxy + MCP + API endpoint tabs
 - `/dashboard/providers` — provider connections and credentials
 - `/dashboard/combos` — combo strategies, templates, step-based builder, model routing rules, manual persisted ordering
 - `/dashboard/auto-combo` — Auto Combo Engine: scoring weights, mode packs, virtual factory presets, telemetry
@@ -129,11 +129,9 @@ Main pages under `src/app/(dashboard)/dashboard/`:
 - `/dashboard/limits` — quota/rate controls
 - `/dashboard/cli-tools` — CLI onboarding, runtime detection, config generation
 - `/dashboard/agents` — detected ACP agents + custom agent registration
-- `/dashboard/cloud-agents` — cloud-hosted agent tasks (Codex Cloud, Devin, Jules) and task lifecycle
 - `/dashboard/skills` — A2A skill registry, sandbox execution, built-in skill catalog
 - `/dashboard/memory` — persistent conversational memory inspection and retrieval
 - `/dashboard/cache` — read-through and reasoning cache statistics, eviction controls
-- `/dashboard/playground` — interactive chat playground against any configured combo/model
 - `/dashboard/changelog` — in-app changelog viewer (renders `CHANGELOG.md`)
 - `/dashboard/system` — runtime diagnostics, version info, environment validation surface
 - `/dashboard/onboarding` — first-run setup wizard for new installations
@@ -259,7 +257,6 @@ Management domains:
 - Budget: `src/app/api/usage/budget` (GET/POST)
 - Fallback chains: `src/app/api/fallback/chains` (GET/POST/DELETE)
 - Compliance audit: `src/app/api/compliance/audit-log` (GET, with pagination + structured metadata)
-- Evals: `src/app/api/evals` (GET/POST), `src/app/api/evals/[suiteId]` (GET)
 - Policies: `src/app/api/policies` (GET/POST)
 - Sync tokens: `src/app/api/sync/tokens` (GET/POST), `src/app/api/sync/tokens/[id]` (GET/DELETE)
 - Config bundle: `src/app/api/sync/bundle` (GET, ETag-versioned snapshot of settings/providers/combos/keys)
@@ -323,7 +320,6 @@ Domain layer modules:
 - Fetch timeout: `src/shared/utils/fetchTimeout.ts`
 - Request telemetry: `src/shared/utils/requestTelemetry.ts`
 - Compliance/audit: `src/lib/compliance/index.ts`
-- Eval runner: `src/lib/evals/evalRunner.ts`
 - Domain state persistence: `src/lib/db/domainState.ts` — SQLite CRUD for fallback chains, budgets, cost history, lockout state, circuit breakers
 
 OAuth provider modules (27 individual files under `src/lib/oauth/providers/`):
@@ -392,23 +388,6 @@ Key capabilities:
 
 For full algorithmic detail (factor formulas, weight tuning), see
 [`docs/routing/AUTO-COMBO.md`](../routing/AUTO-COMBO.md).
-
-### B. Cloud Agents
-
-Cloud Agents wraps third-party hosted code-agent platforms (Codex Cloud, Devin,
-Jules) behind a uniform DB-backed task lifecycle. All task creation/inspection
-endpoints require management authentication.
-
-- Module root: `src/lib/cloudAgent/` (`baseAgent.ts`, `registry.ts`, `api.ts`,
-  `types.ts`, `db.ts`, plus per-agent subdirectories under `agents/`)
-- Per-agent implementations: `agents/codex/`, `agents/devin/`, `agents/jules/`
-- Public endpoints: `/api/v1/agents/tasks/*` (list/create/get/cancel)
-- Management endpoints: `/api/cloud/*` (provisioning, status, batch)
-- Dashboard: `/dashboard/cloud-agents`
-- Storage: `cloud_agent_tasks` table
-
-For per-agent provisioning and OAuth specifics, see
-[`docs/frameworks/CLOUD_AGENT.md`](../frameworks/CLOUD_AGENT.md).
 
 ### C. Guardrails
 

@@ -71,11 +71,9 @@ Quyidagi fayllar hozirda eng past satr qamroviga (< 60%) ega va 6–7-bosqichlar
 | 11  | `open-sse/services/compression/progressiveAging.ts`          |    13.26% |
 | 12  | `open-sse/services/compression/engines/rtk/smartTruncate.ts` |    13.43% |
 | 13  | `open-sse/services/compression/engines/rtk/deduplicator.ts`  |    13.51% |
-| 14  | `src/lib/cloudAgent/agents/jules.ts`                         |    13.52% |
 | 15  | `open-sse/services/compression/lite.ts`                      |    14.46% |
 | 16  | `src/app/api/v1/rerank/route.ts`                             |    14.94% |
 | 17  | `open-sse/services/compression/preservation.ts`              |    15.07% |
-| 18  | `src/lib/cloudAgent/agents/codex.ts`                         |    15.54% |
 | 19  | `open-sse/services/tierResolver.ts`                          |    16.66% |
 | 20  | `src/app/docs/components/DocsLazyWrapper.tsx`                |    16.66% |
 
@@ -83,7 +81,6 @@ Quyidagi fayllar hozirda eng past satr qamroviga (< 60%) ega va 6–7-bosqichlar
 
 - `open-sse/services/compression/**` past qamrovli fayllarning eng zich toʻplami boʻlib, qolgan tafovutning asosiy qismini tashkil etadi.
 - Paketli amallar va qayta saralash API marshrutlari (`src/app/api/v1/batches/**`, `src/app/api/v1/rerank/route.ts`) uchun ishlov beruvchi darajasidagi testlar zarur.
-- Bulut agenti adapterlari (`src/lib/cloudAgent/agents/jules.ts`, `codex.ts`) va `tierResolver.ts` uchun ssenariy testlari zarur.
 - Hujjatlar interfeysi komponentlari va `src/mitm/systemCommands.ts` ustuvorligi pastroq, ammo tarmoqlar qamrovini kam xarajat bilan oshirish imkonini beradi.
 
 ## Bajarish nazorat roʻyxati

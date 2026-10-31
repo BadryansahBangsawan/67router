@@ -24,7 +24,6 @@
 - [مہارتوں کا نظام](#-skills-system)
 - [میموری سسٹم](#-memory-system)
 - [ویب ہُکس](#-webhooks)
-- [کلاؤڈ ایجنٹس](#-cloud-agents)
 - [پروگرامی انتظام](#-programmatic-management)
 - [اندرونی CLI](#-internal-cli)
 - [ڈیسک ٹاپ ایپلیکیشن (Electron)](#-desktop-application-electron)
@@ -1234,8 +1233,6 @@ SSE URL `http://localhost:20128/api/mcp/sse` اور **ڈیش بورڈ → API ک
 
 ### دائرۂ کار
 
-MCP فی الحال 32 نام زدہ دائرۂ کار متعین کرتا ہے۔ ہر Bearer کلید کو مخصوص دائروں تک محدود کیا جا سکتا ہے — مستند دائروں اور ٹولز کی فہرست کے لیے [MCP-SERVER.md](../frameworks/MCP-SERVER.md) اور JSON-RPC اسکیما کے لیے [A2A-SERVER.md](../frameworks/A2A-SERVER.md) دیکھیں۔
-
 ---
 
 ## 🧠 مہارتوں کا نظام
@@ -1244,7 +1241,6 @@ MCP فی الحال 32 نام زدہ دائرۂ کار متعین کرتا ہے�
 
 - **مارکیٹ پلیس UI** — **Dashboard → Skills** سے مہارتیں براؤز اور انسٹال کریں
 - **فی کلید اسکوپس** — محدود کریں کہ کون سی API keys کن مہارتوں کو استعمال کر سکتی ہیں
-- **حسبِ ضرورت مہارتیں** — `src/lib/a2a/skills/` میں ایک TypeScript فائل رکھیں، اسے رجسٹر کریں، اور وہ فوراً A2A کے ذریعے قابلِ استعمال ہو جائے گی
 
 مکمل حوالہ: [SKILLS.md](../frameworks/SKILLS.md)۔
 
@@ -1273,18 +1269,6 @@ MCP فی الحال 32 نام زدہ دائرۂ کار متعین کرتا ہے�
 - دوبارہ کوششیں: exponential backoff کے ساتھ 3 کوششیں، پھر dead-letter queue
 
 مکمل schema کے لیے [WEBHOOKS.md](../frameworks/WEBHOOKS.md) دیکھیں۔
-
----
-
-## ☁️ کلاؤڈ ایجنٹس
-
-67router کلاؤڈ کوڈنگ ایجنٹس (**OpenAI Codex Cloud**، **Devin**، **Jules**، **Antigravity**) کے ساتھ ضم ہوتا ہے، تاکہ آپ اسی dashboard سے طویل دورانیے کے ٹاسکس روانہ کر سکیں جو آپ کی مقامی routing کو سنبھالتا ہے۔
-
-- **Dashboard → Cloud Agents** میں یا `POST /api/v1/agents/tasks` کے ذریعے ٹاسکس بنائیں
-- ہر ٹاسک کی حیثیت، logs اور artifacts کو ٹریک کریں
-- ہر provider کے لیے اپنی API key استعمال کریں — اسناد کبھی بھی 67router instance سے باہر نہیں جاتیں
-
-مکمل حوالہ: [CLOUD_AGENT.md](../frameworks/CLOUD_AGENT.md)۔
 
 ---
 
@@ -1341,7 +1325,6 @@ omniroute restore [<timestamp>]    # اسنیپ شاٹ سے بحال کریں
 omniroute health                   # تفصیلی صحت کی معلومات (بریکرز، کیش، میموری)
 omniroute quota                    # فراہم کنندہ کے کوٹے کا استعمال
 omniroute mcp status               # MCP سرور کی حیثیت
-omniroute a2a status               # A2A سرور کی حیثیت
 omniroute tunnel list|create|stop  # Cloudflare/Tailscale/ngrok ٹنلز
 omniroute reset-password           # ایڈمن پاس ورڈ ری سیٹ کریں
 omniroute --mcp                    # stdio پر MCP سرور شروع کریں

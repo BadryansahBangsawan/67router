@@ -126,5 +126,3 @@ v cílovém prostředí.
 - [Protokoly agentů](./AGENT_PROTOCOLS_GUIDE.md)
 - [Kontrakty spouštění CLI](../guides/CLI-LAUNCH-CONTRACTS.md)
 - [Nástroje CLI](../reference/CLI-TOOLS.md)
-- [Server A2A](./A2A-SERVER.md)
-- [Cloudoví agenti](./CLOUD_AGENT.md)

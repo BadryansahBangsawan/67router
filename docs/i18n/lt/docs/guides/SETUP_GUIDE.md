@@ -241,26 +241,6 @@ Pridėkite prie savo MCP nustatymų:
 
 **Visa MCP dokumentacija:** [MCP serverio README](../../open-sse/mcp-server/README.md) — 110 įrankių, IDE konfigūracijos, Python/TS/Go klientai.
 
-### A2A sąranka (Agent-to-Agent Protocol)
-
-Patikrinkite agento kortelę:
-
-```bash
-curl http://localhost:20128/.well-known/agent.json
-```
-
-Išsiųskite užduotį:
-
-```bash
-curl -X POST http://localhost:20128/a2a \
-  -H 'content-type: application/json' \
-  -d '{"jsonrpc":"2.0","id":"quickstart","method":"message/send","params":{"skill":"quota-management","messages":[{"role":"user","content":"Give me a short quota summary."}]}}'
-```
-
-**Visa A2A dokumentacija:** [A2A serverio README](../../src/lib/a2a/README.md) — JSON-RPC 2.0, įgūdžiai, srautinis perdavimas, užduočių gyvavimo ciklas.
-
----
-
 ## Skirtojo laiko konfigūracija
 
 ### Pagrindiniai skirtojo laiko nustatymai

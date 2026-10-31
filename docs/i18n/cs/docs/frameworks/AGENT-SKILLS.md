@@ -44,7 +44,6 @@ src/app/api/agent-skills/
   generate/route.ts                    — POST /api/agent-skills/generate (vyžaduje ověření)
 
 open-sse/mcp-server/tools/agentSkillTools.ts  — 3 nástroje MCP (seznam, získání, pokrytí)
-src/lib/a2a/skills/listCapabilities.ts        — Dovednost A2A: list-capabilities
 ```
 
 ---
@@ -140,8 +139,6 @@ Dovednost A2A `list-capabilities` vrací úplný katalog 45 dovedností jako art
 }
 ```
 
-Podrobnosti o protokolu najdete v souboru [A2A-SERVER.md](./A2A-SERVER.md).
-
 ---
 
 ## Katalog — 45 ID dovedností
@@ -189,12 +186,11 @@ Podrobnosti o protokolu najdete v souboru [A2A-SERVER.md](./A2A-SERVER.md).
 | `cli-contexts`        | cli-contexts       | `omniroute contexts`    |
 | `cli-cost-usage`      | cli-cost-usage     | `omniroute cost`        |
 | `cli-mcp`             | cli-mcp            | `omniroute mcp`         |
-| `cli-a2a`             | cli-a2a            | `omniroute a2a`         |
 | `cli-tunnel`          | cli-tunnel         | `omniroute tunnel`      |
 | `cli-backup-sync`     | cli-backup-sync    | `omniroute backup`      |
 | `cli-policy-audit`    | cli-policy-audit   | `omniroute policy`      |
 | `cli-batches`         | cli-batches        | `omniroute batch`       |
-| `cli-eval`            | cli-eval           | `omniroute eval`        |
+| `cli-eval`            | cli-eval           | `omniroute simulate`    |
 | `cli-plugins-skills`  | cli-plugins-skills | `omniroute plugins`     |
 | `cli-setup`           | cli-setup          | `omniroute setup`       |
 | `cli-skill-collector` | cli-setup          | `omniroute skills`      |
@@ -312,6 +308,5 @@ curl "http://localhost:20128/api/agent-skills/coverage"
 
 - [SKILLS.md](./SKILLS.md) — framework Omni Skills (vkládání nástrojů LLM + tržiště)
 - [MCP-SERVER.md](./MCP-SERVER.md) — katalog nástrojů MCP (nástroje `omniroute_agent_skills_*`)
-- [A2A-SERVER.md](./A2A-SERVER.md) — protokol A2A (dovednost `list-capabilities`)
 - `src/lib/agentSkills/` — katalog, generátor, analyzátory
 - `skills/` — vygenerované soubory SKILL.md (45 položek)

@@ -1437,9 +1437,8 @@ Amsar GET ta haɗa da `agents[]` (id, name, binary, version, installed, protocol
 
 ### Kimantawa
 
-| Endpoint     | Hanya    | Bayani                                      |
-| ------------ | -------- | ------------------------------------------- |
-| `/api/evals` | GET/POST | Jera tarin kimantawa / gudanar da kimantawa |
+| Endpoint | Hanya | Bayani |
+| -------- | ----- | ------ |
 
 ### Manufofi
 
@@ -1759,31 +1758,6 @@ Tsarin gudanar da maɓalli ta atomatik yana amfani da su don bayarwa da sauya ma
 
 ---
 
-## Ka'idar Wakilai
-
-Ayyukan wakilan girgije (Claude Code, Codex Cloud, OpenHands, da sauransu) waɗanda ake aiwatarwa daga nesa a madadin masu amfani da 67router.
-
-| Hanya  | Tafarki                       | Bayani                                                                                                                                                   |
-| ------ | ----------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| GET    | `/api/v1/agents/tasks`        | Jera ayyuka — `?provider=`, `?status=`, `?limit=` na zaɓi ne (1–500, tsoho 50)                                                                           |
-| POST   | `/api/v1/agents/tasks`        | Ƙirƙiri aiki — ana inganta jiki ta `CreateCloudAgentTaskSchema` (`providerId`, `prompt`, `source`, `options?`). Yana dawo da `201` tare da kunshin aikin |
-| DELETE | `/api/v1/agents/tasks?id=...` | Share aiki                                                                                                                                               |
-| GET    | `/api/v1/agents/tasks/[id]`   | Karanta aiki — yana sabunta matsayi kai tsaye daga wakilin girgije na sama idan an saita `external_id`                                                   |
-| POST   | `/api/v1/agents/tasks/[id]`   | Aikin da aka bambanta: `{action: "approve"}`, `{action: "message", message}`, ko `{action: "cancel"}`                                                    |
-| DELETE | `/api/v1/agents/tasks/[id]`   | Share takamaiman aiki ta id                                                                                                                              |
-
-> **Tabbatarwa:** ana buƙatar tabbatarwar gudanarwa a kowace hanya (`requireCloudAgentManagementAuth`). Kafin v3.8.0 waɗannan ba su buƙatar tabbatarwa ba — duba commit `588a0333` don sauyin da ya karya dacewa.
-
-```bash
-# Ƙirƙiri aikin girgije na Claude Code
-curl -X POST http://localhost:20128/api/v1/agents/tasks \
-  -H "Authorization: Bearer your-management-key" \
-  -H "Content-Type: application/json" \
-  -d '{"providerId":"claude-code-cloud","prompt":"Fix the failing test","source":{"repo":"...","branch":"..."}}'
-```
-
----
-
 ## Wakilan Tsakani na Gudanarwa
 
 Wakilan tsakani na HTTP(S)/SOCKS masu fita waɗanda za a iya sanyawa ga masu samarwa, asusu, ko a matakin duniya.
@@ -1903,48 +1877,10 @@ Ma'ajiyar ƙwaƙwalwar tattaunawa/bayanan gaskiya mai ɗorewa, wadda aka keɓanc
 
 67router yana samar da mashigar A2A (Agent-to-Agent) ta JSON-RPC 2.0 tare da marufin REST don dubawa/amfani da dashboard.
 
-### JSON-RPC
-
-```bash
-POST /a2a
-Authorization: Bearer your-api-key   # na zaɓi ne sai dai idan an saita OMNIROUTE_API_KEY
-Content-Type: application/json
-
-{
-  "jsonrpc": "2.0",
-  "id": 1,
-  "method": "message/send",
-  "params": {
-    "skill": "smart-routing",
-    "messages": [{"role": "user", "content": "Route this coding task"}]
-  }
-}
-```
-
-Hanyoyin da ake tallafawa (duk suna dogara da `settings.a2aEnabled`):
-
-| Hanya            | Bayani                                                                   |
-| ---------------- | ------------------------------------------------------------------------ |
-| `message/send`   | Gudanar da ƙwarewa kai-tsaye; yana dawo da `{task, artifacts, metadata}` |
-| `message/stream` | Gudanarwar SSE mai gudana ta saitin ƙwarewa iri ɗaya                     |
-| `tasks/get`      | Ɗauko aiki ta amfani da `taskId`                                         |
-| `tasks/cancel`   | Soke aiki ta amfani da `taskId`                                          |
-
-Ƙwarewar da ke ciki tun farko: `smart-routing`, `quota-management`, `provider-discovery`, `cost-analysis`, `health-report`.
-
-### Katin Wakili
-
-```bash
-GET /.well-known/agent.json
-```
-
-Yana dawo da katin wakilin A2A na jama'a (suna, bayani, iyawa, kundin ƙwarewa, tsarin tantancewa) — ana adana shi a cache na jama'a na awa 1. Ba a buƙatar tantancewa.
-
 ### Mataimakan REST
 
 | Hanya | Tafarki                      | Bayani                                                                                                           |
 | ----- | ---------------------------- | ---------------------------------------------------------------------------------------------------------------- |
-| GET   | `/api/a2a/status`            | Ko an kunna A2A + ƙididdigar ayyuka + taƙaitaccen katin wakili da aka adana a cache                              |
 | GET   | `/api/a2a/tasks`             | Jera ayyuka — `?state=submitted\|working\|completed\|failed\|cancelled`, `?skill=`, `?limit=` (≤200), `?offset=` |
 | POST  | `/api/a2a/tasks`             | (Ba a aiwatar da shi a matsayin mataimakin REST ba — ƙirƙira ta JSON-RPC `message/send`)                         |
 | GET   | `/api/a2a/tasks/[id]`        | Ɗauko aiki guda ɗaya                                                                                             |
@@ -1964,12 +1900,8 @@ Yana dawo da katin wakilin A2A na jama'a (suna, bayani, iyawa, kundin ƙwarewa, 
 | GET | `/api/cloud/models/alias` | Jera laƙaban samfura kamar yadda ake nuna su ga daidaitawar gajimare |
 | GET | `/api/assess` | Karanta sabbin rabe-raben tantancewa (na kowane mai samarwa/samfuri) |
 | POST | `/api/assess` | Gudanar da tantancewa — jiki: `{scope: {type:"all"}                                                   | {type:"provider", providerId} | {type:"model", modelId}, trigger?}` |
-| GET | `/api/evals` | Jera rukunin eval da ke ciki tun farko + ayyukan da aka gudanar kwanan nan |
-| POST | `/api/evals` | Fara gudanar da eval |
-| POST | `/api/evals/suites` | Ƙirƙiri rukunin eval na musamman — ana tantance jiki ta `evalSuiteSaveSchema` |
-| GET | `/api/evals/suites/[id]` | Ɗauko rukunin eval na musamman |
 
-**Tantancewa:** `/api/cloud/auth` yana tantance maɓallin Bearer kai-tsaye sannan ya dawo da maɓallin da aka ɓoye wani ɓangarensa da `projectId` na kowane haɗi kawai ga maɓalli mai ikon `manage` / `admin`; sauran hanyoyin `/api/cloud/*`, `/api/evals/*`, da `/api/assess` suna buƙatar zaman gudanarwa/maɓallin API. POST na `/api/assess` yana amfani da `validateBody` tare da tsarin scope na discriminated-union.
+**Tantancewa:** `/api/cloud/auth` yana tantance maɓallin Bearer kai-tsaye sannan ya dawo da maɓallin da aka ɓoye wani ɓangarensa da `projectId` na kowane haɗi kawai ga maɓalli mai ikon `manage` / `admin`; sauran hanyoyin `/api/cloud/*`, da `/api/assess` suna buƙatar zaman gudanarwa/maɓallin API. POST na `/api/assess` yana amfani da `validateBody` tare da tsarin scope na discriminated-union.
 
 ---
 
@@ -2293,5 +2225,3 @@ maɓallin API mai izinin gudanarwa) da yadda suka bambanta da maɓallan inferenc
 - Ana iya kunna ko kashe `requireLogin` ta hanyar `/api/settings/require-login`
 - Hanyoyin `/v1/*` za su iya buƙatar maɓallin API na Bearer idan `REQUIRE_API_KEY=true`
 - “token na gudanarwa” / “maɓallin API mai izinin gudanarwa” a wannan bayanin yana nufin ɗaya daga cikin nau’ukan da ke cikin wancan jagorar — ba wani ƙarin nau’in sirri da ba a bayyana ba
-
-> **Canji mai karya dacewa (v3.8.0)** — `/api/v1/agents/tasks/*` da wuraren ƙarshen gudanar da cooldown yanzu suna buƙatar **tantancewar gudanarwa** (kukin dashboard na `auth_token` ko maɓallin API mai izinin gudanarwa). Abokan hulɗa da a baya suke kiran waɗannan hanyoyin ba tare da tantancewa ba za su karɓi `401 Unauthorized`. Duba commit `588a0333` (`fix(auth): require management auth for agent and cooldown APIs`).

@@ -43,8 +43,6 @@ v3.7.x → v3.8.0 -julkaisukierros toi käyttöön ilman määrityksiä toimivan
 - 🤝 **GitLab Duo OAuth -palveluntarjoaja** — kirjaudu GitLab-tunnuksilla
 - 🧠 **Reasoning Replay Cache** — päättelyjälkien yhdistetty muisti- ja SQLite-pysyvyys
 
-📚 **Aiheeseen liittyvät ohjeet:** [Taitokehys](../frameworks/SKILLS.md) · [Muistijärjestelmä](../frameworks/MEMORY.md) · [Pilviagentit](../frameworks/CLOUD_AGENT.md) · [Webhookit](../frameworks/WEBHOOKS.md) · [Päättelyn toistovälimuisti](../routing/REASONING_REPLAY.md)
-
 ---
 
 ## 🔌 Palveluntarjoajat
@@ -104,12 +102,6 @@ Reaaliaikainen valvonta: käyttöaika, muisti, versio, viiveen prosenttipisteet 
 Neljä tilaa API-käännösten virheenkorjaukseen: **Playground** (muotomuunnin), **Chat Tester** (reaaliaikaiset pyynnöt), **Test Bench** (erätestit) ja **Live Monitor** (reaaliaikainen seuranta).
 
 ![Kääntäjän testialusta](../screenshots/05-translator.png)
-
----
-
-## 🎮 Mallien testialusta _(v2.0.9+)_
-
-Testaa mitä tahansa mallia suoraan hallintapaneelista. Valitse palveluntarjoaja, malli ja päätepiste, kirjoita kehotteita Monaco Editorilla, suoratoista vastaukset reaaliajassa, keskeytä suoratoisto ja tarkastele ajoitusmittareita.
 
 ---
 

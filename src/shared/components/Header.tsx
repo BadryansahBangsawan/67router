@@ -88,7 +88,6 @@ const HEADER_DESCRIPTIONS: Partial<
   "cli-code": "cliToolsDescription",
   "cli-agents": "agentsDescription",
   "acp-agents": "agentsDescription",
-  "cloud-agents": "cloudAgentsDescription",
   memory: "memoryDescription",
   skills: "skillsDescription",
   "agent-skills": "agentSkillsDescription",
@@ -97,7 +96,6 @@ const HEADER_DESCRIPTIONS: Partial<
   "context-rtk": "contextRtkDescription",
   "context-combos": "contextCombosDescription",
   translator: "translatorDescription",
-  playground: "playgroundDescription",
   "search-tools": "searchToolsDescription",
   logs: "logsDescription",
   audit: "auditDescription",
@@ -106,10 +104,8 @@ const HEADER_DESCRIPTIONS: Partial<
   changelog: "changelogDescription",
   // Protocols
   mcp: "mcpDescription",
-  a2a: "a2aDescription",
   "api-endpoints": "apiEndpointsDescription",
   // Analytics sub-pages
-  "analytics-evals": "analyticsEvalsDescription",
   "analytics-search": "analyticsSearchDescription",
   "analytics-utilization": "analyticsUtilizationDescription",
   "analytics-combo-health": "analyticsComboHealthDescription",

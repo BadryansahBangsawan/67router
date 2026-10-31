@@ -1436,9 +1436,8 @@ curl -X PATCH "$OMNIROUTE_URL/api/keys/$KEY_ID" \
 
 ### การประเมิน
 
-| Endpoint     | Method   | Description                                  |
-| ------------ | -------- | -------------------------------------------- |
-| `/api/evals` | GET/POST | แสดงรายการชุดการประเมิน / เรียกใช้การประเมิน |
+| Endpoint | Method | Description |
+| -------- | ------ | ----------- |
 
 ### นโยบาย
 
@@ -1758,31 +1757,6 @@ Combo สำหรับการกำหนดเส้นทางระด�
 
 ---
 
-## โปรโตคอล Agents
-
-งานของ Cloud Agent (Claude Code, Codex Cloud, OpenHands เป็นต้น) ที่ดำเนินการจากระยะไกลในนามของผู้ใช้ 67router
-
-| เมธอด  | พาธ                           | คำอธิบาย                                                                                                                                         |
-| ------ | ----------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------ |
-| GET    | `/api/v1/agents/tasks`        | แสดงรายการงาน — รองรับ `?provider=`, `?status=`, `?limit=` เป็นตัวเลือก (1–500, ค่าเริ่มต้น 50)                                                  |
-| POST   | `/api/v1/agents/tasks`        | สร้างงาน — เนื้อหา body ตรวจสอบด้วย `CreateCloudAgentTaskSchema` (`providerId`, `prompt`, `source`, `options?`) ส่งคืน `201` พร้อม task envelope |
-| DELETE | `/api/v1/agents/tasks?id=...` | ลบงาน                                                                                                                                            |
-| GET    | `/api/v1/agents/tasks/[id]`   | อ่านงาน — รีเฟรชสถานะจาก Cloud Agent ต้นทางแบบซิงโครนัสเมื่อตั้งค่า `external_id`                                                                |
-| POST   | `/api/v1/agents/tasks/[id]`   | การดำเนินการแบบจำแนก: `{action: "approve"}`, `{action: "message", message}` หรือ `{action: "cancel"}`                                            |
-| DELETE | `/api/v1/agents/tasks/[id]`   | ลบงานที่ระบุตาม id                                                                                                                               |
-
-> **การยืนยันตัวตน:** ทุกเมธอดต้องมีการยืนยันตัวตนสำหรับการจัดการ (`requireCloudAgentManagementAuth`) ก่อน v3.8.0 จุดเชื่อมต่อเหล่านี้ไม่มีการยืนยันตัวตน — ดูการเปลี่ยนแปลงที่ส่งผลให้เข้ากันไม่ได้ใน commit `588a0333`
-
-```bash
-# สร้างงาน Claude Code บนคลาวด์
-curl -X POST http://localhost:20128/api/v1/agents/tasks \
-  -H "Authorization: Bearer your-management-key" \
-  -H "Content-Type: application/json" \
-  -d '{"providerId":"claude-code-cloud","prompt":"Fix the failing test","source":{"repo":"...","branch":"..."}}'
-```
-
----
-
 ## พร็อกซีสำหรับการจัดการ
 
 พร็อกซี HTTP(S)/SOCKS ขาออกที่สามารถกำหนดให้กับผู้ให้บริการ บัญชี หรือกำหนดแบบส่วนกลางได้
@@ -1902,48 +1876,10 @@ curl -X DELETE http://localhost:20128/api/resilience/model-cooldowns \
 
 67router เปิดให้ใช้งานตำแหน่งข้อมูล JSON-RPC 2.0 แบบ A2A (Agent-to-Agent) พร้อม REST wrapper สำหรับการตรวจสอบและการใช้งานแดชบอร์ด
 
-### JSON-RPC
-
-```bash
-POST /a2a
-Authorization: Bearer your-api-key   # ไม่บังคับ เว้นแต่มีการตั้งค่า OMNIROUTE_API_KEY
-Content-Type: application/json
-
-{
-  "jsonrpc": "2.0",
-  "id": 1,
-  "method": "message/send",
-  "params": {
-    "skill": "smart-routing",
-    "messages": [{"role": "user", "content": "Route this coding task"}]
-  }
-}
-```
-
-เมธอดที่รองรับ (ทั้งหมดควบคุมโดย `settings.a2aEnabled`):
-
-| เมธอด            | คำอธิบาย                                                      |
-| ---------------- | ------------------------------------------------------------- |
-| `message/send`   | เรียกใช้สกิลแบบซิงโครนัส ส่งคืน `{task, artifacts, metadata}` |
-| `message/stream` | เรียกใช้สกิลชุดเดียวกันแบบสตรีมผ่าน SSE                       |
-| `tasks/get`      | ดึงข้อมูลงานตาม `taskId`                                      |
-| `tasks/cancel`   | ยกเลิกงานตาม `taskId`                                         |
-
-สกิลในตัว: `smart-routing`, `quota-management`, `provider-discovery`, `cost-analysis`, `health-report`
-
-### การ์ดเอเจนต์
-
-```bash
-GET /.well-known/agent.json
-```
-
-ส่งคืนการ์ดเอเจนต์ A2A สาธารณะ (ชื่อ คำอธิบาย ความสามารถ แค็ตตาล็อกสกิล และรูปแบบการยืนยันตัวตน) — แคชแบบสาธารณะเป็นเวลา 1 ชั่วโมง ไม่จำเป็นต้องยืนยันตัวตน
-
 ### ตัวช่วย REST
 
 | เมธอด | พาธ                          | คำอธิบาย                                                                                                           |
 | ----- | ---------------------------- | ------------------------------------------------------------------------------------------------------------------ |
-| GET   | `/api/a2a/status`            | สถานะการเปิดใช้งาน A2A + สถิติงาน + สรุปการ์ดเอเจนต์ที่แคชไว้                                                      |
 | GET   | `/api/a2a/tasks`             | แสดงรายการงาน — `?state=submitted\|working\|completed\|failed\|cancelled`, `?skill=`, `?limit=` (≤200), `?offset=` |
 | POST  | `/api/a2a/tasks`             | (ยังไม่ได้ทำเป็นตัวช่วย REST — สร้างผ่าน JSON-RPC `message/send`)                                                  |
 | GET   | `/api/a2a/tasks/[id]`        | เรียกดูงานหนึ่งรายการ                                                                                              |
@@ -1963,12 +1899,8 @@ GET /.well-known/agent.json
 | GET | `/api/cloud/models/alias` | แสดงรายการนามแฝงโมเดลตามที่เปิดให้การซิงค์คลาวด์ใช้งาน |
 | GET | `/api/assess` | อ่านการจัดหมวดหมู่จากการประเมินล่าสุด (แยกตามผู้ให้บริการ/โมเดล) |
 | POST | `/api/assess` | เรียกใช้การประเมิน — เนื้อหาคำขอ: `{scope: {type:"all"}                                                   | {type:"provider", providerId} | {type:"model", modelId}, trigger?}` |
-| GET | `/api/evals` | แสดงรายการชุดการประเมินผลในตัวพร้อมการเรียกใช้ล่าสุด |
-| POST | `/api/evals` | เริ่มต้นการเรียกใช้การประเมินผล |
-| POST | `/api/evals/suites` | สร้างชุดการประเมินผลแบบกำหนดเอง — เนื้อหาคำขอผ่านการตรวจสอบโดย `evalSuiteSaveSchema` |
-| GET | `/api/evals/suites/[id]` | เรียกดูชุดการประเมินผลแบบกำหนดเอง |
 
-**การยืนยันตัวตน:** `/api/cloud/auth` ตรวจสอบคีย์ Bearer โดยตรง และส่งคืนคีย์ที่ปกปิดแล้วพร้อม `projectId` ของแต่ละการเชื่อมต่อ เฉพาะเมื่อเป็นคีย์ที่มีขอบเขต `manage` / `admin` เท่านั้น ส่วนเส้นทาง `/api/cloud/*`, `/api/evals/*` และ `/api/assess` อื่นๆ ต้องใช้เซสชัน/คีย์ API สำหรับการจัดการ คำขอ POST ไปยัง `/api/assess` ใช้ `validateBody` ร่วมกับสคีมาขอบเขตแบบ discriminated-union
+**การยืนยันตัวตน:** `/api/cloud/auth` ตรวจสอบคีย์ Bearer โดยตรง และส่งคืนคีย์ที่ปกปิดแล้วพร้อม `projectId` ของแต่ละการเชื่อมต่อ เฉพาะเมื่อเป็นคีย์ที่มีขอบเขต `manage` / `admin` เท่านั้น ส่วนเส้นทาง `/api/cloud/*` และ `/api/assess` อื่นๆ ต้องใช้เซสชัน/คีย์ API สำหรับการจัดการ คำขอ POST ไปยัง `/api/assess` ใช้ `validateBody` ร่วมกับสคีมาขอบเขตแบบ discriminated-union
 
 ---
 
@@ -2289,5 +2221,3 @@ devin-cli ฯลฯ) ดูรายการทั้งหมดได้ท�
 - สามารถสลับเปิดหรือปิด `requireLogin` ผ่าน `/api/settings/require-login`
 - เส้นทาง `/v1/*` สามารถกำหนดให้ต้องใช้คีย์ API แบบ Bearer ได้เมื่อ `REQUIRE_API_KEY=true`
 - ในเอกสารอ้างอิงนี้ "โทเค็นสำหรับการจัดการ" / "คีย์ API ที่มีขอบเขตสำหรับการจัดการ" หมายถึงข้อมูลรับรองประเภทใดประเภทหนึ่งในคู่มือดังกล่าว ไม่ใช่ประเภทข้อมูลลับเพิ่มเติมที่ไม่ได้กำหนดไว้
-
-> **การเปลี่ยนแปลงที่ไม่รองรับเวอร์ชันก่อนหน้า (v3.8.0)** — ขณะนี้ `/api/v1/agents/tasks/*` และเอ็นด์พอยต์สำหรับจัดการระยะพักต้องใช้ **การยืนยันตัวตนสำหรับการจัดการ** (คุกกี้ `auth_token` ของแดชบอร์ดหรือคีย์ API ที่มีขอบเขตสำหรับการจัดการ) ไคลเอนต์ที่ก่อนหน้านี้เรียกใช้เส้นทางเหล่านี้โดยไม่มีการยืนยันตัวตนจะได้รับ `401 Unauthorized` ดูคอมมิต `588a0333` (`fix(auth): require management auth for agent and cooldown APIs`)

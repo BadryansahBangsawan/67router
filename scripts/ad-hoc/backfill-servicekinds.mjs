@@ -32,7 +32,6 @@ const ROOT = path.resolve(path.dirname(fileURLToPath(import.meta.url)), "../..")
 // ── Section membership from the REAL catalog modules ────────────────────────
 import { SEARCH_PROVIDERS } from "../../src/shared/constants/providers/search.ts";
 import { AUDIO_ONLY_PROVIDERS } from "../../src/shared/constants/providers/audio.ts";
-import { CLOUD_AGENT_PROVIDERS } from "../../src/shared/constants/providers/cloud-agent.ts";
 import { SYSTEM_PROVIDERS } from "../../src/shared/constants/providers/system.ts";
 import { UPSTREAM_PROXY_PROVIDERS } from "../../src/shared/constants/providers/upstream-proxy.ts";
 import { OAUTH_PROVIDERS } from "../../src/shared/constants/providers/oauth.ts";
@@ -47,7 +46,6 @@ import { APIKEY_PROVIDERS_SPECIALTY } from "../../src/shared/constants/providers
 
 const SEARCH_IDS = new Set(Object.keys(SEARCH_PROVIDERS));
 const AUDIO_IDS = new Set(Object.keys(AUDIO_ONLY_PROVIDERS));
-const CLOUD_AGENT_IDS = new Set(Object.keys(CLOUD_AGENT_PROVIDERS));
 const SYSTEM_IDS = new Set(Object.keys(SYSTEM_PROVIDERS));
 const UPSTREAM_PROXY_IDS = new Set(Object.keys(UPSTREAM_PROXY_PROVIDERS));
 
@@ -96,7 +94,6 @@ export function computeDeclaredServiceKinds(providerId) {
   }
   if (NO_LLM.has(providerId)) return [];
   if (AUDIO_IDS.has(providerId)) return [];
-  if (CLOUD_AGENT_IDS.has(providerId)) return [];
   if (SYSTEM_IDS.has(providerId)) return [];
   if (UPSTREAM_PROXY_IDS.has(providerId)) return [];
   return ["llm"];
@@ -142,7 +139,6 @@ const FILES = [
   ["src/shared/constants/providers/search.ts", SEARCH_PROVIDERS],
   ["src/shared/constants/providers/audio.ts", AUDIO_ONLY_PROVIDERS],
   ["src/shared/constants/providers/upstream-proxy.ts", UPSTREAM_PROXY_PROVIDERS],
-  ["src/shared/constants/providers/cloud-agent.ts", CLOUD_AGENT_PROVIDERS],
   ["src/shared/constants/providers/system.ts", SYSTEM_PROVIDERS],
   ["src/shared/constants/providers/apikey/gateways.ts", APIKEY_PROVIDERS_GATEWAYS],
   ["src/shared/constants/providers/apikey/frontier-labs.ts", APIKEY_PROVIDERS_FRONTIER],

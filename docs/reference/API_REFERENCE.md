@@ -1393,9 +1393,8 @@ GET response includes `agents[]` (id, name, binary, version, installed, protocol
 
 ### Evals
 
-| Endpoint     | Method   | Description                       |
-| ------------ | -------- | --------------------------------- |
-| `/api/evals` | GET/POST | List eval suites / run evaluation |
+| Endpoint | Method | Description |
+| -------- | ------ | ----------- |
 
 ### Policies
 
@@ -1701,31 +1700,6 @@ Used by the auto-key management subsystem to issue and rotate API keys against a
 
 ---
 
-## Agents Protocol
-
-Cloud agent tasks (Claude Code, Codex Cloud, OpenHands, etc.) executed remotely on behalf of 67router users.
-
-| Method | Path                          | Description                                                                                                                                   |
-| ------ | ----------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------- |
-| GET    | `/api/v1/agents/tasks`        | List tasks — optional `?provider=`, `?status=`, `?limit=` (1–500, default 50)                                                                 |
-| POST   | `/api/v1/agents/tasks`        | Create task — body validated by `CreateCloudAgentTaskSchema` (`providerId`, `prompt`, `source`, `options?`). Returns `201` with task envelope |
-| DELETE | `/api/v1/agents/tasks?id=...` | Delete a task                                                                                                                                 |
-| GET    | `/api/v1/agents/tasks/[id]`   | Read task — synchronously refreshes status from the upstream cloud agent when an `external_id` is set                                         |
-| POST   | `/api/v1/agents/tasks/[id]`   | Discriminated action: `{action: "approve"}`, `{action: "message", message}`, or `{action: "cancel"}`                                          |
-| DELETE | `/api/v1/agents/tasks/[id]`   | Delete a specific task by id                                                                                                                  |
-
-> **Auth:** management auth required on every method (`requireCloudAgentManagementAuth`). Prior to v3.8.0 these were unauthenticated — see commit `588a0333` for the breaking change.
-
-```bash
-# Create a Claude Code cloud task
-curl -X POST http://localhost:20128/api/v1/agents/tasks \
-  -H "Authorization: Bearer your-management-key" \
-  -H "Content-Type: application/json" \
-  -d '{"providerId":"claude-code-cloud","prompt":"Fix the failing test","source":{"repo":"...","branch":"..."}}'
-```
-
----
-
 ## Management Proxies
 
 Outbound HTTP(S)/SOCKS proxies that can be assigned to providers, accounts, or globally.
@@ -1841,58 +1815,20 @@ Persistent conversational/factual memory store, scoped per API key / session.
 
 ---
 
-## A2A Server
+## A2A Tasks
 
-67router exposes an A2A (Agent-to-Agent) JSON-RPC 2.0 endpoint plus a REST wrapper for inspection/dashboard use.
-
-### JSON-RPC
-
-```bash
-POST /a2a
-Authorization: Bearer your-api-key   # optional unless OMNIROUTE_API_KEY is set
-Content-Type: application/json
-
-{
-  "jsonrpc": "2.0",
-  "id": 1,
-  "method": "message/send",
-  "params": {
-    "skill": "smart-routing",
-    "messages": [{"role": "user", "content": "Route this coding task"}]
-  }
-}
-```
-
-Supported methods (all gated on `settings.a2aEnabled`):
-
-| Method           | Description                                                        |
-| ---------------- | ------------------------------------------------------------------ |
-| `message/send`   | Synchronous skill execution; returns `{task, artifacts, metadata}` |
-| `message/stream` | Streaming SSE execution of the same skill set                      |
-| `tasks/get`      | Fetch a task by `taskId`                                           |
-| `tasks/cancel`   | Cancel a task by `taskId`                                          |
-
-Built-in skills: `smart-routing`, `quota-management`, `provider-discovery`, `cost-analysis`, `health-report`.
-
-### Agent Card
-
-```bash
-GET /.well-known/agent.json
-```
-
-Returns the public A2A agent card (name, description, capabilities, skill catalog, auth scheme) — cached publicly for 1h. No auth required.
-
-### REST helpers
+The A2A JSON-RPC endpoint and Agent Card were removed from 67router. The task store stays: the
+Conductor fleet mirrors its runs into it, and the Orchestration dashboard reads it.
 
 | Method | Path                         | Description                                                                                                     |
 | ------ | ---------------------------- | --------------------------------------------------------------------------------------------------------------- |
-| GET    | `/api/a2a/status`            | A2A enabled + task stats + cached agent card summary                                                            |
 | GET    | `/api/a2a/tasks`             | List tasks — `?state=submitted\|working\|completed\|failed\|cancelled`, `?skill=`, `?limit=` (≤200), `?offset=` |
-| POST   | `/api/a2a/tasks`             | (Not implemented as a REST helper — create via JSON-RPC `message/send`)                                         |
+| POST   | `/api/a2a/tasks`             | Delegate a task to the Conductor fleet (`conductor` / `conductor-cli-<profile>` skills only)                    |
+| GET    | `/api/a2a/tasks/history`     | Persisted task history — `?from=`, `?to=`, `?limit=`                                                            |
 | GET    | `/api/a2a/tasks/[id]`        | Retrieve one task                                                                                               |
 | POST   | `/api/a2a/tasks/[id]/cancel` | Cancel a task                                                                                                   |
 
-**Auth:** the REST helpers run without management auth (dashboard-readable); the JSON-RPC `/a2a` route uses Bearer `OMNIROUTE_API_KEY` if configured.
+**Auth:** the read and cancel routes take a management session/API key, or a valid API key scoped to the tasks it owns (`src/app/api/a2a/_auth.ts`). `POST /api/a2a/tasks` checks Bearer `OMNIROUTE_API_KEY` when it is set and requires `settings.a2aEnabled`.
 
 ---
 
@@ -1906,12 +1842,8 @@ Returns the public A2A agent card (name, description, capabilities, skill catalo
 | GET | `/api/cloud/models/alias` | List model aliases as exposed to cloud sync |
 | GET | `/api/assess` | Read latest assessment categorizations (per-provider/model) |
 | POST | `/api/assess` | Run an assessment — body: `{scope: {type:"all"}                                                   | {type:"provider", providerId} | {type:"model", modelId}, trigger?}` |
-| GET | `/api/evals` | List built-in eval suites + most recent runs |
-| POST | `/api/evals` | Trigger an eval run |
-| POST | `/api/evals/suites` | Create a custom eval suite — body validated by `evalSuiteSaveSchema` |
-| GET | `/api/evals/suites/[id]` | Retrieve a custom eval suite |
 
-**Auth:** `/api/cloud/auth` validates a Bearer key directly and returns the masked key and `projectId` of each connection only for a key with the `manage` / `admin` scope; the other `/api/cloud/*`, `/api/evals/*`, and `/api/assess` routes require management session/API key. `/api/assess` POST uses `validateBody` with a discriminated-union scope schema.
+**Auth:** `/api/cloud/auth` validates a Bearer key directly and returns the masked key and `projectId` of each connection only for a key with the `manage` / `admin` scope; the other `/api/cloud/*` and `/api/assess` routes require management session/API key. `/api/assess` POST uses `validateBody` with a discriminated-union scope schema.
 
 ---
 
@@ -2216,4 +2148,4 @@ Token, manage-scoped API key) and how they differ from inference keys.
 - `/v1/*` routes optionally require Bearer API key when `REQUIRE_API_KEY=true`
 - "management token" / "management-scoped API key" in this reference means one of the families in that guide — not an undefined extra secret type
 
-> **Breaking change (v3.8.0)** — `/api/v1/agents/tasks/*` and the cooldown management endpoints now require **management auth** (dashboard `auth_token` cookie or a management-scoped API key). Clients that previously called these routes unauthenticated will receive `401 Unauthorized`. See commit `588a0333` (`fix(auth): require management auth for agent and cooldown APIs`).
+> **Breaking change (v3.8.0)** — the cooldown management endpoints now require **management auth** (dashboard `auth_token` cookie or a management-scoped API key). Clients that previously called these routes unauthenticated will receive `401 Unauthorized`. See commit `588a0333` (`fix(auth): require management auth for agent and cooldown APIs`).

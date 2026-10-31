@@ -24,7 +24,6 @@ Volledige handleiding voor het configureren van providers, het maken van combo's
 - [Vaardighedensysteem](#-skills-system)
 - [Geheugensysteem](#-memory-system)
 - [Webhooks](#-webhooks)
-- [Cloudagents](#-cloud-agents)
 - [Programmatisch beheer](#-programmatic-management)
 - [Interne CLI](#-internal-cli)
 - [Desktopapplicatie (Electron)](#-desktop-application-electron)
@@ -1236,8 +1235,6 @@ Gebruik de SSE-URL `http://localhost:20128/api/mcp/sse` en een Bearer-API-sleute
 
 ### Bereiken
 
-MCP definieert momenteel 32 benoemde bereiken. Elke Bearer-sleutel kan tot specifieke bereiken worden beperkt — raadpleeg [MCP-SERVER.md](../frameworks/MCP-SERVER.md) voor het gezaghebbende overzicht van bereiken en tools, en [A2A-SERVER.md](../frameworks/A2A-SERVER.md) voor het JSON-RPC-schema.
-
 ---
 
 ## 🧠 Vaardighedensysteem
@@ -1246,7 +1243,6 @@ MCP definieert momenteel 32 benoemde bereiken. Elke Bearer-sleutel kan tot speci
 
 - **Marketplace-interface** — Bekijk en installeer vaardigheden via **Dashboard → Vaardigheden**
 - **Scopes per sleutel** — Beperk welke API-sleutels welke vaardigheden kunnen aanroepen
-- **Aangepaste vaardigheden** — Plaats een TypeScript-bestand in `src/lib/a2a/skills/`, registreer het en het kan direct via A2A worden aangeroepen
 
 Volledige naslag: [SKILLS.md](../frameworks/SKILLS.md).
 
@@ -1275,18 +1271,6 @@ Abonneer u op 67router-gebeurtenissen voor realtimebewaking en automatisering.
 - Nieuwe pogingen: 3 pogingen met exponentiële vertraging, gevolgd door plaatsing in de wachtrij voor niet-afgeleverde berichten
 
 Het volledige schema staat in [WEBHOOKS.md](../frameworks/WEBHOOKS.md).
-
----
-
-## ☁️ Cloudagents
-
-67router integreert met programmeeragents in de cloud (**OpenAI Codex Cloud**, **Devin**, **Jules**, **Antigravity**), zodat u langlopende taken kunt starten vanuit hetzelfde dashboard waarmee u uw lokale routering beheert.
-
-- Maak taken aan via **Dashboard → Cloudagents** of met `POST /api/v1/agents/tasks`
-- Volg per taak de status, logboeken en artefacten
-- Gebruik uw eigen API-sleutel per provider — referenties verlaten de 67router-instantie nooit
-
-Volledige naslag: [CLOUD_AGENT.md](../frameworks/CLOUD_AGENT.md).
 
 ---
 
@@ -1343,7 +1327,6 @@ omniroute restore [<timestamp>]    # Herstellen vanuit een momentopname
 omniroute health                   # Gedetailleerde status (stroomonderbrekers, cache, geheugen)
 omniroute quota                    # Quotagebruik van providers
 omniroute mcp status               # Status van de MCP-server
-omniroute a2a status               # Status van de A2A-server
 omniroute tunnel list|create|stop  # Cloudflare-/Tailscale-/ngrok-tunnels
 omniroute reset-password           # Beheerderswachtwoord opnieuw instellen
 omniroute --mcp                    # MCP-server starten via stdio

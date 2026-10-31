@@ -238,17 +238,6 @@ Vyššie uvedený inventár nástrojov MCP (110 unikátnych nástrojov, vypočí
 obmedzený na operácie smerovania/cache/kompresie/pamäte/zručností/proxy/kontextového zdroja za behu. Dva susedné
 frameworky sa dodávajú spolu so serverom MCP vo verzii v3.8.0 a sú dokumentované samostatne:
 
-### Cloudoví agenti
-
-Cloudoví agenti sú externí agenti AI kódovania (codex-cloud, cursor-cloud, devin, jules) zapojení do
-67router prostredníctvom rovnakého modelu pripojenia, aký sa používa pre poskytovateľov LLM. Sú sprístupnení prostredníctvom
-vlastného REST rozhrania (`/api/v1/agents/*`) a **nie sú** súčasťou katalógu nástrojov MCP
-— volanie cloudového agenta nespotrebúva rozsah MCP.
-
-- Implementácia: `src/lib/cloudAgent/` (`registry.ts`, `agents/codex.ts`, `agents/cursor.ts`, `agents/devin.ts`, `agents/jules.ts`).
-- Životný cyklus: `createTask`, `getStatus`, `approvePlan`, `sendMessage`, `listSources`.
-- Dokumentácia: [docs/frameworks/CLOUD_AGENT.md](./CLOUD_AGENT.md).
-
 ### Guardrails
 
 Guardrails sú filtre pred/po vykonaní (vision-bridge, pii-masker, prompt-injection)

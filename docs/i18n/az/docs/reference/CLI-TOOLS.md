@@ -716,7 +716,6 @@ omniroute cache                        # Keş statusu
 omniroute cache clear                  # Semantik və imza keşlərini təmizlə
 
 omniroute mcp status | restart         # MCP serverinin statusu / yenidən başladılması
-omniroute a2a status | card            # A2A serverinin statusu / agent kartı
 
 omniroute tunnel list | create | stop  # Tunelləri idarə et (cloudflare/tailscale/ngrok)
 omniroute env show | get <k> | set <k> <v>  # Mühit dəyişənlərinə bax / onları təyin et (müvəqqəti)

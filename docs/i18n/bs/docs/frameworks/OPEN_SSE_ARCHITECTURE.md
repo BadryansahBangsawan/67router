@@ -573,5 +573,4 @@ Mehanizam za usmjeravanje ima strogo definirane ciljeve performansi:
 - [REPOSITORY_MAP.md](../architecture/REPOSITORY_MAP.md) — pregled po direktorijima
 - [AUTO-COMBO.md](../routing/AUTO-COMBO.md) — bodovanje na osnovu 16 faktora
 - [MCP-SERVER.md](./MCP-SERVER.md) — MCP server
-- [A2A-SERVER.md](./A2A-SERVER.md) — A2A server
 - Izvor: `open-sse/` (više od 400 datoteka, ~143K linija koda)

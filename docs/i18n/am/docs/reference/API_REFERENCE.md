@@ -1415,9 +1415,8 @@ id መልሶ ማግኘት) እና `POST /api/settings/import-json` በቀጥታ 
 
 ### ግምገማዎች
 
-| Endpoint     | Method   | መግለጫ                            |
-| ------------ | -------- | ------------------------------- |
-| `/api/evals` | GET/POST | የግምገማ ስብስቦችን ይዘርዝሩ / ግምገማን ያስኪዱ |
+| Endpoint | Method | መግለጫ |
+| -------- | ------ | ---- |
 
 ### ፖሊሲዎች
 
@@ -1740,31 +1739,6 @@ DELETE /api/usage/token-limits?id=tl-abc
 
 ---
 
-## የኤጀንቶች ፕሮቶኮል
-
-በ67router ተጠቃሚዎች ስም በርቀት የሚከናወኑ የደመና ኤጀንት ተግባራት (Claude Code፣ Codex Cloud፣ OpenHands፣ ወዘተ)።
-
-| ዘዴ     | ዱካ                            | መግለጫ                                                                                                                                  |
-| ------ | ----------------------------- | ------------------------------------------------------------------------------------------------------------------------------------- |
-| GET    | `/api/v1/agents/tasks`        | ተግባራትን ዘርዝር — እንደ አማራጭ `?provider=`፣ `?status=`፣ `?limit=` (1–500፣ ነባሪው 50)                                                           |
-| POST   | `/api/v1/agents/tasks`        | ተግባር ፍጠር — የጥያቄው ይዘት በ`CreateCloudAgentTaskSchema` (`providerId`፣ `prompt`፣ `source`፣ `options?`) ይረጋገጣል። የተግባር ማቀፊያን ከ`201` ጋር ይመልሳል |
-| DELETE | `/api/v1/agents/tasks?id=...` | ተግባር ሰርዝ                                                                                                                              |
-| GET    | `/api/v1/agents/tasks/[id]`   | ተግባር አንብብ — `external_id` ከተዋቀረ ሁኔታውን ከላይኛው የደመና ኤጀንት በተመሳሰለ ሁኔታ ያድሳል                                                                 |
-| POST   | `/api/v1/agents/tasks/[id]`   | ተለይቶ የሚታወቅ ድርጊት፦ `{action: "approve"}`፣ `{action: "message", message}`፣ ወይም `{action: "cancel"}`                                      |
-| DELETE | `/api/v1/agents/tasks/[id]`   | አንድን የተወሰነ ተግባር በid ሰርዝ                                                                                                               |
-
-> **ማረጋገጫ፦** በእያንዳንዱ ዘዴ የአስተዳደር ማረጋገጫ ያስፈልጋል (`requireCloudAgentManagementAuth`)። ከv3.8.0 በፊት እነዚህ ያለማረጋገጫ ይሰሩ ነበር — ለዚህ ለውጥ commit `588a0333`ን ይመልከቱ።
-
-```bash
-# የClaude Code የደመና ተግባር ፍጠር
-curl -X POST http://localhost:20128/api/v1/agents/tasks \
-  -H "Authorization: Bearer your-management-key" \
-  -H "Content-Type: application/json" \
-  -d '{"providerId":"claude-code-cloud","prompt":"Fix the failing test","source":{"repo":"...","branch":"..."}}'
-```
-
----
-
 ## የአስተዳደር ፕሮክሲዎች
 
 ለአቅራቢዎች፣ መለያዎች ወይም በዓለም አቀፍ ደረጃ ሊመደቡ የሚችሉ ወደ ውጭ የሚደረጉ HTTP(S)/SOCKS ፕሮክሲዎች።
@@ -1884,48 +1858,10 @@ curl -X DELETE http://localhost:20128/api/resilience/model-cooldowns \
 
 67router የA2A (ከወኪል-ወደ-ወኪል) JSON-RPC 2.0 መጨረሻ ነጥብን፣ እንዲሁም ለፍተሻ/ዳሽቦርድ አጠቃቀም የREST መጠቅለያን ያቀርባል።
 
-### JSON-RPC
-
-```bash
-POST /a2a
-Authorization: Bearer your-api-key   # OMNIROUTE_API_KEY ካልተዋቀረ በስተቀር አማራጭ ነው
-Content-Type: application/json
-
-{
-  "jsonrpc": "2.0",
-  "id": 1,
-  "method": "message/send",
-  "params": {
-    "skill": "smart-routing",
-    "messages": [{"role": "user", "content": "Route this coding task"}]
-  }
-}
-```
-
-የሚደገፉ ዘዴዎች (ሁሉም በ`settings.a2aEnabled` የሚቆጣጠሩ):
-
-| ዘዴ               | መግለጫ                                                    |
-| ---------------- | ------------------------------------------------------- |
-| `message/send`   | የተመሳሰለ የክህሎት አፈጻጸም፤ `{task, artifacts, metadata}` ይመልሳል |
-| `message/stream` | የተመሳሳዩን የክህሎት ስብስብ በSSE ዥረት የማስፈጸም ዘዴ                   |
-| `tasks/get`      | ተግባርን በ`taskId` ያምጡ                                     |
-| `tasks/cancel`   | ተግባርን በ`taskId` ይሰርዙ                                    |
-
-አብረው የተካተቱ ክህሎቶች፦ `smart-routing`፣ `quota-management`፣ `provider-discovery`፣ `cost-analysis`፣ `health-report`።
-
-### የወኪል ካርድ
-
-```bash
-GET /.well-known/agent.json
-```
-
-የወል A2A የወኪል ካርድን (ስም፣ መግለጫ፣ ችሎታዎች፣ የክህሎት ካታሎግ፣ የማረጋገጫ ዘዴ) ይመልሳል — ለ1 ሰዓት በይፋ መሸጎጫ ውስጥ ይቀመጣል። ማረጋገጫ አያስፈልግም።
-
 ### የREST አጋዥ መንገዶች
 
 | ዘዴ   | መንገድ                         | መግለጫ                                                                                                             |
 | ---- | ---------------------------- | ---------------------------------------------------------------------------------------------------------------- |
-| GET  | `/api/a2a/status`            | A2A መንቃቱ + የተግባር ስታቲስቲክስ + በመሸጎጫ የተቀመጠ የወኪል ካርድ ማጠቃለያ                                                            |
 | GET  | `/api/a2a/tasks`             | ተግባራትን ዘርዝር — `?state=submitted\|working\|completed\|failed\|cancelled`፣ `?skill=`፣ `?limit=` (≤200)፣ `?offset=` |
 | POST | `/api/a2a/tasks`             | (እንደ REST አጋዥ አልተተገበረም — በJSON-RPC `message/send` ይፍጠሩ)                                                          |
 | GET  | `/api/a2a/tasks/[id]`        | አንድ ተግባር ያምጡ                                                                                                     |
@@ -1945,12 +1881,8 @@ GET /.well-known/agent.json
 | GET | `/api/cloud/models/alias` | ለcloud sync እንደቀረቡ የሞዴል ተለዋጭ ስሞችን ዘርዝር |
 | GET | `/api/assess` | የቅርብ ጊዜ የግምገማ ምደባዎችን ያንብቡ (ለእያንዳንዱ አቅራቢ/ሞዴል) |
 | POST | `/api/assess` | ግምገማ ያስኪዱ — የጥያቄ አካል፦ `{scope: {type:"all"}                                                   | {type:"provider", providerId} | {type:"model", modelId}, trigger?}` |
-| GET | `/api/evals` | አብረው የተካተቱ የeval ስብስቦችን + የቅርብ ጊዜ አሂዶችን ዘርዝር |
-| POST | `/api/evals` | የeval አሂድን ያስጀምሩ |
-| POST | `/api/evals/suites` | ብጁ የeval ስብስብ ይፍጠሩ — የጥያቄ አካሉ በ`evalSuiteSaveSchema` ይረጋገጣል |
-| GET | `/api/evals/suites/[id]` | ብጁ የeval ስብስብ ያምጡ |
 
-**ማረጋገጫ፦** `/api/cloud/auth` የBearer ቁልፍን በቀጥታ ያረጋግጣል፣ እና `manage` / `admin` ወሰን ላለው ቁልፍ ብቻ የእያንዳንዱን ግንኙነት የተደበቀ ቁልፍ እና `projectId` ይመልሳል፤ ሌሎቹ `/api/cloud/*`፣ `/api/evals/*` እና `/api/assess` መስመሮች የአስተዳደር ክፍለ ጊዜ/API ቁልፍ ያስፈልጋቸዋል። `/api/assess` POST `validateBody`ን ከመለያ ያለው የዩኒየን ወሰን መርሃግብር ጋር ይጠቀማል።
+**ማረጋገጫ፦** `/api/cloud/auth` የBearer ቁልፍን በቀጥታ ያረጋግጣል፣ እና `manage` / `admin` ወሰን ላለው ቁልፍ ብቻ የእያንዳንዱን ግንኙነት የተደበቀ ቁልፍ እና `projectId` ይመልሳል፤ ሌሎቹ `/api/cloud/*`፣ እና `/api/assess` መስመሮች የአስተዳደር ክፍለ ጊዜ/API ቁልፍ ያስፈልጋቸዋል። `/api/assess` POST `validateBody`ን ከመለያ ያለው የዩኒየን ወሰን መርሃግብር ጋር ይጠቀማል።
 
 ---
 
@@ -2272,5 +2204,3 @@ devin-cli ወዘተ) ያስተዳድሩ። ሙሉውን ዝርዝር ለማየ�
 - `requireLogin` በ`/api/settings/require-login` በኩል ማብራት ወይም ማጥፋት ይቻላል
 - የ`/v1/*` መንገዶች `REQUIRE_API_KEY=true` በሚሆንበት ጊዜ እንደ አማራጭ የBearer API ቁልፍ ይፈልጋሉ
 - በዚህ ማጣቀሻ ውስጥ “የአስተዳደር ቶከን” / “በአስተዳደር ወሰን የተገደበ API ቁልፍ” ማለት በዚያ መመሪያ ውስጥ ካሉት ቤተሰቦች አንዱን ነው — ያልተገለጸ ተጨማሪ የምስጢር ዓይነትን አይደለም
-
-> **ተኳኋኝነትን የሚያፈርስ ለውጥ (v3.8.0)** — `/api/v1/agents/tasks/*` እና የማቀዝቀዣ ጊዜ አስተዳደር የመጨረሻ ነጥቦች አሁን **የአስተዳደር ማረጋገጫ** (የዳሽቦርድ `auth_token` ኩኪ ወይም በአስተዳደር ወሰን የተገደበ API ቁልፍ) ይፈልጋሉ። ከዚህ ቀደም እነዚህን መንገዶች ያለ ማረጋገጫ የሚጠሩ ደንበኞች `401 Unauthorized` ይቀበላሉ። commit `588a0333` (`fix(auth): require management auth for agent and cooldown APIs`)ን ይመልከቱ።

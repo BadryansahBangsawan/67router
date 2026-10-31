@@ -1432,9 +1432,8 @@ GET جواب میں `agents[]` (id، name، binary، version، installed، proto
 
 ### جائزے
 
-| اینڈ پوائنٹ  | طریقہ    | تفصیل                                     |
-| ------------ | -------- | ----------------------------------------- |
-| `/api/evals` | GET/POST | جائزہ سوٹس کی فہرست بنائیں / جائزہ چلائیں |
+| اینڈ پوائنٹ | طریقہ | تفصیل |
+| ----------- | ----- | ----- |
 
 ### پالیسیاں
 
@@ -1757,31 +1756,6 @@ DELETE /api/usage/token-limits?id=tl-abc
 
 ---
 
-## ایجنٹس پروٹوکول
-
-Cloud agent ٹاسکس (Claude Code، Codex Cloud، OpenHands وغیرہ) جو 67router صارفین کی جانب سے ریموٹ طور پر چلائے جاتے ہیں۔
-
-| طریقہ  | پاتھ                          | تفصیل                                                                                                                                                               |
-| ------ | ----------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| GET    | `/api/v1/agents/tasks`        | ٹاسکس کی فہرست — اختیاری `?provider=`، `?status=`، `?limit=` (1–500، ڈیفالٹ 50)                                                                                     |
-| POST   | `/api/v1/agents/tasks`        | ٹاسک بنائیں — باڈی کی توثیق `CreateCloudAgentTaskSchema` (`providerId`، `prompt`، `source`، `options?`) کے ذریعے کی جاتی ہے۔ ٹاسک انویلپ کے ساتھ `201` واپس کرتا ہے |
-| DELETE | `/api/v1/agents/tasks?id=...` | ٹاسک حذف کریں                                                                                                                                                       |
-| GET    | `/api/v1/agents/tasks/[id]`   | ٹاسک پڑھیں — جب `external_id` سیٹ ہو تو upstream cloud agent سے اسٹیٹس کو ہم وقتی طور پر ریفریش کرتا ہے                                                             |
-| POST   | `/api/v1/agents/tasks/[id]`   | امتیازی ایکشن: `{action: "approve"}`، `{action: "message", message}`، یا `{action: "cancel"}`                                                                       |
-| DELETE | `/api/v1/agents/tasks/[id]`   | id کے ذریعے مخصوص ٹاسک حذف کریں                                                                                                                                     |
-
-> **تصدیق:** ہر طریقے پر management auth درکار ہے (`requireCloudAgentManagementAuth`)۔ v3.8.0 سے پہلے یہ بغیر تصدیق کے تھے — اس breaking change کے لیے commit `588a0333` دیکھیں۔
-
-```bash
-# Claude Code کا cloud task بنائیں
-curl -X POST http://localhost:20128/api/v1/agents/tasks \
-  -H "Authorization: Bearer your-management-key" \
-  -H "Content-Type: application/json" \
-  -d '{"providerId":"claude-code-cloud","prompt":"Fix the failing test","source":{"repo":"...","branch":"..."}}'
-```
-
----
-
 ## مینجمنٹ پراکسیز
 
 آؤٹ باؤنڈ HTTP(S)/SOCKS پراکسیز جنہیں providers، accounts، یا عالمی سطح پر تفویض کیا جا سکتا ہے۔
@@ -1901,48 +1875,10 @@ curl -X DELETE http://localhost:20128/api/resilience/model-cooldowns \
 
 67router معائنے اور ڈیش بورڈ کے استعمال کے لیے REST ریپر کے ساتھ ایک A2A (ایجنٹ سے ایجنٹ) JSON-RPC 2.0 اینڈ پوائنٹ فراہم کرتا ہے۔
 
-### JSON-RPC
-
-```bash
-POST /a2a
-Authorization: Bearer your-api-key   # اختیاری، الا یہ کہ OMNIROUTE_API_KEY سیٹ ہو
-Content-Type: application/json
-
-{
-  "jsonrpc": "2.0",
-  "id": 1,
-  "method": "message/send",
-  "params": {
-    "skill": "smart-routing",
-    "messages": [{"role": "user", "content": "Route this coding task"}]
-  }
-}
-```
-
-معاونت یافتہ طریقے (تمام `settings.a2aEnabled` کے ذریعے محدود ہیں):
-
-| طریقہ            | وضاحت                                                            |
-| ---------------- | ---------------------------------------------------------------- |
-| `message/send`   | ہم وقت مہارت کا نفاذ؛ `{task, artifacts, metadata}` واپس کرتا ہے |
-| `message/stream` | اسی مہارت کے مجموعے کا اسٹریمنگ SSE نفاذ                         |
-| `tasks/get`      | `taskId` کے ذریعے ٹاسک حاصل کریں                                 |
-| `tasks/cancel`   | `taskId` کے ذریعے ٹاسک منسوخ کریں                                |
-
-بلٹ اِن مہارتیں: `smart-routing`، `quota-management`، `provider-discovery`، `cost-analysis`، `health-report`۔
-
-### ایجنٹ کارڈ
-
-```bash
-GET /.well-known/agent.json
-```
-
-عوامی A2A ایجنٹ کارڈ (نام، وضاحت، صلاحیتیں، مہارتوں کا کیٹلاگ، تصدیقی اسکیم) واپس کرتا ہے — جسے عوامی طور پر 1 گھنٹے کے لیے کیش کیا جاتا ہے۔ کسی تصدیق کی ضرورت نہیں۔
-
 ### REST معاون ذرائع
 
 | طریقہ | راستہ                        | وضاحت                                                                                                               |
 | ----- | ---------------------------- | ------------------------------------------------------------------------------------------------------------------- |
-| GET   | `/api/a2a/status`            | A2A فعال ہونے کی حالت + ٹاسک کے اعداد و شمار + کیش شدہ ایجنٹ کارڈ کا خلاصہ                                          |
 | GET   | `/api/a2a/tasks`             | ٹاسکس کی فہرست — `?state=submitted\|working\|completed\|failed\|cancelled`، `?skill=`، `?limit=` (≤200)، `?offset=` |
 | POST  | `/api/a2a/tasks`             | (REST معاون ذریعے کے طور پر نافذ نہیں کیا گیا — JSON-RPC `message/send` کے ذریعے بنائیں)                            |
 | GET   | `/api/a2a/tasks/[id]`        | ایک ٹاسک حاصل کریں                                                                                                  |
@@ -1962,12 +1898,8 @@ GET /.well-known/agent.json
 | GET | `/api/cloud/models/alias` | کلاؤڈ سنک کو دستیاب ماڈل عرف کی فہرست دکھائیں |
 | GET | `/api/assess` | تازہ ترین جائزے کی درجہ بندیاں پڑھیں (فی فراہم کنندہ/ماڈل) |
 | POST | `/api/assess` | جائزہ چلائیں — باڈی: `{scope: {type:"all"}                                                   | {type:"provider", providerId} | {type:"model", modelId}, trigger?}` |
-| GET | `/api/evals` | بلٹ اِن ایول سویٹس + تازہ ترین رنز کی فہرست دکھائیں |
-| POST | `/api/evals` | ایول رن شروع کریں |
-| POST | `/api/evals/suites` | حسبِ ضرورت ایول سویٹ بنائیں — باڈی کی توثیق `evalSuiteSaveSchema` کے ذریعے کی جاتی ہے |
-| GET | `/api/evals/suites/[id]` | حسبِ ضرورت ایول سویٹ حاصل کریں |
 
-**تصدیق:** `/api/cloud/auth` براہِ راست Bearer کلید کی توثیق کرتا ہے اور صرف `manage` / `admin` دائرۂ کار رکھنے والی کلید کے لیے ہر کنکشن کی ماسک شدہ کلید اور `projectId` واپس کرتا ہے؛ دیگر `/api/cloud/*`، `/api/evals/*`، اور `/api/assess` روٹس کو مینجمنٹ سیشن/API کلید درکار ہوتی ہے۔ `/api/assess` POST ایک امتیازی-یونین دائرۂ کار اسکیم کے ساتھ `validateBody` استعمال کرتا ہے۔
+**تصدیق:** `/api/cloud/auth` براہِ راست Bearer کلید کی توثیق کرتا ہے اور صرف `manage` / `admin` دائرۂ کار رکھنے والی کلید کے لیے ہر کنکشن کی ماسک شدہ کلید اور `projectId` واپس کرتا ہے؛ دیگر `/api/cloud/*`، اور `/api/assess` روٹس کو مینجمنٹ سیشن/API کلید درکار ہوتی ہے۔ `/api/assess` POST ایک امتیازی-یونین دائرۂ کار اسکیم کے ساتھ `validateBody` استعمال کرتا ہے۔
 
 ---
 
@@ -2290,5 +2222,3 @@ AI ایجنٹ اسکلز کا انتظام کریں (OpenAI کے کسٹم GPTs �
 - `requireLogin` کو `/api/settings/require-login` کے ذریعے فعال یا غیر فعال کیا جا سکتا ہے
 - جب `REQUIRE_API_KEY=true` ہو تو `/v1/*` روٹس کے لیے اختیاری طور پر بیئرر API کلید درکار ہوتی ہے
 - اس حوالہ میں "انتظامی ٹوکن" / "انتظامی دائرۂ کار والی API کلید" سے مراد اس رہنما میں بیان کردہ اقسام میں سے کوئی ایک ہے — کوئی غیر متعین اضافی خفیہ قسم نہیں
-
-> **اہم تبدیلی (v3.8.0)** — `/api/v1/agents/tasks/*` اور کول ڈاؤن کے انتظامی اینڈ پوائنٹس کے لیے اب **انتظامی توثیق** (ڈیش بورڈ `auth_token` کوکی یا انتظامی دائرۂ کار والی API کلید) درکار ہے۔ وہ کلائنٹس جو پہلے توثیق کے بغیر ان روٹس کو کال کرتے تھے، اب `401 Unauthorized` وصول کریں گے۔ کمٹ `588a0333` (`fix(auth): require management auth for agent and cooldown APIs`) دیکھیں۔

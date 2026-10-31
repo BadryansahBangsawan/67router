@@ -63,19 +63,6 @@ management route များတွင် CORS **preflight ကို ဖြတ�
 cross-origin စာမျက်နှာတစ်ခုက မပေးနိုင်သည့် auth ကို လိုအပ်နေဆဲဖြစ်သည်။ မျှဝေထားသော CORS path တွင် ၎င်းသည် session hijack သို့မဟုတ်
 credential ခိုးယူနိုင်သည့် လမ်းကြောင်း **မဟုတ်ပါ**။
 
-### အမှန်တကယ်ရှိသော ခြွင်းချက်တစ်ခု — `/api/v1/agents/`
-
-Cloud-Agent route များ (`/api/v1/agents/{health,credentials,tasks,tasks/[id]}`) သည်
-၎င်းတို့၏ **ကိုယ်ပိုင်** CORS header များကို သတ်မှတ်ပြီး
-(`src/lib/cloudAgent/api.ts`, `getCloudAgentCorsHeaders`)
-`Access-Control-Allow-Origin: <origin>|*` နှင့်အတူ
-`Access-Control-Allow-Credentials: true` ကိုလည်း **ထုတ်ပေးပါသည်**။ ဤနေရာသည် origin ပြန်လည်ဖော်ပြမှုနှင့် credential များ အတူတကွ ရှိနေသည့် တစ်ခုတည်းသော မျက်နှာပြင်ဖြစ်ပြီး
-`CORS_ALLOW_ALL` နှင့် **မသက်ဆိုင်ဘဲ သီးခြားဖြစ်သည်**။ ဤ route များကို management auth ဖြင့် အတည်ပြုထားပါသည်
-(`requireManagementAuth`)။ Dashboard ကို host ပြင်ပမှ ဝင်ရောက်နိုင်အောင် ဖွင့်ထားသည့် operator များအနေဖြင့်
-response header များက cross-origin credentialed ဖတ်ရှုမှုကို ခွင့်ပြုထားသည့် တစ်ခုတည်းသောနေရာမှာ ဤနေရာဖြစ်ကြောင်း
-သတိပြုသင့်ပါသည်။ ၎င်းကို တိကျသော allowlist တစ်ခုသို့ ကန့်သတ်တင်းကျပ်ရန်ကိစ္စကို
-ဤ CORS လမ်းညွှန်ချက်နှင့် သီးခြားစီ ခြေရာခံဆောင်ရွက်ထားပါသည်။
-
 ## Production စစ်ဆေးရန်စာရင်း
 
 - **Production တွင် `CORS_ALLOW_ALL=true` ကို မည်သည့်အခါမျှ မသတ်မှတ်ပါနှင့်။** မသတ်မှတ်ဘဲထားပါ။
@@ -160,7 +147,6 @@ Security tab) ထဲတွင် သတ်မှတ်ပါ။
 | Dashboard အတွက် runtime အခြေအနေ                          | `src/app/api/settings/authz-inventory/route.ts`                      |
 | Dashboard သတိပေး banner                                  | `src/app/(dashboard)/dashboard/settings/components/AuthzSection.tsx` |
 | CORS Allowed Origins field                               | `src/app/(dashboard)/dashboard/settings/components/SecurityTab.tsx`  |
-| Route တစ်ခုချင်းစီအလိုက် Cloud-Agent CORS (ခြွင်းချက်)   | `src/lib/cloudAgent/api.ts`                                          |
 
 ## ထပ်မံကြည့်ရှုရန်
 

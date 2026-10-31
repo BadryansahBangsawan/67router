@@ -246,17 +246,6 @@ Ndepụta ngwa MCP dị n'elu (ngwa pụrụ iche 110, nke `countUniqueMcpTools(
 maka ọrụ routing/cache/compression/memory/skills/proxy/context-source n'oge runtime. Framework abụọ dị ya nso
 na-eso sava MCP abịa na v3.8.0 ma nwee dọkụmentị nke ha iche:
 
-### Cloud Agents
-
-Cloud Agents bụ agent AI na-ede koodu ndị na-agba ọsọ n'èzí process (codex-cloud, cursor-cloud, devin, jules), nke ejikọrọ na
-67router site n'otu ụdị njikọ a na-eji maka ndị na-eweta LLM. A na-ekpughe ha site na
-REST interface nke ha (`/api/v1/agents/*`), ha abụghịkwa **akụkụ** nke katalọgụ ngwa MCP
-— ịkpọ Cloud Agent anaghị eri oke MCP.
-
-- Mmejuputa: `src/lib/cloudAgent/` (`registry.ts`, `agents/codex.ts`, `agents/cursor.ts`, `agents/devin.ts`, `agents/jules.ts`).
-- Usoro ndụ: `createTask`, `getStatus`, `approvePlan`, `sendMessage`, `listSources`.
-- Dọkụmentị: [docs/frameworks/CLOUD_AGENT.md](./CLOUD_AGENT.md).
-
 ### Guardrails
 
 Guardrails bụ nzacha tupu/mgbe mmezu (vision-bridge, pii-masker, prompt-injection)

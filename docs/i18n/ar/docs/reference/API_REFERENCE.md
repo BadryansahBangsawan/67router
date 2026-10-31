@@ -1437,9 +1437,8 @@ curl -X PATCH "$OMNIROUTE_URL/api/keys/$KEY_ID" \
 
 ### التقييمات
 
-| نقطة النهاية | الطريقة  | الوصف                           |
-| ------------ | -------- | ------------------------------- |
-| `/api/evals` | GET/POST | سرد حزم التقييم / تشغيل التقييم |
+| نقطة النهاية | الطريقة | الوصف |
+| ------------ | ------- | ----- |
 
 ### السياسات
 
@@ -1762,31 +1761,6 @@ DELETE /api/usage/token-limits?id=tl-abc
 
 ---
 
-## بروتوكول الوكلاء
-
-مهام الوكلاء السحابيين (Claude Code وCodex Cloud وOpenHands وغيرها) التي تُنفَّذ عن بُعد نيابةً عن مستخدمي 67router.
-
-| الطريقة | المسار                        | الوصف                                                                                                                                                       |
-| ------- | ----------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| GET     | `/api/v1/agents/tasks`        | سرد المهام — مع دعم اختياري لـ `?provider=` و`?status=` و`?limit=` (من 1 إلى 500، والقيمة الافتراضية 50)                                                    |
-| POST    | `/api/v1/agents/tasks`        | إنشاء مهمة — يجري التحقق من صحة النص الأساسي بواسطة `CreateCloudAgentTaskSchema` (`providerId` و`prompt` و`source` و`options?`). يُرجع `201` مع غلاف المهمة |
-| DELETE  | `/api/v1/agents/tasks?id=...` | حذف مهمة                                                                                                                                                    |
-| GET     | `/api/v1/agents/tasks/[id]`   | قراءة مهمة — يُحدِّث الحالة بشكل متزامن من الوكيل السحابي الخارجي عند تعيين `external_id`                                                                   |
-| POST    | `/api/v1/agents/tasks/[id]`   | إجراء مميَّز: `{action: "approve"}` أو `{action: "message", message}` أو `{action: "cancel"}`                                                               |
-| DELETE  | `/api/v1/agents/tasks/[id]`   | حذف مهمة محددة حسب المعرّف                                                                                                                                  |
-
-> **المصادقة:** يلزم إجراء مصادقة الإدارة لكل طريقة (`requireCloudAgentManagementAuth`). قبل v3.8.0، لم تكن هذه الواجهات تتطلب المصادقة — راجع الالتزام `588a0333` لمعرفة التغيير غير المتوافق.
-
-```bash
-# إنشاء مهمة سحابية لـ Claude Code
-curl -X POST http://localhost:20128/api/v1/agents/tasks \
-  -H "Authorization: Bearer your-management-key" \
-  -H "Content-Type: application/json" \
-  -d '{"providerId":"claude-code-cloud","prompt":"Fix the failing test","source":{"repo":"...","branch":"..."}}'
-```
-
----
-
 ## وكلاء الإدارة
 
 وكلاء HTTP(S)/SOCKS الصادرون الذين يمكن تعيينهم لمزوّدي الخدمة أو الحسابات أو على المستوى العام.
@@ -1906,48 +1880,10 @@ curl -X DELETE http://localhost:20128/api/resilience/model-cooldowns \
 
 يوفّر 67router نقطة نهاية A2A (من وكيل إلى وكيل) تستخدم JSON-RPC 2.0، بالإضافة إلى غلاف REST لأغراض الفحص ولوحة المعلومات.
 
-### JSON-RPC
-
-```bash
-POST /a2a
-Authorization: Bearer your-api-key   # اختياري ما لم يكن OMNIROUTE_API_KEY معيّنًا
-Content-Type: application/json
-
-{
-  "jsonrpc": "2.0",
-  "id": 1,
-  "method": "message/send",
-  "params": {
-    "skill": "smart-routing",
-    "messages": [{"role": "user", "content": "Route this coding task"}]
-  }
-}
-```
-
-الأساليب المدعومة (جميعها خاضعة لإعداد `settings.a2aEnabled`):
-
-| الأسلوب          | الوصف                                                     |
-| ---------------- | --------------------------------------------------------- |
-| `message/send`   | تنفيذ متزامن للمهارة؛ يُرجع `{task, artifacts, metadata}` |
-| `message/stream` | تنفيذ متدفق عبر SSE لمجموعة المهارات نفسها                |
-| `tasks/get`      | جلب مهمة بواسطة `taskId`                                  |
-| `tasks/cancel`   | إلغاء مهمة بواسطة `taskId`                                |
-
-المهارات المدمجة: `smart-routing`، و`quota-management`، و`provider-discovery`، و`cost-analysis`، و`health-report`.
-
-### بطاقة الوكيل
-
-```bash
-GET /.well-known/agent.json
-```
-
-يُرجع بطاقة وكيل A2A العامة (الاسم، والوصف، والإمكانات، ودليل المهارات، ونظام المصادقة) — وتُخزّن مؤقتًا بشكل عام لمدة ساعة واحدة. لا تتطلب مصادقة.
-
 ### أدوات REST المساعدة
 
 | الأسلوب | المسار                       | الوصف                                                                                                              |
 | ------- | ---------------------------- | ------------------------------------------------------------------------------------------------------------------ |
-| GET     | `/api/a2a/status`            | حالة تفعيل A2A + إحصاءات المهام + ملخص بطاقة الوكيل المخزّن مؤقتًا                                                 |
 | GET     | `/api/a2a/tasks`             | سرد المهام — `?state=submitted\|working\|completed\|failed\|cancelled`، و`?skill=`، و`?limit=` (≤200)، و`?offset=` |
 | POST    | `/api/a2a/tasks`             | (غير منفّذ كأداة REST مساعدة — أنشئ المهمة عبر JSON-RPC باستخدام `message/send`)                                   |
 | GET     | `/api/a2a/tasks/[id]`        | استرداد مهمة واحدة                                                                                                 |
@@ -1967,12 +1903,8 @@ GET /.well-known/agent.json
 | GET | `/api/cloud/models/alias` | سرد الأسماء المستعارة للنماذج كما تظهر للمزامنة السحابية |
 | GET | `/api/assess` | قراءة أحدث تصنيفات التقييم (لكل مزوّد خدمة/نموذج) |
 | POST | `/api/assess` | تشغيل تقييم — المتن: `{scope: {type:"all"}                                                   | {type:"provider", providerId} | {type:"model", modelId}, trigger?}` |
-| GET | `/api/evals` | سرد حِزم الاختبارات المدمجة + أحدث عمليات التشغيل |
-| POST | `/api/evals` | تشغيل اختبار |
-| POST | `/api/evals/suites` | إنشاء حزمة اختبارات مخصّصة — يُتحقق من المتن بواسطة `evalSuiteSaveSchema` |
-| GET | `/api/evals/suites/[id]` | استرداد حزمة اختبارات مخصّصة |
 
-**المصادقة:** يتحقق `/api/cloud/auth` من مفتاح Bearer مباشرةً، ولا يُرجع المفتاح المحجوب و`projectId` لكل اتصال إلا إذا كان المفتاح يمتلك نطاق `manage` / `admin`؛ وتتطلب مسارات `/api/cloud/*` و`/api/evals/*` و`/api/assess` الأخرى جلسة إدارة/مفتاح API. يستخدم طلب POST إلى `/api/assess` الدالة `validateBody` مع مخطط نطاق اتحاد مميّز.
+**المصادقة:** يتحقق `/api/cloud/auth` من مفتاح Bearer مباشرةً، ولا يُرجع المفتاح المحجوب و`projectId` لكل اتصال إلا إذا كان المفتاح يمتلك نطاق `manage` / `admin`؛ وتتطلب مسارات `/api/cloud/*` وو`/api/assess` الأخرى جلسة إدارة/مفتاح API. يستخدم طلب POST إلى `/api/assess` الدالة `validateBody` مع مخطط نطاق اتحاد مميّز.
 
 ---
 
@@ -2296,5 +2228,3 @@ devin-cli وغيرها). راجع [مرجع المزوّدين](./PROVIDER_REFER
 - يمكن تبديل `requireLogin` عبر `/api/settings/require-login`
 - قد تتطلب مسارات `/v1/*` اختياريًا مفتاح API من نوع Bearer عندما تكون `REQUIRE_API_KEY=true`
 - يُقصد بـ «رمز الإدارة» / «مفتاح API بنطاق الإدارة» في هذا المرجع إحدى العائلات الواردة في ذلك الدليل — وليس نوعًا إضافيًا غير معرّف من الأسرار
-
-> **تغيير غير متوافق (v3.8.0)** — تتطلب الآن `/api/v1/agents/tasks/*` ونقاط نهاية إدارة فترة الانتظار **مصادقة الإدارة** (ملف تعريف الارتباط `auth_token` الخاص بلوحة المعلومات أو مفتاح API بنطاق الإدارة). ستتلقى التطبيقات العميلة التي كانت تستدعي هذه المسارات سابقًا من دون مصادقة الاستجابة `401 Unauthorized`. راجع الالتزام `588a0333` (`fix(auth): require management auth for agent and cooldown APIs`).

@@ -244,17 +244,6 @@ curl -X DELETE http://localhost:20128/api/settings/notion
 रनटाइम रूटिंग/कैश/कंप्रेशन/मेमोरी/स्किल्स/प्रॉक्सी/कॉन्टेक्स्ट-सोर्स ऑपरेशंस तक सीमित है। v3.8.0 में MCP सर्वर के साथ
 दो संबद्ध फ़्रेमवर्क्स उपलब्ध कराए जाते हैं और उनका दस्तावेज़ीकरण अलग से किया गया है:
 
-### Cloud Agents
-
-Cloud Agents आउट-ऑफ़-प्रोसेस AI कोडिंग एजेंट्स (codex-cloud, cursor-cloud, devin, jules) हैं, जिन्हें
-LLM प्रदाताओं के लिए उपयोग किए जाने वाले समान कनेक्शन मॉडल के माध्यम से 67router में जोड़ा गया है। इन्हें
-इनकी अपनी REST सतह (`/api/v1/agents/*`) के माध्यम से उपलब्ध कराया जाता है और ये MCP टूल कैटलॉग का हिस्सा **नहीं** हैं
-— किसी Cloud Agent को कॉल करने पर कोई MCP स्कोप उपयोग नहीं होता।
-
-- कार्यान्वयन: `src/lib/cloudAgent/` (`registry.ts`, `agents/codex.ts`, `agents/cursor.ts`, `agents/devin.ts`, `agents/jules.ts`)।
-- जीवनचक्र: `createTask`, `getStatus`, `approvePlan`, `sendMessage`, `listSources`।
-- दस्तावेज़ीकरण: [docs/frameworks/CLOUD_AGENT.md](./CLOUD_AGENT.md)।
-
 ### Guardrails
 
 Guardrails निष्पादन-पूर्व/पश्चात फ़िल्टर्स (vision-bridge, pii-masker, prompt-injection) हैं,

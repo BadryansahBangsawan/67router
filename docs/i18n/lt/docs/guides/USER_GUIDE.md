@@ -24,7 +24,6 @@ Išsamus paslaugų teikėjų konfigūravimo, derinių kūrimo, CLI įrankių int
 - [Įgūdžių sistema](#-skills-system)
 - [Atminties sistema](#-memory-system)
 - [Žiniatinklio sąsajos](#-webhooks)
-- [Debesijos agentai](#-cloud-agents)
 - [Programinis valdymas](#-programmatic-management)
 - [Vidinė CLI](#-internal-cli)
 - [Darbalaukio programa („Electron“)](#-desktop-application-electron)
@@ -1222,8 +1221,6 @@ Naudokite SSE URL `http://localhost:20128/api/mcp/sse` ir „Bearer“ API rakt�
 
 ### Aprėptys
 
-Šiuo metu MCP apibrėžia 32 įvardytas aprėptis. Kiekvieną „Bearer“ raktą galima apriboti konkrečiomis aprėptimis — autoritetingą aprėpčių ir įrankių sąrašą rasite dokumente [MCP-SERVER.md](../frameworks/MCP-SERVER.md), o JSON-RPC schemą — dokumente [A2A-SERVER.md](../frameworks/A2A-SERVER.md).
-
 ---
 
 ## 🧠 Įgūdžių sistema
@@ -1232,7 +1229,6 @@ Naudokite SSE URL `http://localhost:20128/api/mcp/sse` ir „Bearer“ API rakt�
 
 - **Prekyvietės sąsaja** — Naršykite ir diekite įgūdžius skiltyje **Valdymo skydas → Įgūdžiai**
 - **Atskirų raktų aprėptys** — Apribokite, kurie API raktai gali iškviesti konkrečius įgūdžius
-- **Pasirinktiniai įgūdžiai** — Įkelkite TypeScript failą į `src/lib/a2a/skills/`, užregistruokite jį ir jį iš karto bus galima iškviesti per A2A
 
 Išsami dokumentacija: [SKILLS.md](../frameworks/SKILLS.md).
 
@@ -1261,18 +1257,6 @@ Prenumeruokite „67router“ įvykius, kad galėtumėte stebėti sistemą ir au
 - Pakartotiniai bandymai: 3 bandymai su eksponentiškai didėjančia delsa, o tada pranešimas perkeliamas į neapdorotų pranešimų eilę
 
 Visa schema pateikta [WEBHOOKS.md](../frameworks/WEBHOOKS.md).
-
----
-
-## ☁️ Debesijos agentai
-
-„67router“ integruojama su debesijos programavimo agentais (**OpenAI Codex Cloud**, **Devin**, **Jules**, **Antigravity**), todėl ilgai vykdomas užduotis galite siųsti iš to paties valdymo skydo, kuriame tvarkomas vietinis maršruto parinkimas.
-
-- Kurkite užduotis skiltyje **Valdymo skydas → Debesijos agentai** arba naudodami `POST /api/v1/agents/tasks`
-- Stebėkite kiekvienos užduoties būseną, žurnalus ir artefaktus
-- Kiekvienam teikėjui naudokite savo API raktą — prisijungimo duomenys niekada nepalieka „67router“ egzemplioriaus
-
-Išsami dokumentacija: [CLOUD_AGENT.md](../frameworks/CLOUD_AGENT.md).
 
 ---
 
@@ -1329,7 +1313,6 @@ omniroute restore [<timestamp>]    # Atkurti iš momentinės kopijos
 omniroute health                   # Išsami būklė (grandinės pertraukikliai, podėlis, atmintis)
 omniroute quota                    # Teikėjų kvotų naudojimas
 omniroute mcp status               # MCP serverio būsena
-omniroute a2a status               # A2A serverio būsena
 omniroute tunnel list|create|stop  # Cloudflare/Tailscale/ngrok tuneliai
 omniroute reset-password           # Iš naujo nustatyti administratoriaus slaptažodį
 omniroute --mcp                    # Paleisti MCP serverį per stdio

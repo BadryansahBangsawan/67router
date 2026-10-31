@@ -36,16 +36,15 @@ AI agent / IDE
 
 ### Avvaldan mavjud boʻlgan qismlar (auditdan oʻtkazilgan, takrorlanmagan)
 
-| Tushuncha                                       | Mavjud amalga oshirish                                                                                              |
-| ----------------------------------------------- | ------------------------------------------------------------------------------------------------------------------- |
-| Mavjudlik (trafik yubora olamizmi?)             | Avariya uzgichi (CLOSED/DEGRADED/OPEN/HALF_OPEN, DBʼda saqlanadi), ulanishni vaqtincha toʻxtatish, modelni bloklash |
-| Holat hisobotlari                               | `providerHealthMatrix.ts`, `providerHealthAutopilot.ts`                                                             |
-| Soyali trafik                                   | `open-sse/services/combo/shadowRouting.ts`                                                                          |
-| Himoya mexanizmlari                             | `src/lib/guardrails/` (oldingi/keyingi hookʼlar)                                                                    |
-| Aniq kesh                                       | `src/lib/semanticCache.ts` (imzoga asoslangan)                                                                      |
-| Baholagichlar / baholash asosidagi marshrutlash | `src/lib/evals/`, `open-sse/services/evalRouting.ts`                                                                |
-| Combo qarorlarining tushuntirilishi             | `open-sse/services/combo/decisionTrace.ts`                                                                          |
-| Boshqaruv panelining real vaqt hodisalari       | `src/lib/events/eventBus.ts` (UI bildirishnoma kanali, `unknown` foydali yuklar, 100 ta yozuv tarixi)               |
+| Tushuncha                                 | Mavjud amalga oshirish                                                                                              |
+| ----------------------------------------- | ------------------------------------------------------------------------------------------------------------------- |
+| Mavjudlik (trafik yubora olamizmi?)       | Avariya uzgichi (CLOSED/DEGRADED/OPEN/HALF_OPEN, DBʼda saqlanadi), ulanishni vaqtincha toʻxtatish, modelni bloklash |
+| Holat hisobotlari                         | `providerHealthMatrix.ts`, `providerHealthAutopilot.ts`                                                             |
+| Soyali trafik                             | `open-sse/services/combo/shadowRouting.ts`                                                                          |
+| Himoya mexanizmlari                       | `src/lib/guardrails/` (oldingi/keyingi hookʼlar)                                                                    |
+| Aniq kesh                                 | `src/lib/semanticCache.ts` (imzoga asoslangan)                                                                      |
+| Combo qarorlarining tushuntirilishi       | `open-sse/services/combo/decisionTrace.ts`                                                                          |
+| Boshqaruv panelining real vaqt hodisalari | `src/lib/events/eventBus.ts` (UI bildirishnoma kanali, `unknown` foydali yuklar, 100 ta yozuv tarixi)               |
 
 Marshrutlash hodisalari qatlami `eventBus`ning qayta amalga oshirilishi **emas**: bu shina boshqaruv panelining real vaqt bildirishnomalari kanali (tiplashtirilgan _hodisa nomlari_, noaniq foydali yuklar, UI isteʼmolchilari). `RoutingEvent` esa boshqaruv tekisligining qayta aloqa qabul qiluvchilari (sifat kuzatuvchisi, OTel eksportchisi, izohlar ombori) tomonidan isteʼmol qilinadigan tiplashtirilgan _natija_ tuzilmasidir (kechikish/tokenlar/xarajat/natija/yakunlanish sababi).
 
@@ -255,8 +254,6 @@ potensial intellekt/baholash bekendi** sifatida ko‘radi. Integratsiya nuqtalar
 - Kelajakdagi `Evaluator` (deterministik, lokal hakam, HTTP, WASM)
   hodisalar/izlarni iste’mol qilib, ayni `getQualityScore`/sifat omili yo‘liga
   uzatiladigan `QualityScore`ni qaytaradi.
-- Mavjud baholashga asoslangan marshrutlash (`open-sse/services/evalRouting.ts`)
-  yoqilganda kombinatsiya nishonlarini `eval_runs` muvaffaqiyat ko‘rsatkichlari
   bo‘yicha allaqachon qayta tartiblaydi.
 
 Hech qanday baholash so‘rov yo‘lida sinxron bajarilmaydi va shlyuz baholovchisiz

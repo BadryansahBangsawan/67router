@@ -30,7 +30,6 @@ const okJson = (body: unknown) =>
 
 const okFetchMock = () =>
   vi.fn((url: string) => {
-    if (url.startsWith("/api/v1/agents/tasks")) return okJson({ data: [] });
     if (url.startsWith("/api/a2a/tasks"))
       return okJson({ tasks: [], total: 0, limit: 200, offset: 0 });
     return okJson({ offline: false, runners: [], tasks: [] });
@@ -54,23 +53,21 @@ describe("useOrchestrationSnapshot", () => {
     vi.restoreAllMocks();
   });
 
-  it("polls the three endpoints and builds a snapshot; a failed source keeps the last good data", async () => {
+  it("polls the two endpoints and builds a snapshot; a failed source keeps the last good data", async () => {
     let latest: ReturnType<typeof useOrchestrationSnapshot> | null = null;
     const task = {
       id: "t1",
-      providerId: "devin",
-      status: "running",
-      prompt: "p",
-      source: { repoName: "r", repoUrl: "https://x" },
-      options: {},
-      activities: [],
+      skill: "smart-routing",
+      state: "working",
+      input: { skill: "smart-routing", messages: [{ role: "user", content: "p" }] },
+      events: [],
+      artifacts: [],
       createdAt: "2026-08-30T10:00:00Z",
       updatedAt: "2026-08-30T10:00:00Z",
     };
     const fetchMock = vi.fn((url: string) => {
-      if (url.startsWith("/api/v1/agents/tasks")) return okJson({ data: [task] });
       if (url.startsWith("/api/a2a/tasks"))
-        return okJson({ tasks: [], total: 0, limit: 200, offset: 0 });
+        return okJson({ tasks: [task], total: 1, limit: 200, offset: 0 });
       return okJson({ offline: false, runners: [], tasks: [] });
     });
     vi.stubGlobal("fetch", fetchMock);
@@ -87,20 +84,18 @@ describe("useOrchestrationSnapshot", () => {
     await act(async () => {
       await vi.advanceTimersByTimeAsync(10);
     });
-    expect(latest!.snapshot.nodes.some((n) => n.id === "cloud-agent:t1")).toBe(true);
+    expect(latest!.snapshot.nodes.some((n) => n.id === "a2a:t1")).toBe(true);
 
-    // Second tick: cloud agent fails — node must survive from the last good photo, source marked stale.
+    // Second tick: A2A fails — node must survive from the last good photo, source marked stale.
     fetchMock.mockImplementation((url: string) => {
-      if (url.startsWith("/api/v1/agents/tasks")) return Promise.reject(new Error("boom"));
-      if (url.startsWith("/api/a2a/tasks"))
-        return okJson({ tasks: [], total: 0, limit: 200, offset: 0 });
+      if (url.startsWith("/api/a2a/tasks")) return Promise.reject(new Error("boom"));
       return okJson({ offline: false, runners: [], tasks: [] });
     });
     await act(async () => {
       await vi.advanceTimersByTimeAsync(5_100);
     });
-    expect(latest!.snapshot.nodes.some((n) => n.id === "cloud-agent:t1")).toBe(true);
-    const st = latest!.snapshot.sources.find((s) => s.source === "cloud-agent");
+    expect(latest!.snapshot.nodes.some((n) => n.id === "a2a:t1")).toBe(true);
+    const st = latest!.snapshot.sources.find((s) => s.source === "a2a");
     expect(st?.ok).toBe(false);
   });
 
@@ -123,7 +118,7 @@ describe("useOrchestrationSnapshot", () => {
       await vi.advanceTimersByTimeAsync(1_100);
     });
     // Two burst events → exactly ONE extra round of 3 fetches (debounce), not two.
-    expect(fetchMock.mock.calls.length).toBe(callsAfterMount + 3);
+    expect(fetchMock.mock.calls.length).toBe(callsAfterMount + 2);
   });
 
   it("a WS event on a different channel does not trigger a refetch", async () => {
@@ -166,7 +161,7 @@ describe("useOrchestrationSnapshot", () => {
     await act(async () => {
       await vi.advanceTimersByTimeAsync(1_000);
     });
-    expect(fetchMock.mock.calls.length).toBe(callsAfterMount + 3);
+    expect(fetchMock.mock.calls.length).toBe(callsAfterMount + 2);
   });
 
   it("polls every 5s while the WS connection is down", async () => {
@@ -189,7 +184,7 @@ describe("useOrchestrationSnapshot", () => {
     await act(async () => {
       await vi.advanceTimersByTimeAsync(200);
     });
-    expect(fetchMock.mock.calls.length).toBe(callsAfterMount + 3);
+    expect(fetchMock.mock.calls.length).toBe(callsAfterMount + 2);
   });
 
   it("reprograms the interval when the WS connection transitions from connected to disconnected", async () => {
@@ -228,26 +223,24 @@ describe("useOrchestrationSnapshot", () => {
     await act(async () => {
       await vi.advanceTimersByTimeAsync(5_100);
     });
-    expect(fetchMock.mock.calls.length).toBe(callsAfterMount + 3);
+    expect(fetchMock.mock.calls.length).toBe(callsAfterMount + 2);
   });
 
   it("keeps snapshot referential identity across polls with an unchanged payload, and mints a new one when it changes", async () => {
     let latest: ReturnType<typeof useOrchestrationSnapshot> | null = null;
     const task = {
       id: "t1",
-      providerId: "devin",
-      status: "running",
-      prompt: "p",
-      source: { repoName: "r", repoUrl: "https://x" },
-      options: {},
-      activities: [],
+      skill: "smart-routing",
+      state: "working",
+      input: { skill: "smart-routing", messages: [{ role: "user", content: "p" }] },
+      events: [],
+      artifacts: [],
       createdAt: "2026-08-30T10:00:00Z",
       updatedAt: "2026-08-30T10:00:00Z",
     };
     const fetchMock = vi.fn((url: string) => {
-      if (url.startsWith("/api/v1/agents/tasks")) return okJson({ data: [task] });
       if (url.startsWith("/api/a2a/tasks"))
-        return okJson({ tasks: [], total: 0, limit: 200, offset: 0 });
+        return okJson({ tasks: [task], total: 1, limit: 200, offset: 0 });
       return okJson({ offline: false, runners: [], tasks: [] });
     });
     vi.stubGlobal("fetch", fetchMock);
@@ -265,7 +258,7 @@ describe("useOrchestrationSnapshot", () => {
       await vi.advanceTimersByTimeAsync(10);
     });
     const firstSnapshot = latest!.snapshot;
-    expect(firstSnapshot.nodes.some((n) => n.id === "cloud-agent:t1")).toBe(true);
+    expect(firstSnapshot.nodes.some((n) => n.id === "a2a:t1")).toBe(true);
 
     // Same payload next poll tick → `polledAt` advances but content doesn't,
     // so the hook must keep returning the SAME snapshot object.
@@ -276,10 +269,13 @@ describe("useOrchestrationSnapshot", () => {
 
     // Payload actually changes → a new snapshot identity is expected.
     fetchMock.mockImplementation((url: string) => {
-      if (url.startsWith("/api/v1/agents/tasks"))
-        return okJson({ data: [{ ...task, status: "completed" }] });
       if (url.startsWith("/api/a2a/tasks"))
-        return okJson({ tasks: [], total: 0, limit: 200, offset: 0 });
+        return okJson({
+          tasks: [{ ...task, state: "completed" }],
+          total: 1,
+          limit: 200,
+          offset: 0,
+        });
       return okJson({ offline: false, runners: [], tasks: [] });
     });
     await act(async () => {
@@ -291,9 +287,7 @@ describe("useOrchestrationSnapshot", () => {
   it("keeps staleSince pinned to the first failure across consecutive failing polls", async () => {
     let latest: ReturnType<typeof useOrchestrationSnapshot> | null = null;
     const fetchMock = vi.fn((url: string) => {
-      if (url.startsWith("/api/v1/agents/tasks")) return Promise.reject(new Error("boom"));
-      if (url.startsWith("/api/a2a/tasks"))
-        return okJson({ tasks: [], total: 0, limit: 200, offset: 0 });
+      if (url.startsWith("/api/a2a/tasks")) return Promise.reject(new Error("boom"));
       return okJson({ offline: false, runners: [], tasks: [] });
     });
     vi.stubGlobal("fetch", fetchMock);
@@ -310,30 +304,26 @@ describe("useOrchestrationSnapshot", () => {
     await act(async () => {
       await vi.advanceTimersByTimeAsync(10);
     });
-    const firstStale = latest!.snapshot.sources.find((s) => s.source === "cloud-agent")?.staleSince;
+    const firstStale = latest!.snapshot.sources.find((s) => s.source === "a2a")?.staleSince;
     expect(firstStale).toBeTruthy();
 
     await act(async () => {
       await vi.advanceTimersByTimeAsync(5_100);
     });
-    const secondStale = latest!.snapshot.sources.find(
-      (s) => s.source === "cloud-agent"
-    )?.staleSince;
+    const secondStale = latest!.snapshot.sources.find((s) => s.source === "a2a")?.staleSince;
     expect(secondStale).toBe(firstStale);
 
     await act(async () => {
       await vi.advanceTimersByTimeAsync(5_100);
     });
-    const thirdStale = latest!.snapshot.sources.find((s) => s.source === "cloud-agent")?.staleSince;
+    const thirdStale = latest!.snapshot.sources.find((s) => s.source === "a2a")?.staleSince;
     expect(thirdStale).toBe(firstStale);
   });
 
   it("stamps a fresh staleSince when a source fails again after recovering", async () => {
     let latest: ReturnType<typeof useOrchestrationSnapshot> | null = null;
     const fetchMock = vi.fn((url: string) => {
-      if (url.startsWith("/api/v1/agents/tasks")) return Promise.reject(new Error("boom"));
-      if (url.startsWith("/api/a2a/tasks"))
-        return okJson({ tasks: [], total: 0, limit: 200, offset: 0 });
+      if (url.startsWith("/api/a2a/tasks")) return Promise.reject(new Error("boom"));
       return okJson({ offline: false, runners: [], tasks: [] });
     });
     vi.stubGlobal("fetch", fetchMock);
@@ -350,12 +340,11 @@ describe("useOrchestrationSnapshot", () => {
     await act(async () => {
       await vi.advanceTimersByTimeAsync(10);
     });
-    const firstStale = latest!.snapshot.sources.find((s) => s.source === "cloud-agent")?.staleSince;
+    const firstStale = latest!.snapshot.sources.find((s) => s.source === "a2a")?.staleSince;
     expect(firstStale).toBeTruthy();
 
     // Recovers — staleSince must be dropped (existing behavior, kept).
     fetchMock.mockImplementation((url: string) => {
-      if (url.startsWith("/api/v1/agents/tasks")) return okJson({ data: [] });
       if (url.startsWith("/api/a2a/tasks"))
         return okJson({ tasks: [], total: 0, limit: 200, offset: 0 });
       return okJson({ offline: false, runners: [], tasks: [] });
@@ -363,22 +352,20 @@ describe("useOrchestrationSnapshot", () => {
     await act(async () => {
       await vi.advanceTimersByTimeAsync(5_100);
     });
-    const recovered = latest!.snapshot.sources.find((s) => s.source === "cloud-agent");
+    const recovered = latest!.snapshot.sources.find((s) => s.source === "a2a");
     expect(recovered?.ok).toBe(true);
     expect(recovered?.staleSince).toBeUndefined();
 
     // Fails again — this is a NEW failure, so staleSince must be a fresh timestamp,
     // not the one from the first failure.
     fetchMock.mockImplementation((url: string) => {
-      if (url.startsWith("/api/v1/agents/tasks")) return Promise.reject(new Error("boom again"));
-      if (url.startsWith("/api/a2a/tasks"))
-        return okJson({ tasks: [], total: 0, limit: 200, offset: 0 });
+      if (url.startsWith("/api/a2a/tasks")) return Promise.reject(new Error("boom again"));
       return okJson({ offline: false, runners: [], tasks: [] });
     });
     await act(async () => {
       await vi.advanceTimersByTimeAsync(5_100);
     });
-    const newStale = latest!.snapshot.sources.find((s) => s.source === "cloud-agent")?.staleSince;
+    const newStale = latest!.snapshot.sources.find((s) => s.source === "a2a")?.staleSince;
     expect(newStale).toBeTruthy();
     expect(newStale).not.toBe(firstStale);
   });
@@ -386,9 +373,7 @@ describe("useOrchestrationSnapshot", () => {
   it("keeps snapshot referential identity across polls while a source keeps failing with an unchanged payload", async () => {
     let latest: ReturnType<typeof useOrchestrationSnapshot> | null = null;
     const fetchMock = vi.fn((url: string) => {
-      if (url.startsWith("/api/v1/agents/tasks")) return Promise.reject(new Error("boom"));
-      if (url.startsWith("/api/a2a/tasks"))
-        return okJson({ tasks: [], total: 0, limit: 200, offset: 0 });
+      if (url.startsWith("/api/a2a/tasks")) return Promise.reject(new Error("boom"));
       return okJson({ offline: false, runners: [], tasks: [] });
     });
     vi.stubGlobal("fetch", fetchMock);

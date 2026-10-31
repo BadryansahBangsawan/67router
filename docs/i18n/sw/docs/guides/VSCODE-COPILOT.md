@@ -92,7 +92,7 @@ kiendelezi.
 Simple Browser badala ya kivinjari cha nje. Upachikaji **huchaguliwa kwa hiari kwenye seva** kupitia
 `DASHBOARD_ALLOW_EMBED=vscode`, ambayo hutoa kurasa za HTML zikiwa na
 `frame-ancestors 'self' vscode-webview:` badala ya chaguo-msingi la `frame-ancestors 'none'` +
-`X-Frame-Options: DENY`. Kiolesura cha API (`/api`, `/v1`, `/v1beta`, `/a2a`, `/healthz`) huendelea kutumia
+`X-Frame-Options: DENY`. Kiolesura cha API (`/api`, `/v1`, `/v1beta`, `/healthz`) huendelea kutumia
 vichwa madhubuti kwa hali zote.
 
 > ⚠️ **Hii ni alama ya wakati wa kujenga, si ya wakati wa utekelezaji.** Next.js hukusanya `headers()` ndani ya manifesti ya route,

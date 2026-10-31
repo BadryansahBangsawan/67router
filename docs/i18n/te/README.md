@@ -588,7 +588,6 @@ Radar ఐచ్ఛికం మరియు GET-మాత్రమే. 67router 
 - **🔑 కీ-వారీ రూటింగ్ నియంత్రణ** — `forcedModel`తో API కీని ఒక మోడల్ లేదా కాంబోకు పిన్ చేయండి, మరియు కీ యొక్క మోడళ్లు మరియు కాంబోలను ఆటమిక్గా జోడించండి లేదా తొలగించండి (`/api/keys/{id}/access`). → [API రిఫరెన్స్](docs/reference/API_REFERENCE.md) · [OpenAPI](docs/openapi.yaml)
 - **🛡️ మరింత సూక్ష్మమైన PII నియంత్రణలు** — రకం-వారీ ఎంపిక, 20 వరకు ధృవీకరించబడిన కస్టమ్ మాస్కింగ్ నమూనాలు మరియు రకం-వారీ డిటెక్షన్ కౌంటర్లు; మాస్కింగ్ ఆప్ట్-ఇన్గానే ఉంటుంది. → [గార్డ్రైల్స్](docs/security/GUARDRAILS.md)
 - **🌍 67 భాషలు** — డాష్బోర్డ్, డాక్స్ మిర్రర్లు మరియు CLI; `npm run i18n:add-locale` ఒకే కమాండ్తో ప్రతిచోటా భాషను జోడిస్తుంది. → [i18n గైడ్](docs/guides/I18N.md)
-- **🎛️ OmniConductor** — మీ ఏజెంట్ ఫ్లీట్కు ఇన్బౌండ్ A2A డెలిగేషన్, ఏజెంట్ కార్డ్పై కండక్టర్ స్కిల్స్, మరియు Faro పుష్-టు-టాక్ వాయిస్ చాట్తో డాష్బోర్డ్ ప్యానెల్. → [A2A సర్వర్](docs/frameworks/A2A-SERVER.md)
 - **🛂 అడాప్టివ్ అడ్మిషన్ & ఓవర్లోడ్ ప్రొటెక్షన్** — హెవీవెయిట్ చాట్ అభ్యర్థనలు 503 అవ్వకుండా క్యూలో వేచి ఉంటాయి, కనెక్షన్కు ఆటమిక్ RPM రోలింగ్ లీజ్లతో. → [రెసిలియన్స్ గైడ్](docs/architecture/RESILIENCE_GUIDE.md)
 - **🗂️ కెనానికల్ `/v1/models` క్రమం** — ప్రతి ప్రొవైడర్కు ఒకే వరుస ప్రొవైడర్-గ్రూప్ చేసిన బ్లాక్ (కాంబోలు మొదట పిన్ చేయబడతాయి), ప్రతి కేటలాగ్ సోర్స్లోనూ స్థిరంగా ఉంటుంది. → [API రిఫరెన్స్](docs/reference/API_REFERENCE.md)
 - **🗜️ కంప్రెషన్ హార్డెనింగ్** — డిఫాల్ట్-ఆన్ ఇన్ఫ్లేషన్ గార్డ్, DE / FR / JA + చైనీస్ (wényán) కోసం Caveman ప్యాక్లు, Gradle & .NET కోసం RTK ఫిల్టర్లు. → [కంప్రెషన్](docs/compression/COMPRESSION_ENGINES.md)
@@ -907,7 +906,6 @@ omniroute contexts use default            # ← తిరిగి స్థా�
   <tr><td align="left" nowrap>🧰 <b>MCP (stdio)</b></td><td align="left" nowrap><code>omniroute --mcp</code></td><td align="left">Claude Desktop, Cursor లేదా ఏదైనా MCP క్లయింట్కు అనుసంధానించండి</td></tr>
   <tr><td align="left" nowrap>🌊 <b>MCP (HTTP)</b></td><td align="left" nowrap><code>/api/mcp/stream</code></td><td align="left">రిమోట్ MCP — <b>110 సాధనాలు</b>, 33 స్కోప్లు (అమలు ఐచ్ఛికం), సంపూర్ణ ఆడిట్ ట్రయిల్</td></tr>
   <tr><td align="left" nowrap>📡 <b>MCP (SSE)</b></td><td align="left" nowrap><code>/api/mcp/sse</code></td><td align="left">స్ట్రీమింగ్ MCP ట్రాన్స్పోర్ట్</td></tr>
-  <tr><td align="left" nowrap>🤝 <b>A2A</b></td><td align="left" nowrap><code>/.well-known/agent.json</code></td><td align="left">ఏజెంట్-టు-ఏజెంట్, <b>JSON-RPC 2.0</b> + SSE, 6 నైపుణ్యాలు</td></tr>
   <tr><td align="left" nowrap>🌐 <b>REST API</b></td><td align="left" nowrap><code>/v1/*</code></td><td align="left">OpenAI-అనుకూలం — చాట్, ఎంబెడ్డింగ్లు, చిత్రాలు, ఆడియో, OCR</td></tr>
   <tr><td align="left" nowrap>🔔 <b>Webhooks</b></td><td align="left" nowrap><code>/api/webhooks</code></td><td align="left">రిక్వెస్ట్ / కోటా ఈవెంట్లను Slack, Discord, Telegram లేదా ఏదైనా URLకు పంపండి</td></tr>
   <tr><td align="left" nowrap>🛰️ <b>రిమోట్ CLI</b></td><td align="left" nowrap><code>omniroute connect <host></code></td><td align="left">స్కోప్ చేసిన యాక్సెస్ టోకెన్లతో రిమోట్ ఇన్స్టాన్స్ను నడపండి</td></tr>
@@ -917,8 +915,6 @@ omniroute contexts use default            # ← తిరిగి స్థా�
 # MCP ద్వారా సంపూర్ణ 67router సాధన సమితిని Claude Codeకు అందించండి:
 claude mcp add-server omniroute --type http --url http://localhost:20128/api/mcp/stream
 ```
-
-<sub>📖 [MCP సర్వర్](docs/frameworks/MCP-SERVER.md) · [A2A సర్వర్](docs/frameworks/A2A-SERVER.md) · [ఏజెంట్ ప్రోటోకాల్లు](docs/frameworks/AGENT_PROTOCOLS_GUIDE.md)</sub>
 
 <br/>
 
@@ -1384,7 +1380,6 @@ OMNIROUTE_SKIP_POSTINSTALL=1 npm install -g omniroute   # CI=1 కూడా ద�
   <tr><td nowrap><b><a href="open-sse/mcp-server/README.md">MCP సర్వర్</a></b></td><td>110 MCP టూల్స్, IDE కాన్ఫిగరేషన్లు, Python/TS/Go క్లయింట్లు</td></tr>
   <tr><td nowrap><b><a href="docs/frameworks/MCP-SERVER.md">MCP సర్వర్ మార్గదర్శిని</a></b></td><td>MCP ఇన్స్టాలేషన్, ట్రాన్స్పోర్ట్లు మరియు టూల్ రిఫరెన్స్</td></tr>
   <tr><td nowrap><b><a href="src/lib/a2a/README.md">A2A సర్వర్</a></b></td><td>JSON-RPC 2.0 ప్రోటోకాల్, నైపుణ్యాలు, స్ట్రీమింగ్, టాస్క్ నిర్వహణ</td></tr>
-  <tr><td nowrap><b><a href="docs/frameworks/A2A-SERVER.md">A2A సర్వర్ మార్గదర్శిని</a></b></td><td>A2A ఏజెంట్ కార్డ్, టాస్క్లు, నైపుణ్యాలు మరియు స్ట్రీమింగ్</td></tr>
 </table>
 
 ### 📋 ప్రాజెక్ట్ & నాణ్యత

@@ -128,13 +128,11 @@ Paġni ewlenin taħt `src/app/(dashboard)/dashboard/`:
 - `/dashboard/limits` — kontrolli tal-kwota/rata
 - `/dashboard/cli-tools` — onboarding tal-CLI, identifikazzjoni tal-runtime, ġenerazzjoni tal-konfigurazzjoni
 - `/dashboard/agents` — aġenti ACP identifikati + reġistrazzjoni ta' aġenti custom
-- `/dashboard/cloud-agents` — xogħlijiet tal-aġenti ospitati fil-cloud (Codex Cloud, Devin, Jules) u l-ċiklu tal-ħajja tax-xogħol
 - `/dashboard/skills` — reġistru tal-ħiliet A2A, twettiq tas-sandbox, katalgu tal-ħiliet integrati
 - `/dashboard/memory` — spezzjoni u retrieves tal-memorja konversazzjonali reżistenti
 - `/dashboard/webhooks` — abbonamenti tal-webhook outbound, rotazzjoni tal-isigri, statistika tal-ħdid mill-ġdid
 - `/dashboard/batch` — sottomissjoni tal-impjiegi tal-batch u progress
 - `/dashboard/cache` — statistika tal-cache read-through u r-raġunar, kontrolli tal-evikament
-- `/dashboard/playground` — playground interattiv tal-chat kontra kwalunkwe combo/mudell konfigurat
 - `/dashboard/changelog` — viżitur tal-changelog fl-app (jirrend `CHANGELOG.md`)
 - `/dashboard/system` — dijanjostika tal-runtime, informazzjoni tal-verżjoni, superfiċja tal-validazzjoni tal-ambjent
 - `/dashboard/onboarding` — wizzard tal-installazzjoni għal installazzjonijiet ġodda
@@ -252,7 +250,6 @@ Domini tal-ġestjoni:
 - Bġit: `src/app/api/usage/budget` (GET/POST)
 - Ħrieġ tal-ħabi: `src/app/api/fallback/chains` (GET/POST/DELETE)
 - Reviżjoni tal-konformità: `src/app/api/compliance/audit-log` (GET, b'paginazzjoni + metadata strutturata)
-- Evalwazzjonijiet: `src/app/api/evals` (GET/POST), `src/app/api/evals/[suiteId]` (GET)
 - Politiki: `src/app/api/policies` (GET/POST)
 - Tokeni ta' sinkronizzazzjoni: `src/app/api/sync/tokens` (GET/POST), `src/app/api/sync/tokens/[id]` (GET/DELETE)
 - Pacett tal-konfigurazzjoni: `src/app/api/sync/bundle` (GET, stampa versjonata b'ETag tal-issettjiet/fornituri/kombinazzjonijiet/ċavvieri)
@@ -316,7 +313,6 @@ Moduli tas-saff tad-dominju:
 - Limitu ta' ħin tal-fetch: `src/shared/utils/fetchTimeout.ts`
 - Telemetrija tat-talba: `src/shared/utils/requestTelemetry.ts`
 - Konformità/awditjar: `src/lib/compliance/index.ts`
-- Eżekutur tal-evalwazzjonijiet: `src/lib/evals/evalRunner.ts`
 - Persistenza tal-istat tad-dominju: `src/lib/db/domainState.ts` — CRUD ta' SQLite għal ktajjen ta' riżerva, baġits, storja tal-ispejjeż, stat tal-imblukkar, u salvaviti
 
 Moduli tal-fornituri OAuth (27 fajl individwali taħt `src/lib/oauth/providers/`):
@@ -386,23 +382,6 @@ Kapaċitajiet ewlenin:
 
 Għad-dettalji algoritmiċi kollha (formuli tal-fatturi, irfinar tal-piżijiet), ara
 [`docs/routing/AUTO-COMBO.md`](../routing/AUTO-COMBO.md).
-
-### B. Aġenti tal-Cloud
-
-Cloud Agents jiġbor pjattaformi ospitati ta' aġenti tal-kodiċi minn partijiet terzi (Codex Cloud, Devin,
-Jules) wara ċiklu tal-ħajja uniformi tal-kompiti sostnut minn DB. L-endpoints kollha għall-ħolqien/spezzjoni
-tal-kompiti jeħtieġu awtentikazzjoni ta' ġestjoni.
-
-- Għerq tal-modulu: `src/lib/cloudAgent/` (`baseAgent.ts`, `registry.ts`, `api.ts`,
-  `types.ts`, `db.ts`, flimkien ma' subdirettorji għal kull aġent taħt `agents/`)
-- Implimentazzjonijiet għal kull aġent: `agents/codex/`, `agents/devin/`, `agents/jules/`
-- Endpoints pubbliċi: `/api/v1/agents/tasks/*` (elenka/oħloq/ikseb/ikkanċella)
-- Endpoints ta' ġestjoni: `/api/cloud/*` (proviżjonament, status, batch)
-- Dashboard: `/dashboard/cloud-agents`
-- Ħażna: it-tabella `cloud_agent_tasks`
-
-Għad-dettalji tal-proviżjonament u ta' OAuth għal kull aġent, ara
-[`docs/frameworks/CLOUD_AGENT.md`](../frameworks/CLOUD_AGENT.md).
 
 ### C. Guardrails
 

@@ -42,16 +42,15 @@ Agente de IA / IDE
 
 ### O que já existia (auditado, não duplicado)
 
-| Conceito                                          | Implementação existente                                                                                                 |
-| ------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------- |
-| Disponibilidade (podemos enviar tráfego?)         | Circuit breaker (CLOSED/DEGRADED/OPEN/HALF_OPEN, persistido no banco de dados), cooldown de conexão, bloqueio de modelo |
-| Relatórios de integridade                         | `providerHealthMatrix.ts`, `providerHealthAutopilot.ts`                                                                 |
-| Tráfego de sombra                                 | `open-sse/services/combo/shadowRouting.ts`                                                                              |
-| Proteções                                         | `src/lib/guardrails/` (hooks pré/pós)                                                                                   |
-| Cache exato                                       | `src/lib/semanticCache.ts` (baseado em assinatura)                                                                      |
-| Avaliadores / roteamento orientado por avaliações | `src/lib/evals/`, `open-sse/services/evalRouting.ts`                                                                    |
-| Explicabilidade da decisão de combo               | `open-sse/services/combo/decisionTrace.ts`                                                                              |
-| Eventos em tempo real do painel                   | `src/lib/events/eventBus.ts` (canal de notificações da interface, payloads `unknown`, histórico de 100 entradas)        |
+| Conceito                                  | Implementação existente                                                                                                 |
+| ----------------------------------------- | ----------------------------------------------------------------------------------------------------------------------- |
+| Disponibilidade (podemos enviar tráfego?) | Circuit breaker (CLOSED/DEGRADED/OPEN/HALF_OPEN, persistido no banco de dados), cooldown de conexão, bloqueio de modelo |
+| Relatórios de integridade                 | `providerHealthMatrix.ts`, `providerHealthAutopilot.ts`                                                                 |
+| Tráfego de sombra                         | `open-sse/services/combo/shadowRouting.ts`                                                                              |
+| Proteções                                 | `src/lib/guardrails/` (hooks pré/pós)                                                                                   |
+| Cache exato                               | `src/lib/semanticCache.ts` (baseado em assinatura)                                                                      |
+| Explicabilidade da decisão de combo       | `open-sse/services/combo/decisionTrace.ts`                                                                              |
+| Eventos em tempo real do painel           | `src/lib/events/eventBus.ts` (canal de notificações da interface, payloads `unknown`, histórico de 100 entradas)        |
 
 A camada de eventos de roteamento **não** é uma reimplementação do `eventBus`: esse barramento é
 o canal de notificações em tempo real do painel (nomes de _eventos_ tipados, payloads
@@ -275,8 +274,6 @@ integração:
   eventos/traces e retornaria um `QualityScore` que alimenta o mesmo caminho de
   `getQualityScore`/fator de qualidade.
 - O roteamento orientado por avaliações existente
-  (`open-sse/services/evalRouting.ts`) já reordena os destinos de combos pelas
-  taxas de aprovação de `eval_runs` quando habilitado.
 
 Nenhuma avaliação é executada de forma síncrona no caminho da requisição, e o
 gateway funciona plenamente sem a presença do avaliador.

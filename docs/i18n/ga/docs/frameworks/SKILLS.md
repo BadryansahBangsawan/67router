@@ -258,12 +258,6 @@ Féach [MCP-SERVER.md](./MCP-SERVER.md) chun cumraíocht iompair agus sannachái
 
 ---
 
-## Comhtháthú A2A
-
-Easpórtálann `src/lib/skills/a2a.ts` tuairisceoir scile A2A `memory_aware_routing` agus cúntóir `registerA2ASkill(registry)`. Tá scileanna saincheaptha A2A in `src/lib/a2a/skills/` agus seoltar iad trí `A2A_SKILL_HANDLERS` (`src/lib/a2a/taskExecution.ts`). Féach [A2A-SERVER.md](./A2A-SERVER.md) chun saolré iomlán an taisc a fháil.
-
----
-
 ## Scil Nua Ionsuite a Chur Leis
 
 1. **Sainmhínigh an láimhseálaí** in `src/lib/skills/builtins.ts` (nó i gcomhad comhchosúil faoi `src/lib/skills/builtin/`). Síniú: `(input, { apiKeyId, sessionId }) => Promise<output>`.
@@ -478,7 +472,6 @@ Féach [SDK Breiseán & Comhtháthú Scileanna](./PLUGIN_SDK.md) chun foghlaim c
 ## Féach Freisin
 
 - [MCP-SERVER.md](./MCP-SERVER.md) — clárú uirlisí agus iompróirí MCP
-- [A2A-SERVER.md](./A2A-SERVER.md) — saolré tascanna agus seoladh scileanna A2A
 - [USER_GUIDE.md](../guides/USER_GUIDE.md#-skills-system) — réamhrá don úsáideoir
 - [ARCHITECTURE.md](../architecture/ARCHITECTURE.md) — píblíne iarratais agus léarscáil comhpháirteanna
 - Foinse: `src/lib/skills/`, `src/app/api/skills/`, `open-sse/mcp-server/tools/skillTools.ts`

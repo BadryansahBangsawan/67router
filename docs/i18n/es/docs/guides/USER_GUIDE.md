@@ -24,7 +24,6 @@ Guía completa para configurar proveedores, crear combinaciones, integrar herram
 - [Sistema de habilidades](#-skills-system)
 - [Sistema de memoria](#-memory-system)
 - [Webhooks](#-webhooks)
-- [Agentes en la nube](#-cloud-agents)
 - [Gestión programática](#-programmatic-management)
 - [CLI interna](#-internal-cli)
 - [Aplicación de escritorio (Electron)](#-desktop-application-electron)
@@ -1238,7 +1237,7 @@ Usa la URL de SSE `http://localhost:20128/api/mcp/sse` y una clave de API Bearer
 
 ### Ámbitos
 
-Actualmente, MCP define 32 ámbitos con nombre. Cada clave Bearer puede limitarse a ámbitos específicos; consulta [MCP-SERVER.md](../frameworks/MCP-SERVER.md) para ver el inventario oficial de ámbitos y herramientas, y [A2A-SERVER.md](../frameworks/A2A-SERVER.md) para consultar el esquema JSON-RPC.
+Actualmente, MCP define 32 ámbitos con nombre. Cada clave Bearer puede limitarse a ámbitos específicos; consulta [MCP-SERVER.md](../frameworks/MCP-SERVER.md) para ver el inventario oficial de ámbitos y herramientas,.
 
 ---
 
@@ -1248,7 +1247,6 @@ Actualmente, MCP define 32 ámbitos con nombre. Cada clave Bearer puede limitars
 
 - **Interfaz del marketplace** — Explora e instala habilidades desde **Panel de control → Habilidades**
 - **Ámbitos por clave** — Restringe qué claves de API pueden invocar cada habilidad
-- **Habilidades personalizadas** — Añade un archivo TypeScript en `src/lib/a2a/skills/`, regístralo y podrá invocarse inmediatamente mediante A2A
 
 Referencia completa: [SKILLS.md](../frameworks/SKILLS.md).
 
@@ -1277,18 +1275,6 @@ Suscríbete a los eventos de 67router para realizar supervisión y automatizaci�
 - Reintentos: 3 intentos con espera exponencial y, después, envío a la cola de mensajes fallidos
 
 Esquema completo en [WEBHOOKS.md](../frameworks/WEBHOOKS.md).
-
----
-
-## ☁️ Agentes en la nube
-
-67router se integra con agentes de programación en la nube (**OpenAI Codex Cloud**, **Devin**, **Jules**, **Antigravity**) para que puedas asignar tareas de larga duración desde el mismo panel de control que gestiona tu enrutamiento local.
-
-- Crea tareas en **Panel de control → Agentes en la nube** o mediante `POST /api/v1/agents/tasks`
-- Consulta el estado, los registros y los artefactos de cada tarea
-- Usa tu propia clave de API para cada proveedor; las credenciales nunca salen de la instancia de 67router
-
-Referencia completa: [CLOUD_AGENT.md](../frameworks/CLOUD_AGENT.md).
 
 ---
 
@@ -1345,7 +1331,6 @@ omniroute restore [<timestamp>]    # Restaura desde una instantánea
 omniroute health                   # Estado detallado (disyuntores, caché, memoria)
 omniroute quota                    # Uso de cuota de los proveedores
 omniroute mcp status               # Estado del servidor MCP
-omniroute a2a status               # Estado del servidor A2A
 omniroute tunnel list|create|stop  # Túneles de Cloudflare/Tailscale/ngrok
 omniroute reset-password           # Restablece la contraseña de administrador
 omniroute --mcp                    # Inicia el servidor MCP mediante stdio

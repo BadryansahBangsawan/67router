@@ -87,7 +87,7 @@ HTTP 400 — మోడల్ '<id>' ఒక ఇమేజ్-జనరేషన్
 
 ## VS Code ట్యాబ్లోని Dashboard
 
-`omnicopilot.dashboardOpen: "editor"` బాహ్య బ్రౌజర్కు బదులుగా Simple Browser ద్వారా 67router dashboardను editor ట్యాబ్లో రెండర్ చేస్తుంది. ఎంబెడింగ్ను **సర్వర్లో ప్రత్యేకంగా ప్రారంభించాలి**; ఇందుకు `DASHBOARD_ALLOW_EMBED=vscode` ఉపయోగించాలి. ఇది HTML పేజీలను డిఫాల్ట్ `frame-ancestors 'none'` + `X-Frame-Options: DENY`కు బదులుగా `frame-ancestors 'self' vscode-webview:`తో అందిస్తుంది. ఏ విధానాన్ని ఉపయోగించినా API ఉపరితలం (`/api`, `/v1`, `/v1beta`, `/a2a`, `/healthz`) కఠినమైన హెడర్లను అలాగే ఉంచుతుంది.
+`omnicopilot.dashboardOpen: "editor"` బాహ్య బ్రౌజర్కు బదులుగా Simple Browser ద్వారా 67router dashboardను editor ట్యాబ్లో రెండర్ చేస్తుంది. ఎంబెడింగ్ను **సర్వర్లో ప్రత్యేకంగా ప్రారంభించాలి**; ఇందుకు `DASHBOARD_ALLOW_EMBED=vscode` ఉపయోగించాలి. ఇది HTML పేజీలను డిఫాల్ట్ `frame-ancestors 'none'` + `X-Frame-Options: DENY`కు బదులుగా `frame-ancestors 'self' vscode-webview:`తో అందిస్తుంది. ఏ విధానాన్ని ఉపయోగించినా API ఉపరితలం (`/api`, `/v1`, `/v1beta`, `/healthz`) కఠినమైన హెడర్లను అలాగే ఉంచుతుంది.
 
 > ⚠️ **ఇది build-time ఫ్లాగ్, runtime ఫ్లాగ్ కాదు.** Next.js `headers()`ను route manifestలో కంపైల్ చేస్తుంది, కాబట్టి bundleను build చేస్తున్నప్పుడు `next.config.mjs` ఈ వేరియబుల్ను చదువుతుంది
 > (`next.config.mjs` → `resolveDashboardEmbedMode`, `scripts/build/dashboardEmbed.mjs`).

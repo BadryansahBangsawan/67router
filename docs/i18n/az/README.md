@@ -588,7 +588,7 @@ Radar-a qoşulmaq ixtiyaridir və o, yalnız GET sorğularından istifadə edir.
 - **🔑 Açar-başına marşrutlaşdırma nəzarəti** — `forcedModel` ilə API açarını bir modelə və ya komboya sabitləyin, açarın modellərini və kombolarını atomik şəkildə əlavə edin və ya silin (`/api/keys/{id}/access`). → [API arayışı](docs/reference/API_REFERENCE.md) · [OpenAPI](docs/openapi.yaml)
 - **🛡️ Daha incə PII nəzarətləri** — növ-başına seçim, 20-ə qədər təsdiqlənmiş xüsusi maskalama nümunələri və növ-başına aşkarlama sayğacları; maskalamanın özü istəyə bağlı qalır. → [Mühafizələr](docs/security/GUARDRAILS.md)
 - **🌍 67 dil** — idarəetmə paneli, sənəd güzgüləri və CLI, `npm run i18n:add-locale` ilə bir əmrlə dili hər yerdə əlavə etmək mümkündür. → [i18n bələdçisi](docs/guides/I18N.md)
-- **🎛️ OmniConductor** — agent donanmanıza daxilolan A2A delegasiyası, Agent Card-da Conductor bacarıqları və Faro push-to-talk səsli söhbətli idarəetmə paneli. → [A2A Server](docs/frameworks/A2A-SERVER.md)
+- **🎛️ OmniConductor** — agent donanmanıza daxilolan A2A delegasiyası, Agent Card-da Conductor bacarıqları və Faro push-to-talk səsli söhbətli idarəetmə paneli.
 - **🛂 Adaptiv qəbul və həddindən artıq yük qorunması** — ağır söhbət sorğuları 503 qaytarmaq əvəzinə növbəyə alınır, hər bağlantı üçün atomik RPM fırlanan icazələri ilə. → [Davamlılıq bələdçisi](docs/architecture/RESILIENCE_GUIDE.md)
 - **🗂️ Kanonik `/v1/models` sıralaması** — hər provayder üçün bir ardıcıl provayder-qruplu blok (kombolar əvvəlcə sabitlənmiş), hər kataloq mənbəyində sabit. → [API arayışı](docs/reference/API_REFERENCE.md)
 - **🗜️ Sıxılma möhkəmləndirilməsi** — susmaya görə aktiv inflasiya mühafizəsi, DE / FR / JA + Çin (wényán) üçün Caveman paketləri, Gradle və .NET üçün RTK filtrləri. → [Sıxılma](docs/compression/COMPRESSION_ENGINES.md)
@@ -907,7 +907,6 @@ Tokenlərin əhatə dairəsi `read` / `write` / `admin` olaraq məhdudlaşdırı
   <tr><td align="left" nowrap>🧰 <b>MCP (stdio)</b></td><td align="left" nowrap><code>omniroute --mcp</code></td><td align="left">Claude Desktop, Cursor və istənilən MCP klientinə qoşulmaq</td></tr>
   <tr><td align="left" nowrap>🌊 <b>MCP (HTTP)</b></td><td align="left" nowrap><code>/api/mcp/stream</code></td><td align="left">Uzaqdan MCP — <b>110 alət</b>, 33 əhatə dairəsi (məcburi tətbiq istəyə bağlıdır), tam audit izi</td></tr>
   <tr><td align="left" nowrap>📡 <b>MCP (SSE)</b></td><td align="left" nowrap><code>/api/mcp/sse</code></td><td align="left">Axınlı MCP nəqli</td></tr>
-  <tr><td align="left" nowrap>🤝 <b>A2A</b></td><td align="left" nowrap><code>/.well-known/agent.json</code></td><td align="left">Agentlərarası əlaqə, <b>JSON-RPC 2.0</b> + SSE, 6 bacarıq</td></tr>
   <tr><td align="left" nowrap>🌐 <b>REST API</b></td><td align="left" nowrap><code>/v1/*</code></td><td align="left">OpenAI ilə uyğun — çat, embedding-lər, şəkillər, audio, OCR</td></tr>
   <tr><td align="left" nowrap>🔔 <b>Webhook-lar</b></td><td align="left" nowrap><code>/api/webhooks</code></td><td align="left">Sorğu / kvota hadisələrini Slack, Discord, Telegram və ya istənilən URL-ə göndərmək</td></tr>
   <tr><td align="left" nowrap>🛰️ <b>Uzaqdan CLI</b></td><td align="left" nowrap><code>omniroute connect <host></code></td><td align="left">Uzaq instansiyanı əhatə dairəli giriş tokenləri ilə idarə etmək</td></tr>
@@ -917,8 +916,6 @@ Tokenlərin əhatə dairəsi `read` / `write` / `admin` olaraq məhdudlaşdırı
 # Claude Code-a MCP vasitəsilə tam 67router alətlər dəstini verin:
 claude mcp add-server omniroute --type http --url http://localhost:20128/api/mcp/stream
 ```
-
-<sub>📖 [MCP serveri](docs/frameworks/MCP-SERVER.md) · [A2A serveri](docs/frameworks/A2A-SERVER.md) · [Agent protokolları](docs/frameworks/AGENT_PROTOCOLS_GUIDE.md)</sub>
 
 <br/>
 
@@ -1383,7 +1380,6 @@ bir portda təqdim olunur, buna görə hazırda ayrıca yalnız CLI üçün pake
   <tr><td nowrap><b><a href="open-sse/mcp-server/README.md">MCP Serveri</a></b></td><td>110 MCP aləti, IDE konfiqurasiyaları, Python/TS/Go klientləri</td></tr>
   <tr><td nowrap><b><a href="docs/frameworks/MCP-SERVER.md">MCP Serveri Təlimatı</a></b></td><td>MCP quraşdırması, nəqliyyat mexanizmləri və alətlər üzrə arayış</td></tr>
   <tr><td nowrap><b><a href="src/lib/a2a/README.md">A2A Serveri</a></b></td><td>JSON-RPC 2.0 protokolu, bacarıqlar, axınla ötürmə, tapşırıqların idarə edilməsi</td></tr>
-  <tr><td nowrap><b><a href="docs/frameworks/A2A-SERVER.md">A2A Serveri Təlimatı</a></b></td><td>A2A agent kartı, tapşırıqlar, bacarıqlar və axınla ötürmə</td></tr>
 </table>
 
 ### 📋 Layihə və Keyfiyyət

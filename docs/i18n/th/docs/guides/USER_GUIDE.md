@@ -24,7 +24,6 @@
 - [ระบบทักษะ](#-skills-system)
 - [ระบบหน่วยความจำ](#-memory-system)
 - [เว็บฮุก](#-webhooks)
-- [เอเจนต์บนคลาวด์](#-cloud-agents)
 - [การจัดการด้วยโปรแกรม](#-programmatic-management)
 - [CLI ภายใน](#-internal-cli)
 - [แอปพลิเคชันเดสก์ท็อป (Electron)](#-desktop-application-electron)
@@ -1237,8 +1236,6 @@ curl -X POST http://localhost:20128/v1/chat/completions \
 
 ### ขอบเขตสิทธิ์
 
-ปัจจุบัน MCP กำหนดขอบเขตสิทธิ์ที่มีชื่อไว้ 32 รายการ โดยคีย์ Bearer แต่ละคีย์สามารถจำกัดให้ใช้เฉพาะขอบเขตสิทธิ์ที่กำหนดได้ — ดูรายการขอบเขตสิทธิ์และเครื่องมือที่เป็นแหล่งอ้างอิงหลักได้ใน [MCP-SERVER.md](../frameworks/MCP-SERVER.md) และดูสคีมา JSON-RPC ได้ใน [A2A-SERVER.md](../frameworks/A2A-SERVER.md)
-
 ---
 
 ## 🧠 ระบบทักษะ
@@ -1247,7 +1244,6 @@ curl -X POST http://localhost:20128/v1/chat/completions \
 
 - **UI มาร์เก็ตเพลส** — เรียกดูและติดตั้งทักษะจาก **แดชบอร์ด → ทักษะ**
 - **ขอบเขตต่อคีย์** — จำกัดว่า API key ใดสามารถเรียกใช้ทักษะใดได้บ้าง
-- **ทักษะแบบกำหนดเอง** — วางไฟล์ TypeScript ใน `src/lib/a2a/skills/` ลงทะเบียนไฟล์ดังกล่าว แล้วทักษะนั้นจะพร้อมให้เรียกใช้ผ่าน A2A ได้ทันที
 
 เอกสารอ้างอิงฉบับเต็ม: [SKILLS.md](../frameworks/SKILLS.md)
 
@@ -1276,18 +1272,6 @@ curl -X POST http://localhost:20128/v1/chat/completions \
 - การลองใหม่: 3 ครั้งโดยเพิ่มระยะเวลารอแบบทวีคูณ จากนั้นส่งไปยังคิวข้อความที่ไม่สามารถประมวลผลได้
 
 สคีมาฉบับเต็มอยู่ใน [WEBHOOKS.md](../frameworks/WEBHOOKS.md)
-
----
-
-## ☁️ เอเจนต์บนคลาวด์
-
-67router ทำงานร่วมกับเอเจนต์เขียนโค้ดบนคลาวด์ (**OpenAI Codex Cloud**, **Devin**, **Jules**, **Antigravity**) เพื่อให้คุณสามารถมอบหมายงานที่ใช้เวลานานจากแดชบอร์ดเดียวกับที่ใช้จัดการการกำหนดเส้นทางภายในเครื่องได้
-
-- สร้างงานใน **แดชบอร์ด → เอเจนต์บนคลาวด์** หรือผ่าน `POST /api/v1/agents/tasks`
-- ติดตามสถานะ บันทึก และอาร์ติแฟกต์ของแต่ละงาน
-- ใช้ API key ของคุณเองสำหรับผู้ให้บริการแต่ละราย — ข้อมูลประจำตัวจะไม่ออกจากอินสแตนซ์ 67router
-
-เอกสารอ้างอิงฉบับเต็ม: [CLOUD_AGENT.md](../frameworks/CLOUD_AGENT.md)
 
 ---
 
@@ -1344,7 +1328,6 @@ omniroute restore [<timestamp>]    # กู้คืนจากสแนปช�
 omniroute health                   # สถานะโดยละเอียด (เบรกเกอร์, แคช, หน่วยความจำ)
 omniroute quota                    # การใช้โควตาของผู้ให้บริการ
 omniroute mcp status               # สถานะเซิร์ฟเวอร์ MCP
-omniroute a2a status               # สถานะเซิร์ฟเวอร์ A2A
 omniroute tunnel list|create|stop  # ทันเนล Cloudflare/Tailscale/ngrok
 omniroute reset-password           # รีเซ็ตรหัสผ่านผู้ดูแลระบบ
 omniroute --mcp                    # เริ่มเซิร์ฟเวอร์ MCP ผ่าน stdio

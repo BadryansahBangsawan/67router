@@ -44,7 +44,6 @@ src/app/api/agent-skills/
   generate/route.ts                    — POST /api/agent-skills/generate (ਪ੍ਰਮਾਣੀਕਰਨ ਲੋੜੀਂਦਾ ਹੈ)
 
 open-sse/mcp-server/tools/agentSkillTools.ts  — 3 MCP ਟੂਲ (ਸੂਚੀ, ਪ੍ਰਾਪਤੀ, ਕਵਰੇਜ)
-src/lib/a2a/skills/listCapabilities.ts        — A2A ਸਕਿੱਲ: list-capabilities
 ```
 
 ---
@@ -140,8 +139,6 @@ A2A ਸਕਿੱਲ `list-capabilities` ਪੂਰਾ 45-ਸਕਿੱਲ ਕੈ�
 }
 ```
 
-ਪ੍ਰੋਟੋਕੋਲ ਵੇਰਵਿਆਂ ਲਈ [A2A-SERVER.md](./A2A-SERVER.md) ਵੇਖੋ।
-
 ---
 
 ## ਕੈਟਾਲਾਗ — 45 ਸਕਿੱਲ ID
@@ -189,12 +186,11 @@ A2A ਸਕਿੱਲ `list-capabilities` ਪੂਰਾ 45-ਸਕਿੱਲ ਕੈ�
 | `cli-contexts`        | cli-contexts       | `omniroute contexts`    |
 | `cli-cost-usage`      | cli-cost-usage     | `omniroute cost`        |
 | `cli-mcp`             | cli-mcp            | `omniroute mcp`         |
-| `cli-a2a`             | cli-a2a            | `omniroute a2a`         |
 | `cli-tunnel`          | cli-tunnel         | `omniroute tunnel`      |
 | `cli-backup-sync`     | cli-backup-sync    | `omniroute backup`      |
 | `cli-policy-audit`    | cli-policy-audit   | `omniroute policy`      |
 | `cli-batches`         | cli-batches        | `omniroute batch`       |
-| `cli-eval`            | cli-eval           | `omniroute eval`        |
+| `cli-eval`            | cli-eval           | `omniroute simulate`    |
 | `cli-plugins-skills`  | cli-plugins-skills | `omniroute plugins`     |
 | `cli-setup`           | cli-setup          | `omniroute setup`       |
 | `cli-skill-collector` | cli-setup          | `omniroute skills`      |
@@ -312,6 +308,5 @@ curl "http://localhost:20128/api/agent-skills/coverage"
 
 - [SKILLS.md](./SKILLS.md) — Omni Skills ਫਰੇਮਵਰਕ (LLM ਟੂਲ ਇੰਜੈਕਸ਼ਨ + ਮਾਰਕੀਟਪਲੇਸ)
 - [MCP-SERVER.md](./MCP-SERVER.md) — MCP ਟੂਲ ਕੈਟਾਲਾਗ (`omniroute_agent_skills_*` ਟੂਲ)
-- [A2A-SERVER.md](./A2A-SERVER.md) — A2A ਪ੍ਰੋਟੋਕੋਲ (`list-capabilities` skill)
 - `src/lib/agentSkills/` — ਕੈਟਾਲਾਗ, ਜਨਰੇਟਰ, ਪਾਰਸਰ
 - `skills/` — ਜਨਰੇਟ ਕੀਤੀਆਂ SKILL.md ਫਾਈਲਾਂ (45 ਐਂਟਰੀਆਂ)

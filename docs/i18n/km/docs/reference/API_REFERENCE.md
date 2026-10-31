@@ -1437,9 +1437,8 @@ curl -X PATCH "$OMNIROUTE_URL/api/keys/$KEY_ID" \
 
 ### ការវាយតម្លៃ
 
-| ចំណុចបញ្ចប់  | វិធីសាស្ត្រ | ការពិពណ៌នា                                     |
-| ------------ | ----------- | ---------------------------------------------- |
-| `/api/evals` | GET/POST    | រាយបញ្ជីសំណុំការវាយតម្លៃ / ដំណើរការការវាយតម្លៃ |
+| ចំណុចបញ្ចប់ | វិធីសាស្ត្រ | ការពិពណ៌នា |
+| ----------- | ----------- | ---------- |
 
 ### គោលការណ៍
 
@@ -1759,31 +1758,6 @@ Routing combos កម្រិតខ្ពស់ជាង (ដែលបានស
 
 ---
 
-## ពិធីការ Agents
-
-កិច្ចការរបស់ cloud agent (Claude Code, Codex Cloud, OpenHands ជាដើម) ដែលត្រូវបានប្រតិបត្តិពីចម្ងាយក្នុងនាមអ្នកប្រើប្រាស់ 67router។
-
-| វិធីសាស្ត្រ | ផ្លូវ                         | សេចក្ដីពិពណ៌នា                                                                                                                                             |
-| ----------- | ----------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| GET         | `/api/v1/agents/tasks`        | រាយបញ្ជីកិច្ចការ — អាចប្រើ `?provider=`, `?status=`, `?limit=` (1–500, លំនាំដើម 50)                                                                        |
-| POST        | `/api/v1/agents/tasks`        | បង្កើតកិច្ចការ — body ត្រូវបានផ្ទៀងផ្ទាត់ដោយ `CreateCloudAgentTaskSchema` (`providerId`, `prompt`, `source`, `options?`)។ ត្រឡប់ `201` ជាមួយ task envelope |
-| DELETE      | `/api/v1/agents/tasks?id=...` | លុបកិច្ចការមួយ                                                                                                                                             |
-| GET         | `/api/v1/agents/tasks/[id]`   | អានកិច្ចការ — ធ្វើបច្ចុប្បន្នភាពស្ថានភាពដោយសមកាលកម្មពី cloud agent ខាងដើម នៅពេលបានកំណត់ `external_id`                                                      |
-| POST        | `/api/v1/agents/tasks/[id]`   | សកម្មភាពបែងចែកតាមប្រភេទ៖ `{action: "approve"}`, `{action: "message", message}` ឬ `{action: "cancel"}`                                                      |
-| DELETE      | `/api/v1/agents/tasks/[id]`   | លុបកិច្ចការជាក់លាក់មួយតាម id                                                                                                                               |
-
-> **ការផ្ទៀងផ្ទាត់អត្តសញ្ញាណ៖** តម្រូវឱ្យមានការផ្ទៀងផ្ទាត់អត្តសញ្ញាណសម្រាប់ការគ្រប់គ្រងលើគ្រប់វិធីសាស្ត្រ (`requireCloudAgentManagementAuth`)។ មុនកំណែ v3.8.0 វិធីសាស្ត្រទាំងនេះមិនត្រូវការការផ្ទៀងផ្ទាត់អត្តសញ្ញាណទេ — សូមមើល commit `588a0333` សម្រាប់ការផ្លាស់ប្ដូរដែលមិនឆបគ្នានេះ។
-
-```bash
-# បង្កើតកិច្ចការ cloud របស់ Claude Code
-curl -X POST http://localhost:20128/api/v1/agents/tasks \
-  -H "Authorization: Bearer your-management-key" \
-  -H "Content-Type: application/json" \
-  -d '{"providerId":"claude-code-cloud","prompt":"Fix the failing test","source":{"repo":"...","branch":"..."}}'
-```
-
----
-
 ## ប្រូកស៊ីសម្រាប់ការគ្រប់គ្រង
 
 ប្រូកស៊ី HTTP(S)/SOCKS សម្រាប់ចរាចរចេញ ដែលអាចកំណត់ទៅឱ្យអ្នកផ្ដល់សេវា គណនី ឬជាសកល។
@@ -1903,48 +1877,10 @@ Framework ជំនាញសម្រាប់ពង្រីក 67router ដោ
 
 67router ផ្តល់ endpoint A2A (Agent-to-Agent) JSON-RPC 2.0 រួមជាមួយ REST wrapper សម្រាប់ការត្រួតពិនិត្យ/ការប្រើប្រាស់ dashboard។
 
-### JSON-RPC
-
-```bash
-POST /a2a
-Authorization: Bearer your-api-key   # ជាជម្រើស លុះត្រាតែ OMNIROUTE_API_KEY ត្រូវបានកំណត់
-Content-Type: application/json
-
-{
-  "jsonrpc": "2.0",
-  "id": 1,
-  "method": "message/send",
-  "params": {
-    "skill": "smart-routing",
-    "messages": [{"role": "user", "content": "Route this coding task"}]
-  }
-}
-```
-
-វិធីសាស្ត្រដែលគាំទ្រ (ទាំងអស់ត្រូវបានគ្រប់គ្រងដោយ `settings.a2aEnabled`)៖
-
-| វិធីសាស្ត្រ      | ការពិពណ៌នា                                                        |
-| ---------------- | ----------------------------------------------------------------- |
-| `message/send`   | ប្រតិបត្តិជំនាញដោយសមកាលកម្ម; ត្រឡប់ `{task, artifacts, metadata}` |
-| `message/stream` | ប្រតិបត្តិការ SSE ជាបន្តបន្ទាប់នៃសំណុំជំនាញដូចគ្នា                |
-| `tasks/get`      | ទាញយកកិច្ចការតាម `taskId`                                         |
-| `tasks/cancel`   | បោះបង់កិច្ចការតាម `taskId`                                        |
-
-ជំនាញដែលមានស្រាប់៖ `smart-routing`, `quota-management`, `provider-discovery`, `cost-analysis`, `health-report`។
-
-### កាត Agent
-
-```bash
-GET /.well-known/agent.json
-```
-
-ត្រឡប់កាត agent A2A សាធារណៈ (ឈ្មោះ ការពិពណ៌នា សមត្ថភាព កាតាឡុកជំនាញ គម្រោង auth) — ត្រូវបាន cache ជាសាធារណៈរយៈពេល 1h។ មិនតម្រូវឱ្យមាន auth ទេ។
-
 ### ឧបករណ៍ជំនួយ REST
 
 | វិធីសាស្ត្រ | Path                         | ការពិពណ៌នា                                                                                                       |
 | ----------- | ---------------------------- | ---------------------------------------------------------------------------------------------------------------- |
-| GET         | `/api/a2a/status`            | ស្ថានភាពបើក A2A + ស្ថិតិកិច្ចការ + សេចក្ដីសង្ខេបកាត agent ដែលបាន cache                                           |
 | GET         | `/api/a2a/tasks`             | រាយកិច្ចការ — `?state=submitted\|working\|completed\|failed\|cancelled`, `?skill=`, `?limit=` (≤200), `?offset=` |
 | POST        | `/api/a2a/tasks`             | (មិនទាន់ត្រូវបានអនុវត្តជា REST helper ទេ — បង្កើតតាម JSON-RPC `message/send`)                                    |
 | GET         | `/api/a2a/tasks/[id]`        | ទាញយកកិច្ចការមួយ                                                                                                 |
@@ -1964,12 +1900,8 @@ GET /.well-known/agent.json
 | GET | `/api/cloud/models/alias` | រាយឈ្មោះក្លែងក្លាយរបស់ model ដូចដែលបានបង្ហាញដល់ cloud sync |
 | GET | `/api/assess` | អានការចាត់ថ្នាក់នៃការវាយតម្លៃចុងក្រោយបំផុត (តាម provider/model នីមួយៗ) |
 | POST | `/api/assess` | ដំណើរការការវាយតម្លៃ — body៖ `{scope: {type:"all"}                                                   | {type:"provider", providerId} | {type:"model", modelId}, trigger?}` |
-| GET | `/api/evals` | រាយ eval suite ដែលមានស្រាប់ + ការដំណើរការថ្មីៗបំផុត |
-| POST | `/api/evals` | ចាប់ផ្ដើមការដំណើរការ eval |
-| POST | `/api/evals/suites` | បង្កើត eval suite ផ្ទាល់ខ្លួន — body ត្រូវបានផ្ទៀងផ្ទាត់ដោយ `evalSuiteSaveSchema` |
-| GET | `/api/evals/suites/[id]` | ទាញយក eval suite ផ្ទាល់ខ្លួន |
 
-**Auth៖** `/api/cloud/auth` ផ្ទៀងផ្ទាត់សោ Bearer ដោយផ្ទាល់ ហើយត្រឡប់សោដែលបានបិទបាំង និង `projectId` របស់ការតភ្ជាប់នីមួយៗ សម្រាប់តែសោដែលមាន scope `manage` / `admin` ប៉ុណ្ណោះ; route `/api/cloud/*`, `/api/evals/*` និង `/api/assess` ផ្សេងទៀតតម្រូវឱ្យមាន management session/API key។ POST `/api/assess` ប្រើ `validateBody` ជាមួយ scope schema ប្រភេទ discriminated-union។
+**Auth៖** `/api/cloud/auth` ផ្ទៀងផ្ទាត់សោ Bearer ដោយផ្ទាល់ ហើយត្រឡប់សោដែលបានបិទបាំង និង `projectId` របស់ការតភ្ជាប់នីមួយៗ សម្រាប់តែសោដែលមាន scope `manage` / `admin` ប៉ុណ្ណោះ; route `/api/cloud/*` និង `/api/assess` ផ្សេងទៀតតម្រូវឱ្យមាន management session/API key។ POST `/api/assess` ប្រើ `validateBody` ជាមួយ scope schema ប្រភេទ discriminated-union។
 
 ---
 
@@ -2288,5 +2220,3 @@ devin-cli ជាដើម)។ សូមមើល [ឯកសារយោងអ្
 - `requireLogin` អាចបើក ឬបិទបានតាមរយៈ `/api/settings/require-login`
 - ផ្លូវ `/v1/*` អាចតម្រូវឱ្យមាន Bearer API key នៅពេល `REQUIRE_API_KEY=true`
 - ក្នុងឯកសារយោងនេះ "management token" / "management-scoped API key" មានន័យថាជាប្រភេទមួយក្នុងចំណោមប្រភេទដែលមានក្នុងមគ្គុទ្ទេសក៍នោះ — មិនមែនជាប្រភេទ secret បន្ថែមដែលមិនបានកំណត់នោះទេ
-
-> **ការផ្លាស់ប្ដូរដែលមិនត្រូវគ្នាជាមួយកំណែមុន (v3.8.0)** — `/api/v1/agents/tasks/*` និង endpoint សម្រាប់ការគ្រប់គ្រង cooldown ឥឡូវនេះតម្រូវឱ្យមាន **ការផ្ទៀងផ្ទាត់អត្តសញ្ញាណសម្រាប់ការគ្រប់គ្រង** (cookie `auth_token` របស់ dashboard ឬ API key ដែលមានវិសាលភាពគ្រប់គ្រង)។ Client ដែលពីមុនបានហៅផ្លូវទាំងនេះដោយគ្មានការផ្ទៀងផ្ទាត់អត្តសញ្ញាណ នឹងទទួលបាន `401 Unauthorized`។ សូមមើល commit `588a0333` (`fix(auth): require management auth for agent and cooldown APIs`)។

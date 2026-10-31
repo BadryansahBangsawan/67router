@@ -43,8 +43,6 @@ Kitaran v3.7.x → v3.8.0 menambahkan penghalaan automatik tanpa konfigurasi, pe
 - 🤝 **Penyedia OAuth GitLab Duo** — log masuk dengan kelayakan GitLab
 - 🧠 **Cache Main Semula Penaakulan** — pengekalan hibrid dalam memori + SQLite untuk jejak penaakulan
 
-📚 **Dokumen berkaitan:** [Rangka Kerja Kemahiran](../frameworks/SKILLS.md) · [Sistem Memori](../frameworks/MEMORY.md) · [Ejen Awan](../frameworks/CLOUD_AGENT.md) · [Webhook](../frameworks/WEBHOOKS.md) · [Cache Main Semula Penaakulan](../routing/REASONING_REPLAY.md)
-
 ---
 
 ## 🔌 Penyedia
@@ -104,12 +102,6 @@ Pemantauan masa nyata: masa aktif, memori, versi, persentil kependaman (p50/p95/
 Empat mod untuk menyahpepijat terjemahan API: **Ruang Uji** (penukar format), **Penguji Sembang** (permintaan langsung), **Bangku Ujian** (ujian berkelompok), dan **Pemantau Langsung** (strim masa nyata).
 
 ![Ruang Uji Penterjemah](../screenshots/05-translator.png)
-
----
-
-## 🎮 Ruang Uji Model _(v2.0.9+)_
-
-Uji mana-mana model secara terus daripada papan pemuka. Pilih penyedia, model dan titik akhir, tulis gesaan dengan Monaco Editor, strim respons dalam masa nyata, hentikan di pertengahan strim dan lihat metrik pemasaan.
 
 ---
 

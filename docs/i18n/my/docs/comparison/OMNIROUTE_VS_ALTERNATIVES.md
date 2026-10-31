@@ -24,7 +24,6 @@
 | **A2A ပရိုတိုကော**                                       |                 ✅ skill 6 ခု                  |        ❌        |          ❌          |          ❌          |
 | **မမ်မိုရီ (FTS5 + vector)**                             |                       ✅                       |        ❌        |          ❌          |          ❌          |
 | **Guardrails (PII, injection, vision)**                  |                       ✅                       | တစ်စိတ်တစ်ပိုင်း |          ❌          |    ✅ ပေးဆောင်ရန်    |
-| **Cloud agent ပေါင်းစည်းချိတ်ဆက်မှုများ**                |          Codex, Cursor, Devin, Jules           |        ❌        |          ❌          |          ❌          |
 | **ပရိုဗိုင်ဒါတစ်ခုချင်းစီအတွက် Circuit breaker**         |           ✅ 3-state၊ lazy recovery            |      အခြေခံ      |          ❌          |          ✅          |
 | **TLS fingerprint stealth (JA3/JA4)**                    |                   ✅ wreq-js                   |        ❌        |          ❌          |          ❌          |
 | **Eval framework**                                       |              ✅ ထည့်သွင်းပြီးသား               |        ❌        |          ❌          |    ⚠ ပေးဆောင်ရန်     |

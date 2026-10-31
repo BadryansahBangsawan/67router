@@ -1439,9 +1439,8 @@ curl -X PATCH "$OMNIROUTE_URL/api/keys/$KEY_ID" \
 
 ### Αξιολογήσεις
 
-| Endpoint     | Μέθοδος  | Περιγραφή                                           |
-| ------------ | -------- | --------------------------------------------------- |
-| `/api/evals` | GET/POST | Παράθεση σουιτών αξιολόγησης / εκτέλεση αξιολόγησης |
+| Endpoint | Μέθοδος | Περιγραφή |
+| -------- | ------- | --------- |
 
 ### Πολιτικές
 
@@ -1764,31 +1763,6 @@ DELETE /api/usage/token-limits?id=tl-abc
 
 ---
 
-## Πρωτόκολλο Agents
-
-Εργασίες πρακτόρων cloud (Claude Code, Codex Cloud, OpenHands κ.λπ.) που εκτελούνται απομακρυσμένα για λογαριασμό χρηστών του 67router.
-
-| Μέθοδος | Διαδρομή                      | Περιγραφή                                                                                                                                                            |
-| ------- | ----------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| GET     | `/api/v1/agents/tasks`        | Παραθέτει τις εργασίες — προαιρετικά `?provider=`, `?status=`, `?limit=` (1–500, προεπιλογή 50)                                                                      |
-| POST    | `/api/v1/agents/tasks`        | Δημιουργεί εργασία — το σώμα επικυρώνεται από το `CreateCloudAgentTaskSchema` (`providerId`, `prompt`, `source`, `options?`). Επιστρέφει `201` με περίβλημα εργασίας |
-| DELETE  | `/api/v1/agents/tasks?id=...` | Διαγράφει μια εργασία                                                                                                                                                |
-| GET     | `/api/v1/agents/tasks/[id]`   | Διαβάζει την εργασία — ανανεώνει συγχρονισμένα την κατάσταση από τον ανάντη πράκτορα cloud όταν έχει οριστεί ένα `external_id`                                       |
-| POST    | `/api/v1/agents/tasks/[id]`   | Διακριτή ενέργεια: `{action: "approve"}`, `{action: "message", message}` ή `{action: "cancel"}`                                                                      |
-| DELETE  | `/api/v1/agents/tasks/[id]`   | Διαγράφει μια συγκεκριμένη εργασία βάσει id                                                                                                                          |
-
-> **Έλεγχος ταυτότητας:** απαιτείται έλεγχος ταυτότητας διαχείρισης για κάθε μέθοδο (`requireCloudAgentManagementAuth`). Πριν από την v3.8.0, αυτές οι μέθοδοι δεν απαιτούσαν έλεγχο ταυτότητας — δείτε το commit `588a0333` για την ασύμβατη αλλαγή.
-
-```bash
-# Δημιουργία εργασίας cloud του Claude Code
-curl -X POST http://localhost:20128/api/v1/agents/tasks \
-  -H "Authorization: Bearer your-management-key" \
-  -H "Content-Type: application/json" \
-  -d '{"providerId":"claude-code-cloud","prompt":"Fix the failing test","source":{"repo":"...","branch":"..."}}'
-```
-
----
-
 ## Διακομιστές μεσολάβησης διαχείρισης
 
 Εξερχόμενοι διακομιστές μεσολάβησης HTTP(S)/SOCKS που μπορούν να εκχωρηθούν σε παρόχους, λογαριασμούς ή καθολικά.
@@ -1908,48 +1882,10 @@ curl -X DELETE http://localhost:20128/api/resilience/model-cooldowns \
 
 Το 67router εκθέτει ένα endpoint A2A (Agent-to-Agent) JSON-RPC 2.0, καθώς και ένα REST wrapper για χρήση επιθεώρησης/πίνακα ελέγχου.
 
-### JSON-RPC
-
-```bash
-POST /a2a
-Authorization: Bearer your-api-key   # προαιρετικό, εκτός αν έχει οριστεί το OMNIROUTE_API_KEY
-Content-Type: application/json
-
-{
-  "jsonrpc": "2.0",
-  "id": 1,
-  "method": "message/send",
-  "params": {
-    "skill": "smart-routing",
-    "messages": [{"role": "user", "content": "Route this coding task"}]
-  }
-}
-```
-
-Υποστηριζόμενες μέθοδοι (όλες ελέγχονται από το `settings.a2aEnabled`):
-
-| Μέθοδος          | Περιγραφή                                                              |
-| ---------------- | ---------------------------------------------------------------------- |
-| `message/send`   | Σύγχρονη εκτέλεση δεξιότητας· επιστρέφει `{task, artifacts, metadata}` |
-| `message/stream` | Εκτέλεση ροής SSE για το ίδιο σύνολο δεξιοτήτων                        |
-| `tasks/get`      | Ανάκτηση μιας εργασίας μέσω `taskId`                                   |
-| `tasks/cancel`   | Ακύρωση μιας εργασίας μέσω `taskId`                                    |
-
-Ενσωματωμένες δεξιότητες: `smart-routing`, `quota-management`, `provider-discovery`, `cost-analysis`, `health-report`.
-
-### Κάρτα πράκτορα
-
-```bash
-GET /.well-known/agent.json
-```
-
-Επιστρέφει τη δημόσια κάρτα πράκτορα A2A (όνομα, περιγραφή, δυνατότητες, κατάλογος δεξιοτήτων, σχήμα ελέγχου ταυτότητας) — αποθηκεύεται δημόσια στην κρυφή μνήμη για 1 ώρα. Δεν απαιτείται έλεγχος ταυτότητας.
-
 ### Βοηθητικά endpoints REST
 
 | Μέθοδος | Διαδρομή                     | Περιγραφή                                                                                                           |
 | ------- | ---------------------------- | ------------------------------------------------------------------------------------------------------------------- |
-| GET     | `/api/a2a/status`            | Κατάσταση ενεργοποίησης A2A + στατιστικά εργασιών + σύνοψη κάρτας πράκτορα από την κρυφή μνήμη                      |
 | GET     | `/api/a2a/tasks`             | Λίστα εργασιών — `?state=submitted\|working\|completed\|failed\|cancelled`, `?skill=`, `?limit=` (≤200), `?offset=` |
 | POST    | `/api/a2a/tasks`             | (Δεν έχει υλοποιηθεί ως βοηθητικό endpoint REST — δημιουργήστε μέσω JSON-RPC `message/send`)                        |
 | GET     | `/api/a2a/tasks/[id]`        | Ανάκτηση μίας εργασίας                                                                                              |
@@ -1969,12 +1905,8 @@ GET /.well-known/agent.json
 | GET | `/api/cloud/models/alias` | Παραθέτει τα ψευδώνυμα μοντέλων όπως εκτίθενται στον συγχρονισμό cloud |
 | GET | `/api/assess` | Διαβάζει τις πιο πρόσφατες κατηγοριοποιήσεις αποτίμησης (ανά πάροχο/μοντέλο) |
 | POST | `/api/assess` | Εκτελεί μια αποτίμηση — σώμα: `{scope: {type:"all"}                                                   | {type:"provider", providerId} | {type:"model", modelId}, trigger?}` |
-| GET | `/api/evals` | Παραθέτει τις ενσωματωμένες σουίτες αξιολόγησης + τις πιο πρόσφατες εκτελέσεις |
-| POST | `/api/evals` | Ενεργοποιεί μια εκτέλεση αξιολόγησης |
-| POST | `/api/evals/suites` | Δημιουργεί μια προσαρμοσμένη σουίτα αξιολόγησης — το σώμα επικυρώνεται από το `evalSuiteSaveSchema` |
-| GET | `/api/evals/suites/[id]` | Ανακτά μια προσαρμοσμένη σουίτα αξιολόγησης |
 
-**Έλεγχος ταυτότητας:** το `/api/cloud/auth` επικυρώνει απευθείας ένα κλειδί Bearer και επιστρέφει το καλυμμένο κλειδί και το `projectId` κάθε σύνδεσης μόνο για κλειδί με scope `manage` / `admin`· οι άλλες διαδρομές `/api/cloud/*`, `/api/evals/*` και `/api/assess` απαιτούν συνεδρία διαχείρισης/κλειδί API. Το POST του `/api/assess` χρησιμοποιεί το `validateBody` με ένα σχήμα scope τύπου discriminated union.
+**Έλεγχος ταυτότητας:** το `/api/cloud/auth` επικυρώνει απευθείας ένα κλειδί Bearer και επιστρέφει το καλυμμένο κλειδί και το `projectId` κάθε σύνδεσης μόνο για κλειδί με scope `manage` / `admin`· οι άλλες διαδρομές `/api/cloud/*` και `/api/assess` απαιτούν συνεδρία διαχείρισης/κλειδί API. Το POST του `/api/assess` χρησιμοποιεί το `validateBody` με ένα σχήμα scope τύπου discriminated union.
 
 ---
 
@@ -2295,5 +2227,3 @@ devin-cli κ.λπ.). Δείτε την [Αναφορά Παρόχων](./PROVIDE
 - Το `requireLogin` μπορεί να ενεργοποιηθεί ή να απενεργοποιηθεί μέσω του `/api/settings/require-login`
 - Οι διαδρομές `/v1/*` απαιτούν προαιρετικά κλειδί API τύπου Bearer όταν `REQUIRE_API_KEY=true`
 - Οι όροι «διακριτικό διαχείρισης» / «κλειδί API με εμβέλεια διαχείρισης» σε αυτήν την αναφορά σημαίνουν μία από τις οικογένειες του συγκεκριμένου οδηγού — όχι έναν απροσδιόριστο πρόσθετο τύπο μυστικού
-
-> **Αλλαγή που διακόπτει τη συμβατότητα (v3.8.0)** — Τα `/api/v1/agents/tasks/*` και τα τελικά σημεία διαχείρισης χρόνου αναμονής απαιτούν πλέον **έλεγχο ταυτότητας διαχείρισης** (cookie πίνακα ελέγχου `auth_token` ή κλειδί API με εμβέλεια διαχείρισης). Οι πελάτες που προηγουμένως καλούσαν αυτές τις διαδρομές χωρίς έλεγχο ταυτότητας θα λαμβάνουν `401 Unauthorized`. Ανατρέξτε στο commit `588a0333` (`fix(auth): require management auth for agent and cooldown APIs`).

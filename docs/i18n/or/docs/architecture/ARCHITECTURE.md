@@ -128,13 +128,11 @@ v3.8.0 ପ୍ଲାଟଫର୍ମ ପାଇଁ ପ୍ରାମାଣିକ, ସ
 - `/dashboard/limits` — କୋଟା/ହାର ନିୟନ୍ତ୍ରଣ
 - `/dashboard/cli-tools` — CLI ଅନ୍ବୋର୍ଡିଂ, ରନ୍ଟାଇମ୍ ଚିହ୍ନଟ, କନ୍ଫିଗରେସନ୍ ସୃଷ୍ଟି
 - `/dashboard/agents` — ଚିହ୍ନଟ ହୋଇଥିବା ACP ଏଜେଣ୍ଟ + କଷ୍ଟମ୍ ଏଜେଣ୍ଟ ପଞ୍ଜୀକରଣ
-- `/dashboard/cloud-agents` — କ୍ଲାଉଡ୍ରେ ହୋଷ୍ଟ ହୋଇଥିବା ଏଜେଣ୍ଟ କାର୍ଯ୍ୟଗୁଡ଼ିକ (Codex Cloud, Devin, Jules) ଏବଂ କାର୍ଯ୍ୟ ଜୀବନଚକ୍ର
 - `/dashboard/skills` — A2A ଦକ୍ଷତା ରେଜିଷ୍ଟ୍ରି, ସ୍ୟାଣ୍ଡବକ୍ସ ନିଷ୍ପାଦନ, ଅନ୍ତର୍ନିର୍ମିତ ଦକ୍ଷତା କ୍ୟାଟାଲଗ୍
 - `/dashboard/memory` — ସ୍ଥାୟୀ ବାର୍ତ୍ତାଳାପ ସ୍ମୃତି ପରୀକ୍ଷଣ ଏବଂ ପୁନରୁଦ୍ଧାର
 - `/dashboard/webhooks` — ବାହ୍ୟମୁଖୀ ୱେବ୍ହୁକ୍ ସଦସ୍ୟତା, ଗୁପ୍ତ ତଥ୍ୟ ରୋଟେସନ୍, ପୁନଃପ୍ରୟାସ ପରିସଂଖ୍ୟାନ
 - `/dashboard/batch` — ବ୍ୟାଚ୍ କାର୍ଯ୍ୟ ଦାଖଲ ଏବଂ ପ୍ରଗତି
 - `/dashboard/cache` — ରିଡ୍-ଥ୍ରୁ ଏବଂ ତର୍କ କ୍ୟାଶ୍ ପରିସଂଖ୍ୟାନ, ଇଭିକ୍ସନ୍ ନିୟନ୍ତ୍ରଣ
-- `/dashboard/playground` — କନ୍ଫିଗର୍ ହୋଇଥିବା ଯେକୌଣସି କମ୍ବୋ/ମଡେଲ୍ ବିରୁଦ୍ଧରେ ଇଣ୍ଟରାକ୍ଟିଭ୍ ଚାଟ୍ ପ୍ଲେଗ୍ରାଉଣ୍ଡ
 - `/dashboard/changelog` — ଆପ୍-ମଧ୍ୟସ୍ଥ ଚେଞ୍ଜଲଗ୍ ଦର୍ଶକ (`CHANGELOG.md`କୁ ରେଣ୍ଡର୍ କରେ)
 - `/dashboard/system` — ରନ୍ଟାଇମ୍ ନିଦାନ, ସଂସ୍କରଣ ସୂଚନା, ପରିବେଶ ବୈଧୀକରଣ ପୃଷ୍ଠତଳ
 - `/dashboard/onboarding` — ନୂତନ ଇନ୍ଷ୍ଟଲେସନ୍ ପାଇଁ ପ୍ରଥମ-ଚାଳନ ସେଟ୍ଅପ୍ ୱିଜାର୍ଡ
@@ -252,7 +250,6 @@ flowchart LR
 - ବଜେଟ୍: `src/app/api/usage/budget` (GET/POST)
 - ଫଲ୍ବ୍ୟାକ୍ ଶୃଙ୍ଖଳଗୁଡ଼ିକ: `src/app/api/fallback/chains` (GET/POST/DELETE)
 - ଅନୁପାଳନ ଅଡିଟ୍: `src/app/api/compliance/audit-log` (GET, ପୃଷ୍ଠାଙ୍କନ + ସଂରଚିତ ମେଟାଡାଟା ସହିତ)
-- ମୂଲ୍ୟାୟନଗୁଡ଼ିକ: `src/app/api/evals` (GET/POST), `src/app/api/evals/[suiteId]` (GET)
 - ନୀତିଗୁଡ଼ିକ: `src/app/api/policies` (GET/POST)
 - ସିଙ୍କ୍ ଟୋକନ୍ଗୁଡ଼ିକ: `src/app/api/sync/tokens` (GET/POST), `src/app/api/sync/tokens/[id]` (GET/DELETE)
 - ବିନ୍ୟାସ ବଣ୍ଡଲ୍: `src/app/api/sync/bundle` (GET, ସେଟିଂସ୍/ପ୍ରଦାନକାରୀ/ସଂଯୋଜନ/କୀଗୁଡ଼ିକର ETag-ସଂସ୍କରଣଯୁକ୍ତ ସ୍ନାପ୍ଶଟ୍)
@@ -316,7 +313,6 @@ flowchart LR
 - ଫେଚ୍ ସମୟସୀମା: `src/shared/utils/fetchTimeout.ts`
 - ଅନୁରୋଧ ଟେଲିମେଟ୍ରି: `src/shared/utils/requestTelemetry.ts`
 - ଅନୁପାଳନ/ଅଡିଟ୍: `src/lib/compliance/index.ts`
-- ମୂଲ୍ୟାୟନ ରନର୍: `src/lib/evals/evalRunner.ts`
 - ଡୋମେନ୍ ସ୍ଥିତି ସ୍ଥାୟୀକରଣ: `src/lib/db/domainState.ts` — ଫଲ୍ବ୍ୟାକ୍ ଶୃଙ୍ଖଳା, ବଜେଟ୍, ଖର୍ଚ୍ଚ ଇତିହାସ, ଲକ୍ଆଉଟ୍ ସ୍ଥିତି ଏବଂ ସର୍କିଟ୍ ବ୍ରେକର୍ଗୁଡ଼ିକ ପାଇଁ SQLite CRUD
 
 OAuth ପ୍ରଦାତା ମଡ୍ୟୁଲଗୁଡ଼ିକ (`src/lib/oauth/providers/` ଅଧୀନରେ 27ଟି ସ୍ୱତନ୍ତ୍ର ଫାଇଲ୍):
@@ -374,23 +370,6 @@ OAuth ପ୍ରଦାତା ମଡ୍ୟୁଲଗୁଡ଼ିକ (`src/lib/oauth
 
 ସମ୍ପୂର୍ଣ୍ଣ ଆଲଗୋରିଦମିକ୍ ବିବରଣୀ (କାରକ ସୂତ୍ର, ଭାର ସମନ୍ୱୟ) ପାଇଁ,
 [`docs/routing/AUTO-COMBO.md`](../routing/AUTO-COMBO.md) ଦେଖନ୍ତୁ।
-
-### B. କ୍ଲାଉଡ୍ ଏଜେଣ୍ଟଗୁଡ଼ିକ
-
-କ୍ଲାଉଡ୍ ଏଜେଣ୍ଟସ୍ ତୃତୀୟ-ପକ୍ଷ ହୋଷ୍ଟ କରାଯାଇଥିବା କୋଡ୍-ଏଜେଣ୍ଟ ପ୍ଲାଟଫର୍ମଗୁଡ଼ିକୁ (Codex Cloud, Devin,
-Jules) ଏକ ସମାନ DB-ସମର୍ଥିତ କାର୍ଯ୍ୟ ଜୀବନଚକ୍ର ପଛରେ ଆବୃତ କରେ। ସମସ୍ତ କାର୍ଯ୍ୟ ସୃଷ୍ଟି/ନିରୀକ୍ଷଣ
-ଏଣ୍ଡପଏଣ୍ଟ ପାଇଁ ପରିଚାଳନା ପ୍ରମାଣୀକରଣ ଆବଶ୍ୟକ।
-
-- ମଡ୍ୟୁଲ୍ ରୁଟ୍: `src/lib/cloudAgent/` (`baseAgent.ts`, `registry.ts`, `api.ts`,
-  `types.ts`, `db.ts`, ସହିତ `agents/` ଅଧୀନରେ ପ୍ରତି-ଏଜେଣ୍ଟ ସବ୍ଡିରେକ୍ଟୋରି)
-- ପ୍ରତି-ଏଜେଣ୍ଟ କାର୍ଯ୍ୟାନ୍ୱୟନ: `agents/codex/`, `agents/devin/`, `agents/jules/`
-- ସାର୍ବଜନୀନ ଏଣ୍ଡପଏଣ୍ଟ: `/api/v1/agents/tasks/*` (ତାଲିକା/ସୃଷ୍ଟି/ପ୍ରାପ୍ତି/ବାତିଲ୍)
-- ପରିଚାଳନା ଏଣ୍ଡପଏଣ୍ଟ: `/api/cloud/*` (ପ୍ରୋଭିଜନିଂ, ସ୍ଥିତି, ବ୍ୟାଚ୍)
-- ଡ୍ୟାସ୍ବୋର୍ଡ: `/dashboard/cloud-agents`
-- ସଂରକ୍ଷଣ: `cloud_agent_tasks` ଟେବୁଲ୍
-
-ପ୍ରତି-ଏଜେଣ୍ଟ ପ୍ରୋଭିଜନିଂ ଏବଂ OAuthର ବିଶେଷ ବିବରଣୀ ପାଇଁ,
-[`docs/frameworks/CLOUD_AGENT.md`](../frameworks/CLOUD_AGENT.md) ଦେଖନ୍ତୁ।
 
 ### C. ଗାର୍ଡରେଲ୍ଗୁଡ଼ିକ
 

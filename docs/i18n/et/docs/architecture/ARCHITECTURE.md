@@ -128,13 +128,11 @@ Peamised lehed kausta `src/app/(dashboard)/dashboard/` alt:
 - `/dashboard/limits` — kvoodi/kiirusepiirangute kontroll
 - `/dashboard/cli-tools` — CLI kasutuselevõtt, käitusaja tuvastamine, konfiguratsiooni genereerimine
 - `/dashboard/agents` — tuvastatud ACP agendid + kohandatud agendi registreerimine
-- `/dashboard/cloud-agents` — pilves majutatud agendi ülesanded (Codex Cloud, Devin, Jules) ja ülesande eluring
 - `/dashboard/skills` — A2A oskuste registreerimine, sandbox täitmine, sisseehitatud oskuste katalog
 - `/dashboard/memory` — püsiva vestlusmälu ülevaatus ja pärimine
 - `/dashboard/webhooks` — väljuvad veebihaagi (webhook) tellimused, saladuste rotatsioon, uuestisaatmise statistika
 - `/dashboard/batch` — partii tööde esitamine ja edenemine
 - `/dashboard/cache` — läbilugemise ja põhjendamise puhvri (cache) statistika, eemaldamise kontrollid
-- `/dashboard/playground` — interaktiivne vestluse mänguväljak vastu suvalise seadistatud kombo/mudeli
 - `/dashboard/changelog` — rakendusesisene muudatuste logi vaatur (renderdab `CHANGELOG.md`)
 - `/dashboard/system` — käitusaja diagnostika, versiooniinfo, keskkonna valideerimise pind
 - `/dashboard/onboarding` — esmakordse käivituse seadistusviisard uute paigalduste jaoks
@@ -252,7 +250,6 @@ Haldusdomeenid:
 - Eelarve: `src/app/api/usage/budget` (GET/POST)
 - Varuahelad (fallback chains): `src/app/api/fallback/chains` (GET/POST/DELETE)
 - Vastavuse auditeerimine: `src/app/api/compliance/audit-log` (GET, koos lehestamise ja struktureeritud metaandmetega)
-- Hindamised (evals): `src/app/api/evals` (GET/POST), `src/app/api/evals/[suiteId]` (GET)
 - Poliitikad: `src/app/api/policies` (GET/POST)
 - Sünkroonimise märgid (tokens): `src/app/api/sync/tokens` (GET/POST), `src/app/api/sync/tokens/[id]` (GET/DELETE)
 - Konfiguratsioonipakett: `src/app/api/sync/bundle` (GET, ETag-versiooniga seadete/pakkujate/kombode/võtmete hetktõmmis)
@@ -316,7 +313,6 @@ Domeenikihi moodulid:
 - Päringu ajalõpp: `src/shared/utils/fetchTimeout.ts`
 - Päringu telemeetria: `src/shared/utils/requestTelemetry.ts`
 - Vastavus / audit: `src/lib/compliance/index.ts`
-- Hindamiste käitaja: `src/lib/evals/evalRunner.ts`
 - Domeenioleku püsisalvestus: `src/lib/db/domainState.ts` — SQLite CRUD varuahelate, eelarvete, kuluajaloo, lukustusoleku ja kaitselülitite jaoks
 
 OAuth-pakkujate moodulid (27 eraldi faili kataloogis `src/lib/oauth/providers/`):
@@ -384,23 +380,6 @@ Põhivõimalused:
 
 Täielikud algoritmilised üksikasjad (tegurite valemid, kaalude häälestamine) leiate failist
 [`docs/routing/AUTO-COMBO.md`](../routing/AUTO-COMBO.md).
-
-### B. Pilveagendid
-
-Pilveagendid koondavad kolmandate poolte majutatud koodiagendi platvormid (Codex Cloud, Devin,
-Jules) ühtse andmebaasipõhise ülesande elutsükli taha. Kõik ülesannete loomise ja kontrollimise
-otspunktid nõuavad haldusautentimist.
-
-- Mooduli juurkataloog: `src/lib/cloudAgent/` (`baseAgent.ts`, `registry.ts`, `api.ts`,
-  `types.ts`, `db.ts` ning agendipõhised alamkataloogid kataloogis `agents/`)
-- Agendipõhised teostused: `agents/codex/`, `agents/devin/`, `agents/jules/`
-- Avalikud otspunktid: `/api/v1/agents/tasks/*` (loendamine/loomine/hankimine/tühistamine)
-- Haldusotspunktid: `/api/cloud/*` (ettevalmistamine, olek, pakktöötlus)
-- Juhtpaneel: `/dashboard/cloud-agents`
-- Salvestusruum: tabel `cloud_agent_tasks`
-
-Agendipõhise ettevalmistamise ja OAuthi üksikasjad leiate failist
-[`docs/frameworks/CLOUD_AGENT.md`](../frameworks/CLOUD_AGENT.md).
 
 ### C. Kaitsepiirded
 

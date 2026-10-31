@@ -596,7 +596,7 @@ Radar се користи по избору и подржава само GET. 67
 - **🔑 Контрола рутирања по кључу** — приковите API кључ за један модел или combo помоћу `forcedModel`, и атомски додајте или уклоните моделе и combo-е неког кључа (`/api/keys/{id}/access`). → [API Reference](docs/reference/API_REFERENCE.md) · [OpenAPI](docs/openapi.yaml)
 - **🛡️ Прецизније PII контроле** — избор по врсти, до 20 валидираних прилагођених образаца маскирања и бројачи детекције по врсти; само маскирање остаје опционо. → [Guardrails](docs/security/GUARDRAILS.md)
 - **🌍 67 језика** — контролна табла, огледала документације и CLI, уз `npm run i18n:add-locale` који једном командом додаје језик свуда. → [i18n Guide](docs/guides/I18N.md)
-- **🎛️ OmniConductor** — долазно A2A делегирање ка вашој флоти агената, Conductor вештине на Agent Card-у и панел на контролној табли са Faro push-to-talk гласовним четом. → [A2A Server](docs/frameworks/A2A-SERVER.md)
+- **🎛️ OmniConductor** — долазно A2A делегирање ка вашој флоти агената, Conductor вештине на Agent Card-у и панел на контролној табли са Faro push-to-talk гласовним четом.
 - **🛂 Адаптивно прихватање и заштита од преоптерећења** — тешки chat захтеви чекају у реду уместо да добију 503, уз атомске RPM rolling lease-ове по конекцији. → [Resilience Guide](docs/architecture/RESILIENCE_GUIDE.md)
 - **🗂️ Канонско `/v1/models` сортирање** — један непрекинут блок груписан по провајдеру за сваког провајдера (combo-и приковани први), стабилан кроз сваки извор каталога. → [API Reference](docs/reference/API_REFERENCE.md)
 - **🗜️ Очвршћивање компресије** — inflation guard укључен по подразумеваном, Caveman пакети за DE / FR / JA + кинески (wényán), RTK филтери за Gradle и .NET. → [Compression](docs/compression/COMPRESSION_ENGINES.md)
@@ -915,7 +915,6 @@ omniroute contexts use default            # ← врати се на локал�
   <tr><td align="left" nowrap>🧰 <b>MCP (stdio)</b></td><td align="left" nowrap><code>omniroute --mcp</code></td><td align="left">Повежите са Claude Desktop-ом, Cursor-ом или било којим MCP клијентом</td></tr>
   <tr><td align="left" nowrap>🌊 <b>MCP (HTTP)</b></td><td align="left" nowrap><code>/api/mcp/stream</code></td><td align="left">Удаљени MCP — <b>110 алата</b>, 33 опсега (примена по избору), потпун траг ревизије</td></tr>
   <tr><td align="left" nowrap>📡 <b>MCP (SSE)</b></td><td align="left" nowrap><code>/api/mcp/sse</code></td><td align="left">MCP транспорт путем стримовања</td></tr>
-  <tr><td align="left" nowrap>🤝 <b>A2A</b></td><td align="left" nowrap><code>/.well-known/agent.json</code></td><td align="left">Комуникација између агената, <b>JSON-RPC 2.0</b> + SSE, 6 вештина</td></tr>
   <tr><td align="left" nowrap>🌐 <b>REST API</b></td><td align="left" nowrap><code>/v1/*</code></td><td align="left">Компатибилан са OpenAI-јем — ћаскање, угнежђивања, слике, звук, OCR</td></tr>
   <tr><td align="left" nowrap>🔔 <b>Веб-хукови</b></td><td align="left" nowrap><code>/api/webhooks</code></td><td align="left">Шаљите догађаје о захтевима / квотама у Slack, Discord, Telegram или на било који URL</td></tr>
   <tr><td align="left" nowrap>🛰️ <b>Удаљени CLI</b></td><td align="left" nowrap><code>omniroute connect <host></code></td><td align="left">Управљајте удаљеном инстанцом помоћу приступних токена ограниченог опсега</td></tr>
@@ -925,8 +924,6 @@ omniroute contexts use default            # ← врати се на локал�
 # Омогућите Claude Code-у комплетан скуп 67router алата преко MCP-а:
 claude mcp add-server omniroute --type http --url http://localhost:20128/api/mcp/stream
 ```
-
-<sub>📖 [MCP сервер](docs/frameworks/MCP-SERVER.md) · [A2A сервер](docs/frameworks/A2A-SERVER.md) · [Протоколи за агенте](docs/frameworks/AGENT_PROTOCOLS_GUIDE.md)</sub>
 
 <br/>
 
@@ -1393,7 +1390,6 @@ OMNIROUTE_SKIP_POSTINSTALL=1 npm install -g omniroute   # CI=1 такође га
   <tr><td nowrap><b><a href="open-sse/mcp-server/README.md">MCP сервер</a></b></td><td>110 MCP алата, IDE конфигурације, Python/TS/Go клијенти</td></tr>
   <tr><td nowrap><b><a href="docs/frameworks/MCP-SERVER.md">Водич за MCP сервер</a></b></td><td>MCP инсталација, транспорти и референца алата</td></tr>
   <tr><td nowrap><b><a href="src/lib/a2a/README.md">A2A сервер</a></b></td><td>JSON-RPC 2.0 протокол, вештине, стримовање, управљање задацима</td></tr>
-  <tr><td nowrap><b><a href="docs/frameworks/A2A-SERVER.md">Водич за A2A сервер</a></b></td><td>A2A картица агента, задаци, вештине и стримовање</td></tr>
 </table>
 
 ### 📋 Пројекат и квалитет

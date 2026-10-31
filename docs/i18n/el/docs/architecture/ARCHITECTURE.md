@@ -128,13 +128,11 @@ _Τελευταία ενημέρωση: 2026-06-28_
 - `/dashboard/limits` — έλεγχοι ποσόστωσης/ρυθμού
 - `/dashboard/cli-tools` — εισαγωγή CLI, ανίχνευση runtime, δημιουργία ρυθμίσεων
 - `/dashboard/agents` — ανιχνευμένοι ACP agents + εγγραφή προσαρμοσμένου agent
-- `/dashboard/cloud-agents` — εργασίες agent φιλοξενούμενες στο cloud (Codex Cloud, Devin, Jules) και κύκλος ζωής εργασίας
 - `/dashboard/skills` — μητρώο A2A skill, εκτέλεση σε sandbox, ενσωματωμένος κατάλογος skill
 - `/dashboard/memory` — επισκόπηση και ανάκτηση επίμονης συνομιλιακής μνήμης
 - `/dashboard/webhooks` — εξερχόμενες συνδρομές webhook, εναλλαγή secret, στατιστικά επανάληψης
 - `/dashboard/batch` — υποβολή μαζικής εργασίας και πρόοδος
 - `/dashboard/cache` — στατιστικά read-through και cache συλλογισμού, έλεγχοι εκκαθάρισης
-- `/dashboard/playground` — διαδραστικό playground συνομιλίας έναντι οποιουδήποτε διαμορφωμένου combo/μοντέλου
 - `/dashboard/changelog` — πρόγραμμα προβολής changelog εντός εφαρμογής (αποδίδει το `CHANGELOG.md`)
 - `/dashboard/system` — διαγνωστικά runtime, πληροφορίες έκδοσης, επιφάνεια επαλήθευσης περιβάλλοντος
 - `/dashboard/onboarding` — οδηγός πρώτης εγκατάστασης για νέες εγκαταστάσεις
@@ -252,7 +250,6 @@ flowchart LR
 - Προϋπολογισμός: `src/app/api/usage/budget` (GET/POST)
 - Αλυσίδες εφεδρικής υποστήριξης: `src/app/api/fallback/chains` (GET/POST/DELETE)
 - Ελεγκτικό αρχείο συμμόρφωσης: `src/app/api/compliance/audit-log` (GET, με σελιδοποίηση + δομημένα μεταδεδομένα)
-- Αξιολογήσεις: `src/app/api/evals` (GET/POST), `src/app/api/evals/[suiteId]` (GET)
 - Πολιτικές: `src/app/api/policies` (GET/POST)
 - Διακριτικά συγχρονισμού: `src/app/api/sync/tokens` (GET/POST), `src/app/api/sync/tokens/[id]` (GET/DELETE)
 - Πακέτο ρυθμίσεων: `src/app/api/sync/bundle` (GET, στιγμιότυπο ρυθμίσεων/παρόχων/συνδυασμών/κλειδιών με έκδοση ETag)
@@ -316,7 +313,6 @@ flowchart LR
 - Χρονικό όριο ανάκτησης: `src/shared/utils/fetchTimeout.ts`
 - Τηλεμετρία αιτημάτων: `src/shared/utils/requestTelemetry.ts`
 - Συμμόρφωση/έλεγχος: `src/lib/compliance/index.ts`
-- Εκτελεστής αξιολογήσεων: `src/lib/evals/evalRunner.ts`
 - Μόνιμη αποθήκευση κατάστασης τομέα: `src/lib/db/domainState.ts` — λειτουργίες CRUD SQLite για αλυσίδες εναλλακτικής χρήσης, προϋπολογισμούς, ιστορικό κόστους, κατάσταση αποκλεισμού και διακόπτες κυκλώματος
 
 Μονάδες παρόχων OAuth (27 μεμονωμένα αρχεία στον κατάλογο `src/lib/oauth/providers/`):
@@ -385,23 +381,6 @@ flowchart LR
 
 Για πλήρεις αλγοριθμικές λεπτομέρειες (τύποι παραγόντων, ρύθμιση βαρών), ανατρέξτε στο
 [`docs/routing/AUTO-COMBO.md`](../routing/AUTO-COMBO.md).
-
-### B. Cloud Agents
-
-Το Cloud Agents ενσωματώνει πλατφόρμες φιλοξενούμενων πρακτόρων κώδικα τρίτων (Codex Cloud, Devin,
-Jules) πίσω από έναν ενιαίο κύκλο ζωής εργασιών που υποστηρίζεται από βάση δεδομένων. Όλα τα τελικά σημεία δημιουργίας/επιθεώρησης
-εργασιών απαιτούν έλεγχο ταυτότητας διαχείρισης.
-
-- Ρίζα λειτουργικής μονάδας: `src/lib/cloudAgent/` (`baseAgent.ts`, `registry.ts`, `api.ts`,
-  `types.ts`, `db.ts`, καθώς και υποκατάλογοι ανά πράκτορα κάτω από το `agents/`)
-- Υλοποιήσεις ανά πράκτορα: `agents/codex/`, `agents/devin/`, `agents/jules/`
-- Δημόσια τελικά σημεία: `/api/v1/agents/tasks/*` (παράθεση/δημιουργία/ανάκτηση/ακύρωση)
-- Τελικά σημεία διαχείρισης: `/api/cloud/*` (παροχή, κατάσταση, μαζική επεξεργασία)
-- Πίνακας ελέγχου: `/dashboard/cloud-agents`
-- Αποθήκευση: πίνακας `cloud_agent_tasks`
-
-Για λεπτομέρειες σχετικά με την παροχή και το OAuth ανά πράκτορα, ανατρέξτε στο
-[`docs/frameworks/CLOUD_AGENT.md`](../frameworks/CLOUD_AGENT.md).
 
 ### C. Μηχανισμοί Προστασίας
 

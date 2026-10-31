@@ -43,8 +43,6 @@ v3.7.x → v3.8.0 ਚੱਕਰ ਵਿੱਚ ਜ਼ੀਰੋ-ਕਨਫਿਗ ਆ�
 - 🤝 **GitLab Duo OAuth ਪ੍ਰਦਾਤਾ** — GitLab ਕ੍ਰੈਡੈਂਸ਼ਲਾਂ ਨਾਲ ਲੌਗਇਨ ਕਰੋ
 - 🧠 **Reasoning Replay Cache** — ਰੀਜ਼ਨਿੰਗ ਟ੍ਰੇਸਾਂ ਦੀ ਹਾਈਬ੍ਰਿਡ ਇਨ-ਮੈਮਰੀ + SQLite ਸਥਿਰ ਸਟੋਰੇਜ
 
-📚 **ਸੰਬੰਧਿਤ ਦਸਤਾਵੇਜ਼:** [Skills Framework](../frameworks/SKILLS.md) · [Memory System](../frameworks/MEMORY.md) · [Cloud Agents](../frameworks/CLOUD_AGENT.md) · [Webhooks](../frameworks/WEBHOOKS.md) · [Reasoning Replay Cache](../routing/REASONING_REPLAY.md)
-
 ---
 
 ## 🔌 ਪ੍ਰਦਾਤਾ
@@ -103,12 +101,6 @@ OpenRouter ਕਨੈਕਸ਼ਨ Advanced Settings ਵਿੱਚ ਪ੍ਰਤੀ-
 API ਅਨੁਵਾਦਾਂ ਦੀ ਡੀਬੱਗਿੰਗ ਲਈ ਚਾਰ ਮੋਡ: **ਪਲੇਗ੍ਰਾਊਂਡ** (ਫਾਰਮੈਟ ਕਨਵਰਟਰ), **ਚੈਟ ਟੈਸਟਰ** (ਲਾਈਵ ਬੇਨਤੀਆਂ), **ਟੈਸਟ ਬੈਂਚ** (ਬੈਚ ਟੈਸਟ), ਅਤੇ **ਲਾਈਵ ਮਾਨੀਟਰ** (ਰੀਅਲ-ਟਾਈਮ ਸਟ੍ਰੀਮ)।
 
 ![ਅਨੁਵਾਦਕ ਪਲੇਗ੍ਰਾਊਂਡ](../screenshots/05-translator.png)
-
----
-
-## 🎮 ਮਾਡਲ ਪਲੇਗ੍ਰਾਊਂਡ _(v2.0.9+)_
-
-ਡੈਸ਼ਬੋਰਡ ਤੋਂ ਸਿੱਧੇ ਕਿਸੇ ਵੀ ਮਾਡਲ ਦੀ ਜਾਂਚ ਕਰੋ। ਪ੍ਰਦਾਤਾ, ਮਾਡਲ ਅਤੇ ਐਂਡਪੌਇੰਟ ਚੁਣੋ, Monaco Editor ਨਾਲ ਪ੍ਰੌਂਪਟ ਲਿਖੋ, ਜਵਾਬਾਂ ਨੂੰ ਰੀਅਲ-ਟਾਈਮ ਵਿੱਚ ਸਟ੍ਰੀਮ ਕਰੋ, ਸਟ੍ਰੀਮ ਨੂੰ ਵਿਚਕਾਰ ਹੀ ਰੋਕੋ ਅਤੇ ਸਮਾਂ-ਮਾਪ ਮੈਟ੍ਰਿਕਸ ਦੇਖੋ।
 
 ---
 

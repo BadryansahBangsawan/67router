@@ -258,12 +258,6 @@ Nəqliyyat sazlanması və əhatə dairəsi təyinatları üçün [MCP-SERVER.md
 
 ---
 
-## A2A İnteqrasiyası
-
-`src/lib/skills/a2a.ts`, `memory_aware_routing` A2A bacarıq deskriptorunu və `registerA2ASkill(registry)` köməkçi funksiyasını ixrac edir. Xüsusi A2A bacarıqları `src/lib/a2a/skills/` daxilində yerləşir və `A2A_SKILL_HANDLERS` (`src/lib/a2a/taskExecution.ts`) vasitəsilə yönləndirilir. Tapşırığın tam həyat dövrü üçün [A2A-SERVER.md](./A2A-SERVER.md) sənədinə baxın.
-
----
-
 ## Yeni Daxili Bacarığın Əlavə Edilməsi
 
 1. **İşləyicini müəyyənləşdirin:** `src/lib/skills/builtins.ts` daxilində (və ya `src/lib/skills/builtin/` altındakı eyni səviyyəli faylda). Siqnatura: `(input, { apiKeyId, sessionId }) => Promise<output>`.
@@ -478,7 +472,6 @@ Plagin sistemi vasitəsilə fərdi bacarığın necə əlavə ediləcəyini öyr
 ## Həmçinin baxın
 
 - [MCP-SERVER.md](./MCP-SERVER.md) — MCP alətlərinin qeydiyyatı və nəqliyyat mexanizmləri
-- [A2A-SERVER.md](./A2A-SERVER.md) — A2A tapşırığının həyat dövrü və bacarıqların yönləndirilməsi
 - [USER_GUIDE.md](../guides/USER_GUIDE.md#-skills-system) — istifadəçi üçün giriş
 - [ARCHITECTURE.md](../architecture/ARCHITECTURE.md) — sorğu emalı ardıcıllığı və komponent xəritəsi
 - Mənbə: `src/lib/skills/`, `src/app/api/skills/`, `open-sse/mcp-server/tools/skillTools.ts`

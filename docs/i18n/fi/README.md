@@ -597,7 +597,6 @@ nykyisestä luettelosta on osoitteessa **[radar.omniroute.online/planos](https:/
 - **🔑 Avainkohtainen reitityksen hallinta** — kiinnitä API-avain yhteen malliin tai yhdistelmään asetuksella `forcedModel` ja lisää tai poista avaimen malleja ja yhdistelmiä atomisesti (`/api/keys/{id}/access`). → [API-viite](docs/reference/API_REFERENCE.md) · [OpenAPI](docs/openapi.yaml)
 - **🛡️ Tarkemmat henkilötietojen hallintatoiminnot** — tyyppikohtainen valinta, jopa 20 validoitua mukautettua peittokuviota ja tyyppikohtaiset tunnistuslaskurit; itse peittäminen on edelleen erikseen käyttöönotettava ominaisuus. → [Suojaukset](docs/security/GUARDRAILS.md)
 - **🌍 67 kieltä** — hallintapaneeli, dokumentaation peilisivustot ja CLI; `npm run i18n:add-locale` lisää kielen kaikkialle yhdellä komennolla. → [i18n-opas](docs/guides/I18N.md)
-- **🎛️ OmniConductor** — saapuvan A2A-liikenteen delegointi agenttijoukollesi, Conductor-taidot Agent Cardissa sekä hallintapaneeli Faro-pikapuheäänikeskustelulla. → [A2A-palvelin](docs/frameworks/A2A-SERVER.md)
 - **🛂 Mukautuva hyväksyntä ja ylikuormitussuojaus** — raskaat keskustelupyynnöt asetetaan jonoon 503-virheen palauttamisen sijaan, ja käytössä ovat yhteyskohtaiset atomiset RPM-liukuvat vuokraukset. → [Vikasietoisuusopas](docs/architecture/RESILIENCE_GUIDE.md)
 - **🗂️ Kanoninen `/v1/models`-järjestys** — yksi yhtenäinen palveluntarjoajan mukaan ryhmitelty lohko kutakin palveluntarjoajaa kohden (yhdistelmät kiinnitettyinä ensin), yhdenmukaisena kaikissa luettelolähteissä. → [API-viite](docs/reference/API_REFERENCE.md)
 - **🗜️ Pakkauksen vahvistaminen** — oletusarvoisesti käytössä oleva purkamissuojus, Caveman-paketit kielille DE / FR / JA + kiina (wényán) sekä RTK-suodattimet Gradlelle ja .NETille. → [Pakkaus](docs/compression/COMPRESSION_ENGINES.md)
@@ -916,7 +915,6 @@ Aseta 67router käytettäväksi **MCP:n**, **A2A:n**, **REST API:n**, **webhooki
   <tr><td align="left" nowrap>🧰 <b>MCP (stdio)</b></td><td align="left" nowrap><code>omniroute --mcp</code></td><td align="left">Liitä Claude Desktopiin, Cursoriin tai mihin tahansa MCP-asiakasohjelmaan</td></tr>
   <tr><td align="left" nowrap>🌊 <b>MCP (HTTP)</b></td><td align="left" nowrap><code>/api/mcp/stream</code></td><td align="left">MCP-etäyhteys — <b>110 työkalua</b>, 33 käyttöoikeusaluetta (valinnainen valvonta), täydellinen kirjausketju</td></tr>
   <tr><td align="left" nowrap>📡 <b>MCP (SSE)</b></td><td align="left" nowrap><code>/api/mcp/sse</code></td><td align="left">Suoratoistava MCP-siirtotapa</td></tr>
-  <tr><td align="left" nowrap>🤝 <b>A2A</b></td><td align="left" nowrap><code>/.well-known/agent.json</code></td><td align="left">Agenttien välinen viestintä, <b>JSON-RPC 2.0</b> + SSE, 6 taitoa</td></tr>
   <tr><td align="left" nowrap>🌐 <b>REST API</b></td><td align="left" nowrap><code>/v1/*</code></td><td align="left">OpenAI-yhteensopiva — keskustelut, upotukset, kuvat, ääni ja OCR</td></tr>
   <tr><td align="left" nowrap>🔔 <b>Webhookit</b></td><td align="left" nowrap><code>/api/webhooks</code></td><td align="left">Lähetä pyyntö- ja kiintiötapahtumat Slackiin, Discordiin, Telegramiin tai mihin tahansa URL-osoitteeseen</td></tr>
   <tr><td align="left" nowrap>🛰️ <b>Etä-CLI</b></td><td align="left" nowrap><code>omniroute connect <host></code></td><td align="left">Hallitse etäinstanssia käyttöoikeuksiltaan rajatuilla tunnuksilla</td></tr>
@@ -926,8 +924,6 @@ Aseta 67router käytettäväksi **MCP:n**, **A2A:n**, **REST API:n**, **webhooki
 # Anna Claude Codelle kaikki 67router-työkalut MCP:n kautta:
 claude mcp add-server omniroute --type http --url http://localhost:20128/api/mcp/stream
 ```
-
-<sub>📖 [MCP-palvelin](docs/frameworks/MCP-SERVER.md) · [A2A-palvelin](docs/frameworks/A2A-SERVER.md) · [Agenttiprotokollat](docs/frameworks/AGENT_PROTOCOLS_GUIDE.md)</sub>
 
 <br/>
 
@@ -1390,7 +1386,6 @@ Kanoniset mittarit 2026-10-18: **1.976 yksilöllistä videota** · **20.220.289 
   <tr><td nowrap><b><a href="open-sse/mcp-server/README.md">MCP-palvelin</a></b></td><td>110 MCP-työkalua, IDE-määritykset sekä Python-, TS- ja Go-asiakasohjelmat</td></tr>
   <tr><td nowrap><b><a href="docs/frameworks/MCP-SERVER.md">MCP-palvelinopas</a></b></td><td>MCP:n asennus, siirtotavat ja työkaluviite</td></tr>
   <tr><td nowrap><b><a href="src/lib/a2a/README.md">A2A-palvelin</a></b></td><td>JSON-RPC 2.0 -protokolla, taidot, suoratoisto ja tehtävien hallinta</td></tr>
-  <tr><td nowrap><b><a href="docs/frameworks/A2A-SERVER.md">A2A-palvelinopas</a></b></td><td>A2A-agenttikortti, tehtävät, taidot ja suoratoisto</td></tr>
 </table>
 
 ### 📋 Projekti ja laatu

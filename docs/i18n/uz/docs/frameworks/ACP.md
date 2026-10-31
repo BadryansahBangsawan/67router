@@ -119,5 +119,3 @@ testini talab qiladi.
 - [Agent protokollari](./AGENT_PROTOCOLS_GUIDE.md)
 - [CLI ishga tushirish shartnomalari](../guides/CLI-LAUNCH-CONTRACTS.md)
 - [CLI vositalari](../reference/CLI-TOOLS.md)
-- [A2A serveri](./A2A-SERVER.md)
-- [Bulut agentlari](./CLOUD_AGENT.md)

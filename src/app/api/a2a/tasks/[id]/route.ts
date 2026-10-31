@@ -20,7 +20,7 @@ function safeJsonParse<T>(json: string | null | undefined, fallback: T): T {
 }
 
 const STATE_EVENT_PREFIX = "state:";
-/** Event type written by `collectMemoryHits` (src/lib/a2a/taskExecution.ts). */
+/** Event type written by the removed A2A task executor (historical rows may still carry it). */
 const MEMORY_HITS_EVENT_TYPE = "memory_hits";
 const MEMORY_HIT_FIELDS = ["id", "key", "type", "snippet"] as const;
 

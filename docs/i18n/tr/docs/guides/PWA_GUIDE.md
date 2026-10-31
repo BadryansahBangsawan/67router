@@ -51,13 +51,13 @@ Manifest, `display: "fullscreen"` ile yapılandırılmıştır; bu, yüklenen uy
 
 67router, akıllı önbelleğe alma sağlayan bir service worker (`sw.js`) içerir:
 
-| Varlık Türü                                                       | Strateji                         | Davranış                                                                                                            |
-| ----------------------------------------------------------------- | -------------------------------- | ------------------------------------------------------------------------------------------------------------------- |
-| **Uygulama Kabuğu**                                               | Önce önbellek                    | `/`, `/offline`, manifest ve simgeler kurulum sırasında önceden önbelleğe alınır                                    |
-| **Statik varlıklar** (CSS, JS, görseller, yazı tipleri)           | Önce ağ, önbelleğe geri dönüş    | Ağdan güncel sürümü getirir; çevrimdışıysa önbelleğe geri döner                                                     |
-| **Next.js paketleri** (`/_next/`)                                 | Önce ağ, önbellek güncellemeli   | Ağdan getirip önbelleği günceller; çevrimdışıysa önbellekteki sürümü sunar                                          |
-| **Gezinme istekleri**                                             | Atlanır (asla müdahale edilmez)  | HTTP/3→HTTP/2 geri dönüşünü tarayıcı yönetir; çalışmayan bir QUIC soketi `Response.error()` sonucuna dönüşmemelidir |
-| **API / kontrol paneli rotaları** (`/api/`, `/a2a`, `/dashboard`) | Atlanır (asla önbelleğe alınmaz) | Her zaman doğrudan sunucuya gider — service worker tarafından asla müdahale edilmez                                 |
+| Varlık Türü                                               | Strateji                         | Davranış                                                                                                            |
+| --------------------------------------------------------- | -------------------------------- | ------------------------------------------------------------------------------------------------------------------- |
+| **Uygulama Kabuğu**                                       | Önce önbellek                    | `/`, `/offline`, manifest ve simgeler kurulum sırasında önceden önbelleğe alınır                                    |
+| **Statik varlıklar** (CSS, JS, görseller, yazı tipleri)   | Önce ağ, önbelleğe geri dönüş    | Ağdan güncel sürümü getirir; çevrimdışıysa önbelleğe geri döner                                                     |
+| **Next.js paketleri** (`/_next/`)                         | Önce ağ, önbellek güncellemeli   | Ağdan getirip önbelleği günceller; çevrimdışıysa önbellekteki sürümü sunar                                          |
+| **Gezinme istekleri**                                     | Atlanır (asla müdahale edilmez)  | HTTP/3→HTTP/2 geri dönüşünü tarayıcı yönetir; çalışmayan bir QUIC soketi `Response.error()` sonucuna dönüşmemelidir |
+| **API / kontrol paneli rotaları** (`/api/`, `/dashboard`) | Atlanır (asla önbelleğe alınmaz) | Her zaman doğrudan sunucuya gider — service worker tarafından asla müdahale edilmez                                 |
 
 ### Çevrimdışı Sayfası
 

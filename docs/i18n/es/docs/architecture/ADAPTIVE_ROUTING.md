@@ -50,7 +50,6 @@ Agente de IA / IDE
 | Tráfico en sombra                         | `open-sse/services/combo/shadowRouting.ts`                                                                          |
 | Medidas de protección                     | `src/lib/guardrails/` (hooks previos/posteriores)                                                                   |
 | Caché exacta                              | `src/lib/semanticCache.ts` (basada en firmas)                                                                       |
-| Evaluadores / enrutamiento por evaluación | `src/lib/evals/`, `open-sse/services/evalRouting.ts`                                                                |
 | Explicabilidad de decisiones de combos    | `open-sse/services/combo/decisionTrace.ts`                                                                          |
 | Eventos en tiempo real del panel          | `src/lib/events/eventBus.ts` (canal de notificaciones de la IU, cargas útiles `unknown`, historial de 100 entradas) |
 
@@ -280,8 +279,6 @@ de inteligencia/evaluación, no como una dependencia**. Los puntos de integraci�
 - Un futuro `Evaluator` (determinista, juez local, HTTP, WASM) consumiría
   eventos/trazas y devolvería un `QualityScore` que alimentaría la misma ruta de
   `getQualityScore`/factor de calidad.
-- El enrutamiento basado en evaluaciones existente (`open-sse/services/evalRouting.ts`)
-  ya reordena los destinos del combo según las tasas de aprobación de `eval_runs`
   cuando está habilitado.
 
 Ninguna evaluación se ejecuta de forma síncrona en la ruta de la solicitud, y el

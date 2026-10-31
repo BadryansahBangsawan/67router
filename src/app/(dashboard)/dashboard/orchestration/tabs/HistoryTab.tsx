@@ -1,8 +1,7 @@
 "use client";
 /**
  * History tab — Airflow-grid style view over PERSISTED runs (A2A task history from Task C3's
- * `GET /api/a2a/tasks/history`, plus the existing in-memory `GET /api/v1/agents/tasks` for
- * Cloud Agent). Conductor is intentionally absent — its runs are remote and not persisted
+ * `GET /api/a2a/tasks/history`). Conductor is intentionally absent — its runs are remote and not persisted
  * locally, surfaced to the operator via the `historyConductorNote` banner instead of silently
  * omitted.
  *
@@ -12,7 +11,7 @@
  * snapshot any more (or, for A2A, might exist only via the persisted-history fallback added in
  * C3) — so there is nothing for `?node=` to look up on a page refresh/deep link into this tab.
  * The live snapshot's `OrchestrationToolbar` filters (search/state/source/provider chips) also
- * do not apply here — this tab fetches its own two sources directly, over its own preset time
+ * do not apply here — this tab fetches its own source directly, over its own preset time
  * range, independent of the live snapshot filter pipeline.
  */
 import { useEffect, useMemo, useState } from "react";
@@ -32,15 +31,13 @@ import { orchStateColor, type OrchNode, type OrchState } from "../model/orchestr
 import {
   buildHistoryGrid,
   historyItemFromA2A,
-  historyItemFromCloudAgent,
   historyRangeFromPreset,
   type HistoryGrid,
   type HistoryItem,
 } from "../model/historyModel";
-import type { CloudAgentTask } from "@/lib/cloudAgent/types";
 
 type Preset = "1d" | "7d" | "30d";
-type SourceKind = "a2a" | "cloud-agent";
+type SourceKind = "a2a";
 
 const PRESETS: Preset[] = ["1d", "7d", "30d"];
 const PRESET_KEY: Record<Preset, string> = {
@@ -56,7 +53,6 @@ const BUCKET_COUNT: Record<Preset, number> = { "1d": 24, "7d": 7, "30d": 30 };
 // `drawer/OrchestrationDrawer.tsx:35` / `tabs/OverviewTab.tsx:14`.
 const SOURCE_KEY: Record<SourceKind, string> = {
   a2a: "sourceA2A",
-  "cloud-agent": "sourceCloudAgent",
 };
 const STATE_KEY: Record<OrchState, string> = {
   queued: "stateQueued",
@@ -104,9 +100,7 @@ function useSyncedRangeReset(rangeKey: string, setIsLoading: (b: boolean) => voi
 }
 
 /**
- * Fetches A2A persisted history + Cloud Agent tasks for `range`, `Promise.allSettled` so one
- * source failing never hides the other. Cloud Agent has no server-side range filter, so it is
- * filtered client-side by `createdAt`. State is only ever set from the settled callback — the
+ * Fetches A2A persisted history for `range`. State is only ever set from the settled callback — the
  * effect body itself never calls setState synchronously, keeping it clean under
  * `react-hooks/set-state-in-effect` (same shape as `useDrawerDetail.ts`'s `useFetchDetail`).
  */
@@ -126,12 +120,8 @@ function useHistoryData(range: { fromMs: number; toMs: number }) {
       `/api/a2a/tasks/history?from=${encodeURIComponent(from)}&to=${encodeURIComponent(to)}&limit=500`,
       { signal: controller.signal, cache: "no-store" }
     ).then((res) => (res.ok ? res.json() : Promise.reject(new Error(`HTTP ${res.status}`))));
-    const cloudAgentReq = fetch("/api/v1/agents/tasks?limit=100", {
-      signal: controller.signal,
-      cache: "no-store",
-    }).then((res) => (res.ok ? res.json() : Promise.reject(new Error(`HTTP ${res.status}`))));
 
-    Promise.allSettled([a2aReq, cloudAgentReq]).then(([a2aResult, cloudAgentResult]) => {
+    Promise.allSettled([a2aReq]).then(([a2aResult]) => {
       if (controller.signal.aborted) return;
       const failed = new Set<SourceKind>();
       const nextItems: HistoryItem[] = [];
@@ -141,18 +131,6 @@ function useHistoryData(range: { fromMs: number; toMs: number }) {
         for (const row of rows) nextItems.push(historyItemFromA2A(row));
       } else {
         failed.add("a2a");
-      }
-
-      if (cloudAgentResult.status === "fulfilled") {
-        const tasks = (cloudAgentResult.value as { data?: CloudAgentTask[] })?.data ?? [];
-        for (const t of tasks) {
-          const createdMs = Date.parse(t.createdAt);
-          if (Number.isFinite(createdMs) && createdMs >= range.fromMs && createdMs <= range.toMs) {
-            nextItems.push(historyItemFromCloudAgent(t));
-          }
-        }
-      } else {
-        failed.add("cloud-agent");
       }
 
       setItems(nextItems);
@@ -167,7 +145,7 @@ function useHistoryData(range: { fromMs: number; toMs: number }) {
 }
 
 /** Turns a clicked HistoryItem into the synthetic OrchNode OrchestrationDrawer expects — the
- * `a2a:`/`cloud-agent:` id prefix is preserved so `useDrawerDetail`'s `routeFor` resolves the
+ * `a2a:` id prefix is preserved so `useDrawerDetail`'s `routeFor` resolves the
  * right detail endpoint (the A2A one falls back to persisted history per Task C3). */
 function nodeFromHistoryItem(item: HistoryItem): OrchNode {
   return {

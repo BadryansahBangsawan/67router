@@ -44,7 +44,6 @@ src/app/api/agent-skills/
   generate/route.ts                    — POST /api/agent-skills/generate (საჭიროებს ავტორიზაციას)
 
 open-sse/mcp-server/tools/agentSkillTools.ts  — 3 MCP ხელსაწყო (სია, მიღება, დაფარვა)
-src/lib/a2a/skills/listCapabilities.ts        — A2A უნარი: list-capabilities
 ```
 
 ---
@@ -140,8 +139,6 @@ A2A უნარი `list-capabilities` აბრუნებს 45-ვე უ�
 }
 ```
 
-პროტოკოლის დეტალებისთვის იხილეთ [A2A-SERVER.md](./A2A-SERVER.md).
-
 ---
 
 ## კატალოგი — 45 უნარის ID
@@ -189,12 +186,11 @@ A2A უნარი `list-capabilities` აბრუნებს 45-ვე უ�
 | `cli-contexts`        | cli-contexts       | `omniroute contexts`    |
 | `cli-cost-usage`      | cli-cost-usage     | `omniroute cost`        |
 | `cli-mcp`             | cli-mcp            | `omniroute mcp`         |
-| `cli-a2a`             | cli-a2a            | `omniroute a2a`         |
 | `cli-tunnel`          | cli-tunnel         | `omniroute tunnel`      |
 | `cli-backup-sync`     | cli-backup-sync    | `omniroute backup`      |
 | `cli-policy-audit`    | cli-policy-audit   | `omniroute policy`      |
 | `cli-batches`         | cli-batches        | `omniroute batch`       |
-| `cli-eval`            | cli-eval           | `omniroute eval`        |
+| `cli-eval`            | cli-eval           | `omniroute simulate`    |
 | `cli-plugins-skills`  | cli-plugins-skills | `omniroute plugins`     |
 | `cli-setup`           | cli-setup          | `omniroute setup`       |
 | `cli-skill-collector` | cli-setup          | `omniroute skills`      |
@@ -312,6 +308,5 @@ curl "http://localhost:20128/api/agent-skills/coverage"
 
 - [SKILLS.md](./SKILLS.md) — Omni Skills ფრეიმვორკი (LLM ინსტრუმენტების ინექცია + მარკეტპლეისი)
 - [MCP-SERVER.md](./MCP-SERVER.md) — MCP ინსტრუმენტების კატალოგი (`omniroute_agent_skills_*` ინსტრუმენტები)
-- [A2A-SERVER.md](./A2A-SERVER.md) — A2A პროტოკოლი (`list-capabilities` უნარი)
 - `src/lib/agentSkills/` — კატალოგი, გენერატორი, პარსერები
 - `skills/` — გენერირებული SKILL.md ფაილები (45 ჩანაწერი)

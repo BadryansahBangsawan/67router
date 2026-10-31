@@ -390,34 +390,6 @@
       "description": "MCP-revisjonslogg (alias for audit --source mcp)"
     }
   },
-  "a2a": {
-    "skills": {
-      "description": "List tilgjengelige A2A-ferdigheter fra agentkortet"
-    },
-    "invoke": {
-      "description": "Kall en A2A-ferdighet og returner oppgave-ID-en",
-      "input": "JSON-inndataobjekt",
-      "input_file": "Bane til JSON-inndatafil",
-      "wait": "Vent til oppgaven er fullført før retur",
-      "timeout": "Tidsavbrudd i ms mens det ventes på fullføring (standard: 60000)"
-    },
-    "tasks": {
-      "description": "Administrer A2A-oppgaver",
-      "list": {
-        "status": "Filtrer etter status",
-        "skill": "Filtrer etter ferdighets-ID"
-      },
-      "watch": {
-        "description": "Kontroller oppgavestatus regelmessig til fullføring"
-      },
-      "stream": {
-        "description": "Strøm hendelser fra oppgavekjøringen via SSE"
-      },
-      "logs": {
-        "description": "Vis oppgavemeldinger og artefakter"
-      }
-    }
-  },
   "policy": {
     "description": "Administrer autorisasjonspolicyer for 67router",
     "list": {
@@ -696,99 +668,6 @@
       "provider": "Leverandør-ID som skal tilbakekalles",
       "connection_id": "Tilbakekall en bestemt tilkobling etter ID",
       "yes": "Hopp over bekreftelsesforespørsel"
-    }
-  },
-  "cloud": {
-    "description": "Administrer oppgaver for skybaserte AI-agenter (codex, devin, jules)",
-    "agents": {
-      "description": "Vis tilgjengelige skyagenter"
-    },
-    "agent": {
-      "description": "Administrer oppgaver for skyagenten {agent}",
-      "auth": {
-        "description": "Autoriser {agent} via OAuth"
-      }
-    },
-    "task": {
-      "description": "Administrer oppgaver for skyagenter",
-      "create": {
-        "description": "Opprett en ny agentoppgave",
-        "title": "Oppgavetittel (bruker som standard de første 80 tegnene i instruksen)",
-        "prompt": "Tekst for oppgaveinstruks",
-        "prompt_file": "Les instruks fra fil",
-        "repo": "URL til repositoriet som skal klones for oppgaven",
-        "branch": "Grennavn som skal brukes",
-        "metadata": "JSON-metadataobjekt"
-      },
-      "list": {
-        "description": "Vis agentoppgaver",
-        "status": "Filtrer etter status (running|completed|failed|cancelled)",
-        "limit": "Maksimalt antall resultater (standard: 50)"
-      },
-      "get": {
-        "description": "Hent oppgavedetaljer etter ID"
-      },
-      "status": {
-        "description": "Skriv ut oppgavestatus (running|completed|failed|cancelled)"
-      },
-      "cancel": {
-        "description": "Avbryt en kjørende oppgave",
-        "yes": "Hopp over bekreftelsesforespørsel"
-      },
-      "approve": {
-        "description": "Godkjenn agentplanen for å starte kjøringen"
-      },
-      "message": {
-        "description": "Send en melding til en kjørende oppgave"
-      }
-    },
-    "sources": {
-      "description": "Vis kildefiler produsert av en oppgave"
-    }
-  },
-  "eval": {
-    "description": "Administrer evalueringspakker og kjøringer",
-    "suites": {
-      "description": "Administrer evalueringspakker",
-      "list": {
-        "description": "List evalueringssett"
-      },
-      "get": {
-        "description": "Hent detaljer om evalueringssett etter ID"
-      },
-      "create": {
-        "description": "Opprett et evalueringssett fra en JSON-fil",
-        "file": "Bane til JSON-filen med definisjonen av settet"
-      }
-    },
-    "run": {
-      "description": "Start en evalueringskjøring for et sett",
-      "model": "Modell-ID som skal evalueres (standard: auto)",
-      "combo": "Tving bruk av en bestemt kombinasjon etter navn",
-      "concurrency": "Antall samtidige eksempler (standard: 4)",
-      "tag": "Merk denne kjøringen for senere filtrering",
-      "watch": "Følg fremdriften til kjøringen er fullført"
-    },
-    "list": {
-      "description": "List evalueringskjøringer",
-      "suite": "Filtrer etter sett-ID",
-      "status": "Filtrer etter status",
-      "since": "Returner kjøringer siden dette tidsstempelet",
-      "limit": "Maksimalt antall resultater (standard: 50)"
-    },
-    "get": {
-      "description": "Hent detaljer om evalueringskjøring etter ID"
-    },
-    "results": {
-      "description": "Vis eksempelresultater for en evalueringskjøring",
-      "failed": "Vis bare mislykkede eksempler"
-    },
-    "cancel": {
-      "description": "Avbryt en pågående evaluering",
-      "yes": "Hopp over bekreftelsesforespørselen"
-    },
-    "scorecard": {
-      "description": "Vis poengkortet for en fullført evalueringskjøring"
     }
   },
   "program": {

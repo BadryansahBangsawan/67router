@@ -246,17 +246,6 @@ curl -X DELETE http://localhost:20128/api/settings/notion
 обмежений операціями маршрутизації, кешування, стиснення, пам’яті, навичок, проксі та джерел контексту під час виконання. Два суміжні
 фреймворки постачаються разом із сервером MCP у v3.8.0 і документуються окремо:
 
-### Хмарні агенти
-
-Хмарні агенти — це зовнішні AI-агенти для програмування (codex-cloud, cursor-cloud, devin, jules), інтегровані в
-67router через ту саму модель підключення, що використовується для постачальників LLM. Вони доступні через
-власний інтерфейс REST (`/api/v1/agents/*`) і **не** є частиною каталогу інструментів MCP
-— виклик хмарного агента не використовує область доступу MCP.
-
-- Реалізація: `src/lib/cloudAgent/` (`registry.ts`, `agents/codex.ts`, `agents/cursor.ts`, `agents/devin.ts`, `agents/jules.ts`).
-- Життєвий цикл: `createTask`, `getStatus`, `approvePlan`, `sendMessage`, `listSources`.
-- Документація: [docs/frameworks/CLOUD_AGENT.md](./CLOUD_AGENT.md).
-
 ### Захисні механізми
 
 Захисні механізми — це фільтри до/після виконання (vision-bridge, pii-masker, prompt-injection),

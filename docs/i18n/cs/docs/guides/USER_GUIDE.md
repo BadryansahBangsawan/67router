@@ -24,7 +24,6 @@ Kompletní průvodce konfigurací poskytovatelů, vytvářením kombinací, inte
 - [Systém dovedností](#-skills-system)
 - [Paměťový systém](#-memory-system)
 - [Webhooky](#-webhooks)
-- [Cloudoví agenti](#-cloud-agents)
 - [Programová správa](#-programmatic-management)
 - [Interní CLI](#-internal-cli)
 - [Desktopová aplikace (Electron)](#-desktop-application-electron)
@@ -1239,8 +1238,6 @@ Použijte adresu URL SSE `http://localhost:20128/api/mcp/sse` a klíč API typu 
 
 ### Rozsahy oprávnění
 
-MCP aktuálně definuje 32 pojmenovaných rozsahů oprávnění. Každý klíč typu Bearer lze omezit na konkrétní rozsahy — autoritativní seznam rozsahů a nástrojů naleznete v dokumentu [MCP-SERVER.md](../frameworks/MCP-SERVER.md) a schéma JSON-RPC v dokumentu [A2A-SERVER.md](../frameworks/A2A-SERVER.md).
-
 ---
 
 ## 🧠 Systém dovedností
@@ -1249,7 +1246,6 @@ MCP aktuálně definuje 32 pojmenovaných rozsahů oprávnění. Každý klíč 
 
 - **Uživatelské rozhraní tržiště** — Procházejte a instalujte dovednosti v části **Dashboard → Skills**
 - **Rozsahy pro jednotlivé klíče** — Omezte, které API klíče mohou vyvolávat jednotlivé dovednosti
-- **Vlastní dovednosti** — Vložte soubor TypeScript do `src/lib/a2a/skills/`, zaregistrujte jej a okamžitě jej bude možné vyvolat přes A2A
 
 Úplná dokumentace: [SKILLS.md](../frameworks/SKILLS.md).
 
@@ -1278,18 +1274,6 @@ Přihlaste se k odběru událostí 67router pro monitorování a automatizaci v 
 - Opakované pokusy: 3 pokusy s exponenciálním prodlužováním prodlevy, poté přesun do fronty nedoručených zpráv
 
 Úplné schéma najdete v [WEBHOOKS.md](../frameworks/WEBHOOKS.md).
-
----
-
-## ☁️ Cloudoví agenti
-
-67router se integruje s cloudovými agenty pro programování (**OpenAI Codex Cloud**, **Devin**, **Jules**, **Antigravity**), takže můžete zadávat dlouhotrvající úlohy ze stejného ovládacího panelu, který spravuje vaše místní směrování.
-
-- Vytvářejte úlohy v části **Dashboard → Cloud Agents** nebo prostřednictvím `POST /api/v1/agents/tasks`
-- Sledujte stav, protokoly a artefakty jednotlivých úloh
-- Použijte vlastní API klíč pro každého poskytovatele — přihlašovací údaje nikdy neopustí instanci 67router
-
-Úplná dokumentace: [CLOUD_AGENT.md](../frameworks/CLOUD_AGENT.md).
 
 ---
 
@@ -1346,7 +1330,6 @@ omniroute restore [<timestamp>]    # Obnovení ze snímku
 omniroute health                   # Podrobný stav (jističe, mezipaměť, paměť)
 omniroute quota                    # Využití kvót poskytovatelů
 omniroute mcp status               # Stav serveru MCP
-omniroute a2a status               # Stav serveru A2A
 omniroute tunnel list|create|stop  # Tunely Cloudflare/Tailscale/ngrok
 omniroute reset-password           # Resetování hesla správce
 omniroute --mcp                    # Spuštění serveru MCP přes stdio

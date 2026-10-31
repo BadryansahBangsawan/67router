@@ -97,9 +97,9 @@ describe("AgentsTab", () => {
         { id: "source:a2a", kind: "source", source: "a2a", label: "A2A" },
         { id: "a2a:1", kind: "work", source: "a2a", state: "running", label: "a2a task" },
         {
-          id: "cloud-agent:1",
+          id: "conductor:task:1",
           kind: "work",
-          source: "cloud-agent",
+          source: "conductor",
           state: "running",
           label: "ca task",
         },
@@ -120,7 +120,7 @@ describe("AgentsTab", () => {
     );
     const nodes = flowProps.at(-1)?.nodes as Array<{ id: string }>;
     expect(nodes.some((n) => n.id === "a2a:1")).toBe(false);
-    expect(nodes.some((n) => n.id === "cloud-agent:1")).toBe(true);
+    expect(nodes.some((n) => n.id === "conductor:task:1")).toBe(true);
     cleanup();
   });
 
@@ -242,7 +242,7 @@ describe("AgentsTab", () => {
     );
     expect(c.textContent).toContain("noMatches");
     expect(c.textContent).not.toContain("emptyTitle");
-    expect(c.textContent).not.toContain("emptyCloudAgentCta");
+    expect(c.textContent).not.toContain("emptyConductorCta");
     const clearButton = Array.from(c.querySelectorAll("button")).find(
       (el) => el.textContent === "clearFilters"
     ) as HTMLButtonElement;
@@ -273,7 +273,7 @@ describe("AgentsTab", () => {
       />
     );
     expect(c.textContent).toContain("emptyTitle");
-    expect(c.textContent).toContain("emptyCloudAgentCta");
+    expect(c.textContent).toContain("emptyConductorCta");
     expect(c.textContent).not.toContain("noMatches");
     cleanup();
   });
@@ -307,9 +307,9 @@ describe("OverviewTab", () => {
     nodes: [
       { id: "orchestrator", kind: "orchestrator", label: "OmniRoute" },
       {
-        id: "cloud-agent:1",
+        id: "conductor:task:1",
         kind: "work",
-        source: "cloud-agent",
+        source: "conductor",
         state: "running",
         label: "task A",
       },
@@ -346,7 +346,7 @@ describe("OverviewTab", () => {
     act(() => {
       (card as HTMLElement).click();
     });
-    expect(clicked).toBe("cloud-agent:1");
+    expect(clicked).toBe("conductor:task:1");
     cleanup();
   });
   it("formatElapsed guards against an unparseable startedAt and renders an em dash", () => {

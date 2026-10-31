@@ -258,12 +258,6 @@ Transporta iestatīšanu un tvērumu piešķiršanu skatiet failā [MCP-SERVER.m
 
 ---
 
-## A2A integrācija
-
-`src/lib/skills/a2a.ts` eksportē A2A prasmes `memory_aware_routing` deskriptoru un palīgfunkciju `registerA2ASkill(registry)`. Pielāgotās A2A prasmes atrodas direktorijā `src/lib/a2a/skills/`, un tās tiek novirzītas, izmantojot `A2A_SKILL_HANDLERS` (`src/lib/a2a/taskExecution.ts`). Pilnu uzdevuma dzīves cikla aprakstu skatiet failā [A2A-SERVER.md](./A2A-SERVER.md).
-
----
-
 ## Jaunas iebūvētās prasmes pievienošana
 
 1. **Definējiet apdarinātāju** failā `src/lib/skills/builtins.ts` (vai citā failā direktorijā `src/lib/skills/builtin/`). Signatūra: `(input, { apiKeyId, sessionId }) => Promise<output>`.
@@ -478,7 +472,6 @@ Informāciju par pielāgotas prasmes pievienošanu, izmantojot spraudņu sistēm
 ## Skatiet arī
 
 - [MCP-SERVER.md](./MCP-SERVER.md) — MCP rīku reģistrācija un transporti
-- [A2A-SERVER.md](./A2A-SERVER.md) — A2A uzdevumu dzīves cikls un prasmju maršrutēšana
 - [USER_GUIDE.md](../guides/USER_GUIDE.md#-skills-system) — lietotājiem paredzēts ievads
 - [ARCHITECTURE.md](../architecture/ARCHITECTURE.md) — pieprasījumu apstrādes konveijers un komponentu karte
 - Avots: `src/lib/skills/`, `src/app/api/skills/`, `open-sse/mcp-server/tools/skillTools.ts`

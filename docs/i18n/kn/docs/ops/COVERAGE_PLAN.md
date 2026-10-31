@@ -71,11 +71,9 @@
 | 11  | `open-sse/services/compression/progressiveAging.ts`          |    13.26% |
 | 12  | `open-sse/services/compression/engines/rtk/smartTruncate.ts` |    13.43% |
 | 13  | `open-sse/services/compression/engines/rtk/deduplicator.ts`  |    13.51% |
-| 14  | `src/lib/cloudAgent/agents/jules.ts`                         |    13.52% |
 | 15  | `open-sse/services/compression/lite.ts`                      |    14.46% |
 | 16  | `src/app/api/v1/rerank/route.ts`                             |    14.94% |
 | 17  | `open-sse/services/compression/preservation.ts`              |    15.07% |
-| 18  | `src/lib/cloudAgent/agents/codex.ts`                         |    15.54% |
 | 19  | `open-sse/services/tierResolver.ts`                          |    16.66% |
 | 20  | `src/app/docs/components/DocsLazyWrapper.tsx`                |    16.66% |
 
@@ -83,7 +81,6 @@
 
 - `open-sse/services/compression/**` ಕಡಿಮೆ ಕವರೇಜ್ ಹೊಂದಿರುವ ಫೈಲ್ಗಳ ಅತ್ಯಂತ ದಟ್ಟ ಗುಂಪಾಗಿದ್ದು, ಉಳಿದಿರುವ ಅಂತರದಲ್ಲಿ ಅತಿ ದೊಡ್ಡ ಪಾಲನ್ನು ಹೊಂದಿದೆ.
 - ಬ್ಯಾಚ್ ಮತ್ತು ರೀರ್ಯಾಂಕ್ API ರೂಟ್ಗಳಿಗೆ (`src/app/api/v1/batches/**`, `src/app/api/v1/rerank/route.ts`) ಹ್ಯಾಂಡ್ಲರ್-ಮಟ್ಟದ ಪರೀಕ್ಷೆಗಳು ಅಗತ್ಯವಿವೆ.
-- ಕ್ಲೌಡ್ ಏಜೆಂಟ್ ಅಡಾಪ್ಟರ್ಗಳಿಗೆ (`src/lib/cloudAgent/agents/jules.ts`, `codex.ts`) ಮತ್ತು `tierResolver.ts`ಗೆ ಸನ್ನಿವೇಶ ಪರೀಕ್ಷೆಗಳು ಅಗತ್ಯವಿವೆ.
 - ಡಾಕ್ಸ್ UI ಕಾಂಪೊನೆಂಟ್ಗಳು ಮತ್ತು `src/mitm/systemCommands.ts` ಕಡಿಮೆ ಆದ್ಯತೆಯವು, ಆದರೆ ಕಡಿಮೆ ಪ್ರಯತ್ನದಲ್ಲಿ ಬ್ರಾಂಚ್ ಕವರೇಜ್ ಸುಧಾರಿಸಬಹುದು.
 
 ## ಕಾರ್ಯಗತಗೊಳಿಸುವ ಪರಿಶೀಲನಾಪಟ್ಟಿ

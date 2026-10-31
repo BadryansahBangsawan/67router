@@ -85,20 +85,18 @@ App Router 同时提供仪表板 UI 和公共/管理 HTTP API。
 
 `src/app/` 下的顶层分段：
 
-| 路径                                                                          | 用途                                 |
-| ----------------------------------------------------------------------------- | ------------------------------------ |
-| `api/`                                                                        | 所有 HTTP API 路由（详见下方明细）   |
-| `a2a/`                                                                        | A2A JSON-RPC 2.0 端点（`POST /a2a`） |
-| `.well-known/agent.json/`                                                     | A2A Agent Card 发现文档              |
-| `(dashboard)/`                                                                | 仪表板 UI（路由组，无 URL 前缀）     |
-| `auth/`, `login/`, `forgot-password/`, `callback/`                            | 身份验证流程                         |
-| `landing/`                                                                    | 营销/落地页                          |
-| `docs/`                                                                       | 嵌入式 API 文档查看器                |
-| `status/`, `maintenance/`, `offline/`                                         | 运维页面                             |
-| `privacy/`, `terms/`                                                          | 法律页面                             |
-| `400/`, `401/`, `403/`, `408/`, `429/`, `500/`, `502/`, `503/`                | 静态错误页面                         |
-| `error.tsx`, `global-error.tsx`, `not-found.tsx`, `forbidden/`, `loading.tsx` | 框架错误/加载边界                    |
-| `layout.tsx`, `page.tsx`, `globals.css`, `manifest.ts`                        | 根级外壳                             |
+| 路径                                                                          | 用途                               |
+| ----------------------------------------------------------------------------- | ---------------------------------- |
+| `api/`                                                                        | 所有 HTTP API 路由（详见下方明细） |
+| `(dashboard)/`                                                                | 仪表板 UI（路由组，无 URL 前缀）   |
+| `auth/`, `login/`, `forgot-password/`, `callback/`                            | 身份验证流程                       |
+| `landing/`                                                                    | 营销/落地页                        |
+| `docs/`                                                                       | 嵌入式 API 文档查看器              |
+| `status/`, `maintenance/`, `offline/`                                         | 运维页面                           |
+| `privacy/`, `terms/`                                                          | 法律页面                           |
+| `400/`, `401/`, `403/`, `408/`, `429/`, `500/`, `502/`, `503/`                | 静态错误页面                       |
+| `error.tsx`, `global-error.tsx`, `not-found.tsx`, `forbidden/`, `loading.tsx` | 框架错误/加载边界                  |
+| `layout.tsx`, `page.tsx`, `globals.css`, `manifest.ts`                        | 根级外壳                           |
 
 #### 3.1.1 `src/app/(dashboard)/dashboard/` — UI 页面
 
@@ -264,7 +262,6 @@ v1/
 | `auth/`           | `managementPassword.ts`（密码重置/哈希处理）                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                         |
 | `batches/`        | OpenAI Batches API 服务（`service.ts`）                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                              |
 | `catalog/`        | OpenRouter 目录同步（`openrouterCatalog.ts`）                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        |
-| `cloudAgent/`     | 云端代理注册表：`api.ts`、`baseAgent.ts`、`db.ts`、`index.ts`、`registry.ts`、`types.ts`、`agents/{codex, devin, jules}.ts`                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                          |
 | `combos/`         | 组合解析辅助工具                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     |
 | `compliance/`     | 审计 + 提供者审计：`index.ts`、`providerAudit.ts`                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    |
 | `config/`         | 运行时配置衔接层                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     |
@@ -272,7 +269,6 @@ v1/
 | `display/`        | API 响应使用的 UI/显示辅助工具                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                       |
 | `embeddings/`     | 嵌入服务注册表                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                       |
 | `env/`            | 环境变量加载 + 内省                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                  |
-| `evals/`          | 评测运行时                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                           |
 | `guardrails/`     | `piiMasker.ts`、`promptInjection.ts`、`visionBridge.ts`、`visionBridgeHelpers.ts`、`registry.ts`、`base.ts`                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                          |
 | `jobs/`           | 后台任务（`autoUpdate.ts`，……）                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                      |
 | `memory/`         | 持久化记忆：`store.ts`、`cache.ts`、`retrieval.ts`、`summarization.ts`、`extraction.ts`、`injection.ts`、`qdrant.ts`、`settings.ts`、`verify.ts`、`schemas.ts`、`types.ts`                                                                                                                                                                                                                                                                                                                                                                                                                                                                           |
@@ -750,12 +746,6 @@ bin/
 4. 在 `open-sse/mcp-server/__tests__/` 下添加测试。
 5. 更新 [MCP-SERVER.md](../frameworks/MCP-SERVER.md)。
 
-### 添加新 A2A 技能
-
-参见 [A2A-SERVER.md § 添加新技能](../frameworks/A2A-SERVER.md)。技能位于 `src/lib/a2a/skills/`，通过 A2A 任务管理器注册。
-
----
-
 ## 11. 约定
 
 - **代码风格**：2 空格缩进，双引号，100 字符宽度，强制分号，
@@ -798,7 +788,6 @@ bin/
 - [RESILIENCE_GUIDE.md](./RESILIENCE_GUIDE.md) — 熔断器、冷却、锁定深入解析。
 - [AUTO-COMBO.md](../routing/AUTO-COMBO.md) — Auto Combo 评分与策略。
 - [MCP-SERVER.md](../frameworks/MCP-SERVER.md) — 完整 MCP 工具目录 + 传输。
-- [A2A-SERVER.md](../frameworks/A2A-SERVER.md) — A2A 协议技能与发现。
 - [COMPRESSION_GUIDE.md](../compression/COMPRESSION_GUIDE.md) — RTK + Caveman 压缩。
 - [CLI-TOOLS.md](../reference/CLI-TOOLS.md) — CLI 集成。
 - [ELECTRON_GUIDE.md](../guides/ELECTRON_GUIDE.md)（如果存在）、[DOCKER_GUIDE.md](../guides/DOCKER_GUIDE.md)、[FLY_IO_DEPLOYMENT_GUIDE.md](../ops/FLY_IO_DEPLOYMENT_GUIDE.md)、[VM_DEPLOYMENT_GUIDE.md](../ops/VM_DEPLOYMENT_GUIDE.md)、[TERMUX_GUIDE.md](../guides/TERMUX_GUIDE.md)、[PWA_GUIDE.md](../guides/PWA_GUIDE.md) — 部署目标。

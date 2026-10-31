@@ -573,5 +573,4 @@ Az útválasztó motor szigorú teljesítménykorlátokkal rendelkezik:
 - [REPOSITORY_MAP.md](../architecture/REPOSITORY_MAP.md) — könyvtárankénti áttekintés
 - [AUTO-COMBO.md](../routing/AUTO-COMBO.md) — 16 tényezős pontozás
 - [MCP-SERVER.md](./MCP-SERVER.md) — MCP-kiszolgáló
-- [A2A-SERVER.md](./A2A-SERVER.md) — A2A-kiszolgáló
 - Forrás: `open-sse/` (több mint 400 fájl, ~143K kódsor)

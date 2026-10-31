@@ -573,5 +573,4 @@ Marşrutlaşdırma mühərrikinin ciddi performans limitləri var:
 - [REPOSITORY_MAP.md](../architecture/REPOSITORY_MAP.md) — qovluqlar üzrə struktur
 - [AUTO-COMBO.md](../routing/AUTO-COMBO.md) — 16 amilli qiymətləndirmə
 - [MCP-SERVER.md](./MCP-SERVER.md) — MCP serveri
-- [A2A-SERVER.md](./A2A-SERVER.md) — A2A serveri
 - Mənbə: `open-sse/` (400-dən çox fayl, ~143K kod sətri)

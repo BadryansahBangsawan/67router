@@ -92,7 +92,7 @@ extensie.
 Simple Browser, în locul unui browser extern. Încorporarea este **opțională pe server** prin
 `DASHBOARD_ALLOW_EMBED=vscode`, care servește paginile HTML cu
 `frame-ancestors 'self' vscode-webview:` în locul valorilor implicite `frame-ancestors 'none'` +
-`X-Frame-Options: DENY`. Suprafața API (`/api`, `/v1`, `/v1beta`, `/a2a`, `/healthz`) păstrează
+`X-Frame-Options: DENY`. Suprafața API (`/api`, `/v1`, `/v1beta`, `/healthz`) păstrează
 antetele stricte în ambele cazuri.
 
 > ⚠️ **Este un indicator configurat la compilare, nu la rulare.** Next.js compilează `headers()` în manifestul

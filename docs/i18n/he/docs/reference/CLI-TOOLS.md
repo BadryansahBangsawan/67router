@@ -749,7 +749,6 @@ omniroute cache                        # מצב המטמון
 omniroute cache clear                  # ניקוי מטמוני הסמנטיקה והחתימות
 
 omniroute mcp status | restart         # מצב שרת MCP / הפעלה מחדש
-omniroute a2a status | card            # מצב שרת A2A / כרטיס סוכן
 
 omniroute tunnel list | create | stop  # ניהול מנהרות (cloudflare/tailscale/ngrok)
 omniroute env show | get <k> | set <k> <v>  # בדיקה / הגדרה של משתני סביבה (זמני)

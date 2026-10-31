@@ -43,8 +43,6 @@ v3.7.x → v3.8.0 या आवृत्ती-चक्रात शून्�
 - 🤝 **GitLab Duo OAuth प्रदाता** — GitLab क्रेडेन्शियल्ससह लॉगिन
 - 🧠 **Reasoning Replay Cache** — तर्क-विचार ट्रेसेसचे संकरित इन-मेमरी + SQLite सातत्यपूर्ण संचयन
 
-📚 **संबंधित दस्तऐवज:** [कौशल्य फ्रेमवर्क](../frameworks/SKILLS.md) · [मेमरी प्रणाली](../frameworks/MEMORY.md) · [क्लाउड एजंट्स](../frameworks/CLOUD_AGENT.md) · [वेबहुक्स](../frameworks/WEBHOOKS.md) · [Reasoning Replay Cache](../routing/REASONING_REPLAY.md)
-
 ---
 
 ## 🔌 प्रदाते
@@ -104,12 +102,6 @@ OpenRouter कनेक्शन्स Advanced Settings मध्ये प्�
 API भाषांतरांचे डीबगिंग करण्यासाठी चार मोड: **Playground** (स्वरूप परिवर्तक), **Chat Tester** (थेट विनंत्या), **Test Bench** (बॅच चाचण्या), आणि **Live Monitor** (रिअल-टाइम प्रवाह).
 
 ![Translator Playground](../screenshots/05-translator.png)
-
----
-
-## 🎮 Model Playground _(v2.0.9+)_
-
-डॅशबोर्डवरून कोणत्याही मॉडेलची थेट चाचणी करा. प्रदाता, मॉडेल आणि एंडपॉइंट निवडा, Monaco Editor वापरून प्रॉम्प्ट लिहा, प्रतिसाद रिअल-टाइममध्ये प्रवाहित करा, प्रवाह सुरू असतानाच तो थांबवा आणि वेळेसंबंधी मेट्रिक्स पाहा.
 
 ---
 

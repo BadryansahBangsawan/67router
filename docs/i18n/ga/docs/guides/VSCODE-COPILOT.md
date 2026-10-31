@@ -92,7 +92,7 @@ Rindreálann `omnicopilot.dashboardOpen: "editor"` painéal 67router i gcluaisí
 Simple Browser seachas i mbrabhsálaí seachtrach. Ní mór leabú a **roghnú go sainráite ar an bhfreastalaí** trí
 `DASHBOARD_ALLOW_EMBED=vscode`, a fhreastalaíonn na leathanaigh HTML le
 `frame-ancestors 'self' vscode-webview:` seachas an réamhshocrú `frame-ancestors 'none'` +
-`X-Frame-Options: DENY`. Coinníonn dromchla an API (`/api`, `/v1`, `/v1beta`, `/a2a`, `/healthz`) na
+`X-Frame-Options: DENY`. Coinníonn dromchla an API (`/api`, `/v1`, `/v1beta`, `/healthz`) na
 ceanntásca dochta i gceachtar cás.
 
 > ⚠️ **Bratach ama tógála atá inti, ní bratach ama rite.** Tiomsaíonn Next.js `headers()` isteach i bhforléargas na mbealaí,

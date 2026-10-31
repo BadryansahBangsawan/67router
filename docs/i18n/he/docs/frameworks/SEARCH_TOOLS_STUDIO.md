@@ -169,5 +169,4 @@ Search Tools Studio הופך את `/dashboard/search-tools` מסביבת ניס�
 - תוכנית אב: `_tasks/features-v3.8.6/refactorpages/_orchestration/master-plan-group-C.md`
 - תוכנית התכונה: `_tasks/features-v3.8.6/refactorpages/18-search-tools-studio-redesign.plan.md`
 - מרשם ספקי החיפוש: `open-sse/config/searchRegistry.ts`
-- סטודיו Playground (הרכיבים המשותפים `ExportCodeModal` ו-`codeExport.ts`): `docs/frameworks/PLAYGROUND_STUDIO.md`
 - צד השרת לאחזור מהאינטרנט: `src/app/api/v1/web/fetch/route.ts`

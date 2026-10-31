@@ -390,34 +390,6 @@
       "description": "Log audit MCP (alias untuk audit --source mcp)"
     }
   },
-  "a2a": {
-    "skills": {
-      "description": "Cantumkan skill A2A yang tersedia dari kartu agen"
-    },
-    "invoke": {
-      "description": "Jalankan skill A2A dan kembalikan ID tugas",
-      "input": "Objek input JSON",
-      "input_file": "Jalur ke file input JSON",
-      "wait": "Tunggu hingga tugas selesai sebelum mengembalikan hasil",
-      "timeout": "Batas waktu menunggu penyelesaian dalam ms (default: 60000)"
-    },
-    "tasks": {
-      "description": "Kelola tugas A2A",
-      "list": {
-        "status": "Filter berdasarkan status",
-        "skill": "Filter berdasarkan ID skill"
-      },
-      "watch": {
-        "description": "Periksa status tugas secara berkala hingga selesai"
-      },
-      "stream": {
-        "description": "Streaming peristiwa eksekusi tugas melalui SSE"
-      },
-      "logs": {
-        "description": "Tampilkan pesan dan artefak tugas"
-      }
-    }
-  },
   "policy": {
     "description": "Kelola kebijakan otorisasi 67router",
     "list": {
@@ -696,99 +668,6 @@
       "provider": "ID penyedia yang akan dicabut",
       "connection_id": "Cabut koneksi tertentu berdasarkan ID",
       "yes": "Lewati permintaan konfirmasi"
-    }
-  },
-  "cloud": {
-    "description": "Kelola tugas agen AI cloud (codex, devin, jules)",
-    "agents": {
-      "description": "Cantumkan agen cloud yang tersedia"
-    },
-    "agent": {
-      "description": "Kelola tugas agen cloud {agent}",
-      "auth": {
-        "description": "Otorisasi {agent} melalui OAuth"
-      }
-    },
-    "task": {
-      "description": "Kelola tugas agen cloud",
-      "create": {
-        "description": "Buat tugas agen baru",
-        "title": "Judul tugas (default ke 80 karakter pertama dari prompt)",
-        "prompt": "Teks prompt tugas",
-        "prompt_file": "Baca prompt dari file",
-        "repo": "URL repositori yang akan dikloning untuk tugas",
-        "branch": "Nama branch yang akan digunakan",
-        "metadata": "Objek metadata JSON"
-      },
-      "list": {
-        "description": "Cantumkan tugas agen",
-        "status": "Filter berdasarkan status (running|completed|failed|cancelled)",
-        "limit": "Hasil maksimum (default: 50)"
-      },
-      "get": {
-        "description": "Dapatkan detail tugas berdasarkan ID"
-      },
-      "status": {
-        "description": "Cetak status tugas (running|completed|failed|cancelled)"
-      },
-      "cancel": {
-        "description": "Batalkan tugas yang sedang berjalan",
-        "yes": "Lewati permintaan konfirmasi"
-      },
-      "approve": {
-        "description": "Setujui rencana agen untuk memulai eksekusi"
-      },
-      "message": {
-        "description": "Kirim pesan ke tugas yang sedang berjalan"
-      }
-    },
-    "sources": {
-      "description": "Cantumkan file sumber yang dihasilkan oleh tugas"
-    }
-  },
-  "eval": {
-    "description": "Kelola rangkaian evaluasi dan prosesnya",
-    "suites": {
-      "description": "Kelola rangkaian evaluasi",
-      "list": {
-        "description": "Cantumkan suite evaluasi"
-      },
-      "get": {
-        "description": "Dapatkan detail suite evaluasi berdasarkan ID"
-      },
-      "create": {
-        "description": "Buat suite evaluasi dari file JSON",
-        "file": "Jalur ke file JSON definisi suite"
-      }
-    },
-    "run": {
-      "description": "Mulai proses evaluasi untuk sebuah suite",
-      "model": "ID model yang akan dievaluasi (default: auto)",
-      "combo": "Paksa kombinasi tertentu berdasarkan nama",
-      "concurrency": "Jumlah sampel serentak (default: 4)",
-      "tag": "Beri tag pada proses ini untuk pemfilteran nanti",
-      "watch": "Pantau progres proses hingga selesai"
-    },
-    "list": {
-      "description": "Cantumkan proses evaluasi",
-      "suite": "Filter berdasarkan ID suite",
-      "status": "Filter berdasarkan status",
-      "since": "Tampilkan proses sejak stempel waktu ini",
-      "limit": "Jumlah hasil maksimum (default: 50)"
-    },
-    "get": {
-      "description": "Dapatkan detail proses evaluasi berdasarkan ID"
-    },
-    "results": {
-      "description": "Tampilkan hasil sampel untuk proses evaluasi",
-      "failed": "Tampilkan hanya sampel yang gagal"
-    },
-    "cancel": {
-      "description": "Batalkan proses evaluasi yang sedang berjalan",
-      "yes": "Lewati permintaan konfirmasi"
-    },
-    "scorecard": {
-      "description": "Tampilkan kartu skor untuk proses evaluasi yang telah selesai"
     }
   },
   "program": {

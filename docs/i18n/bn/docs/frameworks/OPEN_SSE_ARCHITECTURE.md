@@ -573,5 +573,4 @@ interface ProviderConfig {
 - [REPOSITORY_MAP.md](../architecture/REPOSITORY_MAP.md) — ডিরেক্টরি-বাই-ডিরেক্টরি
 - [AUTO-COMBO.md](../routing/AUTO-COMBO.md) — 16-ফ্যাক্টর স্কোরিং
 - [MCP-SERVER.md](./MCP-SERVER.md) — MCP সার্ভার
-- [A2A-SERVER.md](./A2A-SERVER.md) — A2A সার্ভার
 - সোর্স: `open-sse/` (400+ ফাইল, ~143K LOC)

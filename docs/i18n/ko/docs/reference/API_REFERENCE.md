@@ -1374,9 +1374,8 @@ GET 응답에는 `agents[]`(id, name, binary, version, installed, protocol, isCu
 
 ### 평가
 
-| 엔드포인트   | 메서드   | 설명                       |
-| ------------ | -------- | -------------------------- |
-| `/api/evals` | GET/POST | 평가 스위트 나열/평가 실행 |
+| 엔드포인트 | 메서드 | 설명 |
+| ---------- | ------ | ---- |
 
 ### 정책
 
@@ -1689,31 +1688,6 @@ DELETE /api/usage/token-limits?id=tl-abc
 
 ---
 
-## 에이전트 프로토콜
-
-67router 사용자를 대신하여 원격으로 실행되는 클라우드 에이전트 작업(Claude Code, Codex Cloud, OpenHands 등)입니다.
-
-| 메서드 | 경로                          | 설명                                                                                                                                                     |
-| ------ | ----------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| GET    | `/api/v1/agents/tasks`        | 작업 목록 — 선택적 `?provider=`, `?status=`, `?limit=`(1~500, 기본값 50)                                                                                 |
-| POST   | `/api/v1/agents/tasks`        | 작업 생성 — 요청 본문은 `CreateCloudAgentTaskSchema`(`providerId`, `prompt`, `source`, `options?`)로 검증됩니다. 작업 엔벌로프와 함께 `201`을 반환합니다 |
-| DELETE | `/api/v1/agents/tasks?id=...` | 작업 삭제                                                                                                                                                |
-| GET    | `/api/v1/agents/tasks/[id]`   | 작업 조회 — `external_id`가 설정되어 있으면 업스트림 클라우드 에이전트에서 상태를 동기적으로 새로 고칩니다                                               |
-| POST   | `/api/v1/agents/tasks/[id]`   | 판별된 작업: `{action: "approve"}`, `{action: "message", message}` 또는 `{action: "cancel"}`                                                             |
-| DELETE | `/api/v1/agents/tasks/[id]`   | ID로 특정 작업 삭제                                                                                                                                      |
-
-> **인증:** 모든 메서드에 관리 인증이 필요합니다(`requireCloudAgentManagementAuth`). v3.8.0 이전에는 인증이 필요하지 않았습니다. 호환성이 깨지는 변경 사항은 커밋 `588a0333`을 참조하세요.
-
-```bash
-# Claude Code 클라우드 작업 생성
-curl -X POST http://localhost:20128/api/v1/agents/tasks \
-  -H "Authorization: Bearer your-management-key" \
-  -H "Content-Type: application/json" \
-  -d '{"providerId":"claude-code-cloud","prompt":"Fix the failing test","source":{"repo":"...","branch":"..."}}'
-```
-
----
-
 ## 관리 프록시
 
 공급자, 계정 또는 전역에 할당할 수 있는 아웃바운드 HTTP(S)/SOCKS 프록시입니다.
@@ -1833,48 +1807,10 @@ API 키/세션별로 범위가 지정되는 영구 대화/사실 메모리 저�
 
 67router는 A2A(Agent-to-Agent) JSON-RPC 2.0 엔드포인트와 검사/대시보드용 REST 래퍼를 제공합니다.
 
-### JSON-RPC
-
-```bash
-POST /a2a
-Authorization: Bearer your-api-key   # OMNIROUTE_API_KEY가 설정되지 않은 경우 선택 사항
-Content-Type: application/json
-
-{
-  "jsonrpc": "2.0",
-  "id": 1,
-  "method": "message/send",
-  "params": {
-    "skill": "smart-routing",
-    "messages": [{"role": "user", "content": "Route this coding task"}]
-  }
-}
-```
-
-지원되는 메서드(모두 `settings.a2aEnabled`에 의해 제어됨):
-
-| 메서드           | 설명                                                         |
-| ---------------- | ------------------------------------------------------------ |
-| `message/send`   | 동기식 스킬 실행. `{task, artifacts, metadata}`를 반환합니다 |
-| `message/stream` | 동일한 스킬 세트의 스트리밍 SSE 실행                         |
-| `tasks/get`      | `taskId`로 작업을 가져옵니다                                 |
-| `tasks/cancel`   | `taskId`로 작업을 취소합니다                                 |
-
-기본 제공 스킬: `smart-routing`, `quota-management`, `provider-discovery`, `cost-analysis`, `health-report`.
-
-### 에이전트 카드
-
-```bash
-GET /.well-known/agent.json
-```
-
-공개 A2A 에이전트 카드(이름, 설명, 기능, 스킬 카탈로그, 인증 방식)를 반환하며, 공개적으로 1시간 동안 캐시됩니다. 인증은 필요하지 않습니다.
-
 ### REST 헬퍼
 
 | 메서드 | 경로                         | 설명                                                                                                           |
 | ------ | ---------------------------- | -------------------------------------------------------------------------------------------------------------- |
-| GET    | `/api/a2a/status`            | A2A 활성화 여부 + 작업 통계 + 캐시된 에이전트 카드 요약                                                        |
 | GET    | `/api/a2a/tasks`             | 작업 목록 — `?state=submitted\|working\|completed\|failed\|cancelled`, `?skill=`, `?limit=` (≤200), `?offset=` |
 | POST   | `/api/a2a/tasks`             | (REST 헬퍼로 구현되지 않음 — JSON-RPC `message/send`를 통해 생성)                                              |
 | GET    | `/api/a2a/tasks/[id]`        | 작업 하나 조회                                                                                                 |
@@ -1894,12 +1830,8 @@ GET /.well-known/agent.json
 | GET | `/api/cloud/models/alias` | 클라우드 동기화에 노출되는 모델 별칭을 나열합니다 |
 | GET | `/api/assess` | 최신 평가 분류(제공자/모델별)를 읽습니다 |
 | POST | `/api/assess` | 평가 실행 — 본문: `{scope: {type:"all"}                                                   | {type:"provider", providerId} | {type:"model", modelId}, trigger?}` |
-| GET | `/api/evals` | 기본 제공 평가 스위트와 가장 최근 실행을 나열합니다 |
-| POST | `/api/evals` | 평가 실행을 트리거합니다 |
-| POST | `/api/evals/suites` | 사용자 지정 평가 스위트 생성 — 본문은 `evalSuiteSaveSchema`로 검증됩니다 |
-| GET | `/api/evals/suites/[id]` | 사용자 지정 평가 스위트를 조회합니다 |
 
-**인증:** `/api/cloud/auth`는 Bearer 키를 직접 검증하며, `manage` / `admin` 범위가 있는 키에만 각 연결의 마스킹된 키와 `projectId`를 반환합니다. 그 외 `/api/cloud/*`, `/api/evals/*`, `/api/assess` 경로에는 관리 세션/API 키가 필요합니다. `/api/assess` POST는 판별된 유니온 범위 스키마와 함께 `validateBody`를 사용합니다.
+**인증:** `/api/cloud/auth`는 Bearer 키를 직접 검증하며, `manage` / `admin` 범위가 있는 키에만 각 연결의 마스킹된 키와 `projectId`를 반환합니다. 그 외 `/api/cloud/*`, `/api/assess` 경로에는 관리 세션/API 키가 필요합니다. `/api/assess` POST는 판별된 유니온 범위 스키마와 함께 `validateBody`를 사용합니다.
 
 ---
 
@@ -2221,5 +2153,3 @@ Skills(에이전트 확장 프레임워크)를 관리합니다.
 - `requireLogin`은 `/api/settings/require-login`을 통해 전환할 수 있습니다
 - `REQUIRE_API_KEY=true`인 경우 `/v1/*` 경로에 Bearer API 키가 필요할 수 있습니다
 - 이 참조 문서에서 "관리 토큰" / "관리 범위 API 키"는 해당 가이드에 설명된 유형 중 하나를 의미하며, 별도로 정의되지 않은 추가 비밀 유형을 의미하지 않습니다
-
-> **호환성을 깨는 변경 사항(v3.8.0)** — 이제 `/api/v1/agents/tasks/*` 및 쿨다운 관리 엔드포인트에는 **관리 인증**(대시보드 `auth_token` 쿠키 또는 관리 범위 API 키)이 필요합니다. 이전에 인증 없이 이러한 경로를 호출했던 클라이언트는 `401 Unauthorized`를 받게 됩니다. 커밋 `588a0333`(`fix(auth): require management auth for agent and cooldown APIs`)을 참조하세요.

@@ -43,8 +43,6 @@ v3.7.x → v3.8.0 版本周期新增了零配置自动路由、新提供者、OA
 - 🤝 **GitLab Duo OAuth 提供者** — 使用 GitLab 凭据登录
 - 🧠 **推理重放缓存** — 采用内存与 SQLite 混合方式持久化推理轨迹
 
-📚 **相关文档：** [技能框架](../frameworks/SKILLS.md) · [记忆系统](../frameworks/MEMORY.md) · [云端代理](../frameworks/CLOUD_AGENT.md) · [Webhook](../frameworks/WEBHOOKS.md) · [推理重放缓存](../routing/REASONING_REPLAY.md)
-
 ---
 
 ## 🔌 提供者
@@ -103,12 +101,6 @@ OpenRouter 连接可以在高级设置中存储每个连接专属的 `preset`。
 提供四种 API 翻译调试模式：**调试平台**（格式转换器）、**聊天测试器**（实时请求）、**测试台**（批量测试）和**实时监控器**（实时数据流）。
 
 ![翻译器调试平台](../screenshots/05-translator.png)
-
----
-
-## 🎮 模型调试平台 _(v2.0.9+)_
-
-直接从仪表板测试任意模型。选择提供者、模型和端点，使用 Monaco Editor 编写提示词，实时流式传输响应，可在传输过程中中止，并查看计时指标。
 
 ---
 

@@ -245,17 +245,6 @@ curl -X DELETE http://localhost:20128/api/settings/notion
 런타임 라우팅/캐시/압축/메모리/스킬/프록시/컨텍스트 소스 작업으로 범위가 한정되어 있습니다. 인접한 두
 프레임워크가 v3.8.0에서 MCP 서버와 함께 제공되며 별도로 문서화되어 있습니다.
 
-### 클라우드 에이전트
-
-클라우드 에이전트는 LLM 제공자에 사용되는 것과 동일한 연결 모델을 통해 67router에 연동된
-프로세스 외부 AI 코딩 에이전트(codex-cloud, cursor-cloud, devin, jules)입니다. 이들은
-자체 REST 인터페이스(`/api/v1/agents/*`)를 통해 노출되며 MCP 도구 카탈로그의 일부가
-**아닙니다**. 즉, 클라우드 에이전트를 호출해도 MCP 범위가 소비되지 않습니다.
-
-- 구현: `src/lib/cloudAgent/` (`registry.ts`, `agents/codex.ts`, `agents/cursor.ts`, `agents/devin.ts`, `agents/jules.ts`).
-- 수명 주기: `createTask`, `getStatus`, `approvePlan`, `sendMessage`, `listSources`.
-- 문서: [docs/frameworks/CLOUD_AGENT.md](./CLOUD_AGENT.md).
-
 ### 가드레일
 
 가드레일은 채팅 파이프라인 내부에 적용되는 실행 전/후 필터(vision-bridge, pii-masker, prompt-injection)입니다.

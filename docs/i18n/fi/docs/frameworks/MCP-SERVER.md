@@ -234,17 +234,6 @@ Yllä oleva MCP-työkaluluettelo (110 yksilöllistä työkalua, laskettu `countU
 rajattu ajonaikaisiin reititys-/välimuisti-/pakkaus-/muisti-/taito-/välityspalvelin-/kontekstilähde-toimintoihin. Kaksi vierekkäistä
 viitekehystä toimitetaan MCP-palvelimen mukana versiossa v3.8.0 ja ne on dokumentoitu erikseen:
 
-### Pilviagentit
-
-Pilviagentit ovat prosessin ulkopuolisia tekoälykoodausagentteja (codex-cloud, cursor-cloud, devin, jules), jotka on kytketty
-67routeriin samalla yhteysmallilla, jota käytetään LLM-palveluntarjoajille. Ne paljastetaan
-oman REST-rajapintansa (`/api/v1/agents/*`) kautta, eivätkä ne **ole** osa MCP-työkaluluetteloa
-— pilviagentin kutsuminen ei kuluta MCP-laajuutta.
-
-- Toteutus: `src/lib/cloudAgent/` (`registry.ts`, `agents/codex.ts`, `agents/cursor.ts`, `agents/devin.ts`, `agents/jules.ts`).
-- Elinkaari: `createTask`, `getStatus`, `approvePlan`, `sendMessage`, `listSources`.
-- Dokumentaatio: [docs/frameworks/CLOUD_AGENT.md](./CLOUD_AGENT.md).
-
 ### Suojakaiteet
 
 Suojakaiteet ovat ennen/jälkeen suoritettavia suodattimia (vision-bridge, pii-masker, prompt-injection),

@@ -1407,9 +1407,8 @@ A GET-válasz tartalmazza az `agents[]` tömböt (id, name, binary, version, ins
 
 ### Kiértékelések (Evals)
 
-| Végpont      | Metódus  | Leírás                                                  |
-| ------------ | -------- | ------------------------------------------------------- |
-| `/api/evals` | GET/POST | Kiértékelési csomagok listázása / kiértékelés futtatása |
+| Végpont | Metódus | Leírás |
+| ------- | ------- | ------ |
 
 ### Szabályzatok
 
@@ -1722,31 +1721,6 @@ Az automatikus kulcskezelési alrendszer használja API-kulcsok kiadására és 
 
 ---
 
-## Ügynökprotokoll
-
-A 67router felhasználói nevében távolról végrehajtott felhőügynök-feladatok (Claude Code, Codex Cloud, OpenHands stb.).
-
-| Metódus | Útvonal                       | Leírás                                                                                                                                                             |
-| ------- | ----------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
-| GET     | `/api/v1/agents/tasks`        | Feladatok listázása — opcionális `?provider=`, `?status=`, `?limit=` (1–500, alapértelmezés: 50)                                                                   |
-| POST    | `/api/v1/agents/tasks`        | Feladat létrehozása — a törzset a `CreateCloudAgentTaskSchema` validálja (`providerId`, `prompt`, `source`, `options?`). `201` választ ad vissza feladatburkolóval |
-| DELETE  | `/api/v1/agents/tasks?id=...` | Feladat törlése                                                                                                                                                    |
-| GET     | `/api/v1/agents/tasks/[id]`   | Feladat lekérése — `external_id` beállítása esetén szinkron módon frissíti az állapotot a külső felhőügynöktől                                                     |
-| POST    | `/api/v1/agents/tasks/[id]`   | Megkülönböztetett művelet: `{action: "approve"}`, `{action: "message", message}` vagy `{action: "cancel"}`                                                         |
-| DELETE  | `/api/v1/agents/tasks/[id]`   | Adott azonosítójú feladat törlése                                                                                                                                  |
-
-> **Hitelesítés:** minden metódushoz felügyeleti hitelesítés szükséges (`requireCloudAgentManagementAuth`). A v3.8.0 előtt ezek nem igényeltek hitelesítést — a kompatibilitást megszakító módosítást lásd a `588a0333` commitban.
-
-```bash
-# Claude Code-felhőfeladat létrehozása
-curl -X POST http://localhost:20128/api/v1/agents/tasks \
-  -H "Authorization: Bearer your-management-key" \
-  -H "Content-Type: application/json" \
-  -d '{"providerId":"claude-code-cloud","prompt":"Fix the failing test","source":{"repo":"...","branch":"..."}}'
-```
-
----
-
 ## Felügyeleti proxyk
 
 Kimenő HTTP(S)/SOCKS-proxyk, amelyek szolgáltatókhoz, fiókokhoz vagy globálisan rendelhetők hozzá.
@@ -1866,48 +1840,10 @@ A 67router egy beágyazott Model Context Protocol-kiszolgálót biztosít 3 átv
 
 A 67router egy A2A (ügynökök közötti) JSON-RPC 2.0-végpontot, valamint egy REST-burkolót biztosít ellenőrzési és vezérlőpultbeli használatra.
 
-### JSON-RPC
-
-```bash
-POST /a2a
-Authorization: Bearer your-api-key   # opcionális, kivéve, ha az OMNIROUTE_API_KEY be van állítva
-Content-Type: application/json
-
-{
-  "jsonrpc": "2.0",
-  "id": 1,
-  "method": "message/send",
-  "params": {
-    "skill": "smart-routing",
-    "messages": [{"role": "user", "content": "Irányítsd ezt a programozási feladatot"}]
-  }
-}
-```
-
-Támogatott metódusok (mindegyik a `settings.a2aEnabled` beállítástól függ):
-
-| Metódus          | Leírás                                                                 |
-| ---------------- | ---------------------------------------------------------------------- |
-| `message/send`   | Szinkron képességvégrehajtás; eredménye: `{task, artifacts, metadata}` |
-| `message/stream` | Ugyanazon képességkészlet streamelt SSE-végrehajtása                   |
-| `tasks/get`      | Feladat lekérése `taskId` alapján                                      |
-| `tasks/cancel`   | Feladat megszakítása `taskId` alapján                                  |
-
-Beépített képességek: `smart-routing`, `quota-management`, `provider-discovery`, `cost-analysis`, `health-report`.
-
-### Ügynökkártya
-
-```bash
-GET /.well-known/agent.json
-```
-
-Visszaadja a nyilvános A2A-ügynökkártyát (név, leírás, képességek, képességkatalógus, hitelesítési séma) — nyilvánosan gyorsítótárazva 1 órán át. Nincs szükség hitelesítésre.
-
 ### REST-segédfüggvények
 
 | Metódus | Útvonal                      | Leírás                                                                                                                   |
 | ------- | ---------------------------- | ------------------------------------------------------------------------------------------------------------------------ |
-| GET     | `/api/a2a/status`            | A2A engedélyezési állapota + feladatstatisztikák + a gyorsítótárazott ügynökkártya összefoglalója                        |
 | GET     | `/api/a2a/tasks`             | Feladatok listázása — `?state=submitted\|working\|completed\|failed\|cancelled`, `?skill=`, `?limit=` (≤200), `?offset=` |
 | POST    | `/api/a2a/tasks`             | (Nincs REST-segédfüggvényként megvalósítva — létrehozás JSON-RPC `message/send` segítségével)                            |
 | GET     | `/api/a2a/tasks/[id]`        | Egy feladat lekérése                                                                                                     |
@@ -1927,12 +1863,8 @@ Visszaadja a nyilvános A2A-ügynökkártyát (név, leírás, képességek, ké
 | GET | `/api/cloud/models/alias` | A felhőszinkronizálás számára elérhető modellálnevek listázása |
 | GET | `/api/assess` | A legújabb felmérési kategorizálások lekérése (szolgáltatónként/modellenként) |
 | POST | `/api/assess` | Felmérés futtatása — törzs: `{scope: {type:"all"}                                                   | {type:"provider", providerId} | {type:"model", modelId}, trigger?}` |
-| GET | `/api/evals` | A beépített kiértékelési csomagok és a legutóbbi futtatások listázása |
-| POST | `/api/evals` | Kiértékelési futtatás indítása |
-| POST | `/api/evals/suites` | Egyéni kiértékelési csomag létrehozása — a törzset az `evalSuiteSaveSchema` validálja |
-| GET | `/api/evals/suites/[id]` | Egyéni kiértékelési csomag lekérése |
 
-**Hitelesítés:** Az `/api/cloud/auth` közvetlenül ellenőrzi a Bearer-kulcsot, és csak `manage` / `admin` hatókörű kulcs esetén adja vissza az egyes kapcsolatok maszkolt kulcsát és `projectId` értékét; a többi `/api/cloud/*`, `/api/evals/*` és `/api/assess` útvonal kezelői munkamenetet/API-kulcsot igényel. Az `/api/assess` POST a `validateBody` függvényt használja egy diszkriminált uniós hatókörsémával.
+**Hitelesítés:** Az `/api/cloud/auth` közvetlenül ellenőrzi a Bearer-kulcsot, és csak `manage` / `admin` hatókörű kulcs esetén adja vissza az egyes kapcsolatok maszkolt kulcsát és `projectId` értékét; a többi `/api/cloud/*` és `/api/assess` útvonal kezelői munkamenetet/API-kulcsot igényel. Az `/api/assess` POST a `validateBody` függvényt használja egy diszkriminált uniós hatókörsémával.
 
 ---
 
@@ -2251,5 +2183,3 @@ A négy hitelesítőadat-családról (irányítópult-munkamenet, helyi CLI-toke
 - A `requireLogin` a `/api/settings/require-login` útvonalon kapcsolható be vagy ki
 - A `/v1/*` útvonalakhoz opcionálisan Bearer API-kulcs szükséges, ha `REQUIRE_API_KEY=true`
 - Ebben a referenciában a „kezelési token” / „kezelési hatókörű API-kulcs” az útmutatóban ismertetett családok egyikét jelenti — nem pedig egy meghatározatlan, további titoktípust
-
-> **Kompatibilitást megszakító változás (v3.8.0)** — A `/api/v1/agents/tasks/*` és a várakozási idő kezelésére szolgáló végpontok mostantól **kezelési hitelesítést** igényelnek (az irányítópult `auth_token` cookie-ját vagy egy kezelési hatókörű API-kulcsot). Azok a kliensek, amelyek korábban hitelesítés nélkül hívták meg ezeket az útvonalakat, `401 Unauthorized` választ kapnak. Lásd a `588a0333` commitot (`fix(auth): require management auth for agent and cooldown APIs`).

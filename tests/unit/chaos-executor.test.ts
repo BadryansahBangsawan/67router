@@ -6,7 +6,7 @@
  * 30129 is the author's personal dev port, not the project's default port 20128,
  * so Chaos Mode silently failed on any standard install. This now dispatches
  * in-process via the established synthetic-Request/route-handler pattern (see
- * src/lib/batches/dispatch.ts, src/lib/evals/runtime.ts) — no network hop, no
+ * src/lib/batches/dispatch.ts) — no network hop, no
  * port dependency. `chatDispatch.postChatCompletion` is mocked here (same
  * technique tests/unit/batch-processor.test.ts uses for dispatch.ts) so these
  * tests never hit a real upstream provider.

@@ -44,7 +44,6 @@ src/app/api/agent-skills/
   generate/route.ts                    — POST /api/agent-skills/generate (அங்கீகாரம் தேவை)
 
 open-sse/mcp-server/tools/agentSkillTools.ts  — 3 MCP கருவிகள் (பட்டியலிடுதல், பெறுதல், கவரேஜ்)
-src/lib/a2a/skills/listCapabilities.ts        — A2A திறன்: list-capabilities
 ```
 
 ---
@@ -140,8 +139,6 @@ A2A திறனான `list-capabilities`, 45 திறன்கள் கொ�
 }
 ```
 
-நெறிமுறை விவரங்களுக்கு [A2A-SERVER.md](./A2A-SERVER.md)-ஐப் பார்க்கவும்.
-
 ---
 
 ## பட்டியல் — 45 திறன் ID-கள்
@@ -189,12 +186,11 @@ A2A திறனான `list-capabilities`, 45 திறன்கள் கொ�
 | `cli-contexts`        | cli-contexts       | `omniroute contexts`    |
 | `cli-cost-usage`      | cli-cost-usage     | `omniroute cost`        |
 | `cli-mcp`             | cli-mcp            | `omniroute mcp`         |
-| `cli-a2a`             | cli-a2a            | `omniroute a2a`         |
 | `cli-tunnel`          | cli-tunnel         | `omniroute tunnel`      |
 | `cli-backup-sync`     | cli-backup-sync    | `omniroute backup`      |
 | `cli-policy-audit`    | cli-policy-audit   | `omniroute policy`      |
 | `cli-batches`         | cli-batches        | `omniroute batch`       |
-| `cli-eval`            | cli-eval           | `omniroute eval`        |
+| `cli-eval`            | cli-eval           | `omniroute simulate`    |
 | `cli-plugins-skills`  | cli-plugins-skills | `omniroute plugins`     |
 | `cli-setup`           | cli-setup          | `omniroute setup`       |
 | `cli-skill-collector` | cli-setup          | `omniroute skills`      |
@@ -312,6 +308,5 @@ curl "http://localhost:20128/api/agent-skills/coverage"
 
 - [SKILLS.md](./SKILLS.md) — Omni Skills கட்டமைப்பு (LLM கருவி உட்செலுத்தல் + சந்தை)
 - [MCP-SERVER.md](./MCP-SERVER.md) — MCP கருவிப் பட்டியல் (`omniroute_agent_skills_*` கருவிகள்)
-- [A2A-SERVER.md](./A2A-SERVER.md) — A2A நெறிமுறை (`list-capabilities` திறன்)
 - `src/lib/agentSkills/` — பட்டியல், உருவாக்கி, பகுப்பாய்விகள்
 - `skills/` — உருவாக்கப்பட்ட SKILL.md கோப்புகள் (45 உள்ளீடுகள்)

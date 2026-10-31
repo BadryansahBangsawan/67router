@@ -137,13 +137,11 @@ v3.8.0 平台的权威版本控制 Mermaid 源文件位于
 - `/dashboard/limits` — 配额/速率控制
 - `/dashboard/cli-tools` — CLI 接入引导、运行时检测、配置生成
 - `/dashboard/agents` — 已检测的 ACP 代理 + 自定义代理注册
-- `/dashboard/cloud-agents` — 云端托管代理任务（Codex Cloud、Devin、Jules）和任务生命周期
 - `/dashboard/skills` — A2A 技能注册表、沙箱执行、内置技能目录
 - `/dashboard/memory` — 持久化会话记忆查看和检索
 - `/dashboard/webhooks` — 出站 Webhook 订阅、密钥轮换、重试统计
 - `/dashboard/batch` — 批量任务提交和进度
 - `/dashboard/cache` — 读穿式缓存和推理缓存统计、淘汰控制
-- `/dashboard/playground` — 针对任意配置 Combo/模型的交互式对话演练
 - `/dashboard/changelog` — 应用内更新日志查看器（渲染 `CHANGELOG.md`）
 - `/dashboard/system` — 运行时诊断、版本信息、环境校验界面
 - `/dashboard/onboarding` — 新装首次运行设置向导
@@ -261,7 +259,6 @@ flowchart LR
 - 预算：`src/app/api/usage/budget` (GET/POST)
 - 容灾链：`src/app/api/fallback/chains` (GET/POST/DELETE)
 - 合规审计：`src/app/api/compliance/audit-log` (GET, 含分页 + 结构化元数据)
-- 评估：`src/app/api/evals` (GET/POST), `src/app/api/evals/[suiteId]` (GET)
 - 策略：`src/app/api/policies` (GET/POST)
 - 同步 Token：`src/app/api/sync/tokens` (GET/POST), `src/app/api/sync/tokens/[id]` (GET/DELETE)
 - 配置包：`src/app/api/sync/bundle` (GET, ETag 版本控制的设置/服务商/Combo/Key 快照)
@@ -325,7 +322,6 @@ flowchart LR
 - 请求超时：`src/shared/utils/fetchTimeout.ts`
 - 请求遥测：`src/shared/utils/requestTelemetry.ts`
 - 合规/审计：`src/lib/compliance/index.ts`
-- 评估运行器：`src/lib/evals/evalRunner.ts`
 - 领域状态持久化：`src/lib/db/domainState.ts` — 针对回退链、预算、成本历史、锁定状态和熔断器的 SQLite CRUD
 
 OAuth 提供者模块（`src/lib/oauth/providers/` 下的 27 个独立文件）：
@@ -390,21 +386,6 @@ v3.8.4 中发布了两项：9Router 和 CLIProxyAPI。
 
 有关完整的算法细节（因子公式、权重调优），请参阅
 [`docs/routing/AUTO-COMBO.md`](../routing/AUTO-COMBO.md)。
-
-### B. 云代理
-
-云代理将第三方托管代码代理平台（Codex Cloud、Devin、Jules）封装在统一的、由数据库支持的任务生命周期之后。所有任务创建/检查端点都需要管理身份验证。
-
-- 模块根目录：`src/lib/cloudAgent/`（`baseAgent.ts`、`registry.ts`、`api.ts`、
-  `types.ts`、`db.ts`，以及 `agents/` 下各代理的子目录）
-- 各代理实现：`agents/codex/`、`agents/devin/`、`agents/jules/`
-- 公共端点：`/api/v1/agents/tasks/*`（列出/创建/获取/取消）
-- 管理端点：`/api/cloud/*`（配置、状态、批处理）
-- 仪表板：`/dashboard/cloud-agents`
-- 存储：`cloud_agent_tasks` 表
-
-有关各代理的配置和 OAuth 具体信息，请参阅
-[`docs/frameworks/CLOUD_AGENT.md`](../frameworks/CLOUD_AGENT.md)。
 
 ### C. 防护机制
 

@@ -1438,9 +1438,8 @@ De GET-respons bevat `agents[]` (id, name, binary, version, installed, protocol,
 
 ### Evaluaties
 
-| Endpoint     | Methode  | Beschrijving                                    |
-| ------------ | -------- | ----------------------------------------------- |
-| `/api/evals` | GET/POST | Evaluatiesuites weergeven / evaluatie uitvoeren |
+| Endpoint | Methode | Beschrijving |
+| -------- | ------- | ------------ |
 
 ### Beleidsregels
 
@@ -1763,31 +1762,6 @@ Wordt gebruikt door het subsysteem voor automatisch sleutelbeheer om API-sleutel
 
 ---
 
-## Agents-protocol
-
-Cloudagenttaken (Claude Code, Codex Cloud, OpenHands enz.) die op afstand worden uitgevoerd namens 67router-gebruikers.
-
-| Methode | Pad                           | Beschrijving                                                                                                                                         |
-| ------- | ----------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------- |
-| GET     | `/api/v1/agents/tasks`        | Taken weergeven — optioneel `?provider=`, `?status=`, `?limit=` (1–500, standaard 50)                                                                |
-| POST    | `/api/v1/agents/tasks`        | Taak aanmaken — body gevalideerd door `CreateCloudAgentTaskSchema` (`providerId`, `prompt`, `source`, `options?`). Retourneert `201` met taakenvelop |
-| DELETE  | `/api/v1/agents/tasks?id=...` | Een taak verwijderen                                                                                                                                 |
-| GET     | `/api/v1/agents/tasks/[id]`   | Taak lezen — vernieuwt de status synchroon vanuit de upstream-cloudagent wanneer een `external_id` is ingesteld                                      |
-| POST    | `/api/v1/agents/tasks/[id]`   | Gediscrimineerde actie: `{action: "approve"}`, `{action: "message", message}` of `{action: "cancel"}`                                                |
-| DELETE  | `/api/v1/agents/tasks/[id]`   | Een specifieke taak op id verwijderen                                                                                                                |
-
-> **Authenticatie:** beheerauthenticatie is vereist voor elke methode (`requireCloudAgentManagementAuth`). Vóór v3.8.0 waren deze niet geauthenticeerd — zie commit `588a0333` voor de incompatibele wijziging.
-
-```bash
-# Een Claude Code-cloudtaak aanmaken
-curl -X POST http://localhost:20128/api/v1/agents/tasks \
-  -H "Authorization: Bearer your-management-key" \
-  -H "Content-Type: application/json" \
-  -d '{"providerId":"claude-code-cloud","prompt":"Fix the failing test","source":{"repo":"...","branch":"..."}}'
-```
-
----
-
 ## Beheerproxy's
 
 Uitgaande HTTP(S)/SOCKS-proxy's die aan providers, accounts of globaal kunnen worden toegewezen.
@@ -1907,48 +1881,10 @@ Persistente opslag voor conversationeel/feitelijk geheugen, afgebakend per API-s
 
 67router biedt een A2A-eindpunt (Agent-to-Agent) voor JSON-RPC 2.0 plus een REST-wrapper voor inspectie- en dashboardgebruik.
 
-### JSON-RPC
-
-```bash
-POST /a2a
-Authorization: Bearer your-api-key   # optioneel, tenzij OMNIROUTE_API_KEY is ingesteld
-Content-Type: application/json
-
-{
-  "jsonrpc": "2.0",
-  "id": 1,
-  "method": "message/send",
-  "params": {
-    "skill": "smart-routing",
-    "messages": [{"role": "user", "content": "Route this coding task"}]
-  }
-}
-```
-
-Ondersteunde methoden (allemaal afhankelijk van `settings.a2aEnabled`):
-
-| Methode          | Beschrijving                                                                  |
-| ---------------- | ----------------------------------------------------------------------------- |
-| `message/send`   | Synchrone uitvoering van een skill; retourneert `{task, artifacts, metadata}` |
-| `message/stream` | Streaming SSE-uitvoering van dezelfde verzameling skills                      |
-| `tasks/get`      | Haal een taak op via `taskId`                                                 |
-| `tasks/cancel`   | Annuleer een taak via `taskId`                                                |
-
-Ingebouwde skills: `smart-routing`, `quota-management`, `provider-discovery`, `cost-analysis`, `health-report`.
-
-### Agentkaart
-
-```bash
-GET /.well-known/agent.json
-```
-
-Retourneert de openbare A2A-agentkaart (naam, beschrijving, mogelijkheden, skillcatalogus, authenticatieschema) — openbaar gecachet gedurende 1 uur. Geen authenticatie vereist.
-
 ### REST-hulproutes
 
 | Methode | Pad                          | Beschrijving                                                                                                         |
 | ------- | ---------------------------- | -------------------------------------------------------------------------------------------------------------------- |
-| GET     | `/api/a2a/status`            | A2A ingeschakeld + taakstatistieken + samenvatting van de gecachete agentkaart                                       |
 | GET     | `/api/a2a/tasks`             | Taken weergeven — `?state=submitted\|working\|completed\|failed\|cancelled`, `?skill=`, `?limit=` (≤200), `?offset=` |
 | POST    | `/api/a2a/tasks`             | (Niet geïmplementeerd als REST-hulproute — maak aan via JSON-RPC `message/send`)                                     |
 | GET     | `/api/a2a/tasks/[id]`        | Eén taak ophalen                                                                                                     |
@@ -1968,12 +1904,8 @@ Retourneert de openbare A2A-agentkaart (naam, beschrijving, mogelijkheden, skill
 | GET | `/api/cloud/models/alias` | Geef modelaliassen weer zoals beschikbaar gesteld aan cloudsynchronisatie |
 | GET | `/api/assess` | Lees de nieuwste beoordelingscategorisaties (per provider/model) |
 | POST | `/api/assess` | Voer een beoordeling uit — body: `{scope: {type:"all"}                                                   | {type:"provider", providerId} | {type:"model", modelId}, trigger?}` |
-| GET | `/api/evals` | Geef ingebouwde evaluatiesuites + de meest recente uitvoeringen weer |
-| POST | `/api/evals` | Start een evaluatie-uitvoering |
-| POST | `/api/evals/suites` | Maak een aangepaste evaluatiesuite aan — body gevalideerd door `evalSuiteSaveSchema` |
-| GET | `/api/evals/suites/[id]` | Haal een aangepaste evaluatiesuite op |
 
-**Authenticatie:** `/api/cloud/auth` valideert rechtstreeks een Bearer-sleutel en retourneert de gemaskeerde sleutel en `projectId` van elke verbinding alleen voor een sleutel met het bereik `manage` / `admin`; de overige routes `/api/cloud/*`, `/api/evals/*` en `/api/assess` vereisen een beheersessie/API-sleutel. POST voor `/api/assess` gebruikt `validateBody` met een scopeschema op basis van een gediscrimineerde union.
+**Authenticatie:** `/api/cloud/auth` valideert rechtstreeks een Bearer-sleutel en retourneert de gemaskeerde sleutel en `projectId` van elke verbinding alleen voor een sleutel met het bereik `manage` / `admin`; de overige routes `/api/cloud/*` en `/api/assess` vereisen een beheersessie/API-sleutel. POST voor `/api/assess` gebruikt `validateBody` met een scopeschema op basis van een gediscrimineerde union.
 
 ---
 
@@ -2294,5 +2226,3 @@ API-sleutel met beheerbereik) en hoe deze verschillen van inferentiesleutels.
 - `requireLogin` kan worden in- en uitgeschakeld via `/api/settings/require-login`
 - Routes onder `/v1/*` vereisen optioneel een Bearer-API-sleutel wanneer `REQUIRE_API_KEY=true`
 - Met "beheertoken" / "API-sleutel met beheerbereik" wordt in deze referentie een van de families uit die handleiding bedoeld — niet een ongedefinieerd extra geheimtype
-
-> **Incompatibele wijziging (v3.8.0)** — `/api/v1/agents/tasks/*` en de eindpunten voor cooldownbeheer vereisen nu **beheerauthenticatie** (de dashboardcookie `auth_token` of een API-sleutel met beheerbereik). Clients die deze routes eerder zonder authenticatie aanriepen, ontvangen nu `401 Unauthorized`. Zie commit `588a0333` (`fix(auth): require management auth for agent and cooldown APIs`).

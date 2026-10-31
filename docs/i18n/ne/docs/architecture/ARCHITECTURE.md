@@ -128,13 +128,11 @@ v3.8.0 प्लेटफर्मका प्रमाणिक, संस्�
 - `/dashboard/limits` — कोटा/दर नियन्त्रणहरू
 - `/dashboard/cli-tools` — CLI अनबोर्डिङ, रनटाइम पहिचान, कन्फिगरेसन उत्पादन
 - `/dashboard/agents` — पहिचान गरिएका ACP एजेन्टहरू + अनुकूलन एजेन्ट दर्ता
-- `/dashboard/cloud-agents` — क्लाउड-होस्ट गरिएका एजेन्ट कार्यहरू (Codex Cloud, Devin, Jules) र कार्य जीवनचक्र
 - `/dashboard/skills` — A2A सीप रजिस्ट्री, स्यान्डबक्स कार्यान्वयन, अन्तर्निर्मित सीप क्याटलग
 - `/dashboard/memory` — स्थायी संवादात्मक मेमोरी निरीक्षण र पुनर्प्राप्ति
 - `/dashboard/webhooks` — आउटबाउन्ड वेबहुक सदस्यताहरू, गोप्य कुञ्जी रोटेसन, पुनःप्रयास तथ्याङ्क
 - `/dashboard/batch` — ब्याच कार्य पेस गर्ने र प्रगति
 - `/dashboard/cache` — रिड-थ्रु र रिजनिङ क्यासका तथ्याङ्कहरू, निष्कासन नियन्त्रणहरू
-- `/dashboard/playground` — कन्फिगर गरिएको कुनै पनि कम्बो/मोडेलविरुद्धको अन्तरक्रियात्मक च्याट प्लेग्राउन्ड
 - `/dashboard/changelog` — एपभित्रको परिवर्तन-सूची दर्शक (`CHANGELOG.md` रेन्डर गर्छ)
 - `/dashboard/system` — रनटाइम निदान, संस्करण जानकारी, वातावरण प्रमाणीकरण सतह
 - `/dashboard/onboarding` — नयाँ स्थापनाहरूका लागि पहिलो-पटक सेटअप विजार्ड
@@ -252,7 +250,6 @@ flowchart LR
 - बजेट: `src/app/api/usage/budget` (GET/POST)
 - फलब्याक शृङ्खलाहरू: `src/app/api/fallback/chains` (GET/POST/DELETE)
 - अनुपालन अडिट: `src/app/api/compliance/audit-log` (GET, पृष्ठाङ्कन + संरचित मेटाडेटासहित)
-- मूल्याङ्कनहरू: `src/app/api/evals` (GET/POST), `src/app/api/evals/[suiteId]` (GET)
 - नीतिहरू: `src/app/api/policies` (GET/POST)
 - सिङ्क टोकनहरू: `src/app/api/sync/tokens` (GET/POST), `src/app/api/sync/tokens/[id]` (GET/DELETE)
 - कन्फिगरेसन बन्डल: `src/app/api/sync/bundle` (GET, सेटिङहरू/प्रदायकहरू/कम्बोहरू/कुञ्जीहरूको ETag-संस्करणयुक्त स्न्यापसट)
@@ -316,7 +313,6 @@ flowchart LR
 - फेच टाइमआउट: `src/shared/utils/fetchTimeout.ts`
 - अनुरोध टेलिमेट्री: `src/shared/utils/requestTelemetry.ts`
 - अनुपालन/अडिट: `src/lib/compliance/index.ts`
-- मूल्याङ्कन रनर: `src/lib/evals/evalRunner.ts`
 - डोमेन स्थिति स्थायित्व: `src/lib/db/domainState.ts` — फलब्याक चेनहरू, बजेटहरू, लागत इतिहास, लकआउट स्थिति र सर्किट ब्रेकरहरूका लागि SQLite CRUD
 
 OAuth प्रदायक मोड्युलहरू (`src/lib/oauth/providers/` अन्तर्गतका 27 वटा छुट्टाछुट्टै फाइल):
@@ -383,23 +379,6 @@ Auto Combo ले स्थिर combo परिभाषामा निर्
 
 पूर्ण algorithmic विवरणका लागि (factor formulas, weight tuning),
 [`docs/routing/AUTO-COMBO.md`](../routing/AUTO-COMBO.md) हेर्नुहोस्।
-
-### B. Cloud Agents
-
-Cloud Agents ले तेस्रो-पक्षद्वारा host गरिएका code-agent platforms (Codex Cloud, Devin,
-Jules) लाई एकसमान DB-backed task lifecycle पछाडि समेट्छ। सबै task creation/inspection
-endpoints का लागि management authentication आवश्यक हुन्छ।
-
-- Module root: `src/lib/cloudAgent/` (`baseAgent.ts`, `registry.ts`, `api.ts`,
-  `types.ts`, `db.ts`, साथै `agents/` अन्तर्गत प्रत्येक agent का subdirectories)
-- प्रत्येक agent का implementations: `agents/codex/`, `agents/devin/`, `agents/jules/`
-- Public endpoints: `/api/v1/agents/tasks/*` (सूची/सिर्जना/प्राप्ति/रद्द)
-- Management endpoints: `/api/cloud/*` (provisioning, status, batch)
-- Dashboard: `/dashboard/cloud-agents`
-- Storage: `cloud_agent_tasks` table
-
-प्रत्येक agent को provisioning र OAuth सम्बन्धी विशिष्ट विवरणका लागि,
-[`docs/frameworks/CLOUD_AGENT.md`](../frameworks/CLOUD_AGENT.md) हेर्नुहोस्।
 
 ### C. Guardrails
 

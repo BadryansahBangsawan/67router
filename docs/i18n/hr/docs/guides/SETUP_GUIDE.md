@@ -241,26 +241,6 @@ Dodajte u svoje MCP postavke:
 
 **Cjelovita dokumentacija za MCP:** [README MCP poslužitelja](../../open-sse/mcp-server/README.md) — 110 alata, konfiguracije IDE-ova, klijenti za Python/TS/Go.
 
-### Postavljanje A2A-a (protokol između agenata)
-
-Provjerite karticu agenta:
-
-```bash
-curl http://localhost:20128/.well-known/agent.json
-```
-
-Pošaljite zadatak:
-
-```bash
-curl -X POST http://localhost:20128/a2a \
-  -H 'content-type: application/json' \
-  -d '{"jsonrpc":"2.0","id":"quickstart","method":"message/send","params":{"skill":"quota-management","messages":[{"role":"user","content":"Give me a short quota summary."}]}}'
-```
-
-**Cjelovita dokumentacija za A2A:** [README A2A poslužitelja](../../src/lib/a2a/README.md) — JSON-RPC 2.0, vještine, strujanje, životni ciklus zadatka.
-
----
-
 ## Konfiguracija vremenskih ograničenja
 
 ### Osnovna vremenska ograničenja

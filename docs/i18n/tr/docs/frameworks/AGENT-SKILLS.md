@@ -44,7 +44,6 @@ src/app/api/agent-skills/
   generate/route.ts                    — POST /api/agent-skills/generate (kimlik doğrulama gereklidir)
 
 open-sse/mcp-server/tools/agentSkillTools.ts  — 3 MCP aracı (listeleme, getirme, kapsam)
-src/lib/a2a/skills/listCapabilities.ts        — A2A skill'i: list-capabilities
 ```
 
 ---
@@ -140,8 +139,6 @@ A2A `list-capabilities` yeteneği, 45 yeteneğin tamamını içeren kataloğu bi
 }
 ```
 
-Protokol ayrıntıları için [A2A-SERVER.md](./A2A-SERVER.md) belgesine bakın.
-
 ---
 
 ## Katalog — 45 Yetenek Kimliği
@@ -189,12 +186,11 @@ Protokol ayrıntıları için [A2A-SERVER.md](./A2A-SERVER.md) belgesine bakın.
 | `cli-contexts`        | cli-contexts       | `omniroute contexts`    |
 | `cli-cost-usage`      | cli-cost-usage     | `omniroute cost`        |
 | `cli-mcp`             | cli-mcp            | `omniroute mcp`         |
-| `cli-a2a`             | cli-a2a            | `omniroute a2a`         |
 | `cli-tunnel`          | cli-tunnel         | `omniroute tunnel`      |
 | `cli-backup-sync`     | cli-backup-sync    | `omniroute backup`      |
 | `cli-policy-audit`    | cli-policy-audit   | `omniroute policy`      |
 | `cli-batches`         | cli-batches        | `omniroute batch`       |
-| `cli-eval`            | cli-eval           | `omniroute eval`        |
+| `cli-eval`            | cli-eval           | `omniroute simulate`    |
 | `cli-plugins-skills`  | cli-plugins-skills | `omniroute plugins`     |
 | `cli-setup`           | cli-setup          | `omniroute setup`       |
 | `cli-skill-collector` | cli-setup          | `omniroute skills`      |
@@ -312,6 +308,5 @@ curl "http://localhost:20128/api/agent-skills/coverage"
 
 - [SKILLS.md](./SKILLS.md) — Omni Skills çerçevesi (LLM araç enjeksiyonu + pazar yeri)
 - [MCP-SERVER.md](./MCP-SERVER.md) — MCP araç kataloğu (`omniroute_agent_skills_*` araçları)
-- [A2A-SERVER.md](./A2A-SERVER.md) — A2A protokolü (`list-capabilities` skill'i)
 - `src/lib/agentSkills/` — katalog, oluşturucu, ayrıştırıcılar
 - `skills/` — oluşturulan SKILL.md dosyaları (45 girdi)

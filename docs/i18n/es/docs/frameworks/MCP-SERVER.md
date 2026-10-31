@@ -246,17 +246,6 @@ El inventario de herramientas MCP anterior (110 herramientas únicas, calculadas
 a las operaciones en tiempo de ejecución de enrutamiento/caché/compresión/memoria/habilidades/proxy/fuentes de contexto. Dos frameworks adyacentes
 se distribuyen junto con el servidor MCP en v3.8.0 y se documentan por separado:
 
-### Agentes en la nube
-
-Los agentes en la nube son agentes de IA de programación que se ejecutan fuera del proceso (codex-cloud, cursor-cloud, devin, jules) y están conectados a
-67router mediante el mismo modelo de conexión utilizado para los proveedores de LLM. Se exponen mediante
-su propia superficie REST (`/api/v1/agents/*`) y **no** forman parte del catálogo de herramientas MCP
-— invocar un agente en la nube no consume ningún ámbito MCP.
-
-- Implementación: `src/lib/cloudAgent/` (`registry.ts`, `agents/codex.ts`, `agents/cursor.ts`, `agents/devin.ts`, `agents/jules.ts`).
-- Ciclo de vida: `createTask`, `getStatus`, `approvePlan`, `sendMessage`, `listSources`.
-- Documentación: [docs/frameworks/CLOUD_AGENT.md](./CLOUD_AGENT.md).
-
 ### Barreras de protección
 
 Las barreras de protección son filtros previos/posteriores a la ejecución (vision-bridge, pii-masker, prompt-injection)

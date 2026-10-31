@@ -88,7 +88,7 @@ midagi.
 
 ## Juhtpaneel VS Code'i vahekaardil
 
-`omnicopilot.dashboardOpen: "editor"` kuvab 67router'i juhtpaneeli välise brauseri asemel redaktori vahekaardil Simple Browseri kaudu. Manustamine tuleb **serveris eraldi lubada** muutujaga `DASHBOARD_ALLOW_EMBED=vscode`, mille korral edastatakse HTML-lehed päisega `frame-ancestors 'self' vscode-webview:` vaikeväärtuste `frame-ancestors 'none'` + `X-Frame-Options: DENY` asemel. API-pind (`/api`, `/v1`, `/v1beta`, `/a2a`, `/healthz`) säilitab mõlemal juhul ranged päised.
+`omnicopilot.dashboardOpen: "editor"` kuvab 67router'i juhtpaneeli välise brauseri asemel redaktori vahekaardil Simple Browseri kaudu. Manustamine tuleb **serveris eraldi lubada** muutujaga `DASHBOARD_ALLOW_EMBED=vscode`, mille korral edastatakse HTML-lehed päisega `frame-ancestors 'self' vscode-webview:` vaikeväärtuste `frame-ancestors 'none'` + `X-Frame-Options: DENY` asemel. API-pind (`/api`, `/v1`, `/v1beta`, `/healthz`) säilitab mõlemal juhul ranged päised.
 
 > ⚠️ **See on kompileerimisaegne, mitte käitusaegne lipp.** Next.js kompileerib `headers()` marsruutide manifesti, mistõttu loeb `next.config.mjs` muutujat paketi kompileerimise ajal
 > (`next.config.mjs` → `resolveDashboardEmbedMode`, `scripts/build/dashboardEmbed.mjs`).

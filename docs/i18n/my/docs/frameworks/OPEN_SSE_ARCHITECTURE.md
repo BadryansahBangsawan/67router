@@ -573,5 +573,4 @@ Routing engine တွင် တင်းကျပ်သော စွမ်းဆ
 - [REPOSITORY_MAP.md](../architecture/REPOSITORY_MAP.md) — Directory တစ်ခုချင်းစီအလိုက် ဖော်ပြချက်
 - [AUTO-COMBO.md](../routing/AUTO-COMBO.md) — အချက် 16 ချက်ပါ scoring
 - [MCP-SERVER.md](./MCP-SERVER.md) — MCP server
-- [A2A-SERVER.md](./A2A-SERVER.md) — A2A server
 - Source- `open-sse/` (ဖိုင် 400 ကျော်၊ LOC ~143K)

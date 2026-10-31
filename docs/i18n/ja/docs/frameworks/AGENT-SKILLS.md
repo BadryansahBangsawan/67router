@@ -44,7 +44,6 @@ src/app/api/agent-skills/
   generate/route.ts                    — POST /api/agent-skills/generate（認証必須）
 
 open-sse/mcp-server/tools/agentSkillTools.ts  — 3 個の MCP ツール（一覧、取得、カバレッジ）
-src/lib/a2a/skills/listCapabilities.ts        — A2A スキル: list-capabilities
 ```
 
 ---
@@ -140,8 +139,6 @@ A2A スキル `list-capabilities` は、全 45 スキルのカタログを Markd
 }
 ```
 
-プロトコルの詳細については、[A2A-SERVER.md](./A2A-SERVER.md) を参照してください。
-
 ---
 
 ## カタログ — 45 個のスキル ID
@@ -189,12 +186,11 @@ A2A スキル `list-capabilities` は、全 45 スキルのカタログを Markd
 | `cli-contexts`        | cli-contexts       | `omniroute contexts`    |
 | `cli-cost-usage`      | cli-cost-usage     | `omniroute cost`        |
 | `cli-mcp`             | cli-mcp            | `omniroute mcp`         |
-| `cli-a2a`             | cli-a2a            | `omniroute a2a`         |
 | `cli-tunnel`          | cli-tunnel         | `omniroute tunnel`      |
 | `cli-backup-sync`     | cli-backup-sync    | `omniroute backup`      |
 | `cli-policy-audit`    | cli-policy-audit   | `omniroute policy`      |
 | `cli-batches`         | cli-batches        | `omniroute batch`       |
-| `cli-eval`            | cli-eval           | `omniroute eval`        |
+| `cli-eval`            | cli-eval           | `omniroute simulate`    |
 | `cli-plugins-skills`  | cli-plugins-skills | `omniroute plugins`     |
 | `cli-setup`           | cli-setup          | `omniroute setup`       |
 | `cli-skill-collector` | cli-setup          | `omniroute skills`      |
@@ -312,6 +308,5 @@ curl "http://localhost:20128/api/agent-skills/coverage"
 
 - [SKILLS.md](./SKILLS.md) — Omni Skills フレームワーク（LLM ツール注入 + マーケットプレイス）
 - [MCP-SERVER.md](./MCP-SERVER.md) — MCP ツールカタログ（`omniroute_agent_skills_*` ツール）
-- [A2A-SERVER.md](./A2A-SERVER.md) — A2A プロトコル（`list-capabilities` スキル）
 - `src/lib/agentSkills/` — カタログ、ジェネレーター、パーサー
 - `skills/` — 生成された SKILL.md ファイル（45 エントリ）

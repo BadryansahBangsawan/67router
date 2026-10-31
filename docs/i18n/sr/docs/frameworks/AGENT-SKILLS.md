@@ -44,7 +44,6 @@ src/app/api/agent-skills/
   generate/route.ts                    — POST /api/agent-skills/generate (захтева аутентификацију)
 
 open-sse/mcp-server/tools/agentSkillTools.ts  — 3 MCP алата (листа, преузимање, покривеност)
-src/lib/a2a/skills/listCapabilities.ts        — A2A вештина: list-capabilities
 ```
 
 ---
@@ -140,8 +139,6 @@ A2A вештина `list-capabilities` враћа комплетан катал�
 }
 ```
 
-Погледајте [A2A-SERVER.md](./A2A-SERVER.md) за детаље протокола.
-
 ---
 
 ## Каталог — 45 ID-ова вештина
@@ -189,12 +186,11 @@ A2A вештина `list-capabilities` враћа комплетан катал�
 | `cli-contexts`        | cli-contexts       | `omniroute contexts`    |
 | `cli-cost-usage`      | cli-cost-usage     | `omniroute cost`        |
 | `cli-mcp`             | cli-mcp            | `omniroute mcp`         |
-| `cli-a2a`             | cli-a2a            | `omniroute a2a`         |
 | `cli-tunnel`          | cli-tunnel         | `omniroute tunnel`      |
 | `cli-backup-sync`     | cli-backup-sync    | `omniroute backup`      |
 | `cli-policy-audit`    | cli-policy-audit   | `omniroute policy`      |
 | `cli-batches`         | cli-batches        | `omniroute batch`       |
-| `cli-eval`            | cli-eval           | `omniroute eval`        |
+| `cli-eval`            | cli-eval           | `omniroute simulate`    |
 | `cli-plugins-skills`  | cli-plugins-skills | `omniroute plugins`     |
 | `cli-setup`           | cli-setup          | `omniroute setup`       |
 | `cli-skill-collector` | cli-setup          | `omniroute skills`      |
@@ -312,6 +308,5 @@ curl "http://localhost:20128/api/agent-skills/coverage"
 
 - [SKILLS.md](./SKILLS.md) — оквир Omni Skills (убризгавање LLM алата + тржиште)
 - [MCP-SERVER.md](./MCP-SERVER.md) — каталог MCP алата (алати `omniroute_agent_skills_*`)
-- [A2A-SERVER.md](./A2A-SERVER.md) — A2A протокол (вештина `list-capabilities`)
 - `src/lib/agentSkills/` — каталог, генератор, парсери
 - `skills/` — генерисане SKILL.md датотеке (45 ставки)

@@ -1419,9 +1419,8 @@ Odpověď GET obsahuje `agents[]` (id, name, binary, version, installed, protoco
 
 ### Evaluace
 
-| Endpoint     | Metoda   | Popis                                  |
-| ------------ | -------- | -------------------------------------- |
-| `/api/evals` | GET/POST | Výpis sad evaluací / spuštění evaluace |
+| Endpoint | Metoda | Popis |
+| -------- | ------ | ----- |
 
 ### Zásady
 
@@ -1746,31 +1745,6 @@ Podsystém automatické správy klíčů je používá k vydávání a rotaci kl
 
 ---
 
-## Protokol agentů
-
-Úlohy cloudových agentů (Claude Code, Codex Cloud, OpenHands atd.) spouštěné vzdáleně jménem uživatelů 67router.
-
-| Metoda | Cesta                         | Popis                                                                                                                                   |
-| ------ | ----------------------------- | --------------------------------------------------------------------------------------------------------------------------------------- |
-| GET    | `/api/v1/agents/tasks`        | Seznam úloh — volitelné `?provider=`, `?status=`, `?limit=` (1–500, výchozí hodnota 50)                                                 |
-| POST   | `/api/v1/agents/tasks`        | Vytvoření úlohy — tělo ověřuje `CreateCloudAgentTaskSchema` (`providerId`, `prompt`, `source`, `options?`). Vrací `201` s obálkou úlohy |
-| DELETE | `/api/v1/agents/tasks?id=...` | Odstranění úlohy                                                                                                                        |
-| GET    | `/api/v1/agents/tasks/[id]`   | Načtení úlohy — pokud je nastaveno `external_id`, synchronně aktualizuje stav z nadřazeného cloudového agenta                           |
-| POST   | `/api/v1/agents/tasks/[id]`   | Rozlišená akce: `{action: "approve"}`, `{action: "message", message}` nebo `{action: "cancel"}`                                         |
-| DELETE | `/api/v1/agents/tasks/[id]`   | Odstranění konkrétní úlohy podle ID                                                                                                     |
-
-> **Autorizace:** u každé metody je vyžadována autorizace pro správu (`requireCloudAgentManagementAuth`). Před verzí v3.8.0 nebyly tyto metody autentizované — změnu narušující zpětnou kompatibilitu najdete v commitu `588a0333`.
-
-```bash
-# Vytvoření cloudové úlohy Claude Code
-curl -X POST http://localhost:20128/api/v1/agents/tasks \
-  -H "Authorization: Bearer your-management-key" \
-  -H "Content-Type: application/json" \
-  -d '{"providerId":"claude-code-cloud","prompt":"Fix the failing test","source":{"repo":"...","branch":"..."}}'
-```
-
----
-
 ## Proxy servery pro správu
 
 Odchozí proxy servery HTTP(S)/SOCKS, které lze přiřadit poskytovatelům, účtům nebo globálně.
@@ -1890,48 +1864,10 @@ Trvalé úložiště konverzační/faktické paměti vymezené pro jednotlivé A
 
 67router zpřístupňuje koncový bod A2A (Agent-to-Agent) využívající JSON-RPC 2.0 a také REST wrapper pro účely kontroly a použití v řídicím panelu.
 
-### JSON-RPC
-
-```bash
-POST /a2a
-Authorization: Bearer your-api-key   # volitelné, pokud není nastavena proměnná OMNIROUTE_API_KEY
-Content-Type: application/json
-
-{
-  "jsonrpc": "2.0",
-  "id": 1,
-  "method": "message/send",
-  "params": {
-    "skill": "smart-routing",
-    "messages": [{"role": "user", "content": "Route this coding task"}]
-  }
-}
-```
-
-Podporované metody (všechny podmíněné nastavením `settings.a2aEnabled`):
-
-| Metoda           | Popis                                                               |
-| ---------------- | ------------------------------------------------------------------- |
-| `message/send`   | Synchronní spuštění dovednosti; vrací `{task, artifacts, metadata}` |
-| `message/stream` | Streamované spuštění stejné sady dovedností pomocí SSE              |
-| `tasks/get`      | Načte úlohu podle `taskId`                                          |
-| `tasks/cancel`   | Zruší úlohu podle `taskId`                                          |
-
-Vestavěné dovednosti: `smart-routing`, `quota-management`, `provider-discovery`, `cost-analysis`, `health-report`.
-
-### Karta agenta
-
-```bash
-GET /.well-known/agent.json
-```
-
-Vrací veřejnou kartu agenta A2A (název, popis, schopnosti, katalog dovedností, schéma ověřování) — veřejně ukládanou do mezipaměti na 1 hodinu. Ověření není vyžadováno.
-
 ### Pomocné endpointy REST
 
 | Metoda | Cesta                        | Popis                                                                                                             |
 | ------ | ---------------------------- | ----------------------------------------------------------------------------------------------------------------- |
-| GET    | `/api/a2a/status`            | Stav povolení A2A + statistiky úloh + souhrn karty agenta z mezipaměti                                            |
 | GET    | `/api/a2a/tasks`             | Vypíše úlohy — `?state=submitted\|working\|completed\|failed\|cancelled`, `?skill=`, `?limit=` (≤200), `?offset=` |
 | POST   | `/api/a2a/tasks`             | (Není implementováno jako pomocný endpoint REST — vytvořte prostřednictvím JSON-RPC `message/send`)               |
 | GET    | `/api/a2a/tasks/[id]`        | Načte jednu úlohu                                                                                                 |
@@ -1951,12 +1887,8 @@ Vrací veřejnou kartu agenta A2A (název, popis, schopnosti, katalog dovednost�
 | GET | `/api/cloud/models/alias` | Vypíše aliasy modelů zpřístupněné cloudové synchronizaci |
 | GET | `/api/assess` | Načte nejnovější kategorizace posouzení (pro jednotlivé poskytovatele/modely) |
 | POST | `/api/assess` | Spustí posouzení — tělo: `{scope: {type:"all"}                                                   | {type:"provider", providerId} | {type:"model", modelId}, trigger?}` |
-| GET | `/api/evals` | Vypíše vestavěné sady vyhodnocení + nejnovější běhy |
-| POST | `/api/evals` | Spustí běh vyhodnocení |
-| POST | `/api/evals/suites` | Vytvoří vlastní sadu vyhodnocení — tělo ověřované pomocí `evalSuiteSaveSchema` |
-| GET | `/api/evals/suites/[id]` | Načte vlastní sadu vyhodnocení |
 
-**Ověření:** `/api/cloud/auth` přímo ověřuje klíč Bearer a vrací maskovaný klíč a `projectId` každého připojení pouze pro klíč s rozsahem `manage` / `admin`; ostatní trasy `/api/cloud/*`, `/api/evals/*` a `/api/assess` vyžadují relaci pro správu nebo klíč API. Požadavek POST na `/api/assess` používá `validateBody` se schématem rozsahu založeným na diskriminovaném sjednocení.
+**Ověření:** `/api/cloud/auth` přímo ověřuje klíč Bearer a vrací maskovaný klíč a `projectId` každého připojení pouze pro klíč s rozsahem `manage` / `admin`; ostatní trasy `/api/cloud/*` a `/api/assess` vyžadují relaci pro správu nebo klíč API. Požadavek POST na `/api/assess` používá `validateBody` se schématem rozsahu založeným na diskriminovaném sjednocení.
 
 ---
 
@@ -2278,5 +2210,3 @@ Informace o čtyřech skupinách přihlašovacích údajů (relace řídicího p
 - `requireLogin` lze přepínat prostřednictvím `/api/settings/require-login`
 - Trasy `/v1/*` mohou volitelně vyžadovat Bearer API klíč, pokud platí `REQUIRE_API_KEY=true`
 - „token pro správu“ / „API klíč s oprávněním pro správu“ v této referenční dokumentaci označuje jednu ze skupin uvedených v daném průvodci — nikoli nedefinovaný dodatečný typ tajného údaje
-
-> **Zásadní změna (v3.8.0)** — `/api/v1/agents/tasks/*` a koncové body pro správu intervalu cooldown nyní vyžadují **autentizaci pro správu** (soubor cookie `auth_token` řídicího panelu nebo API klíč s oprávněním pro správu). Klienti, kteří dříve tyto trasy volali bez autentizace, obdrží `401 Unauthorized`. Viz commit `588a0333` (`fix(auth): require management auth for agent and cooldown APIs`).

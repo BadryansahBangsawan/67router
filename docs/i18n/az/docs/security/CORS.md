@@ -46,13 +46,6 @@ Bu, hətta `CORS_ALLOW_ALL=true` olduqda belə, hər səth üçün aşağıdakı
 
 Beləliklə, `CORS_ALLOW_ALL=true` parametrinin **qalıq** məruz qalması bunlarla məhdudlaşır: (a) artıq autentifikasiya tələb etməyən məlumatların etimadnaməsiz domenlərarası **oxunması** və (b) idarəetmə marşrutlarında CORS **ilkin sorğusunun keçməsinə** icazə verilməsi — həmin marşrutlar yenə də domenlərarası səhifənin təqdim edə bilməyəcəyi autentifikasiya tələb edir. Ortaq CORS yolunda bu, sessiyanın ələ keçirilməsi və ya etimadnamənin oğurlanması vektoru **deyil**.
 
-### Bir real istisna — `/api/v1/agents/`
-
-Cloud-Agent marşrutları (`/api/v1/agents/{health,credentials,tasks,tasks/[id]}`) **öz** CORS başlıqlarını təyin edir
-(`src/lib/cloudAgent/api.ts`, `getCloudAgentCorsHeaders`) və
-`Access-Control-Allow-Origin: <origin>|*` ilə birlikdə
-`Access-Control-Allow-Credentials: true` başlığını **göndərir**. Bu, mənşənin geri qaytarılması ilə etimadnamələrin birlikdə mövcud olduğu yeganə səthdir və `CORS_ALLOW_ALL` parametrindən **asılı deyil**. Bu marşrutlar idarəetmə autentifikasiyasından keçir (`requireManagementAuth`); idarəetmə panelini hostdan kənarda əlçatan edən operatorlar bilməlidir ki, cavab başlıqlarının domenlərarası etimadnaməli oxumaya icazə verdiyi yeganə yer buradır. Bunun açıq icazə siyahısı ilə məhdudlaşdırılması bu CORS təlimatından ayrıca izlənilir.
-
 ## İstehsal mühiti üçün yoxlama siyahısı
 
 - **İstehsal mühitində heç vaxt `CORS_ALLOW_ALL=true` təyin etməyin.** Onu təyin edilməmiş saxlayın.
@@ -130,7 +123,6 @@ Brauzer üçün icazə verilən mənbələri proksidə deyil, 67router-da (`CORS
 | İdarəetmə paneli üçün icra vaxtı statusu                  | `src/app/api/settings/authz-inventory/route.ts`                      |
 | İdarəetmə panelində xəbərdarlıq banneri                   | `src/app/(dashboard)/dashboard/settings/components/AuthzSection.tsx` |
 | CORS Allowed Origins sahəsi                               | `src/app/(dashboard)/dashboard/settings/components/SecurityTab.tsx`  |
-| Hər marşrut üzrə Cloud-Agent CORS-u (istisna)             | `src/lib/cloudAgent/api.ts`                                          |
 
 ## Həmçinin baxın
 

@@ -91,7 +91,7 @@ Il-katalgu jelenka mudelli minn fornituri b’**konnessjoni attiva** _flimkien m
 Simple Browser minflok fi browser estern. L-inkorporazzjoni trid tiġi **attivata espliċitament fuq is-server** permezz ta'
 `DASHBOARD_ALLOW_EMBED=vscode`, li jservi l-paġni HTML b'
 `frame-ancestors 'self' vscode-webview:` minflok il-valur awtomatiku `frame-ancestors 'none'` +
-`X-Frame-Options: DENY`. Is-superfiċje tal-API (`/api`, `/v1`, `/v1beta`, `/a2a`, `/healthz`) iżżomm l-
+`X-Frame-Options: DENY`. Is-superfiċje tal-API (`/api`, `/v1`, `/v1beta`, `/healthz`) iżżomm l-
 headers stretti fiż-żewġ każijiet.
 
 > ⚠️ **Din hija marka tal-ħin tal-build, mhux tar-runtime.** Next.js jikkompila `headers()` fil-manifest tar-route,

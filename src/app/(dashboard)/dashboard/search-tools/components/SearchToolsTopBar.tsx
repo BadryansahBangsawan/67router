@@ -5,8 +5,8 @@ import { useTranslations } from "next-intl";
 import { Tabs, TabsList, TabsTrigger } from "@omniroute/ui-kit/tabs";
 import Button from "@/shared/components/Button";
 import Icon from "@/shared/components/Icon";
-import ExportCodeModal from "@/app/(dashboard)/dashboard/playground/components/ExportCodeModal";
-import type { PlaygroundState } from "@/lib/playground/codeExport";
+import ExportCodeModal from "@/shared/components/ExportCodeModal";
+import type { PlaygroundState } from "@/lib/codeExport";
 
 export type ActiveTab = "search" | "scrape" | "compare";
 
@@ -33,7 +33,7 @@ export default function SearchToolsTopBar({
   exportState,
 }: SearchToolsTopBarProps) {
   const t = useTranslations("search");
-  const tPlayground = useTranslations("playground");
+  const tCodeExport = useTranslations("codeExport");
   const [exportOpen, setExportOpen] = useState(false);
 
   return (
@@ -81,11 +81,11 @@ export default function SearchToolsTopBar({
             variant="outline"
             size="sm"
             onClick={() => setExportOpen(true)}
-            aria-label={tPlayground("exportCode")}
+            aria-label={tCodeExport("exportCode")}
             data-testid="export-code-button"
           >
             <span className="font-mono text-[11px]">{"/>"}</span>
-            <span>{tPlayground("exportShort")}</span>
+            <span>{tCodeExport("exportShort")}</span>
           </Button>
         </div>
       </div>

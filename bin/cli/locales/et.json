@@ -390,34 +390,6 @@
       "description": "MCP auditilogi (alias käsule audit --source mcp)"
     }
   },
-  "a2a": {
-    "skills": {
-      "description": "Kuva agendikaardil saadaolevad A2A oskused"
-    },
-    "invoke": {
-      "description": "Käivita A2A oskus ja tagasta ülesande ID",
-      "input": "JSON-sisendobjekt",
-      "input_file": "JSON-sisendfaili tee",
-      "wait": "Oota enne tagastamist ülesande valmimist",
-      "timeout": "Valmimise ootamise ajapiirang millisekundites (vaikimisi: 60000)"
-    },
-    "tasks": {
-      "description": "Halda A2A ülesandeid",
-      "list": {
-        "status": "Filtreeri oleku järgi",
-        "skill": "Filtreeri oskuse ID järgi"
-      },
-      "watch": {
-        "description": "Küsi perioodiliselt ülesande olekut kuni valmimiseni"
-      },
-      "stream": {
-        "description": "Voogesita ülesande täitmissündmusi SSE kaudu"
-      },
-      "logs": {
-        "description": "Kuva ülesande sõnumid ja artefaktid"
-      }
-    }
-  },
   "policy": {
     "description": "Halda 67router'i autoriseerimispoliitikaid",
     "list": {
@@ -696,99 +668,6 @@
       "provider": "Tühistatava teenusepakkuja ID",
       "connection_id": "Tühista konkreetne ühendus ID järgi",
       "yes": "Jäta kinnitusküsimus vahele"
-    }
-  },
-  "cloud": {
-    "description": "Halda pilve AI-agentide ülesandeid (codex, devin, jules)",
-    "agents": {
-      "description": "Loetle saadaolevad pilveagendid"
-    },
-    "agent": {
-      "description": "Halda {agent} pilveagendi ülesandeid",
-      "auth": {
-        "description": "Autoriseeri {agent} OAuth kaudu"
-      }
-    },
-    "task": {
-      "description": "Halda pilveagendi ülesandeid",
-      "create": {
-        "description": "Loo uus agendi ülesanne",
-        "title": "Ülesande pealkiri (vaikimisi vihje esimesed 80 tähemärki)",
-        "prompt": "Ülesande vihje tekst",
-        "prompt_file": "Loe vihje failist",
-        "repo": "Ülesande jaoks kloonitava hoidla URL",
-        "branch": "Kasutatava haru nimi",
-        "metadata": "JSON-metaandmete objekt"
-      },
-      "list": {
-        "description": "Loetle agendi ülesanded",
-        "status": "Filtreeri oleku alusel (running|completed|failed|cancelled)",
-        "limit": "Maksimaalne tulemuste arv (vaikimisi: 50)"
-      },
-      "get": {
-        "description": "Hangi ülesande üksikasjad ID järgi"
-      },
-      "status": {
-        "description": "Kuva ülesande olek (running|completed|failed|cancelled)"
-      },
-      "cancel": {
-        "description": "Tühista käimasolev ülesanne",
-        "yes": "Jäta kinnitusküsimus vahele"
-      },
-      "approve": {
-        "description": "Kinnita agendi plaan täitmise alustamiseks"
-      },
-      "message": {
-        "description": "Saada sõnum käimasolevale ülesandele"
-      }
-    },
-    "sources": {
-      "description": "Kuva ülesande loodud lähtefailide loend"
-    }
-  },
-  "eval": {
-    "description": "Halda hindamiskomplekte ja käitamisi",
-    "suites": {
-      "description": "Halda hindamiskomplekte",
-      "list": {
-        "description": "Kuva hindamiskomplektide loend"
-      },
-      "get": {
-        "description": "Hangi hindamiskomplekti üksikasjad ID järgi"
-      },
-      "create": {
-        "description": "Loo hindamiskomplekt JSON-failist",
-        "file": "Komplekti definitsiooni JSON-faili asukoht"
-      }
-    },
-    "run": {
-      "description": "Käivita hindamiskomplekti käitus",
-      "model": "Hinnatava mudeli ID (vaikimisi: automaatne)",
-      "combo": "Sunni konkreetne kombinatsioon nime järgi",
-      "concurrency": "Samaaegsete näidiste arv (vaikimisi: 4)",
-      "tag": "Märgista see käitus hilisema filtreerimise jaoks",
-      "watch": "Jälgi käituse edenemist kuni valmimiseni"
-    },
-    "list": {
-      "description": "Kuva hindamiskäituste loend",
-      "suite": "Filtreeri komplekti ID järgi",
-      "status": "Filtreeri oleku järgi",
-      "since": "Tagasta käitused alates sellest ajatempist",
-      "limit": "Maksimaalne tulemuste arv (vaikimisi: 50)"
-    },
-    "get": {
-      "description": "Hangi hindamiskäituse üksikasjad ID järgi"
-    },
-    "results": {
-      "description": "Kuva hindamiskäituse näidiste tulemused",
-      "failed": "Kuva ainult ebaõnnestunud näidised"
-    },
-    "cancel": {
-      "description": "Tühista käimasolev hindamine",
-      "yes": "Jäta kinnitusküsimus vahele"
-    },
-    "scorecard": {
-      "description": "Kuva lõpetatud hindamiskäituse tulemuskaart"
     }
   },
   "program": {

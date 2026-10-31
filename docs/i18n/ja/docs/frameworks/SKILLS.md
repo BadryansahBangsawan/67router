@@ -258,12 +258,6 @@ curl -X POST http://localhost:20128/api/skills/install \
 
 ---
 
-## A2A 統合
-
-`src/lib/skills/a2a.ts` は、`memory_aware_routing` A2A スキル記述子と `registerA2ASkill(registry)` ヘルパーをエクスポートします。カスタム A2A スキルは `src/lib/a2a/skills/` に配置され、`A2A_SKILL_HANDLERS`（`src/lib/a2a/taskExecution.ts`）を介してディスパッチされます。タスクのライフサイクル全体については、[A2A-SERVER.md](./A2A-SERVER.md)を参照してください。
-
----
-
 ## 新しい組み込みスキルの追加
 
 1. **ハンドラーを定義**します。`src/lib/skills/builtins.ts`（または `src/lib/skills/builtin/` 配下の同階層ファイル）に追加します。シグネチャ: `(input, { apiKeyId, sessionId }) => Promise<output>`。
@@ -480,7 +474,6 @@ const config: SkillConfig = {
 ## 関連項目
 
 - [MCP-SERVER.md](./MCP-SERVER.md) — MCPツールの登録とトランスポート
-- [A2A-SERVER.md](./A2A-SERVER.md) — A2Aタスクのライフサイクルとスキルのディスパッチ
 - [USER_GUIDE.md](../guides/USER_GUIDE.md#-skills-system) — ユーザー向け概要
 - [ARCHITECTURE.md](../architecture/ARCHITECTURE.md) — リクエストパイプラインとコンポーネントマップ
 - ソース: `src/lib/skills/`、`src/app/api/skills/`、`open-sse/mcp-server/tools/skillTools.ts`

@@ -248,26 +248,6 @@ Tinye na ntọala MCP gị:
 
 **Akwụkwọ MCP zuru ezu:** [README Sava MCP](../../open-sse/mcp-server/README.md) — ngwaọrụ 110, nhazi IDE, klayenti Python/TS/Go.
 
-### Nhazi A2A (Agent-to-Agent Protocol)
-
-Nyochaa Agent Card:
-
-```bash
-curl http://localhost:20128/.well-known/agent.json
-```
-
-Zipụ ọrụ:
-
-```bash
-curl -X POST http://localhost:20128/a2a \
-  -H 'content-type: application/json' \
-  -d '{"jsonrpc":"2.0","id":"quickstart","method":"message/send","params":{"skill":"quota-management","messages":[{"role":"user","content":"Nye m nchịkọta oke ojiji dị nkenke."}]}}'
-```
-
-**Akwụkwọ A2A zuru ezu:** [README Sava A2A](../../src/lib/a2a/README.md) — JSON-RPC 2.0, nka, nnyefe na-aga n'ihu, usoro ndụ ọrụ.
-
----
-
 ## Nhazi Oge Nchere
 
 ### Oge Nchere Ndị Bụ Isi

@@ -1370,9 +1370,8 @@ GET yanıtı, `agents[]` (id, name, binary, version, installed, protocol, isCust
 
 ### Değerlendirmeler
 
-| Uç Nokta     | Yöntem   | Açıklama                                         |
-| ------------ | -------- | ------------------------------------------------ |
-| `/api/evals` | GET/POST | Değerlendirme paketlerini listeleme / çalıştırma |
+| Uç Nokta | Yöntem | Açıklama |
+| -------- | ------ | -------- |
 
 ### İlkeler
 
@@ -1695,31 +1694,6 @@ Otomatik anahtar yönetimi alt sistemi tarafından, günlük/saatlik kotalarla d
 
 ---
 
-## Aracılar Protokolü
-
-67router kullanıcıları adına uzaktan yürütülen bulut aracısı görevleri (Claude Code, Codex Cloud, OpenHands vb.).
-
-| Yöntem | Yol                           | Açıklama                                                                                                                                                 |
-| ------ | ----------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| GET    | `/api/v1/agents/tasks`        | Görevleri listeler — isteğe bağlı `?provider=`, `?status=`, `?limit=` (1–500, varsayılan 50)                                                             |
-| POST   | `/api/v1/agents/tasks`        | Görev oluşturur — gövde `CreateCloudAgentTaskSchema` (`providerId`, `prompt`, `source`, `options?`) tarafından doğrulanır. Görev zarfıyla `201` döndürür |
-| DELETE | `/api/v1/agents/tasks?id=...` | Bir görevi siler                                                                                                                                         |
-| GET    | `/api/v1/agents/tasks/[id]`   | Görevi okur — bir `external_id` ayarlandığında durumu yukarı akıştaki bulut aracısından eşzamanlı olarak yeniler                                         |
-| POST   | `/api/v1/agents/tasks/[id]`   | Ayırt edilmiş eylem: `{action: "approve"}`, `{action: "message", message}` veya `{action: "cancel"}`                                                     |
-| DELETE | `/api/v1/agents/tasks/[id]`   | Belirli bir görevi kimliğine göre siler                                                                                                                  |
-
-> **Kimlik doğrulama:** her yöntemde yönetim kimlik doğrulaması gereklidir (`requireCloudAgentManagementAuth`). v3.8.0 öncesinde bunlar kimlik doğrulaması gerektirmiyordu — uyumluluğu bozan değişiklik için `588a0333` commit'ine bakın.
-
-```bash
-# Bir Claude Code bulut görevi oluşturun
-curl -X POST http://localhost:20128/api/v1/agents/tasks \
-  -H "Authorization: Bearer your-management-key" \
-  -H "Content-Type: application/json" \
-  -d '{"providerId":"claude-code-cloud","prompt":"Fix the failing test","source":{"repo":"...","branch":"..."}}'
-```
-
----
-
 ## Yönetim Proxy'leri
 
 Sağlayıcılara, hesaplara veya genel olarak atanabilen giden HTTP(S)/SOCKS proxy'leri.
@@ -1839,48 +1813,10 @@ API anahtarı / oturum bazında kapsamlandırılmış kalıcı konuşma/olgusal 
 
 67router, inceleme/pano kullanımı için bir REST sarmalayıcısının yanı sıra bir A2A (Agent-to-Agent) JSON-RPC 2.0 uç noktası sunar.
 
-### JSON-RPC
-
-```bash
-POST /a2a
-Authorization: Bearer your-api-key   # OMNIROUTE_API_KEY ayarlanmadığı sürece isteğe bağlıdır
-Content-Type: application/json
-
-{
-  "jsonrpc": "2.0",
-  "id": 1,
-  "method": "message/send",
-  "params": {
-    "skill": "smart-routing",
-    "messages": [{"role": "user", "content": "Route this coding task"}]
-  }
-}
-```
-
-Desteklenen yöntemler (tümü `settings.a2aEnabled` ayarına bağlıdır):
-
-| Yöntem           | Açıklama                                                         |
-| ---------------- | ---------------------------------------------------------------- |
-| `message/send`   | Eşzamanlı beceri yürütme; `{task, artifacts, metadata}` döndürür |
-| `message/stream` | Aynı beceri kümesinin SSE üzerinden akışlı yürütülmesi           |
-| `tasks/get`      | Bir görevi `taskId` ile getirir                                  |
-| `tasks/cancel`   | Bir görevi `taskId` ile iptal eder                               |
-
-Yerleşik beceriler: `smart-routing`, `quota-management`, `provider-discovery`, `cost-analysis`, `health-report`.
-
-### Aracı Kartı
-
-```bash
-GET /.well-known/agent.json
-```
-
-Herkese açık A2A aracı kartını (ad, açıklama, yetenekler, beceri kataloğu, kimlik doğrulama şeması) döndürür — herkese açık olarak 1 saat önbelleğe alınır. Kimlik doğrulama gerekmez.
-
 ### REST yardımcıları
 
 | Yöntem | Yol                          | Açıklama                                                                                                                |
 | ------ | ---------------------------- | ----------------------------------------------------------------------------------------------------------------------- |
-| GET    | `/api/a2a/status`            | A2A etkinlik durumu + görev istatistikleri + önbelleğe alınmış aracı kartı özeti                                        |
 | GET    | `/api/a2a/tasks`             | Görevleri listeler — `?state=submitted\|working\|completed\|failed\|cancelled`, `?skill=`, `?limit=` (≤200), `?offset=` |
 | POST   | `/api/a2a/tasks`             | (REST yardımcısı olarak uygulanmamıştır — JSON-RPC `message/send` aracılığıyla oluşturun)                               |
 | GET    | `/api/a2a/tasks/[id]`        | Tek bir görevi getirir                                                                                                  |
@@ -1900,12 +1836,8 @@ Herkese açık A2A aracı kartını (ad, açıklama, yetenekler, beceri kataloğ
 | GET | `/api/cloud/models/alias` | Bulut eşitlemesine sunulan model takma adlarını listeler |
 | GET | `/api/assess` | En son analiz sınıflandırmalarını okur (sağlayıcı/model başına) |
 | POST | `/api/assess` | Bir analiz çalıştırır — gövde: `{scope: {type:"all"}                                                   | {type:"provider", providerId} | {type:"model", modelId}, trigger?}` |
-| GET | `/api/evals` | Yerleşik değerlendirme paketlerini + en son çalıştırmaları listeler |
-| POST | `/api/evals` | Bir değerlendirme çalıştırmasını tetikler |
-| POST | `/api/evals/suites` | Özel bir değerlendirme paketi oluşturur — gövde `evalSuiteSaveSchema` tarafından doğrulanır |
-| GET | `/api/evals/suites/[id]` | Özel bir değerlendirme paketini getirir |
 
-**Kimlik doğrulama:** `/api/cloud/auth`, bir Bearer anahtarını doğrudan doğrular ve her bağlantının maskelenmiş anahtarı ile `projectId` değerini yalnızca `manage` / `admin` kapsamına sahip bir anahtar için döndürür; diğer `/api/cloud/*`, `/api/evals/*` ve `/api/assess` rotaları yönetim oturumu/API anahtarı gerektirir. `/api/assess` POST, ayırt edici birleşim kapsamı şemasıyla `validateBody` kullanır.
+**Kimlik doğrulama:** `/api/cloud/auth`, bir Bearer anahtarını doğrudan doğrular ve her bağlantının maskelenmiş anahtarı ile `projectId` değerini yalnızca `manage` / `admin` kapsamına sahip bir anahtar için döndürür; diğer `/api/cloud/*` ve `/api/assess` rotaları yönetim oturumu/API anahtarı gerektirir. `/api/assess` POST, ayırt edici birleşim kapsamı şemasıyla `validateBody` kullanır.
 
 ---
 
@@ -2227,5 +2159,3 @@ Dört kimlik bilgisi ailesi (pano oturumu, yerel CLI belirteci, `oma_live_…` E
 - `requireLogin`, `/api/settings/require-login` aracılığıyla açılıp kapatılabilir
 - `/v1/*` rotaları, `REQUIRE_API_KEY=true` olduğunda isteğe bağlı olarak Bearer API anahtarı gerektirir
 - Bu referansta "yönetim belirteci" / "yönetim kapsamlı API anahtarı", söz konusu kılavuzdaki ailelerden birini ifade eder; tanımlanmamış ek bir gizli bilgi türünü değil
-
-> **Geriye dönük uyumsuz değişiklik (v3.8.0)** — `/api/v1/agents/tasks/*` ve bekleme süresi yönetimi uç noktaları artık **yönetim kimlik doğrulaması** (pano `auth_token` çerezi veya yönetim kapsamlı bir API anahtarı) gerektiriyor. Daha önce bu rotaları kimlik doğrulaması olmadan çağıran istemciler `401 Unauthorized` yanıtını alacaktır. `588a0333` commit'ine bakın (`fix(auth): require management auth for agent and cooldown APIs`).

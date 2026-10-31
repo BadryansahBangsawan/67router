@@ -43,8 +43,6 @@ Cykeln v3.7.x → v3.8.0 lade till automatisk routing utan konfiguration, nya le
 - 🤝 **GitLab Duo OAuth-leverantör** — logga in med GitLab-autentiseringsuppgifter
 - 🧠 **Reasoning Replay Cache** — hybridlagring av resonemangsspår i minnet och SQLite
 
-📚 **Relaterad dokumentation:** [Ramverk för färdigheter](../frameworks/SKILLS.md) · [Minnessystem](../frameworks/MEMORY.md) · [Molnagenter](../frameworks/CLOUD_AGENT.md) · [Webhooks](../frameworks/WEBHOOKS.md) · [Reasoning Replay Cache](../routing/REASONING_REPLAY.md)
-
 ---
 
 ## 🔌 Leverantörer
@@ -104,12 +102,6 @@ Omfattande användningsanalys med tokenförbrukning, kostnadsuppskattningar, akt
 Fyra lägen för felsökning av API-översättningar: **Playground** (formatkonverterare), **Chat Tester** (liveförfrågningar), **Test Bench** (batchtester) och **Live Monitor** (realtidsström).
 
 ![Translator Playground](../screenshots/05-translator.png)
-
----
-
-## 🎮 Model Playground _(v2.0.9+)_
-
-Testa valfri modell direkt från kontrollpanelen. Välj leverantör, modell och endpoint, skriv prompter med Monaco Editor, strömma svar i realtid, avbryt mitt i strömningen och visa tidsmätvärden.
 
 ---
 

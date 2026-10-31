@@ -749,7 +749,6 @@ omniroute cache                        # Trạng thái bộ nhớ đệm
 omniroute cache clear                  # Xóa bộ nhớ đệm ngữ nghĩa + chữ ký
 
 omniroute mcp status | restart         # Trạng thái / khởi động lại máy chủ MCP
-omniroute a2a status | card            # Trạng thái máy chủ A2A / thẻ tác nhân
 
 omniroute tunnel list | create | stop  # Quản lý đường hầm (cloudflare/tailscale/ngrok)
 omniroute env show | get <k> | set <k> <v>  # Kiểm tra / đặt biến môi trường (tạm thời)

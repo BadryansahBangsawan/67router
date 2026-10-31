@@ -43,8 +43,6 @@
 - 🤝 **GitLab Duo OAuth አቅራቢ** — በGitLab ማረጋገጫዎች ይግቡ
 - 🧠 **Reasoning Replay Cache** — የማመዛዘኛ ዱካዎችን በድብልቅ የማስታወሻ-ውስጥ + SQLite ቋሚ ማከማቻ
 
-📚 **ተዛማጅ ሰነዶች፦** [የክህሎት ማዕቀፍ](../frameworks/SKILLS.md) · [የማስታወሻ ስርዓት](../frameworks/MEMORY.md) · [የደመና ወኪሎች](../frameworks/CLOUD_AGENT.md) · [Webhooks](../frameworks/WEBHOOKS.md) · [Reasoning Replay Cache](../routing/REASONING_REPLAY.md)
-
 ---
 
 ## 🔌 አቅራቢዎች
@@ -104,12 +102,6 @@
 የAPI ትርጉሞችን ለማረም አራት ሁነታዎች፦ **Playground** (የቅርጸት መቀየሪያ)፣ **Chat Tester** (ቀጥታ ጥያቄዎች)፣ **Test Bench** (የጥቅል ሙከራዎች) እና **Live Monitor** (የእውነተኛ ጊዜ ዥረት)።
 
 ![Translator Playground](../screenshots/05-translator.png)
-
----
-
-## 🎮 Model Playground _(v2.0.9+)_
-
-ማንኛውንም ሞዴል በቀጥታ ከዳሽቦርዱ ይሞክሩ። አቅራቢ፣ ሞዴል እና መጨረሻ ነጥብ ይምረጡ፣ በMonaco Editor ጥያቄዎችን ይጻፉ፣ ምላሾችን በእውነተኛ ጊዜ ዥረት ይቀበሉ፣ በዥረቱ መሀል ያቋርጡ እና የጊዜ አፈጻጸም መለኪያዎችን ይመልከቱ።
 
 ---
 

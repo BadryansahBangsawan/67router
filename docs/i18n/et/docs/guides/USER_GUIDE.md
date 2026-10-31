@@ -24,7 +24,6 @@ Täielik juhend teenusepakkujate konfigureerimiseks, kombinatsioonide loomiseks,
 - [Oskuste süsteem](#-skills-system)
 - [Mälusüsteem](#-memory-system)
 - [Veebihaagid (Webhooks)](#-webhooks)
-- [Pilveagendid](#-cloud-agents)
 - [Programmiline haldamine](#-programmatic-management)
 - [Sisemine CLI](#-internal-cli)
 - [Töölauarakendus (Electron)](#-desktop-application-electron)
@@ -1242,8 +1241,6 @@ Kasuta SSE URL-i `http://localhost:20128/api/mcp/sse` ja **Dashboard → API Key
 
 ### Ulatused (Scopes)
 
-MCP defineerib praegu 32 nimelist ulatust (scope). Igat Bearer-võtit saab piirata konkreetsetele ulatustele — vaata autoriteetset ulatuste ja tööriistade loetelu dokumendist [MCP-SERVER.md](../frameworks/MCP-SERVER.md) ning JSON-RPC skeemi dokumendist [A2A-SERVER.md](../frameworks/A2A-SERVER.md).
-
 ---
 
 ## 🧠 Oskuste süsteem
@@ -1252,7 +1249,6 @@ MCP defineerib praegu 32 nimelist ulatust (scope). Igat Bearer-võtit saab piira
 
 - **Turuplatsi kasutajaliides** — Sirvi ja installi oskusi jaotisest **Dashboard → Skills**
 - **Võtmepõhised õigusulatused** — Piira, millised API-võtmed saavad milliseid oskusi käivitada
-- **Kohandatud oskused** — Lisa TypeScript-fail kausta `src/lib/a2a/skills/`, registreeri see, ja see muutub kohe A2A kaudu käivitatavaks
 
 Täielik viide: [SKILLS.md](../frameworks/SKILLS.md).
 
@@ -1281,18 +1277,6 @@ Telli 67router'i sündmused reaalajas jälgimiseks ja automatiseerimiseks.
 - Uuestisaatmised: 3 katset astendava tagasilangusega, seejärel surnud kirjade järjekord (dead-letter queue)
 
 Täielik skeem [WEBHOOKS.md](../frameworks/WEBHOOKS.md)-s.
-
----
-
-## ☁️ Pilveagendid
-
-67router integreerub pilvekoodimisagentidega (**OpenAI Codex Cloud**, **Devin**, **Jules**, **Antigravity**), mis võimaldab lähetada kaugtoimivaid ülesandeid samast juhtpaneelist, mis haldab teie kohalikku suunamist.
-
-- Loo ülesandeid jaotises **Dashboard → Cloud Agents** või kasutades `POST /api/v1/agents/tasks`
-- Jälgi olekut, logisid ja tulemfaile igal ülesandel
-- Igal teenusepakkujal on oma API-võti — mandaadid ei lahku kunagi 67router'i eksemplarist
-
-Täielik viide: [CLOUD_AGENT.md](../frameworks/CLOUD_AGENT.md).
 
 ---
 
@@ -1349,7 +1333,6 @@ omniroute restore [<timestamp>]    # Taastamine hetktõmmisest
 omniroute health                   # Detailne terviseseisund (katkestid, vahemälu, mälu)
 omniroute quota                    # Teenusepakkuja kvoodi kasutus
 omniroute mcp status               # MCP serveri olek
-omniroute a2a status               # A2A serveri olek
 omniroute tunnel list|create|stop  # Cloudflare/Tailscale/ngrok tunnelid
 omniroute reset-password           # Administraatori parooli lähtestamine
 omniroute --mcp                    # Käivita MCP server stdio kaudu

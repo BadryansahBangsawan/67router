@@ -573,5 +573,4 @@ Zod валидација при учитавању модула обезбеђу
 - [REPOSITORY_MAP.md](../architecture/REPOSITORY_MAP.md) — преглед директоријум по директоријум
 - [AUTO-COMBO.md](../routing/AUTO-COMBO.md) — оцењивање на основу 16 фактора
 - [MCP-SERVER.md](./MCP-SERVER.md) — MCP сервер
-- [A2A-SERVER.md](./A2A-SERVER.md) — A2A сервер
 - Изворни код: `open-sse/` (400+ датотека, ~143K линија кода)

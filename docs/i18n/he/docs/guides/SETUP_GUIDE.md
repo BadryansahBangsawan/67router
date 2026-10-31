@@ -248,26 +248,6 @@ claude mcp add-server omniroute --type http --url http://localhost:20128/api/mcp
 
 **תיעוד MCP מלא:** [README של שרת MCP](../../open-sse/mcp-server/README.md) — 110 כלים, הגדרות IDE ולקוחות Python/TS/Go.
 
-### הגדרת A2A (פרוטוקול סוכן-לסוכן)
-
-אמתו את כרטיס הסוכן:
-
-```bash
-curl http://localhost:20128/.well-known/agent.json
-```
-
-שלחו משימה:
-
-```bash
-curl -X POST http://localhost:20128/a2a \
-  -H 'content-type: application/json' \
-  -d '{"jsonrpc":"2.0","id":"quickstart","method":"message/send","params":{"skill":"quota-management","messages":[{"role":"user","content":"Give me a short quota summary."}]}}'
-```
-
-**תיעוד A2A מלא:** [README של שרת A2A](../../src/lib/a2a/README.md) — JSON-RPC 2.0, מיומנויות, הזרמה ומחזור חיי משימה.
-
----
-
 ## הגדרת זמני קצוב
 
 ### זמני קצוב בסיסיים

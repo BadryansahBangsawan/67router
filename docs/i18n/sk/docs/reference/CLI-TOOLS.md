@@ -750,7 +750,6 @@ omniroute cache                        # Stav vyrovnávacej pamäte
 omniroute cache clear                  # Vymazanie sémantickej vyrovnávacej pamäte a vyrovnávacej pamäte podpisov
 
 omniroute mcp status | restart         # Stav/reštart servera MCP
-omniroute a2a status | card            # Stav servera A2A/karta agenta
 
 omniroute tunnel list | create | stop  # Správa tunelov (cloudflare/tailscale/ngrok)
 omniroute env show | get <k> | set <k> <v>  # Kontrola/nastavenie premenných prostredia (dočasne)

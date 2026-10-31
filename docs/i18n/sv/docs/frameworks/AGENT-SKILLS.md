@@ -44,7 +44,6 @@ src/app/api/agent-skills/
   generate/route.ts                    — POST /api/agent-skills/generate (autentisering krävs)
 
 open-sse/mcp-server/tools/agentSkillTools.ts  — 3 MCP-verktyg (lista, hämta, täckning)
-src/lib/a2a/skills/listCapabilities.ts        — A2A-färdighet: list-capabilities
 ```
 
 ---
@@ -140,8 +139,6 @@ A2A-färdigheten `list-capabilities` returnerar hela katalogen med 45 färdighet
 }
 ```
 
-Se [A2A-SERVER.md](./A2A-SERVER.md) för protokollinformation.
-
 ---
 
 ## Katalog — 45 färdighets-ID:n
@@ -189,12 +186,11 @@ Se [A2A-SERVER.md](./A2A-SERVER.md) för protokollinformation.
 | `cli-contexts`        | cli-contexts       | `omniroute contexts`    |
 | `cli-cost-usage`      | cli-cost-usage     | `omniroute cost`        |
 | `cli-mcp`             | cli-mcp            | `omniroute mcp`         |
-| `cli-a2a`             | cli-a2a            | `omniroute a2a`         |
 | `cli-tunnel`          | cli-tunnel         | `omniroute tunnel`      |
 | `cli-backup-sync`     | cli-backup-sync    | `omniroute backup`      |
 | `cli-policy-audit`    | cli-policy-audit   | `omniroute policy`      |
 | `cli-batches`         | cli-batches        | `omniroute batch`       |
-| `cli-eval`            | cli-eval           | `omniroute eval`        |
+| `cli-eval`            | cli-eval           | `omniroute simulate`    |
 | `cli-plugins-skills`  | cli-plugins-skills | `omniroute plugins`     |
 | `cli-setup`           | cli-setup          | `omniroute setup`       |
 | `cli-skill-collector` | cli-setup          | `omniroute skills`      |
@@ -312,6 +308,5 @@ curl "http://localhost:20128/api/agent-skills/coverage"
 
 - [SKILLS.md](./SKILLS.md) — Omni Skills-ramverket (LLM-verktygsinjektion + marknadsplats)
 - [MCP-SERVER.md](./MCP-SERVER.md) — MCP-verktygskatalog (`omniroute_agent_skills_*`-verktyg)
-- [A2A-SERVER.md](./A2A-SERVER.md) — A2A-protokoll (`list-capabilities`-färdighet)
 - `src/lib/agentSkills/` — katalog, generator, parsrar
 - `skills/` — genererade SKILL.md-filer (45 poster)

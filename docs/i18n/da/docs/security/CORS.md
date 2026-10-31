@@ -68,20 +68,6 @@ at lade CORS-**preflight lykkes** på administrationsroutes — som stadig kræv
 der ikke kan leveres af en side fra en anden oprindelse. Det er **ikke** en vektor til sessionskapring eller
 tyveri af legitimationsoplysninger i den fælles CORS-kode.
 
-### Én reel undtagelse — `/api/v1/agents/`
-
-Cloud-Agent-routes (`/api/v1/agents/{health,credentials,tasks,tasks/[id]}`) angiver
-deres **egne** CORS-headere
-(`src/lib/cloudAgent/api.ts`, `getCloudAgentCorsHeaders`) og udsender **faktisk**
-`Access-Control-Allow-Origin: <origin>|*` sammen med
-`Access-Control-Allow-Credentials: true`. Dette er den eneste flade, hvor
-returnering af oprindelsen og legitimationsoplysninger eksisterer samtidigt, og den er **uafhængig af
-`CORS_ALLOW_ALL`**. Disse routes er administrationsgodkendte
-(`requireManagementAuth`); operatører, der eksponerer dashboardet uden for værtsmaskinen, bør være
-opmærksomme på, at dette er det eneste sted, hvor en legitimationsoplysningsbaseret læsning på tværs af oprindelser tillades af
-svarheaderne. En stramning til en eksplicit tilladelsesliste spores
-separat fra denne CORS-vejledning.
-
 ## Tjekliste til produktion
 
 - **Indstil aldrig `CORS_ALLOW_ALL=true` i produktion.** Lad den være udefineret.
@@ -160,7 +146,6 @@ Security), ikke i proxyen.
 | Runtime-status for dashboardet                  | `src/app/api/settings/authz-inventory/route.ts`                      |
 | Advarselsbanner på dashboardet                  | `src/app/(dashboard)/dashboard/settings/components/AuthzSection.tsx` |
 | Feltet Tilladte CORS-origins                    | `src/app/(dashboard)/dashboard/settings/components/SecurityTab.tsx`  |
-| Cloud-Agents CORS pr. rute (undtagelsen)        | `src/lib/cloudAgent/api.ts`                                          |
 
 ## Se også
 

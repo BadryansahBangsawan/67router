@@ -24,7 +24,6 @@ Sağlayıcıları yapılandırma, kombinasyonlar oluşturma, CLI araçlarını e
 - [Yetenek Sistemi](#-skills-system)
 - [Bellek Sistemi](#-memory-system)
 - [Webhook'lar](#-webhooks)
-- [Bulut Aracıları](#-cloud-agents)
 - [Programatik Yönetim](#-programmatic-management)
 - [Dahili CLI](#-internal-cli)
 - [Masaüstü Uygulaması (Electron)](#-desktop-application-electron)
@@ -1237,8 +1236,6 @@ macOS'ta `~/Library/Application Support/Claude/claude_desktop_config.json` dosya
 
 ### Kapsamlar
 
-MCP şu anda 32 adlandırılmış kapsam tanımlar. Her Bearer anahtarı belirli kapsamlarla sınırlandırılabilir — kapsamların ve araçların kesin listesi için [MCP-SERVER.md](../frameworks/MCP-SERVER.md), JSON-RPC şeması içinse [A2A-SERVER.md](../frameworks/A2A-SERVER.md) dosyasına bakın.
-
 ---
 
 ## 🧠 Beceri Sistemi
@@ -1247,7 +1244,6 @@ MCP şu anda 32 adlandırılmış kapsam tanımlar. Her Bearer anahtarı belirli
 
 - **Pazar Yeri Arayüzü** — **Panel → Beceriler** bölümünden becerilere göz atın ve bunları yükleyin
 - **Anahtar başına kapsamlar** — Hangi API anahtarlarının hangi becerileri çağırabileceğini kısıtlayın
-- **Özel beceriler** — `src/lib/a2a/skills/` dizinine bir TypeScript dosyası ekleyip kaydedin; beceri A2A üzerinden hemen çağrılabilir hâle gelir
 
 Tam referans: [SKILLS.md](../frameworks/SKILLS.md).
 
@@ -1276,18 +1272,6 @@ Gerçek zamanlı izleme ve otomasyon için 67router olaylarına abone olun.
 - Yeniden denemeler: üstel geri çekilme ile 3 deneme, ardından teslim edilemeyen iletiler kuyruğu
 
 Şemanın tamamı için bkz. [WEBHOOKS.md](../frameworks/WEBHOOKS.md).
-
----
-
-## ☁️ Bulut Ajanları
-
-67router, uzun süreli görevleri yerel yönlendirmenizi yönettiğiniz aynı panelden gönderebilmeniz için bulut kodlama ajanlarıyla (**OpenAI Codex Cloud**, **Devin**, **Jules**, **Antigravity**) entegre olur.
-
-- **Panel → Bulut Ajanları** bölümünden veya `POST /api/v1/agents/tasks` aracılığıyla görevler oluşturun
-- Her görev için durumu, günlükleri ve çıktıları takip edin
-- Her sağlayıcı için kendi API anahtarınızı kullanın — kimlik bilgileri 67router örneğinden asla ayrılmaz
-
-Tam referans: [CLOUD_AGENT.md](../frameworks/CLOUD_AGENT.md).
 
 ---
 
@@ -1344,7 +1328,6 @@ omniroute restore [<timestamp>]    # Bir anlık görüntüden geri yükle
 omniroute health                   # Ayrıntılı sistem durumu (devre kesiciler, önbellek, bellek)
 omniroute quota                    # Sağlayıcı kota kullanımı
 omniroute mcp status               # MCP sunucusu durumu
-omniroute a2a status               # A2A sunucusu durumu
 omniroute tunnel list|create|stop  # Cloudflare/Tailscale/ngrok tünelleri
 omniroute reset-password           # Yönetici parolasını sıfırla
 omniroute --mcp                    # MCP sunucusunu stdio üzerinden başlat

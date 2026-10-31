@@ -128,13 +128,11 @@ Huvudsidor under `src/app/(dashboard)/dashboard/`:
 - `/dashboard/limits` — kvot-/hastighetskontroller
 - `/dashboard/cli-tools` — introduktion till CLI, identifiering av körmiljö, konfigurationsgenerering
 - `/dashboard/agents` — identifierade ACP-agenter + registrering av anpassade agenter
-- `/dashboard/cloud-agents` — uppgifter för molnbaserade agenter (Codex Cloud, Devin, Jules) och uppgifternas livscykel
 - `/dashboard/skills` — A2A-färdighetsregister, körning i sandlåda, inbyggd färdighetskatalog
 - `/dashboard/memory` — inspektion och hämtning av beständigt konversationsminne
 - `/dashboard/webhooks` — utgående webhook-prenumerationer, rotation av hemligheter, statistik över återförsök
 - `/dashboard/batch` — inskickning av batchjobb och förlopp
 - `/dashboard/cache` — statistik för genomläsnings- och resonemangscache, kontroller för avhysning
-- `/dashboard/playground` — interaktiv chattmiljö mot valfri konfigurerad kombination/modell
 - `/dashboard/changelog` — ändringsloggvisare i appen (renderar `CHANGELOG.md`)
 - `/dashboard/system` — körningsdiagnostik, versionsinformation, vy för miljövalidering
 - `/dashboard/onboarding` — konfigurationsguide vid första körningen för nya installationer
@@ -252,7 +250,6 @@ Hanteringsområden:
 - Budget: `src/app/api/usage/budget` (GET/POST)
 - Reservkedjor: `src/app/api/fallback/chains` (GET/POST/DELETE)
 - Efterlevnadsgranskning: `src/app/api/compliance/audit-log` (GET, med sidindelning + strukturerade metadata)
-- Utvärderingar: `src/app/api/evals` (GET/POST), `src/app/api/evals/[suiteId]` (GET)
 - Policyer: `src/app/api/policies` (GET/POST)
 - Synkroniseringstoken: `src/app/api/sync/tokens` (GET/POST), `src/app/api/sync/tokens/[id]` (GET/DELETE)
 - Konfigurationspaket: `src/app/api/sync/bundle` (GET, ETag-versionshanterad ögonblicksbild av inställningar/leverantörer/kombinationer/nycklar)
@@ -316,7 +313,6 @@ Domänlagermoduler:
 - Tidsgräns för hämtning: `src/shared/utils/fetchTimeout.ts`
 - Telemetri för förfrågningar: `src/shared/utils/requestTelemetry.ts`
 - Regelefterlevnad/granskning: `src/lib/compliance/index.ts`
-- Utvärderingskörare: `src/lib/evals/evalRunner.ts`
 - Beständig lagring av domäntillstånd: `src/lib/db/domainState.ts` — SQLite CRUD för reservkedjor, budgetar, kostnadshistorik, utelåsningstillstånd och kretsbrytare
 
 OAuth-leverantörsmoduler (27 enskilda filer under `src/lib/oauth/providers/`):
@@ -385,23 +381,6 @@ Viktiga funktioner:
 
 Fullständig algoritmisk information (faktorformler, viktjustering) finns i
 [`docs/routing/AUTO-COMBO.md`](../routing/AUTO-COMBO.md).
-
-### B. Molnagenter
-
-Molnagenter kapslar in tredjepartsplattformar för värdbaserade kodagenter (Codex Cloud, Devin,
-Jules) bakom en enhetlig, databasstödd livscykel för uppgifter. Alla slutpunkter för att skapa och inspektera
-uppgifter kräver hanteringsautentisering.
-
-- Modulrot: `src/lib/cloudAgent/` (`baseAgent.ts`, `registry.ts`, `api.ts`,
-  `types.ts`, `db.ts`, samt underkataloger per agent under `agents/`)
-- Implementeringar per agent: `agents/codex/`, `agents/devin/`, `agents/jules/`
-- Publika slutpunkter: `/api/v1/agents/tasks/*` (lista/skapa/hämta/avbryt)
-- Hanteringsslutpunkter: `/api/cloud/*` (etablering, status, batch)
-- Kontrollpanel: `/dashboard/cloud-agents`
-- Lagring: tabellen `cloud_agent_tasks`
-
-Information om etablering och OAuth-specifika detaljer för respektive agent finns i
-[`docs/frameworks/CLOUD_AGENT.md`](../frameworks/CLOUD_AGENT.md).
 
 ### C. Skyddsräcken
 

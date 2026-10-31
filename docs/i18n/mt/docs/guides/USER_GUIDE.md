@@ -24,7 +24,6 @@ Gwida kompluta għall-konfigurazzjoni tal-fornituri, il-ħolqien ta’ kombinazz
 - [Sistema ta' Ħiliet (Skills)](#-skills-system)
 - [Sistema ta' Memorja](#-memory-system)
 - [Webhooks](#-webhooks)
-- [Aġenti Cloud](#-cloud-agents)
 - [Ġestjoni Programmattika](#-programmatic-management)
 - [CLI Intern](#-internal-cli)
 - [Applikazzjoni Desktop (Electron)](#-desktop-application-electron)
@@ -1236,8 +1235,6 @@ Ipprovdilhom l-URL SSE `http://localhost:20128/api/mcp/sse` u API key ġenerata 
 
 ### Ambiti
 
-L-MCP bħalissa jiddefinixxi 32 ambitu magħruf. Kull Bearer key jista’ jiġi limitat għal ambitti speċifiċi — ara [MCP-SERVER.md](../frameworks/MCP-SERVER.md) għall-inventarju awtorevoli tal-ambiti u l-għodod, u [A2A-SERVER.md](../frameworks/A2A-SERVER.md) għas-skema JSON-RPC.
-
 ---
 
 ## 🧩 Sistema ta' Ħiliet
@@ -1246,7 +1243,6 @@ L-MCP bħalissa jiddefinixxi 32 ambitu magħruf. Kull Bearer key jista’ jiġi 
 
 - **Interfaċi tal-Marketplace** — Stenna u tinstalla ħiliet minn **Dashboard → Ħiliet**
 - **Ambiti fuq iċ-ċavetta** — Irstrinġu liema ċavetti tal-API jistgħu jsejħu liema ħiliet
-- **Ħiliet personalizzati** — Waqqa' fajl TypeScript f' `src/lib/a2a/skills/`, irreġistrah, u immedjatament isir invokabbli permezz tal-A2A
 
 Referenza sħiħa: [SKILLS.md](../frameworks/SKILLS.md).
 
@@ -1275,18 +1271,6 @@ Abbona għall-avvenimenti tal-67router għal monitoraġġ u awtomazzjoni f'ħin 
 - Storji: 3 attentat b'retroċessjoniment esponenzjali, imbagħad il-queue tal-mewt
 
 Is-sema sħiħa f' [WEBHOOKS.md](../frameworks/WEBHOOKS.md).
-
----
-
-## ☁️ Aġenti tal-Cloud
-
-67router jintegra ma' aġenti tal-kodiċi tal-cloud (**OpenAI Codex Cloud**, **Devin**, **Jules**, **Antigravity**) sabiex tista' tiddispatchja xogħlijiet li jdumu fit-tul minn l-istess dashboard li tiġġestixxi r-rotta lokali tiegħek.
-
-- Oħloq xogħlijiet f' **Dashboard → Aġenti tal-Cloud** jew permezz ta' `POST /api/v1/agents/tasks`
-- Iġbor l-istatus, il-logs, u l-artifatti għal kull xogħol
-- Ġib ċavetta tal-API tiegħek stess għal kull fornitur — il-kredenzjali qatt ma ħarġu minn l-istanza tal-67router
-
-Referenza sħiħa: [CLOUD_AGENT.md](../frameworks/CLOUD_AGENT.md).
 
 ---
 
@@ -1343,7 +1327,6 @@ omniroute restore [<timestamp>]    # Irrestorja minn fenfas
 omniroute health                   # Saħħa dettaljata (breakers, cache, memorja)
 omniroute quota                    # Użu tal-kwota tal-fornitur
 omniroute mcp status               # Statut tal-server MCP
-omniroute a2a status               # Statut tal-server A2A
 omniroute tunnel list|create|stop  # Tunelli Cloudflare/Tailscale/ngrok
 omniroute reset-password           # Ġeddid il-password tal-amministratur
 omniroute --mcp                    # Daħħal server MCP permezz ta' stdio

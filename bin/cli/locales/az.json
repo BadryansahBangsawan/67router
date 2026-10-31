@@ -390,34 +390,6 @@
       "description": "MCP audit jurnalı (audit --source mcp üçün alias)"
     }
   },
-  "a2a": {
-    "skills": {
-      "description": "Agent kartındakı mövcud A2A bacarıqlarını siyahıya alın"
-    },
-    "invoke": {
-      "description": "A2A bacarığını çağırın və tapşırıq ID-sini qaytarın",
-      "input": "JSON giriş obyekti",
-      "input_file": "JSON giriş faylına yol",
-      "wait": "Qayıtmazdan əvvəl tapşırığın tamamlanmasını gözləyin",
-      "timeout": "Tamamlanmanı gözləmə müddəti, ms ilə (standart: 60000)"
-    },
-    "tasks": {
-      "description": "A2A tapşırıqlarını idarə edin",
-      "list": {
-        "status": "Statusa görə filtrləyin",
-        "skill": "Bacarıq ID-sinə görə filtrləyin"
-      },
-      "watch": {
-        "description": "Tamamlanana qədər tapşırıq statusunu yoxlayın"
-      },
-      "stream": {
-        "description": "Tapşırığın icra hadisələrini SSE vasitəsilə yayımlayın"
-      },
-      "logs": {
-        "description": "Tapşırıq mesajlarını və artefaktlarını göstərin"
-      }
-    }
-  },
   "policy": {
     "description": "67router avtorizasiya siyasətlərini idarə edin",
     "list": {
@@ -696,99 +668,6 @@
       "provider": "Ləğv ediləcək provayder ID-si",
       "connection_id": "ID-yə görə konkret bağlantını ləğv et",
       "yes": "Təsdiq sorğusunu ötür"
-    }
-  },
-  "cloud": {
-    "description": "Bulud süni intellekt agenti tapşırıqlarını idarə et (codex, devin, jules)",
-    "agents": {
-      "description": "Mövcud bulud agentlərini siyahıla"
-    },
-    "agent": {
-      "description": "{agent} bulud agentinin tapşırıqlarını idarə et",
-      "auth": {
-        "description": "{agent} üçün OAuth vasitəsilə avtorizasiya et"
-      }
-    },
-    "task": {
-      "description": "Bulud agenti tapşırıqlarını idarə et",
-      "create": {
-        "description": "Yeni agent tapşırığı yarat",
-        "title": "Tapşırığın başlığı (standart olaraq sorğunun ilk 80 simvolu)",
-        "prompt": "Tapşırıq sorğusunun mətni",
-        "prompt_file": "Sorğunu fayldan oxu",
-        "repo": "Tapşırıq üçün klonlanacaq repozitoriyanın URL-si",
-        "branch": "İstifadə ediləcək budağın adı",
-        "metadata": "JSON metadata obyekti"
-      },
-      "list": {
-        "description": "Agent tapşırıqlarını siyahıla",
-        "status": "Statusa görə filtrlə (running|completed|failed|cancelled)",
-        "limit": "Maksimum nəticə sayı (standart: 50)"
-      },
-      "get": {
-        "description": "ID-yə görə tapşırıq təfərrüatlarını əldə et"
-      },
-      "status": {
-        "description": "Tapşırıq statusunu göstər (running|completed|failed|cancelled)"
-      },
-      "cancel": {
-        "description": "İcra olunan tapşırığı ləğv et",
-        "yes": "Təsdiq sorğusunu ötür"
-      },
-      "approve": {
-        "description": "İcraya başlamaq üçün agent planını təsdiqlə"
-      },
-      "message": {
-        "description": "İcra olunan tapşırığa mesaj göndər"
-      }
-    },
-    "sources": {
-      "description": "Tapşırıq tərəfindən yaradılmış mənbə fayllarını siyahıla"
-    }
-  },
-  "eval": {
-    "description": "Qiymətləndirmə paketlərini və icralarını idarə et",
-    "suites": {
-      "description": "Qiymətləndirmə paketlərini idarə et",
-      "list": {
-        "description": "Qiymətləndirmə dəstlərini siyahıya al"
-      },
-      "get": {
-        "description": "Qiymətləndirmə dəstinin təfərrüatlarını ID üzrə əldə et"
-      },
-      "create": {
-        "description": "JSON faylından qiymətləndirmə dəsti yarat",
-        "file": "Dəst tərifinin JSON faylına gedən yol"
-      }
-    },
-    "run": {
-      "description": "Dəst üçün qiymətləndirmə icrasını başlat",
-      "model": "Qiymətləndiriləcək model ID-si (standart: auto)",
-      "combo": "Adına görə konkret kombinasiyanı məcburi seç",
-      "concurrency": "Paralel nümunələrin sayı (standart: 4)",
-      "tag": "Sonradan filtrləmək üçün bu icranı teqlə",
-      "watch": "İcra tamamlanana qədər gedişatını izlə"
-    },
-    "list": {
-      "description": "Qiymətləndirmə icralarını siyahıya al",
-      "suite": "Dəst ID-sinə görə filtrlə",
-      "status": "Statusa görə filtrlə",
-      "since": "Bu vaxt möhüründən sonrakı icraları qaytar",
-      "limit": "Maksimum nəticə sayı (standart: 50)"
-    },
-    "get": {
-      "description": "Qiymətləndirmə icrasının təfərrüatlarını ID üzrə əldə et"
-    },
-    "results": {
-      "description": "Qiymətləndirmə icrası üçün nümunə nəticələrini göstər",
-      "failed": "Yalnız uğursuz nümunələri göstər"
-    },
-    "cancel": {
-      "description": "Davam edən qiymətləndirməni ləğv et",
-      "yes": "Təsdiq sorğusunu keç"
-    },
-    "scorecard": {
-      "description": "Tamamlanmış qiymətləndirmə icrası üçün qiymət cədvəlini göstər"
     }
   },
   "program": {

@@ -4,7 +4,6 @@
 
 ---
 
-> **מקור:** `src/lib/{a2a,acp,cloudAgent}/`, `src/app/api/{a2a,acp,cloud}/`, `src/app/api/v1/agents/`
 > **עדכון אחרון:** 2026-06-28 — v3.8.40
 
 67router חושף שלושה ממשקים שונים הקשורים לסוכנים. במבט ראשון הם נראים דומים, אך הם פותרים בעיות שונות. השתמשו בדף זה כדי לבחור את הממשק המתאים.
@@ -20,52 +19,6 @@
 שלושת הממשקים בלתי תלויים זה בזה — ניתן לבחור כל תת-קבוצה שלהם.
 
 ## עץ החלטה
-
-```
-האם אתם זקוקים לשירות ענן שיבצע עבודה מחוץ למחשב זה (Codex Cloud / Cursor Cloud / Devin / Jules)?
-├─ כן → סוכני ענן (POST /api/v1/agents/tasks)
-└─ לא → המשיכו
-    │
-    האם יש לכם סוכן עמית שתומך ב-A2A ומעוניין לשתף פעולה?
-    ├─ כן → A2A (POST /a2a)
-    └─ לא → המשיכו
-        │
-        האם עליכם להציג / להגדיר סוכני תכנות מסוג CLI המותקנים מקומית?
-        ├─ כן → ACP (GET /api/acp/agents)
-        └─ לא → השתמשו ב-/v1/chat/completions הרגיל
-```
-
-## 1. A2A — סוכן-לסוכן
-
-**מפרט:** [A2A v0.3](https://a2a-protocol.org)
-**נקודת הקצה של 67router:** `POST /a2a` (JSON-RPC 2.0)
-**כרטיס סוכן:** `GET /.well-known/agent.json`
-
-### מתי להשתמש
-
-- בעת בניית מערכת מרובת סוכנים שבה 67router הוא אחד מהעמיתים
-- בעת חשיפת יכולות הניתוב החכמות של 67router (`smart-routing`, `quota-management` וכו׳) לסוכנים במסגרות כמו Google ADK או ברשתות סוכנים כלליות
-- בעת עטיפת 67router מאחורי ממשק תקני לגילוי ולהפעלה
-
-### שיטות
-
-- `message/send` — שליחת הודעה וקבלת תגובה סינכרונית
-- `message/stream` — שליחה וקבלת אירועי התקדמות בהזרמה באמצעות SSE
-- `tasks/get` — קריאת משימה לפי מזהה
-- `tasks/cancel` — ביטול משימה פעילה
-
-### יכולות מובנות (6)
-
-- `smart-routing` — ניתוב הנחיה דרך השילוב המיטבי
-- `quota-management` — דיווח על מצב המכסה של כל ספק
-- `provider-discovery` — הצגת הספקים המותקנים והיכולות שלהם
-- `cost-analysis` — הערכת העלות של בקשה/שיחה
-- `health-report` — צבירת מצב מפסק המעגל/תקופת הצינון/הנעילה של כל ספק
-- `list-capabilities` — פירוט היכולות הזמינות של הסוכן והמטא-נתונים שלהן
-
-### צלילה לעומק
-
-ראו [A2A-SERVER.md](./A2A-SERVER.md) לפרטים על התעבורה, מבנה כרטיס הסוכן, הגדרת TTL למשימות והתבנית להוספת יכולות חדשות.
 
 ## 2. ACP — מרשם סוכני CLI
 
@@ -125,86 +78,7 @@ ACP הוא **מלאי סוכני ה-CLI המקומיים** של 67router. הוא
   לשימוש אינטראקטיבי רגיל, הפעילו בעצמכם את ה-CLI המוגדר או
   השתמשו ב-`omniroute run`.
 
-## 3. סוכני ענן
-
-**נקודות הקצה של 67router:** `/api/v1/agents/tasks/*` (מחזור חיים) + `/api/cloud/*` (תשתית)
-**מקור:** `src/lib/cloudAgent/`
-
-### מה זה
-
-ממשק אחיד מעל סוכני תכנות בענן של צדדים שלישיים. שולחים הנחיה + כתובת URL של מאגר, 67router מעביר אותם לסוכן הענן המתאים, בודק את הסטטוס ומחזיר תוצאות.
-
-### סוכנים נתמכים (3, כולם מאומתים ב-`src/lib/cloudAgent/agents/`)
-
-- `codex-cloud` — OpenAI Codex Cloud
-- `devin` — Cognition Devin
-- `jules` — Google Jules
-
-### מחזור חיים
-
-```
-POST /api/v1/agents/tasks
-  → BaseAgent.createTask() לפי מחלקת הסוכן
-  → השירות החיצוני מתחיל לעבוד
-  → רשומת משימה נוצרת במסד הנתונים (cloud_agent_tasks)
-  ↓
-GET /api/v1/agents/tasks/[id]
-  → סנכרון סטטוס עצל מהספק
-  → מחזיר את הסטטוס הנוכחי + תוכנית + יומן פעילות
-  ↓
-POST /api/v1/agents/tasks/[id]   (action: "approve" | "message" | "cancel")
-  → מועבר לספק (או מסומן כמבוטל באופן מקומי)
-  ↓
-DELETE /api/v1/agents/tasks/[id]
-  → ביטול מקומי
-```
-
-### אימות
-
-⚠️ **כל נקודות הקצה `/api/v1/agents/tasks/*` דורשות אימות ניהולי** (קומיט `588a0333`). פונים המשתמשים ב-Bearer בלבד מקבלים 401 החל מ-v3.8.0.
-
-### העמקה
-
-ראו [CLOUD_AGENT.md](./CLOUD_AGENT.md) לפרטים על החוזה `CloudAgentBase`, המאפיינים הייחודיים לכל סוכן, פרטי הסכמה ונקודות הקצה של תשתית פרטי ההזדהות.
-
-## השוואה: A2A לעומת סוכני ענן
-
-לשניהם יש "משימות ארוכות־טווח", אך בשכבות שונות:
-
-| היבט              | A2A                                                                                      | סוכני ענן                           |
-| ----------------- | ---------------------------------------------------------------------------------------- | ----------------------------------- |
-| תקן               | Open A2A v0.3                                                                            | ייעודי ל-67router                   |
-| היכן מתבצע החישוב | בתוך 67router (משתמש בשילובים שהוגדרו)                                                   | חיצוני (שרתי Codex / Devin / Jules) |
-| משך המשימה        | TTL ברירת מחדל של 5 דקות (ניתן להגדרה ב-`TaskManager`)                                   | דקות עד שעות                        |
-| מודעות למאגר      | לא (מעביר הנחיות בלבד)                                                                   | כן (כתובת URL של המאגר + ענף)       |
-| תרחיש שימוש       | שיתוף פעולה בין סוכנים, ניתוב חכם כשירות                                                 | האצלת "ממש את תכונה X במאגר Y"      |
-| אימות             | `OMNIROUTE_API_KEY` אופציונלי עבור `/a2a`; אימות ניהולי עבור מסייעי REST של `/api/a2a/*` | תמיד אימות ניהולי                   |
-
 ## דוגמאות לשילוב
-
-### גילוי יכולות ה-A2A של 67router
-
-```bash
-curl http://localhost:20128/.well-known/agent.json
-```
-
-מחזיר את כרטיס הסוכן עם כל 6 המיומנויות, אמצעי התעבורה והגרסה.
-
-### קריאה ל-67router כסוכן A2A
-
-```bash
-curl -X POST http://localhost:20128/a2a \
-  -H "Content-Type: application/json" \
-  -d '{
-    "jsonrpc": "2.0",
-    "method": "message/send",
-    "params": {
-      "messages": [{"role": "user", "content": "נתב את ההנחיה הזו"}],
-      "skill": "smart-routing"
-    },
-    "id": 1
-  }'
-```
 
 ### הצגת סוכני CLI מותקנים באמצעות ACP
 
@@ -227,30 +101,6 @@ curl -X POST http://localhost:20128/api/acp/agents \
     "versionCommand": "--version",
     "providerAlias": "openai"
   }'
-```
-
-### שליחת משימה לסוכן ענן
-
-```bash
-curl -X POST http://localhost:20128/api/v1/agents/tasks \
-  -H "Cookie: auth_token=..." \
-  -H "Content-Type: application/json" \
-  -d '{
-    "providerId": "devin",
-    "prompt": "ממש את תכונה X במאגר Y",
-    "source": {
-      "repoName": "user/repo",
-      "repoUrl": "https://github.com/user/repo",
-      "branch": "main"
-    }
-  }'
-```
-
-### בדיקה מחזורית של מצב משימת הענן
-
-```bash
-curl http://localhost:20128/api/v1/agents/tasks/<task-id> \
-  -H "Cookie: auth_token=..."
 ```
 
 ## מתי להשתמש במה
@@ -283,8 +133,6 @@ curl http://localhost:20128/api/v1/agents/tasks/<task-id> \
 
 ## ראו גם
 
-- [A2A-SERVER.md](./A2A-SERVER.md) — סקירה מעמיקה של A2A
-- [CLOUD_AGENT.md](./CLOUD_AGENT.md) — סקירה מעמיקה של סוכני ענן
 - [CLI-TOOLS.md](../reference/CLI-TOOLS.md) — שילובי CLI חיצוניים (משתמשים ב-ACP)
 - [SKILLS.md](./SKILLS.md) — מסגרת מיומנויות (שונה ממיומנויות A2A — ארגז חול להפעלה מקומית)
 - [API_REFERENCE.md](../reference/API_REFERENCE.md#agents-protocol) — תיעוד נקודות קצה

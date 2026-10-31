@@ -24,7 +24,6 @@
 - [ကျွမ်းကျင်မှုစနစ်](#-skills-system)
 - [မှတ်ဉာဏ်စနစ်](#-memory-system)
 - [Webhooks](#-webhooks)
-- [Cloud Agents](#-cloud-agents)
 - [ပရိုဂရမ်ဖြင့် စီမံခန့်ခွဲခြင်း](#-programmatic-management)
 - [အတွင်းပိုင်း CLI](#-internal-cli)
 - [Desktop အပလီကေးရှင်း (Electron)](#-desktop-application-electron)
@@ -1235,8 +1234,6 @@ SSE URL `http://localhost:20128/api/mcp/sse` နှင့် **Dashboard → API
 
 ### Scope များ
 
-လက်ရှိတွင် MCP က အမည်သတ်မှတ်ထားသော scope 32 ခုကို သတ်မှတ်ပေးထားသည်။ Bearer key တစ်ခုချင်းစီကို သီးခြား scope များအတွက်သာ အသုံးပြုနိုင်ရန် ကန့်သတ်နိုင်သည် — တရားဝင်သတ်မှတ်ထားသော scope နှင့် tool စာရင်းအတွက် [MCP-SERVER.md](../frameworks/MCP-SERVER.md) ကို ကြည့်ရှုပြီး JSON-RPC schema အတွက် [A2A-SERVER.md](../frameworks/A2A-SERVER.md) ကို ကြည့်ရှုပါ။
-
 ---
 
 ## 🧠 Skills စနစ်
@@ -1245,7 +1242,6 @@ SSE URL `http://localhost:20128/api/mcp/sse` နှင့် **Dashboard → API
 
 - **Marketplace UI** — **Dashboard → Skills** မှ skill များကို ရှာဖွေကြည့်ရှုပြီး ထည့်သွင်းပါ
 - **Key တစ်ခုချင်းအလိုက် scope များ** — မည်သည့် API key များက မည်သည့် skill များကို ခေါ်ယူအသုံးပြုနိုင်သည်ကို ကန့်သတ်ပါ
-- **စိတ်ကြိုက် skill များ** — TypeScript ဖိုင်တစ်ခုကို `src/lib/a2a/skills/` ထဲသို့ ထည့်၍ register လုပ်လိုက်သည်နှင့် A2A မှတစ်ဆင့် ချက်ချင်းခေါ်ယူအသုံးပြုနိုင်မည်ဖြစ်သည်
 
 အပြည့်အစုံကို [SKILLS.md](../frameworks/SKILLS.md) တွင် ကြည့်ပါ။
 
@@ -1274,18 +1270,6 @@ SSE URL `http://localhost:20128/api/mcp/sse` နှင့် **Dashboard → API
 - ပြန်လည်ကြိုးပမ်းမှုများ- exponential backoff ဖြင့် 3 ကြိမ် ကြိုးပမ်းပြီးနောက် dead-letter queue သို့ ပို့သည်
 
 Schema အပြည့်အစုံကို [WEBHOOKS.md](../frameworks/WEBHOOKS.md) တွင် ကြည့်ပါ။
-
----
-
-## ☁️ Cloud Agent များ
-
-67router သည် cloud coding agent များ (**OpenAI Codex Cloud**, **Devin**, **Jules**, **Antigravity**) နှင့် ပေါင်းစပ်ထားသောကြောင့် local routing ကို ကိုင်တွယ်သည့် dashboard တစ်ခုတည်းမှ အချိန်ကြာမြင့်စွာ လုပ်ဆောင်ရသော task များကိုလည်း ပေးပို့လုပ်ဆောင်နိုင်သည်။
-
-- **Dashboard → Cloud Agents** တွင် သို့မဟုတ် `POST /api/v1/agents/tasks` မှတစ်ဆင့် task များ ဖန်တီးပါ
-- Task တစ်ခုချင်းအလိုက် အခြေအနေ၊ log များနှင့် artifact များကို ခြေရာခံပါ
-- Provider တစ်ခုချင်းအတွက် သင့်ကိုယ်ပိုင် API key ကို အသုံးပြုပါ — credential များသည် 67router instance ပြင်ပသို့ မည်သည့်အခါမျှ ထွက်မသွားပါ
-
-အပြည့်အစုံကို [CLOUD_AGENT.md](../frameworks/CLOUD_AGENT.md) တွင် ကြည့်ပါ။
 
 ---
 
@@ -1342,7 +1326,6 @@ omniroute restore [<timestamp>]    # snapshot တစ်ခုမှ ပြန်
 omniroute health                   # အသေးစိတ်စနစ်ကျန်းမာရေး (breaker များ၊ cache၊ memory)
 omniroute quota                    # provider quota အသုံးပြုမှု
 omniroute mcp status               # MCP server အခြေအနေ
-omniroute a2a status               # A2A server အခြေအနေ
 omniroute tunnel list|create|stop  # Cloudflare/Tailscale/ngrok tunnel များ
 omniroute reset-password           # admin စကားဝှက်ကို ပြန်လည်သတ်မှတ်ရန်
 omniroute --mcp                    # stdio မှတစ်ဆင့် MCP server ကို စတင်ရန်

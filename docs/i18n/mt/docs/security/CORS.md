@@ -68,20 +68,6 @@ li jippermetti li l-**preflight ta’ CORS jgħaddi** fuq ir-rotot tal-ġestjoni
 li paġna minn oriġini differenti ma tistax tipprovdi. Dan **mhuwiex** vettur għall-ħtif ta’ sessjoni jew
 is-serq ta’ kredenzjali fuq il-passaġġ CORS kondiviż.
 
-### Eċċezzjoni waħda reali — `/api/v1/agents/`
-
-Ir-rotot Cloud-Agent (`/api/v1/agents/{health,credentials,tasks,tasks/[id]}`) jissettjaw
-il-headers CORS **tagħhom stess**
-(`src/lib/cloudAgent/api.ts`, `getCloudAgentCorsHeaders`) u **jemettu**
-`Access-Control-Allow-Origin: <origin>|*` flimkien ma’
-`Access-Control-Allow-Credentials: true`. Din hija l-unika superfiċje fejn
-ir-ritorn tal-oriġini u l-kredenzjali jeżistu flimkien, u hija **indipendenti minn
-`CORS_ALLOW_ALL`**. Dawn ir-rotot huma awtentikati għall-ġestjoni
-(`requireManagementAuth`); l-operaturi li jesponu d-dashboard barra mill-host għandhom ikunu
-konxji li dan huwa l-uniku post fejn qari minn oriġini differenti bi kredenzjali huwa permess mill-
-headers tar-risposta. Ir-restrizzjoni tiegħu għal lista ta’ permessi espliċita qed tiġi segwita
-separatament minn din il-gwida dwar CORS.
-
 ## Lista ta’ kontroll għall-produzzjoni
 
 - **Qatt tissettja `CORS_ALLOW_ALL=true` fil-produzzjoni.** Ħallih mhux issettjat.
@@ -160,7 +146,6 @@ Security), mhux fil-proxy.
 | Status waqt it-tħaddim għad-dashboard                | `src/app/api/settings/authz-inventory/route.ts`                      |
 | Banner ta’ twissija tad-dashboard                    | `src/app/(dashboard)/dashboard/settings/components/AuthzSection.tsx` |
 | Qasam CORS Allowed Origins                           | `src/app/(dashboard)/dashboard/settings/components/SecurityTab.tsx`  |
-| CORS għal kull rotta ta’ Cloud-Agent (l-eċċezzjoni)  | `src/lib/cloudAgent/api.ts`                                          |
 
 ## Ara wkoll
 

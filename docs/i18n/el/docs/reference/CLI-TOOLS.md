@@ -749,7 +749,6 @@ omniroute cache                        # Κατάσταση κρυφής μνή�
 omniroute cache clear                  # Εκκαθάριση σημασιολογικών κρυφών μνημών και κρυφών μνημών υπογραφών
 
 omniroute mcp status | restart         # Κατάσταση / επανεκκίνηση διακομιστή MCP
-omniroute a2a status | card            # Κατάσταση διακομιστή A2A / κάρτα πράκτορα
 
 omniroute tunnel list | create | stop  # Διαχείριση σηράγγων (cloudflare/tailscale/ngrok)
 omniroute env show | get <k> | set <k> <v>  # Επιθεώρηση / ορισμός μεταβλητών περιβάλλοντος (προσωρινά)

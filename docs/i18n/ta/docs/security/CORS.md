@@ -68,20 +68,6 @@ management routes-இல் CORS **preflight-ஐ அனுமதித்தல�
 அதை ஒரு குறுக்கு-origin பக்கத்தால் வழங்க முடியாது. பகிரப்பட்ட CORS பாதையில் இது session-hijack அல்லது
 credential-theft vector **அல்ல**.
 
-### ஒரு உண்மையான விதிவிலக்கு — `/api/v1/agents/`
-
-Cloud-Agent routes (`/api/v1/agents/{health,credentials,tasks,tasks/[id]}`) தங்களுக்கான
-CORS headers-ஐத் **தாங்களே** அமைக்கின்றன
-(`src/lib/cloudAgent/api.ts`, `getCloudAgentCorsHeaders`), மேலும்
-`Access-Control-Allow-Origin: <origin>|*` உடன்
-`Access-Control-Allow-Credentials: true`-ஐயும் **அனுப்புகின்றன**. Origin-ஐத் திருப்பி அனுப்புவதும் credentials-உம்
-ஒன்றாக இருக்கும் ஒரே surface இதுதான்; மேலும் இது
-`CORS_ALLOW_ALL`-இலிருந்து **சுயாதீனமானது**. இந்த routes management அங்கீகாரத்தைக் கொண்டவை
-(`requireManagementAuth`); dashboard-ஐ host-க்கு வெளியே வெளிப்படுத்தும் operators,
-response headers மூலம் குறுக்கு-origin credentialed read அனுமதிக்கப்படும் ஒரே இடம் இதுதான் என்பதை
-அறிந்திருக்க வேண்டும். இதை வெளிப்படையான அனுமதிப் பட்டியலுக்குக் கட்டுப்படுத்துவது,
-இந்த CORS வழிகாட்டுதலிலிருந்து தனியாகக் கண்காணிக்கப்படுகிறது.
-
 ## உற்பத்திச் சரிபார்ப்புப் பட்டியல்
 
 - **உற்பத்திச் சூழலில் ஒருபோதும் `CORS_ALLOW_ALL=true` என அமைக்க வேண்டாம்.** அதை அமைக்காமல் விடவும்.
@@ -151,15 +137,14 @@ location / {
 
 ## மூலக் கோப்புகள்
 
-| பொறுப்பு                                             | கோப்பு                                                               |
-| ---------------------------------------------------- | -------------------------------------------------------------------- |
-| Allowlist resolution + `getCorsStatus()`             | `src/server/cors/origins.ts`                                         |
-| Middleware பயன்பாடு (உண்மையின் ஒற்றை ஆதாரம்)         | `src/server/authz/pipeline.ts`                                       |
-| Settings → runtime origin injection                  | `src/lib/config/runtimeSettings.ts`                                  |
-| Dashboard-க்கான runtime நிலை                         | `src/app/api/settings/authz-inventory/route.ts`                      |
-| Dashboard எச்சரிக்கை banner                          | `src/app/(dashboard)/dashboard/settings/components/AuthzSection.tsx` |
-| CORS Allowed Origins புலம்                           | `src/app/(dashboard)/dashboard/settings/components/SecurityTab.tsx`  |
-| ஒவ்வொரு route-க்குமான Cloud-Agent CORS (விதிவிலக்கு) | `src/lib/cloudAgent/api.ts`                                          |
+| பொறுப்பு                                     | கோப்பு                                                               |
+| -------------------------------------------- | -------------------------------------------------------------------- |
+| Allowlist resolution + `getCorsStatus()`     | `src/server/cors/origins.ts`                                         |
+| Middleware பயன்பாடு (உண்மையின் ஒற்றை ஆதாரம்) | `src/server/authz/pipeline.ts`                                       |
+| Settings → runtime origin injection          | `src/lib/config/runtimeSettings.ts`                                  |
+| Dashboard-க்கான runtime நிலை                 | `src/app/api/settings/authz-inventory/route.ts`                      |
+| Dashboard எச்சரிக்கை banner                  | `src/app/(dashboard)/dashboard/settings/components/AuthzSection.tsx` |
+| CORS Allowed Origins புலம்                   | `src/app/(dashboard)/dashboard/settings/components/SecurityTab.tsx`  |
 
 ## மேலும் காண்க
 

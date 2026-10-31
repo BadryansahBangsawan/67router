@@ -128,13 +128,11 @@ v3.8.0 ਪਲੇਟਫਾਰਮ ਲਈ ਮਿਆਰੀ, ਵਰਜਨ-ਨਿਯ�
 - `/dashboard/limits` — ਕੋਟਾ/ਦਰ ਨਿਯੰਤਰਣ
 - `/dashboard/cli-tools` — CLI ਆਨਬੋਰਡਿੰਗ, ਰਨਟਾਈਮ ਖੋਜ, ਕੌਂਫਿਗਰੇਸ਼ਨ ਤਿਆਰ ਕਰਨਾ
 - `/dashboard/agents` — ਖੋਜੇ ਗਏ ACP ਏਜੰਟ + ਕਸਟਮ ਏਜੰਟ ਰਜਿਸਟ੍ਰੇਸ਼ਨ
-- `/dashboard/cloud-agents` — ਕਲਾਉਡ-ਹੋਸਟ ਕੀਤੇ ਏਜੰਟ ਟਾਸਕ (Codex Cloud, Devin, Jules) ਅਤੇ ਟਾਸਕ ਜੀਵਨ-ਚੱਕਰ
 - `/dashboard/skills` — A2A ਹੁਨਰ ਰਜਿਸਟਰੀ, ਸੈਂਡਬਾਕਸ ਐਗਜ਼ੀਕਿਊਸ਼ਨ, ਬਿਲਟ-ਇਨ ਹੁਨਰ ਕੈਟਾਲੌਗ
 - `/dashboard/memory` — ਸਥਾਈ ਗੱਲਬਾਤੀ ਮੈਮੋਰੀ ਦੀ ਜਾਂਚ ਅਤੇ ਪ੍ਰਾਪਤੀ
 - `/dashboard/webhooks` — ਆਊਟਬਾਊਂਡ ਵੈੱਬਹੁੱਕ ਸਬਸਕ੍ਰਿਪਸ਼ਨ, ਸੀਕ੍ਰੇਟ ਰੋਟੇਸ਼ਨ, ਮੁੜ-ਕੋਸ਼ਿਸ਼ ਅੰਕੜੇ
 - `/dashboard/batch` — ਬੈਚ ਜੌਬ ਸਬਮਿਸ਼ਨ ਅਤੇ ਪ੍ਰਗਤੀ
 - `/dashboard/cache` — ਰੀਡ-ਥਰੂ ਅਤੇ ਰੀਜ਼ਨਿੰਗ ਕੈਸ਼ ਅੰਕੜੇ, ਹਟਾਉਣ ਦੇ ਨਿਯੰਤਰਣ
-- `/dashboard/playground` — ਕਿਸੇ ਵੀ ਕੌਂਫਿਗਰ ਕੀਤੇ ਕੰਬੋ/ਮਾਡਲ ਨਾਲ ਇੰਟਰਐਕਟਿਵ ਚੈਟ ਪਲੇਗ੍ਰਾਊਂਡ
 - `/dashboard/changelog` — ਐਪ-ਅੰਦਰ ਚੇਂਜਲੌਗ ਦਰਸ਼ਕ (`CHANGELOG.md` ਨੂੰ ਰੈਂਡਰ ਕਰਦਾ ਹੈ)
 - `/dashboard/system` — ਰਨਟਾਈਮ ਡਾਇਗਨੌਸਟਿਕਸ, ਵਰਜਨ ਜਾਣਕਾਰੀ, ਵਾਤਾਵਰਨ ਪ੍ਰਮਾਣਿਕਤਾ ਸਤਹ
 - `/dashboard/onboarding` — ਨਵੀਆਂ ਇੰਸਟਾਲੇਸ਼ਨਾਂ ਲਈ ਪਹਿਲੀ ਵਾਰ ਸੈੱਟਅੱਪ ਵਿਜ਼ਾਰਡ
@@ -252,7 +250,6 @@ flowchart LR
 - ਬਜਟ: `src/app/api/usage/budget` (GET/POST)
 - ਫਾਲਬੈਕ ਚੇਨਾਂ: `src/app/api/fallback/chains` (GET/POST/DELETE)
 - ਅਨੁਪਾਲਨ ਆਡਿਟ: `src/app/api/compliance/audit-log` (GET, ਪੇਜੀਨੇਸ਼ਨ + ਸੰਰਚਿਤ ਮੈਟਾਡੇਟਾ ਨਾਲ)
-- ਮੁਲਾਂਕਣ: `src/app/api/evals` (GET/POST), `src/app/api/evals/[suiteId]` (GET)
 - ਨੀਤੀਆਂ: `src/app/api/policies` (GET/POST)
 - ਸਿੰਕ ਟੋਕਨ: `src/app/api/sync/tokens` (GET/POST), `src/app/api/sync/tokens/[id]` (GET/DELETE)
 - ਕੌਂਫਿਗਰੇਸ਼ਨ ਬੰਡਲ: `src/app/api/sync/bundle` (GET, ਸੈਟਿੰਗਾਂ/ਪ੍ਰਦਾਤਾਵਾਂ/ਕੌਂਬੋ/ਕੁੰਜੀਆਂ ਦਾ ETag-ਵਰਜ਼ਨ ਵਾਲਾ ਸਨੈਪਸ਼ਾਟ)
@@ -316,7 +313,6 @@ flowchart LR
 - ਫੈਚ ਟਾਈਮਆਉਟ: `src/shared/utils/fetchTimeout.ts`
 - ਬੇਨਤੀ ਟੈਲੀਮੀਟਰੀ: `src/shared/utils/requestTelemetry.ts`
 - ਅਨੁਪਾਲਨਾ/ਆਡਿਟ: `src/lib/compliance/index.ts`
-- ਮੁਲਾਂਕਣ ਰਨਰ: `src/lib/evals/evalRunner.ts`
 - ਡੋਮੇਨ ਸਥਿਤੀ ਪਰਸਿਸਟੈਂਸ: `src/lib/db/domainState.ts` — ਫਾਲਬੈਕ ਚੇਨਾਂ, ਬਜਟਾਂ, ਲਾਗਤ ਇਤਿਹਾਸ, ਲੌਕਆਉਟ ਸਥਿਤੀ ਅਤੇ ਸਰਕਿਟ ਬ੍ਰੇਕਰਾਂ ਲਈ SQLite CRUD
 
 OAuth ਪ੍ਰਦਾਤਾ ਮੋਡੀਊਲ (`src/lib/oauth/providers/` ਅਧੀਨ 27 ਵੱਖਰੀਆਂ ਫਾਈਲਾਂ):
@@ -383,23 +379,6 @@ OAuth ਪ੍ਰਦਾਤਾ ਮੋਡੀਊਲ (`src/lib/oauth/providers/` ਅ�
 
 ਪੂਰੇ ਐਲਗੋਰਿਦਮਿਕ ਵੇਰਵੇ (ਕਾਰਕ ਫਾਰਮੂਲੇ, ਭਾਰ ਟਿਊਨਿੰਗ) ਲਈ,
 [`docs/routing/AUTO-COMBO.md`](../routing/AUTO-COMBO.md) ਵੇਖੋ।
-
-### B. ਕਲਾਊਡ ਏਜੰਟ
-
-ਕਲਾਊਡ ਏਜੰਟ ਤੀਜੀ-ਧਿਰ ਦੇ ਹੋਸਟ ਕੀਤੇ ਕੋਡ-ਏਜੰਟ ਪਲੇਟਫਾਰਮਾਂ (Codex Cloud, Devin,
-Jules) ਨੂੰ ਇੱਕਸਾਰ DB-ਸਮਰਥਿਤ ਕਾਰਜ ਜੀਵਨ-ਚੱਕਰ ਦੇ ਪਿੱਛੇ ਸਮੇਟਦਾ ਹੈ। ਸਾਰੇ ਕਾਰਜ ਬਣਾਉਣ/ਨਿਰੀਖਣ
-ਐਂਡਪੌਇੰਟਾਂ ਲਈ ਪ੍ਰਬੰਧਨ ਪ੍ਰਮਾਣੀਕਰਨ ਲੋੜੀਂਦਾ ਹੈ।
-
-- ਮੋਡੀਊਲ ਰੂਟ: `src/lib/cloudAgent/` (`baseAgent.ts`, `registry.ts`, `api.ts`,
-  `types.ts`, `db.ts`, ਨਾਲ ਹੀ `agents/` ਅਧੀਨ ਹਰੇਕ ਏਜੰਟ ਲਈ ਉਪ-ਡਾਇਰੈਕਟਰੀਆਂ)
-- ਹਰੇਕ ਏਜੰਟ ਲਈ ਲਾਗੂਕਰਨ: `agents/codex/`, `agents/devin/`, `agents/jules/`
-- ਜਨਤਕ ਐਂਡਪੌਇੰਟ: `/api/v1/agents/tasks/*` (ਸੂਚੀ/ਬਣਾਓ/ਪ੍ਰਾਪਤ ਕਰੋ/ਰੱਦ ਕਰੋ)
-- ਪ੍ਰਬੰਧਨ ਐਂਡਪੌਇੰਟ: `/api/cloud/*` (ਪ੍ਰੋਵਿਜ਼ਨਿੰਗ, ਸਥਿਤੀ, ਬੈਚ)
-- ਡੈਸ਼ਬੋਰਡ: `/dashboard/cloud-agents`
-- ਸਟੋਰੇਜ: `cloud_agent_tasks` ਟੇਬਲ
-
-ਹਰੇਕ ਏਜੰਟ ਲਈ ਪ੍ਰੋਵਿਜ਼ਨਿੰਗ ਅਤੇ OAuth ਦੇ ਵਿਸ਼ੇਸ਼ ਵੇਰਵਿਆਂ ਲਈ,
-[`docs/frameworks/CLOUD_AGENT.md`](../frameworks/CLOUD_AGENT.md) ਵੇਖੋ।
 
 ### C. ਗਾਰਡਰੇਲ
 

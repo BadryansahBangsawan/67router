@@ -588,7 +588,7 @@ Radar ଇଚ୍ଛାଧୀନ ଏବଂ କେବଳ GET ପାଇଁ ଉଦ୍
 - **🔑 ପ୍ରତି-କି ରୁଟିଂ ନିୟନ୍ତ୍ରଣ** — ଏକ API କିକୁ `forcedModel` ସହ ଗୋଟିଏ ମଡେଲ୍ କିମ୍ବା କମ୍ବୋରେ ସ୍ଥିର କରନ୍ତୁ, ଏବଂ ଗୋଟିଏ କିର ମଡେଲ୍ ଏବଂ କମ୍ବୋଗୁଡ଼ିକୁ ପରମାଣୁଭାବରେ ଯୋଡ଼ି କିମ୍ବା କାଢ଼ି ଦିଅନ୍ତୁ (`/api/keys/{id}/access`)। → [API Reference](docs/reference/API_REFERENCE.md) · [OpenAPI](docs/openapi.yaml)
 - **🛡️ ଉନ୍ନତ PII ନିୟନ୍ତ୍ରଣ** — ପ୍ରତି-ପ୍ରକାର ଚୟନ, ୨୦ଟି ପର୍ଯ୍ୟନ୍ତ ଯାଞ୍ଚ ହୋଇଥିବା କଷ୍ଟମ୍ ମାସ୍କିଂ ପ୍ୟାଟର୍ନ୍ ଏବଂ ପ୍ରତି-ପ୍ରକାର ସନାଖ୍ୟାନ କାଉଣ୍ଟର୍; ମାସ୍କିଂ ନିଜେ ଇଚ୍ଛାଧୀନ ଭାବରେ ରହେ। → [Guardrails](docs/security/GUARDRAILS.md)
 - **🌍 ୬୭ ଭାଷା** — ଡ୍ୟାସବୋର୍ଡ, ଡକ୍ସ୍ ମିରର୍ ଏବଂ CLI, ଯେଉଁଥିରେ `npm run i18n:add-locale` ଗୋଟିଏ କମାଣ୍ଡରେ ସର୍ବତ୍ର ଏକ ଭାଷା ଯୋଡ଼େ। → [i18n Guide](docs/guides/I18N.md)
-- **🎛️ OmniConductor** — ଆପଣଙ୍କର ଏଜେଣ୍ଟ ଫ୍ଲିଟ୍ ପାଇଁ inbound A2A ପ୍ରତିନିଧିତ୍ୱ, ଏଜେଣ୍ଟ କାର୍ଡରେ Conductor କୌଶଳ, ଏବଂ Faro push-to-talk ଭଏସ୍ ଚାଟ୍ ସହ ଏକ ଡ୍ୟାସବୋର୍ଡ ପ୍ୟାନେଲ୍। → [A2A Server](docs/frameworks/A2A-SERVER.md)
+- **🎛️ OmniConductor** — ଆପଣଙ୍କର ଏଜେଣ୍ଟ ଫ୍ଲିଟ୍ ପାଇଁ inbound A2A ପ୍ରତିନିଧିତ୍ୱ, ଏଜେଣ୍ଟ କାର୍ଡରେ Conductor କୌଶଳ, ଏବଂ Faro push-to-talk ଭଏସ୍ ଚାଟ୍ ସହ ଏକ ଡ୍ୟାସବୋର୍ଡ ପ୍ୟାନେଲ୍।
 - **🛂 ଅଭିଯୋଜ୍ୟ ଆଡମିସନ୍ ଏବଂ ଓଭରଲୋଡ୍ ସୁରକ୍ଷା** — ଭାରୀ ଚାଟ୍ ଅନୁରୋଧଗୁଡ଼ିକୁ 503ing ବଦଳରେ ଧାଡ଼ିରେ ରଖାଯାଏ, ପ୍ରତି ସଂଯୋଗରେ atomic RPM ରୋଲିଂ ଲିଜ୍ ସହ। → [Resilience Guide](docs/architecture/RESILIENCE_GUIDE.md)
 - **🗂️ ମାନକ `/v1/models` କ୍ରମ** — ପ୍ରତି ପ୍ରଦାତାଙ୍କ ପାଇଁ ଗୋଟିଏ ନିରନ୍ତର ପ୍ରଦାତା-ଗୋଷ୍ଠୀଭୁକ୍ତ ବ୍ଲକ୍ (କମ୍ବୋଗୁଡ଼ିକ ପ୍ରଥମେ ପିନ୍ କରାଯାଇଛି), ପ୍ରତ୍ୟେକ କାଟାଲଗ୍ ଉତ୍ସ ଜୁଇଁ ସ୍ଥିର। → [API Reference](docs/reference/API_REFERENCE.md)
 - **🗜️ କମ୍ପ୍ରେସନ୍ ହାର୍ଡେନିଂ** — ଡିଫଲ୍ଟ-ଅନ୍ ଇନ୍ଫ୍ଲେସନ୍ ଗାର୍ଡ, DE / FR / JA + ଚାଇନିଜ୍ (wényán) ପାଇଁ Caveman ପ୍ୟାକ୍, Gradle ଏବଂ .NET ପାଇଁ RTK ଫିଲ୍ଟର୍। → [Compression](docs/compression/COMPRESSION_ENGINES.md)
@@ -907,7 +907,6 @@ omniroute contexts use default            # ← ପୁଣି ସ୍ଥାନୀ�
   <tr><td align="left" nowrap>🧰 <b>MCP (stdio)</b></td><td align="left" nowrap><code>omniroute --mcp</code></td><td align="left">Claude Desktop, Cursor କିମ୍ବା ଯେକୌଣସି MCP କ୍ଲାଏଣ୍ଟ୍ରେ ସଂଯୋଗ କରନ୍ତୁ</td></tr>
   <tr><td align="left" nowrap>🌊 <b>MCP (HTTP)</b></td><td align="left" nowrap><code>/api/mcp/stream</code></td><td align="left">ରିମୋଟ୍ MCP — <b>110ଟି ଟୁଲ୍</b>, 33ଟି ସ୍କୋପ୍ (ପ୍ରବର୍ତ୍ତନ ଇଚ୍ଛାଧୀନ), ସମ୍ପୂର୍ଣ୍ଣ ଅଡିଟ୍ ଟ୍ରେଲ୍</td></tr>
   <tr><td align="left" nowrap>📡 <b>MCP (SSE)</b></td><td align="left" nowrap><code>/api/mcp/sse</code></td><td align="left">ଷ୍ଟ୍ରିମିଂ MCP ପରିବହନ</td></tr>
-  <tr><td align="left" nowrap>🤝 <b>A2A</b></td><td align="left" nowrap><code>/.well-known/agent.json</code></td><td align="left">ଏଜେଣ୍ଟ୍-ରୁ-ଏଜେଣ୍ଟ୍, <b>JSON-RPC 2.0</b> + SSE, 6ଟି ଦକ୍ଷତା</td></tr>
   <tr><td align="left" nowrap>🌐 <b>REST API</b></td><td align="left" nowrap><code>/v1/*</code></td><td align="left">OpenAI-ସୁସଙ୍ଗତ — ଚାଟ୍, ଏମ୍ବେଡିଂ, ଛବି, ଅଡିଓ, OCR</td></tr>
   <tr><td align="left" nowrap>🔔 <b>ୱେବ୍ହୁକ୍</b></td><td align="left" nowrap><code>/api/webhooks</code></td><td align="left">ଅନୁରୋଧ / କୋଟା ଇଭେଣ୍ଟ୍ଗୁଡ଼ିକୁ Slack, Discord, Telegram କିମ୍ବା ଯେକୌଣସି URLକୁ ପଠାନ୍ତୁ</td></tr>
   <tr><td align="left" nowrap>🛰️ <b>ରିମୋଟ୍ CLI</b></td><td align="left" nowrap><code>omniroute connect <host></code></td><td align="left">ସ୍କୋପ୍ଯୁକ୍ତ ଆକ୍ସେସ୍ ଟୋକନ୍ଦ୍ୱାରା ଏକ ରିମୋଟ୍ ଇନ୍ଷ୍ଟାନ୍ସକୁ ପରିଚାଳନା କରନ୍ତୁ</td></tr>
@@ -917,8 +916,6 @@ omniroute contexts use default            # ← ପୁଣି ସ୍ଥାନୀ�
 # MCP ମାଧ୍ୟମରେ Claude Codeକୁ ସମ୍ପୂର୍ଣ୍ଣ 67router ଟୁଲ୍ସେଟ୍ ଦିଅନ୍ତୁ:
 claude mcp add-server omniroute --type http --url http://localhost:20128/api/mcp/stream
 ```
-
-<sub>📖 [MCP ସର୍ଭର](docs/frameworks/MCP-SERVER.md) · [A2A ସର୍ଭର](docs/frameworks/A2A-SERVER.md) · [ଏଜେଣ୍ଟ୍ ପ୍ରୋଟୋକଲ୍ଗୁଡ଼ିକ](docs/frameworks/AGENT_PROTOCOLS_GUIDE.md)</sub>
 
 <br/>
 
@@ -1384,7 +1381,6 @@ OMNIROUTE_SKIP_POSTINSTALL=1 npm install -g omniroute   # CI=1 ମଧ୍ୟ ଏ�
   <tr><td nowrap><b><a href="open-sse/mcp-server/README.md">MCP ସର୍ଭର୍</a></b></td><td>110ଟି MCP ଟୁଲ୍, IDE କନଫିଗ୍, Python/TS/Go କ୍ଲାଏଣ୍ଟ</td></tr>
   <tr><td nowrap><b><a href="docs/frameworks/MCP-SERVER.md">MCP ସର୍ଭର୍ ମାର୍ଗଦର୍ଶିକା</a></b></td><td>MCP ଇନଷ୍ଟଲେସନ୍, ଟ୍ରାନ୍ସପୋର୍ଟ ଏବଂ ଟୁଲ୍ ରେଫରେନ୍ସ</td></tr>
   <tr><td nowrap><b><a href="src/lib/a2a/README.md">A2A ସର୍ଭର୍</a></b></td><td>JSON-RPC 2.0 ପ୍ରୋଟୋକଲ୍, ଦକ୍ଷତା, ଷ୍ଟ୍ରିମିଂ, ଟାସ୍କ ପରିଚାଳନା</td></tr>
-  <tr><td nowrap><b><a href="docs/frameworks/A2A-SERVER.md">A2A ସର୍ଭର୍ ମାର୍ଗଦର୍ଶିକା</a></b></td><td>A2A ଏଜେଣ୍ଟ କାର୍ଡ, ଟାସ୍କ, ଦକ୍ଷତା ଏବଂ ଷ୍ଟ୍ରିମିଂ</td></tr>
 </table>
 
 ### 📋 ପ୍ରକଳ୍ପ ଏବଂ ଗୁଣବତ୍ତା

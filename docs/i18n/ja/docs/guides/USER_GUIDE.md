@@ -24,7 +24,6 @@
 - [スキルシステム](#-skills-system)
 - [メモリシステム](#-memory-system)
 - [Webhook](#-webhooks)
-- [クラウドエージェント](#-cloud-agents)
 - [プログラムによる管理](#-programmatic-management)
 - [内部 CLI](#-internal-cli)
 - [デスクトップアプリケーション（Electron）](#-desktop-application-electron)
@@ -1213,8 +1212,6 @@ SSE URL `http://localhost:20128/api/mcp/sse` と、**ダッシュボード → A
 
 ### スコープ
 
-MCP では現在、名前付きスコープが 32 個定義されています。各 Bearer キーは特定のスコープのみに制限できます。正式なスコープとツールの一覧については [MCP-SERVER.md](../frameworks/MCP-SERVER.md) を、JSON-RPC スキーマについては [A2A-SERVER.md](../frameworks/A2A-SERVER.md) を参照してください。
-
 ---
 
 ## 🧠 スキルシステム
@@ -1223,7 +1220,6 @@ MCP では現在、名前付きスコープが 32 個定義されています。
 
 - **マーケットプレイス UI** — **ダッシュボード → スキル**からスキルを参照してインストール
 - **キーごとのスコープ** — 各 API キーが呼び出せるスキルを制限
-- **カスタムスキル** — TypeScript ファイルを `src/lib/a2a/skills/` に配置して登録すると、A2A 経由ですぐに呼び出し可能
 
 完全なリファレンス：[SKILLS.md](../frameworks/SKILLS.md)。
 
@@ -1252,18 +1248,6 @@ MCP では現在、名前付きスコープが 32 個定義されています。
 - 再試行：指数バックオフで 3 回試行後、デッドレターキューへ送信
 
 完全なスキーマは [WEBHOOKS.md](../frameworks/WEBHOOKS.md) を参照してください。
-
----
-
-## ☁️ クラウドエージェント
-
-67router はクラウドコーディングエージェント（**OpenAI Codex Cloud**、**Devin**、**Jules**、**Antigravity**）と統合されており、ローカルルーティングを管理するものと同じダッシュボードから、長時間実行タスクを送信できます。
-
-- **ダッシュボード → クラウドエージェント**、または `POST /api/v1/agents/tasks` を使用してタスクを作成
-- タスクごとにステータス、ログ、アーティファクトを追跡
-- プロバイダーごとに独自の API キーを使用可能 — 認証情報が 67router インスタンスの外部に送信されることはありません
-
-完全なリファレンス：[CLOUD_AGENT.md](../frameworks/CLOUD_AGENT.md)。
 
 ---
 
@@ -1320,7 +1304,6 @@ omniroute restore [<timestamp>]    # スナップショットから復元
 omniroute health                   # 詳細なヘルス情報（ブレーカー、キャッシュ、メモリ）
 omniroute quota                    # プロバイダーのクォータ使用量
 omniroute mcp status               # MCP サーバーのステータス
-omniroute a2a status               # A2A サーバーのステータス
 omniroute tunnel list|create|stop  # Cloudflare/Tailscale/ngrok トンネル
 omniroute reset-password           # 管理者パスワードをリセット
 omniroute --mcp                    # stdio 経由で MCP サーバーを起動

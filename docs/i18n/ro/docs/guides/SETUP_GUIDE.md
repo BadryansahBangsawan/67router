@@ -248,26 +248,6 @@ Adăugați în setările MCP:
 
 **Documentația MCP completă:** [README-ul serverului MCP](../../open-sse/mcp-server/README.md) — 110 instrumente, configurații IDE, clienți Python/TS/Go.
 
-### Configurarea A2A (Agent-to-Agent Protocol)
-
-Verificați Agent Card:
-
-```bash
-curl http://localhost:20128/.well-known/agent.json
-```
-
-Trimiteți o sarcină:
-
-```bash
-curl -X POST http://localhost:20128/a2a \
-  -H 'content-type: application/json' \
-  -d '{"jsonrpc":"2.0","id":"quickstart","method":"message/send","params":{"skill":"quota-management","messages":[{"role":"user","content":"Oferă-mi un rezumat scurt al cotelor."}]}}'
-```
-
-**Documentația A2A completă:** [README-ul serverului A2A](../../src/lib/a2a/README.md) — JSON-RPC 2.0, abilități, streaming, ciclul de viață al sarcinilor.
-
----
-
 ## Configurarea timeouturilor
 
 ### Timeouturi de bază

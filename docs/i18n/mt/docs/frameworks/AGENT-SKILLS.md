@@ -44,7 +44,6 @@ src/app/api/agent-skills/
   generate/route.ts                    — POST /api/agent-skills/generate (awtentikazzjoni meħtieġa)
 
 open-sse/mcp-server/tools/agentSkillTools.ts  — 3 għodod MCP (elenka, ikseb, kopertura)
-src/lib/a2a/skills/listCapabilities.ts        — skill A2A: list-capabilities
 ```
 
 ---
@@ -140,8 +139,6 @@ Il-ħila A2A `list-capabilities` tirritorna l-katalgu sħiħ ta' 45 ħila bħala
 }
 ```
 
-Ara [A2A-SERVER.md](./A2A-SERVER.md) għad-dettalji tal-protokoll.
-
 ---
 
 ## Katalgu — 45 ID ta' Ħiliet
@@ -189,12 +186,11 @@ Ara [A2A-SERVER.md](./A2A-SERVER.md) għad-dettalji tal-protokoll.
 | `cli-contexts`        | cli-contexts       | `omniroute contexts`    |
 | `cli-cost-usage`      | cli-cost-usage     | `omniroute cost`        |
 | `cli-mcp`             | cli-mcp            | `omniroute mcp`         |
-| `cli-a2a`             | cli-a2a            | `omniroute a2a`         |
 | `cli-tunnel`          | cli-tunnel         | `omniroute tunnel`      |
 | `cli-backup-sync`     | cli-backup-sync    | `omniroute backup`      |
 | `cli-policy-audit`    | cli-policy-audit   | `omniroute policy`      |
 | `cli-batches`         | cli-batches        | `omniroute batch`       |
-| `cli-eval`            | cli-eval           | `omniroute eval`        |
+| `cli-eval`            | cli-eval           | `omniroute simulate`    |
 | `cli-plugins-skills`  | cli-plugins-skills | `omniroute plugins`     |
 | `cli-setup`           | cli-setup          | `omniroute setup`       |
 | `cli-skill-collector` | cli-setup          | `omniroute skills`      |
@@ -312,6 +308,5 @@ curl "http://localhost:20128/api/agent-skills/coverage"
 
 - [SKILLS.md](./SKILLS.md) — Qafas ta’ Omni Skills (injezzjoni tal-għodod LLM + suq)
 - [MCP-SERVER.md](./MCP-SERVER.md) — Katalgu tal-għodod MCP (għodod `omniroute_agent_skills_*`)
-- [A2A-SERVER.md](./A2A-SERVER.md) — Protokoll A2A (ħila `list-capabilities`)
 - `src/lib/agentSkills/` — katalgu, ġeneratur, parsers
 - `skills/` — fajls SKILL.md iġġenerati (45 entrata)

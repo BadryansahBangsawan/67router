@@ -1359,9 +1359,8 @@ GET javobi `agents[]` (id, name, binary, version, installed, protocol, isCustom)
 
 ### Baholashlar
 
-| Endpoint     | Metod    | Tavsif                                                        |
-| ------------ | -------- | ------------------------------------------------------------- |
-| `/api/evals` | GET/POST | Baholash toʻplamlarini roʻyxatlash/baholashni ishga tushirish |
+| Endpoint | Metod | Tavsif |
+| -------- | ----- | ------ |
 
 ### Siyosatlar
 
@@ -1682,31 +1681,6 @@ Avtomatik kalit boshqaruvi quyi tizimi tomonidan asosiy provayder/hisob qaydnoma
 
 ---
 
-## Agentlar protokoli
-
-67router foydalanuvchilari nomidan masofadan bajariladigan bulut agenti vazifalari (Claude Code, Codex Cloud, OpenHands va boshqalar).
-
-| Metod  | Yoʻl                          | Tavsif                                                                                                                                                                 |
-| ------ | ----------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| GET    | `/api/v1/agents/tasks`        | Vazifalarni roʻyxatlash — ixtiyoriy `?provider=`, `?status=`, `?limit=` (1–500, standart qiymat 50)                                                                    |
-| POST   | `/api/v1/agents/tasks`        | Vazifa yaratish — soʻrov tanasi `CreateCloudAgentTaskSchema` orqali tekshiriladi (`providerId`, `prompt`, `source`, `options?`). Vazifa konverti bilan `201` qaytaradi |
-| DELETE | `/api/v1/agents/tasks?id=...` | Vazifani oʻchirish                                                                                                                                                     |
-| GET    | `/api/v1/agents/tasks/[id]`   | Vazifani oʻqish — `external_id` oʻrnatilgan boʻlsa, yuqori oqimdagi bulut agentidan holatni sinxron ravishda yangilaydi                                                |
-| POST   | `/api/v1/agents/tasks/[id]`   | Ajratilgan amal: `{action: "approve"}`, `{action: "message", message}` yoki `{action: "cancel"}`                                                                       |
-| DELETE | `/api/v1/agents/tasks/[id]`   | Muayyan vazifani identifikatori boʻyicha oʻchirish                                                                                                                     |
-
-> **Autentifikatsiya:** har bir metod uchun boshqaruv autentifikatsiyasi talab qilinadi (`requireCloudAgentManagementAuth`). v3.8.0 dan oldin ular autentifikatsiyasiz edi — moslikni buzuvchi oʻzgarish uchun `588a0333` kommitiga qarang.
-
-```bash
-# Claude Code bulut vazifasini yaratish
-curl -X POST http://localhost:20128/api/v1/agents/tasks \
-  -H "Authorization: Bearer your-management-key" \
-  -H "Content-Type: application/json" \
-  -d '{"providerId":"claude-code-cloud","prompt":"Fix the failing test","source":{"repo":"...","branch":"..."}}'
-```
-
----
-
 ## Boshqaruv proksilari
 
 Provayderlar, hisoblar yoki global miqyosda biriktirilishi mumkin boʻlgan chiquvchi HTTP(S)/SOCKS proksilari.
@@ -1826,48 +1800,10 @@ Har bir API kaliti / sessiya doirasida ajratilgan doimiy suhbatga oid/faktik xot
 
 67router tekshirish/boshqaruv panelida foydalanish uchun REST o‘ramasi bilan birga A2A (agentdan agentga) JSON-RPC 2.0 yakuniy nuqtasini taqdim etadi.
 
-### JSON-RPC
-
-```bash
-POST /a2a
-Authorization: Bearer your-api-key   # OMNIROUTE_API_KEY o‘rnatilmagan bo‘lsa, ixtiyoriy
-Content-Type: application/json
-
-{
-  "jsonrpc": "2.0",
-  "id": 1,
-  "method": "message/send",
-  "params": {
-    "skill": "smart-routing",
-    "messages": [{"role": "user", "content": "Route this coding task"}]
-  }
-}
-```
-
-Qo‘llab-quvvatlanadigan metodlar (barchasi `settings.a2aEnabled` orqali boshqariladi):
-
-| Metod            | Tavsif                                                               |
-| ---------------- | -------------------------------------------------------------------- |
-| `message/send`   | Ko‘nikmani sinxron bajarish; `{task, artifacts, metadata}` qaytaradi |
-| `message/stream` | Xuddi shu ko‘nikmalar to‘plamini SSE orqali oqimli bajarish          |
-| `tasks/get`      | Vazifani `taskId` bo‘yicha olish                                     |
-| `tasks/cancel`   | Vazifani `taskId` bo‘yicha bekor qilish                              |
-
-Ichki ko‘nikmalar: `smart-routing`, `quota-management`, `provider-discovery`, `cost-analysis`, `health-report`.
-
-### Agent kartasi
-
-```bash
-GET /.well-known/agent.json
-```
-
-Ommaviy A2A agent kartasini (nomi, tavsifi, imkoniyatlari, ko‘nikmalar katalogi, autentifikatsiya sxemasi) qaytaradi — ommaviy tarzda 1 soatga keshlanadi. Autentifikatsiya talab qilinmaydi.
-
 ### REST yordamchilari
 
 | Metod | Yo‘l                         | Tavsif                                                                                                                  |
 | ----- | ---------------------------- | ----------------------------------------------------------------------------------------------------------------------- |
-| GET   | `/api/a2a/status`            | A2A yoqilganligi + vazifalar statistikasi + keshlangan agent kartasi xulosasi                                           |
 | GET   | `/api/a2a/tasks`             | Vazifalar ro‘yxati — `?state=submitted\|working\|completed\|failed\|cancelled`, `?skill=`, `?limit=` (≤200), `?offset=` |
 | POST  | `/api/a2a/tasks`             | (REST yordamchisi sifatida amalga oshirilmagan — JSON-RPC `message/send` orqali yarating)                               |
 | GET   | `/api/a2a/tasks/[id]`        | Bitta vazifani olish                                                                                                    |
@@ -1887,12 +1823,8 @@ Ommaviy A2A agent kartasini (nomi, tavsifi, imkoniyatlari, ko‘nikmalar katalog
 | GET | `/api/cloud/models/alias` | Bulutli sinxronlashga taqdim etilgan model taxalluslari ro‘yxatini olish |
 | GET | `/api/assess` | Eng so‘nggi baholash toifalarini o‘qish (har bir provayder/model bo‘yicha) |
 | POST | `/api/assess` | Baholashni ishga tushirish — so‘rov tanasi: `{scope: {type:"all"}                                                   | {type:"provider", providerId} | {type:"model", modelId}, trigger?}` |
-| GET | `/api/evals` | Ichki sinov to‘plamlari va eng so‘nggi ishga tushirishlar ro‘yxatini olish |
-| POST | `/api/evals` | Sinovni ishga tushirish |
-| POST | `/api/evals/suites` | Maxsus sinov to‘plamini yaratish — so‘rov tanasi `evalSuiteSaveSchema` orqali tekshiriladi |
-| GET | `/api/evals/suites/[id]` | Maxsus sinov to‘plamini olish |
 
-**Autentifikatsiya:** `/api/cloud/auth` Bearer kalitini bevosita tekshiradi va faqat `manage` / `admin` vakolat doirasiga ega kalit uchun har bir ulanishning niqoblangan kaliti va `projectId` qiymatini qaytaradi; boshqa `/api/cloud/*`, `/api/evals/*` va `/api/assess` yo‘nalishlari boshqaruv sessiyasi/API kalitini talab qiladi. `/api/assess` POST diskriminatorli birlashma ko‘lam sxemasi bilan `validateBody` dan foydalanadi.
+**Autentifikatsiya:** `/api/cloud/auth` Bearer kalitini bevosita tekshiradi va faqat `manage` / `admin` vakolat doirasiga ega kalit uchun har bir ulanishning niqoblangan kaliti va `projectId` qiymatini qaytaradi; boshqa `/api/cloud/*` va `/api/assess` yo‘nalishlari boshqaruv sessiyasi/API kalitini talab qiladi. `/api/assess` POST diskriminatorli birlashma ko‘lam sxemasi bilan `validateBody` dan foydalanadi.
 
 ---
 
@@ -2214,5 +2146,3 @@ To‘rtta hisob ma’lumotlari oilasi (boshqaruv paneli seansi, mahalliy CLI tok
 - `requireLogin` sozlamasini `/api/settings/require-login` orqali yoqish yoki o‘chirish mumkin
 - `REQUIRE_API_KEY=true` bo‘lganda, `/v1/*` marshrutlari ixtiyoriy ravishda Bearer API kalitini talab qiladi
 - Ushbu ma’lumotnomadagi "boshqaruv tokeni" / "boshqaruv doirasidagi API kaliti" iboralari qo‘llanmada ko‘rsatilgan oilalardan birini anglatadi — alohida, ta’riflanmagan maxfiy ma’lumot turini emas
-
-> **Moslikni buzuvchi o‘zgarish (v3.8.0)** — `/api/v1/agents/tasks/*` va kutish muddatini boshqarish endpointlari endi **boshqaruv autentifikatsiyasini** (boshqaruv panelining `auth_token` cookie-fayli yoki boshqaruv doirasidagi API kaliti) talab qiladi. Ilgari ushbu marshrutlarga autentifikatsiyasiz murojaat qilgan mijozlar `401 Unauthorized` javobini oladi. `588a0333` kommitiga qarang (`fix(auth): require management auth for agent and cooldown APIs`).

@@ -742,7 +742,6 @@ omniroute cache                        # ស្ថានភាព cache
 omniroute cache clear                  # សម្អាត semantic + signature caches
 
 omniroute mcp status | restart         # ស្ថានភាព / ចាប់ផ្ដើមម៉ាស៊ីនបម្រើ MCP ឡើងវិញ
-omniroute a2a status | card            # ស្ថានភាពម៉ាស៊ីនបម្រើ A2A / កាតភ្នាក់ងារ
 
 omniroute tunnel list | create | stop  # គ្រប់គ្រង tunnels (cloudflare/tailscale/ngrok)
 omniroute env show | get <k> | set <k> <v>  # ពិនិត្យ / កំណត់អថេរបរិស្ថាន (បណ្ដោះអាសន្ន)

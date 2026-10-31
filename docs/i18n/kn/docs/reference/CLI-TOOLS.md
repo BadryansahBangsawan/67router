@@ -757,7 +757,6 @@ omniroute cache                        # cache ಸ್ಥಿತಿ
 omniroute cache clear                  # semantic + signature cacheಗಳನ್ನು ತೆರವುಗೊಳಿಸಿ
 
 omniroute mcp status | restart         # MCP ಸರ್ವರ್ ಸ್ಥಿತಿ / ಮರುಪ್ರಾರಂಭ
-omniroute a2a status | card            # A2A ಸರ್ವರ್ ಸ್ಥಿತಿ / agent card
 
 omniroute tunnel list | create | stop  # tunnelಗಳನ್ನು ನಿರ್ವಹಿಸಿ (cloudflare/tailscale/ngrok)
 omniroute env show | get <k> | set <k> <v>  # env vars ಪರಿಶೀಲಿಸಿ / ಹೊಂದಿಸಿ (ತಾತ್ಕಾಲಿಕ)

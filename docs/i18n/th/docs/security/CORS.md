@@ -69,20 +69,6 @@ middleware (`src/server/authz/pipeline.ts`) — handler ของแต่ละ
 ที่หน้าเว็บข้าม origin ไม่สามารถจัดหาได้ พฤติกรรมนี้ **ไม่ใช่** ช่องทางสำหรับการยึดครองเซสชันหรือ
 การขโมยข้อมูลรับรองบนเส้นทาง CORS ที่ใช้ร่วมกัน
 
-### ข้อยกเว้นจริงหนึ่งรายการ — `/api/v1/agents/`
-
-route ของ Cloud-Agent (`/api/v1/agents/{health,credentials,tasks,tasks/[id]}`) ตั้งค่า
-ส่วนหัว CORS **ของตนเอง**
-(`src/lib/cloudAgent/api.ts`, `getCloudAgentCorsHeaders`) และ**มีการ**ส่ง
-`Access-Control-Allow-Origin: <origin>|*` พร้อมกับ
-`Access-Control-Allow-Credentials: true` นี่เป็นพื้นผิวเดียวที่
-การส่ง origin กลับและข้อมูลรับรองใช้งานร่วมกัน และ **ไม่ขึ้นกับ
-`CORS_ALLOW_ALL`** route เหล่านี้ได้รับการยืนยันตัวตนสำหรับการจัดการ
-(`requireManagementAuth`); ผู้ดูแลระบบที่เปิดให้เข้าถึงแดชบอร์ดจากภายนอกโฮสต์ควร
-ตระหนักว่านี่เป็นจุดเดียวที่ส่วนหัวการตอบกลับอนุญาตให้อ่านแบบข้าม origin
-โดยมีข้อมูลรับรอง การจำกัดให้ใช้รายการอนุญาตที่ระบุไว้อย่างชัดเจนกำลังถูกติดตาม
-แยกต่างหากจากคำแนะนำเกี่ยวกับ CORS นี้
-
 ## รายการตรวจสอบสำหรับระบบโปรดักชัน
 
 - **ห้ามตั้งค่า `CORS_ALLOW_ALL=true` ในระบบโปรดักชันโดยเด็ดขาด** ให้ปล่อยไว้โดยไม่กำหนดค่า
@@ -161,7 +147,6 @@ location / {
 | สถานะรันไทม์สำหรับแดชบอร์ด                         | `src/app/api/settings/authz-inventory/route.ts`                      |
 | แบนเนอร์คำเตือนบนแดชบอร์ด                          | `src/app/(dashboard)/dashboard/settings/components/AuthzSection.tsx` |
 | ช่อง CORS Allowed Origins                          | `src/app/(dashboard)/dashboard/settings/components/SecurityTab.tsx`  |
-| CORS รายเส้นทางของ Cloud-Agent (ข้อยกเว้น)         | `src/lib/cloudAgent/api.ts`                                          |
 
 ## ดูเพิ่มเติม
 

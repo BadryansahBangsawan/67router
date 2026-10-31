@@ -258,12 +258,6 @@ Aktarım kurulumu ve kapsam atamaları için [MCP-SERVER.md](./MCP-SERVER.md) be
 
 ---
 
-## A2A Entegrasyonu
-
-`src/lib/skills/a2a.ts`, `memory_aware_routing` A2A beceri tanımlayıcısını ve bir `registerA2ASkill(registry)` yardımcısını dışa aktarır. Özel A2A becerileri `src/lib/a2a/skills/` altında bulunur ve `A2A_SKILL_HANDLERS` (`src/lib/a2a/taskExecution.ts`) aracılığıyla yönlendirilir. Görevin tüm yaşam döngüsü için [A2A-SERVER.md](./A2A-SERVER.md) belgesine bakın.
-
----
-
 ## Yeni Bir Yerleşik Beceri Ekleme
 
 1. **İşleyiciyi tanımlayın:** `src/lib/skills/builtins.ts` içinde (veya `src/lib/skills/builtin/` altındaki eş düzey bir dosyada). İmza: `(input, { apiKeyId, sessionId }) => Promise<output>`.
@@ -479,7 +473,6 @@ Eklenti sistemi aracılığıyla özel bir becerinin nasıl ekleneceğini öğre
 ## Ayrıca Bakınız
 
 - [MCP-SERVER.md](./MCP-SERVER.md) — MCP araç kaydı ve aktarımlar
-- [A2A-SERVER.md](./A2A-SERVER.md) — A2A görev yaşam döngüsü ve beceri yönlendirme
 - [USER_GUIDE.md](../guides/USER_GUIDE.md#-skills-system) — kullanıcıya yönelik giriş
 - [ARCHITECTURE.md](../architecture/ARCHITECTURE.md) — istek işlem hattı ve bileşen haritası
 - Kaynak: `src/lib/skills/`, `src/app/api/skills/`, `open-sse/mcp-server/tools/skillTools.ts`

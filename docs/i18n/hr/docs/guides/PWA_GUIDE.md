@@ -51,13 +51,13 @@ Manifest je konfiguriran s `display: "fullscreen"`, što znači da instalirana a
 
 67router uključuje servisnog radnika (`sw.js`) koji omogućuje inteligentno predmemoriranje:
 
-| Vrsta resursa                                                 | Strategija                                 | Ponašanje                                                                                                      |
-| ------------------------------------------------------------- | ------------------------------------------ | -------------------------------------------------------------------------------------------------------------- |
-| **Ljuska aplikacije**                                         | Najprije predmemorija                      | `/`, `/offline`, manifest i ikone unaprijed se predmemoriraju tijekom instalacije                              |
-| **Statički resursi** (CSS, JS, slike, fontovi)                | Najprije mreža, uz rezervnu predmemoriju   | Dohvaća svježe podatke s mreže; ako nema veze, koristi predmemoriju                                            |
-| **Next.js paketi** (`/_next/`)                                | Najprije mreža, uz ažuriranje predmemorije | Dohvaća s mreže i ažurira predmemoriju; ako nema veze, poslužuje predmemoriranu verziju                        |
-| **Navigacijski zahtjevi**                                     | Zaobilaženje (nikada se ne presreću)       | Preglednik upravlja prijelazom s HTTP/3 na HTTP/2; neaktivna QUIC utičnica ne smije postati `Response.error()` |
-| **API / rute nadzorne ploče** (`/api/`, `/a2a`, `/dashboard`) | Zaobilaženje (nikada se ne predmemoriraju) | Uvijek idu izravno poslužitelju — servisni radnik ih nikada ne presreće                                        |
+| Vrsta resursa                                         | Strategija                                 | Ponašanje                                                                                                      |
+| ----------------------------------------------------- | ------------------------------------------ | -------------------------------------------------------------------------------------------------------------- |
+| **Ljuska aplikacije**                                 | Najprije predmemorija                      | `/`, `/offline`, manifest i ikone unaprijed se predmemoriraju tijekom instalacije                              |
+| **Statički resursi** (CSS, JS, slike, fontovi)        | Najprije mreža, uz rezervnu predmemoriju   | Dohvaća svježe podatke s mreže; ako nema veze, koristi predmemoriju                                            |
+| **Next.js paketi** (`/_next/`)                        | Najprije mreža, uz ažuriranje predmemorije | Dohvaća s mreže i ažurira predmemoriju; ako nema veze, poslužuje predmemoriranu verziju                        |
+| **Navigacijski zahtjevi**                             | Zaobilaženje (nikada se ne presreću)       | Preglednik upravlja prijelazom s HTTP/3 na HTTP/2; neaktivna QUIC utičnica ne smije postati `Response.error()` |
+| **API / rute nadzorne ploče** (`/api/`, `/dashboard`) | Zaobilaženje (nikada se ne predmemoriraju) | Uvijek idu izravno poslužitelju — servisni radnik ih nikada ne presreće                                        |
 
 ### Stranica za izvanmrežni rad
 

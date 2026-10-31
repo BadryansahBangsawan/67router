@@ -1341,7 +1341,7 @@ export const agentSkillsListOutput = z.object({
   count: z.number(),
   coverage: z.object({
     api: z.object({ have: z.number(), total: z.literal(22) }),
-    cli: z.object({ have: z.number(), total: z.literal(20) }),
+    cli: z.object({ have: z.number(), total: z.literal(19) }),
     config: z.object({ have: z.number(), total: z.literal(1) }),
     totalSkills: z.number(),
     generatedAt: z.string(),
@@ -1409,7 +1409,7 @@ export const agentSkillsCoverageInput = z.object({}).describe("No parameters req
 
 export const agentSkillsCoverageOutput = z.object({
   api: z.object({ have: z.number(), total: z.literal(22) }),
-  cli: z.object({ have: z.number(), total: z.literal(20) }),
+  cli: z.object({ have: z.number(), total: z.literal(19) }),
   config: z.object({ have: z.number(), total: z.literal(1) }),
   totalSkills: z.number(),
   generatedAt: z.string(),

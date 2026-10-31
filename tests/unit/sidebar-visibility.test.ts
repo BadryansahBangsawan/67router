@@ -56,7 +56,6 @@ test("v2 sidebar sections hold every page, in this order", () => {
     "skills",
     "cli-code",
     "acp-agents",
-    "cloud-agents",
     "conductor",
     "orchestration",
     "agent-bridge",

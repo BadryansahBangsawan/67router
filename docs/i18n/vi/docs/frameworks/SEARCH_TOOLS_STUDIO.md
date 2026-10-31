@@ -169,5 +169,4 @@ Chỉ cần một thay đổi backend cho tính năng này:
 - Kế hoạch tổng thể: `_tasks/features-v3.8.6/refactorpages/_orchestration/master-plan-group-C.md`
 - Kế hoạch tính năng: `_tasks/features-v3.8.6/refactorpages/18-search-tools-studio-redesign.plan.md`
 - Registry nhà cung cấp tìm kiếm: `open-sse/config/searchRegistry.ts`
-- Playground Studio (`ExportCodeModal` + `codeExport.ts` dùng chung): `docs/frameworks/PLAYGROUND_STUDIO.md`
 - Backend truy xuất web: `src/app/api/v1/web/fetch/route.ts`

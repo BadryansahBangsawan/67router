@@ -24,7 +24,6 @@
 - [የክህሎቶች ሥርዓት](#-skills-system)
 - [የማስታወሻ ሥርዓት](#-memory-system)
 - [Webhooks](#-webhooks)
-- [የደመና ወኪሎች](#-cloud-agents)
 - [ፕሮግራማዊ አስተዳደር](#-programmatic-management)
 - [ውስጣዊ CLI](#-internal-cli)
 - [የዴስክቶፕ መተግበሪያ (Electron)](#-desktop-application-electron)
@@ -1238,8 +1237,6 @@ curl -X POST http://localhost:20128/v1/chat/completions \
 
 ### የፈቃድ ወሰኖች
 
-MCP በአሁኑ ጊዜ 32 ስያሜ ያላቸው የፈቃድ ወሰኖችን ይገልጻል። እያንዳንዱ Bearer ቁልፍ ለተወሰኑ የፈቃድ ወሰኖች ብቻ ሊገደብ ይችላል — ለዋናው የፈቃድ ወሰንና የመሣሪያ ዝርዝር [MCP-SERVER.md](../frameworks/MCP-SERVER.md)ን፣ ለJSON-RPC መርሐግብር ደግሞ [A2A-SERVER.md](../frameworks/A2A-SERVER.md)ን ይመልከቱ።
-
 ---
 
 ## 🧠 የክህሎት ስርዓት
@@ -1248,7 +1245,6 @@ MCP በአሁኑ ጊዜ 32 ስያሜ ያላቸው የፈቃድ ወሰኖችን �
 
 - **የገበያ ቦታ በይነገጽ** — ክህሎቶችን ከ**Dashboard → Skills** ያስሱ እና ይጫኑ
 - **የየቁልፍ ወሰኖች** — የትኞቹ API ቁልፎች የትኞቹን ክህሎቶች መጥራት እንደሚችሉ ይገድቡ
-- **ብጁ ክህሎቶች** — የTypeScript ፋይልን በ`src/lib/a2a/skills/` ውስጥ ያስቀምጡ፣ ይመዝግቡት፣ ከዚያም ወዲያውኑ በA2A በኩል ሊጠራ ይችላል
 
 ሙሉ ማጣቀሻ፦ [SKILLS.md](../frameworks/SKILLS.md)።
 
@@ -1277,18 +1273,6 @@ MCP በአሁኑ ጊዜ 32 ስያሜ ያላቸው የፈቃድ ወሰኖችን �
 - ዳግም ሙከራዎች፦ እየጨመረ በሚሄድ የጥበቃ ጊዜ 3 ሙከራዎች፣ ከዚያም ያልተሳኩ መልዕክቶች ወረፋ
 
 ሙሉው እቅድ በ[WEBHOOKS.md](../frameworks/WEBHOOKS.md) ውስጥ ይገኛል።
-
----
-
-## ☁️ የደመና ኤጀንቶች
-
-67router ረጅም ጊዜ የሚወስዱ ተግባራትን የአካባቢዎን ማስተላለፊያ ከሚያስተዳድረው ተመሳሳይ ዳሽቦርድ ለመላክ እንዲችሉ ከደመና የኮድ ኤጀንቶች (**OpenAI Codex Cloud**፣ **Devin**፣ **Jules**፣ **Antigravity**) ጋር ይዋሃዳል።
-
-- ተግባራትን በ**Dashboard → Cloud Agents** ውስጥ ወይም በ`POST /api/v1/agents/tasks` በኩል ይፍጠሩ
-- የእያንዳንዱን ተግባር ሁኔታ፣ ምዝግቦች እና ውጤቶች ይከታተሉ
-- ለእያንዳንዱ አቅራቢ የራስዎን API ቁልፍ ይጠቀሙ — የመግቢያ ማስረጃዎች ከ67router አብነት ፈጽሞ አይወጡም
-
-ሙሉ ማጣቀሻ፦ [CLOUD_AGENT.md](../frameworks/CLOUD_AGENT.md)።
 
 ---
 
@@ -1345,7 +1329,6 @@ omniroute restore [<timestamp>]    # ከቅጽበታዊ ቅጂ መልስ
 omniroute health                   # ዝርዝር የጤና ሁኔታ (ሰባሪዎች፣ መሸጎጫ፣ ማህደረ ትውስታ)
 omniroute quota                    # የአቅራቢ ኮታ አጠቃቀም
 omniroute mcp status               # የMCP አገልጋይ ሁኔታ
-omniroute a2a status               # የA2A አገልጋይ ሁኔታ
 omniroute tunnel list|create|stop  # Cloudflare/Tailscale/ngrok ዋሻዎች
 omniroute reset-password           # የአስተዳዳሪውን የይለፍ ቃል ዳግም አስጀምር
 omniroute --mcp                    # የMCP አገልጋይን በstdio ላይ አስጀምር

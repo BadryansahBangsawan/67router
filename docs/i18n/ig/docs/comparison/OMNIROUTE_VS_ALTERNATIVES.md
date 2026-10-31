@@ -24,7 +24,6 @@ Ntụnyere atụmatụ ziri ezi megide AI routers open-source ama ama.
 | **A2A protocol**                                        |                  ✅ nkà 6                   |         ❌         |        ❌         |        ❌         |
 | **Ncheta (FTS5 + vector)**                              |                     ✅                      |         ❌         |        ❌         |        ❌         |
 | **Guardrails (PII, injection, anya)**                   |                     ✅                      |   n'ụzọ dị ụfọdụ   |        ❌         | ✅ a na-akwụ ụgwọ |
-| **Njikọta agent igwe ojii**                             |         Codex, Cursor, Devin, Jules         |         ❌         |        ❌         |        ❌         |
 | **Circuit breaker maka onye na-enye ọ bụla**            |        ✅ steeti 3, mweghachi nwayọ         |      ndabere       |        ❌         |        ✅         |
 | **TLS fingerprint stealth (JA3/JA4)**                   |                 ✅ wreq-js                  |         ❌         |        ❌         |        ❌         |
 | **Framework nyocha**                                    |           ✅ nke e tinyere n'ime            |         ❌         |        ❌         | ⚠ a na-akwụ ụgwọ  |

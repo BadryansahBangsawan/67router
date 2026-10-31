@@ -41,7 +41,6 @@ AI ਏਜੰਟ / IDE
 | ਸ਼ੈਡੋ ਟ੍ਰੈਫਿਕ                           | `open-sse/services/combo/shadowRouting.ts`                                                        |
 | ਗਾਰਡਰੇਲ                                 | `src/lib/guardrails/` (ਪ੍ਰੀ/ਪੋਸਟ ਹੁੱਕ)                                                            |
 | ਸਟੀਕ ਕੈਸ਼                               | `src/lib/semanticCache.ts` (ਸਿਗਨੇਚਰ-ਆਧਾਰਿਤ)                                                       |
-| ਮੁਲਾਂਕਣਕਰਤਾ / ਮੁਲਾਂਕਣ-ਚਲਿਤ ਰਾਊਟਿੰਗ      | `src/lib/evals/`, `open-sse/services/evalRouting.ts`                                              |
 | Combo ਫੈਸਲੇ ਦੀ ਵਿਆਖਿਆਯੋਗਤਾ              | `open-sse/services/combo/decisionTrace.ts`                                                        |
 | ਡੈਸ਼ਬੋਰਡ ਰੀਅਲ-ਟਾਈਮ ਇਵੈਂਟ                | `src/lib/events/eventBus.ts` (UI ਨੋਟੀਫਿਕੇਸ਼ਨ ਚੈਨਲ, `unknown` ਪੇਲੋਡ, 100-ਐਂਟਰੀ ਇਤਿਹਾਸ)             |
 
@@ -254,8 +253,6 @@ OTel ਸਿੰਕ ਦੁਆਰਾ GenAI/OmniRoute ਸਪੈਨ ਐਟ੍ਰਿ�
 - ਭਵਿੱਖ ਦਾ ਇੱਕ `Evaluator` (ਡਿਟਰਮਿਨਿਸਟਿਕ, ਲੋਕਲ ਜੱਜ, HTTP, WASM) ਇਵੈਂਟਾਂ/ਟ੍ਰੇਸਾਂ ਦੀ ਖਪਤ ਕਰੇਗਾ
   ਅਤੇ ਇੱਕ `QualityScore` ਵਾਪਸ ਕਰੇਗਾ, ਜੋ ਉਸੇ
   `getQualityScore`/ਗੁਣਵੱਤਾ-ਫੈਕਟਰ ਪਾਥ ਨੂੰ ਫੀਡ ਕਰਦਾ ਹੈ।
-- ਮੌਜੂਦਾ ਮੁਲਾਂਕਣ-ਸੰਚਾਲਿਤ ਰਾਊਟਿੰਗ (`open-sse/services/evalRouting.ts`) ਸਮਰੱਥ ਹੋਣ 'ਤੇ
-  ਪਹਿਲਾਂ ਹੀ `eval_runs` ਪਾਸ-ਰੇਟਾਂ ਮੁਤਾਬਕ ਕੌਂਬੋ ਟਾਰਗੇਟਾਂ ਨੂੰ ਮੁੜ ਕ੍ਰਮਬੱਧ ਕਰਦੀ ਹੈ।
 
 ਬੇਨਤੀ ਪਾਥ 'ਤੇ ਕੋਈ ਮੁਲਾਂਕਣ ਸਿੰਕ੍ਰੋਨਸ ਤੌਰ 'ਤੇ ਨਹੀਂ ਚੱਲਦਾ, ਅਤੇ ਮੁਲਾਂਕਣਕਰਤਾ ਦੀ ਗੈਰਹਾਜ਼ਰੀ ਵਿੱਚ ਵੀ ਗੇਟਵੇ
 ਪੂਰੀ ਤਰ੍ਹਾਂ ਕੰਮ ਕਰਦਾ ਹੈ।

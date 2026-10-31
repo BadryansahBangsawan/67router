@@ -4,7 +4,6 @@
 
 ---
 
-> **Avots:** `src/lib/{a2a,acp,cloudAgent}/`, `src/app/api/{a2a,acp,cloud}/`, `src/app/api/v1/agents/`
 > **Pēdējo reizi atjaunināts:** 2026-06-28 — v3.8.40
 
 67router nodrošina trīs dažādas ar aģentiem saistītas saskarnes. Sākotnēji tās šķiet līdzīgas, taču risina atšķirīgas problēmas. Izmantojiet šo lapu, lai izvēlētos piemērotāko.
@@ -20,52 +19,6 @@
 Visas trīs saskarnes ir neatkarīgas — izvēlieties jebkuru to kombināciju.
 
 ## Lēmumu koks
-
-```
-Vai jums ir nepieciešams mākoņpakalpojums, kas veic darbu ārpus šī datora (Codex Cloud / Cursor Cloud / Devin / Jules)?
-├─ JĀ → Mākoņa aģenti (POST /api/v1/agents/tasks)
-└─ NĒ → Turpiniet
-    │
-    Vai jums ir cits aģents, kas izmanto A2A un vēlas sadarboties?
-    ├─ JĀ → A2A (POST /a2a)
-    └─ NĒ → Turpiniet
-        │
-        Vai jums ir jāuzskaita vai jākonfigurē lokāli instalētie CLI programmēšanas aģenti?
-        ├─ JĀ → ACP (GET /api/acp/agents)
-        └─ NĒ → Izmantojiet parasto /v1/chat/completions
-```
-
-## 1. A2A — Agent-to-Agent
-
-**Specifikācija:** [A2A v0.3](https://a2a-protocol.org)
-**67router galapunkts:** `POST /a2a` (JSON-RPC 2.0)
-**Aģenta karte:** `GET /.well-known/agent.json`
-
-### Kad izmantot
-
-- Veidojot vairāku aģentu sistēmu, kurā 67router ir viens no sadarbības dalībniekiem
-- Nodrošinot 67router maršrutēšanas iespējas (`smart-routing`, `quota-management` u.c.) aģentiem tādos ietvaros kā Google ADK vai vispārīgos aģentu tīklos
-- Ietverot 67router standarta atklāšanas un izsaukšanas saskarnē
-
-### Metodes
-
-- `message/send` — iesniegt ziņojumu un saņemt sinhronu atbildi
-- `message/stream` — iesniegt ziņojumu un saņemt SSE straumētus progresa notikumus
-- `tasks/get` — nolasīt uzdevumu pēc ID
-- `tasks/cancel` — atcelt izpildē esošu uzdevumu
-
-### Iebūvētās prasmes (6)
-
-- `smart-routing` — maršrutēt uzvedni, izmantojot optimālo kombināciju
-- `quota-management` — ziņot par katra nodrošinātāja kvotas stāvokli
-- `provider-discovery` — uzskaitīt instalētos nodrošinātājus un to iespējas
-- `cost-analysis` — novērtēt pieprasījuma vai sarunas izmaksas
-- `health-report` — apkopot katra nodrošinātāja slēdža, nogaidīšanas perioda un bloķēšanas stāvokli
-- `list-capabilities` — uzskaitīt aģenta pieejamās prasmes un metadatus
-
-### Padziļināta informācija
-
-Transporta informāciju, aģenta kartes struktūru, uzdevumu TTL konfigurāciju un jaunu prasmju pievienošanas veidni skatiet dokumentā [A2A-SERVER.md](./A2A-SERVER.md).
 
 ## 2. ACP — CLI aģentu reģistrs
 
@@ -125,86 +78,7 @@ POST pieprasījuma pamatteksta struktūra (`customAgentBodySchema` failā `src/a
   atkāpšanās mehānisms. Parastai interaktīvai lietošanai palaidiet konfigurēto CLI pats vai
   izmantojiet `omniroute run`.
 
-## 3. Mākoņa aģenti
-
-**67router galapunkti:** `/api/v1/agents/tasks/*` (dzīves cikls) + `/api/cloud/*` (infrastruktūra)
-**Avots:** `src/lib/cloudAgent/`
-
-### Kas tas ir
-
-Vienota saskarne darbam ar trešo pušu mākoņa programmēšanas aģentiem. Jūs iesniedzat uzvedni un repozitorija URL, 67router nosūta pieprasījumu pareizajam mākoņa aģentam, periodiski pārbauda statusu un atgriež rezultātus.
-
-### Atbalstītie aģenti (3, visi apstiprināti mapē `src/lib/cloudAgent/agents/`)
-
-- `codex-cloud` — OpenAI Codex Cloud
-- `devin` — Cognition Devin
-- `jules` — Google Jules
-
-### Dzīves cikls
-
-```
-POST /api/v1/agents/tasks
-  → BaseAgent.createTask() katrai aģenta klasei
-  → ārējais pakalpojums sāk darbu
-  → datubāzē tiek izveidota uzdevuma rinda (cloud_agent_tasks)
-  ↓
-GET /api/v1/agents/tasks/[id]
-  → atlikta statusa sinhronizācija no nodrošinātāja
-  → atgriež pašreizējo statusu + plānu + darbību žurnālu
-  ↓
-POST /api/v1/agents/tasks/[id]   (darbība: "approve" | "message" | "cancel")
-  → pārsūta nodrošinātājam (vai lokāli atzīmē kā atceltu)
-  ↓
-DELETE /api/v1/agents/tasks/[id]
-  → lokāla atcelšana
-```
-
-### Autentifikācija
-
-⚠️ **Visiem `/api/v1/agents/tasks/*` galapunktiem ir nepieciešama pārvaldības autentifikācija** (komits `588a0333`). Izsaucēji, kas izmanto tikai Bearer autentifikāciju, kopš v3.8.0 saņem 401.
-
-### Padziļināta informācija
-
-Informāciju par `CloudAgentBase` līgumu, katra aģenta specifiku, shēmu detaļām un akreditācijas datu infrastruktūras galapunktiem skatiet [CLOUD_AGENT.md](./CLOUD_AGENT.md).
-
-## Salīdzinājums: A2A un mākoņa aģenti
-
-Abiem ir „ilgstoši uzdevumi”, taču dažādos līmeņos:
-
-| Aspekts                  | A2A                                                                                                    | Mākoņa aģenti                               |
-| ------------------------ | ------------------------------------------------------------------------------------------------------ | ------------------------------------------- |
-| Standarts                | Atvērtais A2A v0.3                                                                                     | Specifisks 67router                         |
-| Kur notiek izpilde       | 67router iekšienē (izmanto konfigurētās kombinācijas)                                                  | Ārēji (Codex / Devin / Jules serveros)      |
-| Uzdevuma ilgums          | Noklusējuma TTL — 5 min (konfigurējams sadaļā `TaskManager`)                                           | No minūtēm līdz stundām                     |
-| Repozitorija pārzināšana | Nē (nodod tikai uzvednes)                                                                              | Jā (repozitorija URL + zars)                |
-| Lietošanas gadījums      | Aģentu savstarpēja sadarbība, viedā maršrutēšana kā pakalpojums                                        | Deleģēt „ieviest funkciju X repozitorijā Y” |
-| Autentifikācija          | Neobligāts `OMNIROUTE_API_KEY` ceļam `/a2a`; pārvaldības autentifikācija `/api/a2a/*` REST palīgceļiem | Vienmēr pārvaldības autentifikācija         |
-
 ## Integrācijas piemēri
-
-### 67router A2A iespēju atklāšana
-
-```bash
-curl http://localhost:20128/.well-known/agent.json
-```
-
-Atgriež aģenta karti ar visām 6 prasmēm, transportiem un versiju.
-
-### 67router izsaukšana kā A2A aģentam
-
-```bash
-curl -X POST http://localhost:20128/a2a \
-  -H "Content-Type: application/json" \
-  -d '{
-    "jsonrpc": "2.0",
-    "method": "message/send",
-    "params": {
-      "messages": [{"role": "user", "content": "Route this prompt"}],
-      "skill": "smart-routing"
-    },
-    "id": 1
-  }'
-```
 
 ### Instalēto CLI aģentu uzskaitīšana, izmantojot ACP
 
@@ -227,30 +101,6 @@ curl -X POST http://localhost:20128/api/acp/agents \
     "versionCommand": "--version",
     "providerAlias": "openai"
   }'
-```
-
-### Mākoņa aģenta uzdevuma iesniegšana
-
-```bash
-curl -X POST http://localhost:20128/api/v1/agents/tasks \
-  -H "Cookie: auth_token=..." \
-  -H "Content-Type: application/json" \
-  -d '{
-    "providerId": "devin",
-    "prompt": "Implement feature X in repo Y",
-    "source": {
-      "repoName": "user/repo",
-      "repoUrl": "https://github.com/user/repo",
-      "branch": "main"
-    }
-  }'
-```
-
-### Mākoņa uzdevuma statusa periodiska pārbaude
-
-```bash
-curl http://localhost:20128/api/v1/agents/tasks/<task-id> \
-  -H "Cookie: auth_token=..."
 ```
 
 ## Ko un kad izmantot
@@ -283,8 +133,6 @@ curl http://localhost:20128/api/v1/agents/tasks/<task-id> \
 
 ## Skatiet arī
 
-- [A2A-SERVER.md](./A2A-SERVER.md) — padziļināts A2A apskats
-- [CLOUD_AGENT.md](./CLOUD_AGENT.md) — padziļināts mākoņa aģentu apskats
 - [CLI-TOOLS.md](../reference/CLI-TOOLS.md) — ārējo CLI integrācijas (izmanto ACP)
 - [SKILLS.md](./SKILLS.md) — prasmju ietvars (atšķiras no A2A prasmēm — lokāla izpildes smilškaste)
 - [API_REFERENCE.md](../reference/API_REFERENCE.md#agents-protocol) — galapunktu atsauce

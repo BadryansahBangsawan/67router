@@ -24,7 +24,6 @@ Paragun oġġettiv tal-karatteristiċi ma' routers tal-AI open-source popolari.
 | **Protokoll A2A**                                       |                    ✅ 6 ħiliet                    |          ❌          |        ❌         |      ❌      |
 | **Memorja (FTS5 + vettur)**                             |                        ✅                         |          ❌          |        ❌         |      ❌      |
 | **Guardrails (PII, injezzjoni, viżjoni)**               |                        ✅                         |       parzjali       |        ❌         |  ✅ bi ħlas  |
-| **Integrazzjonijiet ma' aġenti fil-cloud**              |            Codex, Cursor, Devin, Jules            |          ❌          |        ❌         |      ❌      |
 | **Circuit breaker għal kull fornitur**                  |              ✅ 3 stati, rkupru lazy              |        bażiku        |        ❌         |      ✅      |
 | **Stealth tal-fingerprint TLS (JA3/JA4)**               |                    ✅ wreq-js                     |          ❌          |        ❌         |      ❌      |
 | **Framework ta' evalwazzjoni**                          |                   ✅ inkorporat                   |          ❌          |        ❌         |  ⚠ bi ħlas   |
@@ -39,7 +38,7 @@ Paragun oġġettiv tal-karatteristiċi ma' routers tal-AI open-source popolari.
 
 ## Meta tagħżel 67router
 
-- Jekk tagħmel self-hosting u trid **kopertura massima tal-providers** (375 provider, 155 entrata tal-katalgu b'xejn/bla awtentikazzjoni)
+- Jekk tagħmel self-hosting u trid **kopertura massima tal-providers** (372 provider, 155 entrata tal-katalgu b'xejn/bla awtentikazzjoni)
 - Għandek bżonn **MCP server inkorporat** (għodod LLM, memorja, ħiliet esposti bħala għodod)
 - Għandek bżonn il-**protokoll A2A** għal workflows bejn aġent u l-ieħor
 - Trid **stealth tal-fingerprint** (JA3/JA4) biex tevita d-detezzjoni minn CAPTCHAs upstream

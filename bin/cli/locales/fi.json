@@ -390,34 +390,6 @@
       "description": "MCP-auditointiloki (alias komennolle audit --source mcp)"
     }
   },
-  "a2a": {
-    "skills": {
-      "description": "Luettele agenttikortin käytettävissä olevat A2A-taidot"
-    },
-    "invoke": {
-      "description": "Kutsu A2A-taitoa ja palauta tehtävän tunnus",
-      "input": "JSON-syöteobjekti",
-      "input_file": "JSON-syötetiedoston polku",
-      "wait": "Odota tehtävän valmistumista ennen palautusta",
-      "timeout": "Valmistumisen odotuksen aikakatkaisu millisekunteina (oletus: 60000)"
-    },
-    "tasks": {
-      "description": "Hallinnoi A2A-tehtäviä",
-      "list": {
-        "status": "Suodata tilan mukaan",
-        "skill": "Suodata taidon tunnuksen mukaan"
-      },
-      "watch": {
-        "description": "Tarkista tehtävän tila toistuvasti valmistumiseen asti"
-      },
-      "stream": {
-        "description": "Suoratoista tehtävän suoritustapahtumat SSE:n kautta"
-      },
-      "logs": {
-        "description": "Näytä tehtävän viestit ja artefaktit"
-      }
-    }
-  },
   "policy": {
     "description": "Hallinnoi 67router-valtuutuskäytäntöjä",
     "list": {
@@ -696,99 +668,6 @@
       "provider": "Peruutettavan palveluntarjoajan tunnus",
       "connection_id": "Peruuta tietty yhteys tunnuksen perusteella",
       "yes": "Ohita vahvistuskehote"
-    }
-  },
-  "cloud": {
-    "description": "Hallitse pilvipohjaisten AI-agenttien tehtäviä (codex, devin, jules)",
-    "agents": {
-      "description": "Luettele käytettävissä olevat pilviagentit"
-    },
-    "agent": {
-      "description": "Hallitse pilviagentin {agent} tehtäviä",
-      "auth": {
-        "description": "Valtuuta {agent} OAuthilla"
-      }
-    },
-    "task": {
-      "description": "Hallitse pilviagenttien tehtäviä",
-      "create": {
-        "description": "Luo uusi agenttitehtävä",
-        "title": "Tehtävän otsikko (oletuksena kehotteen ensimmäiset 80 merkkiä)",
-        "prompt": "Tehtäväkehotteen teksti",
-        "prompt_file": "Lue kehote tiedostosta",
-        "repo": "Tehtävää varten kloonattavan tietovaraston URL",
-        "branch": "Käytettävän haaran nimi",
-        "metadata": "JSON-metatieto-objekti"
-      },
-      "list": {
-        "description": "Luettele agenttitehtävät",
-        "status": "Suodata tilan mukaan (running|completed|failed|cancelled)",
-        "limit": "Tulosten enimmäismäärä (oletus: 50)"
-      },
-      "get": {
-        "description": "Hae tehtävän tiedot tunnuksen perusteella"
-      },
-      "status": {
-        "description": "Tulosta tehtävän tila (running|completed|failed|cancelled)"
-      },
-      "cancel": {
-        "description": "Peruuta käynnissä oleva tehtävä",
-        "yes": "Ohita vahvistuskehote"
-      },
-      "approve": {
-        "description": "Hyväksy agentin suunnitelma suorituksen aloittamiseksi"
-      },
-      "message": {
-        "description": "Lähetä viesti käynnissä olevaan tehtävään"
-      }
-    },
-    "sources": {
-      "description": "Luettele tehtävän tuottamat lähdetiedostot"
-    }
-  },
-  "eval": {
-    "description": "Hallitse arviointikokonaisuuksia ja arviointiajoja",
-    "suites": {
-      "description": "Hallitse arviointikokonaisuuksia",
-      "list": {
-        "description": "Listaa arviointikokonaisuudet"
-      },
-      "get": {
-        "description": "Hae arviointikokonaisuuden tiedot tunnuksella"
-      },
-      "create": {
-        "description": "Luo arviointikokonaisuus JSON-tiedostosta",
-        "file": "Kokonaisuuden määrityksen sisältävän JSON-tiedoston polku"
-      }
-    },
-    "run": {
-      "description": "Aloita kokonaisuuden arviointiajo",
-      "model": "Arvioitavan mallin tunnus (oletus: auto)",
-      "combo": "Pakota tietty yhdistelmä nimen perusteella",
-      "concurrency": "Samanaikaisten näytteiden määrä (oletus: 4)",
-      "tag": "Merkitse tämä ajo tunnisteella myöhempää suodatusta varten",
-      "watch": "Seuraa ajon etenemistä valmistumiseen asti"
-    },
-    "list": {
-      "description": "Listaa arviointiajot",
-      "suite": "Suodata kokonaisuuden tunnuksen perusteella",
-      "status": "Suodata tilan perusteella",
-      "since": "Palauta tämän aikaleiman jälkeiset ajot",
-      "limit": "Tulosten enimmäismäärä (oletus: 50)"
-    },
-    "get": {
-      "description": "Hae arviointiajon tiedot tunnuksella"
-    },
-    "results": {
-      "description": "Näytä arviointiajon näytetulokset",
-      "failed": "Näytä vain epäonnistuneet näytteet"
-    },
-    "cancel": {
-      "description": "Peruuta käynnissä oleva arviointi",
-      "yes": "Ohita vahvistuskehote"
-    },
-    "scorecard": {
-      "description": "Näytä valmistuneen arviointiajon tuloskortti"
     }
   },
   "program": {

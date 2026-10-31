@@ -69,20 +69,6 @@ permitir que a **comprovação prévia** CORS seja aprovada em rotas de gestão 
 que uma página de outra origem não consegue fornecer. **Não** constitui um vetor de apropriação de sessão ou
 roubo de credenciais no caminho CORS partilhado.
 
-### Uma exceção real — `/api/v1/agents/`
-
-As rotas Cloud-Agent (`/api/v1/agents/{health,credentials,tasks,tasks/[id]}`) definem
-os seus **próprios** cabeçalhos CORS
-(`src/lib/cloudAgent/api.ts`, `getCloudAgentCorsHeaders`) e **emitem**
-`Access-Control-Allow-Origin: <origin>|*` juntamente com
-`Access-Control-Allow-Credentials: true`. Esta é a única superfície em que a
-devolução da origem e as credenciais coexistem, sendo **independente de
-`CORS_ALLOW_ALL`**. Estas rotas são autenticadas para gestão
-(`requireManagementAuth`); os operadores que exponham o painel fora do anfitrião devem
-estar cientes de que este é o único local onde os cabeçalhos de resposta permitem uma leitura
-entre origens com credenciais. A respetiva restrição a uma lista de permissões explícita é acompanhada
-separadamente destas orientações de CORS.
-
 ## Lista de verificação para produção
 
 - **Nunca defina `CORS_ALLOW_ALL=true` em produção.** Deixe esta variável por definir.
@@ -161,7 +147,6 @@ separador Segurança), e não no proxy.
 | Estado em tempo de execução para o painel            | `src/app/api/settings/authz-inventory/route.ts`                      |
 | Faixa de aviso do painel                             | `src/app/(dashboard)/dashboard/settings/components/AuthzSection.tsx` |
 | Campo Origens CORS permitidas                        | `src/app/(dashboard)/dashboard/settings/components/SecurityTab.tsx`  |
-| CORS por rota do Cloud-Agent (a exceção)             | `src/lib/cloudAgent/api.ts`                                          |
 
 ## Ver também
 

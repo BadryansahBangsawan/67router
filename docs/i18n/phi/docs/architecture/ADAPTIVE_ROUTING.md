@@ -49,7 +49,6 @@ AI Agent / IDE
 | Shadow traffic                                        | `open-sse/services/combo/shadowRouting.ts`                                                                 |
 | Mga guardrail                                         | `src/lib/guardrails/` (mga pre/post hook)                                                                  |
 | Exact cache                                           | `src/lib/semanticCache.ts` (batay sa signature)                                                            |
-| Mga evaluator / routing na ginagabayan ng eval        | `src/lib/evals/`, `open-sse/services/evalRouting.ts`                                                       |
 | Explainability ng combo decision                      | `open-sse/services/combo/decisionTrace.ts`                                                                 |
 | Mga real-time event ng dashboard                      | `src/lib/events/eventBus.ts` (channel ng UI notification, mga `unknown` payload, history na may 100 entry) |
 
@@ -264,8 +263,6 @@ intelligence/evaluation backend, hindi isang dependency**. Ang mga seam:
 - Kokonsumo ng mga event/trace ang isang `Evaluator` sa hinaharap (deterministic, lokal na judge, HTTP, WASM)
   at magbabalik ng `QualityScore` na ipapasok sa parehong
   `getQualityScore`/quality-factor path.
-- Ang umiiral na eval-driven routing (`open-sse/services/evalRouting.ts`) ay
-  muling nagsasaayos na ng mga combo target ayon sa mga pass-rate ng `eval_runs` kapag naka-enable.
 
 Walang evaluation na tumatakbo nang synchronous sa request path, at ganap na gumagana
 ang gateway kahit walang evaluator.

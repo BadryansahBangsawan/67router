@@ -55,7 +55,7 @@ export const CURATED_SKILLS: CuratedSkillEntry[] = [
     id: "omni-providers",
     name: "Providers",
     description:
-      "Manage provider connections, API keys, OAuth flows, and connection tests via the REST API. List, add, update, remove, and test AI provider integrations across 67router's 375-provider catalog.",
+      "Manage provider connections, API keys, OAuth flows, and connection tests via the REST API. List, add, update, remove, and test AI provider integrations across 67router's 372-provider catalog.",
     category: "api",
     area: "providers",
     icon: "key",
@@ -210,9 +210,9 @@ export const CURATED_SKILLS: CuratedSkillEntry[] = [
   },
   {
     id: "omni-agents-a2a",
-    name: "Agents & A2A Protocol",
+    name: "A2A Tasks",
     description:
-      "Interact with 67router via JSON-RPC 2.0 agent-to-agent protocol. 6 built-in A2A skills: smart-routing, quota-management, provider-discovery, cost-analysis, health-report, list-capabilities.",
+      "Inspect A2A tasks (the Conductor fleet mirrors its runs into them) through the /api/a2a/tasks REST routes: list, history, detail and cancel.",
     category: "api",
     area: "agents-a2a",
     icon: "device_hub",
@@ -348,15 +348,6 @@ export const CURATED_SKILLS: CuratedSkillEntry[] = [
     icon: "electrical_services",
   },
   {
-    id: "cli-a2a",
-    name: "CLI: A2A Protocol",
-    description:
-      "Interact with the 67router A2A server from the CLI. Send tasks, inspect skill execution history, and test the JSON-RPC 2.0 agent-to-agent protocol interactively.",
-    category: "cli",
-    area: "cli-a2a",
-    icon: "device_hub",
-  },
-  {
     id: "cli-tunnel",
     name: "CLI: Tunnels",
     description:
@@ -385,9 +376,9 @@ export const CURATED_SKILLS: CuratedSkillEntry[] = [
   },
   {
     id: "cli-eval",
-    name: "CLI: Evals",
+    name: "CLI: Simulate",
     description:
-      "Create and run evaluation suites, watch live benchmark progress, view scorecards, compare model performance, and integrate eval runs with CI workflows from the CLI.",
+      "Simulate how a combo would route a request from the CLI, using live combo, health and quota data, without sending traffic upstream.",
     category: "cli",
     area: "cli-eval",
     icon: "science",

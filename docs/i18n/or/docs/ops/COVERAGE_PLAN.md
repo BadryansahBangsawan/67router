@@ -71,11 +71,9 @@
 | 11  | `open-sse/services/compression/progressiveAging.ts`          |  13.26% |
 | 12  | `open-sse/services/compression/engines/rtk/smartTruncate.ts` |  13.43% |
 | 13  | `open-sse/services/compression/engines/rtk/deduplicator.ts`  |  13.51% |
-| 14  | `src/lib/cloudAgent/agents/jules.ts`                         |  13.52% |
 | 15  | `open-sse/services/compression/lite.ts`                      |  14.46% |
 | 16  | `src/app/api/v1/rerank/route.ts`                             |  14.94% |
 | 17  | `open-sse/services/compression/preservation.ts`              |  15.07% |
-| 18  | `src/lib/cloudAgent/agents/codex.ts`                         |  15.54% |
 | 19  | `open-sse/services/tierResolver.ts`                          |  16.66% |
 | 20  | `src/app/docs/components/DocsLazyWrapper.tsx`                |  16.66% |
 
@@ -83,7 +81,6 @@
 
 - `open-sse/services/compression/**` ସବୁଠାରୁ ଘନିଷ୍ଠ କମ୍ କଭରେଜ୍ ସମୂହ ଏବଂ ବାକି ଥିବା ଅନ୍ତରରେ ପ୍ରାଧାନ୍ୟ।
 - ବ୍ୟାଚ୍ ଏବଂ ରିର୍ୟାଙ୍କ API ରୁଟ୍ (`src/app/api/v1/batches/**`, `src/app/api/v1/rerank/route.ts`) ହ୍ୟାଣ୍ଡଲର୍-ସ୍ତର ପରୀକ୍ଷା ଆବଶ୍ୟକ କରେ।
-- କ୍ଲାଉଡ୍ ଏଜେଣ୍ଟ ଅଡାପ୍ଟର୍ (`src/lib/cloudAgent/agents/jules.ts`, `codex.ts`) ଏବଂ `tierResolver.ts` କୁ ପରିସ୍ଥିତି ପରୀକ୍ଷା ଆବଶ୍ୟକ।
 - ଡକ୍ସ UI କମ୍ପୋନେଣ୍ଟ ଏବଂ `src/mitm/systemCommands.ts` କମ୍ ପ୍ରାଥମିକତା କିନ୍ତୁ ସ୍ପଷ୍ଟ ଶାଖା ଜିତ୍।
 
 ## କାର୍ଯ୍ୟ ତାଲିକା

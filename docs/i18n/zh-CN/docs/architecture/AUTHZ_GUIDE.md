@@ -242,8 +242,6 @@ API 密钥带有一个 `scopes` 数组（以 JSON 格式存储在 `api_keys.scop
 
 ## 破坏性变更 — v3.8.0
 
-`/api/v1/agents/tasks/*` 和 `/api/resilience/model-cooldowns` 端点**现在需要管理身份验证**（提交 `588a0333`）。此前发送不含 `manage` 作用域的普通 API 密钥的客户端将收到 `403`。迁移方式：在 API Keys 仪表板中为密钥授予 `manage` 作用域，或使用已登录的仪表板会话。
-
 ## 行为变更 — v3.8.2
 
 `/api/mcp/*`（远程 MCP 服务器）默认仍为 LOCAL_ONLY，但当 `Authorization: Bearer <api-key>` 标头中的密钥具有 `manage` 作用域时，现在会接受非环回请求。此例外通过 `src/server/authz/routeGuard.ts` 中的 `LOCAL_ONLY_MANAGE_SCOPE_BYPASS_PREFIXES` 按路径显式控制；同级的 LOCAL_ONLY 前缀 `/api/cli-tools/runtime/*` 被有意设为不可绕过，因为它可以生成任意子进程。来自非环回地址、对 `/api/mcp/*` 的匿名请求仍会返回 `403 LOCAL_ONLY`——任何新增 LOCAL_ONLY 路径的默认策略仍为严格仅限环回。参见[路由守卫层级](../security/ROUTE_GUARD_TIERS.md#manage-scope-carve-out)。

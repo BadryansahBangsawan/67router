@@ -390,34 +390,6 @@
       "description": "Log audit MCP (alias untuk audit --source mcp)"
     }
   },
-  "a2a": {
-    "skills": {
-      "description": "Senaraikan kemahiran A2A yang tersedia daripada kad ejen"
-    },
-    "invoke": {
-      "description": "Panggil kemahiran A2A dan kembalikan ID tugas",
-      "input": "Objek input JSON",
-      "input_file": "Laluan ke fail input JSON",
-      "wait": "Tunggu sehingga tugas selesai sebelum kembali",
-      "timeout": "Had masa menunggu sehingga selesai dalam ms (lalai: 60000)"
-    },
-    "tasks": {
-      "description": "Urus tugas A2A",
-      "list": {
-        "status": "Tapis mengikut status",
-        "skill": "Tapis mengikut ID kemahiran"
-      },
-      "watch": {
-        "description": "Semak status tugas secara berkala sehingga selesai"
-      },
-      "stream": {
-        "description": "Strim peristiwa pelaksanaan tugas melalui SSE"
-      },
-      "logs": {
-        "description": "Tunjukkan mesej dan artifak tugas"
-      }
-    }
-  },
   "policy": {
     "description": "Urus dasar kebenaran 67router",
     "list": {
@@ -696,99 +668,6 @@
       "provider": "ID penyedia untuk dibatalkan",
       "connection_id": "Batalkan sambungan tertentu mengikut ID",
       "yes": "Langkau gesaan pengesahan"
-    }
-  },
-  "cloud": {
-    "description": "Urus tugas ejen AI awan (codex, devin, jules)",
-    "agents": {
-      "description": "Senaraikan ejen awan yang tersedia"
-    },
-    "agent": {
-      "description": "Urus tugas ejen awan {agent}",
-      "auth": {
-        "description": "Benarkan {agent} melalui OAuth"
-      }
-    },
-    "task": {
-      "description": "Urus tugas ejen awan",
-      "create": {
-        "description": "Cipta tugas ejen baharu",
-        "title": "Tajuk tugas (lalai kepada 80 aksara pertama gesaan)",
-        "prompt": "Teks gesaan tugas",
-        "prompt_file": "Baca gesaan daripada fail",
-        "repo": "URL repositori untuk diklon bagi tugas",
-        "branch": "Nama cabang untuk digunakan",
-        "metadata": "Objek metadata JSON"
-      },
-      "list": {
-        "description": "Senaraikan tugas ejen",
-        "status": "Tapis mengikut status (running|completed|failed|cancelled)",
-        "limit": "Hasil maksimum (lalai: 50)"
-      },
-      "get": {
-        "description": "Dapatkan butiran tugas mengikut ID"
-      },
-      "status": {
-        "description": "Paparkan status tugas (running|completed|failed|cancelled)"
-      },
-      "cancel": {
-        "description": "Batalkan tugas yang sedang berjalan",
-        "yes": "Langkau gesaan pengesahan"
-      },
-      "approve": {
-        "description": "Luluskan pelan ejen untuk memulakan pelaksanaan"
-      },
-      "message": {
-        "description": "Hantar mesej kepada tugas yang sedang berjalan"
-      }
-    },
-    "sources": {
-      "description": "Senaraikan fail sumber yang dihasilkan oleh tugas"
-    }
-  },
-  "eval": {
-    "description": "Urus suite dan pelaksanaan penilaian",
-    "suites": {
-      "description": "Urus suite penilaian",
-      "list": {
-        "description": "Senaraikan suite penilaian"
-      },
-      "get": {
-        "description": "Dapatkan butiran suite penilaian mengikut ID"
-      },
-      "create": {
-        "description": "Cipta suite penilaian daripada fail JSON",
-        "file": "Laluan ke fail JSON definisi suite"
-      }
-    },
-    "run": {
-      "description": "Mulakan pelaksanaan penilaian untuk suite",
-      "model": "ID model untuk dinilai (lalai: auto)",
-      "combo": "Paksa kombo tertentu mengikut nama",
-      "concurrency": "Bilangan sampel serentak (lalai: 4)",
-      "tag": "Tag pelaksanaan ini untuk penapisan kemudian",
-      "watch": "Pantau kemajuan pelaksanaan sehingga selesai"
-    },
-    "list": {
-      "description": "Senaraikan pelaksanaan penilaian",
-      "suite": "Tapis mengikut ID suite",
-      "status": "Tapis mengikut status",
-      "since": "Kembalikan pelaksanaan sejak cap masa ini",
-      "limit": "Hasil maksimum (lalai: 50)"
-    },
-    "get": {
-      "description": "Dapatkan butiran pelaksanaan penilaian mengikut ID"
-    },
-    "results": {
-      "description": "Tunjukkan hasil sampel untuk pelaksanaan penilaian",
-      "failed": "Tunjukkan sampel yang gagal sahaja"
-    },
-    "cancel": {
-      "description": "Batalkan penilaian yang sedang berjalan",
-      "yes": "Langkau gesaan pengesahan"
-    },
-    "scorecard": {
-      "description": "Tunjukkan kad skor untuk pelaksanaan penilaian yang telah selesai"
     }
   },
   "program": {

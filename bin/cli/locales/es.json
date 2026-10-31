@@ -390,34 +390,6 @@
       "description": "Registro de auditoría de MCP (alias de audit --source mcp)"
     }
   },
-  "a2a": {
-    "skills": {
-      "description": "Listar las habilidades A2A disponibles en la tarjeta del agente"
-    },
-    "invoke": {
-      "description": "Invocar una habilidad A2A y devolver el ID de la tarea",
-      "input": "Objeto JSON de entrada",
-      "input_file": "Ruta al archivo JSON de entrada",
-      "wait": "Esperar a que finalice la tarea antes de devolver el resultado",
-      "timeout": "Tiempo de espera para la finalización en ms (predeterminado: 60000)"
-    },
-    "tasks": {
-      "description": "Gestionar tareas A2A",
-      "list": {
-        "status": "Filtrar por estado",
-        "skill": "Filtrar por ID de habilidad"
-      },
-      "watch": {
-        "description": "Consultar periódicamente el estado de la tarea hasta que finalice"
-      },
-      "stream": {
-        "description": "Transmitir eventos de ejecución de tareas mediante SSE"
-      },
-      "logs": {
-        "description": "Mostrar mensajes y artefactos de la tarea"
-      }
-    }
-  },
   "policy": {
     "description": "Gestionar las políticas de autorización de 67router",
     "list": {
@@ -696,99 +668,6 @@
       "provider": "ID del proveedor que se va a revocar",
       "connection_id": "Revocar una conexión específica por ID",
       "yes": "Omitir la solicitud de confirmación"
-    }
-  },
-  "cloud": {
-    "description": "Gestionar tareas de agentes de IA en la nube (codex, devin, jules)",
-    "agents": {
-      "description": "Listar los agentes en la nube disponibles"
-    },
-    "agent": {
-      "description": "Gestionar las tareas del agente en la nube {agent}",
-      "auth": {
-        "description": "Autorizar a {agent} mediante OAuth"
-      }
-    },
-    "task": {
-      "description": "Gestionar tareas de agentes en la nube",
-      "create": {
-        "description": "Crear una nueva tarea de agente",
-        "title": "Título de la tarea (de forma predeterminada, los primeros 80 caracteres de la instrucción)",
-        "prompt": "Texto de la instrucción de la tarea",
-        "prompt_file": "Leer la instrucción desde un archivo",
-        "repo": "URL del repositorio que se va a clonar para la tarea",
-        "branch": "Nombre de la rama que se va a utilizar",
-        "metadata": "Objeto de metadatos JSON"
-      },
-      "list": {
-        "description": "Listar las tareas del agente",
-        "status": "Filtrar por estado (running|completed|failed|cancelled)",
-        "limit": "Número máximo de resultados (predeterminado: 50)"
-      },
-      "get": {
-        "description": "Obtener los detalles de la tarea por ID"
-      },
-      "status": {
-        "description": "Mostrar el estado de la tarea (running|completed|failed|cancelled)"
-      },
-      "cancel": {
-        "description": "Cancelar una tarea en ejecución",
-        "yes": "Omitir la solicitud de confirmación"
-      },
-      "approve": {
-        "description": "Aprobar el plan del agente para iniciar la ejecución"
-      },
-      "message": {
-        "description": "Enviar un mensaje a una tarea en ejecución"
-      }
-    },
-    "sources": {
-      "description": "Listar los archivos fuente producidos por una tarea"
-    }
-  },
-  "eval": {
-    "description": "Gestionar suites y ejecuciones de evaluación",
-    "suites": {
-      "description": "Gestionar suites de evaluación",
-      "list": {
-        "description": "Listar suites de evaluación"
-      },
-      "get": {
-        "description": "Obtener los detalles de una suite de evaluación por ID"
-      },
-      "create": {
-        "description": "Crear una suite de evaluación desde un archivo JSON",
-        "file": "Ruta al archivo JSON de definición de la suite"
-      }
-    },
-    "run": {
-      "description": "Iniciar una ejecución de evaluación para una suite",
-      "model": "ID del modelo que se va a evaluar (predeterminado: auto)",
-      "combo": "Forzar una combinación específica por nombre",
-      "concurrency": "Número de muestras simultáneas (predeterminado: 4)",
-      "tag": "Etiquetar esta ejecución para filtrarla posteriormente",
-      "watch": "Supervisar el progreso de la ejecución hasta que finalice"
-    },
-    "list": {
-      "description": "Listar ejecuciones de evaluación",
-      "suite": "Filtrar por ID de suite",
-      "status": "Filtrar por estado",
-      "since": "Devolver ejecuciones desde esta marca de tiempo",
-      "limit": "Número máximo de resultados (predeterminado: 50)"
-    },
-    "get": {
-      "description": "Obtener los detalles de una ejecución de evaluación por ID"
-    },
-    "results": {
-      "description": "Mostrar los resultados de las muestras de una ejecución de evaluación",
-      "failed": "Mostrar solo las muestras fallidas"
-    },
-    "cancel": {
-      "description": "Cancelar una evaluación en ejecución",
-      "yes": "Omitir la solicitud de confirmación"
-    },
-    "scorecard": {
-      "description": "Mostrar el cuadro de puntuación de una ejecución de evaluación completada"
     }
   },
   "program": {

@@ -1366,9 +1366,8 @@ GET response တွင် `agents[]` (id, name, binary, version, installed, prot
 
 ### အကဲဖြတ်မှုများ
 
-| Endpoint     | Method   | ဖော်ပြချက်                                                        |
-| ------------ | -------- | ----------------------------------------------------------------- |
-| `/api/evals` | GET/POST | အကဲဖြတ်မှု suite များကို စာရင်းပြုစုရန် / အကဲဖြတ်မှု လုပ်ဆောင်ရန် |
+| Endpoint | Method | ဖော်ပြချက် |
+| -------- | ------ | ---------- |
 
 ### မူဝါဒများ
 
@@ -1691,31 +1690,6 @@ Architecture အပြည့်အစုံ ကိုးကားချက်- [
 
 ---
 
-## Agent များဆိုင်ရာ ပရိုတိုကော
-
-67router အသုံးပြုသူများကိုယ်စား အဝေးမှ လုပ်ဆောင်သည့် cloud agent လုပ်ဆောင်ချက်များ (Claude Code, Codex Cloud, OpenHands စသည်တို့)။
-
-| မက်သဒ် | လမ်းကြောင်း                   | ဖော်ပြချက်                                                                                                                                                                                  |
-| ------ | ----------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| GET    | `/api/v1/agents/tasks`        | လုပ်ဆောင်ချက်များကို စာရင်းပြုစုရန် — `?provider=`, `?status=`, `?limit=` (1–500၊ မူလသတ်မှတ်ချက် 50) တို့ကို ရွေးချယ်ထည့်နိုင်သည်                                                           |
-| POST   | `/api/v1/agents/tasks`        | လုပ်ဆောင်ချက် ဖန်တီးရန် — body ကို `CreateCloudAgentTaskSchema` (`providerId`, `prompt`, `source`, `options?`) ဖြင့် အတည်ပြုစစ်ဆေးသည်။ လုပ်ဆောင်ချက် envelope နှင့်အတူ `201` ကို ပြန်ပေးသည် |
-| DELETE | `/api/v1/agents/tasks?id=...` | လုပ်ဆောင်ချက်တစ်ခုကို ဖျက်ရန်                                                                                                                                                               |
-| GET    | `/api/v1/agents/tasks/[id]`   | လုပ်ဆောင်ချက်ကို ဖတ်ရန် — `external_id` သတ်မှတ်ထားသောအခါ upstream cloud agent ထံမှ အခြေအနေကို တစ်ပြိုင်တည်း ပြန်လည်ရယူမွမ်းမံသည်                                                            |
-| POST   | `/api/v1/agents/tasks/[id]`   | ခွဲခြားသတ်မှတ်ထားသော လုပ်ဆောင်မှု — `{action: "approve"}`, `{action: "message", message}` သို့မဟုတ် `{action: "cancel"}`                                                                    |
-| DELETE | `/api/v1/agents/tasks/[id]`   | သီးခြားလုပ်ဆောင်ချက်တစ်ခုကို id ဖြင့် ဖျက်ရန်                                                                                                                                               |
-
-> **အထောက်အထားစိစစ်ခြင်း:** မက်သဒ်တိုင်းတွင် စီမံခန့်ခွဲမှုဆိုင်ရာ အထောက်အထားစိစစ်ခြင်း လိုအပ်သည် (`requireCloudAgentManagementAuth`)။ v3.8.0 မတိုင်မီတွင် ၎င်းတို့သည် အထောက်အထားစိစစ်ခြင်း မရှိခဲ့ပါ — အပြောင်းအလဲကြီးအတွက် commit `588a0333` ကို ကြည့်ပါ။
-
-```bash
-# Claude Code cloud လုပ်ဆောင်ချက်တစ်ခုကို ဖန်တီးရန်
-curl -X POST http://localhost:20128/api/v1/agents/tasks \
-  -H "Authorization: Bearer your-management-key" \
-  -H "Content-Type: application/json" \
-  -d '{"providerId":"claude-code-cloud","prompt":"Fix the failing test","source":{"repo":"...","branch":"..."}}'
-```
-
----
-
 ## စီမံခန့်ခွဲမှု Proxy များ
 
 Provider များ၊ account များ သို့မဟုတ် ကမ္ဘာလုံးဆိုင်ရာအဖြစ် သတ်မှတ်ပေးနိုင်သည့် အထွက် HTTP(S)/SOCKS proxy များ။
@@ -1835,48 +1809,10 @@ API key / session တစ်ခုချင်းအလိုက် နယ်ပ�
 
 67router သည် A2A (Agent-to-Agent) JSON-RPC 2.0 endpoint တစ်ခုနှင့် စစ်ဆေးခြင်း/dashboard အသုံးပြုမှုအတွက် REST wrapper တစ်ခုကို ပံ့ပိုးပေးသည်။
 
-### JSON-RPC
-
-```bash
-POST /a2a
-Authorization: Bearer your-api-key   # OMNIROUTE_API_KEY သတ်မှတ်ထားခြင်းမရှိပါက ထည့်သွင်းရန်မလိုပါ
-Content-Type: application/json
-
-{
-  "jsonrpc": "2.0",
-  "id": 1,
-  "method": "message/send",
-  "params": {
-    "skill": "smart-routing",
-    "messages": [{"role": "user", "content": "Route this coding task"}]
-  }
-}
-```
-
-ပံ့ပိုးထားသော method များ (အားလုံးကို `settings.a2aEnabled` ဖြင့် ထိန်းချုပ်ထားသည်)-
-
-| Method           | ဖော်ပြချက်                                                                     |
-| ---------------- | ------------------------------------------------------------------------------ |
-| `message/send`   | တစ်ပြိုင်တည်း skill လုပ်ဆောင်မှု၊ `{task, artifacts, metadata}` ကို ပြန်ပေးသည် |
-| `message/stream` | အလားတူ skill အစုကို Streaming SSE ဖြင့် လုပ်ဆောင်မှု                           |
-| `tasks/get`      | `taskId` ဖြင့် task တစ်ခုကို ရယူသည်                                            |
-| `tasks/cancel`   | `taskId` ဖြင့် task တစ်ခုကို ပယ်ဖျက်သည်                                        |
-
-ပါဝင်ပြီးသား skill များ- `smart-routing`, `quota-management`, `provider-discovery`, `cost-analysis`, `health-report`။
-
-### Agent Card
-
-```bash
-GET /.well-known/agent.json
-```
-
-အများသုံး A2A agent card (အမည်၊ ဖော်ပြချက်၊ လုပ်ဆောင်နိုင်စွမ်းများ၊ skill catalog၊ auth scheme) ကို ပြန်ပေးသည် — အများသုံးအဖြစ် 1h ကြာ cache လုပ်ထားသည်။ auth မလိုအပ်ပါ။
-
 ### REST helper များ
 
 | Method | Path                         | ဖော်ပြချက်                                                                                                                       |
 | ------ | ---------------------------- | -------------------------------------------------------------------------------------------------------------------------------- |
-| GET    | `/api/a2a/status`            | A2A ဖွင့်ထားမှု + task စာရင်းအင်းများ + cache လုပ်ထားသော agent card အကျဉ်းချုပ်                                                  |
 | GET    | `/api/a2a/tasks`             | task များကို စာရင်းပြုစုသည် — `?state=submitted\|working\|completed\|failed\|cancelled`, `?skill=`, `?limit=` (≤200), `?offset=` |
 | POST   | `/api/a2a/tasks`             | (REST helper အဖြစ် အကောင်အထည်မဖော်ရသေးပါ — JSON-RPC `message/send` မှတစ်ဆင့် ဖန်တီးပါ)                                           |
 | GET    | `/api/a2a/tasks/[id]`        | task တစ်ခုကို ရယူသည်                                                                                                             |
@@ -1896,12 +1832,8 @@ GET /.well-known/agent.json
 | GET | `/api/cloud/models/alias` | cloud sync သို့ ဖော်ပြထားသည့် model alias များကို စာရင်းပြုစုသည် |
 | GET | `/api/assess` | နောက်ဆုံး assessment အမျိုးအစားခွဲခြားမှုများကို ဖတ်ရှုသည် (provider/model တစ်ခုစီအလိုက်) |
 | POST | `/api/assess` | assessment တစ်ခုကို လုပ်ဆောင်သည် — body: `{scope: {type:"all"}                                                   | {type:"provider", providerId} | {type:"model", modelId}, trigger?}` |
-| GET | `/api/evals` | ပါဝင်ပြီးသား eval suite များ + နောက်ဆုံးလုပ်ဆောင်မှုများကို စာရင်းပြုစုသည် |
-| POST | `/api/evals` | eval run တစ်ခုကို စတင်လုပ်ဆောင်သည် |
-| POST | `/api/evals/suites` | စိတ်ကြိုက် eval suite တစ်ခုကို ဖန်တီးသည် — body ကို `evalSuiteSaveSchema` ဖြင့် အတည်ပြုသည် |
-| GET | `/api/evals/suites/[id]` | စိတ်ကြိုက် eval suite တစ်ခုကို ရယူသည် |
 
-**Auth:** `/api/cloud/auth` သည် Bearer key တစ်ခုကို တိုက်ရိုက်အတည်ပြုပြီး `manage` / `admin` scope ပါသော key အတွက်သာ connection တစ်ခုစီ၏ ဖုံးကွယ်ထားသော key နှင့် `projectId` ကို ပြန်ပေးသည်။ အခြား `/api/cloud/*`, `/api/evals/*` နှင့် `/api/assess` route များသည် management session/API key လိုအပ်သည်။ `/api/assess` POST သည် discriminated-union scope schema ပါသော `validateBody` ကို အသုံးပြုသည်။
+**Auth:** `/api/cloud/auth` သည် Bearer key တစ်ခုကို တိုက်ရိုက်အတည်ပြုပြီး `manage` / `admin` scope ပါသော key အတွက်သာ connection တစ်ခုစီ၏ ဖုံးကွယ်ထားသော key နှင့် `projectId` ကို ပြန်ပေးသည်။ အခြား `/api/cloud/*` နှင့် `/api/assess` route များသည် management session/API key လိုအပ်သည်။ `/api/assess` POST သည် discriminated-union scope schema ပါသော `validateBody` ကို အသုံးပြုသည်။
 
 ---
 
@@ -2224,5 +2156,3 @@ Token၊ manage-scoped API key) နှင့် ၎င်းတို့က infe
 - `requireLogin` ကို `/api/settings/require-login` မှတစ်ဆင့် ဖွင့်/ပိတ်နိုင်သည်
 - `REQUIRE_API_KEY=true` ဖြစ်သည့်အခါ `/v1/*` route များသည် Bearer API key ကို လိုအပ်နိုင်သည်
 - ဤကိုးကားချက်ရှိ "စီမံခန့်ခွဲမှု token" / "စီမံခန့်ခွဲမှုနယ်ပယ်သတ်မှတ်ထားသော API key" ဆိုသည်မှာ အဆိုပါလမ်းညွှန်ရှိ အမျိုးအစားများထဲမှ တစ်မျိုးကို ဆိုလိုခြင်းဖြစ်ပြီး—သတ်မှတ်မထားသည့် ထပ်ဆောင်း secret အမျိုးအစားကို မဆိုလိုပါ
-
-> **လိုက်ဖက်ညီမှုကို ချိုးဖောက်သော ပြောင်းလဲမှု (v3.8.0)** — `/api/v1/agents/tasks/*` နှင့် cooldown စီမံခန့်ခွဲမှု endpoint များသည် ယခုအခါ **စီမံခန့်ခွဲမှုဆိုင်ရာ စစ်မှန်ကြောင်းအတည်ပြုမှု** (dashboard `auth_token` cookie သို့မဟုတ် စီမံခန့်ခွဲမှုနယ်ပယ်သတ်မှတ်ထားသော API key) ကို လိုအပ်သည်။ ယခင်က ဤ route များကို စစ်မှန်ကြောင်းအတည်ပြုမှုမရှိဘဲ ခေါ်ဆိုခဲ့သည့် client များသည် `401 Unauthorized` ကို လက်ခံရရှိမည်ဖြစ်သည်။ commit `588a0333` (`fix(auth): require management auth for agent and cooldown APIs`) ကို ကြည့်ပါ။

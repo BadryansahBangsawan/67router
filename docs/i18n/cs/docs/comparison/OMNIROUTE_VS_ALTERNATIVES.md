@@ -24,7 +24,6 @@ Objektivní srovnání funkcí s populárními open-source AI routery.
 | **Protokol A2A**                                    |               ✅ 6 dovedností               |         ❌          |        ❌         |      ❌      |
 | **Paměť (FTS5 + vektor)**                           |                     ✅                      |         ❌          |        ❌         |      ❌      |
 | **Bezpečnostní pojistky (PII, injekce, obraz)**     |                     ✅                      |      částečné       |        ❌         |  ✅ placené  |
-| **Integrace cloudových agentů**                     |         Codex, Cursor, Devin, Jules         |         ❌          |        ❌         |      ❌      |
 | **Circuit breaker pro každého poskytovatele**       |          ✅ 3 stavy, líné obnovení          |      základní       |        ❌         |      ✅      |
 | **Maskování TLS fingerprintu (JA3/JA4)**            |                 ✅ wreq-js                  |         ❌          |        ❌         |      ❌      |
 | **Evaluační framework**                             |                ✅ vestavěný                 |         ❌          |        ❌         |  ⚠ placené   |

@@ -256,12 +256,6 @@ curl -X POST http://localhost:20128/api/skills/install \
 
 ---
 
-## A2A 集成
-
-`src/lib/skills/a2a.ts` 导出 `memory_aware_routing` A2A 技能描述符和 `registerA2ASkill(registry)` 辅助函数。自定义 A2A 技能位于 `src/lib/a2a/skills/` 中，并通过 `A2A_SKILL_HANDLERS`（`src/lib/a2a/taskExecution.ts`）进行分派。有关完整的任务生命周期，请参阅 [A2A-SERVER.md](./A2A-SERVER.md)。
-
----
-
 ## 添加新的内置技能
 
 1. **定义处理程序**：在 `src/lib/skills/builtins.ts`（或 `src/lib/skills/builtin/` 下的同级文件）中定义。签名：`(input, { apiKeyId, sessionId }) => Promise<output>`。
@@ -472,7 +466,6 @@ const config: SkillConfig = {
 ## 另请参阅
 
 - [MCP-SERVER.md](./MCP-SERVER.md) — MCP 工具注册与传输方式
-- [A2A-SERVER.md](./A2A-SERVER.md) — A2A 任务生命周期与技能分派
 - [USER_GUIDE.md](../guides/USER_GUIDE.md#-skills-system) — 面向用户的介绍
 - [ARCHITECTURE.md](../architecture/ARCHITECTURE.md) — 请求管道与组件映射
 - 源代码：`src/lib/skills/`、`src/app/api/skills/`、`open-sse/mcp-server/tools/skillTools.ts`

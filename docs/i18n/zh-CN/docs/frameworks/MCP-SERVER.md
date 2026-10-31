@@ -230,15 +230,6 @@ curl -X DELETE http://localhost:20128/api/settings/notion
 
 上述 MCP 工具清单（110 个唯一工具，由 `countUniqueMcpTools()` 计算得出）有意限定于运行时路由/缓存/压缩/内存/技能/代理/上下文源操作。v3.8.0 中还有两个与 MCP 服务器一同发布的相邻框架，它们有单独的文档：
 
-### 云端代理
-
-云端代理是进程外 AI 编码代理（codex-cloud、cursor-cloud、devin、jules），通过与 LLM 提供者相同的连接模型接入 67router。它们通过各自的 REST 接口 (`/api/v1/agents/*`) 公开，**不**属于 MCP 工具目录的一部分
-— 调用云端代理不会消耗 MCP 作用域。
-
-- 实现：`src/lib/cloudAgent/` (`registry.ts`, `agents/codex.ts`, `agents/cursor.ts`, `agents/devin.ts`, `agents/jules.ts`)。
-- 生命周期：`createTask`, `getStatus`, `approvePlan`, `sendMessage`, `listSources`。
-- 文档：[docs/frameworks/CLOUD_AGENT.md](./CLOUD_AGENT.md)。
-
 ### 防护规则
 
 防护规则是在聊天管道内应用的执行前/后过滤器（vision-bridge、pii-masker、prompt-injection）。它们在到达 MCP 工具/路由层之前运行，并向审计管道发出结构化违规信息；它们不作为 MCP 工具调用。

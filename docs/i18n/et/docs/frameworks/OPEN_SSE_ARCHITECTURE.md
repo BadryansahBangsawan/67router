@@ -573,5 +573,4 @@ Marsruutimismootoril on ranged jõudluspiirid:
 - [REPOSITORY_MAP.md](../architecture/REPOSITORY_MAP.md) — kataloogide kaupa ülevaade
 - [AUTO-COMBO.md](../routing/AUTO-COMBO.md) — 16 teguriga hindamine
 - [MCP-SERVER.md](./MCP-SERVER.md) — MCP-server
-- [A2A-SERVER.md](./A2A-SERVER.md) — A2A-server
 - Lähtekood: `open-sse/` (üle 400 faili, ~143K koodirida)

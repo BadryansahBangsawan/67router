@@ -15,7 +15,7 @@
 
 <sub>67router is a fork of [OmniRoute](https://github.com/diegosouzapw/OmniRoute) by diegosouzapw. The npm package, the `omniroute` CLI command, `OMNIROUTE_*` environment variables and the `~/.omniroute` data directory keep their upstream names.</sub>
 
-<img src="./docs/diagrams/readme-hero.svg" width="100%" alt="67router — Huwag tumigil sa pag-code. Bawat AI tool → 375 provider — 150+ libre — sa pamamagitan ng iisang endpoint. Claude Code, Codex, Cursor, Cline, Copilot at Antigravity sa LIBRENG Claude / GPT / Gemini na may awtomatikong fallback. Ang pinagsamang compression ng RTK + Caveman ay nakakatipid ng 15–95% ng mga token (~89% sa karaniwan) — huwag nang maabot ang mga limitasyon. 375 AI provider · 150+ libreng tier · ~1.62B libreng token/buwan · 20 diskarte sa routing · $0 para magsimula."/>
+<img src="./docs/diagrams/readme-hero.svg" width="100%" alt="67router — Huwag tumigil sa pag-code. Bawat AI tool → 372 provider — 150+ libre — sa pamamagitan ng iisang endpoint. Claude Code, Codex, Cursor, Cline, Copilot at Antigravity sa LIBRENG Claude / GPT / Gemini na may awtomatikong fallback. Ang pinagsamang compression ng RTK + Caveman ay nakakatipid ng 15–95% ng mga token (~89% sa karaniwan) — huwag nang maabot ang mga limitasyon. 372 AI provider · 150+ libreng tier · ~1.62B libreng token/buwan · 20 diskarte sa routing · $0 para magsimula."/>
 
 </div>
 
@@ -250,7 +250,7 @@ curl http://localhost:20128/v1/chat/completions \
 
 </div>
 
-<img src="./docs/diagrams/promise-pillars.svg" width="100%" alt="Ang Pangako — Isang endpoint at 375 provider. Pinapanatili ng awtomatikong fallback ang routing habang may available na isa pang maayos na target. Anim na haligi: matatag na fallback sa 375 provider · hanggang 95% na pagtitipid sa token para sa mga kwalipikadong workload · $0 upang magsimula gamit ang 150+ libreng tier at 51 umuulit/keyless na provider na libre magpakailanman · 37 integrasyon ng CLI/agent sa pamamagitan ng iisang config · compatibility sa OpenAI, Claude, Gemini, at Responses API sa /v1 · mga kontrol para sa production kabilang ang mga circuit breaker, TLS stealth, MCP na may 110 tool, A2A, memory, guardrail, eval, at 56,000+ static na test declaration sa 7,800+ sinusubaybayang test file."/>
+<img src="./docs/diagrams/promise-pillars.svg" width="100%" alt="Ang Pangako — Isang endpoint at 372 provider. Pinapanatili ng awtomatikong fallback ang routing habang may available na isa pang maayos na target. Anim na haligi: matatag na fallback sa 372 provider · hanggang 95% na pagtitipid sa token para sa mga kwalipikadong workload · $0 upang magsimula gamit ang 150+ libreng tier at 51 umuulit/keyless na provider na libre magpakailanman · 37 integrasyon ng CLI/agent sa pamamagitan ng iisang config · compatibility sa OpenAI, Claude, Gemini, at Responses API sa /v1 · mga kontrol para sa production kabilang ang mga circuit breaker, TLS stealth, MCP na may 110 tool, A2A, memory, guardrail, eval, at 56,000+ static na test declaration sa 7,800+ sinusubaybayang test file."/>
 
 <br/>
 <br/>
@@ -510,7 +510,7 @@ Lahat ng **20** diskarte — paghalu-haluin at pagtugmain sa bawat hakbang ng co
 
 </div>
 
-<img src="./docs/diagrams/comparison-table.svg" width="100%" alt="Ang nagpapabukod-tangi sa 67router — isang napetsahang snapshot ng mga feature kumpara sa 9router, OpenRouter, CLIProxyAPI, at LiteLLM sa 13 kakayahan. 67router: 375 provider, 150+ built-in na libreng tier, 20 diskarte sa pagruruta, 12-engine na pag-compress ng token, built-in na MCP server na may 110 tool, A2A agent protocol, persistent memory, mga guardrail, mga cloud agent, stealth gamit ang TLS fingerprint, Desktop/Termux/PWA, at 67 i18n UI locale. Ang 67router ay lisensiyado sa ilalim ng MIT at maaaring i-self-host. Maaaring magbago ang mga kakayahan at bilang ng mga kakumpitensya; tingnan ang naka-link na metodolohiya."/>
+<img src="./docs/diagrams/comparison-table.svg" width="100%" alt="Ang nagpapabukod-tangi sa 67router — isang napetsahang snapshot ng mga feature kumpara sa 9router, OpenRouter, CLIProxyAPI, at LiteLLM sa 13 kakayahan. 67router: 372 provider, 150+ built-in na libreng tier, 20 diskarte sa pagruruta, 12-engine na pag-compress ng token, built-in na MCP server na may 110 tool, A2A agent protocol, persistent memory, mga guardrail, mga cloud agent, stealth gamit ang TLS fingerprint, Desktop/Termux/PWA, at 67 i18n UI locale. Ang 67router ay lisensiyado sa ilalim ng MIT at maaaring i-self-host. Maaaring magbago ang mga kakayahan at bilang ng mga kakumpitensya; tingnan ang naka-link na metodolohiya."/>
 
 <sub>📊 Kumpletong metodolohiya &amp; mga detalye ng bawat feature kumpara sa 9router, OpenRouter, CLIProxyAPI &amp; LiteLLM → [`docs/comparison/OMNIROUTE_VS_ALTERNATIVES.md`](docs/comparison/OMNIROUTE_VS_ALTERNATIVES.md)</sub>
 
@@ -588,7 +588,7 @@ Ang Radar ay opt-in at GET-only. Hindi nag-a-upload ang 67router client ng mga p
 - **🔑 Kontrol sa routing kada key** — i-pin ang isang API key sa isang model o combo gamit ang `forcedModel`, at idagdag o alisin nang atomiko ang mga model at combo ng isang key (`/api/keys/{id}/access`). → [API Reference](docs/reference/API_REFERENCE.md) · [OpenAPI](docs/openapi.yaml)
 - **🛡️ Mas pinong mga kontrol sa PII** — pagpili kada uri, hanggang 20 validated na custom masking pattern at per-type detection counter; nananatiling opt-in ang masking mismo. → [Guardrails](docs/security/GUARDRAILS.md)
 - **🌍 67 na wika** — dashboard, mga docs mirror at CLI, kung saan ang `npm run i18n:add-locale` ay nagdaragdag ng wika sa lahat ng lugar sa isang command. → [i18n Guide](docs/guides/I18N.md)
-- **🎛️ OmniConductor** — papasok na A2A delegation patungo sa iyong agent fleet, mga Conductor skill sa Agent Card, at panel sa dashboard na may Faro push-to-talk voice chat. → [A2A Server](docs/frameworks/A2A-SERVER.md)
+- **🎛️ OmniConductor** — papasok na A2A delegation patungo sa iyong agent fleet, mga Conductor skill sa Agent Card, at panel sa dashboard na may Faro push-to-talk voice chat.
 - **🛂 Adaptive admission at proteksyon sa overload** — ang mabibigat na chat request ay pumipila sa halip na mag-503, na may atomic RPM rolling lease kada koneksyon. → [Resilience Guide](docs/architecture/RESILIENCE_GUIDE.md)
 - **🗂️ Canonical na pagkakasunod-sunod ng `/v1/models`** — isang magkadikit na block na naka-group ayon sa provider para sa bawat provider (mga combo ang naka-pin muna), stable sa lahat ng catalog source. → [API Reference](docs/reference/API_REFERENCE.md)
 - **🗜️ Pagpapatatag ng compression** — naka-default na inflation guard, mga Caveman pack para sa DE / FR / JA + Chinese (wényán), mga RTK filter para sa Gradle at .NET. → [Compression](docs/compression/COMPRESSION_ENGINES.md)
@@ -605,7 +605,7 @@ Ang Radar ay opt-in at GET-only. Hindi nag-a-upload ang 67router client ng mga p
 - **🖼️ Mga bagong endpoint** — kinukumpleto ng `/v1/ocr` (Mistral OCR) at `/v1/audio/translations` (Whisper-style) ang media surface. → [API Reference](docs/reference/API_REFERENCE.md)
 - **🎨 Pagbuo ng image / video / audio** — isang API para sa media: xAI Grok Imagine at Novita AI video, ComfyUI, Magnific, Adobe Firefly, Segmind, at mga speech provider tulad ng ElevenLabs. → [API Reference](docs/reference/API_REFERENCE.md)
 - **🌍 Deployment at ops** — reverse-proxy `basePath`, auto-detect ng wika ng browser, per-key device tracking, root-less MITM trust, localization sa zh-TW. → [Environment](docs/reference/ENVIRONMENT.md)
-- **🤝 Mas maraming provider at agent** — mga cloud agent (Codex Cloud, Cursor, Devin, Jules), Grok Build (xAI) na may browser + OAuth login, first-class card ng Ollama, Claude Opus 5 at Sonnet 5, opisyal na partnership sa Kimi (Code/Web/Moonshot), Zed, Requesty, SenseNova, Yuanbao, Agnes AI… at na-refresh na **375-provider catalog**. → [Providers](docs/reference/PROVIDER_REFERENCE.md)
+- **🤝 Mas maraming provider at agent** — mga cloud agent (Codex Cloud, Cursor, Devin, Jules), Grok Build (xAI) na may browser + OAuth login, first-class card ng Ollama, Claude Opus 5 at Sonnet 5, opisyal na partnership sa Kimi (Code/Web/Moonshot), Zed, Requesty, SenseNova, Yuanbao, Agnes AI… at na-refresh na **372-provider catalog**. → [Providers](docs/reference/PROVIDER_REFERENCE.md)
 - **📡 Transparency sa routing** — bawat response ay may `X-OmniRoute-Decision` header na nagpapangalan sa strategy/provider/latency na naghatid nito, isang bagong `cache-optimized` combo strategy + Auto-Combo `cacheAffinity` factor na nagro-route ng mga paulit-ulit na request pabalik sa koneksyong may hawak ng cached prefix, at ang read-only na `/v1/auto-combo/{channel}/candidates` endpoint ay naglalabas ng live candidate pool ng isang `auto/*` channel. → [Auto-Combo](docs/routing/AUTO-COMBO.md)
 - **⚡ Lokal na performance at infra** — one-click na lokal na Redis, Cloudflare Workers / Deno Deploy relay deployers, Bifrost at Mux bilang mga supervised embedded service. → [Embedded Services](docs/frameworks/EMBEDDED-SERVICES.md)
 - **🧩 Kasama rin sa kahon** — plugin framework + marketplace, Omni/Agent/GitHub skills frameworks, Obsidian vault integration (22 MCP tools), OpenAI-compatible na Batch at Files APIs, semantic response cache, gamification na may mga leaderboard, ACP agent discovery (15 built-in na agent), naka-iskedyul na log export sa BigQuery, `auto/chaos` parallel multi-model fan-out, isang Telegram bot bridge, isang in-app na version manager at LMArena-ELO free-provider rankings. → [Docs](docs/README.md)
@@ -689,7 +689,7 @@ sa iyong shell history. → [Mga Integrasyon ng CLI](docs/guides/CLI-INTEGRATION
 
 <div align="center">
 
-## 🌐 375 Provider ng AI — 153 ang Minarkahang Libre sa Catalog
+## 🌐 372 Provider ng AI — 153 ang Minarkahang Libre sa Catalog
 
 </div>
 
@@ -907,7 +907,6 @@ Ilantad ang 67router sa pamamagitan ng **MCP**, **A2A**, isang **REST API**, mga
   <tr><td align="left" nowrap>🧰 <b>MCP (stdio)</b></td><td align="left" nowrap><code>omniroute --mcp</code></td><td align="left">Ikonekta sa Claude Desktop, Cursor, o anumang MCP client</td></tr>
   <tr><td align="left" nowrap>🌊 <b>MCP (HTTP)</b></td><td align="left" nowrap><code>/api/mcp/stream</code></td><td align="left">Remote MCP — <b>110 tool</b>, 33 scope (opsyonal ang pagpapatupad), kumpletong audit trail</td></tr>
   <tr><td align="left" nowrap>📡 <b>MCP (SSE)</b></td><td align="left" nowrap><code>/api/mcp/sse</code></td><td align="left">Streaming na MCP transport</td></tr>
-  <tr><td align="left" nowrap>🤝 <b>A2A</b></td><td align="left" nowrap><code>/.well-known/agent.json</code></td><td align="left">Agent-to-agent, <b>JSON-RPC 2.0</b> + SSE, 6 na skill</td></tr>
   <tr><td align="left" nowrap>🌐 <b>REST API</b></td><td align="left" nowrap><code>/v1/*</code></td><td align="left">Compatible sa OpenAI — chat, embedding, larawan, audio, OCR</td></tr>
   <tr><td align="left" nowrap>🔔 <b>Mga Webhook</b></td><td align="left" nowrap><code>/api/webhooks</code></td><td align="left">Mag-push ng mga request / quota event sa Slack, Discord, Telegram, o anumang URL</td></tr>
   <tr><td align="left" nowrap>🛰️ <b>Remote CLI</b></td><td align="left" nowrap><code>omniroute connect <host></code></td><td align="left">Kontrolin ang isang remote instance gamit ang mga scoped access token</td></tr>
@@ -918,7 +917,7 @@ Ilantad ang 67router sa pamamagitan ng **MCP**, **A2A**, isang **REST API**, mga
 claude mcp add-server omniroute --type http --url http://localhost:20128/api/mcp/stream
 ```
 
-<sub>📖 [MCP Server](docs/frameworks/MCP-SERVER.md) · [A2A Server](docs/frameworks/A2A-SERVER.md) · [Mga Protocol ng Agent](docs/frameworks/AGENT_PROTOCOLS_GUIDE.md)</sub>
+<sub>📖 [MCP Server](docs/frameworks/MCP-SERVER.md) · [Mga Protocol ng Agent](docs/frameworks/AGENT_PROTOCOLS_GUIDE.md)</sub>
 
 <br/>
 
@@ -1381,7 +1380,6 @@ Mga canonical na sukatan noong 2026-10-18: **1.976 natatanging video** · **20.2
   <tr><td nowrap><b><a href="open-sse/mcp-server/README.md">MCP Server</a></b></td><td>110 MCP tool, mga config ng IDE, mga client ng Python/TS/Go</td></tr>
   <tr><td nowrap><b><a href="docs/frameworks/MCP-SERVER.md">Gabay sa MCP Server</a></b></td><td>Pag-install ng MCP, mga transport, at sanggunian ng tool</td></tr>
   <tr><td nowrap><b><a href="src/lib/a2a/README.md">A2A Server</a></b></td><td>Protocol na JSON-RPC 2.0, mga skill, streaming, pamamahala ng gawain</td></tr>
-  <tr><td nowrap><b><a href="docs/frameworks/A2A-SERVER.md">Gabay sa A2A Server</a></b></td><td>A2A agent card, mga gawain, skill, at streaming</td></tr>
 </table>
 
 ### 📋 Proyekto at Kalidad

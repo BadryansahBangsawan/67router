@@ -258,12 +258,6 @@ Tingnan ang [MCP-SERVER.md](./MCP-SERVER.md) para sa pag-setup ng transport at m
 
 ---
 
-## Integrasyon ng A2A
-
-Ini-export ng `src/lib/skills/a2a.ts` ang A2A skill descriptor na `memory_aware_routing` at isang helper na `registerA2ASkill(registry)`. Ang mga custom na A2A skill ay nasa `src/lib/a2a/skills/` at ipinapadala sa pamamagitan ng `A2A_SKILL_HANDLERS` (`src/lib/a2a/taskExecution.ts`). Tingnan ang [A2A-SERVER.md](./A2A-SERVER.md) para sa buong lifecycle ng task.
-
----
-
 ## Pagdaragdag ng Bagong Built-in na Skill
 
 1. **Tukuyin ang handler** sa `src/lib/skills/builtins.ts` (o sa katabing file sa ilalim ng `src/lib/skills/builtin/`). Signature: `(input, { apiKeyId, sessionId }) => Promise<output>`.
@@ -478,7 +472,6 @@ Tingnan ang [Plugin SDK at Integrasyon ng mga Skill](./PLUGIN_SDK.md) upang mala
 ## Tingnan Din
 
 - [MCP-SERVER.md](./MCP-SERVER.md) — pagpaparehistro ng MCP tool at mga transport
-- [A2A-SERVER.md](./A2A-SERVER.md) — lifecycle ng A2A task at pagpapadala sa skill
 - [USER_GUIDE.md](../guides/USER_GUIDE.md#-skills-system) — panimulang gabay para sa user
 - [ARCHITECTURE.md](../architecture/ARCHITECTURE.md) — pipeline ng request at mapa ng mga component
 - Source: `src/lib/skills/`, `src/app/api/skills/`, `open-sse/mcp-server/tools/skillTools.ts`

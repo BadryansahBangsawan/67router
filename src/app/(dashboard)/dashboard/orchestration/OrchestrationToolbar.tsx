@@ -15,7 +15,7 @@ import type { OrchFilter } from "./model/filterSnapshot";
 import { ORCH_STATES } from "./model/orchestrationTypes";
 import type { OrchSource, OrchState } from "./model/orchestrationTypes";
 
-const SOURCES = ["cloud-agent", "a2a", "conductor"] as const satisfies readonly OrchSource[];
+const SOURCES = ["a2a", "conductor"] as const satisfies readonly OrchSource[];
 
 const STATE_KEY: Record<OrchState, string> = {
   queued: "stateQueued",
@@ -26,7 +26,6 @@ const STATE_KEY: Record<OrchState, string> = {
   cancelled: "stateCancelled",
 };
 const SOURCE_KEY: Record<(typeof SOURCES)[number], string> = {
-  "cloud-agent": "sourceCloudAgent",
   a2a: "sourceA2A",
   conductor: "sourceConductor",
 };

@@ -169,5 +169,4 @@ Hanya satu perubahan bahagian pelayan diperlukan untuk ciri ini:
 - Pelan induk: `_tasks/features-v3.8.6/refactorpages/_orchestration/master-plan-group-C.md`
 - Pelan ciri: `_tasks/features-v3.8.6/refactorpages/18-search-tools-studio-redesign.plan.md`
 - Daftar penyedia carian: `open-sse/config/searchRegistry.ts`
-- Playground Studio (`ExportCodeModal` + `codeExport.ts` yang dikongsi): `docs/frameworks/PLAYGROUND_STUDIO.md`
 - Bahagian belakang pengambilan web: `src/app/api/v1/web/fetch/route.ts`

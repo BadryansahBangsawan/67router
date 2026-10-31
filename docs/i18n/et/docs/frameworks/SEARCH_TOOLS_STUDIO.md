@@ -169,5 +169,4 @@ Faili `src/app/api/search/providers/route.ts` laiendati järgmiselt:
 - Üldplaan: `_tasks/features-v3.8.6/refactorpages/_orchestration/master-plan-group-C.md`
 - Funktsionaalsuse plaan: `_tasks/features-v3.8.6/refactorpages/18-search-tools-studio-redesign.plan.md`
 - Otsingupakkujate register: `open-sse/config/searchRegistry.ts`
-- Playground Studio (jagatud `ExportCodeModal` + `codeExport.ts`): `docs/frameworks/PLAYGROUND_STUDIO.md`
 - Veebihanke taustateenus: `src/app/api/v1/web/fetch/route.ts`

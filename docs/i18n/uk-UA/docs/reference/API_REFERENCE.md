@@ -1438,9 +1438,8 @@ curl -X PATCH "$OMNIROUTE_URL/api/keys/$KEY_ID" \
 
 ### Оцінювання
 
-| Endpoint     | Метод    | Опис                                       |
-| ------------ | -------- | ------------------------------------------ |
-| `/api/evals` | GET/POST | Перелік наборів тестів / запуск оцінювання |
+| Endpoint | Метод | Опис |
+| -------- | ----- | ---- |
 
 ### Політики
 
@@ -1763,31 +1762,6 @@ DELETE /api/usage/token-limits?id=tl-abc
 
 ---
 
-## Протокол агентів
-
-Завдання хмарних агентів (Claude Code, Codex Cloud, OpenHands тощо), що виконуються віддалено від імені користувачів 67router.
-
-| Метод  | Шлях                          | Опис                                                                                                                                                                 |
-| ------ | ----------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| GET    | `/api/v1/agents/tasks`        | Список завдань — необов’язкові `?provider=`, `?status=`, `?limit=` (1–500, типове значення — 50)                                                                     |
-| POST   | `/api/v1/agents/tasks`        | Створити завдання — тіло перевіряється за допомогою `CreateCloudAgentTaskSchema` (`providerId`, `prompt`, `source`, `options?`). Повертає `201` з оболонкою завдання |
-| DELETE | `/api/v1/agents/tasks?id=...` | Видалити завдання                                                                                                                                                    |
-| GET    | `/api/v1/agents/tasks/[id]`   | Отримати завдання — синхронно оновлює статус із вищестоящого хмарного агента, якщо встановлено `external_id`                                                         |
-| POST   | `/api/v1/agents/tasks/[id]`   | Дискримінована дія: `{action: "approve"}`, `{action: "message", message}` або `{action: "cancel"}`                                                                   |
-| DELETE | `/api/v1/agents/tasks/[id]`   | Видалити конкретне завдання за ідентифікатором                                                                                                                       |
-
-> **Автентифікація:** для кожного методу потрібна автентифікація керування (`requireCloudAgentManagementAuth`). До v3.8.0 ці методи не потребували автентифікації — див. коміт `588a0333` щодо цієї несумісної зміни.
-
-```bash
-# Створити хмарне завдання Claude Code
-curl -X POST http://localhost:20128/api/v1/agents/tasks \
-  -H "Authorization: Bearer your-management-key" \
-  -H "Content-Type: application/json" \
-  -d '{"providerId":"claude-code-cloud","prompt":"Fix the failing test","source":{"repo":"...","branch":"..."}}'
-```
-
----
-
 ## Проксі керування
 
 Вихідні проксі HTTP(S)/SOCKS, які можна призначати постачальникам, обліковим записам або глобально.
@@ -1907,48 +1881,10 @@ curl -X DELETE http://localhost:20128/api/resilience/model-cooldowns \
 
 67router надає кінцеву точку A2A (Agent-to-Agent) JSON-RPC 2.0, а також REST-обгортку для перевірки та використання в панелі керування.
 
-### JSON-RPC
-
-```bash
-POST /a2a
-Authorization: Bearer your-api-key   # необов'язково, якщо не задано OMNIROUTE_API_KEY
-Content-Type: application/json
-
-{
-  "jsonrpc": "2.0",
-  "id": 1,
-  "method": "message/send",
-  "params": {
-    "skill": "smart-routing",
-    "messages": [{"role": "user", "content": "Route this coding task"}]
-  }
-}
-```
-
-Підтримувані методи (усі керуються параметром `settings.a2aEnabled`):
-
-| Метод            | Опис                                                                |
-| ---------------- | ------------------------------------------------------------------- |
-| `message/send`   | Синхронне виконання навички; повертає `{task, artifacts, metadata}` |
-| `message/stream` | Потокове виконання того самого набору навичок через SSE             |
-| `tasks/get`      | Отримання завдання за `taskId`                                      |
-| `tasks/cancel`   | Скасування завдання за `taskId`                                     |
-
-Вбудовані навички: `smart-routing`, `quota-management`, `provider-discovery`, `cost-analysis`, `health-report`.
-
-### Картка агента
-
-```bash
-GET /.well-known/agent.json
-```
-
-Повертає загальнодоступну картку агента A2A (назва, опис, можливості, каталог навичок, схема автентифікації), яка публічно кешується на 1 годину. Автентифікація не потрібна.
-
 ### Допоміжні REST-маршрути
 
 | Метод | Шлях                         | Опис                                                                                                                |
 | ----- | ---------------------------- | ------------------------------------------------------------------------------------------------------------------- |
-| GET   | `/api/a2a/status`            | Стан увімкнення A2A, статистика завдань і кешований підсумок картки агента                                          |
 | GET   | `/api/a2a/tasks`             | Список завдань — `?state=submitted\|working\|completed\|failed\|cancelled`, `?skill=`, `?limit=` (≤200), `?offset=` |
 | POST  | `/api/a2a/tasks`             | (Не реалізовано як допоміжний REST-маршрут — створюйте через JSON-RPC `message/send`)                               |
 | GET   | `/api/a2a/tasks/[id]`        | Отримання одного завдання                                                                                           |
@@ -1968,12 +1904,8 @@ GET /.well-known/agent.json
 | GET | `/api/cloud/models/alias` | Список псевдонімів моделей, доступних для хмарної синхронізації |
 | GET | `/api/assess` | Отримання найновіших категоризацій оцінювання (для кожного провайдера/моделі) |
 | POST | `/api/assess` | Запуск оцінювання — тіло: `{scope: {type:"all"}                                                   | {type:"provider", providerId} | {type:"model", modelId}, trigger?}` |
-| GET | `/api/evals` | Список вбудованих наборів тестів і найновіших запусків |
-| POST | `/api/evals` | Запуск тестування |
-| POST | `/api/evals/suites` | Створення спеціального набору тестів — тіло перевіряється за допомогою `evalSuiteSaveSchema` |
-| GET | `/api/evals/suites/[id]` | Отримання спеціального набору тестів |
 
-**Автентифікація:** `/api/cloud/auth` безпосередньо перевіряє Bearer-ключ і повертає замаскований ключ та `projectId` кожного підключення лише для ключа з областю доступу `manage` / `admin`; інші маршрути `/api/cloud/*`, `/api/evals/*` і `/api/assess` вимагають сесію керування або API-ключ. POST-запит `/api/assess` використовує `validateBody` зі схемою області видимості на основі дискримінованого об'єднання.
+**Автентифікація:** `/api/cloud/auth` безпосередньо перевіряє Bearer-ключ і повертає замаскований ключ та `projectId` кожного підключення лише для ключа з областю доступу `manage` / `admin`; інші маршрути `/api/cloud/*` і `/api/assess` вимагають сесію керування або API-ключ. POST-запит `/api/assess` використовує `validateBody` зі схемою області видимості на основі дискримінованого об'єднання.
 
 ---
 
@@ -2294,5 +2226,3 @@ devin-cli тощо). Повний список див. у [довіднику п
 - `requireLogin` можна перемикати через `/api/settings/require-login`
 - Маршрути `/v1/*` можуть вимагати Bearer API-ключ, якщо `REQUIRE_API_KEY=true`
 - «Токен керування» / «API-ключ з областю керування» в цьому довіднику означає одне із сімейств, описаних у зазначеному посібнику, а не невизначений додатковий тип секрету
-
-> **Критична зміна (v3.8.0)** — `/api/v1/agents/tasks/*` і кінцеві точки керування періодом очікування тепер вимагають **автентифікації керування** (файл cookie `auth_token` панелі керування або API-ключ з областю керування). Клієнти, які раніше викликали ці маршрути без автентифікації, отримуватимуть `401 Unauthorized`. Див. коміт `588a0333` (`fix(auth): require management auth for agent and cooldown APIs`).

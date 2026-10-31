@@ -714,7 +714,6 @@ omniroute cache                        # કૅશની સ્થિતિ
 omniroute cache clear                  # સિમેન્ટિક + સિગ્નેચર કૅશ સાફ કરો
 
 omniroute mcp status | restart         # MCP સર્વરની સ્થિતિ / પુનઃપ્રારંભ
-omniroute a2a status | card            # A2A સર્વરની સ્થિતિ / એજન્ટ કાર્ડ
 
 omniroute tunnel list | create | stop  # ટનલ્સ મેનેજ કરો (cloudflare/tailscale/ngrok)
 omniroute env show | get <k> | set <k> <v>  # env વેરિએબલ્સ તપાસો / સેટ કરો (કામચલાઉ)

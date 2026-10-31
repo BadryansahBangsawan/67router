@@ -573,5 +573,4 @@ Injini ya uelekezaji ina viwango vikali vya utendaji:
 - [REPOSITORY_MAP.md](../architecture/REPOSITORY_MAP.md) — maelezo ya kila directory
 - [AUTO-COMBO.md](../routing/AUTO-COMBO.md) — ukadiriaji wa vipengele 16
 - [MCP-SERVER.md](./MCP-SERVER.md) — seva ya MCP
-- [A2A-SERVER.md](./A2A-SERVER.md) — seva ya A2A
 - Chanzo: `open-sse/` (faili 400+, ~143K LOC)

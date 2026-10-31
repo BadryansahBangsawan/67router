@@ -43,8 +43,6 @@ Chuir an timthriall v3.7.x → v3.8.0 aicsíú uath-bhealach gan chumrú, solát
 - 🤝 **Soláthraí OAuth GitLab Duo** — logáil isteach le creidmheachtaí GitLab
 - 🧠 **Taisce Athsheolta Réasúnaithe** — cur i gcomhar cuimhne in-aiarraide + marthanacht SQLite de lorganna réasúnaithe
 
-📚 **Doiciméid gaolmhara:** [Creat Scileanna](../frameworks/SKILLS.md) · [Córas Cuimhne](../frameworks/MEMORY.md) · [Gníomhairí Scátháin](../frameworks/CLOUD_AGENT.md) · [Gréasáin](../frameworks/WEBHOOKS.md) · [Taisce Athsheolta Réasúnaithe](../routing/REASONING_REPLAY.md)
-
 ## 🔌 Soláthraithe
 
 Bainistigh ceangail soláthraithe AI: soláthraithe OAuth (Claude Code, Codex), soláthraithe eochair API (Groq, DeepSeek, OpenRouter), agus soláthraithe saor in aisce (Qoder, Kiro). Áirítear le cuntais Kiro rianú iarmhairid creidmheacha — creidmheacha fágtha, ceadliomh iomlán, agus dáta athnuaite le feiceáil i deais → Úsáid.
@@ -101,12 +99,6 @@ Monatóireacht fhíor-am: am ag obair, cuimhne, leagan, céatadáin moille (p50/
 Ceithre mhodh chun aistriúcháin API a dhífhabhtú: **Clósúchán** (tiontaire formáide), **Tástálaí Comhrá** (iarratais bheo), **Binse Tástála** (tástálacha baisc), agus **Monatóir Beo** (sruth fíor-ama).
 
 ![Clósúchán Aistritheora](../screenshots/05-translator.png)
-
----
-
-## 🎮 Clósúchán Múnla _(v2.0.9+)_
-
-Tástáil aon mhúnla go díreach ón deais. Roghnaigh soláthraí, múnla, agus críochphointe, scríobh leideanna le hEagarthóir Monaco, sruthaigh freagraí i bhfíor-am, cuir deireadh le sruth leathbhealaigh, agus féach ar mhéadracht ama.
 
 ---
 

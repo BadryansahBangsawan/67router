@@ -246,17 +246,6 @@ Eelpool toodud MCP tööriistade nimekiri (110 unikaalset tööriista, arvutatud
 piiratud käitusaegse ruutimise/vahemälu/tihendamise/mälu/oskuste/proksi/kontekstiallika toimingutega. Kaks kõrvutist
 raamistikku käivad MCP serveriga kaasas versioonis v3.8.0 ning on dokumenteeritud eraldi:
 
-### Pilveagendid
-
-Pilveagendid on protsessivälised AI koodiagendid (codex-cloud, cursor-cloud, devin, jules), mis on ühendatud
-67router'iga sama ühendusmudeli kaudu, mida kasutatakse LLM pakkujate puhul. Need on eksponeeritud
-oma REST liidese kaudu (`/api/v1/agents/*`) ja **ei** ole MCP tööriistade kataloogi osa
-— Pilveagendi kutsumine ei tarbi MCP ulatust.
-
-- Rakendus: `src/lib/cloudAgent/` (`registry.ts`, `agents/codex.ts`, `agents/cursor.ts`, `agents/devin.ts`, `agents/jules.ts`).
-- Elutsükkel: `createTask`, `getStatus`, `approvePlan`, `sendMessage`, `listSources`.
-- Dokumentatsioon: [docs/frameworks/CLOUD_AGENT.md](./CLOUD_AGENT.md).
-
 ### Kaitsepiirded (Guardrails)
 
 Kaitsepiirded on enne/pärast-täitmise filtrid (vision-bridge, pii-masker, prompt-injection),

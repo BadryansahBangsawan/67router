@@ -1406,9 +1406,8 @@ GET ప్రతిస్పందనలో `agents[]` (id, name, binary, versio
 
 ### మూల్యాంకనాలు
 
-| Endpoint     | Method   | Description                                                  |
-| ------------ | -------- | ------------------------------------------------------------ |
-| `/api/evals` | GET/POST | మూల్యాంకన సూట్లను జాబితా చేయండి / మూల్యాంకనాన్ని అమలు చేయండి |
+| Endpoint | Method | Description |
+| -------- | ------ | ----------- |
 
 ### విధానాలు
 
@@ -1731,31 +1730,6 @@ DELETE /api/usage/token-limits?id=tl-abc
 
 ---
 
-## ఏజెంట్ల ప్రోటోకాల్
-
-67router వినియోగదారుల తరఫున రిమోట్గా అమలు చేయబడే క్లౌడ్ ఏజెంట్ టాస్క్లు (Claude Code, Codex Cloud, OpenHands మొదలైనవి).
-
-| పద్ధతి | పాత్                          | వివరణ                                                                                                                                                                   |
-| ------ | ----------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| GET    | `/api/v1/agents/tasks`        | టాస్క్ల జాబితా — ఐచ్ఛికంగా `?provider=`, `?status=`, `?limit=` (1–500, డిఫాల్ట్ 50)                                                                                     |
-| POST   | `/api/v1/agents/tasks`        | టాస్క్ను సృష్టిస్తుంది — బాడీని `CreateCloudAgentTaskSchema` (`providerId`, `prompt`, `source`, `options?`) ద్వారా ధృవీకరిస్తుంది. టాస్క్ ఎన్వలప్తో `201`ను అందిస్తుంది |
-| DELETE | `/api/v1/agents/tasks?id=...` | టాస్క్ను తొలగిస్తుంది                                                                                                                                                   |
-| GET    | `/api/v1/agents/tasks/[id]`   | టాస్క్ను చదువుతుంది — `external_id` సెట్ చేసినప్పుడు అప్స్ట్రీమ్ క్లౌడ్ ఏజెంట్ నుండి స్థితిని సింక్రోనస్గా రిఫ్రెష్ చేస్తుంది                                           |
-| POST   | `/api/v1/agents/tasks/[id]`   | విభిన్నీకరించిన చర్య: `{action: "approve"}`, `{action: "message", message}`, లేదా `{action: "cancel"}`                                                                  |
-| DELETE | `/api/v1/agents/tasks/[id]`   | id ఆధారంగా నిర్దిష్ట టాస్క్ను తొలగిస్తుంది                                                                                                                              |
-
-> **ప్రామాణీకరణ:** ప్రతి పద్ధతికి నిర్వహణ ప్రామాణీకరణ అవసరం (`requireCloudAgentManagementAuth`). v3.8.0కు ముందు ఇవి ప్రామాణీకరించబడలేదు — ఈ బ్రేకింగ్ మార్పు కోసం కమిట్ `588a0333`ను చూడండి.
-
-```bash
-# Claude Code క్లౌడ్ టాస్క్ను సృష్టించండి
-curl -X POST http://localhost:20128/api/v1/agents/tasks \
-  -H "Authorization: Bearer your-management-key" \
-  -H "Content-Type: application/json" \
-  -d '{"providerId":"claude-code-cloud","prompt":"Fix the failing test","source":{"repo":"...","branch":"..."}}'
-```
-
----
-
 ## నిర్వహణ ప్రాక్సీలు
 
 ప్రొవైడర్లు, ఖాతాలు లేదా గ్లోబల్గా కేటాయించగల అవుట్బౌండ్ HTTP(S)/SOCKS ప్రాక్సీలు.
@@ -1875,48 +1849,10 @@ API కీ / సెషన్ వారీగా పరిధి నిర్ణ�
 
 67router తనిఖీ/డ్యాష్బోర్డ్ వినియోగం కోసం A2A (Agent-to-Agent) JSON-RPC 2.0 ఎండ్పాయింట్తో పాటు REST ర్యాపర్ను అందిస్తుంది.
 
-### JSON-RPC
-
-```bash
-POST /a2a
-Authorization: Bearer your-api-key   # OMNIROUTE_API_KEY సెట్ చేయబడితే తప్ప ఐచ్ఛికం
-Content-Type: application/json
-
-{
-  "jsonrpc": "2.0",
-  "id": 1,
-  "method": "message/send",
-  "params": {
-    "skill": "smart-routing",
-    "messages": [{"role": "user", "content": "Route this coding task"}]
-  }
-}
-```
-
-మద్దతు ఉన్న పద్ధతులు (అన్నీ `settings.a2aEnabled` ద్వారా నియంత్రించబడతాయి):
-
-| పద్ధతి           | వివరణ                                                             |
-| ---------------- | ----------------------------------------------------------------- |
-| `message/send`   | సమకాలిక నైపుణ్య అమలు; `{task, artifacts, metadata}`ను అందిస్తుంది |
-| `message/stream` | అదే నైపుణ్య సమితి యొక్క స్ట్రీమింగ్ SSE అమలు                      |
-| `tasks/get`      | `taskId` ద్వారా టాస్క్ను పొందుతుంది                               |
-| `tasks/cancel`   | `taskId` ద్వారా టాస్క్ను రద్దు చేస్తుంది                          |
-
-అంతర్నిర్మిత నైపుణ్యాలు: `smart-routing`, `quota-management`, `provider-discovery`, `cost-analysis`, `health-report`.
-
-### ఏజెంట్ కార్డ్
-
-```bash
-GET /.well-known/agent.json
-```
-
-పబ్లిక్ A2A ఏజెంట్ కార్డ్ను (పేరు, వివరణ, సామర్థ్యాలు, నైపుణ్యాల కేటలాగ్, ప్రామాణీకరణ పథకం) అందిస్తుంది — పబ్లిక్గా 1 గంట పాటు క్యాష్ చేయబడుతుంది. ప్రామాణీకరణ అవసరం లేదు.
-
 ### REST సహాయకాలు
 
 | పద్ధతి | పాత్                         | వివరణ                                                                                                               |
 | ------ | ---------------------------- | ------------------------------------------------------------------------------------------------------------------- |
-| GET    | `/api/a2a/status`            | A2A ప్రారంభ స్థితి + టాస్క్ గణాంకాలు + క్యాష్ చేసిన ఏజెంట్ కార్డ్ సారాంశం                                           |
 | GET    | `/api/a2a/tasks`             | టాస్క్ల జాబితా — `?state=submitted\|working\|completed\|failed\|cancelled`, `?skill=`, `?limit=` (≤200), `?offset=` |
 | POST   | `/api/a2a/tasks`             | (REST సహాయకంగా అమలు చేయబడలేదు — JSON-RPC `message/send` ద్వారా సృష్టించండి)                                         |
 | GET    | `/api/a2a/tasks/[id]`        | ఒక టాస్క్ను పొందండి                                                                                                 |
@@ -1936,12 +1872,8 @@ GET /.well-known/agent.json
 | GET | `/api/cloud/models/alias` | క్లౌడ్ సింక్కు అందుబాటులో ఉంచిన మోడల్ అలియాస్లను జాబితా చేస్తుంది |
 | GET | `/api/assess` | తాజా అంచనా వర్గీకరణలను (ప్రతి ప్రొవైడర్/మోడల్కు) చదువుతుంది |
 | POST | `/api/assess` | అంచనాను అమలు చేస్తుంది — బాడీ: `{scope: {type:"all"}                                                   | {type:"provider", providerId} | {type:"model", modelId}, trigger?}` |
-| GET | `/api/evals` | అంతర్నిర్మిత మూల్యాంకన సూట్లు + అత్యంత ఇటీవలి అమలులను జాబితా చేస్తుంది |
-| POST | `/api/evals` | మూల్యాంకన అమలును ప్రారంభిస్తుంది |
-| POST | `/api/evals/suites` | అనుకూల మూల్యాంకన సూట్ను సృష్టిస్తుంది — బాడీ `evalSuiteSaveSchema` ద్వారా ధృవీకరించబడుతుంది |
-| GET | `/api/evals/suites/[id]` | అనుకూల మూల్యాంకన సూట్ను పొందుతుంది |
 
-**ప్రామాణీకరణ:** `/api/cloud/auth` నేరుగా Bearer కీని ధృవీకరిస్తుంది మరియు `manage` / `admin` స్కోప్ ఉన్న కీకి మాత్రమే ప్రతి కనెక్షన్కు సంబంధించిన మాస్క్ చేసిన కీ మరియు `projectId`ను అందిస్తుంది; ఇతర `/api/cloud/*`, `/api/evals/*`, మరియు `/api/assess` రూట్లకు నిర్వహణ సెషన్/API కీ అవసరం. `/api/assess` POST, డిస్క్రిమినేటెడ్-యూనియన్ స్కోప్ స్కీమాతో `validateBody`ని ఉపయోగిస్తుంది.
+**ప్రామాణీకరణ:** `/api/cloud/auth` నేరుగా Bearer కీని ధృవీకరిస్తుంది మరియు `manage` / `admin` స్కోప్ ఉన్న కీకి మాత్రమే ప్రతి కనెక్షన్కు సంబంధించిన మాస్క్ చేసిన కీ మరియు `projectId`ను అందిస్తుంది; ఇతర `/api/cloud/*`, మరియు `/api/assess` రూట్లకు నిర్వహణ సెషన్/API కీ అవసరం. `/api/assess` POST, డిస్క్రిమినేటెడ్-యూనియన్ స్కోప్ స్కీమాతో `validateBody`ని ఉపయోగిస్తుంది.
 
 ---
 
@@ -2265,5 +2197,3 @@ AI ఏజెంట్ నైపుణ్యాలను నిర్వహిం
 - `requireLogin`ను `/api/settings/require-login` ద్వారా ఆన్ లేదా ఆఫ్ చేయవచ్చు
 - `REQUIRE_API_KEY=true` అయినప్పుడు `/v1/*` రూట్లకు ఐచ్ఛికంగా Bearer API కీ అవసరమవుతుంది
 - ఈ రిఫరెన్స్లోని "నిర్వహణ టోకెన్" / "నిర్వహణ-పరిధి గల API కీ" అంటే ఆ గైడ్లోని కుటుంబాలలో ఒకటి — నిర్వచించని అదనపు రహస్య రకం కాదు
-
-> **బ్రేకింగ్ మార్పు (v3.8.0)** — `/api/v1/agents/tasks/*` మరియు కూల్డౌన్ నిర్వహణ ఎండ్పాయింట్లకు ఇప్పుడు **నిర్వహణ ప్రమాణీకరణ** (డ్యాష్బోర్డ్ `auth_token` కుకీ లేదా నిర్వహణ-పరిధి గల API కీ) అవసరం. గతంలో ప్రమాణీకరణ లేకుండా ఈ రూట్లను కాల్ చేసిన క్లయింట్లు `401 Unauthorized`ను స్వీకరిస్తారు. కమిట్ `588a0333` (`fix(auth): require management auth for agent and cooldown APIs`) చూడండి.

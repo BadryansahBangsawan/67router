@@ -4,7 +4,6 @@
 
 ---
 
-> **Kilde:** `src/lib/{a2a,acp,cloudAgent}/`, `src/app/api/{a2a,acp,cloud}/`, `src/app/api/v1/agents/`
 > **Sist oppdatert:** 2026-06-28 — v3.8.40
 
 67router tilbyr tre forskjellige grensesnitt relatert til agenter. Ved første øyekast ser de like ut, men de løser forskjellige problemer. Bruk denne siden til å velge det riktige.
@@ -20,52 +19,6 @@
 De tre er uavhengige av hverandre — velg hvilken som helst kombinasjon.
 
 ## Beslutningstre
-
-```
-Trenger du en skytjeneste til å utføre arbeid utenfor denne maskinen (Codex Cloud / Cursor Cloud / Devin / Jules)?
-├─ JA → Skyagenter (POST /api/v1/agents/tasks)
-└─ NEI → Fortsett
-    │
-    Har du en annen agent som støtter A2A og ønsker å samarbeide?
-    ├─ JA → A2A (POST /a2a)
-    └─ NEI → Fortsett
-        │
-        Trenger du å liste opp / konfigurere CLI-kodeagenter som er installert lokalt?
-        ├─ JA → ACP (GET /api/acp/agents)
-        └─ NEI → Bruk vanlig /v1/chat/completions
-```
-
-## 1. A2A — agent-til-agent
-
-**Spesifikasjon:** [A2A v0.3](https://a2a-protocol.org)
-**67router-endepunkt:** `POST /a2a` (JSON-RPC 2.0)
-**Agentkort:** `GET /.well-known/agent.json`
-
-### Når det bør brukes
-
-- Når du bygger et multiagentsystem der 67router er én av deltakerne
-- Når du eksponerer 67routers rutingsintelligens (smart-routing, quota-management osv.) for agenter i rammeverk som Google ADK eller generiske agentnettverk
-- Når du legger 67router bak et standardisert grensesnitt for oppdagelse og aktivering
-
-### Metoder
-
-- `message/send` — send inn en melding og motta et synkront svar
-- `message/stream` — send inn en melding og motta SSE-strømmede fremdriftshendelser
-- `tasks/get` — les en oppgave etter ID
-- `tasks/cancel` — avbryt en oppgave som kjører
-
-### Innebygde ferdigheter (6)
-
-- `smart-routing` — rut en ledetekst gjennom den optimale kombinasjonen
-- `quota-management` — rapporter kvotestatus per leverandør
-- `provider-discovery` — list opp installerte leverandører med funksjonalitet
-- `cost-analysis` — beregn kostnaden for en forespørsel/samtale
-- `health-report` — sammenstill status for sikring/nedkjøling/utestenging per leverandør
-- `list-capabilities` — list opp agentens tilgjengelige ferdigheter og metadata
-
-### Fordypning
-
-Se [A2A-SERVER.md](./A2A-SERVER.md) for transportdetaljer, agentkortets struktur, konfigurasjon av oppgavenes TTL og malen for å legge til nye ferdigheter.
 
 ## 2. ACP — Register over CLI-agenter
 
@@ -125,86 +78,7 @@ Innholdsformat for POST (`customAgentBodySchema` i `src/app/api/acp/agents/route
   reservetilbyder. For vanlig interaktiv bruk må du starte den konfigurerte CLI-en selv eller
   bruke `omniroute run`.
 
-## 3. Skyagenter
-
-**67router-endepunkter:** `/api/v1/agents/tasks/*` (livssyklus) + `/api/cloud/*` (infrastruktur)
-**Kilde:** `src/lib/cloudAgent/`
-
-### Hva det er
-
-Et enhetlig grensesnitt mot tredjeparts kodeagenter i skyen. Du sender inn en ledetekst + URL-adressen til et kodelager, og 67router videresender oppgaven til riktig skyagent, sjekker status og returnerer resultatene.
-
-### Støttede agenter (4, alle bekreftet i `src/lib/cloudAgent/agents/`)
-
-- `codex-cloud` — OpenAI Codex Cloud
-- `devin` — Cognition Devin
-- `jules` — Google Jules
-
-### Livssyklus
-
-```
-POST /api/v1/agents/tasks
-  → BaseAgent.createTask() per agentklasse
-  → ekstern tjeneste starter arbeidet
-  → oppgaverad opprettes i databasen (cloud_agent_tasks)
-  ↓
-GET /api/v1/agents/tasks/[id]
-  → utsatt statussynkronisering fra leverandøren
-  → returnerer gjeldende status + plan + aktivitetslogg
-  ↓
-POST /api/v1/agents/tasks/[id]   (handling: "approve" | "message" | "cancel")
-  → videresender til leverandøren (eller markerer som avbrutt lokalt)
-  ↓
-DELETE /api/v1/agents/tasks/[id]
-  → lokal avbrytelse
-```
-
-### Autentisering
-
-⚠️ **Alle endepunkter under `/api/v1/agents/tasks/*` krever administrasjonsautentisering** (commit `588a0333`). Kall som bare bruker bearer-autentisering, mottar 401 siden v3.8.0.
-
-### Fordypning
-
-Se [CLOUD_AGENT.md](./CLOUD_AGENT.md) for `CloudAgentBase`-kontrakten, agentspesifikke detaljer, skjemadetaljer og endepunkter for håndtering av påloggingsopplysninger.
-
-## Sammenligning: A2A kontra skyagenter
-
-Begge har «langvarige oppgaver», men på forskjellige lag:
-
-| Aspekt               | A2A                                                                                         | Skyagenter                                 |
-| -------------------- | ------------------------------------------------------------------------------------------- | ------------------------------------------ |
-| Standard             | Åpen A2A v0.3                                                                               | 67router-spesifikk                         |
-| Hvor kjøringen skjer | Inne i 67router (bruker konfigurerte kombinasjoner)                                         | Eksternt (Codex- / Devin- / Jules-servere) |
-| Oppgavevarighet      | Standard TTL på 5 min (kan konfigureres i `TaskManager`)                                    | Minutter til timer                         |
-| Repositoriebevisst   | Nei (videresender bare instruksjoner)                                                       | Ja (repo-URL + gren)                       |
-| Bruksområde          | Samarbeid mellom agenter, smart ruting som en tjeneste                                      | Deleger «implementer funksjon X i repo Y»  |
-| Autentisering        | Valgfri `OMNIROUTE_API_KEY` for `/a2a`; administrasjon for REST-hjelpere under `/api/a2a/*` | Alltid administrasjon                      |
-
 ## Integrasjonseksempler
-
-### Oppdag 67routers A2A-funksjoner
-
-```bash
-curl http://localhost:20128/.well-known/agent.json
-```
-
-Returnerer agentkortet med alle de seks ferdighetene, transportene og versjonen.
-
-### Kall 67router som en A2A-agent
-
-```bash
-curl -X POST http://localhost:20128/a2a \
-  -H "Content-Type: application/json" \
-  -d '{
-    "jsonrpc": "2.0",
-    "method": "message/send",
-    "params": {
-      "messages": [{"role": "user", "content": "Route this prompt"}],
-      "skill": "smart-routing"
-    },
-    "id": 1
-  }'
-```
 
 ### Vis installerte CLI-agenter via ACP
 
@@ -227,30 +101,6 @@ curl -X POST http://localhost:20128/api/acp/agents \
     "versionCommand": "--version",
     "providerAlias": "openai"
   }'
-```
-
-### Send inn en skyagentoppgave
-
-```bash
-curl -X POST http://localhost:20128/api/v1/agents/tasks \
-  -H "Cookie: auth_token=..." \
-  -H "Content-Type: application/json" \
-  -d '{
-    "providerId": "devin",
-    "prompt": "Implement feature X in repo Y",
-    "source": {
-      "repoName": "user/repo",
-      "repoUrl": "https://github.com/user/repo",
-      "branch": "main"
-    }
-  }'
-```
-
-### Kontroller statusen for en skyoppgave
-
-```bash
-curl http://localhost:20128/api/v1/agents/tasks/<task-id> \
-  -H "Cookie: auth_token=..."
 ```
 
 ## Når du bør bruke hva
@@ -283,8 +133,6 @@ curl http://localhost:20128/api/v1/agents/tasks/<task-id> \
 
 ## Se også
 
-- [A2A-SERVER.md](./A2A-SERVER.md) — fordypning i A2A
-- [CLOUD_AGENT.md](./CLOUD_AGENT.md) — fordypning i skyagenter
 - [CLI-TOOLS.md](../reference/CLI-TOOLS.md) — eksterne CLI-integrasjoner (bruker ACP)
 - [SKILLS.md](./SKILLS.md) — rammeverk for ferdigheter (forskjellig fra A2A-ferdigheter — lokal sandkasse for kjøring)
 - [API_REFERENCE.md](../reference/API_REFERENCE.md#agents-protocol) — endepunktreferanse

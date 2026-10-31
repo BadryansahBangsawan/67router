@@ -60,7 +60,9 @@ test("POST strips the 3 dead keys and keeps a live witness", async () => {
     )
   );
   assert.equal(response.status, 201);
-  const stored = (await combosDb.getComboByName("dead-post")) as { config?: Record<string, unknown> } | null;
+  const stored = (await combosDb.getComboByName("dead-post")) as {
+    config?: Record<string, unknown>;
+  } | null;
   assert.deepEqual(stored?.config, { maxComboDepth: 3 });
 });
 
@@ -104,7 +106,8 @@ test("PUT strips the 3 dead keys and keeps the 9 live ones", async () => {
   assert.equal(stored?.config?.complexityAwareRouting, true);
   assert.equal(stored?.config?.pipeline_enabled, true);
   assert.deepEqual(stored?.config?.shadowRouting, { enabled: false });
-  assert.deepEqual(stored?.config?.evalRouting, { enabled: false });
+  // Evals were removed: a saved evalRouting block is now stripped like the other dead keys.
+  assert.equal(stored?.config?.evalRouting, undefined);
   assert.equal(stored?.config?.queueTimeoutMs, 5000);
 });
 

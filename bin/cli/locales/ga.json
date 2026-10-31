@@ -390,34 +390,6 @@
       "description": "Log iniúcháin MCP (ailias le haghaidh iniúchadh --source mcp)"
     }
   },
-  "a2a": {
-    "skills": {
-      "description": "Liostaigh scileanna A2A ar fáil ón chárta gníomhaire"
-    },
-    "invoke": {
-      "description": "Glaigh ar scil A2A agus fill ar ID an tasc",
-      "input": "Oibiacht ionchur JSON",
-      "input_file": "Cosán go comhad ionchur JSON",
-      "wait": "Fan le críoch an tasc sula dteagmháil ar ais",
-      "timeout": "Am barraíochta ag fanacht le críoch i ms (réamhshocrú: 60000)"
-    },
-    "tasks": {
-      "description": "Bainistigh tascanna A2A",
-      "list": {
-        "status": "Scag de réir stádais",
-        "skill": "Scag de réir ID scile"
-      },
-      "watch": {
-        "description": "Ceap stádas an tasc go dtí críoch"
-      },
-      "stream": {
-        "description": "Straimh imeartha tasc trí SSE"
-      },
-      "logs": {
-        "description": "Taispeáin teachtaireachtaí tasc agus gléasraí"
-      }
-    }
-  },
   "policy": {
     "description": "Bainistigh polasaithe údarúcháin 67router",
     "list": {
@@ -696,99 +668,6 @@
       "provider": "ID Soláthraí le cealú",
       "connection_id": "Cealaigh ceangal ar leith le ID",
       "yes": "Cuir an moladh deimhnithe ar ceal"
-    }
-  },
-  "cloud": {
-    "description": "Bainistigh tascanna gníomhaí cloud AI (codex, devin, jules)",
-    "agents": {
-      "description": "Liostaigh gníomhaí cloud atá ar fáil"
-    },
-    "agent": {
-      "description": "Bainistigh tascanna gníomhaí cloud {agent}",
-      "auth": {
-        "description": "Údáigh {agent} tríd an OAuth"
-      }
-    },
-    "task": {
-      "description": "Bainistigh tascanna gníomhaí cloud",
-      "create": {
-        "description": "Cruthaigh tasc gníomhaí nua",
-        "title": "Teideal tasc (réamhshocraítear go dtí na chéad 80 carachtar den phrómpt)",
-        "prompt": "Téacs prómpta an tasc",
-        "prompt_file": "Léigh prómpt ó chomhad",
-        "repo": "URL stór le clónadh don tasc",
-        "branch": "Ainm brainse le húsáid",
-        "metadata": "Oibiacht mheite sonraí JSON"
-      },
-      "list": {
-        "description": "Liostaigh tascanna gníomhaí",
-        "status": "Scag de réir stádais (ag rith|críochnaithe|teipite|curtha ar ceal)",
-        "limit": "Uasmhéid torthaí (réamhshocrú: 50)"
-      },
-      "get": {
-        "description": "Faigh sonraí tasc le ID"
-      },
-      "status": {
-        "description": "Priontáil stádas tasc (ag rith|críochnaithe|teipite|curtha ar ceal)"
-      },
-      "cancel": {
-        "description": "Cealaigh tasc atá ag rith",
-        "yes": "Neamhordú moladh deimhniú"
-      },
-      "approve": {
-        "description": "Cinnigh plean an tseiseáin chun tosaigh ar fheidhmiú"
-      },
-      "message": {
-        "description": "Seol teachtaireacht go tasc ag rith"
-      }
-    },
-    "sources": {
-      "description": "Liosta comhad foinse cruthaithe le tasc"
-    }
-  },
-  "eval": {
-    "description": "Dírithe ar shuitéanna agus ar reábhanna",
-    "suites": {
-      "description": "Bainistiú suiteanna luachanna",
-      "list": {
-        "description": "Liosta tacair mheastóireachta"
-      },
-      "get": {
-        "description": "Faigh sonraí an tionscadail measúnaithe de réir ID"
-      },
-      "create": {
-        "description": "Cruthaigh eval suite ón chomhaid JSON",
-        "file": "Cosán go dtí an comhad JSON sainiúcháin seifte"
-      }
-    },
-    "run": {
-      "description": "Tosaigh rith luachánoire do shraith",
-      "model": "Aitheantas an Mhúnla le hathbhreithniú (réamhshocrú: uathoibríoch)",
-      "combo": "Fórsaigh teaglaim ar leith le hainm",
-      "concurrency": "Líon na shamhshamplaí comhuaineacha (réamhshocrú: 4)",
-      "tag": "Cuir lipéad ar an rith seo chun é a scagadh ina dhiaidh sin",
-      "watch": "Féach ar dhul chun cinn an rith go dtí go gcríochnaítear é"
-    },
-    "list": {
-      "description": "Liostaigh ritanna meastóireachta",
-      "suite": "Scag de réir Aitheantas an tseisiúin",
-      "status": "Scag de réir stádais",
-      "since": "Fill ar ais rithanna ó an stampa seo amach",
-      "limit": "Torthaí uasta (réamhshocrú: 50)"
-    },
-    "get": {
-      "description": "Faigh sonraí seisiún eval trí ID"
-    },
-    "results": {
-      "description": "Taispeáin sampla torthaí le haghaidh rith luachmhair",
-      "failed": "Taispeáin samplaí nár éirigh leo amháin"
-    },
-    "cancel": {
-      "description": "Cealaigh eval reáchtáilte",
-      "yes": "Léim thar luaidh dheimhnithe"
-    },
-    "scorecard": {
-      "description": "Taispeáin scórchairt i gcomhthráthadh luaidhméadrach críochtha"
     }
   },
   "program": {

@@ -258,12 +258,6 @@ Lee [MCP-SERVER.md](./MCP-SERVER.md) maka nhazi mbufe na ikenye scope.
 
 ---
 
-## Njikọta A2A
-
-`src/lib/skills/a2a.ts` na-ebupụ descriptor nka A2A `memory_aware_routing` na enyemaka `registerA2ASkill(registry)`. Nka A2A ahaziri iche dị na `src/lib/a2a/skills/`, a na-eziga ha site na `A2A_SKILL_HANDLERS` (`src/lib/a2a/taskExecution.ts`). Lee [A2A-SERVER.md](./A2A-SERVER.md) maka usoro ndụ ọrụ zuru ezu.
-
----
-
 ## Ịtinye Nka Ọhụrụ E Wuru N’ime Ya
 
 1. **Kọwaa handler ahụ** na `src/lib/skills/builtins.ts` (ma ọ bụ faịlụ ibe ya n’okpuru `src/lib/skills/builtin/`). Signature: `(input, { apiKeyId, sessionId }) => Promise<output>`.
@@ -478,7 +472,6 @@ Lee [Plugin SDK & Njikọ Skills](./PLUGIN_SDK.md) maka otu esi agbakwunye skill
 ## Hụkwa
 
 - [MCP-SERVER.md](./MCP-SERVER.md) — ndebanye aha ngwaọrụ MCP na usoro mbufe
-- [A2A-SERVER.md](./A2A-SERVER.md) — usoro ndụ ọrụ A2A na iziga ọrụ na nka kwesịrị ekwesị
 - [USER_GUIDE.md](../guides/USER_GUIDE.md#-skills-system) — mmalite maka ndị ọrụ
 - [ARCHITECTURE.md](../architecture/ARCHITECTURE.md) — usoro nhazi arịrịọ na maapụ akụrụngwa
 - Koodu isi mmalite: `src/lib/skills/`, `src/app/api/skills/`, `open-sse/mcp-server/tools/skillTools.ts`

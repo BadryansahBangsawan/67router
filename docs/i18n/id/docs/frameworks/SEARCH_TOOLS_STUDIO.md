@@ -169,5 +169,4 @@ Hanya satu perubahan backend yang diperlukan untuk fitur ini:
 - Rencana induk: `_tasks/features-v3.8.6/refactorpages/_orchestration/master-plan-group-C.md`
 - Rencana fitur: `_tasks/features-v3.8.6/refactorpages/18-search-tools-studio-redesign.plan.md`
 - Registri penyedia pencarian: `open-sse/config/searchRegistry.ts`
-- Playground Studio (`ExportCodeModal` + `codeExport.ts` bersama): `docs/frameworks/PLAYGROUND_STUDIO.md`
 - Backend pengambilan web: `src/app/api/v1/web/fetch/route.ts`

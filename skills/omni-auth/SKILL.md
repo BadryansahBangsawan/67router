@@ -96,7 +96,7 @@ See the full OpenAPI specification at `GET /api/openapi/spec` or `docs/openapi.y
 
 # OmniRoute
 
-Local/remote AI gateway exposing OpenAI-compatible REST. One key, 375 providers,
+Local/remote AI gateway exposing OpenAI-compatible REST. One key, 372 providers,
 auto-fallback, RTK token saver, MCP server, A2A agents.
 
 ## Setup
@@ -147,8 +147,7 @@ Use `data[].id` as `model` field in requests. Combos appear with `owned_by:"comb
 | CLI entry point                        | https://raw.githubusercontent.com/diegosouzapw/OmniRoute/main/skills/cli-serve/SKILL.md       |
 | CLI admin & lifecycle                  | https://raw.githubusercontent.com/diegosouzapw/OmniRoute/main/skills/cli-serve/SKILL.md       |
 | CLI providers & keys                   | https://raw.githubusercontent.com/diegosouzapw/OmniRoute/main/skills/cli-providers/SKILL.md   |
-| CLI cloud agents (`omniroute cloud …`) | https://raw.githubusercontent.com/diegosouzapw/OmniRoute/main/skills/cli-backup-sync/SKILL.md |
-| CLI evals & benchmarks                 | https://raw.githubusercontent.com/diegosouzapw/OmniRoute/main/skills/cli-eval/SKILL.md        |
+| CLI routing simulation                 | https://raw.githubusercontent.com/diegosouzapw/OmniRoute/main/skills/cli-eval/SKILL.md        |
 
 ## Errors
 

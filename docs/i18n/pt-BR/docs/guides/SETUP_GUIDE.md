@@ -248,26 +248,6 @@ Adicione às suas configurações do MCP:
 
 **Documentação completa do MCP:** [README do servidor MCP](../../open-sse/mcp-server/README.md) — 110 ferramentas, configurações de IDE e clientes Python/TS/Go.
 
-### Configuração do A2A (Agent-to-Agent Protocol)
-
-Verifique o Agent Card:
-
-```bash
-curl http://localhost:20128/.well-known/agent.json
-```
-
-Envie uma tarefa:
-
-```bash
-curl -X POST http://localhost:20128/a2a \
-  -H 'content-type: application/json' \
-  -d '{"jsonrpc":"2.0","id":"quickstart","method":"message/send","params":{"skill":"quota-management","messages":[{"role":"user","content":"Give me a short quota summary."}]}}'
-```
-
-**Documentação completa do A2A:** [README do servidor A2A](../../src/lib/a2a/README.md) — JSON-RPC 2.0, habilidades, streaming e ciclo de vida das tarefas.
-
----
-
 ## Configuração de timeout
 
 ### Timeouts básicos
