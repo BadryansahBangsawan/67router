@@ -27,9 +27,6 @@ fs.mkdirSync(process.env.OMNIROUTE_PLUGINS_DIR, { recursive: true });
 const { createMcpServer } = await import("../../../open-sse/mcp-server/server.ts");
 const { closeAuditDb, queryAuditEntries } = await import("../../../open-sse/mcp-server/audit.ts");
 const { obsidianTools } = await import("../../../open-sse/mcp-server/tools/obsidianTools.ts");
-const { skillTools } = await import("../../../open-sse/mcp-server/tools/skillTools.ts");
-const { skillRegistry } = await import("../../../src/lib/skills/registry.ts");
-const { skillExecutor } = await import("../../../src/lib/skills/executor.ts");
 const core = await import("../../../src/lib/db/core.ts");
 
 type McpResult = {
@@ -116,7 +113,7 @@ test("every MCP public catch uses the canonical fail-closed projector", () => {
   assert.doesNotMatch(source, /err instanceof Error \? err\.message : String\(err\)/);
 });
 
-test("Obsidian and dynamic-skill MCP wrappers sanitize thrown errors", async () => {
+test("Obsidian MCP wrapper sanitizes thrown errors", async () => {
   const hostile = new Error(
     "MCP failed access_token=mcp-boundary-secret at /srv/private/mcp-boundary.ts\n" +
       "    at execute (/srv/private/mcp-boundary.ts:9:3)"
@@ -135,50 +132,26 @@ test("Obsidian and dynamic-skill MCP wrappers sanitize thrown errors", async () 
   } finally {
     mutableObsidianTool.handler = originalObsidianHandler;
   }
-
-  const mutableRegistry = skillRegistry as unknown as {
-    list: () => Array<{ name: string; description: string; enabled: boolean }>;
-  };
-  const mutableExecutor = skillExecutor as unknown as {
-    execute: (...args: unknown[]) => Promise<unknown>;
-  };
-  const originalList = mutableRegistry.list;
-  const originalExecute = mutableExecutor.execute;
-  try {
-    mutableRegistry.list = () => [
-      { name: "mcp_boundary_skill", description: "boundary test", enabled: true },
-    ];
-    const dynamicHandler = getRegisteredHandler(createMcpServer(), "skill_mcp_boundary_skill");
-    mutableExecutor.execute = async () => {
-      throw hostile;
-    };
-    assertPublicMcpError(
-      await dynamicHandler({}, { authInfo: { clientId: "test", scopes: ["execute:skills"] } })
-    );
-  } finally {
-    mutableRegistry.list = originalList;
-    mutableExecutor.execute = originalExecute;
-  }
 });
 
-test("skill-tool MCP wrapper uses its own fail-closed fallback for hostile thrown values", async () => {
-  const mutableSkillTool = Object.values(skillTools)[0] as unknown as {
+test("Obsidian MCP wrapper uses its own fail-closed fallback for hostile thrown values", async () => {
+  const mutableObsidianTool = obsidianTools[0] as unknown as {
     name: string;
     handler: (args: unknown, extra?: unknown) => Promise<unknown>;
   };
-  const originalHandler = mutableSkillTool.handler;
+  const originalHandler = mutableObsidianTool.handler;
   const revocable = Proxy.revocable({}, {});
   revocable.revoke();
 
   try {
-    mutableSkillTool.handler = async () => {
+    mutableObsidianTool.handler = async () => {
       throw revocable.proxy;
     };
-    const handler = getRegisteredHandler(createMcpServer(), mutableSkillTool.name);
-    const result = await handler({}, { authInfo: { scopes: ["read:skills"] } });
+    const handler = getRegisteredHandler(createMcpServer(), mutableObsidianTool.name);
+    const result = await handler({}, { authInfo: { scopes: ["read:obsidian"] } });
     assert.equal(result.isError, true);
-    assert.equal(result.content?.[0]?.text, "Error: Skill tool execution failed");
+    assert.equal(result.content?.[0]?.text, "Error: Obsidian tool execution failed");
   } finally {
-    mutableSkillTool.handler = originalHandler;
+    mutableObsidianTool.handler = originalHandler;
   }
 });
