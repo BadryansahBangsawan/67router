@@ -484,7 +484,7 @@ rechtstreeks of via `DefaultExecutor` of een andere executor; de overige modules
 (gedeelde identiteitshelper) en `index.ts` (register).
 
 > Opmerking: providers die hier niet worden vermeld, worden bediend door `default.ts` met behulp van de generieke
-> OpenAI-compatibele executor. De volledige providercatalogus (375 providers) bevindt zich in
+> OpenAI-compatibele executor. De volledige providercatalogus (372 providers) bevindt zich in
 > `src/shared/constants/providers.ts`.
 
 ### 4.3 `open-sse/translator/`

@@ -584,7 +584,6 @@
     "src/app/(dashboard)/dashboard/settings/components/ResilienceTab.tsx": 1541,
     "src/app/(dashboard)/dashboard/settings/components/RoutingTab.tsx": 2012,
     "src/app/(dashboard)/dashboard/settings/components/SystemStorageTab.tsx": 1943,
-    "src/app/(dashboard)/dashboard/usage/components/EvalsTab.tsx": 2583,
     "src/app/api/providers/[id]/models/route.ts": 2904,
     "src/app/api/providers/[id]/test/route.ts": 1517,
     "src/app/api/v1/models/catalog.ts": 2560,

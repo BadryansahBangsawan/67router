@@ -482,7 +482,7 @@ open-sse/
 (gemeinsame Identitäts-Hilfsfunktion) und `index.ts` (Registry).
 
 > Hinweis: Hier nicht aufgeführte Provider werden von `default.ts` mithilfe des generischen
-> OpenAI-kompatiblen Executors bedient. Der vollständige Provider-Katalog (375 Provider) befindet sich in
+> OpenAI-kompatiblen Executors bedient. Der vollständige Provider-Katalog (372 Provider) befindet sich in
 > `src/shared/constants/providers.ts`.
 
 ### 4.3 `open-sse/translator/`

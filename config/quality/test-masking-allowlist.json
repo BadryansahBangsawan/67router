@@ -38,7 +38,540 @@
   "tests/unit/docs/route-guard-import-locales.test.ts": "release/v3.8.53 PR #17250 (2026-10-20): the route-guard import section test asserted .i18n-state.json source_hash against the CURRENT English source (9→7, 2 asserts) — a duplicate of the i18n drift gate (check-translation-drift.mjs, PR-scoped since this PR) that turned every inherited translation drift into a red unit shard on unrelated PRs. Section presence and literals in every locale stay. Content assertions and target_hash provenance are unchanged. Verified legitimate, not masking. Prune after the next i18n wave lands.",
   "tests/unit/docs/remote-token-privilege-locales.test.ts": "release/v3.8.53 PR #17250 (2026-10-20): the remote-token privilege section test asserted .i18n-state.json source_hash against the CURRENT English source (7→5, 2 asserts) — a duplicate of the i18n drift gate (check-translation-drift.mjs, PR-scoped since this PR) that turned every inherited translation drift into a red unit shard on unrelated PRs. Section presence and literals in every locale stay. Content assertions and target_hash provenance are unchanged. Verified legitimate, not masking. Prune after the next i18n wave lands.",
   "_deletedWithReplacement": {
-    "_comment": "Deleções de arquivo de teste com SUBSTITUTO verificado (o gate exige que o replacement exista no HEAD e seja arquivo de teste). Uso restrito ao caso 'reescrito em outro path sem rename detectável pelo -M do git'. Cada entrada precisa de reason com PR ref e passa por revisão humana no release PR. Prune após o release mergear para main."
+    "_comment": "Deleções de arquivo de teste com SUBSTITUTO verificado (o gate exige que o replacement exista no HEAD e seja arquivo de teste). Uso restrito ao caso 'reescrito em outro path sem rename detectável pelo -M do git'. Cada entrada precisa de reason com PR ref e passa por revisão humana no release PR. Prune após o release mergear para main.",
+    "open-sse/mcp-server/__tests__/a2aLifecycle.test.ts": {
+      "sourceRemoved": [
+        "src/app/a2a",
+        "src/lib/a2a/skills",
+        "src/lib/a2a/taskExecution.ts",
+        "src/app/.well-known/agent.json"
+      ],
+      "reason": "67router PR-2: the public A2A protocol surface (/a2a JSON-RPC, Agent Card, built-in skills, executor) was removed permanently (unused, 0 a2a_tasks rows on the VPS); TaskManager and /api/a2a/tasks* stay and keep their own tests."
+    },
+    "tests/e2e/playground-compare.spec.ts": {
+      "sourceRemoved": [
+        "src/app/(dashboard)/dashboard/playground",
+        "src/app/api/playground",
+        "src/lib/db/playgroundPresets.ts"
+      ],
+      "reason": "67router PR-2: the Playground (and its presets) was removed permanently (unused feature, 0 playground_presets rows on the VPS); the code under test no longer exists."
+    },
+    "tests/e2e/playground-studio.spec.ts": {
+      "sourceRemoved": [
+        "src/app/(dashboard)/dashboard/playground",
+        "src/app/api/playground",
+        "src/lib/db/playgroundPresets.ts"
+      ],
+      "reason": "67router PR-2: the Playground (and its presets) was removed permanently (unused feature, 0 playground_presets rows on the VPS); the code under test no longer exists."
+    },
+    "tests/integration/playground-improve-prompt.test.ts": {
+      "sourceRemoved": [
+        "src/app/(dashboard)/dashboard/playground",
+        "src/app/api/playground",
+        "src/lib/db/playgroundPresets.ts"
+      ],
+      "reason": "67router PR-2: the Playground (and its presets) was removed permanently (unused feature, 0 playground_presets rows on the VPS); the code under test no longer exists."
+    },
+    "tests/integration/playground-presets-crud.test.ts": {
+      "sourceRemoved": [
+        "src/app/(dashboard)/dashboard/playground",
+        "src/app/api/playground",
+        "src/lib/db/playgroundPresets.ts"
+      ],
+      "reason": "67router PR-2: the Playground (and its presets) was removed permanently (unused feature, 0 playground_presets rows on the VPS); the code under test no longer exists."
+    },
+    "tests/integration/playground-presets-zod.test.ts": {
+      "sourceRemoved": [
+        "src/app/(dashboard)/dashboard/playground",
+        "src/app/api/playground",
+        "src/lib/db/playgroundPresets.ts"
+      ],
+      "reason": "67router PR-2: the Playground (and its presets) was removed permanently (unused feature, 0 playground_presets rows on the VPS); the code under test no longer exists."
+    },
+    "tests/integration/presets-dashboard-auth.test.ts": {
+      "sourceRemoved": [
+        "src/app/(dashboard)/dashboard/playground",
+        "src/app/api/playground",
+        "src/lib/db/playgroundPresets.ts"
+      ],
+      "reason": "67router PR-2: the Playground (and its presets) was removed permanently (unused feature, 0 playground_presets rows on the VPS); the code under test no longer exists."
+    },
+    "tests/unit/a2a-auth-timing-safe.test.ts": {
+      "sourceRemoved": [
+        "src/app/a2a",
+        "src/lib/a2a/skills",
+        "src/lib/a2a/taskExecution.ts",
+        "src/app/.well-known/agent.json"
+      ],
+      "reason": "67router PR-2: the public A2A protocol surface (/a2a JSON-RPC, Agent Card, built-in skills, executor) was removed permanently (unused, 0 a2a_tasks rows on the VPS); TaskManager and /api/a2a/tasks* stay and keep their own tests."
+    },
+    "tests/unit/a2a-cost-analysis-numeric-fallback.test.ts": {
+      "sourceRemoved": [
+        "src/app/a2a",
+        "src/lib/a2a/skills",
+        "src/lib/a2a/taskExecution.ts",
+        "src/app/.well-known/agent.json"
+      ],
+      "reason": "67router PR-2: the public A2A protocol surface (/a2a JSON-RPC, Agent Card, built-in skills, executor) was removed permanently (unused, 0 a2a_tasks rows on the VPS); TaskManager and /api/a2a/tasks* stay and keep their own tests."
+    },
+    "tests/unit/a2a-enabled-route.test.ts": {
+      "sourceRemoved": [
+        "src/app/a2a",
+        "src/lib/a2a/skills",
+        "src/lib/a2a/taskExecution.ts",
+        "src/app/.well-known/agent.json"
+      ],
+      "reason": "67router PR-2: the public A2A protocol surface (/a2a JSON-RPC, Agent Card, built-in skills, executor) was removed permanently (unused, 0 a2a_tasks rows on the VPS); TaskManager and /api/a2a/tasks* stay and keep their own tests."
+    },
+    "tests/unit/a2a-error-sanitization.test.ts": {
+      "sourceRemoved": [
+        "src/app/a2a",
+        "src/lib/a2a/skills",
+        "src/lib/a2a/taskExecution.ts",
+        "src/app/.well-known/agent.json"
+      ],
+      "reason": "67router PR-2: the public A2A protocol surface (/a2a JSON-RPC, Agent Card, built-in skills, executor) was removed permanently (unused, 0 a2a_tasks rows on the VPS); TaskManager and /api/a2a/tasks* stay and keep their own tests."
+    },
+    "tests/unit/a2a-memory-hits.test.ts": {
+      "sourceRemoved": [
+        "src/app/a2a",
+        "src/lib/a2a/skills",
+        "src/lib/a2a/taskExecution.ts",
+        "src/app/.well-known/agent.json"
+      ],
+      "reason": "67router PR-2: the public A2A protocol surface (/a2a JSON-RPC, Agent Card, built-in skills, executor) was removed permanently (unused, 0 a2a_tasks rows on the VPS); TaskManager and /api/a2a/tasks* stay and keep their own tests."
+    },
+    "tests/unit/a2a-route-require-api-key.test.ts": {
+      "sourceRemoved": [
+        "src/app/a2a",
+        "src/lib/a2a/skills",
+        "src/lib/a2a/taskExecution.ts",
+        "src/app/.well-known/agent.json"
+      ],
+      "reason": "67router PR-2: the public A2A protocol surface (/a2a JSON-RPC, Agent Card, built-in skills, executor) was removed permanently (unused, 0 a2a_tasks rows on the VPS); TaskManager and /api/a2a/tasks* stay and keep their own tests."
+    },
+    "tests/unit/a2a-routing-logger.test.ts": {
+      "sourceRemoved": [
+        "src/app/a2a",
+        "src/lib/a2a/skills",
+        "src/lib/a2a/taskExecution.ts",
+        "src/app/.well-known/agent.json"
+      ],
+      "reason": "67router PR-2: the public A2A protocol surface (/a2a JSON-RPC, Agent Card, built-in skills, executor) was removed permanently (unused, 0 a2a_tasks rows on the VPS); TaskManager and /api/a2a/tasks* stay and keep their own tests."
+    },
+    "tests/unit/a2a-status-agent-card-12887.test.ts": {
+      "sourceRemoved": [
+        "src/app/a2a",
+        "src/lib/a2a/skills",
+        "src/lib/a2a/taskExecution.ts",
+        "src/app/.well-known/agent.json"
+      ],
+      "reason": "67router PR-2: the public A2A protocol surface (/a2a JSON-RPC, Agent Card, built-in skills, executor) was removed permanently (unused, 0 a2a_tasks rows on the VPS); TaskManager and /api/a2a/tasks* stay and keep their own tests."
+    },
+    "tests/unit/a2a-v1-compat-10839.test.ts": {
+      "sourceRemoved": [
+        "src/app/a2a",
+        "src/lib/a2a/skills",
+        "src/lib/a2a/taskExecution.ts",
+        "src/app/.well-known/agent.json"
+      ],
+      "reason": "67router PR-2: the public A2A protocol surface (/a2a JSON-RPC, Agent Card, built-in skills, executor) was removed permanently (unused, 0 a2a_tasks rows on the VPS); TaskManager and /api/a2a/tasks* stay and keep their own tests."
+    },
+    "tests/unit/agent-card-language-16188.test.ts": {
+      "sourceRemoved": [
+        "src/app/a2a",
+        "src/lib/a2a/skills",
+        "src/lib/a2a/taskExecution.ts",
+        "src/app/.well-known/agent.json"
+      ],
+      "reason": "67router PR-2: the public A2A protocol surface (/a2a JSON-RPC, Agent Card, built-in skills, executor) was removed permanently (unused, 0 a2a_tasks rows on the VPS); TaskManager and /api/a2a/tasks* stay and keep their own tests."
+    },
+    "tests/unit/agent-card-route.test.ts": {
+      "sourceRemoved": [
+        "src/app/a2a",
+        "src/lib/a2a/skills",
+        "src/lib/a2a/taskExecution.ts",
+        "src/app/.well-known/agent.json"
+      ],
+      "reason": "67router PR-2: the public A2A protocol surface (/a2a JSON-RPC, Agent Card, built-in skills, executor) was removed permanently (unused, 0 a2a_tasks rows on the VPS); TaskManager and /api/a2a/tasks* stay and keep their own tests."
+    },
+    "tests/unit/agent-card-version-drift.test.ts": {
+      "sourceRemoved": [
+        "src/app/a2a",
+        "src/lib/a2a/skills",
+        "src/lib/a2a/taskExecution.ts",
+        "src/app/.well-known/agent.json"
+      ],
+      "reason": "67router PR-2: the public A2A protocol surface (/a2a JSON-RPC, Agent Card, built-in skills, executor) was removed permanently (unused, 0 a2a_tasks rows on the VPS); TaskManager and /api/a2a/tasks* stay and keep their own tests."
+    },
+    "tests/unit/characterization-cloudAgent.test.ts": {
+      "sourceRemoved": ["src/lib/cloudAgent", "src/app/api/v1/agents"],
+      "reason": "67router PR-2: cloud agents (Jules, Devin, Codex Cloud, Cursor Cloud) were removed permanently (unused feature, 0 cloud_agent_tasks rows on the VPS); the code under test no longer exists."
+    },
+    "tests/unit/characterization-evals.test.ts": {
+      "sourceRemoved": ["src/lib/evals", "src/app/api/evals"],
+      "reason": "67router PR-2: evals were removed permanently (unused feature, 0 eval_runs rows on the VPS); the code under test no longer exists."
+    },
+    "tests/unit/cli-a2a-invoke-commands.test.ts": {
+      "sourceRemoved": [
+        "src/app/a2a",
+        "src/lib/a2a/skills",
+        "src/lib/a2a/taskExecution.ts",
+        "src/app/.well-known/agent.json"
+      ],
+      "reason": "67router PR-2: the public A2A protocol surface (/a2a JSON-RPC, Agent Card, built-in skills, executor) was removed permanently (unused, 0 a2a_tasks rows on the VPS); TaskManager and /api/a2a/tasks* stay and keep their own tests."
+    },
+    "tests/unit/cli-cloud-commands.test.ts": {
+      "sourceRemoved": ["src/lib/cloudAgent", "src/app/api/v1/agents"],
+      "reason": "67router PR-2: cloud agents (Jules, Devin, Codex Cloud, Cursor Cloud) were removed permanently (unused feature, 0 cloud_agent_tasks rows on the VPS); the code under test no longer exists."
+    },
+    "tests/unit/cli-eval-commands.test.ts": {
+      "sourceRemoved": ["src/lib/evals", "src/app/api/evals"],
+      "reason": "67router PR-2: evals were removed permanently (unused feature, 0 eval_runs rows on the VPS); the code under test no longer exists."
+    },
+    "tests/unit/cloud-agent-approval-status-16196.test.ts": {
+      "sourceRemoved": ["src/lib/cloudAgent", "src/app/api/v1/agents"],
+      "reason": "67router PR-2: cloud agents (Jules, Devin, Codex Cloud, Cursor Cloud) were removed permanently (unused feature, 0 cloud_agent_tasks rows on the VPS); the code under test no longer exists."
+    },
+    "tests/unit/cloud-agent-cors-failclosed.test.ts": {
+      "sourceRemoved": ["src/lib/cloudAgent", "src/app/api/v1/agents"],
+      "reason": "67router PR-2: cloud agents (Jules, Devin, Codex Cloud, Cursor Cloud) were removed permanently (unused feature, 0 cloud_agent_tasks rows on the VPS); the code under test no longer exists."
+    },
+    "tests/unit/cloud-agent-credentials-api.test.ts": {
+      "sourceRemoved": ["src/lib/cloudAgent", "src/app/api/v1/agents"],
+      "reason": "67router PR-2: cloud agents (Jules, Devin, Codex Cloud, Cursor Cloud) were removed permanently (unused feature, 0 cloud_agent_tasks rows on the VPS); the code under test no longer exists."
+    },
+    "tests/unit/cloud-agent-credentials.test.ts": {
+      "sourceRemoved": ["src/lib/cloudAgent", "src/app/api/v1/agents"],
+      "reason": "67router PR-2: cloud agents (Jules, Devin, Codex Cloud, Cursor Cloud) were removed permanently (unused feature, 0 cloud_agent_tasks rows on the VPS); the code under test no longer exists."
+    },
+    "tests/unit/cloud-agent-cursor-4227.test.ts": {
+      "sourceRemoved": ["src/lib/cloudAgent", "src/app/api/v1/agents"],
+      "reason": "67router PR-2: cloud agents (Jules, Devin, Codex Cloud, Cursor Cloud) were removed permanently (unused feature, 0 cloud_agent_tasks rows on the VPS); the code under test no longer exists."
+    },
+    "tests/unit/cloud-agent-health-api.test.ts": {
+      "sourceRemoved": ["src/lib/cloudAgent", "src/app/api/v1/agents"],
+      "reason": "67router PR-2: cloud agents (Jules, Devin, Codex Cloud, Cursor Cloud) were removed permanently (unused feature, 0 cloud_agent_tasks rows on the VPS); the code under test no longer exists."
+    },
+    "tests/unit/cloud-agent-registry-own-keys-16199.test.ts": {
+      "sourceRemoved": ["src/lib/cloudAgent", "src/app/api/v1/agents"],
+      "reason": "67router PR-2: cloud agents (Jules, Devin, Codex Cloud, Cursor Cloud) were removed permanently (unused feature, 0 cloud_agent_tasks rows on the VPS); the code under test no longer exists."
+    },
+    "tests/unit/cloud-agent-tasks-route-auth.test.ts": {
+      "sourceRemoved": ["src/lib/cloudAgent", "src/app/api/v1/agents"],
+      "reason": "67router PR-2: cloud agents (Jules, Devin, Codex Cloud, Cursor Cloud) were removed permanently (unused feature, 0 cloud_agent_tasks rows on the VPS); the code under test no longer exists."
+    },
+    "tests/unit/cloudAgent-types.test.ts": {
+      "sourceRemoved": ["src/lib/cloudAgent", "src/app/api/v1/agents"],
+      "reason": "67router PR-2: cloud agents (Jules, Devin, Codex Cloud, Cursor Cloud) were removed permanently (unused feature, 0 cloud_agent_tasks rows on the VPS); the code under test no longer exists."
+    },
+    "tests/unit/conductor-agent-card.test.ts": {
+      "sourceRemoved": [
+        "src/app/a2a",
+        "src/lib/a2a/skills",
+        "src/lib/a2a/taskExecution.ts",
+        "src/app/.well-known/agent.json"
+      ],
+      "reason": "67router PR-2: the public A2A protocol surface (/a2a JSON-RPC, Agent Card, built-in skills, executor) was removed permanently (unused, 0 a2a_tasks rows on the VPS); TaskManager and /api/a2a/tasks* stay and keep their own tests."
+    },
+    "tests/unit/conductor-fleet-skills.test.ts": {
+      "sourceRemoved": ["src/lib/conductor/fleetSkills.ts"],
+      "reason": "67router PR-2: the public A2A protocol surface (/a2a JSON-RPC, Agent Card, built-in skills, executor) was removed permanently (unused, 0 a2a_tasks rows on the VPS); TaskManager and /api/a2a/tasks* stay and keep their own tests."
+    },
+    "tests/unit/db-playground-presets.test.ts": {
+      "sourceRemoved": [
+        "src/app/(dashboard)/dashboard/playground",
+        "src/app/api/playground",
+        "src/lib/db/playgroundPresets.ts"
+      ],
+      "reason": "67router PR-2: the Playground (and its presets) was removed permanently (unused feature, 0 playground_presets rows on the VPS); the code under test no longer exists."
+    },
+    "tests/unit/devin-cli-fallback-spawn-local-only-15159.test.ts": {
+      "sourceRemoved": ["src/lib/cloudAgent", "src/app/api/v1/agents"],
+      "reason": "67router PR-2: cloud agents (Jules, Devin, Codex Cloud, Cursor Cloud) were removed permanently (unused feature, 0 cloud_agent_tasks rows on the VPS); the code under test no longer exists."
+    },
+    "tests/unit/devin-cloud-agent-validator-6142.test.ts": {
+      "sourceRemoved": ["src/lib/cloudAgent", "src/app/api/v1/agents"],
+      "reason": "67router PR-2: cloud agents (Jules, Devin, Codex Cloud, Cursor Cloud) were removed permanently (unused feature, 0 cloud_agent_tasks rows on the VPS); the code under test no longer exists."
+    },
+    "tests/unit/eval-opt-out-13139.test.ts": {
+      "sourceRemoved": ["src/lib/evals", "src/app/api/evals"],
+      "reason": "67router PR-2: evals were removed permanently (unused feature, 0 eval_runs rows on the VPS); the code under test no longer exists."
+    },
+    "tests/unit/eval-runner-bugs-13137-13138.test.ts": {
+      "sourceRemoved": ["src/lib/evals", "src/app/api/evals"],
+      "reason": "67router PR-2: evals were removed permanently (unused feature, 0 eval_runs rows on the VPS); the code under test no longer exists."
+    },
+    "tests/unit/eval-runner-errored-case-scored-passed.test.ts": {
+      "sourceRemoved": ["src/lib/evals", "src/app/api/evals"],
+      "reason": "67router PR-2: evals were removed permanently (unused feature, 0 eval_runs rows on the VPS); the code under test no longer exists."
+    },
+    "tests/unit/evalrunner-builtinsuites-split.test.ts": {
+      "sourceRemoved": ["src/lib/evals", "src/app/api/evals"],
+      "reason": "67router PR-2: evals were removed permanently (unused feature, 0 eval_runs rows on the VPS); the code under test no longer exists."
+    },
+    "tests/unit/evals-history.test.ts": {
+      "sourceRemoved": ["src/lib/evals", "src/app/api/evals"],
+      "reason": "67router PR-2: evals were removed permanently (unused feature, 0 eval_runs rows on the VPS); the code under test no longer exists."
+    },
+    "tests/unit/evals-route.test.ts": {
+      "sourceRemoved": ["src/lib/evals", "src/app/api/evals"],
+      "reason": "67router PR-2: evals were removed permanently (unused feature, 0 eval_runs rows on the VPS); the code under test no longer exists."
+    },
+    "tests/unit/evals-runtime-self-managed-headers-13139.test.ts": {
+      "sourceRemoved": ["src/lib/evals", "src/app/api/evals"],
+      "reason": "67router PR-2: evals were removed permanently (unused feature, 0 eval_runs rows on the VPS); the code under test no longer exists."
+    },
+    "tests/unit/listCapabilities-a2a.test.ts": {
+      "sourceRemoved": [
+        "src/app/a2a",
+        "src/lib/a2a/skills",
+        "src/lib/a2a/taskExecution.ts",
+        "src/app/.well-known/agent.json"
+      ],
+      "reason": "67router PR-2: the public A2A protocol surface (/a2a JSON-RPC, Agent Card, built-in skills, executor) was removed permanently (unused, 0 a2a_tasks rows on the VPS); TaskManager and /api/a2a/tasks* stay and keep their own tests."
+    },
+    "tests/unit/playground-compare-column-scroll-13316.test.ts": {
+      "sourceRemoved": [
+        "src/app/(dashboard)/dashboard/playground",
+        "src/app/api/playground",
+        "src/lib/db/playgroundPresets.ts"
+      ],
+      "reason": "67router PR-2: the Playground (and its presets) was removed permanently (unused feature, 0 playground_presets rows on the VPS); the code under test no longer exists."
+    },
+    "tests/unit/playground-model-selection-3731.test.ts": {
+      "sourceRemoved": [
+        "src/app/(dashboard)/dashboard/playground",
+        "src/app/api/playground",
+        "src/lib/db/playgroundPresets.ts"
+      ],
+      "reason": "67router PR-2: the Playground (and its presets) was removed permanently (unused feature, 0 playground_presets rows on the VPS); the code under test no longer exists."
+    },
+    "tests/unit/playground-prompt-improver.test.ts": {
+      "sourceRemoved": [
+        "src/app/(dashboard)/dashboard/playground",
+        "src/app/api/playground",
+        "src/lib/db/playgroundPresets.ts"
+      ],
+      "reason": "67router PR-2: the Playground (and its presets) was removed permanently (unused feature, 0 playground_presets rows on the VPS); the code under test no longer exists."
+    },
+    "tests/unit/playground-schemas.test.ts": {
+      "sourceRemoved": [
+        "src/app/(dashboard)/dashboard/playground",
+        "src/app/api/playground",
+        "src/lib/db/playgroundPresets.ts"
+      ],
+      "reason": "67router PR-2: the Playground (and its presets) was removed permanently (unused feature, 0 playground_presets rows on the VPS); the code under test no longer exists."
+    },
+    "tests/unit/playground-simulate-route-error-sanitization-15159.test.ts": {
+      "sourceRemoved": [
+        "src/app/(dashboard)/dashboard/playground",
+        "src/app/api/playground",
+        "src/lib/db/playgroundPresets.ts"
+      ],
+      "reason": "67router PR-2: the Playground (and its presets) was removed permanently (unused feature, 0 playground_presets rows on the VPS); the code under test no longer exists."
+    },
+    "tests/unit/playground-simulate-route-persisted-combo.test.ts": {
+      "sourceRemoved": [
+        "src/app/(dashboard)/dashboard/playground",
+        "src/app/api/playground",
+        "src/lib/db/playgroundPresets.ts"
+      ],
+      "reason": "67router PR-2: the Playground (and its presets) was removed permanently (unused feature, 0 playground_presets rows on the VPS); the code under test no longer exists."
+    },
+    "tests/unit/playground-stream-metrics.test.ts": {
+      "sourceRemoved": [
+        "src/app/(dashboard)/dashboard/playground",
+        "src/app/api/playground",
+        "src/lib/db/playgroundPresets.ts"
+      ],
+      "reason": "67router PR-2: the Playground (and its presets) was removed permanently (unused feature, 0 playground_presets rows on the VPS); the code under test no longer exists."
+    },
+    "tests/unit/repro-6142-devin-cloud-agent-unwired.test.ts": {
+      "sourceRemoved": ["src/lib/cloudAgent", "src/app/api/v1/agents"],
+      "reason": "67router PR-2: cloud agents (Jules, Devin, Codex Cloud, Cursor Cloud) were removed permanently (unused feature, 0 cloud_agent_tasks rows on the VPS); the code under test no longer exists."
+    },
+    "tests/unit/t09-a2a-lifecycle.test.ts": {
+      "sourceRemoved": [
+        "src/app/a2a",
+        "src/lib/a2a/skills",
+        "src/lib/a2a/taskExecution.ts",
+        "src/app/.well-known/agent.json"
+      ],
+      "reason": "67router PR-2: the public A2A protocol surface (/a2a JSON-RPC, Agent Card, built-in skills, executor) was removed permanently (unused, 0 a2a_tasks rows on the VPS); TaskManager and /api/a2a/tasks* stay and keep their own tests."
+    },
+    "tests/unit/ui/evals-tab-smoke.test.tsx": {
+      "sourceRemoved": ["src/lib/evals", "src/app/api/evals"],
+      "reason": "67router PR-2: evals were removed permanently (unused feature, 0 eval_runs rows on the VPS); the code under test no longer exists."
+    },
+    "tests/unit/ui/playground-api-tab.test.tsx": {
+      "sourceRemoved": [
+        "src/app/(dashboard)/dashboard/playground",
+        "src/app/api/playground",
+        "src/lib/db/playgroundPresets.ts"
+      ],
+      "reason": "67router PR-2: the Playground (and its presets) was removed permanently (unused feature, 0 playground_presets rows on the VPS); the code under test no longer exists."
+    },
+    "tests/unit/ui/playground-build-tab.test.tsx": {
+      "sourceRemoved": [
+        "src/app/(dashboard)/dashboard/playground",
+        "src/app/api/playground",
+        "src/lib/db/playgroundPresets.ts"
+      ],
+      "reason": "67router PR-2: the Playground (and its presets) was removed permanently (unused feature, 0 playground_presets rows on the VPS); the code under test no longer exists."
+    },
+    "tests/unit/ui/playground-chat-tab-search-endpoint-10592.test.tsx": {
+      "sourceRemoved": [
+        "src/app/(dashboard)/dashboard/playground",
+        "src/app/api/playground",
+        "src/lib/db/playgroundPresets.ts"
+      ],
+      "reason": "67router PR-2: the Playground (and its presets) was removed permanently (unused feature, 0 playground_presets rows on the VPS); the code under test no longer exists."
+    },
+    "tests/unit/ui/playground-chat-tab.test.tsx": {
+      "sourceRemoved": [
+        "src/app/(dashboard)/dashboard/playground",
+        "src/app/api/playground",
+        "src/lib/db/playgroundPresets.ts"
+      ],
+      "reason": "67router PR-2: the Playground (and its presets) was removed permanently (unused feature, 0 playground_presets rows on the VPS); the code under test no longer exists."
+    },
+    "tests/unit/ui/playground-compare-column.test.tsx": {
+      "sourceRemoved": [
+        "src/app/(dashboard)/dashboard/playground",
+        "src/app/api/playground",
+        "src/lib/db/playgroundPresets.ts"
+      ],
+      "reason": "67router PR-2: the Playground (and its presets) was removed permanently (unused feature, 0 playground_presets rows on the VPS); the code under test no longer exists."
+    },
+    "tests/unit/ui/playground-compare-tab.test.tsx": {
+      "sourceRemoved": [
+        "src/app/(dashboard)/dashboard/playground",
+        "src/app/api/playground",
+        "src/lib/db/playgroundPresets.ts"
+      ],
+      "reason": "67router PR-2: the Playground (and its presets) was removed permanently (unused feature, 0 playground_presets rows on the VPS); the code under test no longer exists."
+    },
+    "tests/unit/ui/playground-config-pane.test.tsx": {
+      "sourceRemoved": [
+        "src/app/(dashboard)/dashboard/playground",
+        "src/app/api/playground",
+        "src/lib/db/playgroundPresets.ts"
+      ],
+      "reason": "67router PR-2: the Playground (and its presets) was removed permanently (unused feature, 0 playground_presets rows on the VPS); the code under test no longer exists."
+    },
+    "tests/unit/ui/playground-config-state-regression.test.tsx": {
+      "sourceRemoved": [
+        "src/app/(dashboard)/dashboard/playground",
+        "src/app/api/playground",
+        "src/lib/db/playgroundPresets.ts"
+      ],
+      "reason": "67router PR-2: the Playground (and its presets) was removed permanently (unused feature, 0 playground_presets rows on the VPS); the code under test no longer exists."
+    },
+    "tests/unit/ui/playground-improve-prompt-button.test.tsx": {
+      "sourceRemoved": [
+        "src/app/(dashboard)/dashboard/playground",
+        "src/app/api/playground",
+        "src/lib/db/playgroundPresets.ts"
+      ],
+      "reason": "67router PR-2: the Playground (and its presets) was removed permanently (unused feature, 0 playground_presets rows on the VPS); the code under test no longer exists."
+    },
+    "tests/unit/ui/playground-model-search-4086.test.tsx": {
+      "sourceRemoved": [
+        "src/app/(dashboard)/dashboard/playground",
+        "src/app/api/playground",
+        "src/lib/db/playgroundPresets.ts"
+      ],
+      "reason": "67router PR-2: the Playground (and its presets) was removed permanently (unused feature, 0 playground_presets rows on the VPS); the code under test no longer exists."
+    },
+    "tests/unit/ui/playground-preset-picker.test.tsx": {
+      "sourceRemoved": [
+        "src/app/(dashboard)/dashboard/playground",
+        "src/app/api/playground",
+        "src/lib/db/playgroundPresets.ts"
+      ],
+      "reason": "67router PR-2: the Playground (and its presets) was removed permanently (unused feature, 0 playground_presets rows on the VPS); the code under test no longer exists."
+    },
+    "tests/unit/ui/playground-structured-output-editor.test.tsx": {
+      "sourceRemoved": [
+        "src/app/(dashboard)/dashboard/playground",
+        "src/app/api/playground",
+        "src/lib/db/playgroundPresets.ts"
+      ],
+      "reason": "67router PR-2: the Playground (and its presets) was removed permanently (unused feature, 0 playground_presets rows on the VPS); the code under test no longer exists."
+    },
+    "tests/unit/ui/playground-studio.test.tsx": {
+      "sourceRemoved": [
+        "src/app/(dashboard)/dashboard/playground",
+        "src/app/api/playground",
+        "src/lib/db/playgroundPresets.ts"
+      ],
+      "reason": "67router PR-2: the Playground (and its presets) was removed permanently (unused feature, 0 playground_presets rows on the VPS); the code under test no longer exists."
+    },
+    "tests/unit/ui/playground-token-cost-counter.test.tsx": {
+      "sourceRemoved": [
+        "src/app/(dashboard)/dashboard/playground",
+        "src/app/api/playground",
+        "src/lib/db/playgroundPresets.ts"
+      ],
+      "reason": "67router PR-2: the Playground (and its presets) was removed permanently (unused feature, 0 playground_presets rows on the VPS); the code under test no longer exists."
+    },
+    "tests/unit/ui/playground-tools-builder.test.tsx": {
+      "sourceRemoved": [
+        "src/app/(dashboard)/dashboard/playground",
+        "src/app/api/playground",
+        "src/lib/db/playgroundPresets.ts"
+      ],
+      "reason": "67router PR-2: the Playground (and its presets) was removed permanently (unused feature, 0 playground_presets rows on the VPS); the code under test no longer exists."
+    },
+    "tests/unit/ui/use-improve-prompt.test.tsx": {
+      "sourceRemoved": [
+        "src/app/(dashboard)/dashboard/playground",
+        "src/app/api/playground",
+        "src/lib/db/playgroundPresets.ts"
+      ],
+      "reason": "67router PR-2: the Playground (and its presets) was removed permanently (unused feature, 0 playground_presets rows on the VPS); the code under test no longer exists."
+    },
+    "tests/unit/ui/use-presets.test.tsx": {
+      "sourceRemoved": [
+        "src/app/(dashboard)/dashboard/playground",
+        "src/app/api/playground",
+        "src/lib/db/playgroundPresets.ts"
+      ],
+      "reason": "67router PR-2: the Playground (and its presets) was removed permanently (unused feature, 0 playground_presets rows on the VPS); the code under test no longer exists."
+    },
+    "tests/unit/ui/use-stream-metrics.test.tsx": {
+      "sourceRemoved": [
+        "src/app/(dashboard)/dashboard/playground",
+        "src/app/api/playground",
+        "src/lib/db/playgroundPresets.ts"
+      ],
+      "reason": "67router PR-2: the Playground (and its presets) was removed permanently (unused feature, 0 playground_presets rows on the VPS); the code under test no longer exists."
+    },
+    "tests/unit/ui/use-structured-output.test.tsx": {
+      "sourceRemoved": [
+        "src/app/(dashboard)/dashboard/playground",
+        "src/app/api/playground",
+        "src/lib/db/playgroundPresets.ts"
+      ],
+      "reason": "67router PR-2: the Playground (and its presets) was removed permanently (unused feature, 0 playground_presets rows on the VPS); the code under test no longer exists."
+    },
+    "tests/unit/ui/use-tools-builder.test.tsx": {
+      "sourceRemoved": [
+        "src/app/(dashboard)/dashboard/playground",
+        "src/app/api/playground",
+        "src/lib/db/playgroundPresets.ts"
+      ],
+      "reason": "67router PR-2: the Playground (and its presets) was removed permanently (unused feature, 0 playground_presets rows on the VPS); the code under test no longer exists."
+    },
+    "tests/unit/v388-phase4-playground.test.ts": {
+      "sourceRemoved": [
+        "src/app/(dashboard)/dashboard/playground",
+        "src/app/api/playground",
+        "src/lib/db/playgroundPresets.ts"
+      ],
+      "reason": "67router PR-2: the Playground (and its presets) was removed permanently (unused feature, 0 playground_presets rows on the VPS); the code under test no longer exists."
+    }
   },
   "tests/unit/catalog-updates-v3x.test.ts": "v3.8.45 #6248: fix(providers) remove deprecated MiMo V2 entries — os 5 asserts removidos pinavam specs de modelos mimo-v2-* que deixaram de existir no catálogo (54→49). Asserts seguem a remoção dos modelos, não enfraquecimento. Verificado legítimo. Prune após v3.8.45 mergear para main.",
   "tests/unit/xiaomi-mimo-provider.test.ts": "v3.8.45 #6248: fix(providers) remove deprecated MiMo V2 entries — 2 asserts sobre mimo-v2-pro/omni/flash removidos junto com os modelos (21→19). Verificado legítimo, não mascaramento. Prune após v3.8.45 mergear para main.",
@@ -96,5 +629,31 @@
   "tests/unit/virtual-auto-combo.test.ts": "v3.8.52 PR #16310: remove only the OpenCode Free pool case (42->38). The current emulated no-auth allowlist and all sibling provider lifecycle checks remain; the allowlist is not empty.",
   "@omniroute/opencode-plugin/tests/warm-startup.test.ts": "the v1 plugin no longer fetches /api/combos/auto on refresh (5 fetchers, was 6); one fan-out assert updated 6 to 5, retired stubs removed, and 9 model-key assertions realigned to the bare-id contract from #9178/#10821 (both already on the base). Coverage kept, not weakened.",
   "@omniroute/opencode-plugin/tests/log-level.test.ts": "the v1 plugin no longer fetches /api/combos/auto on refresh; the retired fetcher 404 test and its import are removed with the source (21 to 19). Remaining level coverage unchanged.",
-  "@omniroute/opencode-plugin/tests/config-shim.test.ts": "the v1 plugin no longer fetches /api/combos/auto on refresh; the retired twin-wins case and its fixtures are removed with the static publication block (162 to 159). Remaining builder coverage unchanged."
+  "@omniroute/opencode-plugin/tests/config-shim.test.ts": "the v1 plugin no longer fetches /api/combos/auto on refresh; the retired twin-wins case and its fixtures are removed with the static publication block (162 to 159). Remaining builder coverage unchanged.",
+  "tests/e2e/ecosystem.test.ts": "67router PR-2: the A2A Agent Card and JSON-RPC cases were dropped because /a2a and /.well-known/agent.json were removed; the remaining ecosystem cases are unchanged.",
+  "tests/e2e/protocol-clients.test.ts": "67router PR-2: the A2A client cases were dropped with the /a2a JSON-RPC endpoint; the MCP client cases are unchanged.",
+  "tests/integration/agent-skills-discovery.test.ts": "67router PR-2: the A2A list-capabilities cases were dropped with the A2A skills; the MCP skill-list cases are unchanged (counts follow the removed cli-a2a skill).",
+  "tests/integration/integration-wiring.test.ts": "67router PR-2: wiring assertions for the removed playground/evals/cloud-agent/A2A modules were dropped; the remaining wiring checks are unchanged.",
+  "tests/integration/quota-public-consumers.test.ts": "67router PR-2: the A2A quota-management skill was removed, so its two assertions went; the MCP quota consumer assertions are unchanged.",
+  "tests/unit/agents-channel-publish.test.ts": "67router PR-2: the cloud-agent task publish cases were dropped with src/lib/cloudAgent; the A2A and Conductor publish cases are unchanged.",
+  "tests/unit/audit-eventtype-i18n.test.ts": "67router PR-2: the A2aAuditTab case was dropped with the A2A audit tab; the ComplianceTab case is unchanged.",
+  "tests/unit/characterization-a2a.test.ts": "67router PR-2: characterization of the removed A2A executor, skills, streaming, routing logger and Agent Cards was dropped; TaskManager and authenticate characterization stays.",
+  "tests/unit/check-known-symbols.test.ts": "67router PR-2: fixtures for removed A2A skills and cloud agents were dropped from the known-symbols gate test.",
+  "tests/unit/cli-expanded-commands.test.ts": "67router PR-2: one assertion covered a removed CLI command (eval/cloud/a2a/playground).",
+  "tests/unit/combo-config.test.ts": "67router PR-2: evalRouting combo config cases were dropped with eval-driven routing; the other combo config cases are unchanged.",
+  "tests/unit/combo-routing-engine.test.ts": "67router PR-2: evalRouting ordering cases were dropped with eval-driven routing; the other routing cases are unchanged.",
+  "tests/unit/combo-silent-stop-gaps.test.ts": "67router PR-2: evalRouting cases were dropped with eval-driven routing.",
+  "tests/unit/internal-management-auth-16593.test.ts": "67router PR-2: the eval runtime internal-identity cases were dropped with src/lib/evals; the other internal auth cases are unchanged.",
+  "tests/unit/mcp-a2a-combo-dispatch-17188.test.ts": "67router PR-2: the A2A smart-routing combo dispatch cases were dropped with the A2A skills; the MCP route_request cases are unchanged.",
+  "tests/unit/security-s1-s2-s4.test.ts": "67router PR-2: the S2 Agent Card topology cases were dropped with /.well-known/agent(-card).json; S1 and S4 are unchanged.",
+  "tests/unit/sqlite-memory-search-contract-16183.test.ts": "67router PR-2: the A2A memory-recall cases (collectMemoryHits) were dropped with the A2A executor; the SQLite search contract cases are unchanged.",
+  "tests/unit/ui/dashboard-csrf-fetch.test.tsx": "67router PR-2: the /a2a top-level management CSRF case was dropped with the /a2a route; the /api CSRF cases are unchanged.",
+  "tests/unit/ui/orchestrationCompare.test.ts": "67router PR-2: one cloud-agent source assertion was dropped with cloud agents.",
+  "tests/unit/ui/orchestrationDrawer.test.tsx": "67router PR-2: cloud-agent drawer sections were removed with cloud agents.",
+  "tests/unit/ui/orchestrationDrawerRepeat.test.tsx": "67router PR-2: the cloud-agent and A2A repeat builders were removed (they re-sent tasks to removed routes); the Conductor repeat cases are unchanged.",
+  "tests/unit/ui/orchestrationHistory.test.ts": "67router PR-2: cloud-agent history rows were removed with cloud agents.",
+  "tests/unit/ui/orchestrationHistoryTab.test.tsx": "67router PR-2: one cloud-agent history assertion was dropped with cloud agents.",
+  "tests/unit/ui/orchestrationModel.test.ts": "67router PR-2: the cloud-agent node source was removed from the Orchestration model.",
+  "tests/unit/update-routes-keep-omitted-fields.test.ts": "67router PR-2: the playground preset rename case was dropped with the playground; the other update routes are unchanged.",
+  "tests/unit/resolve-requested-combo-model-17188.test.ts": "67router PR-2: the A2A telemetry case (resolveA2AComboAttribution) was dropped with src/lib/a2a/resolveComboAttribution.ts; the resolveRequestedComboModel cases used by MCP route_request are unchanged."
 }

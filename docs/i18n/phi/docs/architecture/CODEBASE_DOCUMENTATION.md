@@ -482,7 +482,7 @@ nang direkta o sa pamamagitan ng `DefaultExecutor` o ibang executor; ang mga nat
 (nakabahaging helper ng identity) at `index.ts` (registry).
 
 > Tandaan: ang mga provider na hindi nakalista rito ay pinaglilingkuran ng `default.ts` gamit ang generic na
-> OpenAI-compatible executor. Ang buong catalog ng provider (375 provider) ay nasa
+> OpenAI-compatible executor. Ang buong catalog ng provider (372 provider) ay nasa
 > `src/shared/constants/providers.ts`.
 
 ### 4.3 `open-sse/translator/`

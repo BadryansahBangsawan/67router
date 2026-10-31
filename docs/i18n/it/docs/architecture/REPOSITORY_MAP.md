@@ -232,7 +232,7 @@ src/
 
 | Modulo                           | Scopo                                                                              |
 | -------------------------------- | ---------------------------------------------------------------------------------- |
-| `constants/providers.ts`         | **375 provider** con convalida Zod (fonte autorevole)                              |
+| `constants/providers.ts`         | **372 provider** con convalida Zod (fonte autorevole)                              |
 | `constants/cliTools.ts`          | Registro degli strumenti CLI esterni                                               |
 | `constants/routingStrategies.ts` | **20 strategie di routing** con priorità                                           |
 | `constants/publicApiRoutes.ts`   | Route che richiedono l'autenticazione Bearer (anziché quella di gestione)          |

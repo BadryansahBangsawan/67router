@@ -232,7 +232,7 @@ src/
 
 | Module                           | Doel                                                                         |
 | -------------------------------- | ---------------------------------------------------------------------------- |
-| `constants/providers.ts`         | **375 providers** met Zod-validatie (leidende bron)                          |
+| `constants/providers.ts`         | **372 providers** met Zod-validatie (leidende bron)                          |
 | `constants/cliTools.ts`          | Register van externe CLI-tools                                               |
 | `constants/routingStrategies.ts` | **20 routeringsstrategieën** met prioriteiten                                |
 | `constants/publicApiRoutes.ts`   | Routes die Bearer-authenticatie vereisen (in plaats van beheer)              |
@@ -389,7 +389,7 @@ open-sse/
 | `CLI-TOOLS.md`              | Externe CLI-integraties + interne OmniRoute-CLI                                                                |
 | `I18N.md`                   | i18n-architectuur, een taal toevoegen, 67 landinstellingen                                                     |
 | `UNINSTALL.md`              | Stappen voor een volledige verwijdering                                                                        |
-| `PROVIDER_REFERENCE.md`     | **Automatisch gegenereerde** catalogus van 375 providers (opnieuw genereren: `npm run gen:provider-reference`) |
+| `PROVIDER_REFERENCE.md`     | **Automatisch gegenereerde** catalogus van 372 providers (opnieuw genereren: `npm run gen:provider-reference`) |
 
 ### Diepgaande informatie over subsystemen
 
