@@ -105,8 +105,15 @@ export function authenticateA2A(request: Request): boolean {
 
 /**
  * Traduz uma task A2A externa em `POST /v1/tasks` do hub do OmniConductor.
- * Só skills da frota (`conductor` / `conductor-cli-<profile>` — as anunciadas no
- * Agent Card) são delegáveis; os estados voltam pelo espelho SSE→A2A (RF1).
+ * Só skills da frota são delegáveis: `conductor` ou `conductor-cli-<profile>` (o profile é o
+ * CLI do Conductor, ex. `conductor-cli-claude`). Não há mais Agent Card anunciando esses ids
+ * (removido no 67router PR-2); o cliente precisa conhecê-los. Os estados voltam pelo espelho
+ * SSE→A2A (RF1).
+ *
+ * Opt-in: fica 503 até `settings.a2aEnabled === true`. A aba A2A do dashboard que ligava esse
+ * toggle foi removida, então o único caminho é `PATCH /api/settings {"a2aEnabled": true}`.
+ * O gate fica de propósito: sem ele, com OMNIROUTE_API_KEY vazio, qualquer cliente criaria
+ * tasks no hub.
  */
 export async function POST(request: Request) {
   if (!authenticateA2A(request)) {
@@ -118,7 +125,10 @@ export async function POST(request: Request) {
   const settings = await getSettings();
   if (settings.a2aEnabled !== true) {
     return NextResponse.json(
-      { error: "A2A endpoint is disabled. Enable it from the Endpoints page." },
+      {
+        error:
+          'A2A delegation is disabled. Enable it with PATCH /api/settings {"a2aEnabled": true}.',
+      },
       { status: 503 }
     );
   }

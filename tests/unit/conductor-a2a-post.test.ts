@@ -65,6 +65,15 @@ test("A2A desabilitado → 503 (mesmo gate do JSON-RPC)", async () => {
   assert.equal(res.status, 503);
 });
 
+test("503 points at a toggle that still exists (the A2A dashboard tab is gone)", async () => {
+  const res = await tasksRoute.POST(delegationRequest(VALID_BODY));
+  assert.equal(res.status, 503);
+  const body = (await res.json()) as { error: string };
+  assert.doesNotMatch(body.error, /Endpoints page/i, "the Endpoints page no longer has an A2A tab");
+  assert.match(body.error, /PATCH \/api\/settings/);
+  assert.match(body.error, /"a2aEnabled":\s*true/);
+});
+
 test("com OMNIROUTE_API_KEY configurada, bearer errado → 401 e bearer certo passa", async () => {
   await enableA2A();
   process.env.OMNIROUTE_API_KEY = "chave-certa";
