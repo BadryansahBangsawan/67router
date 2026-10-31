@@ -1241,7 +1241,7 @@ Use the SSE URL `http://localhost:20128/api/mcp/sse` and a Bearer API key genera
 
 ### Scopes
 
-MCP currently defines 32 named scopes. Each Bearer key can be limited to specific scopes — see [MCP-SERVER.md](../frameworks/MCP-SERVER.md) for the authoritative scope and tool inventory and [A2A-SERVER.md](../frameworks/A2A-SERVER.md) for the JSON-RPC schema.
+MCP currently defines 27 named scopes. Each Bearer key can be limited to specific scopes — see [MCP-SERVER.md](../frameworks/MCP-SERVER.md) for the authoritative scope and tool inventory and [A2A-SERVER.md](../frameworks/A2A-SERVER.md) for the JSON-RPC schema.
 
 ---
 

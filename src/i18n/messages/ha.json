@@ -12355,7 +12355,7 @@
       },
       "omni-mcp": {
         "name": "Sabar MCP",
-        "description": "Haɗa zuwa sabar OmniRoute MCP (kayan aiki 107, hanyoyin sufuri 3: SSE/stdio/HTTP). Ya ƙunshi kayan aikin juyar da hanya, ma'ajiyar wucin gadi, matsewa, ƙwaƙwalwa, ƙwarewa, masu bayarwa, da kayan aikin bincike a cikin fannonin izini 32."
+        "description": "Haɗa zuwa sabar OmniRoute MCP (kayan aiki 97, hanyoyin sufuri 3: SSE/stdio/HTTP). Ya ƙunshi kayan aikin juyar da hanya, ma'ajiyar wucin gadi, matsewa, ƙwaƙwalwa, ƙwarewa, masu bayarwa, da kayan aikin bincike a cikin fannonin izini 27."
       },
       "omni-agents-a2a": {
         "name": "Wakilai da Ka'idar A2A",

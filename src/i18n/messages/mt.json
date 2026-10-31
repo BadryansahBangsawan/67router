@@ -12355,7 +12355,7 @@
       },
       "omni-mcp": {
         "name": "Server MCP",
-        "description": "Qabbad mas-server MCP ta’ OmniRoute (107 għodda, 3 trasporti: SSE/stdio/HTTP). Ikopri għodod għar-rototizzazzjoni, il-cache, il-kompressjoni, il-memorja, il-ħiliet, il-fornituri u l-awditjar fi 32 ambitu ta’ permess."
+        "description": "Qabbad mas-server MCP ta’ OmniRoute (97 għodda, 3 trasporti: SSE/stdio/HTTP). Ikopri għodod għar-rototizzazzjoni, il-cache, il-kompressjoni, il-memorja, il-ħiliet, il-fornituri u l-awditjar fi 27 ambitu ta’ permess."
       },
       "omni-agents-a2a": {
         "name": "Aġenti u Protokoll A2A",

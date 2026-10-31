@@ -12355,7 +12355,7 @@
       },
       "omni-mcp": {
         "name": "Strežnik MCP",
-        "description": "Povežite se s strežnikom OmniRoute MCP (107 orodij, 3 načini prenosa: SSE/stdio/HTTP). Vključuje orodja za usmerjanje, predpomnilnik, stiskanje, pomnilnik, veščine, ponudnike in revizijo v 32 obsegih dovoljenj."
+        "description": "Povežite se s strežnikom OmniRoute MCP (97 orodij, 3 načini prenosa: SSE/stdio/HTTP). Vključuje orodja za usmerjanje, predpomnilnik, stiskanje, pomnilnik, veščine, ponudnike in revizijo v 27 obsegih dovoljenj."
       },
       "omni-agents-a2a": {
         "name": "Agenti in protokol A2A",

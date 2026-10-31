@@ -12355,7 +12355,7 @@
       },
       "omni-mcp": {
         "name": "MCP-server",
-        "description": "Koble til OmniRoute MCP-serveren (107 verktøy, 3 transporter: SSE/stdio/HTTP). Dekker ruting, hurtigbuffer, komprimering, minne, ferdigheter, leverandører og revisjonsverktøy på tvers av 32 tillatelsesomfang."
+        "description": "Koble til OmniRoute MCP-serveren (97 verktøy, 3 transporter: SSE/stdio/HTTP). Dekker ruting, hurtigbuffer, komprimering, minne, ferdigheter, leverandører og revisjonsverktøy på tvers av 27 tillatelsesomfang."
       },
       "omni-agents-a2a": {
         "name": "Agenter og A2A-protokoll",

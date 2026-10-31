@@ -12432,7 +12432,7 @@
       },
       "omni-mcp": {
         "name": "MCP Server",
-        "description": "Connect to the OmniRoute MCP server (107 tools, 3 transports: SSE/stdio/HTTP). Covers routing, cache, compression, memory, skills, providers, and audit tools across 32 permission scopes."
+        "description": "Connect to the OmniRoute MCP server (97 tools, 3 transports: SSE/stdio/HTTP). Covers routing, cache, compression, providers, and audit tools across 27 permission scopes."
       },
       "omni-agents-a2a": {
         "name": "Agents & A2A Protocol",
@@ -12444,7 +12444,7 @@
       },
       "omni-inference": {
         "name": "Inference (OpenAI-compatible)",
-        "description": "The core OpenAI-compatible inference endpoints: chat completions, embeddings, images, audio (TTS/STT), rerank, and the Responses API. The primary integration surface for AI agents."
+        "description": "The core OpenAI-compatible inference endpoints: chat completions, images, audio (TTS/STT), and the Responses API. The primary integration surface for AI agents."
       },
       "cli-serve": {
         "name": "CLI: Serve",
@@ -12519,8 +12519,8 @@
         "description": "Create and run evaluation suites, watch live benchmark progress, view scorecards, compare model performance, and integrate eval runs with CI workflows from the CLI."
       },
       "cli-plugins-skills": {
-        "name": "CLI: Plugins, Skills & Memory",
-        "description": "Manage Omni Skills (list, install, test, remove), plugins (create, configure), and persistent memory (search, add, clear) from the CLI."
+        "name": "CLI: Plugins",
+        "description": "Manage plugins (list, install, scaffold, configure) from the CLI."
       },
       "cli-setup": {
         "name": "CLI: Setup & Config",

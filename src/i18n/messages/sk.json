@@ -12355,7 +12355,7 @@
       },
       "omni-mcp": {
         "name": "Server MCP",
-        "description": "Pripojte sa k serveru OmniRoute MCP (107 nástrojov, 3 transporty: SSE/stdio/HTTP). Zahŕňa smerovanie, vyrovnávaciu pamäť, kompresiu, pamäť, zručnosti, poskytovateľov a nástroje auditu v rámci 32 rozsahov oprávnení."
+        "description": "Pripojte sa k serveru OmniRoute MCP (97 nástrojov, 3 transporty: SSE/stdio/HTTP). Zahŕňa smerovanie, vyrovnávaciu pamäť, kompresiu, pamäť, zručnosti, poskytovateľov a nástroje auditu v rámci 27 rozsahov oprávnení."
       },
       "omni-agents-a2a": {
         "name": "Agenti a protokol A2A",
