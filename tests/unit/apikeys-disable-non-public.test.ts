@@ -71,12 +71,11 @@ test("disableNonPublicModels: defaults to false when not set on a new key", asyn
   );
 });
 
-test("3 columns coexist: disableNonPublicModels, allowedQuotas, streamDefaultMode all present", async () => {
+test("2 columns coexist: disableNonPublicModels and streamDefaultMode both present", async () => {
   const created = await apiKeysDb.createApiKey("Coexist Key", "machine-np-03");
 
   await apiKeysDb.updateApiKeyPermissions(created.id, {
     disableNonPublicModels: true,
-    allowedQuotas: ["pool-alpha", "pool-beta"],
     streamDefaultMode: "json",
   });
   apiKeysDb.clearApiKeyCaches();
@@ -87,14 +86,6 @@ test("3 columns coexist: disableNonPublicModels, allowedQuotas, streamDefaultMod
 
   // Verify disableNonPublicModels
   assert.equal(metadata.disableNonPublicModels, true, "disableNonPublicModels should be true");
-
-  // Verify allowedQuotas is still an array
-  assert.ok(Array.isArray(metadata.allowedQuotas), "allowedQuotas should be an array");
-  assert.deepEqual(
-    metadata.allowedQuotas,
-    ["pool-alpha", "pool-beta"],
-    "allowedQuotas should match"
-  );
 
   // Verify streamDefaultMode is still present
   assert.ok(metadata.streamDefaultMode !== undefined, "streamDefaultMode should be present");
@@ -117,7 +108,7 @@ test("disableNonPublicModels: can be toggled back to false", async () => {
   assert.equal(metaFalse?.disableNonPublicModels, false, "should be false after second update");
 });
 
-test("disableNonPublicModels: allowedQuotas is still [] when only disableNonPublicModels is set", async () => {
+test("disableNonPublicModels: other fields keep defaults when only disableNonPublicModels is set", async () => {
   const created = await apiKeysDb.createApiKey("Separate NonPublic Key", "machine-np-05");
 
   await apiKeysDb.updateApiKeyPermissions(created.id, { disableNonPublicModels: true });
@@ -127,6 +118,5 @@ test("disableNonPublicModels: allowedQuotas is still [] when only disableNonPubl
 
   assert.ok(metadata, "metadata should not be null");
   assert.equal(metadata.disableNonPublicModels, true);
-  assert.deepEqual(metadata.allowedQuotas, [], "allowedQuotas should remain empty array");
   assert.equal(metadata.streamDefaultMode, "legacy", "streamDefaultMode should remain 'legacy'");
 });

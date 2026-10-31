@@ -26,7 +26,6 @@ test("v2 sidebar sections hold every page, in this order", () => {
     "model-catalog",
     "combos-live",
     "quota",
-    "costs-quota-share",
     "embedded-services",
   ]);
   assert.deepEqual(ids("optimize"), [

@@ -189,7 +189,6 @@ describe("Cache Control Policy", () => {
       "p2c",
       "least-used",
       "strict-random",
-      "quota-share",
     ]) {
       test(`preserves for combo with ${strategy} strategy (markers win over routing strategy)`, () => {
         assert.equal(
@@ -223,7 +222,7 @@ describe("Cache Control Policy", () => {
         shouldPreserveCacheControl({
           userAgent: "claude-code/0.1.0",
           isCombo: true,
-          comboStrategy: "quota-share",
+          comboStrategy: "priority",
           targetProvider: "gemini",
         }),
         false
@@ -235,7 +234,7 @@ describe("Cache Control Policy", () => {
         shouldPreserveCacheControl({
           userAgent: "curl/7.68.0",
           isCombo: true,
-          comboStrategy: "quota-share",
+          comboStrategy: "priority",
           targetProvider: "claude",
         }),
         false

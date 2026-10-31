@@ -599,8 +599,6 @@
       "proxyConfigModal",
       "proxyLog",
       "proxyLogger",
-      "quotaPlans",
-      "quotaShare",
       "reasoningRouting",
       "requestLogger",
       "requestTimeline",
@@ -610,7 +608,6 @@
       "stats",
       "traeAuthModal",
       "trafficInspector",
-      "usage",
       "usageLimits"
     ],
     "discovery": [

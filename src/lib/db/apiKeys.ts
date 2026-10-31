@@ -59,7 +59,7 @@ import {
   parseAccessSchedule,
   parseRateLimits,
   parseAllowedConnections,
-  parseAllowedQuotas,
+  hasRetiredQuotaAllocation,
   parseStringList,
   parseNullableTimestamp,
   parseIsBanned,
@@ -117,7 +117,8 @@ interface ApiKeyMetadata {
   blockedModels: string[];
   allowedCombos: string[];
   allowedConnections: string[];
-  allowedQuotas: string[];
+  /** Key still carries a removed Quota Share allocation; refused by policy. */
+  retiredQuotaScope?: boolean;
   noLog: boolean;
   autoResolve: boolean;
   isActive: boolean;
@@ -166,8 +167,6 @@ interface ApiKeyRow extends JsonRecord {
   allowedCombos?: unknown;
   allowed_connections?: unknown;
   allowedConnections?: unknown;
-  allowed_quotas?: unknown;
-  allowedQuotas?: unknown;
   no_log?: unknown;
   noLog?: unknown;
   auto_resolve?: unknown;
@@ -232,7 +231,6 @@ interface ApiKeyView extends JsonRecord {
   blockedModels: string[];
   allowedCombos: string[];
   allowedConnections: string[];
-  allowedQuotas: string[];
   noLog: boolean;
   autoResolve: boolean;
   isActive: boolean;
@@ -485,7 +483,7 @@ function getPreparedStatements(db: ApiKeysDbLike): ApiKeysStatements {
     _stmtGetAllKeys = db.prepare<ApiKeyRow>("SELECT * FROM api_keys ORDER BY created_at");
     _stmtGetKeyById = db.prepare<ApiKeyRow>("SELECT * FROM api_keys WHERE id = ?");
     _stmtValidateKey = db.prepare<JsonRecord>(
-      "SELECT id, expires_at, revoked_at, is_active, is_banned FROM api_keys WHERE key_hash = ?"
+      "SELECT id, expires_at, revoked_at, is_active, is_banned, allowed_quotas FROM api_keys WHERE key_hash = ?"
     );
     _stmtGetKeyMetadata = db.prepare<ApiKeyRow>(
       "SELECT id, name, machine_id, model_access_mode, allowed_models, blocked_models, allowed_combos, allowed_connections, allowed_quotas, no_log, auto_resolve, is_active, access_schedule, max_requests_per_day, max_requests_per_minute, throttle_delay_ms, max_sessions, revoked_at, expires_at, ip_allowlist, scopes, rate_limits, is_banned, key_hash, allowed_endpoints, stream_default_mode, cache_default_mode, codex_service_mode, disable_non_public_models, allow_usage_command, usage_limit_enabled, daily_usage_limit_usd, weekly_usage_limit_usd, chaos_mode_enabled, compression_enabled, allow_auto_combos, catalog_scope, forced_model, proxy_id FROM api_keys WHERE key_hash = ?"
@@ -539,7 +537,6 @@ export async function getApiKeys(limit?: number, offset?: number) {
     camelRow.blockedModels = parseAllowedModels(camelRow.blockedModels);
     camelRow.allowedCombos = parseAllowedCombos(camelRow.allowedCombos);
     camelRow.allowedConnections = parseAllowedConnections(camelRow.allowedConnections);
-    camelRow.allowedQuotas = parseAllowedQuotas((camelRow as JsonRecord).allowedQuotas);
     camelRow.noLog = parseNoLog(camelRow.noLog);
     camelRow.autoResolve = parseAutoResolve(camelRow.autoResolve);
     camelRow.isActive = parseIsActive(camelRow.isActive);
@@ -684,7 +681,6 @@ export async function getApiKeyById(id: string) {
   camelRow.blockedModels = parseAllowedModels(camelRow.blockedModels);
   camelRow.allowedCombos = parseAllowedCombos(camelRow.allowedCombos);
   camelRow.allowedConnections = parseAllowedConnections(camelRow.allowedConnections);
-  camelRow.allowedQuotas = parseAllowedQuotas((camelRow as JsonRecord).allowedQuotas);
   camelRow.noLog = parseNoLog(camelRow.noLog);
   camelRow.autoResolve = parseAutoResolve(camelRow.autoResolve);
   camelRow.isActive = parseIsActive(camelRow.isActive);
@@ -837,7 +833,6 @@ export async function updateApiKeyPermissions(
     normalized.blockedModels !== undefined ||
     normalized.allowedCombos !== undefined ||
     normalized.allowedConnections !== undefined ||
-    normalized.allowedQuotas !== undefined ||
     normalized.disableNonPublicModels !== undefined ||
     normalized.allowAutoCombos !== undefined ||
     normalized.catalogScope !== undefined ||
@@ -850,7 +845,6 @@ export async function updateApiKeyPermissions(
     normalized.blockedModels === undefined &&
     normalized.allowedCombos === undefined &&
     normalized.allowedConnections === undefined &&
-    (normalized as Record<string, unknown>).allowedQuotas === undefined &&
     normalized.noLog === undefined &&
     normalized.autoResolve === undefined &&
     normalized.isActive === undefined &&
@@ -889,7 +883,6 @@ export async function updateApiKeyPermissions(
     blockedModels?: string;
     allowedCombos?: string;
     allowedConnections?: string;
-    allowedQuotas?: string;
     noLog?: number;
     autoResolve?: number;
     isActive?: number;
@@ -948,16 +941,6 @@ export async function updateApiKeyPermissions(
     // Empty array means all connections are allowed
     updates.push("allowed_connections = @allowedConnections");
     params.allowedConnections = JSON.stringify(normalized.allowedConnections || []);
-  }
-
-  const allowedQuotasUpdate = (normalized as Record<string, unknown>).allowedQuotas;
-  if (allowedQuotasUpdate !== undefined) {
-    // Empty array means no quota-pool restriction; non-empty restricts to listed pools
-    updates.push("allowed_quotas = @allowedQuotas");
-    const nextQuotas: string[] = Array.isArray(allowedQuotasUpdate)
-      ? (allowedQuotasUpdate as unknown[]).filter((s): s is string => typeof s === "string")
-      : [];
-    params.allowedQuotas = JSON.stringify(nextQuotas);
   }
 
   if (normalized.noLog !== undefined) {
@@ -1303,6 +1286,18 @@ export async function setApiKeyExpiry(id: string, expiresAt: string | null): Pro
   return true;
 }
 
+const _warnedRetiredQuotaKeys = new Set<string>();
+
+function warnRetiredQuotaKey(id: unknown): void {
+  const keyId = typeof id === "string" ? id : "unknown";
+  if (_warnedRetiredQuotaKeys.has(keyId)) return;
+  _warnedRetiredQuotaKeys.add(keyId);
+  console.warn(
+    `[API_KEYS] Refusing API key ${keyId}: it is still allocated to a Quota Share pool ` +
+      "(api_keys.allowed_quotas), and Quota Share was removed. Revoke it and issue a new key."
+  );
+}
+
 /**
  * Validate API key with lifecycle gates and caching.
  *
@@ -1310,7 +1305,8 @@ export async function setApiKeyExpiry(id: string, expiresAt: string | null): Pro
  *   - the row exists,
  *   - is_active = 1,
  *   - revoked_at IS NULL,
- *   - expires_at IS NULL OR expires_at > now.
+ *   - expires_at IS NULL OR expires_at > now,
+ *   - allowed_quotas is empty (Quota Share was removed; an allocated key fails closed).
  *
  * Cache TTL is short (CACHE_TTL) and the metadata cache is also invalidated
  * by revokeApiKey/updateApiKeyPermissions/deleteApiKey, so a revoke takes
@@ -1350,6 +1346,13 @@ export async function validateApiKey(key: string | null | undefined) {
 
   const revokedAt = row.revoked_at ?? row.revokedAt;
   if (typeof revokedAt === "string" && revokedAt.trim() !== "") return false;
+
+  // Quota Share was removed: a key still allocated to a pool cannot be held to it
+  // any more, so refuse it rather than let it act as an unrestricted key.
+  if (hasRetiredQuotaAllocation(row.allowed_quotas)) {
+    warnRetiredQuotaKey(row.id);
+    return false;
+  }
 
   const expiresAt = row.expires_at ?? row.expiresAt;
   if (typeof expiresAt === "string" && expiresAt.trim() !== "") {
@@ -1433,7 +1436,6 @@ export async function getApiKeyMetadata(
       blockedModels: [],
       allowedCombos: [ALL_COMBOS_ACCESS_RULE],
       allowedConnections: [],
-      allowedQuotas: [],
       noLog: false,
       autoResolve: true,
       isActive: true,
@@ -1508,9 +1510,7 @@ export async function getApiKeyMetadata(
     allowedConnections: parseAllowedConnections(
       record.allowed_connections ?? record.allowedConnections
     ),
-    allowedQuotas: parseAllowedQuotas(
-      (record as JsonRecord).allowed_quotas ?? (record as JsonRecord).allowedQuotas
-    ),
+    retiredQuotaScope: hasRetiredQuotaAllocation((record as JsonRecord).allowed_quotas),
     noLog: parseNoLog(record.no_log ?? record.noLog),
     autoResolve: parseAutoResolve(record.auto_resolve ?? record.autoResolve),
     isActive: parseIsActive(record.is_active ?? record.isActive),

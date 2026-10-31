@@ -28,17 +28,16 @@ test("costs cluster exists in the Observe section", () => {
   assert.ok(costsCluster().children.length === 2);
 });
 
-test("costs section has exactly 6 items in the correct order", () => {
+test("costs section has exactly 5 items in the correct order", () => {
   const section = costsCluster();
 
   const items = sidebarVisibility.getSectionItems(section);
-  assert.equal(items.length, 6, "costs section must have 6 items");
+  assert.equal(items.length, 5, "costs section must have 5 items");
 
   const itemIds = items.map((i) => i.id);
   assert.deepEqual(itemIds, [
     "costs",
     "costs-pricing",
-    "costs-budget",
     "costs-free-tiers",
     "free-provider-rankings",
     "radar",
@@ -54,7 +53,6 @@ test("costs section items have correct hrefs", () => {
   assert.deepEqual(hrefs, [
     { id: "costs", href: "/dashboard/costs" },
     { id: "costs-pricing", href: "/dashboard/costs/pricing" },
-    { id: "costs-budget", href: "/dashboard/costs/budget" },
     { id: "costs-free-tiers", href: "/dashboard/free-tiers" },
     { id: "free-provider-rankings", href: "/dashboard/free-provider-rankings" },
     { id: "radar", href: "/dashboard/radar" },

@@ -1,10 +1,7 @@
 /**
- * The per-key dollar budget gates every endpoint at the policy phase, but only
- * chat and web search ever charged it. Image, speech, video/music and rerank
- * routes already price each successful call (`calculateModalCost`) — the
- * number was only attached to the X-OmniRoute cost header — so a key with a
- * budget could spend without limit on those routes. They now charge the
- * metered share of that cost to the budget, like chat does.
+ * Video/music and rerank routes price each successful call
+ * (`calculateModalCost`) for the X-OmniRoute cost header and also record the
+ * metered share of that cost in the key's cost history, like chat does.
  */
 import test from "node:test";
 import assert from "node:assert/strict";
@@ -61,10 +58,9 @@ async function seedConnection(provider: string) {
   });
 }
 
-async function keyWithDailyBudget(limitUsd: number) {
-  const created = await apiKeysDb.createApiKey("Budgeted media key", "machine-budget-modal");
+async function createMediaKey() {
+  const created = await apiKeysDb.createApiKey("Media key", "machine-budget-modal");
   apiKeysDb.clearApiKeyCaches();
-  costRules.setBudget(created.id, { dailyLimitUsd: limitUsd, resetInterval: "daily" });
   return created;
 }
 
@@ -77,13 +73,13 @@ function post(url: string, key: string, body: unknown) {
 }
 
 function spent(apiKeyId: string): number {
-  return Number(costRules.checkBudget(apiKeyId).periodUsed) || 0;
+  return costRules.getDailyTotal(apiKeyId);
 }
 
-test("rerank: a priced call charges the key's dollar budget", async () => {
+test("rerank: a priced call records the key's cost", async () => {
   saveSyncedPricing({ cohere: { "rerank-v3.5": { input: 0, output: 0, search_unit_cost: 0.5 } } });
   await seedConnection("cohere");
-  const key = await keyWithDailyBudget(10);
+  const key = await createMediaKey();
   globalThis.fetch = (async (url: unknown) => {
     assert.equal(String(url), "https://api.cohere.com/v2/rerank");
     return new Response(
@@ -107,11 +103,11 @@ test("rerank: a priced call charges the key's dollar budget", async () => {
   assert.ok(Math.abs(spent(key.id) - 1.5) < 1e-9, `expected $1.5 charged, got ${spent(key.id)}`);
 });
 
-test("video/music responses charge the budget of the key they were made for", async () => {
+test("video/music responses record the cost of the key they were made for", async () => {
   saveSyncedPricing({
     openai: { "sora-test": { input: 0, output: 0, output_cost_per_video_per_second: 0.1 } },
   });
-  const key = await keyWithDailyBudget(10);
+  const key = await createMediaKey();
   const response = await mediaRoute.successfulMediaGenerationResponse({
     result: { data: { ok: true } },
     billingMode: "video",
@@ -126,7 +122,7 @@ test("video/music responses charge the budget of the key they were made for", as
 });
 
 test("recordModalCallCost: flat-rate providers, zero costs and keyless calls charge nothing", async () => {
-  const key = await keyWithDailyBudget(10);
+  const key = await createMediaKey();
   costRules.recordModalCallCost(key.id, { provider: "opencode-go", model: "m", costUsd: 3 });
   costRules.recordModalCallCost(key.id, { provider: "openai", model: "m", costUsd: 0 });
   costRules.recordModalCallCost(null, { provider: "openai", model: "m", costUsd: 3 });

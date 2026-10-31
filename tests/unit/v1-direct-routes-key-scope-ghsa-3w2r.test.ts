@@ -96,7 +96,6 @@ async function makeKey(
   options: {
     allowedConnections?: string[];
     blockedModels?: string[];
-    allowedQuotas?: string[];
   } = {}
 ): Promise<string> {
   keyCounter += 1;
@@ -106,11 +105,8 @@ async function makeKey(
     [],
     { allowedConnections: options.allowedConnections }
   );
-  if (options.blockedModels || options.allowedQuotas) {
-    await apiKeysDb.updateApiKeyPermissions(key.id, {
-      ...(options.blockedModels ? { blockedModels: options.blockedModels } : {}),
-      ...(options.allowedQuotas ? { allowedQuotas: options.allowedQuotas } : {}),
-    });
+  if (options.blockedModels) {
+    await apiKeysDb.updateApiKeyPermissions(key.id, { blockedModels: options.blockedModels });
   }
   return key.key as string;
 }
@@ -603,17 +599,6 @@ test("GHSA-3w2r scope helper: unscoped keys stay unfiltered, scoped keys keep th
     allowedConnections: ["conn-a"],
     rejection: null,
   });
-});
-
-test("GHSA-3w2r scope helper: a quota key whose pools resolve to nothing is refused like chat", async () => {
-  const { resolveKeyConnectionScope } =
-    await import("../../src/sse/services/keyConnectionScope.ts");
-  const scope = await resolveKeyConnectionScope({ allowedQuotas: ["ghsa3w2r-missing-pool"] });
-  assert.equal(scope.allowedConnections, null);
-  assert.ok(scope.rejection, "an empty quota scope admits no connection");
-  assert.equal(scope.rejection.status, 503);
-  const body = await scope.rejection.text();
-  assert.ok(!body.includes("at /"), "no stack trace leaks");
 });
 
 test("GHSA-3w2r scope helper: narrowing never widens a disjoint pair into 'unfiltered'", async () => {

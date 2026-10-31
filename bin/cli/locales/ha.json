@@ -172,13 +172,6 @@
       "period": "Tsawon lokaci: 1d|7d|30d|90d|ytd|all (tsoho: 30d)",
       "provider": "Tace ta ID na mai samarwa"
     },
-    "budget": {
-      "description": "Sarrafa kasafin kuɗin farashi",
-      "set": {
-        "scope": "Iyakokin kasafin kuɗi (tsoho: global)",
-        "period": "Lokacin kasafin kuɗi: daily|weekly|monthly (tsoho: monthly)"
-      }
-    },
     "quota": {
       "description": "Nuna amfani da ƙayyadadden rabon mai samarwa",
       "provider": "Tace ta ID na mai samarwa",

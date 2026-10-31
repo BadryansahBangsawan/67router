@@ -225,8 +225,6 @@ import {
 import { recordContextEditingTelemetryHook } from "./chatCore/contextEditingTelemetry.ts";
 import { recordCompressionCacheStats } from "./chatCore/compressionCacheStats.ts";
 import { writeCavemanOutputAnalytics } from "./chatCore/cavemanOutputAnalytics.ts";
-import { scheduleQuotaShareConsumption } from "./chatCore/quotaShareConsumption.ts";
-import { runQuotaSharePreHook } from "./chatCore/quotaSharePreHook.ts";
 import { emitRequestGamificationEvent } from "./chatCore/gamificationEvent.ts";
 import { applyPostTranslationCompression } from "./chatCore/postTranslationCompression.ts";
 import { isJsonRecord } from "./chatCore/nonStreamingResponseParse.ts";
@@ -2333,24 +2331,6 @@ async function handleChatCoreInner({
   // through CLIProxyAPI regardless of the provider-level upstream_proxy_config mode.
   const resolveExecutorWithProxy = createExecutorResolver(log, credentials, validationExecutorFence);
 
-  // === Quota Share enforcement PRE-hook (B/F7) + G2 combo soft penalty ===
-  // Extracted to chatCore/quotaSharePreHook.ts (chatCore slice 2). Fail-open per B16; a block
-  // returns the structured 429 error result (`errorCode: "quota_share_blocked"`, #17132) after
-  // finalizing the pending-request slot.
-  const quotaShareBlockResult = await runQuotaSharePreHook({
-    apiKeyInfo,
-    credentials,
-    provider,
-    model,
-    isCombo,
-    comboStepId,
-    comboExecutionKey,
-    finalizePendingRequest: () =>
-      trackPendingRequest(model, provider, pendingConnId, false, undefined, pendingRequestId),
-    log,
-  });
-  if (quotaShareBlockResult) return quotaShareBlockResult;
-  // === /Quota Share enforcement PRE-hook ===
   if (isFeatureFlagEnabled("CAPABILITY_FILTER_ENABLED")) {
     const fit = checkRequestCapabilityFit(
       getResolvedModelCapabilities({ provider, model: effectiveModel }),
@@ -3228,7 +3208,6 @@ async function handleChatCoreInner({
       sanitizeErrorMessage,
       sanitizeUpstreamDetails,
       saveIdempotency: saveIdempotencyWithConfiguredWindow,
-      scheduleQuotaShareConsumption,
       semanticCacheEnabled,
       sessionAffinityKey,
       shouldIsolateProbeFailures,

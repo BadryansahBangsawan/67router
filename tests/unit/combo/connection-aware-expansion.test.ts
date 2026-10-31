@@ -61,14 +61,7 @@ test.after(() => {
 // Gate: strategy + config resolution
 
 test("T0a: group B strategies are the 15 non-quota-aware strategies", () => {
-  const groupA = new Set([
-    "reset-aware",
-    "reset-window",
-    "headroom",
-    "quota-weighted",
-    "quota-share",
-    "auto",
-  ]);
+  const groupA = new Set(["reset-aware", "reset-window", "headroom", "quota-weighted", "auto"]);
   for (const strategy of CONNECTION_AWARE_EXPANSION_GROUP_B) {
     assert.ok(!groupA.has(strategy), `group B must not contain A-group strategy ${strategy}`);
   }

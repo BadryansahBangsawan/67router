@@ -1,5 +1,4 @@
 import { getDbInstance, pingDb } from "@/lib/db/core";
-import { listPools } from "@/lib/db/quotaPools";
 
 interface ProviderStatusRow {
   id: string;
@@ -24,7 +23,6 @@ export async function buildOmniRouteStatus() {
     import("@/shared/utils/circuitBreaker").catch(() => null),
     import("../../open-sse/services/quotaMonitor").catch(() => null),
   ]);
-  const pools = listPools().items;
   const circuitStatuses = circuitModule?.getAllCircuitBreakerStatuses() ?? null;
   const quotaSummary = quotaMonitorModule?.getQuotaMonitorSummary() ?? null;
   const active = connections.filter(
@@ -54,16 +52,6 @@ export async function buildOmniRouteStatus() {
               ? "healthy"
               : "unknown",
         failureState: connection.last_error ? "recent_error" : "none",
-      })),
-    },
-    pools: {
-      count: pools.length,
-      allocations: pools.reduce((count, pool) => count + pool.allocations.length, 0),
-      items: pools.map((pool) => ({
-        id: pool.id,
-        name: pool.name,
-        connectionIds: pool.connectionIds,
-        allocationCount: pool.allocations.length,
       })),
     },
     quotaMonitoring: {

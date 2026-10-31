@@ -166,7 +166,6 @@ import { RequestTelemetry, recordTelemetry } from "../../shared/utils/requestTel
 import { generateRequestId } from "../../shared/utils/requestId";
 import { logAuditEvent } from "../../lib/compliance/index";
 import { enforceApiKeyPolicy } from "../../shared/utils/apiKeyPolicy";
-import { rejectIfMeteredBudgetExceeded } from "@/lib/usage/meteredBudgetPolicy";
 import { hasProviderQuotaBypassScope } from "../../shared/constants/apiKeyPolicyScopes";
 import { isMicrosoftDesignerWebProviderRetiredError } from "../../shared/constants/designerWebRetirement";
 import { cloneBoundedForLog } from "@omniroute/open-sse/utils/requestLogger.ts";
@@ -216,7 +215,6 @@ import {
   shouldRetrySameAccountTransport,
   sameAccountTransportRetryDelayMs,
 } from "../services/sameAccountTransportRetry";
-import { constrainConnectionsToQuota, resolveQuotaKeyScope } from "../../lib/quota/quotaKey";
 import { checkConnectionCapacity } from "../utils/backpressure";
 import {
   buildManagedLeaseErrorResponse,
@@ -288,7 +286,6 @@ let combosCachePromise: Promise<ComboLike[]> | null = null;
 let combosCacheTs = 0;
 let combosCacheVersionSnapshot = -1;
 const COMBOS_CACHE_TTL_MS = 10_000;
-const DEFER_METERED_BUDGET = { meteredBudget: "defer-to-candidate" } as const;
 
 /**
  * #10225 — resolve whether this request's combo preflight should DEFER its hard
@@ -782,9 +779,9 @@ async function handleChatImplementation(
     touchSession(sessionId);
   }
 
-  // Pipeline: API key policy enforcement (model restrictions + budget limits)
+  // Pipeline: API key policy enforcement (model restrictions + usage limits)
   telemetry.startPhase("policy");
-  const policy = await enforceApiKeyPolicy(request, modelStr, DEFER_METERED_BUDGET);
+  const policy = await enforceApiKeyPolicy(request, modelStr);
   if (policy.rejection) {
     log.warn(
       "POLICY",
@@ -1154,16 +1151,7 @@ async function handleChatImplementation(
       const githubGate = await ghComboGate(comboPreselectedCredentials, provider, resolvedModel);
       if (githubGate !== null) return githubGate;
       const restrictions = resolveConnectionRestrictions(apiKeyInfo, target, true);
-      let allowedConnections = restrictions.allowedConnections;
-
-      // A4: quota-exclusive keys must only use the pool's connection(s).
-      if (apiKeyInfo?.allowedQuotas && apiKeyInfo.allowedQuotas.length > 0) {
-        const quotaScope = await resolveQuotaKeyScope(apiKeyInfo.allowedQuotas);
-        allowedConnections = constrainConnectionsToQuota(
-          allowedConnections ?? [],
-          quotaScope.connectionIds
-        );
-      }
+      const allowedConnections = restrictions.allowedConnections;
 
       if (Array.isArray(allowedConnections) && allowedConnections.length === 0) {
         return false;
@@ -1655,8 +1643,6 @@ async function handleSingleModelChat(
   const modelPolicyRejection = await resolvedModelGate([`${provider}/${model}`]);
   if (modelPolicyRejection) return modelPolicyRejection;
   const forceLiveComboTest = runtimeOptions.forceLiveComboTest === true;
-  const budgetRejection = rejectIfMeteredBudgetExceeded(apiKeyInfo?.id, provider, modelStr);
-  if (budgetRejection) return budgetRejection;
   const bypassProviderQuotaPolicy = hasProviderQuotaBypassScope(apiKeyInfo?.scopes);
   const forcedConnectionId =
     typeof runtimeOptions.forcedConnectionId === "string"
@@ -1665,16 +1651,7 @@ async function handleSingleModelChat(
   const hasForcedConnection = forcedConnectionId.length > 0;
   const pinTarget = { ...runtimeOptions, connectionId: forcedConnectionId };
   const restrictions = resolveConnectionRestrictions(apiKeyInfo, pinTarget, isCombo);
-  let effectiveAllowedConnections = restrictions.allowedConnections;
-
-  // A4: quota-exclusive keys must only use the pool's connection(s).
-  if (apiKeyInfo?.allowedQuotas && apiKeyInfo.allowedQuotas.length > 0) {
-    const quotaScope = await resolveQuotaKeyScope(apiKeyInfo.allowedQuotas);
-    effectiveAllowedConnections = constrainConnectionsToQuota(
-      effectiveAllowedConnections ?? [],
-      quotaScope.connectionIds
-    );
-  }
+  const effectiveAllowedConnections = restrictions.allowedConnections;
 
   const bypassReason = forceLiveComboTest
     ? "combo live test"
@@ -2253,18 +2230,6 @@ async function handleSingleModelChat(
         (result.errorType === "lease_error" || String(result.errorCode || "").startsWith("LEASE_"))
       ) {
         return result.response;
-      }
-
-      // #17132: a Quota Share absolute-cap block is a decision about THIS API key,
-      // never about the shared connection. The pre-hook already finalized the
-      // pending-request slot and built the clean 429 (operator reason + retry hint)
-      // — return it untouched. Letting the 429 account-fallback machinery below run
-      // on this result would cool down the shared connection (hurting the other
-      // pool keys), poison the quota cache and trip the provider breaker over a
-      // per-key policy decision — before the fix it even crashed on
-      // `result.response.headers` (bare Response) and returned a 500/502.
-      if (result.errorCode === "quota_share_blocked") {
-        return withSelectedConnectionHeader(result.response, credentials.connectionId);
       }
 
       // Missing Cloud Code project assignment is configuration, not a transient failure.

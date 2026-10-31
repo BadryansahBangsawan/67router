@@ -172,13 +172,6 @@
       "period": "Zaman aralığı: 1d|7d|30d|90d|ytd|all (varsayılan: 30d)",
       "provider": "Sağlayıcı ID'sine göre filtrele"
     },
-    "budget": {
-      "description": "Maliyet bütçelerini yönet",
-      "set": {
-        "scope": "Bütçe kapsamı (varsayılan: global)",
-        "period": "Bütçe dönemi: daily|weekly|monthly (varsayılan: monthly)"
-      }
-    },
     "quota": {
       "description": "Sağlayıcı kota kullanımını göster",
       "provider": "Sağlayıcı ID'sine göre filtrele",

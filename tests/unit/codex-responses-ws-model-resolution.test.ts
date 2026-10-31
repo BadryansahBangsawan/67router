@@ -61,14 +61,17 @@ test("genuinely non-codex model stays non-codex (bridge then rejects it)", async
   assert.notEqual(info.provider, "codex");
 });
 
-test("quota-shared model id unwraps provider and model directly", async () => {
+test("qtSd/ ids are no longer unwrapped: they resolve like any prefixed id", async () => {
+  // Quota Share was removed, so resolveCodexWsModelInfo has no qtSd/ special case.
+  // A leftover "qtSd/..." id goes through the resolver once and is returned as-is;
+  // the bridge then rejects the non-codex provider.
   let calls = 0;
   const resolver: ModelResolver = async (m) => {
     calls += 1;
     return { provider: "qtSd", model: m };
   };
   const info = await resolveCodexWsModelInfo("qtSd/omni/codex/gpt-5.6-luna", resolver);
-  assert.equal(info.provider, "codex");
-  assert.equal(info.model, "gpt-5.6-luna");
-  assert.equal(calls, 0, "should unwrap quota model without calling resolver");
+  assert.equal(info.provider, "qtSd");
+  assert.notEqual(info.provider, "codex");
+  assert.equal(calls, 1, "prefixed id must be resolved exactly once");
 });

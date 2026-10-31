@@ -39,7 +39,7 @@ test.after(async () => {
   await cleanupTempDataDir(TEST_DATA_DIR);
 });
 
-test("Codex provider window costs use the weekly reset window and API key USD limit", async () => {
+test("Codex provider window costs use the weekly reset window", async () => {
   await localDb.updatePricing({
     codex: {
       "gpt-5.5": { input: 10, output: 20, cached: 1, cache_creation: 5, reasoning: 30 },
@@ -47,13 +47,6 @@ test("Codex provider window costs use the weekly reset window and API key USD li
   });
 
   const key = await apiKeys.createApiKey("Codex Key", "machine-codex-window");
-  costRules.setBudget(key.id, {
-    dailyLimitUsd: 0,
-    weeklyLimitUsd: 40,
-    resetInterval: "weekly",
-    resetTime: "00:00",
-  });
-
   providerLimits.setProviderLimitsCache("codex-conn", {
     quotas: {
       "session (5h)": {
@@ -108,8 +101,6 @@ test("Codex provider window costs use the weekly reset window and API key USD li
   assert.equal(result.rows.length, 1);
   assert.equal(result.rows[0].apiKeyName, "Codex Key");
   assert.equal(result.rows[0].costUsd, 10);
-  assert.equal(result.rows[0].limitUsd, 40);
-  assert.equal(result.rows[0].limitUsedPercent, 25);
 });
 
 test("Claude provider window costs split spending across API keys from the current weekly window", async () => {
@@ -121,13 +112,6 @@ test("Claude provider window costs split spending across API keys from the curre
 
   const heavyKey = await apiKeys.createApiKey("Claude Heavy", "machine-claude-heavy");
   const lightKey = await apiKeys.createApiKey("Claude Light", "machine-claude-light");
-  costRules.setBudget(heavyKey.id, {
-    dailyLimitUsd: 0,
-    weeklyLimitUsd: 20,
-    resetInterval: "weekly",
-    resetTime: "00:00",
-  });
-
   providerLimits.setProviderLimitsCache("claude-conn", {
     quotas: {
       "Session (5hr)": {
@@ -188,11 +172,8 @@ test("Claude provider window costs split spending across API keys from the curre
   assert.equal(result.rows.length, 2);
   assert.equal(result.rows[0].apiKeyName, "Claude Heavy");
   assert.equal(result.rows[0].costUsd, 3);
-  assert.equal(result.rows[0].limitUsd, 20);
-  assert.equal(result.rows[0].limitUsedPercent, 15);
   assert.equal(result.rows[1].apiKeyName, "Claude Light");
   assert.equal(result.rows[1].costUsd, 1.5);
-  assert.equal(result.rows[1].limitUsd, null);
 });
 
 test("provider window costs use the recorded reset event as the cost cutoff", async () => {

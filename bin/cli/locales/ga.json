@@ -172,13 +172,6 @@
       "period": "Raithne ama: 1d|7d|30d|90d|ytd|all (réamhshocrú: 30d)",
       "provider": "Scag de réir ID Soláthraí"
     },
-    "budget": {
-      "description": "Bainistigh buiséid costais",
-      "set": {
-        "scope": "Scóp an bhuiséid (réamhshocrú: domhanda)",
-        "period": "Tréimhse buiséid: laethúil|seachtúil|míosúil (réamhshocrú: míosúil)"
-      }
-    },
     "quota": {
       "description": "Taispeáin úsáid cuota an tsoláthraí",
       "provider": "Scag de réir aitheantóra soláthraí",

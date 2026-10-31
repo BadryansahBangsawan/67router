@@ -172,13 +172,6 @@
       "period": "ช่วงเวลา: 1d|7d|30d|90d|ytd|all (ค่าเริ่มต้น: 30d)",
       "provider": "กรองตาม ID ผู้ให้บริการ"
     },
-    "budget": {
-      "description": "จัดการงบประมาณค่าใช้จ่าย",
-      "set": {
-        "scope": "ขอบเขตงบประมาณ (ค่าเริ่มต้น: global)",
-        "period": "รอบงบประมาณ: daily|weekly|monthly (ค่าเริ่มต้น: monthly)"
-      }
-    },
     "quota": {
       "description": "แสดงการใช้โควตาของผู้ให้บริการ",
       "provider": "กรองตาม ID ผู้ให้บริการ",

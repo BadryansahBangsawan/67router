@@ -117,7 +117,6 @@ interface ApiKey {
   usageLimitEnabled?: boolean;
   dailyUsageLimitUsd?: number | null;
   weeklyUsageLimitUsd?: number | null;
-  allowedQuotas?: string[] | null;
   createdAt: string;
 }
 
@@ -160,7 +159,6 @@ export default function ApiManagerPageClient() {
   const [activeOnly, setActiveOnly] = useState(false);
   const [statusFilter, setStatusFilter] = useState<KeyStatus | null>(null);
   const [typeFilter, setTypeFilter] = useState<KeyType | null>(null);
-  const [quotaPoolGroup, setQuotaPoolGroup] = useState<Record<string, string>>({});
 
   const { copied, copy } = useCopyToClipboard();
 
@@ -194,44 +192,6 @@ export default function ApiManagerPageClient() {
   useEffect(() => {
     writeActiveOnlyPreference(activeOnly);
   }, [activeOnly]);
-
-  useEffect(() => {
-    let cancelled = false;
-    const loadQuotaGroups = async () => {
-      try {
-        const [poolsRes, groupsRes] = await Promise.all([
-          fetch("/api/quota/pools"),
-          fetch("/api/quota/groups"),
-        ]);
-        if (!poolsRes.ok || !groupsRes.ok) return;
-        const poolsData = await poolsRes.json();
-        const groupsData = await groupsRes.json();
-        const pools: Array<{ id: string; groupId: string }> = Array.isArray(poolsData.pools)
-          ? poolsData.pools
-          : [];
-        const groups: Array<{ id: string; name: string }> = Array.isArray(groupsData.groups)
-          ? groupsData.groups
-          : [];
-        const groupNameById: Record<string, string> = {};
-        for (const g of groups) {
-          groupNameById[g.id] = g.name;
-        }
-        const map: Record<string, string> = {};
-        for (const p of pools) {
-          if (groupNameById[p.groupId]) {
-            map[p.id] = groupNameById[p.groupId];
-          }
-        }
-        if (!cancelled) setQuotaPoolGroup(map);
-      } catch {
-        // fail open — quota group chips simply won't render
-      }
-    };
-    loadQuotaGroups();
-    return () => {
-      cancelled = true;
-    };
-  }, []);
 
   useEffect(() => {
     if (!showAddModal || !nameError) return;
@@ -395,25 +355,6 @@ export default function ApiManagerPageClient() {
 
   const isFiltered =
     activeOnly || statusFilter !== null || typeFilter !== null || searchQuery.trim() !== "";
-
-  const isQuotaKey = (k: ApiKey) => Array.isArray(k.allowedQuotas) && k.allowedQuotas.length > 0;
-
-  const quotaKeys = filteredKeys.filter(isQuotaKey);
-  const normalKeys = filteredKeys.filter((k) => !isQuotaKey(k));
-
-  const quotaGroupsForKey = (k: ApiKey): string[] => {
-    if (!Array.isArray(k.allowedQuotas)) return [];
-    const seen = new Set<string>();
-    const result: string[] = [];
-    for (const poolId of k.allowedQuotas) {
-      const groupName = quotaPoolGroup[poolId];
-      if (groupName && !seen.has(groupName)) {
-        seen.add(groupName);
-        result.push(groupName);
-      }
-    }
-    return result;
-  };
 
   const handleClearFilters = () => {
     setSearchQuery("");
@@ -765,10 +706,6 @@ export default function ApiManagerPageClient() {
               const activeSessions = sessionCounts[key.id] || 0;
               const deviceCount = deviceCounts[key.id] || 0;
               const hasSchedule = key.accessSchedule?.enabled === true;
-              const keyIsQuota = isQuotaKey(key);
-              const groups = quotaGroupsForKey(key);
-              const visibleGroups = groups.slice(0, 3);
-              const extraGroupCount = groups.length - visibleGroups.length;
               return (
                 <TableRow key={key.id} className="group">
                   <TableCell className="max-w-48">
@@ -822,27 +759,6 @@ export default function ApiManagerPageClient() {
                   </TableCell>
                   <TableCell>
                     <div className="flex flex-col items-start gap-1">
-                      {/* QUOTA differentiation chips — prepended before existing badges */}
-                      {keyIsQuota && (
-                        <span className="inline-flex items-center gap-1 px-2 py-0.5 rounded-md border border-border bg-bg-subtle text-text-secondary text-[11px] font-medium">
-                          {t("quotaModeOnly")}
-                        </span>
-                      )}
-                      {keyIsQuota &&
-                        visibleGroups.map((groupName) => (
-                          <span
-                            key={groupName}
-                            className="inline-flex items-center gap-1 px-2 py-0.5 rounded-md border border-border bg-bg-subtle text-text-secondary text-[11px] font-medium truncate max-w-full"
-                          >
-                            {groupName}
-                          </span>
-                        ))}
-                      {keyIsQuota && extraGroupCount > 0 && (
-                        <span className="inline-flex items-center px-2 py-0.5 rounded-md border border-border bg-bg-subtle text-text-secondary text-[11px] font-medium">
-                          +{extraGroupCount}
-                        </span>
-                      )}
-                      {/* Existing badges */}
                       {isModelRestricted ? (
                         <Link
                           href={`/dashboard/api-manager/${encodeURIComponent(key.id)}/access?tab=models`}
@@ -1054,7 +970,7 @@ export default function ApiManagerPageClient() {
 
             return (
               <div className="flex flex-col gap-4">
-                {normalKeys.length > 0 && (
+                {filteredKeys.length > 0 && (
                   <div>
                     {/* Normal keys section heading */}
                     <div className="flex items-center gap-2 mb-2">
@@ -1063,33 +979,12 @@ export default function ApiManagerPageClient() {
                         {t("normalKeysSection")}
                       </span>
                       <span className="inline-flex items-center justify-center px-2 py-0.5 rounded-md bg-bg-subtle border border-border text-[11px] font-medium tabular-nums text-text-muted">
-                        {normalKeys.length}
+                        {filteredKeys.length}
                       </span>
                     </div>
                     <Table scrollbarLabel={t("normalKeysSection")}>
                       {tableHeader}
-                      <TableBody>{normalKeys.map(renderKeyRow)}</TableBody>
-                    </Table>
-                  </div>
-                )}
-                {quotaKeys.length > 0 && (
-                  <div>
-                    {/* Quota keys section heading */}
-                    <div className="flex items-center gap-2 mb-2">
-                      <Icon name="toll" className="text-base text-text-muted" />
-                      <span className="text-sm font-medium text-text-main">
-                        {t("quotaKeysSection")}
-                      </span>
-                      <span className="inline-flex items-center justify-center px-2 py-0.5 rounded-md bg-bg-subtle border border-border text-[11px] font-medium tabular-nums text-text-muted">
-                        {quotaKeys.length}
-                      </span>
-                      <span className="inline-flex items-center px-2 py-0.5 rounded-md border border-border bg-bg-subtle text-text-secondary text-[11px] font-medium">
-                        {t("quotaPill")}
-                      </span>
-                    </div>
-                    <Table scrollbarLabel={t("quotaKeysSection")}>
-                      {tableHeader}
-                      <TableBody>{quotaKeys.map(renderKeyRow)}</TableBody>
+                      <TableBody>{filteredKeys.map(renderKeyRow)}</TableBody>
                     </Table>
                   </div>
                 )}

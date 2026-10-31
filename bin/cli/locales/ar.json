@@ -172,13 +172,6 @@
       "period": "النطاق الزمني: 1d|7d|30d|90d|ytd|all (الافتراضي: 30d)",
       "provider": "التصفية حسب معرّف المزوّد"
     },
-    "budget": {
-      "description": "إدارة ميزانيات التكلفة",
-      "set": {
-        "scope": "نطاق الميزانية (الافتراضي: global)",
-        "period": "فترة الميزانية: daily|weekly|monthly (الافتراضي: monthly)"
-      }
-    },
     "quota": {
       "description": "عرض استخدام حصة المزوّد",
       "provider": "التصفية حسب معرّف المزوّد",

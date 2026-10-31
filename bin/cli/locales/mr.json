@@ -172,13 +172,6 @@
       "period": "कालावधी: 1d|7d|30d|90d|ytd|all (डीफॉल्ट: 30d)",
       "provider": "प्रोव्हायडर ID नुसार फिल्टर करा"
     },
-    "budget": {
-      "description": "खर्चाचे बजेट व्यवस्थापित करा",
-      "set": {
-        "scope": "बजेटची व्याप्ती (डीफॉल्ट: global)",
-        "period": "बजेट कालावधी: daily|weekly|monthly (डीफॉल्ट: monthly)"
-      }
-    },
     "quota": {
       "description": "प्रोव्हायडर कोटाचा वापर दाखवा",
       "provider": "प्रोव्हायडर ID नुसार फिल्टर करा",

@@ -16,11 +16,7 @@ import { buildTargetTimeoutRunner } from "./combo/targetTimeoutRunner.ts";
 import { costKey, resolvePoolCosts } from "./combo/candidateCost.ts";
 import { getComboMetrics } from "./comboMetrics.ts";
 import { qualityScoreFor } from "./routing/index.ts";
-import {
-  resolveComboQueueDepth,
-  isComboCooldownWaitEligible,
-  resolveComboTargetTimeoutMsForCombo,
-} from "./comboConfig.ts";
+import { isComboCooldownWaitEligible, resolveComboTargetTimeoutMsForCombo } from "./comboConfig.ts";
 
 import { getHiddenModelsByProvider } from "@/models";
 import { getHiddenChatModels } from "../../src/lib/hiddenChatModels";
@@ -39,9 +35,6 @@ import { projectAccountTier, type ProviderCandidate } from "./autoCombo/scoring.
 import { getSessionConnection } from "./sessionManager.ts";
 import { getOAuthSessionAvailability } from "./oauthSessionOccupancy.ts";
 import { clearStickyBinding, peekStickyConnectionId } from "./combo/sessionStickiness.ts";
-
-import { lookupPositiveCap } from "./combo/concurrencyCaps.ts";
-import { acquireQuotaShareConcurrencySlot } from "./combo/quotaShareConcurrency.ts";
 
 import { resolveConnectionTimeoutMs } from "../handlers/chatCore/upstreamTimeouts.ts";
 import { getCachedProviderConnectionById } from "../../src/lib/db/readCache.ts";
@@ -1196,34 +1189,11 @@ async function handleComboChatInner({
     compatRejectedTargets,
   };
 
-  // FASE 2.1: acquire the per-connection concurrency slot for the selected
-  // quota-share target once, around the whole dispatch (including any
-  // cooldown-aware re-dispatch), so concurrent requests to one subscription
-  // account are serialized through the connection's max_concurrent ceiling. The
-  // cap is read fresh from the selected connection; a null cap (no limit) or a
-  // saturated queue is a no-op (fail-open). Released in the finally below.
-  let quotaShareConcurrencyRelease: (() => void) | null = null;
-  const qsConnectionId = orderedTargets[0]?.connectionId;
-  const qsLimitEnabled = resilienceSettings.quotaShareConcurrencyLimit.enabled;
-  if (getStrategyTraits(strategy).quotaShareConcurrencySlot && qsLimitEnabled && qsConnectionId) {
-    const qsCap = await lookupPositiveCap(qsConnectionId);
-    quotaShareConcurrencyRelease = await acquireQuotaShareConcurrencySlot(
-      orderedTargets[0],
-      qsCap,
-      {
-        queueTimeoutMs: config.queueTimeoutMs ?? 30000,
-        maxQueueSize: resolveComboQueueDepth(config),
-      },
-      log
-    );
-  }
-
   try {
     return await dispatchWithCooldownRetry({ state, deps, extra });
   } finally {
-    quotaShareConcurrencyRelease?.();
-    // #11371: release the in-flight slot quota-share ordering reserved for its
-    // winner — the counter must not leak monotonically upward across requests.
+    // #11371: release the in-flight slot the ordering reserved for its winner
+    // (quota-weighted) — the counter must not leak monotonically upward across requests.
     targetResolution.quotaShareRelease?.();
     // G2: Clean up candidate registry to prevent unbounded memory growth.
     _unregisterExecutionCandidates(_registeredExecutionKeys);

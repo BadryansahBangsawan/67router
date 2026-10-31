@@ -16,8 +16,6 @@
   "compression-studio.spec.ts": 55,
   "error-pages.spec.ts": 101,
   "group-b-activity-feed.spec.ts": 96,
-  "group-b-quota-plans-config.spec.ts": 154,
-  "group-b-quota-share-pools.spec.ts": 98,
   "group-b-redirect-logs-activity.spec.ts": 56,
   "memory-engine.spec.ts": 607,
   "memory-qdrant-routes.spec.ts": 360,

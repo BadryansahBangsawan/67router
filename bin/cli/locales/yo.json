@@ -172,13 +172,6 @@
       "period": "Àkókò: 1d|7d|30d|90d|ytd|all (àìyípadà: 30d)",
       "provider": "Ṣe àlẹ̀mọ́ nípasẹ̀ ID olùpèsè"
     },
-    "budget": {
-      "description": "Ṣàkóso àwọn ètò ìnáwó",
-      "set": {
-        "scope": "Ààlà ètò ìnáwó (àìyípadà: global)",
-        "period": "Àkókò ètò ìnáwó: daily|weekly|monthly (àìyípadà: monthly)"
-      }
-    },
     "quota": {
       "description": "Ṣàfihàn lílò ìwọ̀n olùpèsè",
       "provider": "Ṣe àlẹ̀mọ́ nípasẹ̀ ID olùpèsè",

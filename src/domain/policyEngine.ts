@@ -2,14 +2,13 @@
  * Policy Engine — FASE-06 Architecture Refactoring
  *
  * Centralized policy evaluation that combines domain decisions from
- * fallback, cost, lockout, and circuit-breaker modules into a single
+ * fallback, lockout, and circuit-breaker modules into a single
  * verdict before forwarding a request to a provider.
  *
  * @module domain/policyEngine
  */
 
 import { checkLockout } from "./lockoutPolicy";
-import { checkBudget } from "./costRules";
 import { resolveFallbackChain } from "./fallbackPolicy";
 
 interface PolicyRequest {
@@ -45,7 +44,7 @@ interface Policy {
 }
 
 export function evaluateRequest(request: PolicyRequest): PolicyVerdict {
-  const { model, apiKeyId, clientIp } = request;
+  const { model, clientIp } = request;
 
   // ── 1. Lockout Policy ──────────────────────────────
   if (clientIp) {
@@ -60,20 +59,7 @@ export function evaluateRequest(request: PolicyRequest): PolicyVerdict {
     }
   }
 
-  // ── 2. Budget Policy ───────────────────────────────
-  if (apiKeyId) {
-    const budget = checkBudget(apiKeyId);
-    if (budget && !budget.allowed) {
-      return {
-        allowed: false,
-        reason: `Budget exceeded: ${budget.reason || "daily limit reached"}`,
-        adjustments: {},
-        policyPhase: "budget",
-      };
-    }
-  }
-
-  // ── 3. Fallback Chain Resolution ───────────────────
+  // ── 2. Fallback Chain Resolution ───────────────────
   const fallbackChain = resolveFallbackChain(model);
 
   return {

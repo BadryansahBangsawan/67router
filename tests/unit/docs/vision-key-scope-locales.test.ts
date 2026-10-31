@@ -28,7 +28,6 @@ test("vision bridge key scope is translated without certifying stale locale cont
     const section = text.slice(start, end);
     for (const literal of [
       "allowedConnections",
-      "allowedQuotas",
       "allowedModels",
       "blockedModels",
       'modelAccessMode: "restricted"',

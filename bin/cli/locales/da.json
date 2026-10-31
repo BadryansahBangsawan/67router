@@ -172,13 +172,6 @@
       "period": "Tidsinterval: 1d|7d|30d|90d|ytd|all (standard: 30d)",
       "provider": "Filtrer efter udbyder-id"
     },
-    "budget": {
-      "description": "Administrer omkostningsbudgetter",
-      "set": {
-        "scope": "Budgetomfang (standard: globalt)",
-        "period": "Budgetperiode: daily|weekly|monthly (standard: monthly)"
-      }
-    },
     "quota": {
       "description": "Vis udbyderens kvoteforbrug",
       "provider": "Filtrer efter udbyder-id",

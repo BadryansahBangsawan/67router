@@ -36,8 +36,6 @@
 - [`GET /api/settings/thinking-budget`](#get-apisettingsthinking-budget)
 - [`PUT /api/settings/thinking-budget`](#put-apisettingsthinking-budget)
 - [`GET /api/tags`](#get-apitags)
-- [`GET /api/settings/quota-store`](#get-apisettingsquota-store)
-- [`PUT /api/settings/quota-store`](#put-apisettingsquota-store)
 - [`POST /api/settings/purge-usage-history`](#post-apisettingspurge-usage-history)
 - [`GET /api/settings/authz-inventory`](#get-apisettingsauthz-inventory)
 - [`GET /api/settings/auto-disable-accounts`](#get-apisettingsauto-disable-accounts)
@@ -514,28 +512,6 @@ Returns models in Ollama /api/tags format for Ollama client compatibility
 ```bash
 curl http://localhost:20128/api/tags \
   -H "Authorization: Bearer $OMNIROUTE_TOKEN"
-```
-
-### GET /api/settings/quota-store
-
-Get current quota store driver settings
-
-Redis URL is masked in the response (shows only scheme+host).
-
-```bash
-curl http://localhost:20128/api/settings/quota-store \
-  -H "Authorization: Bearer $OMNIROUTE_TOKEN"
-```
-
-### PUT /api/settings/quota-store
-
-Update quota store driver settings
-
-```bash
-curl -X PUT http://localhost:20128/api/settings/quota-store \
-  -H "Authorization: Bearer $OMNIROUTE_TOKEN" \
-  -H "Content-Type: application/json" \
-  -d '{}'
 ```
 
 ### POST /api/settings/purge-usage-history

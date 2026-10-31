@@ -32,38 +32,12 @@ omniroute quota
 
 ### `quota status`
 
-Show truthful OmniRoute gateway, quota, pool, and circuit state
+Show truthful OmniRoute gateway, quota, and circuit state
 
 **Example:**
 
 ```bash
 omniroute quota status
-```
-
-### `quota preview`
-
-Preview allocation enforcement without an upstream request
-
-**Flags:**
-
-- `--api-key-id <id>`
-- `--pool-id <id>`
-- `--tokens <n>`
-
-**Example:**
-
-```bash
-omniroute quota preview
-```
-
-### `quota ensure <json>`
-
-Idempotently create or update a quota pool from a JSON object
-
-**Example:**
-
-```bash
-omniroute quota ensure <json>
 ```
 
 ### `resilience`

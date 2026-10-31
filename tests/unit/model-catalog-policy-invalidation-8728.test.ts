@@ -16,8 +16,6 @@ const readCache = await import("../../src/lib/db/readCache.ts");
 const apiKeys = await import("../../src/lib/db/apiKeys.ts");
 const apiKeyGroups = await import("../../src/lib/db/apiKeyGroups.ts");
 const models = await import("../../src/lib/db/models.ts");
-const quotaPools = await import("../../src/lib/db/quotaPools.ts");
-const quotaGroups = await import("../../src/lib/db/quotaGroups.ts");
 
 async function resetStorage() {
   core.resetDbInstance();
@@ -70,9 +68,6 @@ test("updateApiKeyPermissions increments only on catalog-affecting fields", asyn
   assert.equal(catalogVersion(), ++version);
 
   await apiKeys.updateApiKeyPermissions(created.id, { blockedModels: ["openai/sandbox/*"] });
-  assert.equal(catalogVersion(), ++version);
-
-  await apiKeys.updateApiKeyPermissions(created.id, { allowedQuotas: ["q-1", "q-2"] });
   assert.equal(catalogVersion(), ++version);
 
   await apiKeys.updateApiKeyPermissions(created.id, { disableNonPublicModels: true });
@@ -141,46 +136,4 @@ test("API-key group membership only invalidates model catalog on real membership
   version = catalogVersion();
   assert.equal(apiKeyGroups.removeKeyFromGroup(key.id, group.id), false);
   assert.equal(catalogVersion(), version);
-});
-
-test("quota pools and quota-group renames signal model-catalog invalidation as expected", async () => {
-  let version = catalogVersion();
-  const pool = quotaPools.createPool({
-    connectionId: "conn-quota",
-    name: "Quota Pool",
-    groupId: "group-demo",
-  });
-  assert.equal(catalogVersion(), version + 1);
-
-  const group = quotaGroups.createGroup("Quota Group");
-  assert.equal(catalogVersion(), version + 1, "creating quota groups does not invalidate catalog");
-
-  version = catalogVersion();
-  const renamed = quotaGroups.renameGroup(group.id, "Renamed Quota Group");
-  assert.equal(renamed, true);
-  assert.equal(catalogVersion(), version + 1, "quota-group rename invalidates catalog");
-
-  version = catalogVersion();
-  assert.notEqual(quotaPools.updatePool(pool.id, { name: "Quota Pool Updated" }), null);
-  assert.equal(catalogVersion(), version + 1);
-
-  version = catalogVersion();
-  // deletePool became async in #8906 (managed-combo cleanup on pool deletion).
-  assert.equal(await quotaPools.deletePool(pool.id), true);
-  assert.equal(catalogVersion(), version + 1);
-});
-
-test("deletePool clears primed key metadata after allowed_quotas rewrite", async () => {
-  const pool = quotaPools.createPool({ connectionId: "conn-meta", name: "Meta Pool" });
-  const key = await apiKeys.createApiKey("Pool Metadata Key", "machine-cpi-4");
-
-  await apiKeys.updateApiKeyPermissions(key.id, { allowedQuotas: [pool.id] });
-  const before = await apiKeys.getApiKeyMetadata(key.key);
-  assert.deepEqual(before?.allowedQuotas, [pool.id]);
-
-  // deletePool became async in #8906 (managed-combo cleanup on pool deletion).
-  assert.equal(await quotaPools.deletePool(pool.id), true);
-
-  const after = await apiKeys.getApiKeyMetadata(key.key);
-  assert.deepEqual(after?.allowedQuotas, [], "allowed_quotas cache must reflect direct rewrite");
 });

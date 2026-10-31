@@ -172,13 +172,6 @@
       "period": "Časovno obdobje: 1d|7d|30d|90d|ytd|all (privzeto: 30d)",
       "provider": "Filtrirajte po ID-ju ponudnika"
     },
-    "budget": {
-      "description": "Upravljajte proračune stroškov",
-      "set": {
-        "scope": "Obseg proračuna (privzeto: global)",
-        "period": "Proračunsko obdobje: daily|weekly|monthly (privzeto: monthly)"
-      }
-    },
     "quota": {
       "description": "Prikažite porabo kvote ponudnika",
       "provider": "Filtrirajte po ID-ju ponudnika",

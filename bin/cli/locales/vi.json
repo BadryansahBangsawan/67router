@@ -172,13 +172,6 @@
       "period": "Khoảng thời gian: 1d|7d|30d|90d|ytd|all (mặc định: 30d)",
       "provider": "Lọc theo ID nhà cung cấp"
     },
-    "budget": {
-      "description": "Quản lý ngân sách chi phí",
-      "set": {
-        "scope": "Phạm vi ngân sách (mặc định: global)",
-        "period": "Chu kỳ ngân sách: daily|weekly|monthly (mặc định: monthly)"
-      }
-    },
     "quota": {
       "description": "Hiển thị mức sử dụng hạn ngạch của nhà cung cấp",
       "provider": "Lọc theo ID nhà cung cấp",

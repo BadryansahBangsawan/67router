@@ -172,13 +172,6 @@
       "period": "Vremenski opseg: 1d|7d|30d|90d|ytd|all (podrazumijevano: 30d)",
       "provider": "Filtriraj prema ID-u provajdera"
     },
-    "budget": {
-      "description": "Upravljajte budžetima troškova",
-      "set": {
-        "scope": "Opseg budžeta (podrazumijevano: globalno)",
-        "period": "Period budžeta: dnevno|nedeljno|mjesečno (podrazumijevano: mjesečno)"
-      }
-    },
     "quota": {
       "description": "Prikaži potrošnju kvote provajdera",
       "provider": "Filtriraj prema ID-u provajdera",

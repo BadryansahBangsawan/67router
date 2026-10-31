@@ -147,19 +147,23 @@ export function parseAllowedConnections(value: unknown): string[] {
 }
 
 /**
- * Helper function to safely parse allowed_quotas JSON
+ * Whether a persisted `allowed_quotas` value still allocates the key to a Quota
+ * Share pool. Quota Share was removed, so such a key can no longer be held to its
+ * pool; callers refuse it instead of treating it as unrestricted. Anything other
+ * than an empty value or an empty JSON array (including unparseable text) counts
+ * as an allocation, so the check fails closed.
  */
-export function parseAllowedQuotas(value: unknown): string[] {
-  if (!value || typeof value !== "string" || value.trim() === "") {
-    return [];
-  }
+export function hasRetiredQuotaAllocation(value: unknown): boolean {
+  if (value === null || value === undefined) return false;
+  if (Array.isArray(value)) return value.length > 0;
+  if (typeof value !== "string") return true;
+  const trimmed = value.trim();
+  if (trimmed === "") return false;
   try {
-    const parsed = JSON.parse(value);
-    return Array.isArray(parsed)
-      ? parsed.filter((entry): entry is string => typeof entry === "string")
-      : [];
+    const parsed = JSON.parse(trimmed);
+    return !Array.isArray(parsed) || parsed.length > 0;
   } catch {
-    return [];
+    return true;
   }
 }
 

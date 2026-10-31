@@ -172,13 +172,6 @@
       "period": "Vaqt oraligʻi: 1d|7d|30d|90d|ytd|all (standart: 30d)",
       "provider": "Provayder identifikatori boʻyicha filtrlash"
     },
-    "budget": {
-      "description": "Xarajat budjetlarini boshqarish",
-      "set": {
-        "scope": "Budjet qamrovi (standart: global)",
-        "period": "Budjet davri: daily|weekly|monthly (standart: monthly)"
-      }
-    },
     "quota": {
       "description": "Provayder kvotasidan foydalanishni koʻrsatish",
       "provider": "Provayder identifikatori boʻyicha filtrlash",

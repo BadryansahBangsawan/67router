@@ -172,13 +172,6 @@
       "period": "Intervalo de tempo: 1d|7d|30d|90d|ytd|all (predefinição: 30d)",
       "provider": "Filtrar por ID do fornecedor"
     },
-    "budget": {
-      "description": "Gerir orçamentos de custos",
-      "set": {
-        "scope": "Âmbito do orçamento (predefinição: global)",
-        "period": "Período do orçamento: daily|weekly|monthly (predefinição: monthly)"
-      }
-    },
     "quota": {
       "description": "Mostrar a utilização da quota do fornecedor",
       "provider": "Filtrar por ID do fornecedor",

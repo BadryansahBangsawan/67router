@@ -245,8 +245,6 @@ test("public identifier vocabulary preserves current internal machine-readable c
     "missing_project_id",
     "oauth_missing_project_id",
     "gcp_project_required",
-    "QUOTA_ONLY",
-    "QUOTA_NOT_ALLOCATED",
     "cloudflare_challenge",
     "cf_mitigated_challenge",
     "upstream_protocol_error",

@@ -148,67 +148,27 @@ describe("fallbackPolicy persistence", () => {
 // ─── Cost Rules Tests ────────────────────────
 
 describe("costRules persistence", () => {
-  it("should set and check budget", async () => {
-    const { setBudget, getBudget, checkBudget, resetCostData } =
+  it("should record cost and report the daily total", async () => {
+    const { recordCost, getDailyTotal, resetCostData } =
       await import("../../src/domain/costRules.ts");
 
     resetCostData();
 
-    setBudget("key1", { dailyLimitUsd: 10 });
-    const budget = getBudget("key1");
-    assert.equal(budget.dailyLimitUsd, 10);
-    assert.equal(budget.warningThreshold, 0.8);
-
-    const check = checkBudget("key1");
-    assert.ok(check.allowed);
-    assert.equal(check.dailyLimit, 10);
-
-    resetCostData();
-  });
-
-  it("should record cost and check daily total", async () => {
-    const { setBudget, recordCost, getDailyTotal, checkBudget, resetCostData } =
-      await import("../../src/domain/costRules.ts");
-
-    resetCostData();
-
-    setBudget("key2", { dailyLimitUsd: 5 });
     recordCost("key2", 3.5);
     recordCost("key2", 1.0);
 
     const total = getDailyTotal("key2");
     assertAlmostEqual(total, 4.5, 1e-9, `daily total ${total} should equal 4.5 (3.5 + 1.0)`);
 
-    // Should still be allowed
-    const check = checkBudget("key2", 0);
-    assert.ok(check.allowed);
-
-    // Should be denied with additional cost
-    const checkOver = checkBudget("key2", 1.0);
-    assert.ok(!checkOver.allowed);
-
-    resetCostData();
-  });
-
-  it("should return allowed=true when no budget set", async () => {
-    const { checkBudget, resetCostData } = await import("../../src/domain/costRules.ts");
-
-    resetCostData();
-
-    const check = checkBudget("no-budget-key");
-    assert.ok(check.allowed);
-    assert.equal(check.dailyLimit, 0);
-
     resetCostData();
   });
 
   it("should get cost summary", async () => {
-    const { setBudget, recordCost, getCostSummary, resetCostData } =
+    const { recordCost, getCostSummary, resetCostData } =
       await import("../../src/domain/costRules.ts");
 
     resetCostData();
 
-    setBudget("key3", { dailyLimitUsd: 100 });
     recordCost("key3", 1.5);
     recordCost("key3", 2.5);
 
@@ -225,7 +185,6 @@ describe("costRules persistence", () => {
       1e-9,
       `monthlyTotal ${summary.monthlyTotal} should equal 4.0`
     );
-    assert.equal(summary.budget.dailyLimitUsd, 100);
 
     resetCostData();
   });

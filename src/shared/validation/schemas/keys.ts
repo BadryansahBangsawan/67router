@@ -103,24 +103,6 @@ export const setKeyQuotaSchema = z.object({
   monthlyAmountUsd: z.coerce.number().min(0).optional().nullable(),
 });
 
-export const setBudgetSchema = z.object({
-  apiKeyId: z.string().trim().min(1, "apiKeyId is required"),
-  // #3537: a limit of 0 means "no limit for this period" (checkBudget only enforces when
-  // activeLimitUsd > 0). The dashboard sends 0 for unfilled fields, so 0 must be accepted —
-  // `.positive()` (rejects 0) used to 400 any save that left a field blank. Negatives are
-  // still rejected by `.min(0)`.
-  dailyLimitUsd: z.coerce.number().min(0, "dailyLimitUsd must be zero or greater").optional(),
-  weeklyLimitUsd: z.coerce.number().min(0, "weeklyLimitUsd must be zero or greater").optional(),
-  monthlyLimitUsd: z.coerce.number().min(0, "monthlyLimitUsd must be zero or greater").optional(),
-  warningThreshold: z.coerce.number().min(0).max(1).optional(),
-  resetInterval: z.enum(["daily", "weekly", "monthly"]).optional(),
-  resetTime: z
-    .string()
-    .trim()
-    .regex(/^\d{2}:\d{2}$/, "resetTime must be in HH:MM format")
-    .optional(),
-});
-
 export const setTokenLimitSchema = z
   .object({
     id: z.string().trim().min(1).optional(),

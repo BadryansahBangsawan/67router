@@ -172,13 +172,6 @@
       "period": "ਸਮਾਂ-ਸੀਮਾ: 1d|7d|30d|90d|ytd|all (ਡਿਫੌਲਟ: 30d)",
       "provider": "ਪ੍ਰੋਵਾਈਡਰ ID ਮੁਤਾਬਕ ਫ਼ਿਲਟਰ ਕਰੋ"
     },
-    "budget": {
-      "description": "ਲਾਗਤ ਬਜਟਾਂ ਦਾ ਪ੍ਰਬੰਧਨ ਕਰੋ",
-      "set": {
-        "scope": "ਬਜਟ ਦਾ ਦਾਇਰਾ (ਡਿਫੌਲਟ: global)",
-        "period": "ਬਜਟ ਮਿਆਦ: daily|weekly|monthly (ਡਿਫੌਲਟ: monthly)"
-      }
-    },
     "quota": {
       "description": "ਪ੍ਰੋਵਾਈਡਰ ਕੋਟੇ ਦੀ ਵਰਤੋਂ ਦਿਖਾਓ",
       "provider": "ਪ੍ਰੋਵਾਈਡਰ ID ਮੁਤਾਬਕ ਫ਼ਿਲਟਰ ਕਰੋ",

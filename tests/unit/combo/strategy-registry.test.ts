@@ -55,7 +55,6 @@ const LEGACY_DECISIONS: { [K in keyof StrategyTraits]: (s: string) => StrategyTr
       "cache-optimized",
       "headroom",
       "quota-weighted",
-      "quota-share",
     ];
     return (reordering.includes(s) ? s : "declared") as StrategyTraits["ordering"];
   },
@@ -86,11 +85,10 @@ const LEGACY_DECISIONS: { [K in keyof StrategyTraits]: (s: string) => StrategyTr
   preScreensTargets: (s) => s === "priority",
   // targetResolution.ts modelOrderPreservingStrategies (#8370)
   promptCacheAffinityScope: (s) =>
-    ["priority", "weighted", "fill-first", "quota-share"].includes(s) ? "model" : "global",
+    ["priority", "weighted", "fill-first"].includes(s) ? "model" : "global",
   // promptCacheAffinity.ts shouldProtectOriginalFirst (#8370)
   protectsFirstTargetFromAffinity: (s) =>
     s === "auto" ||
-    s === "quota-share" ||
     s === "weighted" ||
     s === "priority" ||
     s === "fill-first" ||
@@ -105,10 +103,7 @@ const LEGACY_DECISIONS: { [K in keyof StrategyTraits]: (s: string) => StrategyTr
   // executeTargetGates.ts quota-exhaustion cutoff (`!== "auto"`)
   appliesQuotaCutoffGate: (s) => s !== "auto",
   // targetResolution.ts in-flight slot transfer
-  inflightReservation: (s) =>
-    s === "quota-weighted" ? "quota-weighted" : s === "quota-share" ? "quota-share" : "none",
-  // combo.ts quotaShareConcurrencyEnabled
-  quotaShareConcurrencySlot: (s) => s === "quota-share",
+  inflightReservation: (s) => (s === "quota-weighted" ? "quota-weighted" : "none"),
   // comboSetup.ts relayConfig + executeTargetAttempt.ts handoff
   contextRelay: (s) => s === "context-relay",
 };

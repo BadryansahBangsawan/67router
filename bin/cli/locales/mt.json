@@ -172,13 +172,6 @@
       "period": "Fuqħin ta' ħin: 1d|7d|30d|90d|ytd|kollu (default: 30d)",
       "provider": "Filtru permezz tal-ID tal-provveditur"
     },
-    "budget": {
-      "description": "Ħarsu baġits ta' spejjez",
-      "set": {
-        "scope": "Skop tal-baġit (default: globali)",
-        "period": "Perjodu tal-baġit: ta' kuljum|ta' ġimgħa|ta' xahar (default: ta' xahar)"
-      }
-    },
     "quota": {
       "description": "Uri użu tal-kwota tal-provveditur",
       "provider": "Filtru permezz tal-ID tal-provveditur",

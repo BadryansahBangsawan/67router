@@ -242,19 +242,6 @@ test("R7c: a pinned combo outside allowedCombos is rejected", async () => {
   assert.equal(policy.rejection.status, 403);
 });
 
-test("R7d: a pinned key with an exhausted budget is still rejected", async () => {
-  const key = await seedKey({ forcedModel: "openai/gpt-4.1" });
-  const meta = await apiKeysDb.getApiKeyMetadata(key.key);
-  costRules.setBudget(meta.id, { dailyLimitUsd: 1, warningThreshold: 0.5 });
-  costRules.recordCost(meta.id, 2);
-
-  const request = chatRequest(key.key);
-  const modelStr = await routedModel(request, { model: "anthropic/claude-sonnet-4" });
-  const policy = await enforceApiKeyPolicy(request, modelStr);
-  assert.ok(policy.rejection, "the pin must not skip the budget check");
-  assert.equal(policy.rejection.status, 429);
-});
-
 test("R8: the catalog lists only the pinned model for a pinned key", async () => {
   const rows = [
     { id: "openai/gpt-4.1", owned_by: "openai" },

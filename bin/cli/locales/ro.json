@@ -172,13 +172,6 @@
       "period": "Interval de timp: 1d|7d|30d|90d|ytd|all (implicit: 30d)",
       "provider": "Filtrează după ID-ul furnizorului"
     },
-    "budget": {
-      "description": "Gestionează bugetele de costuri",
-      "set": {
-        "scope": "Domeniul bugetului (implicit: global)",
-        "period": "Perioada bugetului: daily|weekly|monthly (implicit: monthly)"
-      }
-    },
     "quota": {
       "description": "Afișează utilizarea cotei furnizorului",
       "provider": "Filtrează după ID-ul furnizorului",

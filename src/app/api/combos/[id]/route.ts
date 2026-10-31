@@ -11,7 +11,6 @@ import { updateComboSchema } from "@/shared/validation/schemas";
 import { requiresQuotaOnlyComboRefExecute } from "@/shared/validation/schemas/combo";
 import { isValidationFailure, validateBody } from "@/shared/validation/helpers";
 import { requireManagementAuth } from "@/lib/api/requireManagementAuth";
-import { QUOTA_MODEL_PREFIX } from "@/lib/quota/quotaModelNaming";
 import { comboErrorResponse } from "@/lib/api/comboErrorResponse";
 import { ComboInvariantError } from "@/lib/combos/invariants";
 import { buildComboNameCollisionWarning } from "@/lib/combos/modelNameCollision";
@@ -92,14 +91,6 @@ export async function PUT(request, { params }) {
     const currentCombo = (await getComboById(id)) as ComboRowShape | null;
     if (!currentCombo) {
       return comboErrorResponse("COMBO_007", 404, { id }, request);
-    }
-    if (currentCombo.name.startsWith(QUOTA_MODEL_PREFIX)) {
-      return comboErrorResponse(
-        "COMBO_006",
-        409,
-        { name: currentCombo.name, source: "quota-share" },
-        request
-      );
     }
     const allCombos = await getCombos();
 
@@ -273,14 +264,6 @@ export async function DELETE(request, { params }) {
     const existingCombo = (await getComboById(id)) as ComboRowShape | null;
     if (!existingCombo) {
       return comboErrorResponse("COMBO_007", 404, { id }, request);
-    }
-    if (existingCombo.name.startsWith(QUOTA_MODEL_PREFIX)) {
-      return comboErrorResponse(
-        "COMBO_006",
-        409,
-        { name: existingCombo.name, source: "quota-share" },
-        request
-      );
     }
     const success = await deleteCombo(id);
 

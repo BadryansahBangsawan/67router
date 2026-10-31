@@ -15,7 +15,6 @@ const REQUIRED_RESPONSE_FIELDS = [
   "providerBreaker",
   "waitForCooldown",
   "comboCooldownWait",
-  "quotaShareConcurrencyLimit",
   "providerCooldown",
 ];
 
@@ -35,7 +34,7 @@ test("ResilienceTab maps every rendered /api/resilience field into component sta
     );
   }
 
-  for (const field of ["comboCooldownWait", "quotaShareConcurrencyLimit"]) {
+  for (const field of ["comboCooldownWait"]) {
     assert.match(
       source,
       new RegExp(`value=\\{data\\.${field}\\}`),
@@ -47,7 +46,7 @@ test("ResilienceTab maps every rendered /api/resilience field into component sta
 test("/api/resilience returns rendered card fields after GET and PATCH", () => {
   const source = fs.readFileSync(RESILIENCE_ROUTE_PATH, "utf8");
 
-  for (const field of ["comboCooldownWait", "quotaShareConcurrencyLimit", "providerCooldown"]) {
+  for (const field of ["comboCooldownWait", "providerCooldown"]) {
     assert.match(
       source,
       new RegExp(`${field}:\\s*resilience\\.${field}\\b`),

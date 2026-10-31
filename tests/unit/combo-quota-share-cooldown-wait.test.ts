@@ -1,9 +1,9 @@
 /**
- * TDD (integration) — quota-share combo cooldown-aware retry (Variante A),
+ * TDD (integration) — combo cooldown-aware retry (Variante A),
  * exercised through handleComboChat.
  *
  * Scenarios (modelled on model-lockout-max-cooldown.test.ts):
- *  1. strategy="quota-share", single connection, model hits a 429 with a SHORT
+ *  1. strategy="fill-first", single connection, model hits a 429 with a SHORT
  *     retry-after → the combo WAITS out the cooldown and re-dispatches; the 2nd
  *     pass (lock expired) returns 200 instead of propagating the 429.
  *  2. A 403 (quota_exhausted, locked until midnight) → NO wait, the 403/429 is
@@ -113,7 +113,7 @@ test.after(async () => {
   }
 });
 
-test("quota-share: short 429 cooldown → waits and re-dispatches (2nd pass 200)", async () => {
+test("fill-first: short 429 cooldown → waits and re-dispatches (2nd pass 200)", async () => {
   let calls = 0;
   const handleSingleModel = async () => {
     calls += 1;
@@ -125,7 +125,7 @@ test("quota-share: short 429 cooldown → waits and re-dispatches (2nd pass 200)
   const startedAt = Date.now();
   const res = await handleComboChat({
     body: { model: "openai/gpt-4" },
-    combo: comboOf("quota-share"),
+    combo: comboOf("fill-first"),
     handleSingleModel,
     isModelAvailable: async () => true,
     log: createLog() as never,
@@ -149,7 +149,7 @@ test("quota-share: short 429 cooldown → waits and re-dispatches (2nd pass 200)
 // serial dir (--test-concurrency=1) removes the intra-suite contention that
 // caused it.
 
-test("quota-share: client abort during the wait → 499", async () => {
+test("fill-first: client abort during the wait → 499", async () => {
   const controller = new AbortController();
   let calls = 0;
   const handleSingleModel = async () => {
@@ -163,7 +163,7 @@ test("quota-share: client abort during the wait → 499", async () => {
 
   const res = await handleComboChat({
     body: { model: "openai/gpt-4" },
-    combo: comboOf("quota-share"),
+    combo: comboOf("fill-first"),
     handleSingleModel,
     isModelAvailable: async () => true,
     log: createLog() as never,
@@ -175,7 +175,7 @@ test("quota-share: client abort during the wait → 499", async () => {
   assert.equal(res.status, 499, "abort during the cooldown wait must return 499");
 });
 
-test("quota-share with comboCooldownWait disabled → 429 propagated, NO wait", async () => {
+test("fill-first with comboCooldownWait disabled → 429 propagated, NO wait", async () => {
   let calls = 0;
   const handleSingleModel = async () => {
     calls += 1;
@@ -184,7 +184,7 @@ test("quota-share with comboCooldownWait disabled → 429 propagated, NO wait", 
 
   const res = await handleComboChat({
     body: { model: "openai/gpt-4" },
-    combo: comboOf("quota-share"),
+    combo: comboOf("fill-first"),
     handleSingleModel,
     isModelAvailable: async () => true,
     log: createLog() as never,

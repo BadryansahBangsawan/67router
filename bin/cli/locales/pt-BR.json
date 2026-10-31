@@ -172,13 +172,6 @@
       "period": "Período: 1d|7d|30d|90d|ytd|all (padrão: 30d)",
       "provider": "Filtrar por ID de provedor"
     },
-    "budget": {
-      "description": "Gerenciar budgets de custo",
-      "set": {
-        "scope": "Escopo do budget (padrão: global)",
-        "period": "Período do budget: daily|weekly|monthly (padrão: monthly)"
-      }
-    },
     "quota": {
       "description": "Exibir uso de quota dos provedores",
       "provider": "Filtrar por ID de provedor",

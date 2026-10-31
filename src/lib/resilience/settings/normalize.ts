@@ -18,7 +18,6 @@ import type {
   TokenRefreshBreakerSettings,
   WaitForCooldownSettings,
   ComboCooldownWaitSettings,
-  QuotaShareConcurrencyLimitSettings,
   StreamStallCooldownSettings,
   ProviderCooldownSettings,
   QuotaPreflightSettings,
@@ -399,14 +398,6 @@ export function normalizeComboCooldownWaitSettings(
   const enabled = toBoolean(record.enabled, fallback.enabled) && maxWaitMs > 0 && maxAttempts > 0;
 
   return { enabled, maxWaitMs, maxAttempts, budgetMs };
-}
-
-export function normalizeQuotaShareConcurrencyLimitSettings(
-  next: unknown,
-  fallback: QuotaShareConcurrencyLimitSettings
-): QuotaShareConcurrencyLimitSettings {
-  const record = asRecord(next);
-  return { enabled: toBoolean(record.enabled, fallback.enabled) };
 }
 
 export function normalizeStreamStallCooldownSettings(

@@ -48,7 +48,7 @@ Core capabilities:
 - Domain layer: cost rules, fallback policy, lockout policy
 - Context Relay: session handoff summaries for account rotation continuity
 - Domain state persistence (SQLite write-through cache for fallbacks, budgets, lockouts, circuit breakers)
-- Policy engine for centralized request evaluation (lockout → budget → fallback)
+- Policy engine for centralized request evaluation (lockout → fallback)
 - Request telemetry with p50/p95/p99 latency aggregation
 - Combo target telemetry and historical combo target health via `combo_execution_key` / `combo_step_id`
 - Correlation ID (X-Request-Id) for end-to-end tracing
@@ -251,7 +251,6 @@ Management domains:
 - Resilience reset: `src/app/api/resilience/reset` (POST) — reset provider breakers
 - Cache stats: `src/app/api/cache/stats` (GET/DELETE)
 - Telemetry: `src/app/api/telemetry/summary` (GET)
-- Budget: `src/app/api/usage/budget` (GET/POST)
 - Fallback chains: `src/app/api/fallback/chains` (GET/POST/DELETE)
 - Compliance audit: `src/app/api/compliance/audit-log` (GET, with pagination + structured metadata)
 - Policies: `src/app/api/policies` (GET/POST)
@@ -306,11 +305,11 @@ Services (business logic):
 
 Domain layer modules:
 
-- Cost rules/budgets: `src/domain/costRules.ts`
+- Cost rules (recorded spend, cost summaries): `src/domain/costRules.ts`
 - Fallback policy: `src/domain/fallbackPolicy.ts`
 - Combo resolver: `src/domain/comboResolver.ts`
 - Lockout policy: `src/domain/lockoutPolicy.ts`
-- Policy engine: `src/domain/policyEngine.ts` — centralized lockout → budget → fallback evaluation
+- Policy engine: `src/domain/policyEngine.ts` — centralized lockout → fallback evaluation
 - Error codes catalog: `src/shared/constants/errorCodes.ts`
 - Request ID: `src/shared/utils/requestId.ts`
 - Fetch timeout: `src/shared/utils/fetchTimeout.ts`
@@ -404,10 +403,10 @@ For ruleset authoring and threshold tuning, see
 ### D. Domain Layer
 
 The `src/domain/` namespace centralizes policy decisions so route handlers do not
-have to assemble lockout/budget/fallback logic themselves.
+have to assemble lockout/fallback logic themselves.
 
 - Policy engine: `src/domain/policyEngine.ts` — single entry point for
-  pre-execution evaluation (lockout → budget → fallback ordering)
+  pre-execution evaluation (lockout → fallback ordering)
 - Cost rules: `src/domain/costRules.ts`
 - Fallback policy: `src/domain/fallbackPolicy.ts`
 - Lockout policy: `src/domain/lockoutPolicy.ts`

@@ -711,7 +711,6 @@ To **multiply heaps** (independent V8 old-spaces) **today**:
 | --------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------- |
 | Run **N containers/pods**, each with its **own** `DATA_DIR` / volume                                                                    | Set `replicas > 1` against one SQLite file           |
 | Size heavy in-flight + healthy-headroom from heap / inflight-byte budget; 1–2 is the conservative #7849 default, not a hard product max | Give one process 8× RAM and an unbounded count cap   |
-| Optional: `QUOTA_STORE_DRIVER=redis` + `QUOTA_STORE_REDIS_URL` for **shared quota counters**                                            | Treat Redis as shared SQLite — it is not             |
 | Duplicate provider secrets into each instance (or accept partitioned dashboards)                                                        | Expect one dashboard / one call-log across instances |
 | Front with any load balancer; sticky by API key or session is enough                                                                    | Require a vendor-specific size-aware middleware      |
 
@@ -726,8 +725,6 @@ services:
     environment:
       DATA_DIR: /app/data
       OMNIROUTE_MEMORY_MB: "12288"
-      QUOTA_STORE_DRIVER: redis
-      QUOTA_STORE_REDIS_URL: redis://redis:6379
     volumes: [omniroute-a-data:/app/data]
     ports: ["20128:20128"]
   omniroute-b:
@@ -735,8 +732,6 @@ services:
     environment:
       DATA_DIR: /app/data
       OMNIROUTE_MEMORY_MB: "12288"
-      QUOTA_STORE_DRIVER: redis
-      QUOTA_STORE_REDIS_URL: redis://redis:6379
     volumes: [omniroute-b-data:/app/data]
     ports: ["20138:20128"]
 volumes:

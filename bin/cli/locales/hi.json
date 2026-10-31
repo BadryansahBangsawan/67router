@@ -172,13 +172,6 @@
       "period": "समय सीमा: 1d|7d|30d|90d|ytd|all (डिफ़ॉल्ट: 30d)",
       "provider": "प्रोवाइडर ID के अनुसार फ़िल्टर करें"
     },
-    "budget": {
-      "description": "लागत बजट प्रबंधित करें",
-      "set": {
-        "scope": "बजट का दायरा (डिफ़ॉल्ट: global)",
-        "period": "बजट अवधि: daily|weekly|monthly (डिफ़ॉल्ट: monthly)"
-      }
-    },
     "quota": {
       "description": "प्रोवाइडर कोटा उपयोग दिखाएँ",
       "provider": "प्रोवाइडर ID के अनुसार फ़िल्टर करें",

@@ -8,7 +8,6 @@ const DIAGNOSTIC_REFERENCE_KEY = randomBytes(32);
 
 const RESTRICTION_LABELS = {
   api_key_allowlist: "the API key's connection allowlist",
-  api_key_quota: "the API key's quota scope",
   combo_pin: "the combo connection pin / allowlist",
   routing_allowlist: "the routing connection allowlist",
 } as const;
@@ -21,13 +20,11 @@ function hasConnectionIds(value: unknown): boolean {
 /** Metadata only: selection still enforces its existing allowlist intersection. */
 export function getConnectionRestrictionSources(input: {
   keyAllowlist?: unknown;
-  keyQuotas?: unknown;
   routingAllowlist?: unknown;
   isCombo?: boolean;
 }): ConnectionRestrictionSource[] {
   const sources: ConnectionRestrictionSource[] = [];
   if (hasConnectionIds(input.keyAllowlist)) sources.push("api_key_allowlist");
-  if (Array.isArray(input.keyQuotas) && input.keyQuotas.length > 0) sources.push("api_key_quota");
   if (hasConnectionIds(input.routingAllowlist)) {
     sources.push(input.isCombo ? "combo_pin" : "routing_allowlist");
   }

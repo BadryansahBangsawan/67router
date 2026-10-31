@@ -111,7 +111,6 @@ const HEADER_DESCRIPTIONS: Partial<
   "analytics-combo-health": "analyticsComboHealthDescription",
   "analytics-compression": "analyticsCompressionDescription",
   // Costs sub-pages
-  "costs-budget": "costsBudgetDescription",
   "costs-pricing": "costsPricingDescription",
   // Logs sub-pages
   "logs-proxy": "logsProxyDescription",

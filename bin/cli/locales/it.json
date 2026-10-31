@@ -172,13 +172,6 @@
       "period": "Intervallo di tempo: 1d|7d|30d|90d|ytd|all (predefinito: 30d)",
       "provider": "Filtra per ID provider"
     },
-    "budget": {
-      "description": "Gestisci i budget di spesa",
-      "set": {
-        "scope": "Ambito del budget (predefinito: globale)",
-        "period": "Periodo del budget: daily|weekly|monthly (predefinito: monthly)"
-      }
-    },
     "quota": {
       "description": "Mostra l'utilizzo della quota del provider",
       "provider": "Filtra per ID provider",

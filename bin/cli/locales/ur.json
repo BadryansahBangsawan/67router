@@ -172,13 +172,6 @@
       "period": "مدت: 1d|7d|30d|90d|ytd|all (ڈیفالٹ: 30d)",
       "provider": "فراہم کنندہ ID کے لحاظ سے فلٹر کریں"
     },
-    "budget": {
-      "description": "لاگت کے بجٹس کا نظم کریں",
-      "set": {
-        "scope": "بجٹ کا دائرۂ کار (ڈیفالٹ: global)",
-        "period": "بجٹ کی مدت: daily|weekly|monthly (ڈیفالٹ: monthly)"
-      }
-    },
     "quota": {
       "description": "فراہم کنندہ کے کوٹے کا استعمال دکھائیں",
       "provider": "فراہم کنندہ ID کے لحاظ سے فلٹر کریں",

@@ -60,13 +60,6 @@ export async function resolveApiKeyUpstreamScope(
   );
   if (resolvedPermission !== "allowed") return DENIED;
 
-  // Quota-exclusive keys are bound to their pool's connections and
-  // quotaShared-* models; a side path has no pool-aware selection, so it
-  // never borrows an upstream for them.
-  if (Array.isArray(apiKeyInfo.allowedQuotas) && apiKeyInfo.allowedQuotas.length > 0) {
-    return DENIED;
-  }
-
   return {
     permitted: true,
     allowedConnections: intersectAllowedConnectionIds(apiKeyInfo.allowedConnections ?? null, null),

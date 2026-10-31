@@ -18,8 +18,8 @@
 //
 // The count is asserted against the code rather than hardcoded, so adding a
 // strategy and updating the prose stays a two-step chore instead of a silent lie.
-// `quota-share` is deliberately NOT public (`INTERNAL_ROUTING_STRATEGY_VALUES`),
-// so it must never appear in these lists.
+// Internal strategies (`INTERNAL_ROUTING_STRATEGY_VALUES`, none since Quota Share
+// was removed) must never appear in these lists.
 import assert from "node:assert/strict";
 import { readFileSync } from "node:fs";
 import { test } from "node:test";
@@ -62,8 +62,8 @@ test("DOC-01: the code exposes a non-trivial public strategy set", () => {
   // below would pass vacuously.
   assert.ok(PUBLIC.length >= 20, `expected >= 20 public strategies, got ${PUBLIC.length}`);
   assert.ok(PUBLIC.includes("quota-weighted"), "quota-weighted must be public");
-  assert.ok(!PUBLIC.includes("quota-share"), "quota-share must stay internal");
-  assert.deepEqual(INTERNAL, ["quota-share"]);
+  assert.ok(!PUBLIC.includes("quota-share"), "quota-share was removed and must not be public");
+  assert.deepEqual(INTERNAL, []);
 });
 
 test("DOC-01: AGENTS.md states the real count and lists every public strategy", () => {

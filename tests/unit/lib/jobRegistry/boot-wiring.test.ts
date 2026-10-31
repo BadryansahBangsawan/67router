@@ -34,13 +34,8 @@ test("initCloudSync: cloud sync is initialised before the registry starts any jo
   );
 });
 
-test("initCloudSync: both budget and token-health jobs are registered", () => {
+test("initCloudSync: the token-health job is registered", () => {
   const source = readSource("src/lib/initCloudSync.ts");
-  assert.match(
-    source,
-    /registerBudgetResetJob\s*\(/,
-    "src/lib/initCloudSync.ts must register the budget reset job"
-  );
   assert.match(
     source,
     /registerTokenHealthCheck\s*\(/,
