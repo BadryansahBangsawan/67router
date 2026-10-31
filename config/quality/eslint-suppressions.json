@@ -2438,11 +2438,6 @@
       "count": 10
     }
   },
-  "tests/unit/cli-memory-types.test.mjs": {
-    "@typescript-eslint/no-unused-vars": {
-      "count": 4
-    }
-  },
   "tests/unit/cli-nodes-commands.test.ts": {
     "@typescript-eslint/no-explicit-any": {
       "count": 15
