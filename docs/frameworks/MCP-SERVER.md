@@ -208,13 +208,13 @@ curl -X DELETE http://localhost:20128/api/settings/notion
 
 ## Agent Skill Catalog Tools (3)
 
-Defined in `open-sse/mcp-server/tools/agentSkillTools.ts`. Backed by `src/lib/agentSkills/catalog`. These tools expose the 45-entry Agent Skills documentation catalog to MCP clients and external agents. Scope: `read:catalog`.
+Defined in `open-sse/mcp-server/tools/agentSkillTools.ts`. Backed by `src/lib/agentSkills/catalog`. These tools expose the 42-entry Agent Skills documentation catalog to MCP clients and external agents. Scope: `read:catalog`.
 
 | Tool                              | Scopes         | Description                                                                                                                |
 | :-------------------------------- | :------------- | :------------------------------------------------------------------------------------------------------------------------- |
-| `omniroute_agent_skills_list`     | `read:catalog` | List all 45 agent skills with optional `category` (api\|cli) and `area` filters; returns metadata + coverage               |
+| `omniroute_agent_skills_list`     | `read:catalog` | List all 42 agent skills with optional `category` (api\|cli) and `area` filters; returns metadata + coverage               |
 | `omniroute_agent_skills_get`      | `read:catalog` | Get full metadata + SKILL.md content for a single skill by canonical `id`                                                  |
-| `omniroute_agent_skills_coverage` | `read:catalog` | Coverage stats: how many of the 22 API, 20 CLI and 1 config skills have SKILL.md files on the filesystem vs catalog totals |
+| `omniroute_agent_skills_coverage` | `read:catalog` | Coverage stats: how many of the 22 API, 18 CLI and 1 config skills have SKILL.md files on the filesystem vs catalog totals |
 
 See [AGENT-SKILLS.md](./AGENT-SKILLS.md) for the full catalog and how external agents consume it.
 

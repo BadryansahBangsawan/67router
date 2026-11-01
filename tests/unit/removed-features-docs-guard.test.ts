@@ -120,3 +120,34 @@ test("skills/README.md section counts match the curated catalog", () => {
   );
   assert.equal(new Set(rows).size, rows.length, "skills/README.md lists an id twice");
 });
+
+// ── Agent-skills framework docs ──────────────────────────────────────────────
+
+test("AGENT-SKILLS.md and MCP-SERVER.md describe the current catalog", () => {
+  const total = CURATED_SKILLS.length;
+  const count = (category: string) =>
+    CURATED_SKILLS.filter((s: { category: string }) => s.category === category).length;
+  const agentSkills = read("docs/frameworks/AGENT-SKILLS.md");
+  const mcpServer = read("docs/frameworks/MCP-SERVER.md");
+  for (const pattern of [
+    /list-capabilities/,
+    /`omni-webhooks`/,
+    /"http:\/\/your-omniroute\/a2a"/,
+  ]) {
+    assertNoMatch("docs/frameworks/AGENT-SKILLS.md", agentSkills, pattern);
+  }
+  assert.match(agentSkills, new RegExp(`\\*\\*${total} Agent Skills\\*\\*`));
+  assert.match(agentSkills, new RegExp(`### API Skills \\(${count("api")}\\)`));
+  assert.match(agentSkills, new RegExp(`### CLI Skills \\(${count("cli")}\\)`));
+  assert.match(agentSkills, new RegExp(`## Catalog — ${total} Skill IDs`));
+  assertNoMatch(
+    "docs/frameworks/AGENT-SKILLS.md",
+    agentSkills,
+    /\b(43|45)[- ](entry|skill|total|entries)/i
+  );
+  assert.match(mcpServer, new RegExp(`${total}-entry Agent Skills`));
+  assert.match(
+    mcpServer,
+    new RegExp(`${count("api")} API, ${count("cli")} CLI and ${count("config")} config skills`)
+  );
+});
