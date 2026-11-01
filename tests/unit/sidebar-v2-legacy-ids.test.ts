@@ -55,8 +55,7 @@ test("each section leads with the design's headline entries, mapped to existing 
   ]);
   assert.deepEqual(childIds("optimize")[0], "compression-context"); // Context & compression
   assert.deepEqual(flatHead("agents"), [
-    ["cli-agents", "/dashboard/cli-agents"], // Agents
-    ["skills", "/dashboard/omni-skills"],
+    ["cli-agents", "/dashboard/cli-agents"], // Agents (67router removed Omni Skills)
   ]);
   assert.deepEqual(flatHead("access"), [
     ["api-manager", "/dashboard/api-manager"], // API keys
@@ -162,13 +161,14 @@ test("a partly-hidden pre-v2 section hides exactly the pages it held", () => {
   const agentic = resolveLegacyHiddenSidebarItems(["agentic-features"]);
   assert.deepEqual(
     [...agentic].sort(),
-    ["a2a", "agent-skills", "chaos-config", "mcp", "memory", "plugins", "skills"].sort()
+    // 67router removed A2A, Memory, Plugins and Omni Skills from this section.
+    ["agent-skills", "chaos-config", "mcp"].sort()
   );
   // Pages that joined Agents from OmniProxy stay visible.
   for (const id of ["cli-agents", "cli-code", "conductor"]) assert.ok(!agentic.includes(id));
 
   const devtools = resolveLegacyHiddenSidebarItems(["devtools"]);
-  assert.deepEqual([...devtools].sort(), ["playground", "search-tools", "translator"]);
+  assert.deepEqual([...devtools].sort(), ["search-tools", "translator"]); // no Playground
   for (const id of ["cache", "context-settings", "media"]) assert.ok(!devtools.includes(id));
 
   // A legacy section whose pages all sit in a hidden v2 section adds nothing.
@@ -181,11 +181,10 @@ test("a partly-hidden pre-v2 section hides exactly the pages it held", () => {
   assert.ok(!resolveLegacyHiddenSidebarItems(["omni-proxy"]).includes("proxy"));
   assert.ok(!resolveLegacyHiddenSidebarItems(["configuration"]).includes("settings-sidebar"));
   // Merged with the saved item list (catalog order, no duplicates).
-  assert.deepEqual(resolveHiddenSidebarItems(["memory", "translator"], ["devtools"]), [
+  assert.deepEqual(resolveHiddenSidebarItems(["mcp", "translator"], ["devtools"]), [
     "translator",
-    "playground",
     "search-tools",
-    "memory",
+    "mcp",
   ]);
 });
 

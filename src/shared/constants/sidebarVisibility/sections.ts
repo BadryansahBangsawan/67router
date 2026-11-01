@@ -799,7 +799,6 @@ const V2_ICONS: Partial<Record<string, string>> = {
   cache: "database",
   translator: "translate",
   "cli-agents": "smart_toy",
-  skills: "extension",
   "api-manager": "vpn_key",
   endpoints: "lan",
   analytics: "monitor_heart",
@@ -846,7 +845,6 @@ export const SIDEBAR_SECTIONS: readonly SidebarSectionDefinition[] = [
       group("routing-more", "routingMoreGroup", "More routing", [
         "combos-live",
         "quota",
-        "costs-quota-share",
         "embedded-services",
       ]),
     ],
@@ -866,7 +864,6 @@ export const SIDEBAR_SECTIONS: readonly SidebarSectionDefinition[] = [
       item("translator"),
       group("optimize-more", "optimizeMoreGroup", "More tools", [
         "media",
-        "playground",
         "search-tools",
         "chaos-config",
       ]),
@@ -879,22 +876,16 @@ export const SIDEBAR_SECTIONS: readonly SidebarSectionDefinition[] = [
     defaultPinned: true,
     children: [
       item("cli-agents"),
-      item("skills"),
       group("tools", TOOLS_GROUP.titleKey, TOOLS_GROUP.titleFallback, [
         "cli-code",
         "acp-agents",
-        "cloud-agents",
         "conductor",
         "orchestration",
         "agent-bridge",
         "traffic-inspector",
         "discovery",
       ]),
-      group("agents-more", "agentsMoreGroup", "More agent features", [
-        "agent-skills",
-        "memory",
-        "plugins",
-      ]),
+      group("agents-more", "agentsMoreGroup", "More agent features", ["agent-skills"]),
     ],
   },
   {
@@ -907,7 +898,6 @@ export const SIDEBAR_SECTIONS: readonly SidebarSectionDefinition[] = [
       item("endpoints"),
       group("integrations", INTEGRATIONS_GROUP.titleKey, INTEGRATIONS_GROUP.titleFallback, [
         "mcp",
-        "a2a",
         "api-endpoints",
         "log-export",
       ]),
@@ -929,12 +919,10 @@ export const SIDEBAR_SECTIONS: readonly SidebarSectionDefinition[] = [
         "analytics-utilization",
         "analytics-compression",
         "analytics-search",
-        "analytics-evals",
         "provider-stats",
       ]),
       group("costs-more", "costsSection", "Costs", [
         "costs-pricing",
-        "costs-budget",
         "costs-free-tiers",
         "free-provider-rankings",
         "radar",
@@ -954,7 +942,7 @@ export const SIDEBAR_SECTIONS: readonly SidebarSectionDefinition[] = [
         "resilience-cooldowns",
       ]),
       // Was the "audit" group (same reason as "logs-more").
-      group("audit-more", "protocolAuditGroup", "Protocol audit", ["audit-mcp", "audit-a2a"]),
+      group("audit-more", "protocolAuditGroup", "Protocol audit", ["audit-mcp"]),
     ],
   },
   {

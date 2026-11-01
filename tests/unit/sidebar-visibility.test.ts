@@ -46,13 +46,11 @@ test("v2 sidebar sections hold every page, in this order", () => {
     "cache",
     "translator",
     "media",
-    "playground",
     "search-tools",
     "chaos-config",
   ]);
   assert.deepEqual(ids("agents"), [
     "cli-agents",
-    "skills",
     "cli-code",
     "acp-agents",
     "conductor",
@@ -61,14 +59,11 @@ test("v2 sidebar sections hold every page, in this order", () => {
     "traffic-inspector",
     "discovery",
     "agent-skills",
-    "memory",
-    "plugins",
   ]);
   assert.deepEqual(ids("access"), [
     "api-manager",
     "endpoints",
     "mcp",
-    "a2a",
     "api-endpoints",
     "log-export",
   ]);
@@ -82,10 +77,8 @@ test("v2 sidebar sections hold every page, in this order", () => {
     "analytics-utilization",
     "analytics-compression",
     "analytics-search",
-    "analytics-evals",
     "provider-stats",
     "costs-pricing",
-    "costs-budget",
     "costs-free-tiers",
     "free-provider-rankings",
     "radar",
@@ -98,7 +91,6 @@ test("v2 sidebar sections hold every page, in this order", () => {
     "resilience-connections",
     "resilience-cooldowns",
     "audit-mcp",
-    "audit-a2a",
   ]);
   assert.deepEqual(ids("system").slice(0, 2), ["proxy", "settings-general"]);
   assert.ok(ids("system").includes("settings-sidebar"));
