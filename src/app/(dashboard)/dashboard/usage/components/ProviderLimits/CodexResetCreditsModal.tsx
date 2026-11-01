@@ -318,7 +318,7 @@ function CreditSummary({
           {getResetCreditWindowTitle(provider, credit, tr)}
         </span>
         {recommended && (
-          <span className="rounded-full bg-primary/10 px-2 py-0.5 text-[10px] font-semibold text-primary">
+          <span className="rounded-full border border-border bg-bg-subtle px-2 py-0.5 text-[10px] font-semibold text-text-main">
             {tr("resetCreditExpiresFirst", "Expires first")}
           </span>
         )}

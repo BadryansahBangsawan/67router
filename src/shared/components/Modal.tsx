@@ -132,7 +132,13 @@ export default function Modal({
         // themselves as the legacy Modal did. Its cap sits above the default body cap, so the
         // body is the only scroll owner; `TALL_MODAL_PROPS` swaps in `max-h-[90vh]` (twMerge)
         // and a plain body, making the root the single scroll owner (#6265).
-        className={cn("p-0 max-h-[calc(100vh-3rem)]", SIZES[size], className)}
+        // 67router dialog: 12 px corners (rounded-card), a hairline border instead of the kit's
+        // strong one, and the soft floating lift.
+        className={cn(
+          "p-0 max-h-[calc(100vh-3rem)] rounded-card border-border shadow-elevated",
+          SIZES[size],
+          className
+        )}
         style={inlineMaxWidth ? { maxWidth: inlineMaxWidth } : undefined}
         onOpenAutoFocus={() => {
           const active = document.activeElement;
@@ -160,8 +166,12 @@ export default function Modal({
             !title && !showCloseButton && "ci-sr-only"
           )}
         >
+          {/* 14/600 title (the kit's is a 30 px display heading). */}
           <DialogTitle
-            className={cn("truncate min-w-0", !title && "ci-sr-only", compactHeader && "text-sm")}
+            className={cn(
+              "truncate min-w-0 text-sm font-semibold leading-5 tracking-normal text-text-main",
+              !title && "ci-sr-only"
+            )}
           >
             {title || fallbackTitle()}
           </DialogTitle>
@@ -180,7 +190,9 @@ export default function Modal({
         >
           {children}
         </div>
-        {footer && <DialogFooter className="mt-0 px-6 pb-6">{footer}</DialogFooter>}
+        {footer && (
+          <DialogFooter className="mt-0 px-6 pb-6 items-center justify-end">{footer}</DialogFooter>
+        )}
       </DialogContent>
     </Dialog>
   );

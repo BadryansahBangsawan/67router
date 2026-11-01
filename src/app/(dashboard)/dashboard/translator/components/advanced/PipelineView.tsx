@@ -92,7 +92,7 @@ function statusVariant(
 function statusNumberClass(status: PipelineStep["status"]): string {
   switch (status) {
     case "active":
-      return "bg-primary/10 text-primary";
+      return "bg-primary text-accent-foreground";
     case "done":
       return "bg-success/10 text-success";
     case "error":
@@ -232,7 +232,7 @@ export default function PipelineView({
                         step.status === "error"
                           ? "border-error/30"
                           : isExpanded
-                            ? "border-primary/30"
+                            ? "border-border-strong"
                             : step.status === "pending"
                               ? "opacity-60"
                               : ""

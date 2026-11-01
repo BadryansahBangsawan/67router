@@ -329,7 +329,7 @@ export function ConversationContextSection({ log, detail }) {
             // the parent entry if the user is already on this page.
             <a
               href={`/dashboard/logs?id=${encodeURIComponent(liveDetail.parentLogId)}`}
-              className="flex items-center gap-1 text-[11px] text-text-muted hover:text-primary transition-colors"
+              className="flex items-center gap-1 text-[11px] text-text-muted hover:text-text-main transition-colors"
               title={t("continuesFrom", { id: liveDetail.parentLogId })}
             >
               <Icon name="reply" size={14} />
@@ -344,7 +344,7 @@ export function ConversationContextSection({ log, detail }) {
             // /api/conversations/[id]/tree both key on.
             <a
               href={`/dashboard/conversations?tree=${encodeURIComponent(liveDetail.sessionTag)}`}
-              className="flex items-center gap-1 text-[11px] text-text-muted hover:text-primary transition-colors"
+              className="flex items-center gap-1 text-[11px] text-text-muted hover:text-text-main transition-colors"
               title={t("openConversation", { id: liveDetail.sessionTag })}
             >
               <Icon name="forum" size={14} />
@@ -363,7 +363,10 @@ export function ConversationContextSection({ log, detail }) {
                 // Static name + aria-pressed carries the on/off state ("Live refresh, pressed");
                 // the stateful wording stays in the tooltip.
                 aria-label={t("liveRefresh")}
-                className={cn("size-7 min-h-7", liveRefresh ? "text-primary" : "text-text-muted")}
+                className={cn(
+                  "size-7 min-h-7",
+                  liveRefresh ? "bg-surface-2 text-text-main" : "text-text-muted"
+                )}
                 aria-pressed={liveRefresh}
               >
                 <Icon name={liveRefresh ? "sync" : "sync_disabled"} size={18} />

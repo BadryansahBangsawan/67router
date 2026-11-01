@@ -214,7 +214,7 @@ export default function PassthroughModelRow({
               />
             ) : (
               <span
-                className={`truncate text-[9px] italic cursor-pointer hover:text-primary transition-colors ${alias ? "text-primary/80" : "text-text-muted/70"}`}
+                className={`truncate text-[9px] italic cursor-pointer hover:text-text-main transition-colors ${alias ? "text-text-secondary" : "text-text-muted/70"}`}
                 onClick={startEditing}
                 title={
                   alias

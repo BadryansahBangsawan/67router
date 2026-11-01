@@ -224,7 +224,7 @@ function ResultSummary({
                 ? "bg-success/10 text-success"
                 : failed
                   ? "bg-error/10 text-error"
-                  : "bg-primary/10 text-primary"
+                  : "border border-border bg-bg-subtle text-text-main"
             }`}
           >
             <Icon name={valid ? "check_circle" : failed ? "error" : "dns"} size={28} />

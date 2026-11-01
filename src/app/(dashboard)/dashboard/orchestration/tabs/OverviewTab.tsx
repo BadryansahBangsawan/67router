@@ -49,7 +49,7 @@ function Card({
       tabIndex={0}
       onClick={onClick}
       onKeyDown={(e) => e.key === "Enter" && onClick()}
-      className="rounded-lg border border-border bg-surface p-2.5 text-xs cursor-pointer hover:border-primary/50"
+      className="rounded-lg border border-border bg-surface p-2.5 text-xs cursor-pointer hover:border-border-strong"
     >
       <div className="flex items-center justify-between gap-2">
         <span className="font-medium truncate">{node.label}</span>
@@ -125,10 +125,13 @@ export function OverviewTab({
             onClick={() => setFilter(filter === s ? null : s)}
             className={`rounded-lg border bg-surface p-2 text-center ${filter === s ? "border-primary" : "border-border"}`}
           >
-            <div className="text-lg font-semibold" style={{ color: orchStateColor(s) }}>
+            <div
+              className="text-lg font-semibold tabular-nums"
+              style={{ color: orchStateColor(s) }}
+            >
               {counts[s]}
             </div>
-            <div className="text-[10px] text-text-muted">{t(STATE_KEY[s])}</div>
+            <div className="text-[11px] text-text-muted">{t(STATE_KEY[s])}</div>
           </button>
         ))}
       </div>

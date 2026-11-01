@@ -52,7 +52,7 @@ export default function EmptyConnectionsPlaceholder({
 }: EmptyConnectionsPlaceholderProps) {
   return (
     <div className="text-center py-12">
-      <div className="inline-flex items-center justify-center w-16 h-16 rounded-full bg-primary/10 text-primary mb-4">
+      <div className="inline-flex items-center justify-center w-16 h-16 rounded-full border border-border bg-bg-subtle text-text-main mb-4">
         <Icon name={isOAuth ? "lock" : "key"} size={32} />
       </div>
       <p className="text-text-main font-medium mb-1">{t("noConnectionsYet")}</p>

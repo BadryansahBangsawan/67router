@@ -56,10 +56,10 @@ export default function DistributeProxiesButton({
 
   const stateClasses =
     state === "distributing"
-      ? "bg-primary/20 border-primary/40 text-primary animate-pulse"
+      ? "bg-bg-subtle border-border-strong text-text-main animate-pulse"
       : state === "complete"
         ? "bg-success/15 border-success/40 text-success"
-        : "text-text-muted hover:text-text-main hover:border-primary/40";
+        : "text-text-muted hover:text-text-main hover:border-border-strong";
 
   const icon = state === "distributing" ? "sync" : state === "complete" ? "check" : "swap_horiz";
   const displayLabel =

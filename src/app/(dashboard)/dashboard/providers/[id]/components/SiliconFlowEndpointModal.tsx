@@ -41,7 +41,7 @@ export default function SiliconFlowEndpointModal({
             className="h-auto w-full justify-start whitespace-normal p-4 text-left font-normal"
           >
             <div className="flex items-start gap-3">
-              <Icon name="public" className="text-primary mt-0.5" />
+              <Icon name="public" className="text-text-muted mt-0.5" />
               <div className="flex-1">
                 <h3 className="font-semibold mb-1">
                   {providerText(

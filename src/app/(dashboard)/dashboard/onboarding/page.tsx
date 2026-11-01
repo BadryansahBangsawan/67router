@@ -22,12 +22,12 @@ const STEP_IDS = ["welcome", "tiers", "security", "provider", "test", "done"];
 const STEP_ICONS = ["waving_hand", "layers", "lock", "dns", "play_circle", "check_circle"];
 
 const COMMON_PROVIDERS = [
-  { id: "openai", name: "OpenAI", color: "#10A37F" },
-  { id: "anthropic", name: "Anthropic", color: "#D97757" },
-  { id: "google", name: "Google AI", color: "#4285F4" },
-  { id: "openrouter", name: "OpenRouter", color: "#6B21A8" },
-  { id: "groq", name: "Groq", color: "#F55036" },
-  { id: "mistral", name: "Mistral", color: "#FF7000" },
+  { id: "openai", name: "OpenAI" },
+  { id: "anthropic", name: "Anthropic" },
+  { id: "google", name: "Google AI" },
+  { id: "openrouter", name: "OpenRouter" },
+  { id: "groq", name: "Groq" },
+  { id: "mistral", name: "Mistral" },
 ];
 
 export default function OnboardingWizard() {
@@ -389,7 +389,7 @@ export default function OnboardingWizard() {
                       className="h-full rounded-card border border-border bg-bg-subtle p-3 text-center"
                     >
                       <div className="flex h-full flex-col items-center justify-center">
-                        <Icon name={f.icon} size={24} className="text-primary mb-1 block" />
+                        <Icon name={f.icon} size={24} className="text-text-main mb-1 block" />
                         <span className="text-xs text-text-muted">{f.label}</span>
                       </div>
                     </div>

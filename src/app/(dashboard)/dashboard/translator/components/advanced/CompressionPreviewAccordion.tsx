@@ -8,6 +8,7 @@ import { useState, useEffect, useCallback, useRef } from "react";
 import { useTranslations } from "next-intl";
 import { Button, Select } from "@/shared/components";
 import { cn } from "@/shared/utils/cn";
+import { KpiCell, KpiStrip } from "@/shared/components/KpiStrip";
 
 // ---------------------------------------------------------------------------
 // Types
@@ -149,31 +150,34 @@ function CompressionPreviewContent({ inputContent = "" }: { inputContent?: strin
       {/* Result grid — 4 cards */}
       {compressionResult && (
         <div className="space-y-3">
-          <div
-            className="grid grid-cols-2 md:grid-cols-4 gap-3"
-            data-testid="compression-result-grid"
-          >
-            <div className="card p-3 text-center bg-bg-subtle rounded-lg border border-border">
-              <div className="text-xs text-text-muted">{t("compressionOriginal")}</div>
-              <div className="text-lg font-bold">{compressionResult.originalTokens}</div>
-              <div className="text-xs text-text-muted">{t("tokens")}</div>
-            </div>
-            <div className="card p-3 text-center bg-bg-subtle rounded-lg border border-border">
-              <div className="text-xs text-text-muted">{t("compressionCompressed")}</div>
-              <div className="text-lg font-bold">{compressionResult.compressedTokens}</div>
-              <div className="text-xs text-text-muted">{t("tokens")}</div>
-            </div>
-            <div className="card p-3 text-center bg-bg-subtle rounded-lg border border-border">
-              <div className="text-xs text-text-muted">{t("compressionSaved")}</div>
-              <div className="text-lg font-bold text-success">{compressionResult.tokensSaved}</div>
-              <div className="text-xs text-text-muted">{compressionResult.savingsPct}%</div>
-            </div>
-            <div className="card p-3 text-center bg-bg-subtle rounded-lg border border-border">
-              <div className="text-xs text-text-muted">{t("compressionDuration")}</div>
-              <div className="text-lg font-bold">{compressionResult.durationMs}</div>
-              <div className="text-xs text-text-muted">ms</div>
-            </div>
-          </div>
+          <KpiStrip columns={4} data-testid="compression-result-grid">
+            {/* `.card` marks the four result cells (pinned by the compression test). */}
+            <KpiCell
+              className="card"
+              label={t("compressionOriginal")}
+              value={compressionResult.originalTokens}
+              footnote={t("tokens")}
+            />
+            <KpiCell
+              className="card"
+              label={t("compressionCompressed")}
+              value={compressionResult.compressedTokens}
+              footnote={t("tokens")}
+            />
+            <KpiCell
+              className="card"
+              label={t("compressionSaved")}
+              value={compressionResult.tokensSaved}
+              valueClassName="text-success"
+              footnote={`${compressionResult.savingsPct}%`}
+            />
+            <KpiCell
+              className="card"
+              label={t("compressionDuration")}
+              value={compressionResult.durationMs}
+              footnote="ms"
+            />
+          </KpiStrip>
 
           {compressionResult.techniquesUsed.length > 0 && (
             <div className="text-xs text-text-muted">

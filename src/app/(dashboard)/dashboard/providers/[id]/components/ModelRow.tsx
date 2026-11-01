@@ -376,7 +376,7 @@ export default function ModelRow({
               />
             ) : (
               <span
-                className={`min-w-0 truncate text-[10px] italic cursor-pointer hover:text-primary transition-colors ${alias ? "text-primary/80" : "text-text-muted/70"}`}
+                className={`min-w-0 truncate text-[10px] italic cursor-pointer hover:text-text-main transition-colors ${alias ? "text-text-secondary" : "text-text-muted/70"}`}
                 onClick={startEditing}
                 title={
                   alias

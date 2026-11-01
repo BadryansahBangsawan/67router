@@ -71,7 +71,7 @@ export default function ResultNarrated({
     <Card className="flex flex-col gap-4 p-4">
       {/* Header */}
       <div className="flex items-center gap-2">
-        <Icon name="translate" size={20} className="text-primary" />
+        <Icon name="translate" size={20} className="text-text-muted" />
         <h3 className="text-sm font-semibold text-text-main">
           {tr("simpleResultPanelTitle", "Translation + Response")}
         </h3>

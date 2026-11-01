@@ -1420,3 +1420,23 @@ html[dir="rtl"] :where(.react-flow) {
     cursor: not-allowed;
   }
 }
+
+/* === 67router selection cards (adapter; never patch packages/ui-kit) ===
+   The kit's radio/checkbox cards and ChoiceCard paint tone-tinted diagonal gradients (with the
+   monochrome accent that reads as a grey wash). 67router selection is neutral and flat: the
+   surface at rest, the subtle fill on hover, and the subtle fill plus a solid ink (primary)
+   border when selected. Unlayered on purpose — the kit's ChoiceCard rules are unlayered too, and
+   this block comes after the kit import, so it wins at equal specificity. */
+.ci-choice-card {
+  background: var(--ci-color-surface);
+}
+.ci-radio--card:hover:not([data-disabled="true"]),
+.ci-choice-card:hover:not([data-disabled="true"]) {
+  background: var(--ci-color-surface-subtle);
+}
+.ci-checkbox--card:has(.ci-checkbox__input:checked),
+.ci-radio--card:has(.ci-radio__input:checked),
+.ci-choice-card:has(input:checked) {
+  background: var(--ci-color-surface-subtle);
+  border-color: var(--ci-color-accent);
+}

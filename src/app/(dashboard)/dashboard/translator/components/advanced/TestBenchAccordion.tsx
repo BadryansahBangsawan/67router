@@ -219,7 +219,7 @@ function TestBenchContent() {
     <div className="space-y-5 min-w-0">
       {/* Info Banner */}
       <div className="flex items-start gap-3 px-4 py-3 rounded-control border border-border bg-bg-subtle text-sm text-text-muted">
-        <Icon name="info" size={20} className="text-primary mt-0.5" />
+        <Icon name="info" size={20} className="text-text-muted mt-0.5" />
         <div>
           <p className="font-medium text-text-main mb-0.5">{t("compatibilityTester")}</p>
           <p>{t("testBenchDescription")}</p>
@@ -313,7 +313,7 @@ function TestBenchContent() {
             {/* Progress bar */}
             <div className="w-full h-2 bg-bg-subtle rounded-full overflow-hidden">
               <div
-                className="h-full bg-gradient-to-r from-success to-success rounded-full transition-all duration-500"
+                className="h-full bg-success rounded-full transition-all duration-500"
                 style={{ width: `${compatibility}%` }}
               />
             </div>
