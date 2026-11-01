@@ -74,3 +74,49 @@ test("llm.txt lists only handlers that exist in open-sse/handlers", () => {
     `llm.txt lists handlers that no longer exist: ${missing.join(", ")}`
   );
 });
+
+// ── Agent skills (skills/**/*.md) ────────────────────────────────────────────
+
+const SKILL_DOC_PATTERNS: RegExp[] = [
+  /\/v1\/embeddings\b/,
+  /list-capabilities/,
+  /`omni-webhooks`|`cli-a2a`/,
+  /omniroute-embeddings/,
+];
+
+function listMarkdown(dir: string): string[] {
+  const out: string[] = [];
+  for (const entry of fs.readdirSync(path.join(ROOT, dir), { withFileTypes: true })) {
+    const rel = `${dir}/${entry.name}`;
+    if (entry.isDirectory()) out.push(...listMarkdown(rel));
+    else if (entry.name.endsWith(".md")) out.push(rel);
+  }
+  return out;
+}
+
+const skillDocs = listMarkdown("skills");
+
+for (const pattern of SKILL_DOC_PATTERNS) {
+  test(`skills/**/*.md do not match ${pattern}`, () => {
+    for (const rel of skillDocs) assertNoMatch(rel, read(rel), pattern);
+  });
+}
+
+const { CURATED_SKILLS } = await import("../../src/shared/constants/agentSkills.ts");
+
+test("skills/README.md section counts match the curated catalog", () => {
+  const readme = read("skills/README.md");
+  const count = (category: string) =>
+    CURATED_SKILLS.filter((s: { category: string }) => s.category === category).length;
+  assert.match(readme, new RegExp(`## API Skills \\(${count("api")}\\)`));
+  assert.match(readme, new RegExp(`## CLI Skills \\(${count("cli")}\\)`));
+  assert.match(readme, new RegExp(`${CURATED_SKILLS.length}-entry catalog`));
+  const rows = [...readme.matchAll(/^\| `([a-z0-9-]+)`\s+\|/gm)].map((m) => m[1]);
+  const ids = new Set(CURATED_SKILLS.map((s: { id: string }) => s.id));
+  assert.deepEqual(
+    rows.filter((id) => !ids.has(id)),
+    [],
+    "skills/README.md lists ids that are not in the catalog"
+  );
+  assert.equal(new Set(rows).size, rows.length, "skills/README.md lists an id twice");
+});

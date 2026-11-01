@@ -115,7 +115,7 @@ All requests require a valid Bearer token or session cookie. Obtain a token via 
 See the full OpenAPI specification at `GET /api/openapi/spec` or `docs/openapi.yaml` for detailed request/response schemas.
 
 <!-- skill:custom-start -->
-<!-- Aggregated from: omniroute-chat, omniroute-image, omniroute-tts, omniroute-stt, omniroute-embeddings, omniroute-web-search, omniroute-web-fetch -->
+<!-- Aggregated from: omniroute-chat, omniroute-stt, omniroute-web-search, omniroute-web-fetch -->
 
 ## Chat completions
 
@@ -217,47 +217,6 @@ Response formats: `json`, `text`, `srt`, `verbose_json`, `vtt`.
 - `400 invalid_file_format` → unsupported audio format
 - `400 file_too_large` → exceeds provider limit (usually 25MB)
 - `503` → provider unavailable; try another model in `/v1/models/stt`
-
-## Embeddings
-
-Requires `OMNIROUTE_URL` and `OMNIROUTE_KEY`. See [entry-point SKILL](https://raw.githubusercontent.com/diegosouzapw/OmniRoute/main/skills/omni-auth/SKILL.md) for setup.
-
-### Endpoint
-
-- `POST $OMNIROUTE_URL/v1/embeddings`
-
-### Discover
-
-```bash
-curl $OMNIROUTE_URL/v1/models/embedding | jq '.data[]'
-```
-
-Each entry: `{ id, owned_by, dimensions, max_input_tokens }`.
-
-### Example
-
-```bash
-curl -X POST $OMNIROUTE_URL/v1/embeddings \
-  -H "Authorization: Bearer $OMNIROUTE_KEY" \
-  -H "Content-Type: application/json" \
-  -d '{
-    "model": "text-embedding-3-large",
-    "input": ["first text", "second text"],
-    "encoding_format": "float"
-  }'
-```
-
-Response: `{ data:[{ embedding:[...], index }], usage:{ prompt_tokens, total_tokens } }`
-
-### Batch input
-
-`input` accepts a string or array of strings (up to provider batch limit, typically 2048 items).
-
-### Errors
-
-- `400 input_too_long` → input exceeds `max_input_tokens` for this model
-- `400 invalid_encoding_format` → use `float` or `base64`
-- `503` → provider unavailable; try another model in `/v1/models/embedding`
 
 ## Web search
 
