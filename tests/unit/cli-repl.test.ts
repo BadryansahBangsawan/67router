@@ -79,6 +79,15 @@ test("Repl.jsx suporta todos os slash commands definidos no spec", () => {
   }
 });
 
+test("Repl.jsx no longer offers the /skill and /memory commands (Memory and Skills were removed)", () => {
+  const src = readFileSync(join(TUI, "Repl.jsx"), "utf8");
+  for (const cmd of ["skill", "memory"]) {
+    assert.ok(!src.includes(`case "${cmd}"`), `/${cmd} must not be handled`);
+    assert.ok(!src.includes(`"${cmd}",`), `/${cmd} must not be autocompleted`);
+    assert.ok(!src.includes(`/${cmd} `), `/${cmd} must not appear in the help text`);
+  }
+});
+
 test("Repl.jsx tem painel lateral (SidePanel) com tokens e custo", () => {
   const src = readFileSync(join(TUI, "Repl.jsx"), "utf8");
   assert.ok(src.includes("SidePanel"), "deve ter SidePanel");
