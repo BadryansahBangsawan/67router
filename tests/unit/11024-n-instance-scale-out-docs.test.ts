@@ -15,7 +15,8 @@ test("DOCKER_GUIDE documents N independent DATA_DIRs as the large-job scale-out 
   assert.match(dockerGuide, /## Scale-out: N independent processes/);
   assert.match(dockerGuide, /DATA_DIR/);
   assert.match(dockerGuide, /replicas > 1/);
-  assert.match(dockerGuide, /QUOTA_STORE_DRIVER=redis/);
+  // 67router removed the Redis quota store (QUOTA_STORE_DRIVER) with Quota Share.
+  assert.doesNotMatch(dockerGuide, /QUOTA_STORE_DRIVER/);
   assert.match(dockerGuide, /#8075/);
   assert.doesNotMatch(
     dockerGuide,

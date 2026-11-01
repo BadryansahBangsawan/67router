@@ -339,7 +339,9 @@ test("self-service API key scope labels do not expose missing placeholders", () 
 
 test("exclusive lease badge and notice use i18n translation keys", () => {
   const source = readApiManagerPage();
-  const rowBadgesStart = source.indexOf("{/* Existing badges */}");
+  // 67router PR-5 dropped the Quota Share chips and the "Existing badges" marker with them; the
+  // badge column now starts at the model-restriction badge.
+  const rowBadgesStart = source.indexOf("{isModelRestricted ? (");
   const rowBadgesEnd = source.indexOf("{/* Actions column */}", rowBadgesStart);
   const rowBadges = source.slice(rowBadgesStart, rowBadgesEnd);
 

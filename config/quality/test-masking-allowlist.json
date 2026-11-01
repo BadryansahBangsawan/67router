@@ -758,6 +758,10 @@
         "src/lib/db/playgroundPresets.ts"
       ],
       "reason": "67router PR-2: the Playground (and its presets) was removed permanently (unused feature, 0 playground_presets rows on the VPS); the code under test no longer exists."
+    },
+    "tests/unit/quota-concept-card-i18n.test.ts": {
+      "sourceRemoved": ["src/app/(dashboard)/dashboard/costs/quota-share"],
+      "reason": "67router PR-5: Quota Share was removed permanently, including the quota-share dashboard and its quotaShare i18n namespace; the explanatory-card keys this test pinned no longer exist. Deleted at integration (67router-next)."
     }
   },
   "tests/unit/catalog-updates-v3x.test.ts": "v3.8.45 #6248: fix(providers) remove deprecated MiMo V2 entries — os 5 asserts removidos pinavam specs de modelos mimo-v2-* que deixaram de existir no catálogo (54→49). Asserts seguem a remoção dos modelos, não enfraquecimento. Verificado legítimo. Prune após v3.8.45 mergear para main.",

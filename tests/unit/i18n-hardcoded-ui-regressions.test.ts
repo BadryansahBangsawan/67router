@@ -28,8 +28,6 @@ const residualKeys = [
   "stats.noAccountUsage",
   "requestLogger.detail.correlationIdValue",
   "requestLogger.detail.detailedPayloadInfo",
-  "settings.memorySkillsSkillsmpDescription",
-  "settings.memorySkillsActiveProviderDescription",
   "settings.routingCcBridgeCatalogName",
   "settings.routingUnknownOpKind",
   "settings.routingInvalidJson",
@@ -56,10 +54,7 @@ test("French and Vietnamese residual translations are complete", () => {
   }
 });
 
-test("SkillsMP messages preserve their runtime values", () => {
-  const messages = readMessages("en");
-  assert.match(getMessage(messages, "settings.skillsmpApiKeyHintAfter") as string, /\{limit\}/);
-});
+// 67router PR-6 removed Memory & Skills, and with them the SkillsMP settings messages.
 
 test("request log dates follow the active locale without duplicating rotated account IDs", () => {
   const source = readRepoFile("src/shared/components/RequestLoggerDetail.tsx");

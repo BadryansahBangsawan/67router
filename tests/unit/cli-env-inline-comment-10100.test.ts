@@ -38,11 +38,14 @@ test("plain values are unchanged", () => {
   assert.equal(parseEnvValue(""), "");
 });
 
-test(".env.example no longer annotates QUOTA_STORE_DRIVER inline", () => {
+test(".env.example has no unquoted inline comments (QUOTA_STORE_DRIVER left with Quota Share)", () => {
   const example = fs.readFileSync(path.resolve(".env.example"), "utf8");
-  const line = example.split("\n").find((l) => l.startsWith("QUOTA_STORE_DRIVER="));
-  assert.ok(line, "QUOTA_STORE_DRIVER should still be documented");
-  assert.equal(line, "QUOTA_STORE_DRIVER=sqlite");
+  // 67router removed the Quota Share store, and with it QUOTA_STORE_DRIVER, the variable #10100
+  // was first reported on.
+  assert.equal(
+    example.split("\n").some((l) => l.startsWith("QUOTA_STORE_DRIVER=")),
+    false
+  );
   // Guard the whole file against reintroducing the pattern on unquoted values.
   const offenders = example
     .split("\n")
