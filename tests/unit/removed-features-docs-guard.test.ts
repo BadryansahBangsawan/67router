@@ -179,3 +179,17 @@ for (const pattern of README_PATTERNS) {
     for (const rel of README_SURFACES) assertNoMatch(rel, read(rel), pattern);
   });
 }
+
+// ── MCP tools diagram ────────────────────────────────────────────────────────
+
+test("the MCP tools diagram (source and SVG) has no removed tool groups", () => {
+  for (const rel of ["docs/diagrams/mcp-tools.mmd", "docs/diagrams/exported/mcp-tools.svg"]) {
+    const text = read(rel);
+    assertNoMatch(rel, text, /memory_(search|add|clear)|skills_(list|enable|execute)/);
+    assertNoMatch(rel, text, /GitHub-Skills|Memory \(3\)|Skills \(4\)/);
+  }
+  const source = read("docs/diagrams/mcp-tools.mmd");
+  const sum = source.match(/= (\d+)\n/);
+  assert.ok(sum, "header sum not found");
+  assert.match(source, new RegExp(`MCP Server<br/>${sum[1]} tools total`));
+});
