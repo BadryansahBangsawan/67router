@@ -2,24 +2,19 @@ import { test, expect } from "@playwright/test";
 import { gotoDashboardRoute } from "./helpers/dashboardAuth";
 
 test.describe("Protocol visibility", () => {
-  test("shows MCP and A2A tabs inside the endpoint page", async ({ page }) => {
+  test("shows the MCP tab inside the endpoint page and no A2A tab", async ({ page }) => {
     await gotoDashboardRoute(page, "/dashboard/endpoint");
-    await page.waitForLoadState("networkidle");
-
-    // MCP and A2A are now tabs directly in the SegmentedControl
+    // No networkidle wait: the endpoint page keeps polling its tunnel/MCP status, so the network
+    // never goes idle. toBeVisible() below waits for the tab instead.
+    // MCP is a tab directly in the SegmentedControl. 67router removed the A2A dashboard (PR-2),
+    // so its tab must stay gone.
     const mcpTab = page.getByRole("tab", { name: "MCP" });
-    const a2aTab = page.getByRole("tab", { name: "A2A" });
-
     await expect(mcpTab).toBeVisible();
-    await expect(a2aTab).toBeVisible();
+    await expect(page.getByRole("tab", { name: "A2A" })).toHaveCount(0);
 
     // Verify MCP dashboard mounts
     await mcpTab.click();
     // In dev/test it might just show "loading..." or the processStatus card
-    await expect(page.locator("body")).not.toContainText(/application error|500/i);
-
-    // Verify A2A dashboard mounts
-    await a2aTab.click();
     await expect(page.locator("body")).not.toContainText(/application error|500/i);
   });
 });
