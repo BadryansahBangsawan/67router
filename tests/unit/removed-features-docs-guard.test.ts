@@ -151,3 +151,31 @@ test("AGENT-SKILLS.md and MCP-SERVER.md describe the current catalog", () => {
     new RegExp(`${count("api")} API, ${count("cli")} CLI and ${count("config")} config skills`)
   );
 });
+
+// ── README.md and the diagrams it embeds ─────────────────────────────────────
+
+const README_SURFACES = [
+  "README.md",
+  "docs/diagrams/promise-pillars.svg",
+  "docs/diagrams/comparison-table.svg",
+  "docs/diagrams/cli-terminal.svg",
+  "docs/diagrams/tier-cascade.svg",
+];
+
+const README_PATTERNS: RegExp[] = [
+  /\bA2A\b(?! task)/,
+  /cloud agents/i,
+  /persistent memory|<b>Memory<\/b>|\bmemory\s*(·|&#183;)/i,
+  /\/skill \/memory/,
+  /embeddings, images/,
+  /Batch &(amp;)? Files APIs/,
+  /Agent Card/,
+  /\b(a2a|cloud|skills|eval|webhooks) (·|&#183;)/,
+  /\bevals\b/,
+];
+
+for (const pattern of README_PATTERNS) {
+  test(`README.md and its diagrams do not match ${pattern}`, () => {
+    for (const rel of README_SURFACES) assertNoMatch(rel, read(rel), pattern);
+  });
+}
